@@ -1,0 +1,201 @@
+{
+  "visuals": [
+    {
+      "id": "visual-30bbeac010a4a3cf581a",
+      "payload": {
+        "type": "table",
+        "title": "Real Exchange Rate Rise → Trade Impact",
+        "headers": [
+          "Item",
+          "Description"
+        ],
+        "rows": [
+          [
+            "Exports",
+            "Exports decrease when the real exchange rate rises."
+          ],
+          [
+            "Imports",
+            "Imports increase when the real exchange rate (epsilon) rises."
+          ]
+        ]
+      },
+      "evidence": [
+        {
+          "note_id": "CON_0036",
+          "quote": "Exports decrease when the real exchange rate rises."
+        },
+        {
+          "note_id": "CON_0039",
+          "quote": "Imports increase when the real exchange rate (epsilon) rises."
+        }
+      ],
+      "source_segment_ids": [
+        "CON_0036",
+        "CON_0039"
+      ],
+      "spans": [
+        {
+          "source_id": "G00017",
+          "segment_id": 317,
+          "start": 1093.2,
+          "end": 1096.1,
+          "resolution": "speech_segment"
+        },
+        {
+          "source_id": "G00017",
+          "segment_id": 318,
+          "start": 1096.32,
+          "end": 1101.84,
+          "resolution": "speech_segment"
+        },
+        {
+          "source_id": "G00018",
+          "segment_id": 331,
+          "start": 1169.24,
+          "end": 1175.6,
+          "resolution": "speech_segment"
+        },
+        {
+          "source_id": "G00018",
+          "segment_id": 332,
+          "start": 1175.6,
+          "end": 1175.82,
+          "resolution": "speech_segment"
+        }
+      ],
+      "needs_timestamp_alignment": false,
+      "anchor_note_id": "CON_0039",
+      "proposed_mode": "text_and_visual",
+      "mode": "text_and_visual",
+      "adaptation": "Rebuilt table cells from exact supporting note phrases"
+    }
+  ],
+  "issues": [
+    {
+      "note_ids": [
+        "CON_0036",
+        "CON_0039"
+      ],
+      "reason": "Source note is unresolved"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Effect of Real Exchange Rate Changes on Trade",
+      "source_segment_ids": [
+        "CON_0036",
+        "CON_0039"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "type": "table",
+          "source_segment_ids": [
+            "CON_0036",
+            "CON_0039"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0036",
+              "quote": "Exports decrease when the real exchange rate rises."
+            },
+            {
+              "note_id": "CON_0039",
+              "quote": "Imports increase when the real exchange rate (epsilon) rises."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Real Exchange Rate Rise → Trade Impact",
+            "headers": [
+              "Item",
+              "Effect"
+            ],
+            "rows": [
+              [
+                "Exports",
+                "decrease"
+              ],
+              [
+                "Imports",
+                "increase"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "flowchart",
+          "source_segment_ids": [
+            "CON_0040",
+            "CON_0036",
+            "CON_0039"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0040",
+              "quote": "When epsilon goes up, domestic goods become more expensive."
+            },
+            {
+              "note_id": "CON_0036",
+              "quote": "Exports decrease when the real exchange rate rises."
+            },
+            {
+              "note_id": "CON_0039",
+              "quote": "Imports increase when the real exchange rate (epsilon) rises."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Causal Chain of Real Exchange Rate Increase",
+            "direction": "DOWN",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "Real exchange rate ↑",
+                "kind": "start"
+              },
+              {
+                "id": "n2",
+                "label": "Domestic goods become more expensive",
+                "kind": "action"
+              },
+              {
+                "id": "n3",
+                "label": "Exports decrease",
+                "kind": "action"
+              },
+              {
+                "id": "n4",
+                "label": "Imports increase",
+                "kind": "action"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": "causes"
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": "leads to"
+              },
+              {
+                "from": "n2",
+                "to": "n4",
+                "label": "leads to"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

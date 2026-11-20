@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-1c55bb3f-044a-4b17-8aa1-0a40555adee0",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Primitive vs Reference Types in Java\",\n      \"source_segment_ids\": [\"FCT_0122\", \"FCT_0125\", \"FCT_0119\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0122\", \"FCT_0125\", \"FCT_0119\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0122\",\n              \"exact_quote\": \"Assigning a primitive variable copies the actual value into a new memory location; assigning a reference variable copies the address, not the object itself.\"\n            },\n            {\n              \"note_id\": \"FCT_0125\",\n              \"exact_quote\": \"Reference types are copied by reference, whereas primitive types are copied by value.\"\n            },\n            {\n              \"note_id\": \"FCT_0119\",\n              \"exact_quote\": \"In other words, if I change the value of x, y is not going to get affected.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Copying Behavior\",\n            \"headers\": [\"Aspect\", \"Primitive Types\", \"Reference Types\"],\n            \"rows\": [\n              [\"Copy Mechanism\", \"Copy value\", \"Copy address (reference)\"],\n              [\"Effect of Changing Original\", \"No effect on copy\", \"Change reflected in all references\"],\n              [\"Memory Location\", \"Separate\", \"Shared object\"]\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"String Immutability and Method Effects\",\n      \"source_segment_ids\": [\"FCT_0150\", \"FCT_0151\", \"FCT_0152\", \"FCT_0153\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0150\", \"FCT_0151\", \"FCT_0152\", \"FCT_0153\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0150\",\n              \"exact_quote\": \"The replace method does not modify the original string; it returns a new string.\"\n            },\n            {\n              \"note_id\": \"FCT_0151\",\n              \"exact_quote\": \"In Java, strings are immutable; they cannot be mutated.\"\n            },\n            {\n              \"note_id\": \"FCT_0152\",\n              \"exact_quote\": \"The toLowerCase method returns a new string with all characters converted to lower case, leaving the original string unchanged.\"\n            },\n            {\n              \"note_id\": \"FCT_0153\",\n              \"exact_quote\": \"The trim method returns a new string with leading and trailing whitespace removed, without altering the original string.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"String Method Effects\",\n            \"direction\": \"LR\",\n            \"nodes\": [\n              {\"id\": \"n1\", \"label\": \"Original String\"},\n              {\"id\": \"n2\", \"label\": \"replace()\"},\n              {\"id\": \"n3\", \"label\": \"toLowerCase()\"},\n              {\"id\": \"n4\", \"label\": \"trim()\"},\n              {\"id\": \"n5\", \"label\": \"New String (result)\"}\n            ],\n            \"edges\": [\n              {\"from\": \"n1\", \"to\": \"n2\", \"label\": \"returns new\"},\n              {\"from\": \"n1\", \"to\": \"n3\", \"label\": \"returns new\"},\n              {\"from\": \"n1\", \"to\": \"n4\", \"label\": \"returns new\"},\n              {\"from\": \"n2\", \"to\": \"n5\", \"label\": \"\"},\n              {\"from\": \"n3\", \"to\": \"n5\", \"label\": \"\"},\n              {\"from\": \"n4\", \"to\": \"n5\", \"label\": \"\"}\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce units only for visual candidates. Identify which notes support visuals: comparisons tables (primitive vs reference), flowcharts (independent vs reference), etc. Likely create a table comparing primitive vs reference types. Also maybe sequence of string methods. Provide units.\n\nReturn JSON with units array. Provide source_segment_ids list. Mode text_and_visual? Since we include visuals plus remaining_text? Probably include remaining_text empty if visual covers. Provide visuals with payload.\n\nLet's craft one unit: comparison table of primitive vs reference copying. Source ids: FCT_0122, FCT_0125, FCT_0121 maybe. Provide evidence quotes.\n\nWe'll output minimal.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794579767,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_93703442d9",
+  "usage": {
+    "completion_tokens": 1038,
+    "prompt_tokens": 3050,
+    "total_tokens": 4088,
+    "completion_time": 2.190202009,
+    "completion_tokens_details": {
+      "reasoning_tokens": 137
+    },
+    "prompt_time": 0.206626207,
+    "prompt_tokens_details": null,
+    "queue_time": 0.379774127,
+    "total_time": 2.396828216
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7amm5s0e18bxcav0bsep0vp",
+    "debug": null,
+    "seed": 1893589309,
+    "usage": null
+  }
+}

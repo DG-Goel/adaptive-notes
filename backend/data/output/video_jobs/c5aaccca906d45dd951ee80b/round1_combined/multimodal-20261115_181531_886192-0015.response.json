@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-4238f88a-16ce-4947-aa60-5cc1022641c1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit concept name or content about a defined concept is present in the excerpts.\",\n      \"source_ids\": [\"G00005\"]\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No term and definition pair is provided in the excerpts.\",\n      \"source_ids\": [\"G00005\"]\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explanatory passage with a clear topic and explanation text is present.\",\n      \"source_ids\": [\"G00005\"]\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No example illustrating a concept is given.\",\n      \"source_ids\": [\"G00005\"]\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No factual statement with a verifiable fact text is present.\",\n      \"source_ids\": [\"G00005\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No formula text is provided in the excerpts.\",\n      \"source_ids\": [\"G00005\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No procedural description with steps is present.\",\n      \"source_ids\": [\"G00005\"]\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No relationship statement linking subject and object is provided.\",\n      \"source_ids\": [\"G00005\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows etc but content is just dialogue about bonds, no clear concepts. Likely no required fields can be supported. So abstentions for each category? Provide abstentions for missing. No rows. Quiz maybe none. Return empty rows, abstentions for each category with reason source_missing? Use SOURCE_MISSING. Provide one abstention per category.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794766942,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_90620edd96",
+  "usage": {
+    "completion_tokens": 485,
+    "prompt_tokens": 2513,
+    "total_tokens": 2998,
+    "completion_time": 1.013835691,
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_time": 0.112441919,
+    "prompt_tokens_details": null,
+    "queue_time": 0.376719954,
+    "total_time": 1.12627761
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g74b95ef5agw2qrwk75kxh",
+    "debug": null,
+    "seed": 2092744944,
+    "usage": null
+  }
+}

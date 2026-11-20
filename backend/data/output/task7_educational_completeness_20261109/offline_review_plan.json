@@ -1,0 +1,538 @@
+{
+  "recoveries": [
+    {
+      "item": {
+        "knowledge_id": "FCT_5001",
+        "knowledge_type": "fact",
+        "document_id": "JAVA",
+        "source_unit_ids": [
+          "T0004"
+        ],
+        "content": "In this recorded IntelliJ demonstration, the project uses JDK version 12. This identifies the tutorial setup, not a present-day version requirement.",
+        "fact_text": "In this recorded IntelliJ demonstration, the project uses JDK version 12. This identifies the tutorial setup, not a present-day version requirement.",
+        "section": "Project setup and packages"
+      },
+      "evidence": [
+        {
+          "source_id": "T0004",
+          "quote": "earlier we downloaded jdk or Java development kit version 12 that is why JDK version 12 is selected here"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Preserves historical setup scope; does not recommend a current SDK version."
+    },
+    {
+      "item": {
+        "knowledge_id": "FCT_5002",
+        "knowledge_type": "fact",
+        "document_id": "JAVA",
+        "source_unit_ids": [
+          "T0004"
+        ],
+        "content": "The tutorial creates a Java project in IntelliJ, checks the selected project SDK, and chooses a project template for a command-line application.",
+        "fact_text": "The tutorial creates a Java project in IntelliJ, checks the selected project SDK, and chooses a project template for a command-line application.",
+        "section": "Project setup and packages"
+      },
+      "evidence": [
+        {
+          "source_id": "T0004",
+          "quote": "on the left side select java and make sure project sdk is not black so earlier we downloaded jdk or Java development kit version 12 that is why JDK version 12 is selected here if you don't see that make sure to select it from this drop-down list alright now let's click on next on this page select create project from template so we're gonna create a command line application"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Faithful prose for source workflow; no invented UI labels, code, or missing visual details."
+    },
+    {
+      "item": {
+        "knowledge_id": "FCT_5003",
+        "knowledge_type": "fact",
+        "document_id": "JAVA",
+        "source_unit_ids": [
+          "T0004"
+        ],
+        "content": "A command-line application runs from the command line and has no graphical user interface in this explanation.",
+        "fact_text": "A command-line application runs from the command line and has no graphical user interface in this explanation.",
+        "section": "Project setup and packages"
+      },
+      "evidence": [
+        {
+          "source_id": "T0004",
+          "quote": "a command line application which is an application that we can run from the command line it doesn't have a graphical user interface or a GUI"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Preserves the source definition."
+    },
+    {
+      "item": {
+        "knowledge_id": "FCT_5004",
+        "knowledge_type": "fact",
+        "document_id": "JAVA",
+        "source_unit_ids": [
+          "T0004"
+        ],
+        "content": "A package groups related classes, helping organize an application as its number of classes grows.",
+        "fact_text": "A package groups related classes, helping organize an application as its number of classes grows.",
+        "section": "Project setup and packages"
+      },
+      "evidence": [
+        {
+          "source_id": "T0004",
+          "quote": "we have a concept called package and we use a package to group related classes so as our applications grow we're gonna end up with hundreds or even thousands of classes so we should properly organize this class us into packages"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Recovers the organizational concept without reconstructing the garbled package identifier."
+    },
+    {
+      "item": {
+        "knowledge_id": "FCT_5005",
+        "knowledge_type": "fact",
+        "document_id": "JAVA",
+        "source_unit_ids": [
+          "T0004"
+        ],
+        "content": "The source describes a convention of reversing the company domain name for a base package. It explicitly says an actual registered Internet domain is not required; the purpose is a namespace for classes.",
+        "fact_text": "The source describes a convention of reversing the company domain name for a base package. It explicitly says an actual registered Internet domain is not required; the purpose is a namespace for classes.",
+        "section": "Project setup and packages"
+      },
+      "evidence": [
+        {
+          "source_id": "T0004",
+          "quote": "now by convention the base package for a Java project is the domain name of your company in Reverse so my website is code with mass comm that is why I'm gonna set the base package for this project to come that code with Marsh now it doesn't mean that you should have an actual domain registered on an Internet this is just a way to create a namespace for our classes"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Preserves both convention and important registration qualification; omits phonetic identifiers."
+    },
+    {
+      "item": {
+        "knowledge_id": "FCT_5006",
+        "knowledge_type": "fact",
+        "document_id": "JAVA",
+        "source_unit_ids": [
+          "T0045"
+        ],
+        "content": "The input-loop example uses the equals method of string objects to compare values and repeats while the input does not equal quit.",
+        "fact_text": "The input-loop example uses the equals method of string objects to compare values and repeats while the input does not equal quit.",
+        "section": "Input loops and termination"
+      },
+      "evidence": [
+        {
+          "source_id": "T0045",
+          "quote": "to compare their value instead we need to use the equals method of string objects so we want to check to see if the input equals quit now here we need to apply the not operator so as long as the input does not equal quit we're gonna continuously ask the user to enter something"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Recovers value comparison and negated termination condition without inventing literal syntax."
+    },
+    {
+      "item": {
+        "knowledge_id": "FCT_5007",
+        "knowledge_type": "fact",
+        "document_id": "JAVA",
+        "source_unit_ids": [
+          "T0045"
+        ],
+        "content": "In this example, create the scanner outside the while loop and reuse it, avoiding a new scanner object on each iteration.",
+        "fact_text": "In this example, create the scanner outside the while loop and reuse it, avoiding a new scanner object on each iteration.",
+        "section": "Input loops and termination"
+      },
+      "evidence": [
+        {
+          "source_id": "T0045",
+          "quote": "with this implementation in every iteration we're going to create a new scanner object so if the user enters 10 numbers we're gonna create 10 scanner objects in memory this is unnecessary and it's actually a bad practice because it's going to pollute our memory so it's better to create the scanner object outside of a while loop and then simply use it here"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Keeps recommendation scoped to the demonstrated program rather than all resource lifetimes."
+    },
+    {
+      "item": {
+        "knowledge_id": "FCT_5008",
+        "knowledge_type": "fact",
+        "document_id": "JAVA",
+        "source_unit_ids": [
+          "T0045"
+        ],
+        "content": "The example converts input to lowercase after reading it so uppercase or mixed-case versions of quit satisfy the intended termination check.",
+        "fact_text": "The example converts input to lowercase after reading it so uppercase or mixed-case versions of quit satisfy the intended termination check.",
+        "section": "Input loops and termination"
+      },
+      "evidence": [
+        {
+          "source_id": "T0045",
+          "quote": "here we are assuming that the user is typing everything in lowercase so if they type quit in uppercase or any combinations of lowercase and uppercase characters this logic is not gonna work the way we want so over here right after reading something from the terminal we're gonna call the to lowercase method of string objects to convert it to lowercase"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Preserves reason, order and scope; makes no broader locale guarantee."
+    },
+    {
+      "item": {
+        "knowledge_id": "FCT_5009",
+        "knowledge_type": "fact",
+        "document_id": "JAVA",
+        "source_unit_ids": [
+          "T0045"
+        ],
+        "content": "The demonstration echoes entered values back to the terminal and terminates when the user types quit.",
+        "fact_text": "The demonstration echoes entered values back to the terminal and terminates when the user types quit.",
+        "section": "Input loops and termination"
+      },
+      "evidence": [
+        {
+          "source_id": "T0045",
+          "quote": "let's echo back whatever the user enters so we simply print that on the terminal now let's run this and see what happens so I'm going to enter if your numbers like 1 2 & 3 whatever we type gets a code back but the moment we type quit our program terminates"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Recovers demonstrated behavior, not an invented complete program or scanner method."
+    },
+    {
+      "item": {
+        "knowledge_id": "FCT_5010",
+        "knowledge_type": "fact",
+        "document_id": "JAVA",
+        "source_unit_ids": [
+          "T0045"
+        ],
+        "content": "The source presents while loops as useful when the required number of repetitions is not known ahead of time.",
+        "fact_text": "The source presents while loops as useful when the required number of repetitions is not known ahead of time.",
+        "section": "Input loops and termination"
+      },
+      "evidence": [
+        {
+          "source_id": "T0045",
+          "quote": "while loops are useful in situations where we don't know ahead of time how many times we want to repeat something"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Preserves useful-when qualification rather than an exclusive rule."
+    },
+    {
+      "item": {
+        "knowledge_id": "FCT_5011",
+        "knowledge_type": "fact",
+        "document_id": "JAVA",
+        "source_unit_ids": [
+          "T0045"
+        ],
+        "content": "A while loop checks its condition first and may execute zero times if the condition is initially false. A do-while loop checks last and executes its body at least once.",
+        "fact_text": "A while loop checks its condition first and may execute zero times if the condition is initially false. A do-while loop checks last and executes its body at least once.",
+        "section": "Loop condition timing"
+      },
+      "evidence": [
+        {
+          "source_id": "T0045",
+          "quote": "with while loops we check the condition first so if the condition is false the first time this loop will never get executed in contrast with do-while loops we check the condition last so do-while loops always get executed at least once even if the condition is false"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Preserves the important zero-versus-one-or-more contrast."
+    }
+  ],
+  "field_reviews": [
+    {
+      "item_id": "FCT_0224",
+      "path": "/content",
+      "expected_text": "A lowercase f suffix can be confused with the digit 1, so an uppercase F is recommended for float literals.",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0012",
+          "quote": "suffix here to represent this number as a float and that suffix is F once again we can use an upper case or lower case F so these are examples of numbers now let's store a character so char we call it letter and we set it to a note that we should always surround single characters with single quotes and multiple characters or strings with double quotes okay so char represents only one character string represents a series of characters and finally let's see an example of a boolean so we define a"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Original confusion-with-1 and preference claim is unsupported by this quote (it refers to f, whereas confusion appears in the long-l discussion). Replacement retains only the explicit either-case permission.",
+      "replacement": "The source allows an uppercase or lowercase F suffix to represent a floating-point number as a float."
+    },
+    {
+      "item_id": "FCT_0224",
+      "path": "/fact_text",
+      "expected_text": "A lowercase f suffix can be confused with the digit 1, so an uppercase F is recommended for float literals.",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0012",
+          "quote": "suffix here to represent this number as a float and that suffix is F once again we can use an upper case or lower case F so these are examples of numbers now let's store a character so char we call it letter and we set it to a note that we should always surround single characters with single quotes and multiple characters or strings with double quotes okay so char represents only one character string represents a series of characters and finally let's see an example of a boolean so we define a"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Original confusion-with-1 and preference claim is unsupported by this quote (it refers to f, whereas confusion appears in the long-l discussion). Replacement retains only the explicit either-case permission.",
+      "replacement": "The source allows an uppercase or lowercase F suffix to represent a floating-point number as a float."
+    },
+    {
+      "item_id": "FCT_0017",
+      "path": "/content",
+      "expected_text": "Memory for reference variables must be allocated explicitly using the new operator.",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0013",
+          "quote": "variable and this is one of the differences between the primitive and reference types when declaring primitive types we don't need to allocate memory memory is allocated and released by Java Runtime environment but when dealing with reference types we should always allocate memory now we don't have to release this memory Java Runtime environment will automatically take care of that so we use the new operator and then repeat the name of our class in this case date and then we add parentheses"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Restricts the overgeneralized reference-variable allocation claim to the Date object demonstration actually described.",
+      "replacement": "In the demonstrated Date example, the source creates an object using the new operator followed by the class name and parentheses."
+    },
+    {
+      "item_id": "FCT_0017",
+      "path": "/fact_text",
+      "expected_text": "Memory for reference variables must be allocated explicitly using the new operator.",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0013",
+          "quote": "variable and this is one of the differences between the primitive and reference types when declaring primitive types we don't need to allocate memory memory is allocated and released by Java Runtime environment but when dealing with reference types we should always allocate memory now we don't have to release this memory Java Runtime environment will automatically take care of that so we use the new operator and then repeat the name of our class in this case date and then we add parentheses"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Restricts the overgeneralized reference-variable allocation claim to the Date object demonstration actually described.",
+      "replacement": "In the demonstrated Date example, the source creates an object using the new operator followed by the class name and parentheses."
+    },
+    {
+      "item_id": "FCT_0339",
+      "path": "/content",
+      "expected_text": "Variables must be declared inside a code block (curly braces) in Java.",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0038",
+          "quote": "the income is more than $100,000 you want to set this to true otherwise we want to set this to false so here we can write an if statement like this if income is greater than $100,000 we want to set has high income to true however we get a compilation error here let's take a look declaration not allowed here so we cannot declare a variable here we can only declare variables inside code blocks like this code block over here so to declare this variable we need to add curly braces to define a new"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Restores local-if-declaration context instead of claiming a universal rule about every Java variable declaration.",
+      "replacement": "In the demonstrated if statement, declaring the local variable directly as the unbraced body produces an error; the source adds braces to create a code block."
+    },
+    {
+      "item_id": "FCT_0339",
+      "path": "/fact_text",
+      "expected_text": "Variables must be declared inside a code block (curly braces) in Java.",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0038",
+          "quote": "the income is more than $100,000 you want to set this to true otherwise we want to set this to false so here we can write an if statement like this if income is greater than $100,000 we want to set has high income to true however we get a compilation error here let's take a look declaration not allowed here so we cannot declare a variable here we can only declare variables inside code blocks like this code block over here so to declare this variable we need to add curly braces to define a new"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Restores local-if-declaration context instead of claiming a universal rule about every Java variable declaration.",
+      "replacement": "In the demonstrated if statement, declaring the local variable directly as the unbraced body produces an error; the source adds braces to create a code block."
+    },
+    {
+      "item_id": "FCT_0361",
+      "path": "/content",
+      "expected_text": "While loops require an explicit loop variable and a condition evaluated before each iteration",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0044",
+          "quote": "one two three four five in contrast if we initialize I to zero and use the less than operator we will get hello word zero one two three four we can also print these numbers in reverse order so we initialize I to five and execute this loop as long as I is greater than zero but here instead of incrementing I we decrement it now we get hello world five four three two one so this is all about for loops next we're gonna look at while loops in this tutorial we're gonna talk about while loops in Java while loops are very similar to for loops in terms of their functionality but they're different in terms of syntax let me show you so we're gonna continue with the example from the last tutorial I'm gonna rewrite this code using a while loop so first we declare a loop variable and I initialize it to zero next we type while and here in parentheses we type our loop condition while I is greater than zero then we're gonna execute the code inside this block so I'm gonna copy this from here paste it in this block and finally we need to decrement I like this so at the end of each iteration we decrement I just like our for loops so as you can see we can achieve the same thing using a for loop or a while loop however the implementation using the for loop is a little bit lighter and cleaner so in situations where you know ahead of time how many times you want to execute one or more statements it's better to use a for loop while loops are better in situations where we don't know exactly how many times you want to repeat something for example let's say we're going to write a program and ask the user to continuously enter something until they type quit the moment they type quit we're gonna terminate the program in that situation we don't know how many times the user is going to enter something so let's write that program using a while loop I'm gonna delete everything from here all right we're gonna start with our while loop now what is our loop condition here we don't have a counter variable in this example instead we want to check to see if the user entered quit or not so here we can declare a string called input and initialize it to an empty string then we can write a while loop like this while input does not equal to quit now this code is not gonna work because input is a string which is a reference type and we cannot use comparison operators between reference types because these operators will compare the address or a string objects not their value so if you have two strings quit and quit but stored in different memory locations to have different addresses so we can use the inequality operator"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "The later part of the same source explicitly says the input loop has no counter variable. Restore example scope instead of requiring an explicit loop variable in every while loop.",
+      "replacement": "The source first demonstrates a counter-based while loop, then an input-driven while loop with no counter variable. The input loop checks whether the user has entered quit."
+    },
+    {
+      "item_id": "FCT_0361",
+      "path": "/fact_text",
+      "expected_text": "While loops require an explicit loop variable and a condition evaluated before each iteration",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0044",
+          "quote": "one two three four five in contrast if we initialize I to zero and use the less than operator we will get hello word zero one two three four we can also print these numbers in reverse order so we initialize I to five and execute this loop as long as I is greater than zero but here instead of incrementing I we decrement it now we get hello world five four three two one so this is all about for loops next we're gonna look at while loops in this tutorial we're gonna talk about while loops in Java while loops are very similar to for loops in terms of their functionality but they're different in terms of syntax let me show you so we're gonna continue with the example from the last tutorial I'm gonna rewrite this code using a while loop so first we declare a loop variable and I initialize it to zero next we type while and here in parentheses we type our loop condition while I is greater than zero then we're gonna execute the code inside this block so I'm gonna copy this from here paste it in this block and finally we need to decrement I like this so at the end of each iteration we decrement I just like our for loops so as you can see we can achieve the same thing using a for loop or a while loop however the implementation using the for loop is a little bit lighter and cleaner so in situations where you know ahead of time how many times you want to execute one or more statements it's better to use a for loop while loops are better in situations where we don't know exactly how many times you want to repeat something for example let's say we're going to write a program and ask the user to continuously enter something until they type quit the moment they type quit we're gonna terminate the program in that situation we don't know how many times the user is going to enter something so let's write that program using a while loop I'm gonna delete everything from here all right we're gonna start with our while loop now what is our loop condition here we don't have a counter variable in this example instead we want to check to see if the user entered quit or not so here we can declare a string called input and initialize it to an empty string then we can write a while loop like this while input does not equal to quit now this code is not gonna work because input is a string which is a reference type and we cannot use comparison operators between reference types because these operators will compare the address or a string objects not their value so if you have two strings quit and quit but stored in different memory locations to have different addresses so we can use the inequality operator"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "The later part of the same source explicitly says the input loop has no counter variable. Restore example scope instead of requiring an explicit loop variable in every while loop.",
+      "replacement": "The source first demonstrates a counter-based while loop, then an input-driven while loop with no counter variable. The input loop checks whether the user has entered quit."
+    },
+    {
+      "item_id": "FCT_0362",
+      "path": "/content",
+      "expected_text": "In a while loop, the loop variable must be updated inside the loop body to avoid infinite loops",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0044",
+          "quote": "one two three four five in contrast if we initialize I to zero and use the less than operator we will get hello word zero one two three four we can also print these numbers in reverse order so we initialize I to five and execute this loop as long as I is greater than zero but here instead of incrementing I we decrement it now we get hello world five four three two one so this is all about for loops next we're gonna look at while loops in this tutorial we're gonna talk about while loops in Java while loops are very similar to for loops in terms of their functionality but they're different in terms of syntax let me show you so we're gonna continue with the example from the last tutorial I'm gonna rewrite this code using a while loop so first we declare a loop variable and I initialize it to zero next we type while and here in parentheses we type our loop condition while I is greater than zero then we're gonna execute the code inside this block so I'm gonna copy this from here paste it in this block and finally we need to decrement I like this so at the end of each iteration we decrement I just like our for loops so as you can see we can achieve the same thing using a for loop or a while loop however the implementation using the for loop is a little bit lighter and cleaner so in situations where you know ahead of time how many times you want to execute one or more statements it's better to use a for loop while loops are better in situations where we don't know exactly how many times you want to repeat something for example let's say we're going to write a program and ask the user to continuously enter something until they type quit the moment they type quit we're gonna terminate the program in that situation we don't know how many times the user is going to enter something so let's write that program using a while loop I'm gonna delete everything from here all right we're gonna start with our while loop now what is our loop condition here we don't have a counter variable in this example instead we want to check to see if the user entered quit or not so here we can declare a string called input and initialize it to an empty string then we can write a while loop like this while input does not equal to quit now this code is not gonna work because input is a string which is a reference type and we cannot use comparison operators between reference types because these operators will compare the address or a string objects not their value so if you have two strings quit and quit but stored in different memory locations to have different addresses so we can use the inequality operator"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Counter decrement belongs to the counting demonstration, not a universal obligation to update a counter inside every while loop. Source also contains a counter-free input example.",
+      "replacement": "In the counter-based while-loop rewrite, the source decrements the counter at the end of each iteration. The later input-driven example uses no counter variable."
+    },
+    {
+      "item_id": "FCT_0362",
+      "path": "/fact_text",
+      "expected_text": "In a while loop, the loop variable must be updated inside the loop body to avoid infinite loops",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0044",
+          "quote": "one two three four five in contrast if we initialize I to zero and use the less than operator we will get hello word zero one two three four we can also print these numbers in reverse order so we initialize I to five and execute this loop as long as I is greater than zero but here instead of incrementing I we decrement it now we get hello world five four three two one so this is all about for loops next we're gonna look at while loops in this tutorial we're gonna talk about while loops in Java while loops are very similar to for loops in terms of their functionality but they're different in terms of syntax let me show you so we're gonna continue with the example from the last tutorial I'm gonna rewrite this code using a while loop so first we declare a loop variable and I initialize it to zero next we type while and here in parentheses we type our loop condition while I is greater than zero then we're gonna execute the code inside this block so I'm gonna copy this from here paste it in this block and finally we need to decrement I like this so at the end of each iteration we decrement I just like our for loops so as you can see we can achieve the same thing using a for loop or a while loop however the implementation using the for loop is a little bit lighter and cleaner so in situations where you know ahead of time how many times you want to execute one or more statements it's better to use a for loop while loops are better in situations where we don't know exactly how many times you want to repeat something for example let's say we're going to write a program and ask the user to continuously enter something until they type quit the moment they type quit we're gonna terminate the program in that situation we don't know how many times the user is going to enter something so let's write that program using a while loop I'm gonna delete everything from here all right we're gonna start with our while loop now what is our loop condition here we don't have a counter variable in this example instead we want to check to see if the user entered quit or not so here we can declare a string called input and initialize it to an empty string then we can write a while loop like this while input does not equal to quit now this code is not gonna work because input is a string which is a reference type and we cannot use comparison operators between reference types because these operators will compare the address or a string objects not their value so if you have two strings quit and quit but stored in different memory locations to have different addresses so we can use the inequality operator"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Counter decrement belongs to the counting demonstration, not a universal obligation to update a counter inside every while loop. Source also contains a counter-free input example.",
+      "replacement": "In the counter-based while-loop rewrite, the source decrements the counter at the end of each iteration. The later input-driven example uses no counter variable."
+    },
+    {
+      "item_id": "EXP_0133",
+      "path": "/content",
+      "expected_text": "String variables are reference types and cannot be compared with == or != because those operators compare object addresses, not their textual values",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0044",
+          "quote": "one two three four five in contrast if we initialize I to zero and use the less than operator we will get hello word zero one two three four we can also print these numbers in reverse order so we initialize I to five and execute this loop as long as I is greater than zero but here instead of incrementing I we decrement it now we get hello world five four three two one so this is all about for loops next we're gonna look at while loops in this tutorial we're gonna talk about while loops in Java while loops are very similar to for loops in terms of their functionality but they're different in terms of syntax let me show you so we're gonna continue with the example from the last tutorial I'm gonna rewrite this code using a while loop so first we declare a loop variable and I initialize it to zero next we type while and here in parentheses we type our loop condition while I is greater than zero then we're gonna execute the code inside this block so I'm gonna copy this from here paste it in this block and finally we need to decrement I like this so at the end of each iteration we decrement I just like our for loops so as you can see we can achieve the same thing using a for loop or a while loop however the implementation using the for loop is a little bit lighter and cleaner so in situations where you know ahead of time how many times you want to execute one or more statements it's better to use a for loop while loops are better in situations where we don't know exactly how many times you want to repeat something for example let's say we're going to write a program and ask the user to continuously enter something until they type quit the moment they type quit we're gonna terminate the program in that situation we don't know how many times the user is going to enter something so let's write that program using a while loop I'm gonna delete everything from here all right we're gonna start with our while loop now what is our loop condition here we don't have a counter variable in this example instead we want to check to see if the user entered quit or not so here we can declare a string called input and initialize it to an empty string then we can write a while loop like this while input does not equal to quit now this code is not gonna work because input is a string which is a reference type and we cannot use comparison operators between reference types because these operators will compare the address or a string objects not their value so if you have two strings quit and quit but stored in different memory locations to have different addresses so we can use the inequality operator"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Restrict the claim to failure to compare textual values; remove wording suggesting reference comparison is impossible as an operation.",
+      "replacement": "In the input-loop explanation, comparing string references does not test their textual values; the source distinguishes the strings' memory locations from their values."
+    },
+    {
+      "item_id": "EXP_0133",
+      "path": "/explanation_text",
+      "expected_text": "String variables are reference types and cannot be compared with == or != because those operators compare object addresses, not their textual values",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0044",
+          "quote": "one two three four five in contrast if we initialize I to zero and use the less than operator we will get hello word zero one two three four we can also print these numbers in reverse order so we initialize I to five and execute this loop as long as I is greater than zero but here instead of incrementing I we decrement it now we get hello world five four three two one so this is all about for loops next we're gonna look at while loops in this tutorial we're gonna talk about while loops in Java while loops are very similar to for loops in terms of their functionality but they're different in terms of syntax let me show you so we're gonna continue with the example from the last tutorial I'm gonna rewrite this code using a while loop so first we declare a loop variable and I initialize it to zero next we type while and here in parentheses we type our loop condition while I is greater than zero then we're gonna execute the code inside this block so I'm gonna copy this from here paste it in this block and finally we need to decrement I like this so at the end of each iteration we decrement I just like our for loops so as you can see we can achieve the same thing using a for loop or a while loop however the implementation using the for loop is a little bit lighter and cleaner so in situations where you know ahead of time how many times you want to execute one or more statements it's better to use a for loop while loops are better in situations where we don't know exactly how many times you want to repeat something for example let's say we're going to write a program and ask the user to continuously enter something until they type quit the moment they type quit we're gonna terminate the program in that situation we don't know how many times the user is going to enter something so let's write that program using a while loop I'm gonna delete everything from here all right we're gonna start with our while loop now what is our loop condition here we don't have a counter variable in this example instead we want to check to see if the user entered quit or not so here we can declare a string called input and initialize it to an empty string then we can write a while loop like this while input does not equal to quit now this code is not gonna work because input is a string which is a reference type and we cannot use comparison operators between reference types because these operators will compare the address or a string objects not their value so if you have two strings quit and quit but stored in different memory locations to have different addresses so we can use the inequality operator"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Restrict the claim to failure to compare textual values; remove wording suggesting reference comparison is impossible as an operation.",
+      "replacement": "In the input-loop explanation, comparing string references does not test their textual values; the source distinguishes the strings' memory locations from their values."
+    },
+    {
+      "item_id": "FCT_0252",
+      "path": "/content",
+      "expected_text": "In a String array, elements default to an empty string.",
+      "status": "INCONCLUSIVE",
+      "mode": "requires_review",
+      "evidence": [
+        {
+          "source_id": "T0020",
+          "quote": "if you have a string array all items get initialized to an empty string"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "The complete T0020 transcript states empty string. This source assertion needs independent technical verification; exact quotation is not factual certification. Withhold pending a successful independent check."
+    },
+    {
+      "item_id": "FCT_0252",
+      "path": "/fact_text",
+      "expected_text": "In a String array, elements default to an empty string.",
+      "status": "INCONCLUSIVE",
+      "mode": "requires_review",
+      "evidence": [
+        {
+          "source_id": "T0020",
+          "quote": "if you have a string array all items get initialized to an empty string"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "The complete T0020 transcript states empty string. This source assertion needs independent technical verification; exact quotation is not factual certification. Withhold pending a successful independent check."
+    },
+    {
+      "item_id": "FCT_0016",
+      "path": "/content",
+      "expected_text": "The equal sign (=) is called the assignment operator in Java.",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0010",
+          "quote": "have several different types I'm gonna talk about them in the next tutorial so first we specify the type of our variable then we give it a name or a label this is also called an identifier because we use it to identify our variable this equal sign is called the assignment operator and 30 is the initial value that we are assigning to this variable so we say on line 6 we're initializing this variable which means we're giving it an initial value you always have to initialize our variables before"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Both source passages explicitly identify the single equals sign as assignment; same document, operator and scope. No additional facts are discarded."
+    },
+    {
+      "item_id": "FCT_0016",
+      "path": "/fact_text",
+      "expected_text": "The equal sign (=) is called the assignment operator in Java.",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0010",
+          "quote": "have several different types I'm gonna talk about them in the next tutorial so first we specify the type of our variable then we give it a name or a label this is also called an identifier because we use it to identify our variable this equal sign is called the assignment operator and 30 is the initial value that we are assigning to this variable so we say on line 6 we're initializing this variable which means we're giving it an initial value you always have to initialize our variables before"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Both source passages explicitly identify the single equals sign as assignment; same document, operator and scope. No additional facts are discarded."
+    },
+    {
+      "item_id": "FCT_0326",
+      "path": "/content",
+      "expected_text": "A single equal sign (=) is the assignment operator.",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0034",
+          "quote": "first I'm gonna add this print line statement now to compare these variables we type x equals y so here we have two equal signs and this is the Equality operator don't confuse this with a single equal sign that we use for assignment that is the operator used over here okay so two equal signs repairs the Equality operator now when we run this program we get true because these values are equal this expression that we have here is called a boolean expression so earlier I told you that an expression"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Both source passages explicitly identify the single equals sign as assignment; same document, operator and scope. No additional facts are discarded."
+    },
+    {
+      "item_id": "FCT_0326",
+      "path": "/fact_text",
+      "expected_text": "A single equal sign (=) is the assignment operator.",
+      "status": "SUPPORTED",
+      "mode": "faithful_paraphrase",
+      "evidence": [
+        {
+          "source_id": "T0034",
+          "quote": "first I'm gonna add this print line statement now to compare these variables we type x equals y so here we have two equal signs and this is the Equality operator don't confuse this with a single equal sign that we use for assignment that is the operator used over here okay so two equal signs repairs the Equality operator now when we run this program we get true because these values are equal this expression that we have here is called a boolean expression so earlier I told you that an expression"
+        }
+      ],
+      "reviewer": "assistant source-comparison review; not independent human certification",
+      "rationale": "Both source passages explicitly identify the single equals sign as assignment; same document, operator and scope. No additional facts are discarded."
+    }
+  ],
+  "provider_dispatch": false,
+  "authorization_changes": false,
+  "presentation_section_titles": {
+    "T0004": "Project setup and packages",
+    "T0010": "Assignment, variables and literals",
+    "T0011": "Assignment, variables and literals",
+    "T0012": "Assignment, variables and literals",
+    "T0013": "Object creation",
+    "T0017": "String operations",
+    "T0023": "Arithmetic and precedence",
+    "T0024": "Number conversions",
+    "T0025": "Number conversions",
+    "T0034": "Assignment and comparison",
+    "T0036": "Conditional statements",
+    "T0038": "Conditional statements",
+    "T0041": "Conditional ordering and alternative approaches",
+    "T0042": "Conditional ordering and alternative approaches",
+    "T0044": "Counting loops and input-driven loops"
+  }
+}

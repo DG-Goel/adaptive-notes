@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-b8a40a1a-8465-464b-b4b1-40e26d405a1e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"uncovered interest parity\",\n      \"refs\": [\"Q0000\", \"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the domestic interest rate exceeds the international interest rate, the current exchange rate must be above the expected future exchange rate so that the expected depreciation of the domestic currency offsets the higher domestic interest rate; conversely, if the domestic interest rate is lower, the current exchange rate is very depreciated because the currency is expected to appreciate to compensate for the interest rate differential.\",\n      \"refs\": [\"Q0000\", \"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the excerpt, what must happen to the current exchange rate when the domestic interest rate is higher than the international interest rate?\",\n      \"answer\": \"It must be above the expected future exchange rate.\",\n      \"distractors\": [\n        \"It must be below the expected future exchange rate.\",\n        \"It must equal the expected future exchange rate.\",\n        \"It must be unrelated to the expected future exchange rate.\"\n      ],\n      \"explanation\": \"The excerpt states that a higher domestic interest rate requires the current exchange rate to be above the expected exchange rate so that expected depreciation compensates for the higher rate.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Uncovered interest parity – high domestic rate\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"What economic outcome compensates for a higher domestic interest rate in the uncovered interest parity relationship?\",\n      \"answer\": \"Expected depreciation of the domestic currency.\",\n      \"distractors\": [\n        \"Expected appreciation of the domestic currency.\",\n        \"Higher inflation in the domestic country.\",\n        \"A rise in the international interest rate.\"\n      ],\n      \"explanation\": \"The excerpt explains that the expected depreciation of the currency offsets the higher domestic interest rate.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Uncovered interest parity – compensation mechanism\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"If the domestic bond pays a lower interest rate than the international bond, how does the excerpt describe the current exchange rate?\",\n      \"answer\": \"It is very depreciated.\",\n      \"distractors\": [\n        \"It is very appreciated.\",\n        \"It is unchanged.\",\n        \"It fluctuates randomly.\"\n      ],\n      \"explanation\": \"The excerpt says that when the domestic bond pays a lower rate, the exchange rate today is very depreciated because the currency must be expected to appreciate.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Uncovered interest parity – low domestic rate\",\n      \"refs\": [\"Q0001\"]\n    },\n    {\n      \"question\": \"Why does the excerpt say the exchange rate must adjust when interest rates differ between domestic and international bonds?\",\n      \"answer\": \"To ensure investors are indifferent between holding domestic and foreign bonds.\",\n      \"distractors\": [\n        \"To maintain a fixed exchange rate regime.\",\n        \"To reflect government policy interventions.\",\n        \"To match the inflation differential between countries.\"\n      ],\n      \"explanation\": \"The underlying principle of uncovered interest parity is that the expected return on domestic and foreign bonds must be equal, requiring exchange‑rate adjustments when interest rates differ.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"Uncovered interest parity – rationale\",\n      \"refs\": [\"Q0000\", \"Q0001\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. The excerpts discuss uncovered interest parity concept. So create concepts rows: concept_name \"uncovered interest parity\" content from Q0000 and Q0001. Provide rows.\n\nAlso maybe definitions? No explicit term defined. Use concept.\n\nCreate rows with availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role explanation_of_mistake? Actually it's explanation. Use instructional_role null.\n\nProvide item \"item1\". element 0.\n\nAdd abstentions none.\n\nQuiz: create 4 questions about the relationship. Use excerpts as refs.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794806497,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_86dc843b12",
+  "usage": {
+    "completion_tokens": 1024,
+    "prompt_tokens": 2827,
+    "total_tokens": 3851,
+    "completion_time": 2.4655253679999998,
+    "completion_tokens_details": {
+      "reasoning_tokens": 117
+    },
+    "prompt_time": 0.062920737,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "queue_time": 0.165477816,
+    "total_time": 2.528446105
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hcvdt2esz9qzztzdb0fe6x",
+    "debug": null,
+    "seed": 2113802053,
+    "usage": null
+  }
+}

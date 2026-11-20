@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-a84b8acd-8dc8-41b8-bc3d-7daa63c7d873",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"C001\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Uncovered interest parity\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\", \"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C001\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If the domestic interest rate is above the international interest rate, the exchange rate today must be above the expected exchange rate, giving an expected depreciation that compensates for the higher domestic bond yield; conversely, if the domestic bond pays a lower interest rate, the exchange rate today is very depreciated because it must be expected to appreciate to offset the interest rate differential.\",\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\", \"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"F001\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"An equation for the exchange rate can be added to the IS equation in an open economy.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"F002\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Expected exchange rate and international interest rate become new parameters in the open‑economy IS model.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit definition of terms provided in the excerpts.\",\n      \"source_ids\": [\"G00031\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Exact algebraic formula not quoted; only verbal description present.\",\n      \"source_ids\": [\"G00031\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the primary excerpt, what must be true about the exchange rate today when the domestic interest rate is higher than the international interest rate?\",\n      \"answer\": \"It must be above the expected exchange rate.\",\n      \"distractors\": [\n        \"It must be below the expected exchange rate.\",\n        \"It must equal the expected exchange rate.\",\n        \"It is unrelated to the expected exchange rate.\"\n      ],\n      \"explanation\": \"The excerpt states that a higher domestic interest rate requires the exchange rate today to be above the expected exchange rate, providing expected depreciation that compensates for the higher yield.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Interest rate parity\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"What does the excerpt say happens to the exchange rate today when the domestic bond pays a lower interest rate than the foreign bond?\",\n      \"answer\": \"The exchange rate today is very depreciated.\",\n      \"distractors\": [\n        \"The exchange rate today is very appreciated.\",\n        \"The exchange rate today remains unchanged.\",\n        \"The exchange rate today equals the expected exchange rate.\"\n      ],\n      \"explanation\": \"The excerpt explains that a lower domestic interest rate means the current exchange rate is very depreciated because it must be expected to appreciate to offset the differential.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Interest rate parity\",\n      \"refs\": [\"Q0001\"]\n    },\n    {\n      \"question\": \"What new parameters are introduced into the open‑economy IS model according to the speaker?\",\n      \"answer\": \"Expected exchange rate and international interest rate.\",\n      \"distractors\": [\n        \"Domestic consumption and government spending.\",\n        \"Foreign price level and trade balance.\",\n        \"Capital stock and technology level.\"\n      ],\n      \"explanation\": \"The speaker notes that expected exchange rate and international interest rate become new parameters in the model.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Open‑economy IS model\",\n      \"refs\": [\"Q0005\"]\n    },\n    {\n      \"question\": \"What does the speaker indicate can be done with the IS equation in an open economy?\",\n      \"answer\": \"An exchange‑rate equation can be added to it.\",\n      \"distractors\": [\n        \"It can be solved without any additional variables.\",\n        \"It can be replaced entirely by a monetary‑policy rule.\",\n        \"It can be ignored when analyzing exchange rates.\"\n      ],\n      \"explanation\": \"The excerpt mentions having an equation for the exchange rate that can be incorporated into the IS equation for the open economy.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"Open‑economy IS equation\",\n      \"refs\": [\"Q0003\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows, abstentions, excluded, quiz. Extract concepts? The excerpts discuss interest rate parity and exchange rate expectations. We can create facts. Required fields: need at least one item. Let's make a concept: concept_name \"Uncovered interest parity\" content from Q0000 and Q0001. Provide rows.\n\nRow for concept content: category concepts, field content, text combine? Use explicit basis. Provide item \"C001\". element 0 part value.\n\nAlso concept_name row.\n\nAdd fact rows maybe.\n\nAbstentions for missing definitions etc.\n\nQuiz: create 4 questions about the teaching. Use primary excerpts.\n\nQuestion1: According to Q0000, if domestic interest rate > international, what must be true about exchange rate today? Answer: It must be above expected exchange rate. Distractors.\n\nProvide refs [\"Q0000\"].\n\nBloom: Understand.\n\nSimilarly Q0001.\n\nThird about expected depreciation compensates.\n\nFourth about equation for exchange rate? Use Q0003.\n\nProvide rows.\n\nNow construct JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794813506,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 1431,
+    "prompt_tokens": 2821,
+    "total_tokens": 4252,
+    "completion_time": 2.99041821,
+    "completion_tokens_details": {
+      "reasoning_tokens": 211
+    },
+    "prompt_time": 0.251553964,
+    "prompt_tokens_details": null,
+    "queue_time": 0.327477184,
+    "total_time": 3.241972174
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hkh9kzevw86hxzg8qm8qts",
+    "debug": null,
+    "seed": 1465528400,
+    "usage": null
+  }
+}

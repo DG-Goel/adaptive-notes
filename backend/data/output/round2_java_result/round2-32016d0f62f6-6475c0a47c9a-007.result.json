@@ -1,0 +1,365 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0219",
+        "FCT_0220",
+        "FCT_0221",
+        "FCT_0224",
+        "FCT_0225",
+        "FCT_0226"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    },
+    {
+      "note_ids": [
+        "FCT_0234",
+        "FCT_0235",
+        "FCT_0233",
+        "FCT_0232",
+        "FCT_0231"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    },
+    {
+      "note_ids": [
+        "FCT_0244",
+        "FCT_0245",
+        "FCT_0246",
+        "FCT_0249",
+        "FCT_0252",
+        "FCT_0253",
+        "FCT_0254",
+        "FCT_0255",
+        "FCT_0256"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Numeric Type Casting Hierarchy",
+      "source_segment_ids": [
+        "FCT_0219",
+        "FCT_0220",
+        "FCT_0221",
+        "FCT_0224",
+        "FCT_0225",
+        "FCT_0226"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0219",
+            "FCT_0220",
+            "FCT_0221",
+            "FCT_0224",
+            "FCT_0225",
+            "FCT_0226"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0219",
+              "exact_quote": "When a short is used in an expression with an int, Java implicitly casts the short to an int."
+            },
+            {
+              "note_id": "FCT_0220",
+              "exact_quote": "Byte can be automatically converted to short, short to int, int to long, and so on up the numeric hierarchy."
+            },
+            {
+              "note_id": "FCT_0221",
+              "exact_quote": "Implicit casting occurs automatically when converting a value to a larger numeric type without loss of data."
+            },
+            {
+              "note_id": "FCT_0224",
+              "exact_quote": "When an int is added to a double, the int is implicitly cast to double before the addition."
+            },
+            {
+              "note_id": "FCT_0225",
+              "exact_quote": "Explicit casting is required when converting from a larger numeric type to a smaller one (e.g., double to int)."
+            },
+            {
+              "note_id": "FCT_0226",
+              "exact_quote": "Explicit casting can only be performed between compatible primitive numeric types."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Implicit and Explicit Casting in Java",
+            "headers": [
+              "From Type",
+              "To Type",
+              "Casting Mode",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "short",
+                "int",
+                "implicit",
+                "short auto‑promoted when used with int"
+              ],
+              [
+                "byte",
+                "short",
+                "implicit",
+                "byte auto‑promoted up the hierarchy"
+              ],
+              [
+                "int",
+                "double",
+                "implicit",
+                "int promoted for floating‑point operations"
+              ],
+              [
+                "double",
+                "int",
+                "explicit",
+                "requires cast, possible data loss"
+              ],
+              [
+                "float",
+                "int",
+                "explicit",
+                "requires cast, possible data loss"
+              ],
+              [
+                "double",
+                "float",
+                "explicit",
+                "requires cast, possible precision loss"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Parsing User Input Strings to Numeric Types",
+      "source_segment_ids": [
+        "FCT_0234",
+        "FCT_0235",
+        "FCT_0233",
+        "FCT_0232",
+        "FCT_0231"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0234",
+            "FCT_0235",
+            "FCT_0233"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0234",
+              "exact_quote": "When the user enters a floating‑point value like 1.1, use Double.parseDouble (or Float.parseFloat) instead of Integer.parseInt."
+            },
+            {
+              "note_id": "FCT_0235",
+              "exact_quote": "So, if the user enters 1.1, we cannot use this method, instead we should use float or double, let's say double because that's easier, double parse double, so we parse this number as a double, add 2 to it and then store the result in a double."
+            },
+            {
+              "note_id": "FCT_0233",
+              "exact_quote": "Parsing a non‑integer string with Integer.parseInt throws an exception."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "String → Numeric Parsing Decision",
+            "direction": "top-down",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "User input string"
+              },
+              {
+                "id": "n2",
+                "label": "Is input integer?"
+              },
+              {
+                "id": "n3",
+                "label": "Integer.parseInt"
+              },
+              {
+                "id": "n4",
+                "label": "Is input floating‑point?"
+              },
+              {
+                "id": "n5",
+                "label": "Double.parseDouble"
+              },
+              {
+                "id": "n6",
+                "label": "Error: NumberFormatException"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": ""
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": "yes"
+              },
+              {
+                "from": "n2",
+                "to": "n4",
+                "label": "no"
+              },
+              {
+                "from": "n4",
+                "to": "n5",
+                "label": "yes"
+              },
+              {
+                "from": "n4",
+                "to": "n6",
+                "label": "no"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Reading Input from the Console with Scanner",
+      "source_segment_ids": [
+        "FCT_0244",
+        "FCT_0245",
+        "FCT_0246",
+        "FCT_0249",
+        "FCT_0252",
+        "FCT_0253",
+        "FCT_0254",
+        "FCT_0255",
+        "FCT_0256"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0244",
+            "FCT_0245",
+            "FCT_0246",
+            "FCT_0249",
+            "FCT_0252",
+            "FCT_0253",
+            "FCT_0254",
+            "FCT_0255",
+            "FCT_0256"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0244",
+              "exact_quote": "In java we have this scanner class that is defined in java.util package."
+            },
+            {
+              "note_id": "FCT_0245",
+              "exact_quote": "Let's import this and create a scanner object, so new scanner."
+            },
+            {
+              "note_id": "FCT_0246",
+              "exact_quote": "Now here inside this parenthesis, we need to specify where we're going to read data from."
+            },
+            {
+              "note_id": "FCT_0249",
+              "exact_quote": "To work with the terminal window, we type system.in."
+            },
+            {
+              "note_id": "FCT_0252",
+              "exact_quote": "So we have system.in, we also have system.out, which we use to print something on the terminal, right?"
+            },
+            {
+              "note_id": "FCT_0253",
+              "exact_quote": "Now let's use system.in and terminate this statement with a semicolon."
+            },
+            {
+              "note_id": "FCT_0254",
+              "exact_quote": "Now this object has a bunch of methods for reading data, and all these methods start with next."
+            },
+            {
+              "note_id": "FCT_0255",
+              "exact_quote": "There are methods nextByte, nextLine, nextBoolean for reading a byte, a line, and a boolean respectively."
+            },
+            {
+              "note_id": "FCT_0256",
+              "exact_quote": "Calling the nextByte method returns a byte value that can be stored in a byte variable."
+            }
+          ],
+          "payload": {
+            "type": "sequence",
+            "title": "Console Input Flow",
+            "participants": [
+              {
+                "id": "p1",
+                "label": "Program"
+              },
+              {
+                "id": "p2",
+                "label": "System.in"
+              },
+              {
+                "id": "p3",
+                "label": "Scanner"
+              }
+            ],
+            "events": [
+              {
+                "kind": "message",
+                "from": "p1",
+                "to": "p2",
+                "text": "new Scanner(System.in)"
+              },
+              {
+                "kind": "message",
+                "from": "p1",
+                "to": "p3",
+                "text": "Scanner scanner = new Scanner(System.in);"
+              },
+              {
+                "kind": "message",
+                "from": "p1",
+                "to": "p3",
+                "text": "byte b = scanner.nextByte();"
+              },
+              {
+                "kind": "message",
+                "from": "p3",
+                "to": "p2",
+                "text": "reads bytes from input stream"
+              },
+              {
+                "kind": "message",
+                "from": "p1",
+                "to": "p3",
+                "text": "String line = scanner.nextLine();"
+              },
+              {
+                "kind": "message",
+                "from": "p3",
+                "to": "p2",
+                "text": "reads line until newline"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

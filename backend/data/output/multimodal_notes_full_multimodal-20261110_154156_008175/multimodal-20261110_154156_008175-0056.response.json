@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-0cdb9a89-d9d8-4d12-a125-631add652d61",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"variable\",\n        \"refs\": [\"Q0018\"],\n        \"claims\": [\n          {\n            \"text\": \"A variable is used to temporarily store data in a computer's memory.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0018\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"A variable is used to temporarily store data in a computer's memory.\",\n        \"refs\": [\"Q0018\"],\n        \"claims\": [\n          {\n            \"text\": \"A variable is used to temporarily store data in a computer's memory.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0018\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"identifier\",\n        \"refs\": [\"Q0024\"],\n        \"claims\": [\n          {\n            \"text\": \"An identifier is the name or label given to a variable.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0024\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"An identifier is the name or label given to a variable.\",\n        \"refs\": [\"Q0024\"],\n        \"claims\": [\n          {\n            \"text\": \"An identifier is the name or label given to a variable.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0024\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"assignment operator\",\n        \"refs\": [\"Q0025\"],\n        \"claims\": [\n          {\n            \"text\": \"The assignment operator (=) assigns a value to a variable.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0025\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"The assignment operator (=) assigns a value to a variable.\",\n        \"refs\": [\"Q0025\"],\n        \"claims\": [\n          {\n            \"text\": \"The assignment operator (=) assigns a value to a variable.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0025\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"initialization\",\n        \"refs\": [\"Q0026\"],\n        \"claims\": [\n          {\n            \"text\": \"Initialization gives a variable an initial value when it is declared.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0026\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"Initialization gives a variable an initial value when it is declared.\",\n        \"refs\": [\"Q0026\"],\n        \"claims\": [\n          {\n            \"text\": \"Initialization gives a variable an initial value when it is declared.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0026\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"integer type\",\n        \"refs\": [\"Q0022\"],\n        \"claims\": [\n          {\n            \"text\": \"The int (integer) type stores whole numbers without a decimal point.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0022\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"The int (integer) type stores whole numbers without a decimal point.\",\n        \"refs\": [\"Q0022\"],\n        \"claims\": [\n          {\n            \"text\": \"The int (integer) type stores whole numbers without a decimal point.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0022\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract definitions. Look for definition of terms like variable, type, identifier, assignment operator, initialization. Provide items with term and definition_text. Use primary excerpts. Let's create items.\n\nIdentify definitions:\nQ0018: \"We use to temporarily store data in computer's memory.\" missing term? likely \"variable\". So term definition: variable = used to temporarily store data...\nQ0022 defines \"int or integer is the type of this variable... store integers\". term: integer type.\nQ0024 defines identifier.\nQ0025 defines assignment operator.\nQ0026 defines initializing.\nQ0027 defines need to initialize before reading.\nWe'll create separate items.\n\nProvide claims with explicit basis, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role prerequisite maybe. refs list.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794325552,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e1a78f200e",
+  "usage": {
+    "completion_tokens": 1328,
+    "prompt_tokens": 3554,
+    "total_tokens": 4882,
+    "completion_time": 2.80904217,
+    "completion_tokens_details": {
+      "reasoning_tokens": 158
+    },
+    "prompt_time": 0.155001445,
+    "prompt_tokens_details": null,
+    "queue_time": 0.384141837,
+    "total_time": 2.964043615
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m732646xewks79xk9qn0p46n",
+    "debug": null,
+    "seed": 1360020366,
+    "usage": null
+  }
+}

@@ -1,0 +1,935 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-15T16:00:09.268958+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00017",
+        "G00018"
+      ],
+      "document_id": "DOC001",
+      "content": "The price of foreign currency in terms of domestic currency; it moves up (appreciates) when the domestic interest rate rises relative to the foreign interest rate.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00017",
+              "quote": "If the domestic interest rate is equal to international interest rate,\n what is the exchange rate today equal to?",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 659,
+              "end_char": 772,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00017",
+              "quote": "If the domestic interest rate is equal to international interest rate,\n what is the exchange rate today equal to?",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 659,
+              "end_char": 772,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00018",
+              "quote": "And it's very easy for you to read from here that the exchange rate will go up.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 207,
+              "end_char": 286,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00018",
+              "quote": "The\n currency will appreciate.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 287,
+              "end_char": 317,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "exchange rate",
+              "claims": [
+                {
+                  "text": "exchange rate",
+                  "refs": [
+                    "Q0011"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00017",
+                      "quote": "If the domestic interest rate is equal to international interest rate,\n what is the exchange rate today equal to?"
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "The price of foreign currency in terms of domestic currency; it moves up (appreciates) when the domestic interest rate rises relative to the foreign interest rate.",
+              "claims": [
+                {
+                  "text": "The price of foreign currency in terms of domestic currency; it moves up (appreciates) when the domestic interest rate rises relative to the foreign interest rate.",
+                  "refs": [
+                    "Q0011",
+                    "Q0015",
+                    "Q0016"
+                  ],
+                  "basis": "direct_entailment",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "explanation_of_mistake",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00017",
+                      "quote": "If the domestic interest rate is equal to international interest rate,\n what is the exchange rate today equal to?"
+                    },
+                    {
+                      "source_id": "G00018",
+                      "quote": "And it's very easy for you to read from here that the exchange rate will go up."
+                    },
+                    {
+                      "source_id": "G00018",
+                      "quote": "The\n currency will appreciate."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "exchange rate",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [
+                        "if"
+                      ],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "If the domestic interest rate is equal to international interest rate,\n what is the exchange rate today equal to?"
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00017",
+                        "quote": "If the domestic interest rate is equal to international interest rate,\n what is the exchange rate today equal to?",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 659,
+                        "end_char": 772,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "exchange rate",
+                "preview_text": "exchange rate",
+                "withheld": false
+              },
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "The price of foreign currency in terms of domestic currency; it moves up (appreciates) when the domestic interest rate rises relative to the foreign interest rate.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "direct_entailment",
+                    "literal_kind": "verbal",
+                    "instructional_role": "explanation_of_mistake",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "If the domestic interest rate is equal to international interest rate,\n what is the exchange rate today equal to?",
+                      "And it's very easy for you to read from here that the exchange rate will go up.",
+                      "The\n currency will appreciate."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00017",
+                        "quote": "If the domestic interest rate is equal to international interest rate,\n what is the exchange rate today equal to?",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 659,
+                        "end_char": 772,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00018",
+                        "quote": "And it's very easy for you to read from here that the exchange rate will go up.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 207,
+                        "end_char": 286,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00018",
+                        "quote": "The\n currency will appreciate.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 287,
+                        "end_char": 317,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "The price of foreign currency in terms of domestic currency; it moves up (appreciates) when the domestic interest rate rises relative to the foreign interest rate.",
+                "preview_text": "The price of foreign currency in terms of domestic currency; it moves up (appreciates) when the domestic interest rate rises relative to the foreign interest rate.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00017",
+          "G00018"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "exchange rate",
+      "aliases": []
+    },
+    {
+      "knowledge_id": "CON_0002",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00017",
+        "G00018"
+      ],
+      "document_id": "DOC001",
+      "content": "The return on a bond or loan; when the domestic interest rate is higher than the foreign rate, the domestic currency tends to appreciate.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00017",
+              "quote": "What is it equal to?",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 637,
+              "end_char": 657,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00018",
+              "quote": "And now I'm going to increase the interest rate, the domestic interest\n rate.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 129,
+              "end_char": 206,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00017",
+              "quote": "What is it equal to?",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 637,
+              "end_char": 657,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00018",
+              "quote": "And now I'm going to increase the interest rate, the domestic interest\n rate.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 129,
+              "end_char": 206,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00018",
+              "quote": "And it's very easy for you to read from here that the exchange rate will go up.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 207,
+              "end_char": 286,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "interest rate",
+              "claims": [
+                {
+                  "text": "interest rate",
+                  "refs": [
+                    "Q0010",
+                    "Q0014"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00017",
+                      "quote": "What is it equal to?"
+                    },
+                    {
+                      "source_id": "G00018",
+                      "quote": "And now I'm going to increase the interest rate, the domestic interest\n rate."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "The return on a bond or loan; when the domestic interest rate is higher than the foreign rate, the domestic currency tends to appreciate.",
+              "claims": [
+                {
+                  "text": "The return on a bond or loan; when the domestic interest rate is higher than the foreign rate, the domestic currency tends to appreciate.",
+                  "refs": [
+                    "Q0010",
+                    "Q0014",
+                    "Q0015"
+                  ],
+                  "basis": "direct_entailment",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "explanation_of_mistake",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00017",
+                      "quote": "What is it equal to?"
+                    },
+                    {
+                      "source_id": "G00018",
+                      "quote": "And now I'm going to increase the interest rate, the domestic interest\n rate."
+                    },
+                    {
+                      "source_id": "G00018",
+                      "quote": "And it's very easy for you to read from here that the exchange rate will go up."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "interest rate",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "What is it equal to?",
+                      "And now I'm going to increase the interest rate, the domestic interest\n rate."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00017",
+                        "quote": "What is it equal to?",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 637,
+                        "end_char": 657,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00018",
+                        "quote": "And now I'm going to increase the interest rate, the domestic interest\n rate.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 129,
+                        "end_char": 206,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "interest rate",
+                "preview_text": "interest rate",
+                "withheld": false
+              },
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "The return on a bond or loan; when the domestic interest rate is higher than the foreign rate, the domestic currency tends to appreciate.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "direct_entailment",
+                    "literal_kind": "verbal",
+                    "instructional_role": "explanation_of_mistake",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "What is it equal to?",
+                      "And now I'm going to increase the interest rate, the domestic interest\n rate.",
+                      "And it's very easy for you to read from here that the exchange rate will go up."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00017",
+                        "quote": "What is it equal to?",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 637,
+                        "end_char": 657,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00018",
+                        "quote": "And now I'm going to increase the interest rate, the domestic interest\n rate.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 129,
+                        "end_char": 206,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00018",
+                        "quote": "And it's very easy for you to read from here that the exchange rate will go up.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 207,
+                        "end_char": 286,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "The return on a bond or loan; when the domestic interest rate is higher than the foreign rate, the domestic currency tends to appreciate.",
+                "preview_text": "The return on a bond or loan; when the domestic interest rate is higher than the foreign rate, the domestic currency tends to appreciate.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00017",
+          "G00018"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "interest rate",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [
+    {
+      "knowledge_id": "EXP_0003",
+      "knowledge_type": "explanation",
+      "source_unit_ids": [
+        "G00018",
+        "G00017"
+      ],
+      "document_id": "DOC001",
+      "content": "If domestic and foreign interest rates are equal, the current exchange rate equals the expected future exchange rate; raising the domestic rate makes the currency appreciate.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00018",
+              "quote": "But I'm saying just use that equation and the logic\n behind that equation, the uncovered interest parity.",
+              "fields": [
+                "/topic"
+              ],
+              "match_count": 1,
+              "start_char": 506,
+              "end_char": 611,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00017",
+              "quote": "The expected exchange rate of next year, if I have the same interest rates,\n I cannot expect a capital gain or loss from the currency position,\n because I have already an equal interest rate in the two bonds.",
+              "fields": [
+                "/explanation_text"
+              ],
+              "match_count": 1,
+              "start_char": 774,
+              "end_char": 982,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00018",
+              "quote": "So then I'm stuck in a situation where the current exchange rate is\n equal to expected exchange rate, and these two are equal.",
+              "fields": [
+                "/explanation_text"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 127,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00018",
+              "quote": "But I'm saying just use that equation and the logic\n behind that equation, the uncovered interest parity.",
+              "fields": [
+                "/explanation_text"
+              ],
+              "match_count": 1,
+              "start_char": 506,
+              "end_char": 611,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00017",
+              "quote": "The expected exchange rate of next year, if I have the same interest rates,\n I cannot expect a capital gain or loss from the currency position,\n because I have already an equal interest rate in the two bonds.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 774,
+              "end_char": 982,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00018",
+              "quote": "So then I'm stuck in a situation where the current exchange rate is\n equal to expected exchange rate, and these two are equal.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 127,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00018",
+              "quote": "But I'm saying just use that equation and the logic\n behind that equation, the uncovered interest parity.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 506,
+              "end_char": 611,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/topic",
+              "text": "Uncovered interest parity",
+              "claims": [
+                {
+                  "text": "Uncovered interest parity",
+                  "refs": [
+                    "Q0020"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00018",
+                      "quote": "But I'm saying just use that equation and the logic\n behind that equation, the uncovered interest parity."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/explanation_text",
+              "text": "If domestic and foreign interest rates are equal, the current exchange rate equals the expected future exchange rate; raising the domestic rate makes the currency appreciate.",
+              "claims": [
+                {
+                  "text": "If domestic and foreign interest rates are equal, the current exchange rate equals the expected future exchange rate; raising the domestic rate makes the currency appreciate.",
+                  "refs": [
+                    "Q0012",
+                    "Q0013",
+                    "Q0020"
+                  ],
+                  "basis": "direct_entailment",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "explanation_of_mistake",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00017",
+                      "quote": "The expected exchange rate of next year, if I have the same interest rates,\n I cannot expect a capital gain or loss from the currency position,\n because I have already an equal interest rate in the two bonds."
+                    },
+                    {
+                      "source_id": "G00018",
+                      "quote": "So then I'm stuck in a situation where the current exchange rate is\n equal to expected exchange rate, and these two are equal."
+                    },
+                    {
+                      "source_id": "G00018",
+                      "quote": "But I'm saying just use that equation and the logic\n behind that equation, the uncovered interest parity."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "If domestic and foreign interest rates are equal, the current exchange rate equals the expected future exchange rate; raising the domestic rate makes the currency appreciate.",
+              "claims": [
+                {
+                  "text": "If domestic and foreign interest rates are equal, the current exchange rate equals the expected future exchange rate; raising the domestic rate makes the currency appreciate.",
+                  "refs": [
+                    "Q0012",
+                    "Q0013",
+                    "Q0020"
+                  ],
+                  "basis": "direct_entailment",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "explanation_of_mistake",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00017",
+                      "quote": "The expected exchange rate of next year, if I have the same interest rates,\n I cannot expect a capital gain or loss from the currency position,\n because I have already an equal interest rate in the two bonds."
+                    },
+                    {
+                      "source_id": "G00018",
+                      "quote": "So then I'm stuck in a situation where the current exchange rate is\n equal to expected exchange rate, and these two are equal."
+                    },
+                    {
+                      "source_id": "G00018",
+                      "quote": "But I'm saying just use that equation and the logic\n behind that equation, the uncovered interest parity."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "If domestic and foreign interest rates are equal, the current exchange rate equals the expected future exchange rate; raising the domestic rate makes the currency appreciate.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "direct_entailment",
+                    "literal_kind": "verbal",
+                    "instructional_role": "explanation_of_mistake",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "The expected exchange rate of next year, if I have the same interest rates,\n I cannot expect a capital gain or loss from the currency position,\n because I have already an equal interest rate in the two bonds.",
+                      "So then I'm stuck in a situation where the current exchange rate is\n equal to expected exchange rate, and these two are equal.",
+                      "But I'm saying just use that equation and the logic\n behind that equation, the uncovered interest parity."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00017",
+                        "quote": "The expected exchange rate of next year, if I have the same interest rates,\n I cannot expect a capital gain or loss from the currency position,\n because I have already an equal interest rate in the two bonds.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 774,
+                        "end_char": 982,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00018",
+                        "quote": "So then I'm stuck in a situation where the current exchange rate is\n equal to expected exchange rate, and these two are equal.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 127,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00018",
+                        "quote": "But I'm saying just use that equation and the logic\n behind that equation, the uncovered interest parity.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 506,
+                        "end_char": 611,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "If domestic and foreign interest rates are equal, the current exchange rate equals the expected future exchange rate; raising the domestic rate makes the currency appreciate.",
+                "preview_text": "If domestic and foreign interest rates are equal, the current exchange rate equals the expected future exchange rate; raising the domestic rate makes the currency appreciate.",
+                "withheld": false
+              },
+              {
+                "path": "/explanation_text",
+                "claims": [
+                  {
+                    "text": "If domestic and foreign interest rates are equal, the current exchange rate equals the expected future exchange rate; raising the domestic rate makes the currency appreciate.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "direct_entailment",
+                    "literal_kind": "verbal",
+                    "instructional_role": "explanation_of_mistake",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "The expected exchange rate of next year, if I have the same interest rates,\n I cannot expect a capital gain or loss from the currency position,\n because I have already an equal interest rate in the two bonds.",
+                      "So then I'm stuck in a situation where the current exchange rate is\n equal to expected exchange rate, and these two are equal.",
+                      "But I'm saying just use that equation and the logic\n behind that equation, the uncovered interest parity."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00017",
+                        "quote": "The expected exchange rate of next year, if I have the same interest rates,\n I cannot expect a capital gain or loss from the currency position,\n because I have already an equal interest rate in the two bonds.",
+                        "fields": [
+                          "/explanation_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 774,
+                        "end_char": 982,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00018",
+                        "quote": "So then I'm stuck in a situation where the current exchange rate is\n equal to expected exchange rate, and these two are equal.",
+                        "fields": [
+                          "/explanation_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 127,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00018",
+                        "quote": "But I'm saying just use that equation and the logic\n behind that equation, the uncovered interest parity.",
+                        "fields": [
+                          "/explanation_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 506,
+                        "end_char": 611,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "If domestic and foreign interest rates are equal, the current exchange rate equals the expected future exchange rate; raising the domestic rate makes the currency appreciate.",
+                "preview_text": "If domestic and foreign interest rates are equal, the current exchange rate equals the expected future exchange rate; raising the domestic rate makes the currency appreciate.",
+                "withheld": false
+              },
+              {
+                "path": "/topic",
+                "claims": [
+                  {
+                    "text": "Uncovered interest parity",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "But I'm saying just use that equation and the logic\n behind that equation, the uncovered interest parity."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00018",
+                        "quote": "But I'm saying just use that equation and the logic\n behind that equation, the uncovered interest parity.",
+                        "fields": [
+                          "/topic"
+                        ],
+                        "match_count": 1,
+                        "start_char": 506,
+                        "end_char": 611,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Uncovered interest parity",
+                "preview_text": "Uncovered interest parity",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00018",
+          "G00017"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "topic": "Uncovered interest parity",
+      "explanation_text": "If domestic and foreign interest rates are equal, the current exchange rate equals the expected future exchange rate; raising the domestic rate makes the currency appreciate.",
+      "explanation_type": null
+    }
+  ],
+  "examples": [],
+  "facts": [],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 3,
+  "source_units_processed": 2,
+  "extraction_metadata": null
+}

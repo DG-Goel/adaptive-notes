@@ -1,0 +1,68 @@
+{
+  "overall_score": null,
+  "status": "NOT_FULLY_EVALUATED_PARTIAL_RUN",
+  "review_type": "Assistant source-comparison findings; not independently human certified",
+  "categories": [
+    {
+      "category": "Content completeness",
+      "weight": 30,
+      "score": null
+    },
+    {
+      "category": "Factual accuracy",
+      "weight": 25,
+      "score": null
+    },
+    {
+      "category": "Explanation quality",
+      "weight": 15,
+      "score": null
+    },
+    {
+      "category": "Organization and readability",
+      "weight": 10,
+      "score": null
+    },
+    {
+      "category": "Examples and code correctness",
+      "weight": 10,
+      "score": null
+    },
+    {
+      "category": "Source traceability",
+      "weight": 10,
+      "score": null
+    }
+  ],
+  "findings": [
+    {
+      "status": "PARTIALLY_SUPPORTED_BY_CITED_EXCERPT",
+      "claim": "JDK is short for Java Development Kit.",
+      "source": "first accepted checkpoint / T0001",
+      "reason": "Its single quoted excerpt ends at jdk is short for Java; the rest of the name is in the next excerpt. Full transcript supports the name but field references are incomplete."
+    },
+    {
+      "status": "NEEDS_REVIEW",
+      "claim": "System class provides access to system resources such as standard output.",
+      "source": "T0005",
+      "reason": "T0005 names System and its package, but does not state this full definition. Check contextual references rather than certify exact-quote matching as semantic support."
+    },
+    {
+      "status": "FAIL",
+      "claim": "Navigate to the folder containing the Java source file if not already there.",
+      "source": "rejected seventh response / procedure step 1",
+      "reason": "No evidence references supplied; whole response remained rejected."
+    },
+    {
+      "status": "NEEDS_REVIEW",
+      "claim": "Raw installation instructions retained as facts",
+      "source": "T0002",
+      "reason": "Transcript-style filler and weak grouping reduce study usefulness."
+    },
+    {
+      "status": "NEEDS_REVIEW",
+      "claim": "Every Java program / every statement / main should always be static",
+      "reason": "Scope and course-era assumptions require qualified source comparison and technical review; no current-language accuracy certification."
+    }
+  ]
+}

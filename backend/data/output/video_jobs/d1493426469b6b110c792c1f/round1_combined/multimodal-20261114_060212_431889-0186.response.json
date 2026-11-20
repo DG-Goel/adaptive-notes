@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-8b8acda8-3187-414c-b017-fc129e3f2485",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"abstentions\":[],\"excluded\":[],\"rows\":[{\"availability\":\"SOURCE_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"facts\",\"element\":0,\"field\":\"fact_text\",\"instructional_role\":null,\"item\":\"item1\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0000\",\"Q0002\",\"Q0003\"],\"related_refs\":[],\"text\":\"A boolean expression can check that temperature is greater than 20 and less than 30 using the \\u0026\\u0026 operator.\"},{\"availability\":\"SOURCE_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"explanations\",\"element\":0,\"field\":\"explanation_text\",\"instructional_role\":null,\"item\":\"item2\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0009\",\"Q0010\",\"Q0011\",\"Q0012\"],\"related_refs\":[],\"text\":\"Java evaluates a boolean expression from left to right and stops evaluating further conditions as soon as one condition is false (short‑circuit evaluation).\"},{\"availability\":\"SOURCE_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"examples\",\"element\":0,\"field\":\"example_text\",\"instructional_role\":null,\"item\":\"item3\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0006\",\"Q0007\"],\"related_refs\":[],\"text\":\"When temperature is 25, the expression temperature \\u003e 20 \\u0026\\u0026 temperature \\u003c 30 evaluates to true, so printing the boolean variable isWarm outputs true; when temperature is 12, the expression evaluates to false.\"}]}\n",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows about boolean expression with && etc. Extract facts. Likely concepts: boolean expression, logical AND. Provide rows.\n\nCreate item id maybe \"item1\". Category facts or explanations. Use excerpts.\n\nWe'll produce rows: fact_text about using && for logical AND, temperature >20 && <30. Use explicit basis.\n\nProvide abstentions none. Excluded none.\n\nLet's craft rows.\n\nRow1: fact about boolean variable isWarm and expression temperature >20 && temperature <30. Use Q0000,Q0002,Q0003. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs empty.\n\nRow2: explanation that Java evaluates left to right and short-circuits. Use Q0009,Q0010,Q0011,Q0012. basis explicit.\n\nRow3: example: printing isWarm true when temperature 25, false when 12. Use Q0006,Q0007. basis explicit, example_type maybe \"example\". field example_text.\n\nWe need fields per schema. For facts: field fact_text. For explanations: explanation_text. For examples: example_text.\n\nCreate separate items maybe same item.\n\nLet's output rows array.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636649,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 689,
+    "prompt_tokens": 3307,
+    "total_tokens": 3996,
+    "completion_time": 1.449729498,
+    "completion_tokens_details": {
+      "reasoning_tokens": 241
+    },
+    "prompt_time": 0.295373947,
+    "prompt_tokens_details": null,
+    "queue_time": 0.325889127,
+    "total_time": 1.745103445
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7caw390e8gbmdd28dykdyxt",
+    "debug": null,
+    "seed": 982367793,
+    "usage": null
+  }
+}

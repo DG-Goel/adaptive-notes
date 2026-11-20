@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-f5046fba-16a6-4c76-8842-a108f7fdf98c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"expected exchange rate curve\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The expected exchange rate curve moves to the right.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"net exports curve\",\n      \"refs\": [\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The net exports curve shifts left, reducing output.\",\n      \"refs\": [\"Q0011\", \"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Only one curve can move at a time in the given scenario.\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If the central bank does not react, the movement will not occur.\",\n      \"refs\": [\"Q0015\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the discussion, which curve moves to the right when the expected exchange rate changes?\",\n      \"answer\": \"The expected exchange rate curve\",\n      \"distractors\": [\n        \"The net exports curve\",\n        \"The output curve\",\n        \"The interest rate curve\"\n      ],\n      \"explanation\": \"The primary excerpt Q0000 states that the expected exchange rate moved to the right, indicating that the expected exchange rate curve shifts right.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"curve movement\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"What happens to the net exports curve when the exchange rate moves as described?\",\n      \"answer\": \"It shifts left, reducing net exports and output.\",\n      \"distractors\": [\n        \"It shifts right, increasing net exports.\",\n        \"It remains unchanged.\",\n        \"It shifts left, but output rises.\"\n      ],\n      \"explanation\": \"Excerpt Q0011 says the curve will move left because net exports will decline, and Q0013 links this to a leftward US movement and falling output.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"net exports response\",\n      \"refs\": [\"Q0011\", \"Q0013\"]\n    },\n    {\n      \"question\": \"According to the speaker, how many curves can move simultaneously in this context?\",\n      \"answer\": \"Only one\",\n      \"distractors\": [\n        \"Two\",\n        \"All of them\",\n        \"None\"\n      ],\n      \"explanation\": \"Excerpt Q0009 explicitly states, \\\"Only one can move.\\\"\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"simultaneous curve movement\",\n      \"refs\": [\"Q0009\"]\n    },\n    {\n      \"question\": \"What condition must be met for the described movement to actually occur?\",\n      \"answer\": \"The central bank (or Fed) must react to the change.\",\n      \"distractors\": [\n        \"The exchange rate must stay constant.\",\n        \"Interest rates must rise.\",\n        \"Output must increase.\"\n      ],\n      \"explanation\": \"Excerpt Q0015 notes that unless the Fed or central bank reacts, the movement won't happen.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"policy reaction requirement\",\n      \"refs\": [\"Q0015\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. The excerpts talk about curves moving left/right. Likely concepts: exchange rate curve, net exports curve, output. We can create facts. Provide rows for concepts maybe. Identify concept_name and content. Eg concept: \"expected exchange rate curve shifts right\". Use primary excerpts.\n\nCreate item \"item1\". rows: concept_name, content.\n\nAlso maybe fact rows.\n\nLet's craft.\n\nQuiz: 4 questions about which curve moves etc.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794806634,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_854fa9be4c",
+  "usage": {
+    "completion_tokens": 1255,
+    "prompt_tokens": 2559,
+    "total_tokens": 3814,
+    "completion_time": 2.946723037,
+    "completion_tokens_details": {
+      "reasoning_tokens": 96
+    },
+    "prompt_time": 0.047769776,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "queue_time": 0.290986564,
+    "total_time": 2.994492813
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hczk5ee5hbqe1ss7gy0ymk",
+    "debug": null,
+    "seed": 1119633917,
+    "usage": null
+  }
+}

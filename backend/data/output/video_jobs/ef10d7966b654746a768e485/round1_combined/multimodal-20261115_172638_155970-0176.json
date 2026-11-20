@@ -1,0 +1,304 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-15T17:33:54.651539+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00035"
+      ],
+      "document_id": "DOC001",
+      "content": "Depreciating the exchange rate lowers the price of domestic goods for foreign buyers, which can increase net exports.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00035",
+              "quote": "Yes, you depreciate.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 604,
+              "end_char": 624,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00035",
+              "quote": "You make the domestic goods cheaper\n relative to the rest of the world.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 626,
+              "end_char": 697,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00035",
+              "quote": "Yes, you depreciate.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 604,
+              "end_char": 624,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00035",
+              "quote": "You make the domestic goods cheaper\n relative to the rest of the world.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 626,
+              "end_char": 697,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00035",
+              "quote": "And that will increase net exports.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 845,
+              "end_char": 880,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "Currency depreciation makes domestic goods cheaper relative to foreign goods",
+              "claims": [
+                {
+                  "text": "Currency depreciation makes domestic goods cheaper relative to foreign goods",
+                  "refs": [
+                    "Q0012",
+                    "Q0013"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00035",
+                      "quote": "Yes, you depreciate."
+                    },
+                    {
+                      "source_id": "G00035",
+                      "quote": "You make the domestic goods cheaper\n relative to the rest of the world."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Depreciating the exchange rate lowers the price of domestic goods for foreign buyers, which can increase net exports.",
+              "claims": [
+                {
+                  "text": "Depreciating the exchange rate lowers the price of domestic goods for foreign buyers, which can increase net exports.",
+                  "refs": [
+                    "Q0012",
+                    "Q0013",
+                    "Q0015"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00035",
+                      "quote": "Yes, you depreciate."
+                    },
+                    {
+                      "source_id": "G00035",
+                      "quote": "You make the domestic goods cheaper\n relative to the rest of the world."
+                    },
+                    {
+                      "source_id": "G00035",
+                      "quote": "And that will increase net exports."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "concepts",
+              "availability": "PARTIALLY_SUPPORTED",
+              "source_ids": [
+                "G00035"
+              ],
+              "reason": "No explicit aliases provided in the excerpts.",
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "Currency depreciation makes domestic goods cheaper relative to foreign goods",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Yes, you depreciate.",
+                      "You make the domestic goods cheaper\n relative to the rest of the world."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00035",
+                        "quote": "Yes, you depreciate.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 604,
+                        "end_char": 624,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00035",
+                        "quote": "You make the domestic goods cheaper\n relative to the rest of the world.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 626,
+                        "end_char": 697,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Currency depreciation makes domestic goods cheaper relative to foreign goods",
+                "preview_text": "Currency depreciation makes domestic goods cheaper relative to foreign goods",
+                "withheld": false
+              },
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Depreciating the exchange rate lowers the price of domestic goods for foreign buyers, which can increase net exports.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Yes, you depreciate.",
+                      "You make the domestic goods cheaper\n relative to the rest of the world.",
+                      "And that will increase net exports."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00035",
+                        "quote": "Yes, you depreciate.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 604,
+                        "end_char": 624,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00035",
+                        "quote": "You make the domestic goods cheaper\n relative to the rest of the world.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 626,
+                        "end_char": 697,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00035",
+                        "quote": "And that will increase net exports.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 845,
+                        "end_char": 880,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Depreciating the exchange rate lowers the price of domestic goods for foreign buyers, which can increase net exports.",
+                "preview_text": "Depreciating the exchange rate lowers the price of domestic goods for foreign buyers, which can increase net exports.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00035"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "Currency depreciation makes domestic goods cheaper relative to foreign goods",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 1,
+  "source_units_processed": 1,
+  "extraction_metadata": null
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-64478ce0-c06e-4236-9da9-afc769617ea5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"domestic_demand_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Domestic demand\",\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"domestic_demand_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Domestic demand is whatever the household's demand, consumption, plus firm's investment, plus government expenditure.\",\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"Which three components are listed as making up domestic demand?\",\n      \"answer\": \"Household consumption, firm investment, and government expenditure\",\n      \"distractors\": [\n        \"Exports, imports, and net savings\",\n        \"Tax revenue, foreign aid, and private savings\",\n        \"Interest payments, wages, and depreciation\"\n      ],\n      \"explanation\": \"The speaker defines domestic demand as the sum of household consumption, firm investment, and government expenditure (Q0002).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Domestic demand components\",\n      \"refs\": [\"Q0002\"]\n    },\n    {\n      \"question\": \"According to the speaker, which behavioral functions have remained the same in the Keynesian model?\",\n      \"answer\": \"The consumption function and the investment function\",\n      \"distractors\": [\n        \"The export function and the import function\",\n        \"The tax function and the savings function\",\n        \"The price-setting function and the wage-setting function\"\n      ],\n      \"explanation\": \"The speaker notes that only the consumption and investment functions were present before and remain unchanged (Q0006‑Q0008).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Unchanged behavioral functions\",\n      \"refs\": [\"Q0006\", \"Q0007\", \"Q0008\"]\n    },\n    {\n      \"question\": \"In the short run, what determines output activity in the Keynesian model as described by the speaker?\",\n      \"answer\": \"Demand determines output activity\",\n      \"distractors\": [\n        \"Supply determines output activity\",\n        \"Interest rates determine output activity\",\n        \"Government policy determines output activity\"\n      ],\n      \"explanation\": \"The speaker emphasizes that in the short run, with sticky prices, demand determines output activity (Q0011).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Short‑run output determination\",\n      \"refs\": [\"Q0011\"]\n    },\n    {\n      \"question\": \"What change does the speaker highlight regarding the determinant of demand for domestically produced goods?\",\n      \"answer\": \"It is no longer what determines the demand for domestically produced goods\",\n      \"distractors\": [\n        \"It has become the sole determinant of domestic demand\",\n        \"It now includes foreign exchange rates\",\n        \"It is now based on export levels\"\n      ],\n      \"explanation\": \"The speaker states that what previously determined demand for domestically produced goods has changed (Q0010).\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"Change in demand determinant\",\n      \"refs\": [\"Q0010\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts: domestic demand definition. So concept item maybe \"domestic demand\". Provide concept_name and content. Use excerpts. Provide rows.\n\nRows:\nitem \"domestic_demand_concept\"\nfield concept_name element0 part value text \"Domestic demand\"\nrefs Q0002 etc.\n\ncontent field: definition from Q0002. text combine? \"Domestic demand is whatever the household's demand, consumption, plus firm's investment, plus government expenditure.\"\n\nAdd availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, related_refs [].\n\nAlso maybe concept that \"consumption function and investment function\" as concepts.\n\nBut need required fields for concept: concept_name and content. Provide one concept.\n\nAbstentions none.\n\nQuiz: need 4 questions about teaching. Use excerpts.\n\nQ1: What components make up domestic demand? answer list. Distractors.\n\nAnswer: household consumption, firm investment, government expenditure. Distractors: exports, imports, net savings, etc.\n\nProvide refs Q0002.\n\nBloom: Understand.\n\nQ2: According to the speaker, what has not changed in the Keynesian model? Answer: the behavioral functions (consumption and investment functions). Use Q0006,Q0007,Q0008.\n\nDistractors.\n\nQ3: What determines output activity in the short run according to the speaker? Answer: demand determines output activity. Use Q0011.\n\nQ4: What does the speaker say changes regarding demand for domestically produced goods? Answer: it's no longer what determines demand for domestically produced goods. Use Q0010.\n\nProvide explanations.\n\nNow construct rows JSON.\n\nRows list each atomic claim. For concept we need two rows: concept_name and content.\n\nAlso maybe definitions category? Not needed.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794766614,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_64b2f1c926",
+  "usage": {
+    "completion_tokens": 1169,
+    "prompt_tokens": 2514,
+    "total_tokens": 3683,
+    "completion_time": 2.4577264,
+    "completion_tokens_details": {
+      "reasoning_tokens": 357
+    },
+    "prompt_time": 0.142677729,
+    "prompt_tokens_details": null,
+    "queue_time": 0.324605466,
+    "total_time": 2.600404129
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g6t9hdej0vqrx8y88snf9t",
+    "debug": null,
+    "seed": 1606795476,
+    "usage": null
+  }
+}

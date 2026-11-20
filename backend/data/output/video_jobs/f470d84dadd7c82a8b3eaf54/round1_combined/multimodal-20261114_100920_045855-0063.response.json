@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-09c08d74-064f-43b7-b852-4ab5daa4a111",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"net_exports\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Net exports\",\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"net_exports\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"Net exports increase when autonomous foreign output (y*) rises and decrease when domestic output rises, because higher domestic output raises imports.\",\n      \"refs\": [\"Q0005\", \"Q0006\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Exact export function formula not verifiable from primary source; OCR candidates are ambiguous and unverified.\",\n      \"source_ids\": [\"G00033\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc based on excerpts. Likely concept: net export term, y*. Provide content rows. Use primary excerpts. Create item e.g., \"net_exports\". Provide concept_name and content. Content from quotes. Use availability SOURCE_SUPPORTED, basis explicit. literal_kind verbal. instructional_role null. refs list. Provide element indices.\n\nLet's craft one concept item.\n\nconcept_name row element0 part value text \"Net exports\". refs Q0000? maybe Q0000 mentions net export term. Use Q0000. Provide content row element1 part value text from Q0000 and Q0005 etc combine? Need concise. Use \"Net exports increase if the autonomous foreign output (y*) increases and decrease if domestic output increases.\" Combine quotes Q0005 and Q0006. Provide refs Q0005,Q0006.\n\nAdd abstention for missing formula. No formulas available.\n\nOutput JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794651097,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c868cf1eaa",
+  "usage": {
+    "completion_tokens": 497,
+    "prompt_tokens": 3192,
+    "total_tokens": 3689,
+    "completion_time": 1.039515263,
+    "completion_tokens_details": {
+      "reasoning_tokens": 186
+    },
+    "prompt_time": 0.125137242,
+    "prompt_tokens_details": null,
+    "queue_time": 0.373893362,
+    "total_time": 1.164652505
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7crn0mze8qsyfdhppth61d1",
+    "debug": null,
+    "seed": 678427878,
+    "usage": null
+  }
+}

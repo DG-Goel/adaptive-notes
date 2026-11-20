@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-0c3693b8-02e8-465f-ba16-feee1a31f7e4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Domestic demand adjustment\",\n      \"refs\": [\"Q0003\", \"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Subtract imports from domestic demand to obtain demand for domestically produced goods, which moves the demand curve down and also causes it to rotate (flatten).\",\n      \"refs\": [\"Q0003\", \"Q0005\", \"Q0009\", \"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Curve flattening at higher income\",\n      \"refs\": [\"Q0011\", \"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The decline in demand is larger for higher income levels than for lower income levels, making the curve flatter.\",\n      \"refs\": [\"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What effect does subtracting imports from domestic demand have on the demand curve?\",\n      \"answer\": \"It shifts the curve down.\",\n      \"distractors\": [\n        \"It shifts the curve up.\",\n        \"It shifts the curve left.\",\n        \"It does not change the curve.\"\n      ],\n      \"explanation\": \"The speaker explains that subtracting imports moves the domestic demand curve down (Q0009).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Domestic demand adjustment\",\n      \"refs\": [\"Q0009\"]\n    },\n    {\n      \"question\": \"Why is the shift in the demand curve not a parallel shift?\",\n      \"answer\": \"Because the curve also rotates (flattens).\",\n      \"distractors\": [\n        \"Because the curve shifts to the right.\",\n        \"Because the curve becomes steeper.\",\n        \"Because there is no change in slope.\"\n      ],\n      \"explanation\": \"The speaker notes that the shift is not parallel; the curve becomes flatter, indicating rotation (Q0010, Q0011).\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"Curve rotation\",\n      \"refs\": [\"Q0010\", \"Q0011\"]\n    },\n    {\n      \"question\": \"According to the speaker, how does the decline in demand compare at high versus low income levels?\",\n      \"answer\": \"The decline is larger at high income levels.\",\n      \"distractors\": [\n        \"The decline is larger at low income levels.\",\n        \"The decline is the same at all income levels.\",\n        \"There is no decline at high income levels.\"\n      ],\n      \"explanation\": \"The speaker states that the decline is larger for higher income levels than for lower ones (Q0013).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Income effect on demand\",\n      \"refs\": [\"Q0013\"]\n    },\n    {\n      \"question\": \"What reason does the speaker give for importing more when output is higher?\",\n      \"answer\": \"A positive marginal propensity to import.\",\n      \"distractors\": [\n        \"A negative marginal propensity to import.\",\n        \"Higher taxes on imports.\",\n        \"Government subsidies for domestic production.\"\n      ],\n      \"explanation\": \"The speaker explains that a positive marginal propensity to import leads to more imports as output rises (Q0014).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Marginal propensity to import\",\n      \"refs\": [\"Q0014\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? Probably concept: domestic demand, imports subtraction, shift down and rotation, curve flattening. Create items.\n\nWe'll make one item \"domestic_demand_adjustment\". Provide concept_name and content.\n\nRows: concept_name, content.\n\nAlso maybe explanation of shift down vs rotation.\n\nCreate rows accordingly.\n\nQuiz: need 4 questions. Use excerpts.\n\nQ1: What does subtracting imports from domestic demand do to the demand curve? Answer: shifts it down. Distractors: shifts it up, shifts it left, no change.\n\nQ2: Why is the shift not parallel? Answer: because the curve also rotates (becomes flatter). Distractors etc.\n\nQ3: At higher income levels, how does the decline compare? Answer: larger decline. Distractors.\n\nQ4: What causes more imports as output increases? Answer: positive marginal propensity to import. Distractors.\n\nProvide refs primary excerpt numbers.\n\nNow rows schema.\n\nWe'll create item \"item1\". category concepts. field concept_name element0 part value text \"Domestic demand adjustment\". refs Q0003 etc.\n\ncontent row element0 part value text \"Subtract imports from domestic demand to get demand for domestically produced goods, causing a downward shift and rotation of the demand curve.\" refs Q0003,Q0005,Q0009.\n\nProvide basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\nAlso maybe another concept \"curve flattening\". concept_name \"Curve flattening\". content row with Q0011,Q0013.\n\nNow output JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794763831,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_47082602e2",
+  "usage": {
+    "completion_tokens": 1354,
+    "prompt_tokens": 2592,
+    "total_tokens": 3946,
+    "completion_time": 2.842912862,
+    "completion_tokens_details": {
+      "reasoning_tokens": 319
+    },
+    "prompt_time": 0.140372346,
+    "prompt_tokens_details": null,
+    "queue_time": 0.313631666,
+    "total_time": 2.983285208
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g45arpe19r9pympd5mxd29",
+    "debug": null,
+    "seed": 1028531772,
+    "usage": null
+  }
+}

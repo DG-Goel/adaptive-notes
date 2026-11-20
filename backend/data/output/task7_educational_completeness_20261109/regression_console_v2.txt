@@ -1,0 +1,61 @@
+........................................................................ [  8%]
+........................................................................ [ 16%]
+........................................................................ [ 24%]
+........................................................................ [ 32%]
+..................................................F..................... [ 41%]
+........................................................................ [ 49%]
+........................................................................ [ 57%]
+........................................................................ [ 65%]
+........................................................................ [ 73%]
+.....F.................................................................. [ 82%]
+........................................................................ [ 90%]
+........................................................................ [ 98%]
+..............                                                           [100%]
+================================== FAILURES ===================================
+_____________________ test_chunker_filters_content_units ______________________
+
+    def test_chunker_filters_content_units():
+        """Test chunker only includes content and structural units"""
+        units = create_test_source_units()
+        chunker = ContentChunker()
+    
+        chunks = chunker.chunk(units, "TEST")
+    
+        # Should have S0001, S0002, S0003, S0005 (not S0004 which is furniture)
+        all_source_ids = []
+        for chunk in chunks:
+            all_source_ids.extend(chunk.source_units)
+    
+        assert "S0001" in all_source_ids
+        assert "S0002" in all_source_ids
+        assert "S0003" in all_source_ids
+>       assert "S0004" not in all_source_ids  # Furniture excluded
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: assert 'S0004' not in ['S0001', 'S0002', 'S0003', 'S0004', 'S0005']
+
+tests\test_extraction_unit.py:174: AssertionError
+________________________ test_cross_process_claim_once ________________________
+
+tmp_path = WindowsPath('C:/Projects/adaptive-notes/backend/data/output/task7_full_offline_temp2/test_cross_process_claim_once0')
+
+    def test_cross_process_claim_once(tmp_path):
+        make(tmp_path)
+        ctx = multiprocessing.get_context("spawn")
+        queue = ctx.Queue()
+        workers = [ctx.Process(target=contender, args=(str(tmp_path / "quota.sqlite"), queue)) for _ in range(3)]
+        for w in workers:
+            w.start()
+        for w in workers:
+            w.join(20)
+>           assert w.exitcode == 0
+E           AssertionError: assert None == 0
+E            +  where None = <SpawnProcess name='SpawnProcess-1' pid=16712 parent=3852 started>.exitcode
+
+tests\test_organization_scheduler.py:211: AssertionError
+---------------------------- Captured stdout call -----------------------------
+.......................................................................................EEEFF..............................
+=========================== short test summary info ===========================
+FAILED tests/test_extraction_unit.py::test_chunker_filters_content_units - As...
+FAILED tests/test_organization_scheduler.py::test_cross_process_claim_once - ...
+2 failed, 876 passed in 159.33s (0:02:39)
+.

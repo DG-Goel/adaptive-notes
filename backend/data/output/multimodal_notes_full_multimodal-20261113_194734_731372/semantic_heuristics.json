@@ -1,0 +1,114 @@
+{
+  "verification_timestamp": "2026-11-14T01:36:51.789651",
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "total_claims_verified": 2,
+  "claims_supported": 2,
+  "claims_unsupported": 0,
+  "claims_contradicted": 0,
+  "claims_inconclusive": 0,
+  "claims_insufficient_evidence": 0,
+  "claim_verifications": [
+    {
+      "knowledge_id": "REL_0001",
+      "knowledge_type": "relationship",
+      "claim_text": "Structured data (rows and columns) differs from unstructured data (images, text, video) which lack a tabular format and thus present challenges for machine‑learning models.",
+      "source_unit_ids": [
+        "G00010"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.9099999999999999,
+        "reason": "Strong keyword overlap (70.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "G00010:  cleaning and exploration. We also have matplotlib, seaborn. Then we use jupyter notebook for\n developing our code. Then we have libraries such as xgboost and scikit-learn that we use to train\n machin"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Structured"
+        ],
+        "source_entities": [
+          "We",
+          "Then",
+          "Okay",
+          "Now",
+          "Tondulmal",
+          "Samosa"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "G00010:  cleaning and exploration. We also have matplotlib, seaborn. Then we use jupyter notebook for\n developing our code. Then we have libraries such as xgboost and scikit-learn that we use to train\n machin"
+      ],
+      "source_full_text": " cleaning and exploration. We also have matplotlib, seaborn. Then we use jupyter notebook for\n developing our code. Then we have libraries such as xgboost and scikit-learn that we use to train\n machine learning models. Okay so these are the major concepts that you need to know when it\n comes to statistical machine learning. Now let's talk about deep learning. We\n previously saw that you can solve a variety of problems such as classifying\n if the transaction is fraud or not or classifying if the image is cat or dog\n but if you look at these two use cases you will notice one important difference\n when you look at the data set. The first use case is a structured data. The\n mean by that is here you have defined rows and columns you have a structure in\n your data that Tondulmal, Samosa is a vendor, 120k is the amount and so on but\n when it comes to image it is just bunch of pixels there is no formatting to it\n same thing with text and video okay there are no like rows and columns it's\n not in a tabular format with very well defined structure so when you give\n unstructured data to machine learning model for the training it will have\n problems because here these columns that you see they are called features okay\n vendor, amount, location and if you are using statistical machine learning\n algorithms such as decision tree or xgboost and so on they perform well on",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "REL_0002",
+      "knowledge_type": "relationship",
+      "claim_text": "When features like vendor, amount, and location are defined, statistical ML algorithms (e.g., decision tree, XGBoost) perform well.",
+      "source_unit_ids": [
+        "G00010"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (100.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "G00010:  cleaning and exploration. We also have matplotlib, seaborn. Then we use jupyter notebook for\n developing our code. Then we have libraries such as xgboost and scikit-learn that we use to train\n machin"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "When"
+        ],
+        "source_entities": [
+          "We",
+          "Then",
+          "Okay",
+          "Now",
+          "Tondulmal",
+          "Samosa"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "G00010:  cleaning and exploration. We also have matplotlib, seaborn. Then we use jupyter notebook for\n developing our code. Then we have libraries such as xgboost and scikit-learn that we use to train\n machin"
+      ],
+      "source_full_text": " cleaning and exploration. We also have matplotlib, seaborn. Then we use jupyter notebook for\n developing our code. Then we have libraries such as xgboost and scikit-learn that we use to train\n machine learning models. Okay so these are the major concepts that you need to know when it\n comes to statistical machine learning. Now let's talk about deep learning. We\n previously saw that you can solve a variety of problems such as classifying\n if the transaction is fraud or not or classifying if the image is cat or dog\n but if you look at these two use cases you will notice one important difference\n when you look at the data set. The first use case is a structured data. The\n mean by that is here you have defined rows and columns you have a structure in\n your data that Tondulmal, Samosa is a vendor, 120k is the amount and so on but\n when it comes to image it is just bunch of pixels there is no formatting to it\n same thing with text and video okay there are no like rows and columns it's\n not in a tabular format with very well defined structure so when you give\n unstructured data to machine learning model for the training it will have\n problems because here these columns that you see they are called features okay\n vendor, amount, location and if you are using statistical machine learning\n algorithms such as decision tree or xgboost and so on they perform well on",
+      "verification_method": "deterministic"
+    }
+  ],
+  "semantic_faithfulness_verified": true,
+  "verification_complete": true,
+  "verification_method": "deterministic",
+  "limitations": [
+    "This verification uses deterministic text matching and heuristics only.",
+    "Cannot detect paraphrasing or semantic equivalence beyond keyword matching.",
+    "May produce false negatives (marking valid claims as INCONCLUSIVE).",
+    "Returns INCONCLUSIVE when evidence is ambiguous rather than making guesses.",
+    "Numeric and entity matching is case-sensitive and exact.",
+    "Does not understand context, inference, or implicit information."
+  ]
+}

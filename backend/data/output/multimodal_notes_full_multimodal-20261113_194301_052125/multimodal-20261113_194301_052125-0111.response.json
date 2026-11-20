@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-3c746316-de75-4f98-a2ea-3882d7f097b5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"procedure_name\": {\n        \"text\": \"Onboard new intern using an agentic AI system\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"The AI agent creates an intern profile in the HR management system.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"The AI agent creates an IT helpdesk ticket to provision Wi‑Fi credentials and Slack access.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"The AI agent orders a laptop and ID card for the new intern.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0005\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"prerequisites\": [\n        {\n          \"text\": \"The AI system must have access to the HR management system, IT helpdesk system, and ordering tools.\",\n          \"refs\": [\"Q0000\", \"Q0005\", \"Q0006\", \"Q0007\"],\n          \"claims\": [\n            {\n              \"text\": \"Access to HR management system is required.\",\n              \"basis\": \"explicit\",\n              \"availability\": \"SOURCE_SUPPORTED\",\n              \"literal_kind\": \"verbal\",\n              \"instructional_role\": \"prerequisite\",\n              \"refs\": [\"Q0000\"],\n              \"related_refs\": []\n            },\n            {\n              \"text\": \"Access to IT helpdesk system is required.\",\n              \"basis\": \"explicit\",\n              \"availability\": \"SOURCE_SUPPORTED\",\n              \"literal_kind\": \"verbal\",\n              \"instructional_role\": \"prerequisite\",\n              \"refs\": [\"Q0000\"],\n              \"related_refs\": []\n            },\n            {\n              \"text\": \"Access to ordering tools for laptop and ID card is required.\",\n              \"basis\": \"explicit\",\n              \"availability\": \"SOURCE_SUPPORTED\",\n              \"literal_kind\": \"verbal\",\n              \"instructional_role\": \"prerequisite\",\n              \"refs\": [\"Q0005\"],\n              \"related_refs\": []\n            }\n          ]\n        }\n      ],\n      \"steps\": [\n        {\n          \"text\": \"Create an intern profile in the HR management system.\",\n          \"refs\": [\"Q0000\"],\n          \"claims\": [\n            {\n              \"text\": \"The AI agent creates an intern profile in HRMS.\",\n              \"basis\": \"explicit\",\n              \"availability\": \"SOURCE_SUPPORTED\",\n              \"literal_kind\": \"verbal\",\n              \"instructional_role\": \"correct_demonstration\",\n              \"refs\": [\"Q0000\"],\n              \"related_refs\": []\n            }\n          ]\n        },\n        {\n          \"text\": \"Create an IT helpdesk ticket to provision Wi‑Fi credentials and Slack access.\",\n          \"refs\": [\"Q0000\"],\n          \"claims\": [\n            {\n              \"text\": \"The AI agent creates a ticket for Wi‑Fi credentials and Slack access.\",\n              \"basis\": \"explicit\",\n              \"availability\": \"SOURCE_SUPPORTED\",\n              \"literal_kind\": \"verbal\",\n              \"instructional_role\": \"correct_demonstration\",\n              \"refs\": [\"Q0000\"],\n              \"related_refs\": []\n            }\n          ]\n        },\n        {\n          \"text\": \"Order a laptop and ID card for the intern.\",\n          \"refs\": [\"Q0005\"],\n          \"claims\": [\n            {\n              \"text\": \"The AI agent orders a laptop and ID card.\",\n              \"basis\": \"explicit\",\n              \"availability\": \"SOURCE_SUPPORTED\",\n              \"literal_kind\": \"verbal\",\n              \"instructional_role\": \"correct_demonstration\",\n              \"refs\": [\"Q0005\"],\n              \"related_refs\": []\n            }\n          ]\n        }\n      ],\n      \"outcomes\": {\n        \"text\": \"The new intern has an HR profile, IT access (Wi‑Fi, Slack), and receives a laptop and ID card.\",\n        \"refs\": [\"Q0000\", \"Q0005\"],\n        \"claims\": [\n          {\n            \"text\": \"Intern onboarding is completed with necessary accounts and equipment provisioned.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0000\", \"Q0005\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"content\": {\n        \"text\": \"Procedure to onboard a new intern using an agentic AI system that orchestrates HR, IT, and provisioning tools.\",\n        \"refs\": [\"Q0000\", \"Q0005\"],\n        \"claims\": [\n          {\n            \"text\": \"Agentic AI can coordinate multiple tools to automate onboarding.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0000\", \"Q0002\", \"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      }\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract procedures. The excerpts describe steps: create profile, create ticket, order laptop, etc. So procedure: onboarding new intern. Provide procedure_name, steps, prerequisites, outcomes. Claims from text.\n\nWe create items with content etc. Use primary excerpts refs. Provide claims with explicit basis. literal_kind verbal. instructional_role prerequisite? Steps are procedures.\n\nWe'll output one item.\n\nProcedure_name: \"Onboard new intern using agentic AI system\". Use excerpt Q0000 maybe.\n\nSteps: list each action: create intense profile in HRMS, create IT helpdesk ticket for Wi‑Fi credentials email, Slack access, order laptop and ID card, etc. Each step claim.\n\nPrerequisites: access to HRMS, IT system, tools. Outcomes: intern has access, equipment.\n\nProvide claims.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794599245,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_267e812a3a",
+  "usage": {
+    "completion_tokens": 1359,
+    "prompt_tokens": 3022,
+    "total_tokens": 4381,
+    "completion_time": 2.849357346,
+    "completion_tokens_details": {
+      "reasoning_tokens": 166
+    },
+    "prompt_time": 0.124104165,
+    "prompt_tokens_details": null,
+    "queue_time": 0.061355779,
+    "total_time": 2.973461511
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b76jrne2xt7847p16cd2ph",
+    "debug": null,
+    "seed": 1275339466,
+    "usage": null
+  }
+}

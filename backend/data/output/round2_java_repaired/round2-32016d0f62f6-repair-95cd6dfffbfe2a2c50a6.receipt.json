@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-0f1319f6-d6ea-47cc-baf2-88c865312fd1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Mortgage Calculator Workflow\",\n      \"source_segment_ids\": [\"FCT_0275\", \"FCT_0276\", \"FCT_0277\", \"FCT_0278\", \"FCT_0280\", \"FCT_0013\", \"FCT_0014\", \"FCT_0281\", \"FCT_0286\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0275\", \"FCT_0276\", \"FCT_0277\", \"FCT_0278\", \"FCT_0280\", \"FCT_0013\", \"FCT_0014\", \"FCT_0281\", \"FCT_0286\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\"note_id\": \"FCT_0275\", \"quote\": \"Students are asked to use what they have learned in this section to build a mortgage calculator.\"},\n            {\"note_id\": \"FCT_0276\", \"quote\": \"When the program runs, it asks a few questions.\"},\n            {\"note_id\": \"FCT_0277\", \"quote\": \"The first question asks for the principal, or the amount of loan.\"},\n            {\"note_id\": \"FCT_0278\", \"quote\": \"Example principal value: $100,000.\"},\n            {\"note_id\": \"FCT_0280\", \"quote\": \"Example interest rate: 3.92%.\"},\n            {\"note_id\": \"FCT_0013\", \"quote\": \"The third question asks for the period in years.\"},\n            {\"note_id\": \"FCT_0014\", \"quote\": \"Example period: 30 years.\"},\n            {\"note_id\": \"FCT_0281\", \"quote\": \"We need to multiply this number by 12 (months in a year) to calculate the number of payments.\"},\n            {\"note_id\": \"FCT_0286\", \"quote\": \"Monthly interest is calculated by taking the annual interest, dividing it by percent, and then dividing by months in a year.\"}\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Mortgage Calculator Workflow\",\n            \"direction\": \"DOWN\",\n            \"nodes\": [\n              {\"id\": \"n1\", \"label\": \"Ask principal\"},\n              {\"id\": \"n2\", \"label\": \"Ask annual interest rate\"},\n              {\"id\": \"n3\", \"label\": \"Ask period (years)\"},\n              {\"id\": \"n4\", \"label\": \"Calculate total payments = period × 12\"},\n              {\"id\": \"n5\", \"label\": \"Calculate monthly interest = annual rate ÷ 100 ÷ 12\"},\n              {\"id\": \"n6\", \"label\": \"Compute monthly payment (formula)\"},\n              {\"id\": \"n7\", \"label\": \"Display payment as currency\"}\n            ],\n            \"edges\": [\n              {\"from\": \"n1\", \"to\": \"n2\", \"label\": \"\"},\n              {\"from\": \"n2\", \"to\": \"n3\", \"label\": \"\"},\n              {\"from\": \"n3\", \"to\": \"n4\", \"label\": \"\"},\n              {\"from\": \"n4\", \"to\": \"n5\", \"label\": \"\"},\n              {\"from\": \"n5\", \"to\": \"n6\", \"label\": \"\"},\n              {\"from\": \"n6\", \"to\": \"n7\", \"label\": \"\"}\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visuals. Data shows mortgage calculator steps: principal, interest rate, period, calculations. Could make a flowchart of calculation steps. Also maybe a table comparing constants. Use up to two visuals.\n\nCreate one flowchart: steps: ask principal, ask interest rate, ask period, calculate months = period*12, monthlyInterest = annualRate/100/12, payment = formula (but not given). Use source ids.\n\nProvide evidence quotes.\n\nConstruct JSON units list with one visual unit.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794580129,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_b1dd3e7a63",
+  "usage": {
+    "completion_tokens": 891,
+    "prompt_tokens": 1457,
+    "total_tokens": 2348,
+    "completion_time": 1.9020857,
+    "completion_tokens_details": {
+      "reasoning_tokens": 103
+    },
+    "prompt_time": 0.081570841,
+    "prompt_tokens_details": null,
+    "queue_time": 0.467229648,
+    "total_time": 1.983656541
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7amz7cpehmsr4e013n32qzd",
+    "debug": null,
+    "seed": 101977961,
+    "usage": null
+  }
+}

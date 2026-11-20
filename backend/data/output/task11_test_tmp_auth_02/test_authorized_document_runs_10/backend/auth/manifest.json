@@ -1,0 +1,376 @@
+{
+  "source_path": "C:\\Projects\\adaptive-notes\\backend\\data\\output\\task11_test_tmp_auth_02\\test_authorized_document_runs_10\\java.txt",
+  "source_sha256": "cf49d345e48f41fee931710170a8a6e10406dffa3d7d9f85cdb2ca7cfc954a01",
+  "run_id": "offline-java",
+  "configuration": {
+    "prompt_policy": "quote_catalog_v1",
+    "provider": "Groq",
+    "model": "openai/gpt-oss-120b",
+    "temperature": 0,
+    "response_format": "json_object",
+    "reasoning_effort": null,
+    "strict_evidence": true,
+    "fallback": false,
+    "tokens_per_minute": 8000,
+    "preferred_output_tokens": 4000,
+    "min_output_tokens": 500,
+    "max_retries": 0,
+    "scheduler_ceilings": [
+      25,
+      850,
+      6800,
+      170000
+    ]
+  },
+  "requests": [
+    {
+      "request_id": "offline-java-0000",
+      "chunk_id": "JAVA_CHUNK_000_SUB0",
+      "source_ids": [
+        "T0001"
+      ],
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You extract educational knowledge from the supplied source only. Return one valid JSON object, no prose or fences.\n\nAUTHORITATIVE SOURCE-GROUNDING CONTRACT\n- No invented information or external Java knowledge. Mentioning an operator does not support explaining decrement or any other unstated behavior.\n- Distinguish spoken explanation from literal code. Never reconstruct code or formulas, declarations, comments, casts, outputs, aliases, or relationships.\n- Do not compute results unless explicitly stated. Preserve conditions, alternatives and scope, including \"in this example\" and \"float or double\"; never turn a demonstration into a universal rule or required prerequisite.\n- Preserve uncertainty and transcription ambiguity; never complete a missing sentence. Omission is preferable to unsupported inference.\n- Empty categories are normal. Populate only supported categories; the item limit is a ceiling, not a target.\n- Omit unsupported optional fields entirely. Do not fill them with placeholders, null or empty strings. Empty category arrays [] are different from omitted optional fields.\n- Every populated substantive field needs exact supporting excerpts, including names, content, aliases, classifications, formula keys/descriptions/conditions, procedure steps/prerequisites/outcomes and relationship subjects/objects.\n- Each source_evidence entry has source_id, quote and fields. Quotes must be exact source substrings. Use canonical source-unit IDs from source markers only; scheduling/chunk IDs are never provenance.\n- fields lists only JSON Pointer paths to populated substantive fields. Cover all such fields; never reference omitted fields, empty containers, source IDs or generated metadata. Array indexes start at 0. List individual paths for every populated alias, step, prerequisite and nested array element, e.g. /steps/0, /steps/1, /steps/2; a parent collection path such as /steps never substitutes for its elements. Escape ~ as ~0 and / as ~1 in keys (RFC 6901), e.g. key a/b~ becomes /variables/a~1b~0. Populated dictionary keys require evidence even when values are empty; nested keys and their substantive descendants each need paths.\n- Mechanical quotation matching is not semantic entailment verification. An excerpt must actually support its associated claim; no matching-word shortcut. Match the whole claim, not just its subject; use additional exact excerpts for separately stated details or omit those details. Do not add textbook definitions, operator symbols or lifecycle qualifications not stated in the source.\n- Before returning, check explicit teaching facts: demonstrated initial/final values, error and repair, alternatives and naming corrections. Preserve each once with its source scope. Consolidate only related facts rather than duplicating them; avoid redundant term-only items when a supported item explains the term. Do not fill gaps or force a category. Aliases require source-stated synonyms, not instance names.\n\nCONTRASTS\nMention-only: \"We have a decrement operator\" does not explain its effect or syntax; omit that explanation.\nSpoken arithmetic: \"ten plus three gives thirteen\" stays prose; do not invent \"int result = 10 + 3; // result is 13\". Without the stated result, do not calculate it.\nLiteral code: if source contains \"int result = 10 + 3;\", retain that exact snippet only; add no comment, cast, output or declaration.\nAlternatives: preserve \"in this example, float or double\", not \"one operand must be cast to double\".\nTruncated: \"apply this as a prefix and then...\" supplies no remaining outcome or steps.\nScope: \"here the division of two whole numbers is a whole number\" supports that result, not an added \"truncates fractional part\" explanation.\nAssociation: exact quote \"modulus which is the remainder of a division\" supports the remainder description, not an unstated % symbol.\nArrays: three steps require /steps/0, /steps/1, /steps/2, not /steps; two prerequisites require /prerequisites/0 and /prerequisites/1; two aliases require /aliases/0 and /aliases/1. Omitted arrays have no paths.\nCoverage: if stated, retain x starting at 1 and printing 2; the final-variable pi assignment error; the separate integer-declaration/double-expression error and its declaration repair; float-or-double alternatives; and the pi-to-PI correction (naming, never an alias). Keep the two errors separate: declaration repair does not fix final-variable assignment. Never infer them from a partial passage.\n"
+          },
+          {
+            "role": "user",
+            "content": "Extract up to ~50 supported items, at most 200 words per item.\nSCHEDULING ID (never cite): JAVA_CHUNK_000_SUB0\nALLOWED CANONICAL SOURCE IDs: [\"T0001\"]\nApply the system grounding contract. Do not fill categories to meet a quota.\n\nCATEGORY/FIELD CONTRACTS\nCOMMON REQUIRED on every item: content (string), source_unit_ids (nonempty string array),\nsource_evidence (nonempty array of source_id/quote/fields objects).\nCategory requirements add to COMMON; they never replace it.\n- concepts: required COMMON + concept_name; optional aliases.\n- definitions: required COMMON + term, definition_text; optional context.\n- explanations: required COMMON + topic, explanation_text; optional explanation_type.\n- examples: required COMMON + exemplifies, example_text; optional example_type.\n- facts: required COMMON + fact_text; optional fact_type.\n- formulas: required COMMON + formula_text; optional variables, conditions, derivation.\n- procedures: required COMMON + procedure_name, steps; optional prerequisites, outcomes.\n- relationships: required COMMON + relationship_type, subject, object; optional description.\nText/name/classification fields are strings; aliases, steps and prerequisites are\nstring arrays; variables maps source-stated symbols to source-stated descriptions.\nFor definitions, explanations, examples, facts and formulas, content repeats the\ncorresponding main text. Procedure content summarizes only the supplied steps.\nOmit unsupported optional fields and their evidence paths. Do not send knowledge_id,\ndocument_id or verification flags; the application supplies metadata.\n\nRESPONSE SKELETON (empty arrays are valid; replace only supported categories)\n{\"concepts\":[],\"definitions\":[],\"explanations\":[],\"examples\":[],\"facts\":[],\"formulas\":[],\"procedures\":[],\"relationships\":[]}\n\nONE EVIDENCE EXAMPLE (instruction only; never extract or cite this example)\nExample scheduling ID EXAMPLE_CHUNK is not a source ID.\nExample source [EXAMPLE_ONLY]: An expression is a piece of code that produces a value.\n{\"concept_name\":\"expression\",\"content\":\"A piece of code that produces a value.\",\"source_unit_ids\":[\"EXAMPLE_ONLY\"],\"source_evidence\":[{\"source_id\":\"EXAMPLE_ONLY\",\"quote\":\"An expression is a piece of code that produces a value.\",\"fields\":[\"/concept_name\",\"/content\"]}]}\nThis example omits aliases and therefore has no /aliases/0 path.\nUse actual source IDs and exact excerpts from the content below.\n\nBEGIN SOURCE\n[T0001] <Q0000> A value is an expression.\n[T0001] <Q0001> A value is an expression.\n[T0001] <Q0002> A value is an expression.\n[T0001] <Q0003> A value is an expression.\n[T0001] <Q0004> A value is an expression.\n[T0001] <Q0005> A value is an expression.\n[T0001] <Q0006> A value is an expression.\n[T0001] <Q0007> A value is an expression.\n[T0001] <Q0008> A value is an expression.\n[T0001] <Q0009> A value is an expression.\n[T0001] <Q0010> A value is an expression.\n[T0001] <Q0011> A value is an expression.\n[T0001] <Q0012> A value is an expression.\n[T0001] <Q0013> A value is an expression.\n[T0001] <Q0014> A value is an expression.\n[T0001] <Q0015> A value is an expression.\n[T0001] <Q0016> A value is an expression.\n[T0001] <Q0017> A value is an expression.\n[T0001] <Q0018> A value is an expression.\n[T0001] <Q0019> A value is an expression.\nEND SOURCE\nReturn only the JSON object.\nEXACT EXCERPT REFERENCES (quote-catalog-v1): Each source excerpt is labeled <Q0000>, etc.\nInclude quote_id in every source_evidence object, selecting the excerpt that supports its fields.\nKeep source_id, quote and fields required. quote must contain source text; quote_id is a separate reference.\nThe application resolves a valid quote_id to the original exact excerpt and records that resolution.\nUse multiple excerpt references when necessary. Never use Q identifiers as source_unit_ids.\nExclude advertisements and instructor marketing from study notes. Do not infer unstated technical claims.\n\nINGESTION VERSION SHA256 (metadata, not source evidence): 7746100e657f1146773e78e4b9ff0cff88f6ad2736acd348fb2157a00baa34c0"
+          }
+        ],
+        "temperature": 0,
+        "max_tokens": 4000,
+        "response_format": {
+          "type": "json_object"
+        }
+      },
+      "request_sha256": "a20074bc353e5591dd9e92ca8a9583f453125d6c0b2aba13cb70957a34030301",
+      "parent_request_id": null,
+      "chunk": {
+        "source_states": {
+          "T0001": "text"
+        },
+        "literal_source_texts": {},
+        "ingestion_binding": "7746100e657f1146773e78e4b9ff0cff88f6ad2736acd348fb2157a00baa34c0",
+        "context_source_ids": [],
+        "context_text": "",
+        "context_limitations": [],
+        "review_source_ids": [],
+        "uninterpreted_source_ids": [],
+        "chunk_id": "JAVA_CHUNK_000_SUB0",
+        "source_units": [
+          "T0001"
+        ],
+        "section": null,
+        "page_range": null,
+        "text_content": "[T0001] A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression.\n",
+        "token_count": 132,
+        "split_depth": 1,
+        "parent_chunk_id": "JAVA_CHUNK_000",
+        "source_spans": null
+      }
+    },
+    {
+      "request_id": "offline-java-0001",
+      "chunk_id": "JAVA_CHUNK_000_SUB0_FRAG0",
+      "source_ids": [
+        "T0001"
+      ],
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You extract educational knowledge from the supplied source only. Return one valid JSON object, no prose or fences.\n\nAUTHORITATIVE SOURCE-GROUNDING CONTRACT\n- No invented information or external Java knowledge. Mentioning an operator does not support explaining decrement or any other unstated behavior.\n- Distinguish spoken explanation from literal code. Never reconstruct code or formulas, declarations, comments, casts, outputs, aliases, or relationships.\n- Do not compute results unless explicitly stated. Preserve conditions, alternatives and scope, including \"in this example\" and \"float or double\"; never turn a demonstration into a universal rule or required prerequisite.\n- Preserve uncertainty and transcription ambiguity; never complete a missing sentence. Omission is preferable to unsupported inference.\n- Empty categories are normal. Populate only supported categories; the item limit is a ceiling, not a target.\n- Omit unsupported optional fields entirely. Do not fill them with placeholders, null or empty strings. Empty category arrays [] are different from omitted optional fields.\n- Every populated substantive field needs exact supporting excerpts, including names, content, aliases, classifications, formula keys/descriptions/conditions, procedure steps/prerequisites/outcomes and relationship subjects/objects.\n- Each source_evidence entry has source_id, quote and fields. Quotes must be exact source substrings. Use canonical source-unit IDs from source markers only; scheduling/chunk IDs are never provenance.\n- fields lists only JSON Pointer paths to populated substantive fields. Cover all such fields; never reference omitted fields, empty containers, source IDs or generated metadata. Array indexes start at 0. List individual paths for every populated alias, step, prerequisite and nested array element, e.g. /steps/0, /steps/1, /steps/2; a parent collection path such as /steps never substitutes for its elements. Escape ~ as ~0 and / as ~1 in keys (RFC 6901), e.g. key a/b~ becomes /variables/a~1b~0. Populated dictionary keys require evidence even when values are empty; nested keys and their substantive descendants each need paths.\n- Mechanical quotation matching is not semantic entailment verification. An excerpt must actually support its associated claim; no matching-word shortcut. Match the whole claim, not just its subject; use additional exact excerpts for separately stated details or omit those details. Do not add textbook definitions, operator symbols or lifecycle qualifications not stated in the source.\n- Before returning, check explicit teaching facts: demonstrated initial/final values, error and repair, alternatives and naming corrections. Preserve each once with its source scope. Consolidate only related facts rather than duplicating them; avoid redundant term-only items when a supported item explains the term. Do not fill gaps or force a category. Aliases require source-stated synonyms, not instance names.\n\nCONTRASTS\nMention-only: \"We have a decrement operator\" does not explain its effect or syntax; omit that explanation.\nSpoken arithmetic: \"ten plus three gives thirteen\" stays prose; do not invent \"int result = 10 + 3; // result is 13\". Without the stated result, do not calculate it.\nLiteral code: if source contains \"int result = 10 + 3;\", retain that exact snippet only; add no comment, cast, output or declaration.\nAlternatives: preserve \"in this example, float or double\", not \"one operand must be cast to double\".\nTruncated: \"apply this as a prefix and then...\" supplies no remaining outcome or steps.\nScope: \"here the division of two whole numbers is a whole number\" supports that result, not an added \"truncates fractional part\" explanation.\nAssociation: exact quote \"modulus which is the remainder of a division\" supports the remainder description, not an unstated % symbol.\nArrays: three steps require /steps/0, /steps/1, /steps/2, not /steps; two prerequisites require /prerequisites/0 and /prerequisites/1; two aliases require /aliases/0 and /aliases/1. Omitted arrays have no paths.\nCoverage: if stated, retain x starting at 1 and printing 2; the final-variable pi assignment error; the separate integer-declaration/double-expression error and its declaration repair; float-or-double alternatives; and the pi-to-PI correction (naming, never an alias). Keep the two errors separate: declaration repair does not fix final-variable assignment. Never infer them from a partial passage.\n"
+          },
+          {
+            "role": "user",
+            "content": "Extract up to ~50 supported items, at most 200 words per item.\nSCHEDULING ID (never cite): JAVA_CHUNK_000_SUB0_FRAG0\nALLOWED CANONICAL SOURCE IDs: [\"T0001\"]\nApply the system grounding contract. Do not fill categories to meet a quota.\n\nCATEGORY/FIELD CONTRACTS\nCOMMON REQUIRED on every item: content (string), source_unit_ids (nonempty string array),\nsource_evidence (nonempty array of source_id/quote/fields objects).\nCategory requirements add to COMMON; they never replace it.\n- concepts: required COMMON + concept_name; optional aliases.\n- definitions: required COMMON + term, definition_text; optional context.\n- explanations: required COMMON + topic, explanation_text; optional explanation_type.\n- examples: required COMMON + exemplifies, example_text; optional example_type.\n- facts: required COMMON + fact_text; optional fact_type.\n- formulas: required COMMON + formula_text; optional variables, conditions, derivation.\n- procedures: required COMMON + procedure_name, steps; optional prerequisites, outcomes.\n- relationships: required COMMON + relationship_type, subject, object; optional description.\nText/name/classification fields are strings; aliases, steps and prerequisites are\nstring arrays; variables maps source-stated symbols to source-stated descriptions.\nFor definitions, explanations, examples, facts and formulas, content repeats the\ncorresponding main text. Procedure content summarizes only the supplied steps.\nOmit unsupported optional fields and their evidence paths. Do not send knowledge_id,\ndocument_id or verification flags; the application supplies metadata.\n\nRESPONSE SKELETON (empty arrays are valid; replace only supported categories)\n{\"concepts\":[],\"definitions\":[],\"explanations\":[],\"examples\":[],\"facts\":[],\"formulas\":[],\"procedures\":[],\"relationships\":[]}\n\nONE EVIDENCE EXAMPLE (instruction only; never extract or cite this example)\nExample scheduling ID EXAMPLE_CHUNK is not a source ID.\nExample source [EXAMPLE_ONLY]: An expression is a piece of code that produces a value.\n{\"concept_name\":\"expression\",\"content\":\"A piece of code that produces a value.\",\"source_unit_ids\":[\"EXAMPLE_ONLY\"],\"source_evidence\":[{\"source_id\":\"EXAMPLE_ONLY\",\"quote\":\"An expression is a piece of code that produces a value.\",\"fields\":[\"/concept_name\",\"/content\"]}]}\nThis example omits aliases and therefore has no /aliases/0 path.\nUse actual source IDs and exact excerpts from the content below.\n\nBEGIN SOURCE\n[T0001] <Q0000> A value is an expression.\n[T0001] <Q0001> A value is an expression.\n[T0001] <Q0002> A value is an expression.\n[T0001] <Q0003> A value is an expression.\n[T0001] <Q0004> A value is an expression.\n[T0001] <Q0005> A value is an expression.\n[T0001] <Q0006> A value is an expression.\n[T0001] <Q0007> A value is an expression.\n[T0001] <Q0008> A value is an expression.\n[T0001] <Q0009> A value is an expression.\nEND SOURCE\nReturn only the JSON object.\nEXACT EXCERPT REFERENCES (quote-catalog-v1): Each source excerpt is labeled <Q0000>, etc.\nInclude quote_id in every source_evidence object, selecting the excerpt that supports its fields.\nKeep source_id, quote and fields required. quote must contain source text; quote_id is a separate reference.\nThe application resolves a valid quote_id to the original exact excerpt and records that resolution.\nUse multiple excerpt references when necessary. Never use Q identifiers as source_unit_ids.\nExclude advertisements and instructor marketing from study notes. Do not infer unstated technical claims.\n\nINGESTION VERSION SHA256 (metadata, not source evidence): 7746100e657f1146773e78e4b9ff0cff88f6ad2736acd348fb2157a00baa34c0"
+          }
+        ],
+        "temperature": 0,
+        "max_tokens": 4000,
+        "response_format": {
+          "type": "json_object"
+        }
+      },
+      "request_sha256": "8e652441efaed0795261e7a12a18d3cbef4bd15d2e7efab4208f91480c690255",
+      "parent_request_id": "offline-java-0000",
+      "chunk": {
+        "source_states": {
+          "T0001": "text"
+        },
+        "literal_source_texts": {},
+        "ingestion_binding": "7746100e657f1146773e78e4b9ff0cff88f6ad2736acd348fb2157a00baa34c0",
+        "context_source_ids": [],
+        "context_text": "",
+        "context_limitations": [],
+        "review_source_ids": [],
+        "uninterpreted_source_ids": [],
+        "chunk_id": "JAVA_CHUNK_000_SUB0_FRAG0",
+        "source_units": [
+          "T0001"
+        ],
+        "section": null,
+        "page_range": null,
+        "text_content": "[T0001] A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. ",
+        "token_count": null,
+        "split_depth": 2,
+        "parent_chunk_id": "JAVA_CHUNK_000_SUB0",
+        "source_spans": {
+          "T0001": [
+            0,
+            260
+          ]
+        }
+      }
+    },
+    {
+      "request_id": "offline-java-0002",
+      "chunk_id": "JAVA_CHUNK_000_SUB0_FRAG1",
+      "source_ids": [
+        "T0001"
+      ],
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You extract educational knowledge from the supplied source only. Return one valid JSON object, no prose or fences.\n\nAUTHORITATIVE SOURCE-GROUNDING CONTRACT\n- No invented information or external Java knowledge. Mentioning an operator does not support explaining decrement or any other unstated behavior.\n- Distinguish spoken explanation from literal code. Never reconstruct code or formulas, declarations, comments, casts, outputs, aliases, or relationships.\n- Do not compute results unless explicitly stated. Preserve conditions, alternatives and scope, including \"in this example\" and \"float or double\"; never turn a demonstration into a universal rule or required prerequisite.\n- Preserve uncertainty and transcription ambiguity; never complete a missing sentence. Omission is preferable to unsupported inference.\n- Empty categories are normal. Populate only supported categories; the item limit is a ceiling, not a target.\n- Omit unsupported optional fields entirely. Do not fill them with placeholders, null or empty strings. Empty category arrays [] are different from omitted optional fields.\n- Every populated substantive field needs exact supporting excerpts, including names, content, aliases, classifications, formula keys/descriptions/conditions, procedure steps/prerequisites/outcomes and relationship subjects/objects.\n- Each source_evidence entry has source_id, quote and fields. Quotes must be exact source substrings. Use canonical source-unit IDs from source markers only; scheduling/chunk IDs are never provenance.\n- fields lists only JSON Pointer paths to populated substantive fields. Cover all such fields; never reference omitted fields, empty containers, source IDs or generated metadata. Array indexes start at 0. List individual paths for every populated alias, step, prerequisite and nested array element, e.g. /steps/0, /steps/1, /steps/2; a parent collection path such as /steps never substitutes for its elements. Escape ~ as ~0 and / as ~1 in keys (RFC 6901), e.g. key a/b~ becomes /variables/a~1b~0. Populated dictionary keys require evidence even when values are empty; nested keys and their substantive descendants each need paths.\n- Mechanical quotation matching is not semantic entailment verification. An excerpt must actually support its associated claim; no matching-word shortcut. Match the whole claim, not just its subject; use additional exact excerpts for separately stated details or omit those details. Do not add textbook definitions, operator symbols or lifecycle qualifications not stated in the source.\n- Before returning, check explicit teaching facts: demonstrated initial/final values, error and repair, alternatives and naming corrections. Preserve each once with its source scope. Consolidate only related facts rather than duplicating them; avoid redundant term-only items when a supported item explains the term. Do not fill gaps or force a category. Aliases require source-stated synonyms, not instance names.\n\nCONTRASTS\nMention-only: \"We have a decrement operator\" does not explain its effect or syntax; omit that explanation.\nSpoken arithmetic: \"ten plus three gives thirteen\" stays prose; do not invent \"int result = 10 + 3; // result is 13\". Without the stated result, do not calculate it.\nLiteral code: if source contains \"int result = 10 + 3;\", retain that exact snippet only; add no comment, cast, output or declaration.\nAlternatives: preserve \"in this example, float or double\", not \"one operand must be cast to double\".\nTruncated: \"apply this as a prefix and then...\" supplies no remaining outcome or steps.\nScope: \"here the division of two whole numbers is a whole number\" supports that result, not an added \"truncates fractional part\" explanation.\nAssociation: exact quote \"modulus which is the remainder of a division\" supports the remainder description, not an unstated % symbol.\nArrays: three steps require /steps/0, /steps/1, /steps/2, not /steps; two prerequisites require /prerequisites/0 and /prerequisites/1; two aliases require /aliases/0 and /aliases/1. Omitted arrays have no paths.\nCoverage: if stated, retain x starting at 1 and printing 2; the final-variable pi assignment error; the separate integer-declaration/double-expression error and its declaration repair; float-or-double alternatives; and the pi-to-PI correction (naming, never an alias). Keep the two errors separate: declaration repair does not fix final-variable assignment. Never infer them from a partial passage.\n"
+          },
+          {
+            "role": "user",
+            "content": "Extract up to ~50 supported items, at most 200 words per item.\nSCHEDULING ID (never cite): JAVA_CHUNK_000_SUB0_FRAG1\nALLOWED CANONICAL SOURCE IDs: [\"T0001\"]\nApply the system grounding contract. Do not fill categories to meet a quota.\n\nCATEGORY/FIELD CONTRACTS\nCOMMON REQUIRED on every item: content (string), source_unit_ids (nonempty string array),\nsource_evidence (nonempty array of source_id/quote/fields objects).\nCategory requirements add to COMMON; they never replace it.\n- concepts: required COMMON + concept_name; optional aliases.\n- definitions: required COMMON + term, definition_text; optional context.\n- explanations: required COMMON + topic, explanation_text; optional explanation_type.\n- examples: required COMMON + exemplifies, example_text; optional example_type.\n- facts: required COMMON + fact_text; optional fact_type.\n- formulas: required COMMON + formula_text; optional variables, conditions, derivation.\n- procedures: required COMMON + procedure_name, steps; optional prerequisites, outcomes.\n- relationships: required COMMON + relationship_type, subject, object; optional description.\nText/name/classification fields are strings; aliases, steps and prerequisites are\nstring arrays; variables maps source-stated symbols to source-stated descriptions.\nFor definitions, explanations, examples, facts and formulas, content repeats the\ncorresponding main text. Procedure content summarizes only the supplied steps.\nOmit unsupported optional fields and their evidence paths. Do not send knowledge_id,\ndocument_id or verification flags; the application supplies metadata.\n\nRESPONSE SKELETON (empty arrays are valid; replace only supported categories)\n{\"concepts\":[],\"definitions\":[],\"explanations\":[],\"examples\":[],\"facts\":[],\"formulas\":[],\"procedures\":[],\"relationships\":[]}\n\nONE EVIDENCE EXAMPLE (instruction only; never extract or cite this example)\nExample scheduling ID EXAMPLE_CHUNK is not a source ID.\nExample source [EXAMPLE_ONLY]: An expression is a piece of code that produces a value.\n{\"concept_name\":\"expression\",\"content\":\"A piece of code that produces a value.\",\"source_unit_ids\":[\"EXAMPLE_ONLY\"],\"source_evidence\":[{\"source_id\":\"EXAMPLE_ONLY\",\"quote\":\"An expression is a piece of code that produces a value.\",\"fields\":[\"/concept_name\",\"/content\"]}]}\nThis example omits aliases and therefore has no /aliases/0 path.\nUse actual source IDs and exact excerpts from the content below.\n\nBEGIN SOURCE\n[T0001] <Q0000> A value is an expression.\n[T0001] <Q0001> A value is an expression.\n[T0001] <Q0002> A value is an expression.\n[T0001] <Q0003> A value is an expression.\n[T0001] <Q0004> A value is an expression.\n[T0001] <Q0005> A value is an expression.\n[T0001] <Q0006> A value is an expression.\n[T0001] <Q0007> A value is an expression.\n[T0001] <Q0008> A value is an expression.\n[T0001] <Q0009> A value is an expression.\nEND SOURCE\nReturn only the JSON object.\nEXACT EXCERPT REFERENCES (quote-catalog-v1): Each source excerpt is labeled <Q0000>, etc.\nInclude quote_id in every source_evidence object, selecting the excerpt that supports its fields.\nKeep source_id, quote and fields required. quote must contain source text; quote_id is a separate reference.\nThe application resolves a valid quote_id to the original exact excerpt and records that resolution.\nUse multiple excerpt references when necessary. Never use Q identifiers as source_unit_ids.\nExclude advertisements and instructor marketing from study notes. Do not infer unstated technical claims.\n\nINGESTION VERSION SHA256 (metadata, not source evidence): 7746100e657f1146773e78e4b9ff0cff88f6ad2736acd348fb2157a00baa34c0"
+          }
+        ],
+        "temperature": 0,
+        "max_tokens": 4000,
+        "response_format": {
+          "type": "json_object"
+        }
+      },
+      "request_sha256": "0a7380597934a978c12ae5c5d010804449e3652f73962f88e99cd8901ec1a2b5",
+      "parent_request_id": "offline-java-0000",
+      "chunk": {
+        "source_states": {
+          "T0001": "text"
+        },
+        "literal_source_texts": {},
+        "ingestion_binding": "7746100e657f1146773e78e4b9ff0cff88f6ad2736acd348fb2157a00baa34c0",
+        "context_source_ids": [],
+        "context_text": "",
+        "context_limitations": [],
+        "review_source_ids": [],
+        "uninterpreted_source_ids": [],
+        "chunk_id": "JAVA_CHUNK_000_SUB0_FRAG1",
+        "source_units": [
+          "T0001"
+        ],
+        "section": null,
+        "page_range": null,
+        "text_content": "[T0001] A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression.",
+        "token_count": null,
+        "split_depth": 2,
+        "parent_chunk_id": "JAVA_CHUNK_000_SUB0",
+        "source_spans": {
+          "T0001": [
+            260,
+            519
+          ]
+        }
+      }
+    },
+    {
+      "request_id": "offline-java-0003",
+      "chunk_id": "JAVA_CHUNK_000_SUB1",
+      "source_ids": [
+        "T0002"
+      ],
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You extract educational knowledge from the supplied source only. Return one valid JSON object, no prose or fences.\n\nAUTHORITATIVE SOURCE-GROUNDING CONTRACT\n- No invented information or external Java knowledge. Mentioning an operator does not support explaining decrement or any other unstated behavior.\n- Distinguish spoken explanation from literal code. Never reconstruct code or formulas, declarations, comments, casts, outputs, aliases, or relationships.\n- Do not compute results unless explicitly stated. Preserve conditions, alternatives and scope, including \"in this example\" and \"float or double\"; never turn a demonstration into a universal rule or required prerequisite.\n- Preserve uncertainty and transcription ambiguity; never complete a missing sentence. Omission is preferable to unsupported inference.\n- Empty categories are normal. Populate only supported categories; the item limit is a ceiling, not a target.\n- Omit unsupported optional fields entirely. Do not fill them with placeholders, null or empty strings. Empty category arrays [] are different from omitted optional fields.\n- Every populated substantive field needs exact supporting excerpts, including names, content, aliases, classifications, formula keys/descriptions/conditions, procedure steps/prerequisites/outcomes and relationship subjects/objects.\n- Each source_evidence entry has source_id, quote and fields. Quotes must be exact source substrings. Use canonical source-unit IDs from source markers only; scheduling/chunk IDs are never provenance.\n- fields lists only JSON Pointer paths to populated substantive fields. Cover all such fields; never reference omitted fields, empty containers, source IDs or generated metadata. Array indexes start at 0. List individual paths for every populated alias, step, prerequisite and nested array element, e.g. /steps/0, /steps/1, /steps/2; a parent collection path such as /steps never substitutes for its elements. Escape ~ as ~0 and / as ~1 in keys (RFC 6901), e.g. key a/b~ becomes /variables/a~1b~0. Populated dictionary keys require evidence even when values are empty; nested keys and their substantive descendants each need paths.\n- Mechanical quotation matching is not semantic entailment verification. An excerpt must actually support its associated claim; no matching-word shortcut. Match the whole claim, not just its subject; use additional exact excerpts for separately stated details or omit those details. Do not add textbook definitions, operator symbols or lifecycle qualifications not stated in the source.\n- Before returning, check explicit teaching facts: demonstrated initial/final values, error and repair, alternatives and naming corrections. Preserve each once with its source scope. Consolidate only related facts rather than duplicating them; avoid redundant term-only items when a supported item explains the term. Do not fill gaps or force a category. Aliases require source-stated synonyms, not instance names.\n\nCONTRASTS\nMention-only: \"We have a decrement operator\" does not explain its effect or syntax; omit that explanation.\nSpoken arithmetic: \"ten plus three gives thirteen\" stays prose; do not invent \"int result = 10 + 3; // result is 13\". Without the stated result, do not calculate it.\nLiteral code: if source contains \"int result = 10 + 3;\", retain that exact snippet only; add no comment, cast, output or declaration.\nAlternatives: preserve \"in this example, float or double\", not \"one operand must be cast to double\".\nTruncated: \"apply this as a prefix and then...\" supplies no remaining outcome or steps.\nScope: \"here the division of two whole numbers is a whole number\" supports that result, not an added \"truncates fractional part\" explanation.\nAssociation: exact quote \"modulus which is the remainder of a division\" supports the remainder description, not an unstated % symbol.\nArrays: three steps require /steps/0, /steps/1, /steps/2, not /steps; two prerequisites require /prerequisites/0 and /prerequisites/1; two aliases require /aliases/0 and /aliases/1. Omitted arrays have no paths.\nCoverage: if stated, retain x starting at 1 and printing 2; the final-variable pi assignment error; the separate integer-declaration/double-expression error and its declaration repair; float-or-double alternatives; and the pi-to-PI correction (naming, never an alias). Keep the two errors separate: declaration repair does not fix final-variable assignment. Never infer them from a partial passage.\n"
+          },
+          {
+            "role": "user",
+            "content": "Extract up to ~50 supported items, at most 200 words per item.\nSCHEDULING ID (never cite): JAVA_CHUNK_000_SUB1\nALLOWED CANONICAL SOURCE IDs: [\"T0002\"]\nApply the system grounding contract. Do not fill categories to meet a quota.\n\nCATEGORY/FIELD CONTRACTS\nCOMMON REQUIRED on every item: content (string), source_unit_ids (nonempty string array),\nsource_evidence (nonempty array of source_id/quote/fields objects).\nCategory requirements add to COMMON; they never replace it.\n- concepts: required COMMON + concept_name; optional aliases.\n- definitions: required COMMON + term, definition_text; optional context.\n- explanations: required COMMON + topic, explanation_text; optional explanation_type.\n- examples: required COMMON + exemplifies, example_text; optional example_type.\n- facts: required COMMON + fact_text; optional fact_type.\n- formulas: required COMMON + formula_text; optional variables, conditions, derivation.\n- procedures: required COMMON + procedure_name, steps; optional prerequisites, outcomes.\n- relationships: required COMMON + relationship_type, subject, object; optional description.\nText/name/classification fields are strings; aliases, steps and prerequisites are\nstring arrays; variables maps source-stated symbols to source-stated descriptions.\nFor definitions, explanations, examples, facts and formulas, content repeats the\ncorresponding main text. Procedure content summarizes only the supplied steps.\nOmit unsupported optional fields and their evidence paths. Do not send knowledge_id,\ndocument_id or verification flags; the application supplies metadata.\n\nRESPONSE SKELETON (empty arrays are valid; replace only supported categories)\n{\"concepts\":[],\"definitions\":[],\"explanations\":[],\"examples\":[],\"facts\":[],\"formulas\":[],\"procedures\":[],\"relationships\":[]}\n\nONE EVIDENCE EXAMPLE (instruction only; never extract or cite this example)\nExample scheduling ID EXAMPLE_CHUNK is not a source ID.\nExample source [EXAMPLE_ONLY]: An expression is a piece of code that produces a value.\n{\"concept_name\":\"expression\",\"content\":\"A piece of code that produces a value.\",\"source_unit_ids\":[\"EXAMPLE_ONLY\"],\"source_evidence\":[{\"source_id\":\"EXAMPLE_ONLY\",\"quote\":\"An expression is a piece of code that produces a value.\",\"fields\":[\"/concept_name\",\"/content\"]}]}\nThis example omits aliases and therefore has no /aliases/0 path.\nUse actual source IDs and exact excerpts from the content below.\n\nBEGIN SOURCE\n[T0002] <Q0000> A value is an expression.\n[T0002] <Q0001> A value is an expression.\n[T0002] <Q0002> A value is an expression.\n[T0002] <Q0003> A value is an expression.\n[T0002] <Q0004> A value is an expression.\n[T0002] <Q0005> A value is an expression.\n[T0002] <Q0006> A value is an expression.\n[T0002] <Q0007> A value is an expression.\n[T0002] <Q0008> A value is an expression.\n[T0002] <Q0009> A value is an expression.\n[T0002] <Q0010> A value is an expression.\n[T0002] <Q0011> A value is an expression.\n[T0002] <Q0012> A value is an expression.\n[T0002] <Q0013> A value is an expression.\n[T0002] <Q0014> A value is an expression.\n[T0002] <Q0015> A value is an expression.\n[T0002] <Q0016> A value is an expression.\n[T0002] <Q0017> A value is an expression.\n[T0002] <Q0018> A value is an expression.\n[T0002] <Q0019> A value is an expression.\nEND SOURCE\nReturn only the JSON object.\nEXACT EXCERPT REFERENCES (quote-catalog-v1): Each source excerpt is labeled <Q0000>, etc.\nInclude quote_id in every source_evidence object, selecting the excerpt that supports its fields.\nKeep source_id, quote and fields required. quote must contain source text; quote_id is a separate reference.\nThe application resolves a valid quote_id to the original exact excerpt and records that resolution.\nUse multiple excerpt references when necessary. Never use Q identifiers as source_unit_ids.\nExclude advertisements and instructor marketing from study notes. Do not infer unstated technical claims.\n\nINGESTION VERSION SHA256 (metadata, not source evidence): 7746100e657f1146773e78e4b9ff0cff88f6ad2736acd348fb2157a00baa34c0"
+          }
+        ],
+        "temperature": 0,
+        "max_tokens": 4000,
+        "response_format": {
+          "type": "json_object"
+        }
+      },
+      "request_sha256": "e0ce45221ca17557e1d89e410547ee4d72582d1f629a3e38e67b0f4bb6b70da0",
+      "parent_request_id": null,
+      "chunk": {
+        "source_states": {
+          "T0002": "text"
+        },
+        "literal_source_texts": {},
+        "ingestion_binding": "7746100e657f1146773e78e4b9ff0cff88f6ad2736acd348fb2157a00baa34c0",
+        "context_source_ids": [],
+        "context_text": "",
+        "context_limitations": [],
+        "review_source_ids": [],
+        "uninterpreted_source_ids": [],
+        "chunk_id": "JAVA_CHUNK_000_SUB1",
+        "source_units": [
+          "T0002"
+        ],
+        "section": null,
+        "page_range": null,
+        "text_content": "[T0002] A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression.\n",
+        "token_count": 132,
+        "split_depth": 1,
+        "parent_chunk_id": "JAVA_CHUNK_000",
+        "source_spans": null
+      }
+    },
+    {
+      "request_id": "offline-java-0004",
+      "chunk_id": "JAVA_CHUNK_000_SUB1_FRAG0",
+      "source_ids": [
+        "T0002"
+      ],
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You extract educational knowledge from the supplied source only. Return one valid JSON object, no prose or fences.\n\nAUTHORITATIVE SOURCE-GROUNDING CONTRACT\n- No invented information or external Java knowledge. Mentioning an operator does not support explaining decrement or any other unstated behavior.\n- Distinguish spoken explanation from literal code. Never reconstruct code or formulas, declarations, comments, casts, outputs, aliases, or relationships.\n- Do not compute results unless explicitly stated. Preserve conditions, alternatives and scope, including \"in this example\" and \"float or double\"; never turn a demonstration into a universal rule or required prerequisite.\n- Preserve uncertainty and transcription ambiguity; never complete a missing sentence. Omission is preferable to unsupported inference.\n- Empty categories are normal. Populate only supported categories; the item limit is a ceiling, not a target.\n- Omit unsupported optional fields entirely. Do not fill them with placeholders, null or empty strings. Empty category arrays [] are different from omitted optional fields.\n- Every populated substantive field needs exact supporting excerpts, including names, content, aliases, classifications, formula keys/descriptions/conditions, procedure steps/prerequisites/outcomes and relationship subjects/objects.\n- Each source_evidence entry has source_id, quote and fields. Quotes must be exact source substrings. Use canonical source-unit IDs from source markers only; scheduling/chunk IDs are never provenance.\n- fields lists only JSON Pointer paths to populated substantive fields. Cover all such fields; never reference omitted fields, empty containers, source IDs or generated metadata. Array indexes start at 0. List individual paths for every populated alias, step, prerequisite and nested array element, e.g. /steps/0, /steps/1, /steps/2; a parent collection path such as /steps never substitutes for its elements. Escape ~ as ~0 and / as ~1 in keys (RFC 6901), e.g. key a/b~ becomes /variables/a~1b~0. Populated dictionary keys require evidence even when values are empty; nested keys and their substantive descendants each need paths.\n- Mechanical quotation matching is not semantic entailment verification. An excerpt must actually support its associated claim; no matching-word shortcut. Match the whole claim, not just its subject; use additional exact excerpts for separately stated details or omit those details. Do not add textbook definitions, operator symbols or lifecycle qualifications not stated in the source.\n- Before returning, check explicit teaching facts: demonstrated initial/final values, error and repair, alternatives and naming corrections. Preserve each once with its source scope. Consolidate only related facts rather than duplicating them; avoid redundant term-only items when a supported item explains the term. Do not fill gaps or force a category. Aliases require source-stated synonyms, not instance names.\n\nCONTRASTS\nMention-only: \"We have a decrement operator\" does not explain its effect or syntax; omit that explanation.\nSpoken arithmetic: \"ten plus three gives thirteen\" stays prose; do not invent \"int result = 10 + 3; // result is 13\". Without the stated result, do not calculate it.\nLiteral code: if source contains \"int result = 10 + 3;\", retain that exact snippet only; add no comment, cast, output or declaration.\nAlternatives: preserve \"in this example, float or double\", not \"one operand must be cast to double\".\nTruncated: \"apply this as a prefix and then...\" supplies no remaining outcome or steps.\nScope: \"here the division of two whole numbers is a whole number\" supports that result, not an added \"truncates fractional part\" explanation.\nAssociation: exact quote \"modulus which is the remainder of a division\" supports the remainder description, not an unstated % symbol.\nArrays: three steps require /steps/0, /steps/1, /steps/2, not /steps; two prerequisites require /prerequisites/0 and /prerequisites/1; two aliases require /aliases/0 and /aliases/1. Omitted arrays have no paths.\nCoverage: if stated, retain x starting at 1 and printing 2; the final-variable pi assignment error; the separate integer-declaration/double-expression error and its declaration repair; float-or-double alternatives; and the pi-to-PI correction (naming, never an alias). Keep the two errors separate: declaration repair does not fix final-variable assignment. Never infer them from a partial passage.\n"
+          },
+          {
+            "role": "user",
+            "content": "Extract up to ~50 supported items, at most 200 words per item.\nSCHEDULING ID (never cite): JAVA_CHUNK_000_SUB1_FRAG0\nALLOWED CANONICAL SOURCE IDs: [\"T0002\"]\nApply the system grounding contract. Do not fill categories to meet a quota.\n\nCATEGORY/FIELD CONTRACTS\nCOMMON REQUIRED on every item: content (string), source_unit_ids (nonempty string array),\nsource_evidence (nonempty array of source_id/quote/fields objects).\nCategory requirements add to COMMON; they never replace it.\n- concepts: required COMMON + concept_name; optional aliases.\n- definitions: required COMMON + term, definition_text; optional context.\n- explanations: required COMMON + topic, explanation_text; optional explanation_type.\n- examples: required COMMON + exemplifies, example_text; optional example_type.\n- facts: required COMMON + fact_text; optional fact_type.\n- formulas: required COMMON + formula_text; optional variables, conditions, derivation.\n- procedures: required COMMON + procedure_name, steps; optional prerequisites, outcomes.\n- relationships: required COMMON + relationship_type, subject, object; optional description.\nText/name/classification fields are strings; aliases, steps and prerequisites are\nstring arrays; variables maps source-stated symbols to source-stated descriptions.\nFor definitions, explanations, examples, facts and formulas, content repeats the\ncorresponding main text. Procedure content summarizes only the supplied steps.\nOmit unsupported optional fields and their evidence paths. Do not send knowledge_id,\ndocument_id or verification flags; the application supplies metadata.\n\nRESPONSE SKELETON (empty arrays are valid; replace only supported categories)\n{\"concepts\":[],\"definitions\":[],\"explanations\":[],\"examples\":[],\"facts\":[],\"formulas\":[],\"procedures\":[],\"relationships\":[]}\n\nONE EVIDENCE EXAMPLE (instruction only; never extract or cite this example)\nExample scheduling ID EXAMPLE_CHUNK is not a source ID.\nExample source [EXAMPLE_ONLY]: An expression is a piece of code that produces a value.\n{\"concept_name\":\"expression\",\"content\":\"A piece of code that produces a value.\",\"source_unit_ids\":[\"EXAMPLE_ONLY\"],\"source_evidence\":[{\"source_id\":\"EXAMPLE_ONLY\",\"quote\":\"An expression is a piece of code that produces a value.\",\"fields\":[\"/concept_name\",\"/content\"]}]}\nThis example omits aliases and therefore has no /aliases/0 path.\nUse actual source IDs and exact excerpts from the content below.\n\nBEGIN SOURCE\n[T0002] <Q0000> A value is an expression.\n[T0002] <Q0001> A value is an expression.\n[T0002] <Q0002> A value is an expression.\n[T0002] <Q0003> A value is an expression.\n[T0002] <Q0004> A value is an expression.\n[T0002] <Q0005> A value is an expression.\n[T0002] <Q0006> A value is an expression.\n[T0002] <Q0007> A value is an expression.\n[T0002] <Q0008> A value is an expression.\n[T0002] <Q0009> A value is an expression.\nEND SOURCE\nReturn only the JSON object.\nEXACT EXCERPT REFERENCES (quote-catalog-v1): Each source excerpt is labeled <Q0000>, etc.\nInclude quote_id in every source_evidence object, selecting the excerpt that supports its fields.\nKeep source_id, quote and fields required. quote must contain source text; quote_id is a separate reference.\nThe application resolves a valid quote_id to the original exact excerpt and records that resolution.\nUse multiple excerpt references when necessary. Never use Q identifiers as source_unit_ids.\nExclude advertisements and instructor marketing from study notes. Do not infer unstated technical claims.\n\nINGESTION VERSION SHA256 (metadata, not source evidence): 7746100e657f1146773e78e4b9ff0cff88f6ad2736acd348fb2157a00baa34c0"
+          }
+        ],
+        "temperature": 0,
+        "max_tokens": 4000,
+        "response_format": {
+          "type": "json_object"
+        }
+      },
+      "request_sha256": "c48ea51cada1556a514ec730fe181dc53372ff9db86e8e71b4fdd1c04a94c7b1",
+      "parent_request_id": "offline-java-0003",
+      "chunk": {
+        "source_states": {
+          "T0002": "text"
+        },
+        "literal_source_texts": {},
+        "ingestion_binding": "7746100e657f1146773e78e4b9ff0cff88f6ad2736acd348fb2157a00baa34c0",
+        "context_source_ids": [],
+        "context_text": "",
+        "context_limitations": [],
+        "review_source_ids": [],
+        "uninterpreted_source_ids": [],
+        "chunk_id": "JAVA_CHUNK_000_SUB1_FRAG0",
+        "source_units": [
+          "T0002"
+        ],
+        "section": null,
+        "page_range": null,
+        "text_content": "[T0002] A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. ",
+        "token_count": null,
+        "split_depth": 2,
+        "parent_chunk_id": "JAVA_CHUNK_000_SUB1",
+        "source_spans": {
+          "T0002": [
+            0,
+            260
+          ]
+        }
+      }
+    },
+    {
+      "request_id": "offline-java-0005",
+      "chunk_id": "JAVA_CHUNK_000_SUB1_FRAG1",
+      "source_ids": [
+        "T0002"
+      ],
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You extract educational knowledge from the supplied source only. Return one valid JSON object, no prose or fences.\n\nAUTHORITATIVE SOURCE-GROUNDING CONTRACT\n- No invented information or external Java knowledge. Mentioning an operator does not support explaining decrement or any other unstated behavior.\n- Distinguish spoken explanation from literal code. Never reconstruct code or formulas, declarations, comments, casts, outputs, aliases, or relationships.\n- Do not compute results unless explicitly stated. Preserve conditions, alternatives and scope, including \"in this example\" and \"float or double\"; never turn a demonstration into a universal rule or required prerequisite.\n- Preserve uncertainty and transcription ambiguity; never complete a missing sentence. Omission is preferable to unsupported inference.\n- Empty categories are normal. Populate only supported categories; the item limit is a ceiling, not a target.\n- Omit unsupported optional fields entirely. Do not fill them with placeholders, null or empty strings. Empty category arrays [] are different from omitted optional fields.\n- Every populated substantive field needs exact supporting excerpts, including names, content, aliases, classifications, formula keys/descriptions/conditions, procedure steps/prerequisites/outcomes and relationship subjects/objects.\n- Each source_evidence entry has source_id, quote and fields. Quotes must be exact source substrings. Use canonical source-unit IDs from source markers only; scheduling/chunk IDs are never provenance.\n- fields lists only JSON Pointer paths to populated substantive fields. Cover all such fields; never reference omitted fields, empty containers, source IDs or generated metadata. Array indexes start at 0. List individual paths for every populated alias, step, prerequisite and nested array element, e.g. /steps/0, /steps/1, /steps/2; a parent collection path such as /steps never substitutes for its elements. Escape ~ as ~0 and / as ~1 in keys (RFC 6901), e.g. key a/b~ becomes /variables/a~1b~0. Populated dictionary keys require evidence even when values are empty; nested keys and their substantive descendants each need paths.\n- Mechanical quotation matching is not semantic entailment verification. An excerpt must actually support its associated claim; no matching-word shortcut. Match the whole claim, not just its subject; use additional exact excerpts for separately stated details or omit those details. Do not add textbook definitions, operator symbols or lifecycle qualifications not stated in the source.\n- Before returning, check explicit teaching facts: demonstrated initial/final values, error and repair, alternatives and naming corrections. Preserve each once with its source scope. Consolidate only related facts rather than duplicating them; avoid redundant term-only items when a supported item explains the term. Do not fill gaps or force a category. Aliases require source-stated synonyms, not instance names.\n\nCONTRASTS\nMention-only: \"We have a decrement operator\" does not explain its effect or syntax; omit that explanation.\nSpoken arithmetic: \"ten plus three gives thirteen\" stays prose; do not invent \"int result = 10 + 3; // result is 13\". Without the stated result, do not calculate it.\nLiteral code: if source contains \"int result = 10 + 3;\", retain that exact snippet only; add no comment, cast, output or declaration.\nAlternatives: preserve \"in this example, float or double\", not \"one operand must be cast to double\".\nTruncated: \"apply this as a prefix and then...\" supplies no remaining outcome or steps.\nScope: \"here the division of two whole numbers is a whole number\" supports that result, not an added \"truncates fractional part\" explanation.\nAssociation: exact quote \"modulus which is the remainder of a division\" supports the remainder description, not an unstated % symbol.\nArrays: three steps require /steps/0, /steps/1, /steps/2, not /steps; two prerequisites require /prerequisites/0 and /prerequisites/1; two aliases require /aliases/0 and /aliases/1. Omitted arrays have no paths.\nCoverage: if stated, retain x starting at 1 and printing 2; the final-variable pi assignment error; the separate integer-declaration/double-expression error and its declaration repair; float-or-double alternatives; and the pi-to-PI correction (naming, never an alias). Keep the two errors separate: declaration repair does not fix final-variable assignment. Never infer them from a partial passage.\n"
+          },
+          {
+            "role": "user",
+            "content": "Extract up to ~50 supported items, at most 200 words per item.\nSCHEDULING ID (never cite): JAVA_CHUNK_000_SUB1_FRAG1\nALLOWED CANONICAL SOURCE IDs: [\"T0002\"]\nApply the system grounding contract. Do not fill categories to meet a quota.\n\nCATEGORY/FIELD CONTRACTS\nCOMMON REQUIRED on every item: content (string), source_unit_ids (nonempty string array),\nsource_evidence (nonempty array of source_id/quote/fields objects).\nCategory requirements add to COMMON; they never replace it.\n- concepts: required COMMON + concept_name; optional aliases.\n- definitions: required COMMON + term, definition_text; optional context.\n- explanations: required COMMON + topic, explanation_text; optional explanation_type.\n- examples: required COMMON + exemplifies, example_text; optional example_type.\n- facts: required COMMON + fact_text; optional fact_type.\n- formulas: required COMMON + formula_text; optional variables, conditions, derivation.\n- procedures: required COMMON + procedure_name, steps; optional prerequisites, outcomes.\n- relationships: required COMMON + relationship_type, subject, object; optional description.\nText/name/classification fields are strings; aliases, steps and prerequisites are\nstring arrays; variables maps source-stated symbols to source-stated descriptions.\nFor definitions, explanations, examples, facts and formulas, content repeats the\ncorresponding main text. Procedure content summarizes only the supplied steps.\nOmit unsupported optional fields and their evidence paths. Do not send knowledge_id,\ndocument_id or verification flags; the application supplies metadata.\n\nRESPONSE SKELETON (empty arrays are valid; replace only supported categories)\n{\"concepts\":[],\"definitions\":[],\"explanations\":[],\"examples\":[],\"facts\":[],\"formulas\":[],\"procedures\":[],\"relationships\":[]}\n\nONE EVIDENCE EXAMPLE (instruction only; never extract or cite this example)\nExample scheduling ID EXAMPLE_CHUNK is not a source ID.\nExample source [EXAMPLE_ONLY]: An expression is a piece of code that produces a value.\n{\"concept_name\":\"expression\",\"content\":\"A piece of code that produces a value.\",\"source_unit_ids\":[\"EXAMPLE_ONLY\"],\"source_evidence\":[{\"source_id\":\"EXAMPLE_ONLY\",\"quote\":\"An expression is a piece of code that produces a value.\",\"fields\":[\"/concept_name\",\"/content\"]}]}\nThis example omits aliases and therefore has no /aliases/0 path.\nUse actual source IDs and exact excerpts from the content below.\n\nBEGIN SOURCE\n[T0002] <Q0000> A value is an expression.\n[T0002] <Q0001> A value is an expression.\n[T0002] <Q0002> A value is an expression.\n[T0002] <Q0003> A value is an expression.\n[T0002] <Q0004> A value is an expression.\n[T0002] <Q0005> A value is an expression.\n[T0002] <Q0006> A value is an expression.\n[T0002] <Q0007> A value is an expression.\n[T0002] <Q0008> A value is an expression.\n[T0002] <Q0009> A value is an expression.\nEND SOURCE\nReturn only the JSON object.\nEXACT EXCERPT REFERENCES (quote-catalog-v1): Each source excerpt is labeled <Q0000>, etc.\nInclude quote_id in every source_evidence object, selecting the excerpt that supports its fields.\nKeep source_id, quote and fields required. quote must contain source text; quote_id is a separate reference.\nThe application resolves a valid quote_id to the original exact excerpt and records that resolution.\nUse multiple excerpt references when necessary. Never use Q identifiers as source_unit_ids.\nExclude advertisements and instructor marketing from study notes. Do not infer unstated technical claims.\n\nINGESTION VERSION SHA256 (metadata, not source evidence): 7746100e657f1146773e78e4b9ff0cff88f6ad2736acd348fb2157a00baa34c0"
+          }
+        ],
+        "temperature": 0,
+        "max_tokens": 4000,
+        "response_format": {
+          "type": "json_object"
+        }
+      },
+      "request_sha256": "ee8ced799b723bdfd5b60ce9325d03354351ec58a68bd21e100ff5cb0cdbe208",
+      "parent_request_id": "offline-java-0003",
+      "chunk": {
+        "source_states": {
+          "T0002": "text"
+        },
+        "literal_source_texts": {},
+        "ingestion_binding": "7746100e657f1146773e78e4b9ff0cff88f6ad2736acd348fb2157a00baa34c0",
+        "context_source_ids": [],
+        "context_text": "",
+        "context_limitations": [],
+        "review_source_ids": [],
+        "uninterpreted_source_ids": [],
+        "chunk_id": "JAVA_CHUNK_000_SUB1_FRAG1",
+        "source_units": [
+          "T0002"
+        ],
+        "section": null,
+        "page_range": null,
+        "text_content": "[T0002] A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression. A value is an expression.",
+        "token_count": null,
+        "split_depth": 2,
+        "parent_chunk_id": "JAVA_CHUNK_000_SUB1",
+        "source_spans": {
+          "T0002": [
+            260,
+            519
+          ]
+        }
+      }
+    }
+  ],
+  "manifest_version": "structured_document_plan_v2",
+  "parser_options": {},
+  "ingestion": {
+    "version": "structured_ingestion_v2",
+    "parser": {
+      "name": "TranscriptParser",
+      "implementation_sha256": "1a02491f20a78729fb9bc8a220e57a0fac6fb2340d3452dfe5c5aff4b47b390c"
+    },
+    "status": "success",
+    "router_version": "structured_ingestion_v2",
+    "router_sha256": "eb911fd0df3d80ea4bdca853406313759c590a3e9b397477561d39dc84fa3cca"
+  },
+  "source_document_sha256": "a3fee363be707633c27ee5c854dd00bf44c3b0d54fd02706524e4a21ba1e0b63",
+  "pending_chunks": [],
+  "source_inventory": [
+    {
+      "source_id": "T0001",
+      "state": "text",
+      "limitations": [],
+      "docling_ref": "transcript_segment_0"
+    },
+    {
+      "source_id": "T0002",
+      "state": "text",
+      "limitations": [],
+      "docling_ref": "transcript_segment_1"
+    }
+  ],
+  "output_policy": "reserve_preferred_v1"
+}

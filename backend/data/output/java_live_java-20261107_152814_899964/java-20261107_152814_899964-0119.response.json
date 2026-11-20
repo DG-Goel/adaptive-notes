@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-c9849b88-cadc-427c-90b5-e1f62f111a7b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"escape sequence\",\n        \"refs\": [\"Q0001\", \"Q0003\", \"Q0004\", \"Q0005\"]\n      },\n      \"definition_text\": {\n        \"text\": \"An escape sequence is a combination of characters that starts with a backslash (\\\\) and represents a special character in a Java string, such as a double quote, backslash, newline, or tab.\",\n        \"refs\": [\"Q0001\", \"Q0003\", \"Q0004\", \"Q0005\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"exemplifies\": {\n        \"text\": \"Including double quotes in a string\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"example_text\": {\n        \"text\": \"String s = \\\"Hello \\\\\\\"Marsh\\\\\\\"\\\"; // prints Hello \\\"Marsh\\\"\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"Escaping backslashes in a Windows file path\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"example_text\": {\n        \"text\": \"String path = \\\"C:\\\\\\\\Windows\\\\\\\\\\\"; // prints C:\\\\Windows\\\\\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"Using newline and tab escape sequences\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_text\": {\n        \"text\": \"String s = \\\"C:\\\\\\\\Drive\\\\n\\\\tWindows\\\"; // prints C:\\\\Drive then a new line and a tab before Windows\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_type\": null\n    }\n  ],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"In Java strings, a backslash (\\\\) is used to escape special characters such as double quote (\\\\\\\"), backslash (\\\\\\\\), newline (\\\\n), and tab (\\\\t).\",\n        \"refs\": [\"Q0001\", \"Q0003\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Four commonly used escape sequences in Java are \\\\\\\" (double quote), \\\\\\\\ (backslash), \\\\n (newline), and \\\\t (tab).\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output JSON with empty arrays maybe no facts etc. Extract educational content: about escape sequences in Java strings. So we can create facts, definitions, examples, formulas? Probably facts: list of escape sequences. definitions: maybe definition of escape sequence. examples: showing code. We'll cite refs.\n\nCreate facts: \"In Java strings, a backslash (\\) is used to escape special characters such as double quote, backslash, newline (\\n), and tab (\\t).\" refs Q0001,Q0003,Q0004.\n\nDefinition: term \"escape sequence\" definition text. refs Q0001,Q0003,Q0004,Q0005.\n\nExamples: example_text showing code snippet \"Hello \\\"Marsh\\\"\" etc. refs Q0001,Q0002.\n\nNo formulas, procedures, relationships, concepts.\n\nexcluded empty.\n\nReturn schema.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065520,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_86dc843b12",
+  "usage": {
+    "completion_tokens": 792,
+    "prompt_tokens": 3041,
+    "total_tokens": 3833,
+    "completion_time": 1.678938765,
+    "completion_tokens_details": {
+      "reasoning_tokens": 170
+    },
+    "prompt_time": 0.12589889,
+    "prompt_tokens_details": null,
+    "queue_time": 0.165132655,
+    "total_time": 1.804837655
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6va6mc5ed48s1vcmwf9ntwq",
+    "debug": null,
+    "seed": 1530506342,
+    "usage": null
+  }
+}

@@ -1,0 +1,1045 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-15T07:53:16.112549+00:00",
+  "concepts": [],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [
+    {
+      "knowledge_id": "FCT_0001",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00004"
+      ],
+      "document_id": "DOC001",
+      "content": "The market thinks about the policy rate for the next several FOMC meetings.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00004",
+              "quote": "What the market thinks now, the policy rate\n will be in the next meeting, two meetings from now,\n three meetings from now, four meetings of the FOMC from now.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 139,
+              "end_char": 297,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00004",
+              "quote": "What the market thinks now, the policy rate\n will be in the next meeting, two meetings from now,\n three meetings from now, four meetings of the FOMC from now.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 139,
+              "end_char": 297,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "The market thinks about the policy rate for the next several FOMC meetings.",
+              "claims": [
+                {
+                  "text": "The market thinks about the policy rate for the next several FOMC meetings.",
+                  "refs": [
+                    "Q0003"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00004",
+                      "quote": "What the market thinks now, the policy rate\n will be in the next meeting, two meetings from now,\n three meetings from now, four meetings of the FOMC from now."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "The market thinks about the policy rate for the next several FOMC meetings.",
+              "claims": [
+                {
+                  "text": "The market thinks about the policy rate for the next several FOMC meetings.",
+                  "refs": [
+                    "Q0003"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00004",
+                      "quote": "What the market thinks now, the policy rate\n will be in the next meeting, two meetings from now,\n three meetings from now, four meetings of the FOMC from now."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "concepts",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No explicit concept name or definition provided in excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No term definitions are present in the excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "explanations",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No explanatory passages beyond factual statements.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "examples",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No illustrative examples are given.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No formulas are presented.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "procedures",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No procedural steps are described.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "relationships",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No explicit relational statements between entities are provided.",
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "The market thinks about the policy rate for the next several FOMC meetings.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "What the market thinks now, the policy rate\n will be in the next meeting, two meetings from now,\n three meetings from now, four meetings of the FOMC from now."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00004",
+                        "quote": "What the market thinks now, the policy rate\n will be in the next meeting, two meetings from now,\n three meetings from now, four meetings of the FOMC from now.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 139,
+                        "end_char": 297,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "The market thinks about the policy rate for the next several FOMC meetings.",
+                "preview_text": "The market thinks about the policy rate for the next several FOMC meetings.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "The market thinks about the policy rate for the next several FOMC meetings.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "What the market thinks now, the policy rate\n will be in the next meeting, two meetings from now,\n three meetings from now, four meetings of the FOMC from now."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00004",
+                        "quote": "What the market thinks now, the policy rate\n will be in the next meeting, two meetings from now,\n three meetings from now, four meetings of the FOMC from now.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 139,
+                        "end_char": 297,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "The market thinks about the policy rate for the next several FOMC meetings.",
+                "preview_text": "The market thinks about the policy rate for the next several FOMC meetings.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00004"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "The market thinks about the policy rate for the next several FOMC meetings.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0002",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00004"
+      ],
+      "document_id": "DOC001",
+      "content": "An asset price is largely determined by what is expected to happen in the future.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00004",
+              "quote": "An asset price is a lot about pricing today,\n things that you expect to happen in the future.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 662,
+              "end_char": 755,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00004",
+              "quote": "An asset price is a lot about pricing today,\n things that you expect to happen in the future.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 662,
+              "end_char": 755,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "An asset price is largely determined by what is expected to happen in the future.",
+              "claims": [
+                {
+                  "text": "An asset price is largely determined by what is expected to happen in the future.",
+                  "refs": [
+                    "Q0010"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00004",
+                      "quote": "An asset price is a lot about pricing today,\n things that you expect to happen in the future."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "An asset price is largely determined by what is expected to happen in the future.",
+              "claims": [
+                {
+                  "text": "An asset price is largely determined by what is expected to happen in the future.",
+                  "refs": [
+                    "Q0010"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00004",
+                      "quote": "An asset price is a lot about pricing today,\n things that you expect to happen in the future."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "concepts",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No explicit concept name or definition provided in excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No term definitions are present in the excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "explanations",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No explanatory passages beyond factual statements.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "examples",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No illustrative examples are given.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No formulas are presented.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "procedures",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No procedural steps are described.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "relationships",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No explicit relational statements between entities are provided.",
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "An asset price is largely determined by what is expected to happen in the future.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "An asset price is a lot about pricing today,\n things that you expect to happen in the future."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00004",
+                        "quote": "An asset price is a lot about pricing today,\n things that you expect to happen in the future.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 662,
+                        "end_char": 755,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "An asset price is largely determined by what is expected to happen in the future.",
+                "preview_text": "An asset price is largely determined by what is expected to happen in the future.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "An asset price is largely determined by what is expected to happen in the future.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "An asset price is a lot about pricing today,\n things that you expect to happen in the future."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00004",
+                        "quote": "An asset price is a lot about pricing today,\n things that you expect to happen in the future.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 662,
+                        "end_char": 755,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "An asset price is largely determined by what is expected to happen in the future.",
+                "preview_text": "An asset price is largely determined by what is expected to happen in the future.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00004"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "An asset price is largely determined by what is expected to happen in the future.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0003",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00004"
+      ],
+      "document_id": "DOC001",
+      "content": "What actually happens is less important for an asset price than market expectations.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00004",
+              "quote": "So what actually happens is less important for an asset price.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 598,
+              "end_char": 660,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00004",
+              "quote": "So what actually happens is less important for an asset price.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 598,
+              "end_char": 660,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "What actually happens is less important for an asset price than market expectations.",
+              "claims": [
+                {
+                  "text": "What actually happens is less important for an asset price than market expectations.",
+                  "refs": [
+                    "Q0009"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00004",
+                      "quote": "So what actually happens is less important for an asset price."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "What actually happens is less important for an asset price than market expectations.",
+              "claims": [
+                {
+                  "text": "What actually happens is less important for an asset price than market expectations.",
+                  "refs": [
+                    "Q0009"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00004",
+                      "quote": "So what actually happens is less important for an asset price."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "concepts",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No explicit concept name or definition provided in excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No term definitions are present in the excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "explanations",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No explanatory passages beyond factual statements.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "examples",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No illustrative examples are given.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No formulas are presented.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "procedures",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No procedural steps are described.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "relationships",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No explicit relational statements between entities are provided.",
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "What actually happens is less important for an asset price than market expectations.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So what actually happens is less important for an asset price."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00004",
+                        "quote": "So what actually happens is less important for an asset price.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 598,
+                        "end_char": 660,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "What actually happens is less important for an asset price than market expectations.",
+                "preview_text": "What actually happens is less important for an asset price than market expectations.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "What actually happens is less important for an asset price than market expectations.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So what actually happens is less important for an asset price."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00004",
+                        "quote": "So what actually happens is less important for an asset price.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 598,
+                        "end_char": 660,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "What actually happens is less important for an asset price than market expectations.",
+                "preview_text": "What actually happens is less important for an asset price than market expectations.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00004"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "What actually happens is less important for an asset price than market expectations.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0004",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00004"
+      ],
+      "document_id": "DOC001",
+      "content": "The market expects the euro area to undergo a prolonged period of interest‑rate hiking.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00004",
+              "quote": "What you expect is what matters, not what\n actually happens, and at this moment,\n the market expects the euro area to go\n through a more prolonged period of hiking, interest rate\n hiking.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 757,
+              "end_char": 944,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00004",
+              "quote": "What you expect is what matters, not what\n actually happens, and at this moment,\n the market expects the euro area to go\n through a more prolonged period of hiking, interest rate\n hiking.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 757,
+              "end_char": 944,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "The market expects the euro area to undergo a prolonged period of interest‑rate hiking.",
+              "claims": [
+                {
+                  "text": "The market expects the euro area to undergo a prolonged period of interest‑rate hiking.",
+                  "refs": [
+                    "Q0011"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00004",
+                      "quote": "What you expect is what matters, not what\n actually happens, and at this moment,\n the market expects the euro area to go\n through a more prolonged period of hiking, interest rate\n hiking."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "The market expects the euro area to undergo a prolonged period of interest‑rate hiking.",
+              "claims": [
+                {
+                  "text": "The market expects the euro area to undergo a prolonged period of interest‑rate hiking.",
+                  "refs": [
+                    "Q0011"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00004",
+                      "quote": "What you expect is what matters, not what\n actually happens, and at this moment,\n the market expects the euro area to go\n through a more prolonged period of hiking, interest rate\n hiking."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "concepts",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No explicit concept name or definition provided in excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No term definitions are present in the excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "explanations",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No explanatory passages beyond factual statements.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "examples",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No illustrative examples are given.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No formulas are presented.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "procedures",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No procedural steps are described.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "relationships",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00004"
+              ],
+              "reason": "No explicit relational statements between entities are provided.",
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "The market expects the euro area to undergo a prolonged period of interest‑rate hiking.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": true
+                    },
+                    "evidence": [
+                      "What you expect is what matters, not what\n actually happens, and at this moment,\n the market expects the euro area to go\n through a more prolonged period of hiking, interest rate\n hiking."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00004",
+                        "quote": "What you expect is what matters, not what\n actually happens, and at this moment,\n the market expects the euro area to go\n through a more prolonged period of hiking, interest rate\n hiking.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 757,
+                        "end_char": 944,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "The market expects the euro area to undergo a prolonged period of interest‑rate hiking.",
+                "preview_text": "The market expects the euro area to undergo a prolonged period of interest‑rate hiking.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "The market expects the euro area to undergo a prolonged period of interest‑rate hiking.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": true
+                    },
+                    "evidence": [
+                      "What you expect is what matters, not what\n actually happens, and at this moment,\n the market expects the euro area to go\n through a more prolonged period of hiking, interest rate\n hiking."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00004",
+                        "quote": "What you expect is what matters, not what\n actually happens, and at this moment,\n the market expects the euro area to go\n through a more prolonged period of hiking, interest rate\n hiking.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 757,
+                        "end_char": 944,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "The market expects the euro area to undergo a prolonged period of interest‑rate hiking.",
+                "preview_text": "The market expects the euro area to undergo a prolonged period of interest‑rate hiking.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00004"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "The market expects the euro area to undergo a prolonged period of interest‑rate hiking.",
+      "fact_type": null
+    }
+  ],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 4,
+  "source_units_processed": 1,
+  "extraction_metadata": null
+}

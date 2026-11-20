@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-a4012dfb-da74-4fcf-a813-54dceacf5ba1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"units\":[{\"title\":\"Magic Numbers vs Constants\",\"source_segment_ids\":[\"FCT_0287\",\"FCT_0284\"],\"mode\":\"text_and_visual\",\"remaining_text\":\"\",\"visuals\":[{\"source_segment_ids\":[\"FCT_0287\",\"FCT_0284\"],\"needs_review\":false,\"missing_information\":[],\"evidence\":[{\"note_id\":\"FCT_0287\",\"quote\":\"magic number here, like divide by 12 and then 4\"},{\"note_id\":\"FCT_0284\",\"quote\":\"Two final variables (constants) are declared: monthsInYear set to 12 and percent set to 100\"}],\"payload\":{\"type\":\"table\",\"title\":\"Magic Numbers vs Constants\",\"headers\":[\"Aspect\",\"Example\"],\"rows\":[[\"Magic Number\",\"divide by 12 and then 4\"],[\"Constant\",\"monthsInYear = 12\"],[\"Constant\",\"percent = 100\"]]}}]}]}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visuals if supported. Look for comparisons or flow. We have constants monthsInYear=12, percent=100, magic numbers avoidance. Could make table comparing magic number vs constant. Sources: FCT_0284 mentions constants, FCT_0287 mentions magic number issue. So visual table comparison.\n\nCreate unit with title \"Magic Numbers vs Constants\". source_segment_ids include primary FCT_0287 and primary FCT_0284. mode text_and_visual? We need visual candidate only, no text-only units. So include visual payload table.\n\nProvide evidence quotes.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794580131,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "usage": {
+    "completion_tokens": 319,
+    "prompt_tokens": 1532,
+    "total_tokens": 1851,
+    "completion_time": 0.680205417,
+    "completion_tokens_details": {
+      "reasoning_tokens": 123
+    },
+    "prompt_time": 0.08433321,
+    "prompt_tokens_details": null,
+    "queue_time": 0.156709577,
+    "total_time": 0.764538627
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7amzag0e6jvrjy906ejfw7t",
+    "debug": null,
+    "seed": 47916166,
+    "usage": null
+  }
+}

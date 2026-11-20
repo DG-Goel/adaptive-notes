@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-ecee35cc-23ae-4b37-8226-872c31b296fa",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"function\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"functions are a block of code that performs a task\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"exemplifies\": {\n        \"text\": \"we can have a function for sending emails to people\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"example_text\": {\n        \"text\": \"we can have a function for sending emails to people\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"we can have a function for converting someone's weight in pounds to kilograms\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"example_text\": {\n        \"text\": \"we can have a function for converting someone's weight in pounds to kilograms\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"example_type\": null\n    }\n  ],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"The smallest building block in Java programs are functions.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Void is a reserved keyword in Java used as a return type for functions that do not return a value.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [\n    {\n      \"procedure_name\": {\n        \"text\": \"Download and install IntelliJ IDEA\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"steps\": [\n        {\n          \"text\": \"Click on the download link for IntelliJ IDEA Community Edition\",\n          \"refs\": [\"Q0001\"]\n        },\n        {\n          \"text\": \"Drag and drop the downloaded application onto the Applications folder\",\n          \"refs\": [\"Q0001\"]\n        }\n      ],\n      \"prerequisites\": null,\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"Download and install IntelliJ IDEA\",\n        \"refs\": [\"Q0001\"]\n      }\n    }\n  ],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays except extracted items. From excerpts, educational facts about Java functions. Extract facts, definitions, procedures maybe. Let's create facts: smallest building block are functions. Definition: function is a block of code that performs a task. Also return type void definition. Provide examples? Could be examples of functions. We'll include definitions and facts. Use refs accordingly.\n\nCreate definitions:\n- term \"function\": text from Q0002 \"functions ... block of code that performs a task\". refs Q0002.\n- term \"return type\": maybe definition from Q0003 \"return type of that function\". but not full definition. Could skip.\n\nFacts:\n- \"The smallest building block in Java programs are functions.\" refs Q0002.\n- \"Void is a reserved keyword in Java used as a return type for functions that do not return a value.\" refs Q0003.\n\nExamples:\n- example of function: sending emails, converting weight, validating input. Use Q0002 and Q0003. Provide example_text combine? Must be exact text. We'll take snippet \"we can have a function for sending emails to people\". refs Q0002. Another example \"we can have a function for converting someone's weight in pounds to kilograms\". refs Q0002. Provide two examples? schema expects array of examples objects. We'll include two.\n\nProcedures maybe: steps to download IntelliJ. Could be procedure. Provide procedure_name \"Download and install IntelliJ IDEA\". steps: click download, drag to Applications folder. Use Q0001. Provide content maybe description. We'll fill.\n\nNow construct JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065316,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 868,
+    "prompt_tokens": 3029,
+    "total_tokens": 3897,
+    "completion_time": 1.8160172449999998,
+    "completion_tokens_details": {
+      "reasoning_tokens": 325
+    },
+    "prompt_time": 0.138203988,
+    "prompt_tokens_details": null,
+    "queue_time": 0.329676253,
+    "total_time": 1.954221233
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6va0ctkep2axkxw7xjdtgmw",
+    "debug": null,
+    "seed": 1293707151,
+    "usage": null
+  }
+}

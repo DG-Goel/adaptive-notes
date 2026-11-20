@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-d0a95a3c-2e0c-422a-83ce-a25a3796e563",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Exchange‑Rate Movements and Currency Appreciation/Depreciation\",\n      \"source_segment_ids\": [\"CON_0002\", \"CON_0003\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0002\", \"CON_0003\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0002\",\n              \"exact_quote\": \"When the exchange rate goes up, it means an appreciation of the local currency (the dollar). This yields more foreign currency per unit of domestic currency.\"\n            },\n            {\n              \"note_id\": \"CON_0003\",\n              \"exact_quote\": \"When the exchange rate goes down, it indicates a depreciation of the local currency.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Effect of Exchange‑Rate Direction\",\n            \"headers\": [\"Direction\", \"Interpretation\", \"Result\"],\n            \"rows\": [\n              [\"Up\", \"Appreciation of domestic currency\", \"More foreign currency per unit of domestic currency\"],\n              [\"Down\", \"Depreciation of domestic currency\", \"Less foreign currency per unit of domestic currency\"]\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Uncovered Interest Parity (UIP) Relationship\",\n      \"source_segment_ids\": [\"CON_0017\", \"CON_0018\", \"FCT_0002\", \"CON_0019\", \"CON_0023\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0017\", \"CON_0018\", \"FCT_0002\", \"CON_0019\", \"CON_0023\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0017\",\n              \"exact_quote\": \"Well, it's the uncovered interest parity condition.\"\n            },\n            {\n              \"note_id\": \"CON_0018\",\n              \"exact_quote\": \"An increase in the domestic interest rate leads to a higher exchange rate, meaning the domestic currency becomes more expensive.\"\n            },\n            {\n              \"note_id\": \"FCT_0002\",\n              \"exact_quote\": \"When the domestic interest rate is increased, the exchange rate appreciates.\"\n            },\n            {\n              \"note_id\": \"CON_0019\",\n              \"exact_quote\": \"Compensate the interest rate differential with an expected depreciation of the currency that is paying a higher interest rate.\"\n            },\n            {\n              \"note_id\": \"CON_0023\",\n              \"exact_quote\": \"If the domestic interest rate is above the international interest rate, the exchange rate today must be above the expected exchange rate, because the expected depreciation of the currency compensates for the higher domestic interest rate.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Uncovered Interest Parity Mechanism\",\n            \"direction\": \"LR\",\n            \"nodes\": [\n              {\"id\": \"n1\", \"label\": \"Domestic interest rate ↑\"},\n              {\"id\": \"n2\", \"label\": \"Exchange rate ↑ (domestic currency appreciates)\"},\n              {\"id\": \"n3\", \"label\": \"Expected future depreciation\"},\n              {\"id\": \"n4\", \"label\": \"Compensates higher domestic interest\"}\n            ],\n            \"edges\": [\n              {\"from\": \"n1\", \"to\": \"n2\", \"label\": \"higher i → higher e\"},\n              {\"from\": \"n2\", \"to\": \"n3\", \"label\": \"today's high e → expected depreciation\"},\n              {\"from\": \"n3\", \"to\": \"n4\", \"label\": \"expected depreciation → offsets interest differential\"}\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Policy Rate Path Illustration\",\n      \"source_segment_ids\": [\"CON_0005\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0005\"],\n          \"needs_review\": true,\n          \"missing_information\": \"Exact numeric values or timeline for policy rate expectations are not provided in the source excerpts.\",\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0005\",\n              \"exact_quote\": \"This is a expected policy rate path.\"\n            },\n            {\n              \"note_id\": \"CON_0005\",\n              \"exact_quote\": \"What the market thinks now, the policy rate will be in the next meeting, two meetings from now, three meetings from now, four meetings of the FOMC from now.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"sequence\",\n            \"title\": \"Projected Policy Rate Over Upcoming Meetings\",\n            \"participants\": [\n              {\"id\": \"p1\", \"label\": \"Market Expectation\"}\n            ],\n            \"events\": [\n              {\"kind\": \"message\", \"from\": \"p1\", \"to\": \"p1\", \"text\": \"Rate now\"},\n              {\"kind\": \"message\", \"from\": \"p1\", \"to\": \"p1\", \"text\": \"Rate next meeting\"},\n              {\"kind\": \"message\", \"from\": \"p1\", \"to\": \"p1\", \"text\": \"Rate two meetings ahead\"},\n              {\"kind\": \"message\", \"from\": \"p1\", \"to\": \"p1\", \"text\": \"Rate three meetings ahead\"},\n              {\"kind\": \"message\", \"from\": \"p1\", \"to\": \"p1\", \"text\": \"Rate four meetings ahead\"}\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visual units where appropriate. Likely a table comparing exchange rate up/down, and a flowchart for uncovered interest parity. Create units. Provide source ids. Include evidence quotes. Let's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794666592,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_27194a498a",
+  "usage": {
+    "completion_tokens": 1294,
+    "prompt_tokens": 2706,
+    "total_tokens": 4000,
+    "completion_time": 2.6937736389999998,
+    "completion_tokens_details": {
+      "reasoning_tokens": 43
+    },
+    "prompt_time": 0.13376397,
+    "prompt_tokens_details": null,
+    "queue_time": 0.15992044,
+    "total_time": 2.827537609
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7d7dv4fe0rr3m7z14kbh9q3",
+    "debug": null,
+    "seed": 393849910,
+    "usage": null
+  }
+}

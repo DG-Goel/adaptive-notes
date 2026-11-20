@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-e2baa452-7e07-4a8b-80f4-1ed13c5dca0c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"abstentions\":[],\"excluded\":[],\"rows\":[{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"concepts\",\"element\":0,\"field\":\"concept_name\",\"instructional_role\":null,\"item\":\"item1\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0000\"],\"related_refs\":[],\"text\":\"for loop\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"concepts\",\"element\":0,\"field\":\"content\",\"instructional_role\":null,\"item\":\"item1\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0001\"],\"related_refs\":[],\"text\":\"repeat one or more statements a fixed number of times\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"concepts\",\"element\":0,\"field\":\"concept_name\",\"instructional_role\":null,\"item\":\"item2\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0050\"],\"related_refs\":[],\"text\":\"while loop\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"concepts\",\"element\":0,\"field\":\"content\",\"instructional_role\":null,\"item\":\"item2\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0053\"],\"related_refs\":[],\"text\":\"repeat statements until a condition becomes false\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"concepts\",\"element\":0,\"field\":\"concept_name\",\"instructional_role\":null,\"item\":\"item3\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0034\"],\"related_refs\":[],\"text\":\"y loop\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"concepts\",\"element\":0,\"field\":\"content\",\"instructional_role\":null,\"item\":\"item3\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0034\"],\"related_refs\":[],\"text\":\"loop with syntax similar to while but called y loop in this tutorial\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"facts\",\"element\":0,\"field\":\"fact_text\",\"instructional_role\":null,\"item\":\"item4\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0010\",\"Q0019\",\"Q0020\"],\"related_refs\":[],\"text\":\"Initializing loop counter to 0 and using less‑than operator executes the body 5 times for i \\u003c 5\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"facts\",\"element\":0,\"field\":\"fact_text\",\"instructional_role\":null,\"item\":\"item5\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0022\"],\"related_refs\":[],\"text\":\"Initializing loop counter to 1 and using less‑than‑or‑equal operator also executes the body 5 times\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"facts\",\"element\":0,\"field\":\"fact_text\",\"instructional_role\":null,\"item\":\"item6\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0029\",\"Q0031\"],\"related_refs\":[],\"text\":\"Decrementing i from 5 down to 1 with a greater‑than condition prints numbers in reverse order\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"relationships\",\"element\":0,\"field\":\"relationship_type\",\"instructional_role\":null,\"item\":\"item7\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0038\",\"Q0039\",\"Q0040\",\"Q0042\"],\"related_refs\":[],\"text\":\"alternative_valid_approach\"}]}\n",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc. Likely extract concepts: for loop, while loop, y loop? Provide rows. Use primary excerpts. Provide availability SOURCE_SUPPORTED? But ASR speech, exact code unavailable => maybe PARTIALLY_SUPPORTED. Use basis explicit. literal_kind verbal. Provide item id e.g., \"item1\". Let's create rows for concepts: concept_name \"for loop\". content maybe explanation. We'll produce minimal.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636437,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5a93aea882",
+  "usage": {
+    "completion_tokens": 1251,
+    "prompt_tokens": 3785,
+    "total_tokens": 5036,
+    "completion_time": 2.606425684,
+    "completion_tokens_details": {
+      "reasoning_tokens": 89
+    },
+    "prompt_time": 0.198704222,
+    "prompt_tokens_details": null,
+    "queue_time": 0.165006177,
+    "total_time": 2.805129906
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7canjzhepmrje3w2be46cx0",
+    "debug": null,
+    "seed": 1388798586,
+    "usage": null
+  }
+}

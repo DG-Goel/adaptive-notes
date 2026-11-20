@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-75b00d82-a94c-43a3-aaa8-86ed3eca9ed8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"to name our classes, we use the Pascal naming convention\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"correct_demonstration\",\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"and that basically means the first letter of every word should be upper case.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"correct_demonstration\",\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"In contrast to name our methods, we use the camel naming convention\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"correct_demonstration\",\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Extract statements: Q0000: \"to name our classes, we use the Pascal naming convention\". Q0001: \"and that basically means the first letter of every word should be upper case.\" Q0002: \"In contrast to name our methods, we use the camel naming convention\". Q0003 context not primary.\n\nCreate claims C1-C3. Basis explicit, availability SOURCE_SUPPORTED? but ASR speech evidence flagged; may be SOURCE_MISSING? Since ASR speech evidence means exact code unavailable but text is quoted, so we have source text. So availability SOURCE_SUPPORTED.\n\nLiteral_kind verbal. instructional_role maybe correct_demonstration? It's naming convention explanation. Use correct_demonstration.\n\nRelated_refs none.\n\nNow fill schema. No concepts etc, empty arrays. No abstentions.\n\nProvide claims array with three claims.\n\nAll other categories empty arrays.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317896,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8655ddce88",
+  "usage": {
+    "completion_tokens": 516,
+    "prompt_tokens": 2906,
+    "total_tokens": 3422,
+    "completion_time": 1.086670385,
+    "completion_tokens_details": {
+      "reasoning_tokens": 189
+    },
+    "prompt_time": 0.185723832,
+    "prompt_tokens_details": null,
+    "queue_time": 0.379502082,
+    "total_time": 1.272394217
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72twhade909b8816wt1x1ac",
+    "debug": null,
+    "seed": 47144643,
+    "usage": null
+  }
+}

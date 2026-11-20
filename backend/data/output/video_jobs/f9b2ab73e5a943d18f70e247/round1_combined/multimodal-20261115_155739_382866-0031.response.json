@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-70309a0e-023a-4651-9acd-5a71f09a4cc4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"net exports\",\n      \"refs\": [\"Q0003\",\"Q0010\",\"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Net exports increase when foreign (rest‑of‑the‑world) income rises because foreign demand for domestically produced goods rises.\",\n      \"refs\": [\"Q0003\",\"Q0010\",\"Q0011\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"explanation_of_mistake\",\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"real exchange rate\",\n      \"refs\": [\"Q0014\",\"Q0015\",\"Q0018\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the real exchange rate rises, domestic goods become relatively more expensive, causing exports to fall and imports to rise, so net exports decline.\",\n      \"refs\": [\"Q0015\",\"Q0018\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"explanation_of_mistake\",\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"foreign (rest‑of‑the‑world) income\",\n      \"refs\": [\"Q0001\",\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Higher foreign income raises demand for domestically produced goods, increasing a country's exports.\",\n      \"refs\": [\"Q0005\",\"Q0010\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"explanation_of_mistake\",\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What happens to a country's net exports when foreign (rest‑of‑the‑world) income rises?\",\n      \"answer\": \"Net exports increase.\",\n      \"explanation\": \"The excerpts state that foreign income raises demand for domestically produced goods, which raises exports and thus net exports.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"foreign income effect on net exports\",\n      \"refs\": [\"Q0005\",\"Q0010\"]\n    },\n    {\n      \"question\": \"How does a rise in the real exchange rate affect a country's exports?\",\n      \"answer\": \"Exports tend to decline.\",\n      \"explanation\": \"When the real exchange rate goes up, domestic goods become more expensive relative to foreign goods, reducing export demand.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"real exchange rate impact on exports\",\n      \"refs\": [\"Q0015\",\"Q0018\"]\n    },\n    {\n      \"question\": \"Why do imports tend to increase when the real exchange rate rises?\",\n      \"answer\": \"Because foreign goods become relatively cheaper.\",\n      \"explanation\": \"A higher real exchange rate makes domestic goods costlier, so consumers buy more foreign (imported) goods.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"real exchange rate impact on imports\",\n      \"refs\": [\"Q0018\"]\n    },\n    {\n      \"question\": \"Summarize the two ways foreign income influences net exports.\",\n      \"answer\": \"Higher foreign income raises demand for domestic goods (increasing exports) and, through higher foreign income, raises foreign imports, which are the domestic country's exports.\",\n      \"explanation\": \"The speaker links foreign income to greater demand for domestically produced goods and notes that foreign imports equal the home country's exports.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"mechanism linking foreign income and net exports\",\n      \"refs\": [\"Q0003\",\"Q0010\",\"Q0011\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract concepts etc. The excerpts discuss net exports, foreign income, real exchange rate effect. So concepts: net exports, foreign income, real exchange rate. Provide rows.\n\nCreate rows for concepts: concept_name and content. Use primary excerpts.\n\nWe'll produce rows.\n\nQuiz: four short answer questions.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794758344,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_b1dd3e7a63",
+  "usage": {
+    "completion_tokens": 1240,
+    "prompt_tokens": 2802,
+    "total_tokens": 4042,
+    "completion_time": 2.6117658759999998,
+    "completion_tokens_details": {
+      "reasoning_tokens": 66
+    },
+    "prompt_time": 0.145437729,
+    "prompt_tokens_details": null,
+    "queue_time": 0.376705854,
+    "total_time": 2.757203605
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7fyxw82ef49dpt6zest3bcf",
+    "debug": null,
+    "seed": 410768932,
+    "usage": null
+  }
+}

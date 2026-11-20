@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-cb65f15d-a81c-4dec-9759-75ec1a7bd6cb",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00083\"],\n      \"reason\": \"No concept definitions or names present in the provided excerpts.\"\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00083\"],\n      \"reason\": \"No term definitions are included in the provided excerpts.\"\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00083\"],\n      \"reason\": \"No explanatory content about topics is present in the provided excerpts.\"\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00083\"],\n      \"reason\": \"No example statements are included in the provided excerpts.\"\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00083\"],\n      \"reason\": \"No factual statements are present in the provided excerpts.\"\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00083\"],\n      \"reason\": \"No formula text is available in the provided excerpts.\"\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00083\"],\n      \"reason\": \"No procedural content is present in the provided excerpts.\"\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00083\"],\n      \"reason\": \"No relationship statements are included in the provided excerpts.\"\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract educational content. The excerpts are mostly meta talk, not concepts. No concrete definitions. Likely no rows, but we must include abstentions for missing content. Provide abstention for each category where no data. Probably overall abstention: category concepts etc unavailable. Provide one abstention per category? Could do one with availability SOURCE_MISSING. Provide reason \"no educational content extracted\". source_ids empty? Must list source_ids that would have provided but missing. Use primary source G00083 but content not relevant. Might set source_ids [\"G00083\"]. Provide category e.g., concepts. We'll output rows empty array. Provide abstentions for each category.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636595,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_49bfac06f1",
+  "usage": {
+    "completion_tokens": 537,
+    "prompt_tokens": 3119,
+    "total_tokens": 3656,
+    "completion_time": 1.115088635,
+    "completion_tokens_details": {
+      "reasoning_tokens": 135
+    },
+    "prompt_time": 0.138179703,
+    "prompt_tokens_details": null,
+    "queue_time": 0.293473265,
+    "total_time": 1.253268338
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7catefkejktczbamwdpvvg3",
+    "debug": null,
+    "seed": 806463069,
+    "usage": null
+  }
+}

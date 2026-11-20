@@ -1,0 +1,723 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-14T06:04:00.978418+00:00",
+  "concepts": [],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [
+    {
+      "knowledge_id": "FCT_0001",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00067"
+      ],
+      "document_id": "DOC001",
+      "content": "The round method returns a long. Implicit casting cannot store a long (8 bytes) into an int (4 bytes). Explicit casting can be used to convert a long to an int when the value fits. The result of Math.round(Math.random() * 100) is a number between 0 and 100. A number between 0 and 100 can be stored in an int.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00067",
+              "quote": "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 495,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00067",
+              "quote": "result of this expression is a number between 0 to 100.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 497,
+              "end_char": 552,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00067",
+              "quote": "So\n we can definitely store it in an integer.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 553,
+              "end_char": 598,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00067",
+              "quote": "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 495,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00067",
+              "quote": "result of this expression is a number between 0 to 100.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 497,
+              "end_char": 552,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00067",
+              "quote": "So\n we can definitely store it in an integer.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 553,
+              "end_char": 598,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "The round method returns a long. Implicit casting cannot store a long (8 bytes) into an int (4 bytes). Explicit casting can be used to convert a long to an int when the value fits. The result of Math.round(Math.random() * 100) is a number between 0 and 100. A number between 0 and 100 can be stored in an int.",
+              "claims": [
+                {
+                  "text": "The round method returns a long.",
+                  "refs": [
+                    "Q0000"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00067",
+                      "quote": "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the"
+                    }
+                  ],
+                  "related_evidence": []
+                },
+                {
+                  "text": "Implicit casting cannot store a long (8 bytes) into an int (4 bytes).",
+                  "refs": [
+                    "Q0000"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00067",
+                      "quote": "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the"
+                    }
+                  ],
+                  "related_evidence": []
+                },
+                {
+                  "text": "Explicit casting can be used to convert a long to an int when the value fits.",
+                  "refs": [
+                    "Q0000"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00067",
+                      "quote": "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the"
+                    }
+                  ],
+                  "related_evidence": []
+                },
+                {
+                  "text": "The result of Math.round(Math.random() * 100) is a number between 0 and 100.",
+                  "refs": [
+                    "Q0001"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00067",
+                      "quote": "result of this expression is a number between 0 to 100."
+                    }
+                  ],
+                  "related_evidence": []
+                },
+                {
+                  "text": "A number between 0 and 100 can be stored in an int.",
+                  "refs": [
+                    "Q0002"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00067",
+                      "quote": "So\n we can definitely store it in an integer."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "The round method returns a long. Implicit casting cannot store a long (8 bytes) into an int (4 bytes). Explicit casting can be used to convert a long to an int when the value fits. The result of Math.round(Math.random() * 100) is a number between 0 and 100. A number between 0 and 100 can be stored in an int.",
+              "claims": [
+                {
+                  "text": "The round method returns a long.",
+                  "refs": [
+                    "Q0000"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00067",
+                      "quote": "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the"
+                    }
+                  ],
+                  "related_evidence": []
+                },
+                {
+                  "text": "Implicit casting cannot store a long (8 bytes) into an int (4 bytes).",
+                  "refs": [
+                    "Q0000"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00067",
+                      "quote": "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the"
+                    }
+                  ],
+                  "related_evidence": []
+                },
+                {
+                  "text": "Explicit casting can be used to convert a long to an int when the value fits.",
+                  "refs": [
+                    "Q0000"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00067",
+                      "quote": "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the"
+                    }
+                  ],
+                  "related_evidence": []
+                },
+                {
+                  "text": "The result of Math.round(Math.random() * 100) is a number between 0 and 100.",
+                  "refs": [
+                    "Q0001"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00067",
+                      "quote": "result of this expression is a number between 0 to 100."
+                    }
+                  ],
+                  "related_evidence": []
+                },
+                {
+                  "text": "A number between 0 and 100 can be stored in an int.",
+                  "refs": [
+                    "Q0002"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00067",
+                      "quote": "So\n we can definitely store it in an integer."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "reason": "code/formula excerpt not reliably available",
+              "source_ids": [
+                "G00067"
+              ],
+              "counts_as_completed": false
+            },
+            {
+              "category": "procedures",
+              "availability": "SOURCE_MISSING",
+              "reason": "code excerpt not reliably available",
+              "source_ids": [
+                "G00067"
+              ],
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "The round method returns a long.",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Important source qualification may have been lost"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [
+                        "only"
+                      ],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the"
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00067",
+                        "quote": "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 495,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Implicit casting cannot store a long (8 bytes) into an int (4 bytes).",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Important source qualification may have been lost"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [
+                        "only"
+                      ],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the"
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00067",
+                        "quote": "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 495,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Explicit casting can be used to convert a long to an int when the value fits.",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Important source qualification may have been lost"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [
+                        "only"
+                      ],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the"
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00067",
+                        "quote": "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 495,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "The result of Math.round(Math.random() * 100) is a number between 0 and 100.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "result of this expression is a number between 0 to 100."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00067",
+                        "quote": "result of this expression is a number between 0 to 100.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 497,
+                        "end_char": 552,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "A number between 0 and 100 can be stored in an int.",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Claim introduces a number absent from its evidence"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [
+                        "0",
+                        "100"
+                      ],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So\n we can definitely store it in an integer."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00067",
+                        "quote": "So\n we can definitely store it in an integer.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 553,
+                        "end_char": 598,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "The round method returns a long. Implicit casting cannot store a long (8 bytes) into an int (4 bytes). Explicit casting can be used to convert a long to an int when the value fits. The result of Math.round(Math.random() * 100) is a number between 0 and 100. A number between 0 and 100 can be stored in an int.",
+                "preview_text": "The result of Math.round(Math.random() * 100) is a number between 0 and 100.",
+                "withheld": true
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "The round method returns a long.",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Important source qualification may have been lost"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [
+                        "only"
+                      ],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the"
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00067",
+                        "quote": "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 495,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Implicit casting cannot store a long (8 bytes) into an int (4 bytes).",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Important source qualification may have been lost"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [
+                        "only"
+                      ],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the"
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00067",
+                        "quote": "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 495,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Explicit casting can be used to convert a long to an int when the value fits.",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Important source qualification may have been lost"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [
+                        "only"
+                      ],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the"
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00067",
+                        "quote": "we get a double, we still have the fraction here, so\n we can change the type to an int, now we have a compilation\n error, because the round method returns a long, but here we have declared an integer,\n this is one of those cases where implicit casting cannot happen,\n because we have a value that is represented in 8 bytes of memory, and we want\n to store that in a variable that has only 4 bytes of memory, so implicit\n casting doesn't work, but we can use explicit casting because we know the",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 495,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "The result of Math.round(Math.random() * 100) is a number between 0 and 100.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "result of this expression is a number between 0 to 100."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00067",
+                        "quote": "result of this expression is a number between 0 to 100.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 497,
+                        "end_char": 552,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "A number between 0 and 100 can be stored in an int.",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Claim introduces a number absent from its evidence"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [
+                        "0",
+                        "100"
+                      ],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So\n we can definitely store it in an integer."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00067",
+                        "quote": "So\n we can definitely store it in an integer.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 553,
+                        "end_char": 598,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "The round method returns a long. Implicit casting cannot store a long (8 bytes) into an int (4 bytes). Explicit casting can be used to convert a long to an int when the value fits. The result of Math.round(Math.random() * 100) is a number between 0 and 100. A number between 0 and 100 can be stored in an int.",
+                "preview_text": "The result of Math.round(Math.random() * 100) is a number between 0 and 100.",
+                "withheld": true
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00067"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "The round method returns a long. Implicit casting cannot store a long (8 bytes) into an int (4 bytes). Explicit casting can be used to convert a long to an int when the value fits. The result of Math.round(Math.random() * 100) is a number between 0 and 100. A number between 0 and 100 can be stored in an int.",
+      "fact_type": null
+    }
+  ],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 1,
+  "source_units_processed": 1,
+  "extraction_metadata": null
+}

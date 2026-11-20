@@ -1,0 +1,464 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-15T19:07:54.846500+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00017"
+      ],
+      "document_id": "DOC001",
+      "content": "Increased Chinese demand boosts exports from commodity‑producing economies",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00017",
+              "quote": "China is reopening, so there's a big boom domestically.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 56,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00017",
+              "quote": "That's great news for the emerging markets,\n commodity producers, because that will increase the demand\n from China for goods produced around the world,\n in particular, commodity producing economies.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 58,
+              "end_char": 257,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00017",
+              "quote": "If an important trading partner's output goes up,\n income goes up, then they're going to consume everything.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 294,
+              "end_char": 402,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00017",
+              "quote": "They're domestic goods, but they also\n to consume the goods they import, which are our exports.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 404,
+              "end_char": 499,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "China reopening leads to increased demand for commodities",
+              "claims": [
+                {
+                  "text": "China reopening leads to increased demand for commodities",
+                  "refs": [
+                    "Q0000"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00017",
+                      "quote": "China is reopening, so there's a big boom domestically."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Increased Chinese demand boosts exports from commodity‑producing economies",
+              "claims": [
+                {
+                  "text": "Increased Chinese demand boosts exports from commodity‑producing economies",
+                  "refs": [
+                    "Q0001",
+                    "Q0003",
+                    "Q0004"
+                  ],
+                  "basis": "direct_entailment",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00017",
+                      "quote": "That's great news for the emerging markets,\n commodity producers, because that will increase the demand\n from China for goods produced around the world,\n in particular, commodity producing economies."
+                    },
+                    {
+                      "source_id": "G00017",
+                      "quote": "If an important trading partner's output goes up,\n income goes up, then they're going to consume everything."
+                    },
+                    {
+                      "source_id": "G00017",
+                      "quote": "They're domestic goods, but they also\n to consume the goods they import, which are our exports."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Increased Chinese demand boosts exports from commodity‑producing economies",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Important source qualification may have been lost"
+                    ],
+                    "basis": "direct_entailment",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [
+                        "if"
+                      ],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "That's great news for the emerging markets,\n commodity producers, because that will increase the demand\n from China for goods produced around the world,\n in particular, commodity producing economies.",
+                      "If an important trading partner's output goes up,\n income goes up, then they're going to consume everything.",
+                      "They're domestic goods, but they also\n to consume the goods they import, which are our exports."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00017",
+                        "quote": "That's great news for the emerging markets,\n commodity producers, because that will increase the demand\n from China for goods produced around the world,\n in particular, commodity producing economies.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 58,
+                        "end_char": 257,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00017",
+                        "quote": "If an important trading partner's output goes up,\n income goes up, then they're going to consume everything.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 294,
+                        "end_char": 402,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00017",
+                        "quote": "They're domestic goods, but they also\n to consume the goods they import, which are our exports.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 404,
+                        "end_char": 499,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Increased Chinese demand boosts exports from commodity‑producing economies",
+                "preview_text": "",
+                "withheld": true
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "China reopening leads to increased demand for commodities",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "China is reopening, so there's a big boom domestically."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00017",
+                        "quote": "China is reopening, so there's a big boom domestically.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 56,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "China reopening leads to increased demand for commodities",
+                "preview_text": "China reopening leads to increased demand for commodities",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00017"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "China reopening leads to increased demand for commodities",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [
+    {
+      "knowledge_id": "FCT_0002",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00017"
+      ],
+      "document_id": "DOC001",
+      "content": "Exports are increasing",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00017",
+              "quote": "Exports are",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 543,
+              "end_char": 554,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00017",
+              "quote": "Exports are",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 543,
+              "end_char": 554,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "Exports are increasing",
+              "claims": [
+                {
+                  "text": "Exports are increasing",
+                  "refs": [
+                    "Q0006"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00017",
+                      "quote": "Exports are"
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Exports are increasing",
+              "claims": [
+                {
+                  "text": "Exports are increasing",
+                  "refs": [
+                    "Q0006"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00017",
+                      "quote": "Exports are"
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Exports are increasing",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Exports are"
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00017",
+                        "quote": "Exports are",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 543,
+                        "end_char": 554,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Exports are increasing",
+                "preview_text": "Exports are increasing",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "Exports are increasing",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Exports are"
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00017",
+                        "quote": "Exports are",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 543,
+                        "end_char": 554,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Exports are increasing",
+                "preview_text": "Exports are increasing",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00017"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Exports are increasing",
+      "fact_type": null
+    }
+  ],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 2,
+  "source_units_processed": 1,
+  "extraction_metadata": null
+}

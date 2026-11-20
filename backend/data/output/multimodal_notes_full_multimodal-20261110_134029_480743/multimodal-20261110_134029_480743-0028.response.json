@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-de9167f5-256a-48cd-b4b0-d86813ce3a16",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"Purpose of this function\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"After the name we have a pair of parentheses and inside this parentheses we add the parameters for this function.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"We use these parameters to pass values to our function.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"For example, our send email function should have parameters like who is the receiver, what is the subject of this email, what is the content of this email, and so on.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"Now in this tutorial we're not going to worry about parameters, we'll look at them in the future.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\n        \"Purpose of this function\",\n        \"After the name we have a pair of parentheses and inside this parentheses we add the parameters for this function.\",\n        \"We use these parameters to pass values to our function.\",\n        \"For example, our send email function should have parameters like who is the receiver, what is the subject of this email, what is the content of this email, and so on.\",\n        \"Now in this tutorial we're not going to worry about parameters, we'll look at them in the future.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"general\"]\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify statements. Excerpts talk about function purpose, parentheses for parameters, using parameters, example email function parameters, not covering parameters now. Create claims each explicit. Provide IDs. Then categories likely facts. We'll put facts entries. No definitions etc. Provide abstentions for missing formulas etc none.\n\nLet's craft claims:\n\nC1: \"Purpose of this function\" from Q0000. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\nC2: \"After the name we have a pair of parentheses and inside this parentheses we add the parameters for this function.\" from Q0001.\n\nC3: \"We use these parameters to pass values to our function.\" from Q0002.\n\nC4: \"For example, our send email function should have parameters like who is the receiver, what is the subject of this email, what is the content of this email, and so on.\" from Q0003.\n\nC5: \"Now in this tutorial we're not going to worry about parameters, we'll look at them in the future.\" from Q0004.\n\nAll factual statements.\n\nNow populate facts category with fact_text arrays referencing claim IDs in order.\n\nProvide abstentions empty.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318419,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_0708ac49a5",
+  "usage": {
+    "completion_tokens": 893,
+    "prompt_tokens": 2936,
+    "total_tokens": 3829,
+    "completion_time": 1.961613524,
+    "completion_tokens_details": {
+      "reasoning_tokens": 259
+    },
+    "prompt_time": 0.101720559,
+    "prompt_tokens_details": {
+      "cached_tokens": 2560
+    },
+    "queue_time": 0.250796388,
+    "total_time": 2.063334083
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72vcf01eedv34vj6772a37n",
+    "debug": null,
+    "seed": 992914259,
+    "usage": null
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "completed_at": "2026-11-10T16:11:47.515106+00:00",
+  "classification": "PARTIAL_OR_BLOCKED",
+  "bypassed_local_metric": "TPD",
+  "enforced_metrics": [
+    "RPM",
+    "RPD",
+    "TPM"
+  ],
+  "provider_limits_bypassed": false,
+  "new_attempts": 103,
+  "http_status": {
+    "200": 89,
+    "400": 13,
+    "429": 1
+  },
+  "operation_states": {
+    "validation_failed": 54,
+    "failed": 14,
+    "success": 35
+  },
+  "reported_input_tokens": 304032,
+  "reported_output_tokens": 67634,
+  "unknown_usage_attempts": 14,
+  "actual_total_tokens": null,
+  "elapsed_seconds": 2361.671663045883,
+  "accepted_items": 420,
+  "accepted_counts": {
+    "concepts": 0,
+    "definitions": 1,
+    "explanations": 0,
+    "examples": 0,
+    "facts": 419,
+    "formulas": 0,
+    "procedures": 0,
+    "relationships": 0
+  },
+  "new_items_since_previous_preview": 48,
+  "all_primary_attempted_categories": [
+    "facts",
+    "definitions"
+  ],
+  "stopped_category": "explanations",
+  "unstarted_categories": [
+    "concepts",
+    "examples",
+    "procedures",
+    "relationships",
+    "formulas"
+  ],
+  "provider_blocker": {
+    "request_id": "multimodal-20261110_160719_210532-0011",
+    "chunk_number": 4,
+    "type": "GroqProviderError",
+    "error": "Groq API call failed: Groq API call failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01jmkg4pjje008tpsxb8p971e6` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 196670, Requested 3733. Please try again in 2m54.095999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  "active_operation": null,
+  "source_sha256": "111135fbfe6486c7caca807a78bafd0fd55eb6eb662c68bf1d43afb917444186",
+  "source_unchanged": true,
+  "tests_passed": 34,
+  "next_steps": "Provider retry-after is advisory, not guaranteed full-run capacity. The 429 request is durable and failed; normal resume will not redispatch it. A controlled new exact-request approval is needed before retrying that request. Local TPD exception is inactive outside the run context."
+}

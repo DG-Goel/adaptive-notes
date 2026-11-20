@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="4" time="28.233" timestamp="2026-11-07T13:00:07.242634+05:30" hostname="ShivShakti"><testcase classname="tests.test_authorized_runner" name="test_five_rotation_never_switches_keys_to_retry_failure[rate_limit]" time="1.737" /><testcase classname="tests.test_authorized_runner" name="test_five_rotation_never_switches_keys_to_retry_failure[uncertain]" time="1.016" /><testcase classname="tests.test_authorized_runner" name="test_validation_failure_continues_only_independent_work_without_redispatch[validation]" time="14.986" /><testcase classname="tests.test_authorized_runner" name="test_validation_failure_continues_only_independent_work_without_redispatch[schema400]" time="9.428"><failure message="AssertionError: assert (1, 'validation_failed') == (1, 'failed')&#10;  &#10;  At index 1 diff: 'validation_failed' != 'failed'&#10;  Use -v to get more diff">tmp_path = WindowsPath('C:/Projects/adaptive-notes/backend/data/output/five_rotation_definite_failure/test_validation_failure_contin1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025D3316FD70&gt;
+failure = 'schema400'
+
+    @pytest.mark.parametrize('failure',['validation','schema400'])
+    def test_validation_failure_continues_only_independent_work_without_redispatch(tmp_path,monkeypatch,failure):
+        test_authorized_document_runs_and_resumes_offline(tmp_path,monkeypatch,failure,'canonical',rotate=True)
+        import sqlite3
+        with sqlite3.connect(tmp_path/'backend/data/live_state/organization.sqlite') as db:
+            rows=db.execute('select slot,state from operations order by rowid').fetchall()
+&gt;       assert rows[0]==(1,'validation_failed' if failure=='validation' else 'failed')
+E       AssertionError: assert (1, 'validation_failed') == (1, 'failed')
+E         
+E         At index 1 diff: 'validation_failed' != 'failed'
+E         Use -v to get more diff
+
+tests\test_authorized_runner.py:133: AssertionError</failure></testcase></testsuite></testsuites>

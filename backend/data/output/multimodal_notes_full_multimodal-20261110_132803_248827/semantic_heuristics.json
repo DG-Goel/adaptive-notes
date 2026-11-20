@@ -1,0 +1,115 @@
+{
+  "verification_timestamp": "2026-11-10T19:10:50.916237",
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "total_claims_verified": 2,
+  "claims_supported": 2,
+  "claims_unsupported": 0,
+  "claims_contradicted": 0,
+  "claims_inconclusive": 0,
+  "claims_insufficient_evidence": 0,
+  "claim_verifications": [
+    {
+      "knowledge_id": "FCT_0001",
+      "knowledge_type": "fact",
+      "claim_text": "After the name we have a pair of parentheses Inside the parentheses we add the parameters for this function We use these parameters to pass values to our function",
+      "source_unit_ids": [
+        "S00077",
+        "S00078",
+        "S00079"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.75,
+        "reason": "Short quote paraphrase: 100.0% stem overlap, source <30 words",
+        "evidence_snippets": [
+          "S00077:  okay. Now after the name we have a pair of parentheses",
+          "S00078:  and inside this parentheses we add the parameters for this function."
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "After",
+          "Inside",
+          "We"
+        ],
+        "source_entities": [
+          "Now",
+          "We"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S00077:  okay. Now after the name we have a pair of parentheses",
+        "S00078:  and inside this parentheses we add the parameters for this function.",
+        "S00079:  We use these parameters to pass values to our function."
+      ],
+      "source_full_text": " okay. Now after the name we have a pair of parentheses  and inside this parentheses we add the parameters for this function.  We use these parameters to pass values to our function.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0002",
+      "knowledge_type": "fact",
+      "claim_text": "Select \"Create project from template\". Create a command line application. A command line application can run from the command line. A command line application does not have a graphical user interface.",
+      "source_unit_ids": [
+        "S00138",
+        "S00139",
+        "S00140"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.75,
+        "reason": "Short quote paraphrase: 92.3% stem overlap, source <30 words",
+        "evidence_snippets": [
+          "S00138:  on next, on this page select create project from template",
+          "S00139:  so we're going to create a command line application which is an application that we"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [],
+        "source_entities": [
+          "It"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S00138:  on next, on this page select create project from template",
+        "S00139:  so we're going to create a command line application which is an application that we",
+        "S00140:  can run from the command line. It doesn't have a graphical user interface"
+      ],
+      "source_full_text": " on next, on this page select create project from template  so we're going to create a command line application which is an application that we  can run from the command line. It doesn't have a graphical user interface",
+      "verification_method": "deterministic"
+    }
+  ],
+  "semantic_faithfulness_verified": true,
+  "verification_complete": true,
+  "verification_method": "deterministic",
+  "limitations": [
+    "This verification uses deterministic text matching and heuristics only.",
+    "Cannot detect paraphrasing or semantic equivalence beyond keyword matching.",
+    "May produce false negatives (marking valid claims as INCONCLUSIVE).",
+    "Returns INCONCLUSIVE when evidence is ambiguous rather than making guesses.",
+    "Numeric and entity matching is case-sensitive and exact.",
+    "Does not understand context, inference, or implicit information."
+  ]
+}

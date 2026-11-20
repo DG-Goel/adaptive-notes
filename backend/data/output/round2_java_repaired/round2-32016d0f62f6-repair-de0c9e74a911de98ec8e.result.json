@@ -1,0 +1,94 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0368"
+      ],
+      "reason": "Source note is unresolved"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Switch statement execution with break",
+      "source_segment_ids": [
+        "FCT_0368"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0368"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0368",
+              "quote": "So if the role is admin, first it will execute this line, and then it will jump to this case block, it will execute this other line, and then after it executes this break statement, it will jump out of this switch block."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Switch statement execution with break",
+            "direction": "DOWN",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "Start"
+              },
+              {
+                "id": "n2",
+                "label": "case admin: execute line 1"
+              },
+              {
+                "id": "n3",
+                "label": "jump to case block"
+              },
+              {
+                "id": "n4",
+                "label": "execute line 2"
+              },
+              {
+                "id": "n5",
+                "label": "break statement"
+              },
+              {
+                "id": "n6",
+                "label": "Exit switch"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": ""
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": ""
+              },
+              {
+                "from": "n3",
+                "to": "n4",
+                "label": ""
+              },
+              {
+                "from": "n4",
+                "to": "n5",
+                "label": ""
+              },
+              {
+                "from": "n5",
+                "to": "n6",
+                "label": "jump out"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

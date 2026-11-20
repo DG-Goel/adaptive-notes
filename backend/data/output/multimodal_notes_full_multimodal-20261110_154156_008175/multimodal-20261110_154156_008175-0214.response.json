@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-02b4e449-88b9-4718-96c2-d6be6c3775d3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No definitions were found in the provided primary excerpts.\",\n      \"source_ids\": [\"G00083\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need definitions. Look at excerpts: none are definitions. So no items. Provide abstention for missing definitions? Since category has no supported teaching, items empty, abstain? We must abstain for missing part of actual teaching point, not just unused. No definitions present, so abstention maybe SOURCE_MISSING with reason \"No definitions found in primary excerpts\". source_ids from primary_source_ids: G00083. Excluded none.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326419,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c800245357",
+  "usage": {
+    "completion_tokens": 167,
+    "prompt_tokens": 4007,
+    "total_tokens": 4174,
+    "completion_time": 0.352163241,
+    "completion_tokens_details": {
+      "reasoning_tokens": 89
+    },
+    "prompt_time": 0.254625942,
+    "prompt_tokens_details": null,
+    "queue_time": 0.294506592,
+    "total_time": 0.606789183
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7330na2ese8m67vrv62sf8a",
+    "debug": null,
+    "seed": 610136486,
+    "usage": null
+  }
+}

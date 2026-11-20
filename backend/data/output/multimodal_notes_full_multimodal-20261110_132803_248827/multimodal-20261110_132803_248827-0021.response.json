@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-941bea64-46d1-4e2a-8ae8-61966e032009",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00016\", \"S00017\", \"S00018\", \"S00019\", \"S00020\", \"S00021\", \"S00022\"],\n      \"reason\": \"The provided excerpts contain promotional statements and do not include verifiable factual teaching content.\"\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00016\", \"S00017\", \"S00018\", \"S00019\", \"S00020\", \"S00021\", \"S00022\"],\n      \"reason\": \"No definitions of technical terms are present in the excerpts.\"\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00016\", \"S00017\", \"S00018\", \"S00019\", \"S00020\", \"S00021\", \"S00022\"],\n      \"reason\": \"No illustrative examples of programming concepts are provided.\"\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00016\", \"S00017\", \"S00018\", \"S00019\", \"S00020\", \"S00021\", \"S00022\"],\n      \"reason\": \"No explanatory content about programming topics is present.\"\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00016\", \"S00017\", \"S00018\", \"S00019\", \"S00020\", \"S00021\", \"S00022\"],\n      \"reason\": \"No mathematical or algorithmic formulas are included.\"\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00016\", \"S00017\", \"S00018\", \"S00019\", \"S00020\", \"S00021\", \"S00022\"],\n      \"reason\": \"No step‑by‑step procedural instructions are provided.\"\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00016\", \"S00017\", \"S00018\", \"S00019\", \"S00020\", \"S00021\", \"S00022\"],\n      \"reason\": \"No relational information between concepts is present.\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1. The excerpts are just promotional, no factual teaching. Likely no claims. So all categories empty, claims empty, abstentions maybe for missing educational content. Provide abstentions for each category? Probably one abstention: source missing for educational content. Use category e.g., facts with reason \"noneducational\". Provide source_ids list. We'll list all primary sources.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317420,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_b1dd3e7a63",
+  "usage": {
+    "completion_tokens": 697,
+    "prompt_tokens": 3122,
+    "total_tokens": 3819,
+    "completion_time": 1.495348076,
+    "completion_tokens_details": {
+      "reasoning_tokens": 83
+    },
+    "prompt_time": 0.149141074,
+    "prompt_tokens_details": null,
+    "queue_time": 0.37323039,
+    "total_time": 1.64448915
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72te0e8e0csk7n8a25qgr92",
+    "debug": null,
+    "seed": 714649019,
+    "usage": null
+  }
+}

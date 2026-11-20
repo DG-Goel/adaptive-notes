@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-0ea1eea3-c974-40a0-8d51-ba2a9b229808",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"NamingConventions\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"PascalCase\",\n      \"refs\": [\"Q0000\", \"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"NamingConventions\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"first letter of every word should be upper case\",\n      \"refs\": [\"Q0000\", \"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"NamingConventions\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"camelCase\",\n      \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"NamingConventions\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"first letter of every word should be upper case except the first word\",\n      \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"NamingConventions\",\n      \"category\": \"definitions\",\n      \"field\": \"term\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Pascal naming convention\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"NamingConventions\",\n      \"category\": \"definitions\",\n      \"field\": \"definition_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"to name our classes, we use the Pascal naming convention where the first letter of every word should be upper case\",\n      \"refs\": [\"Q0000\", \"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"NamingConventions\",\n      \"category\": \"definitions\",\n      \"field\": \"term\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"camel naming convention\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"NamingConventions\",\n      \"category\": \"definitions\",\n      \"field\": \"definition_text\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"to name our methods, we use the camel naming convention where the first letter of every word should be upper case except the first word\",\n      \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows about naming conventions. Extract concepts: class naming Pascal, method naming camel. Provide concept_name, content maybe. Use primary excerpts.\n\nCreate items e.g., item \"NamingConventions\". Rows:\n\nconcept_name \"PascalCase\" from Q0000+Q0001. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, field concept_name, element0, part value, refs [Q0000,Q0001].\n\ncontent \"first letter of every word should be upper case\" same.\n\nSimilarly camelCase for methods: from Q0002,Q0003,Q0004,Q0005. concept_name \"camelCase\". content \"first letter of every word should be upper case except the first word\". basis explicit.\n\nAlso note capital M explanation maybe part of camel. Provide.\n\nAlso relationship maybe between class and method naming conventions. Could add relationship content.\n\nWe'll produce rows for concepts. Also definitions maybe term \"Pascal naming convention\". definition_text from Q0000+Q0001. term \"Pascal naming convention\". Provide.\n\nSimilarly term \"camel naming convention\". definition_text from Q0002+Q0003+Q0004+Q0005.\n\nAdd abstentions none. Excluded none.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794316950,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_86dc843b12",
+  "usage": {
+    "completion_tokens": 1191,
+    "prompt_tokens": 2659,
+    "total_tokens": 3850,
+    "completion_time": 2.565754813,
+    "completion_tokens_details": {
+      "reasoning_tokens": 255
+    },
+    "prompt_time": 0.154457081,
+    "prompt_tokens_details": null,
+    "queue_time": 0.939046304,
+    "total_time": 2.720211894
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72szkcxecavezaj78d49gwr",
+    "debug": null,
+    "seed": 398968768,
+    "usage": null
+  }
+}

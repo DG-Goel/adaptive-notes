@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-825524de-6b59-476c-afb7-c20628fbf1f2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Interest‑Rate Differential Effects on Exchange Rate\",\n      \"source_segment_ids\": [\"CON_0024\", \"CON_0023\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0024\", \"CON_0023\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0024\",\n              \"exact_quote\": \"If the domestic interest rate is above that, the international interest rate, then the exchange rate today has to be above the expected exchange rate, because that will give you a expected depreciation of the currency, which will compensate for the fact that the domestic bond is paying a higher interest rate than international bond.\"\n            },\n            {\n              \"note_id\": \"CON_0023\",\n              \"exact_quote\": \"Conversely, if the domestic bond is paying a lower interest rate, then the exchange rate today is very depreciated, because you have to expect it to appreciate in order to compensate for the interest rate differential.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Interest‑Rate Differential Effects on Exchange Rate\",\n            \"headers\": [\"Domestic Interest Rate vs. Foreign\", \"Relation of Today’s Exchange Rate to Expected\", \"Implied Currency Movement\"],\n            \"rows\": [\n              [\"Higher than foreign\", \"Exchange rate today > expected exchange rate\", \"Expected depreciation of domestic currency\"],\n              [\"Lower than foreign\", \"Exchange rate today < expected exchange rate (depreciated)\", \"Expected appreciation of domestic currency\"]\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Monetary‑Policy Transmission in an Open Economy\",\n      \"source_segment_ids\": [\"CON_0028\", \"CON_0036\", \"CON_0037\", \"CON_0038\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0028\", \"CON_0036\", \"CON_0037\", \"CON_0038\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0028\",\n              \"exact_quote\": \"An increase in the interest rate is contractionary for two reasons: it reduces investment and it appreciates the exchange rate, which lowers net exports.\"\n            },\n            {\n              \"note_id\": \"CON_0036\",\n              \"exact_quote\": \"An expansionary domestic monetary policy will lead to a contraction in output and an appreciation of the currency.\"\n            },\n            {\n              \"note_id\": \"CON_0037\",\n              \"exact_quote\": \"An expansionary domestic monetary policy will lead to a contraction in output.\"\n            },\n            {\n              \"note_id\": \"CON_0038\",\n              \"exact_quote\": \"An expansionary domestic monetary policy will lead to an appreciation of the currency.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Monetary‑Policy Transmission in an Open Economy\",\n            \"direction\": \"top-down\",\n            \"nodes\": [\n              {\"id\": \"n1\", \"label\": \"Increase Domestic Interest Rate\"},\n              {\"id\": \"n2\", \"label\": \"Reduces Investment\"},\n              {\"id\": \"n3\", \"label\": \"Appreciates Exchange Rate\"},\n              {\"id\": \"n4\", \"label\": \"Lower Net Exports\"},\n              {\"id\": \"n5\", \"label\": \"Contraction in Output\"}\n            ],\n            \"edges\": [\n              {\"from\": \"n1\", \"to\": \"n2\", \"label\": \"direct effect\"},\n              {\"from\": \"n1\", \"to\": \"n3\", \"label\": \"direct effect\"},\n              {\"from\": \"n3\", \"to\": \"n4\", \"label\": \"exchange‑rate channel\"},\n              {\"from\": \"n2\", \"to\": \"n5\", \"label\": \"investment channel\"},\n              {\"from\": \"n4\", \"to\": \"n5\", \"label\": \"trade channel\"}\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visual units. Identify comparisons: interest rate vs exchange rate. Could make table comparing high vs low domestic interest. Also flowchart of monetary policy effect. Provide units.\n\nReturn JSON with units array. Include source_segment_ids. Use unresolved notes as needed. Provide evidence referencing note ids and quotes.\n\nLet's craft two visuals: table and flowchart.\n\nTable: \"Interest Rate Differential Effects\". Headers: Domestic Interest Rate vs Expected Exchange Rate vs Currency Depreciation/Appreciation. Rows: \"Higher than foreign\" -> \"Exchange rate today > expected\" -> \"Expected depreciation\". \"Lower than foreign\" -> \"Exchange rate today < expected (depreciated)\" -> \"Expected appreciation\".\n\nSource segments: CON_0024, CON_0025? Actually excerpts in CON_0024 and CON_0023 contain needed. Use CON_0024 and CON_0023.\n\nFlowchart: \"Monetary Policy Transmission in Open Economy\". Nodes: Increase interest rate (domestic) -> reduces investment -> contraction output; also -> appreciates exchange rate -> lowers net exports -> further contraction. Source: CON_0028, CON_0036, CON_0037, CON_0038.\n\nProvide evidence.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794666595,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c3da0d4bb9",
+  "usage": {
+    "completion_tokens": 1166,
+    "prompt_tokens": 2723,
+    "total_tokens": 3889,
+    "completion_time": 2.43750937,
+    "completion_tokens_details": {
+      "reasoning_tokens": 250
+    },
+    "prompt_time": 0.139447134,
+    "prompt_tokens_details": null,
+    "queue_time": 0.158082887,
+    "total_time": 2.576956504
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7d7dyssesjrrx3h8n2r2sna",
+    "debug": null,
+    "seed": 2051866192,
+    "usage": null
+  }
+}

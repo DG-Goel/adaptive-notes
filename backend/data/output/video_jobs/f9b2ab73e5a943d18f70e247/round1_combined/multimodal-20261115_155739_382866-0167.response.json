@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-c7d9c027-cd1f-4bab-b985-18b2acc67cac",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"expected exchange rate\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"expected exchange rate moved to the right\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"net exports\",\n      \"refs\": [\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"net exports will decline, causing the US curve to move left and output to fall\",\n      \"refs\": [\"Q0011\", \"Q0012\", \"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"foreign interest rate\",\n      \"refs\": [\"Q0023\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"when the foreign interest rate goes up, the domestic bond performs worse\",\n      \"refs\": [\"Q0030\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept4\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"exchange rate curve direction\",\n      \"refs\": [\"Q0033\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept4\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"the curve moves to the left when the foreign interest rate rises\",\n      \"refs\": [\"Q0033\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"In which direction does the expected exchange rate curve move?\",\n      \"answer\": \"To the right\",\n      \"explanation\": \"The speaker states that the expected exchange rate moved to the right.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"expected exchange rate direction\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"How does an increase in the foreign interest rate affect the domestic bond?\",\n      \"answer\": \"The domestic bond performs worse\",\n      \"explanation\": \"The speaker explains that when the foreign interest rate goes up, the domestic bond is doing worse than otherwise.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"foreign interest rate impact\",\n      \"refs\": [\"Q0030\"]\n    },\n    {\n      \"question\": \"What happens to net exports when the exchange rate moves left?\",\n      \"answer\": \"Net exports decline\",\n      \"explanation\": \"The speaker notes that the curve moving left is because net exports will decline.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"net exports and exchange rate\",\n      \"refs\": [\"Q0011\"]\n    },\n    {\n      \"question\": \"When the foreign interest rate rises, which curve moves and in which direction?\",\n      \"answer\": \"The curve moves to the left\",\n      \"explanation\": \"The speaker states that this curve moves to the left when the foreign interest rate goes up.\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"curve movement due to foreign interest rate\",\n      \"refs\": [\"Q0033\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows etc. Identify concepts? The excerpts are about exchange rate curves moving left/right, net exports, interest rates. We can create concepts: \"expected exchange rate\", \"net exports\", \"foreign interest rate\". Provide rows for concepts with content and concept_name. Use primary excerpts.\n\nLet's make items: item \"concept1\". rows: concept_name \"expected exchange rate\" from Q0000. content: \"expected exchange rate moved to the right\" Q0000.\n\nSimilarly concept2 \"net exports\" content from Q0011/Q0012.\n\nconcept3 \"foreign interest rate\" content from Q0023.\n\nAlso maybe \"output\" curve.\n\nProvide rows.\n\nQuiz: four questions.\n\nQ1: What direction does the expected exchange rate curve move? Answer: to the right. Bloom: Remember. refs Q0000.\n\nQ2: How does a rise in foreign interest rate affect the domestic bond? Answer: domestic bond does worse. Bloom: Understand. refs Q0030.\n\nQ3: What happens to net exports when the exchange rate moves? Answer: net exports decline. refs Q0011.\n\nQ4: If the foreign interest rate moves up, which curve moves and in which direction? Answer: the curve moves to the left. refs Q0033.\n\nProvide rows accordingly.\n\nNow construct JSON. Need rows with fields: category concepts, fields concept_name and content. Each row separate. Provide item same for both rows of a concept, e.g., item \"concept1\". element 0 for concept_name, part value; element 1 for content, part value.\n\nProvide availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, related_refs empty.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794758611,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_96d96a151c",
+  "usage": {
+    "completion_tokens": 1554,
+    "prompt_tokens": 3027,
+    "total_tokens": 4581,
+    "completion_time": 3.257858239,
+    "completion_tokens_details": {
+      "reasoning_tokens": 346
+    },
+    "prompt_time": 0.15300923,
+    "prompt_tokens_details": null,
+    "queue_time": 0.291732195,
+    "total_time": 3.410867469
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7fz60yfemc9sqvrxpwbabz5",
+    "debug": null,
+    "seed": 1584733755,
+    "usage": null
+  }
+}

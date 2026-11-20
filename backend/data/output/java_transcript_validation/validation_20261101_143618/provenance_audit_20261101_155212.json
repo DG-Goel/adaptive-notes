@@ -1,0 +1,67 @@
+{
+  "audit_timestamp": "2026-11-01T15:52:12.529564",
+  "audited_claims": 3,
+  "audit_results": [
+    {
+      "knowledge_id": "EXP_0303",
+      "knowledge_type": "explanation",
+      "claim": "int is used for principal because short's max (32,000) is insufficient; float suffices for interest rates; byte is enough for a period up to 30 years.",
+      "claimed_source_ids": [
+        "T0032"
+      ],
+      "classification": "INCORRECT_PROVENANCE",
+      "correct_source_ids": [
+        "T0032",
+        "T0033"
+      ],
+      "reasoning": "Claim is factually correct and grounded in source. T0032 discusses int for principal (32,000 limit) and float for interest. T0033 explicitly states 'maximum number we want to support is 30 so one byte is sufficient'. Extraction failed to include T0033 in source_unit_ids.",
+      "evidence": {
+        "T0032": "I thought integer is a good datatype for storing the principle because short is not enough with short we can store a maximum of $32,000... next we get the period we read this as a byte",
+        "T0033": "because the maximum number we want to support is 30 so one byte is sufficient to store the number 30 or anything smaller"
+      },
+      "action_required": "Add T0033 to source_unit_ids for EXP_0303"
+    },
+    {
+      "knowledge_id": "EXM_0215",
+      "knowledge_type": "example",
+      "claim": "double result = (double)5 / 2; // result is 2.5",
+      "claimed_source_ids": [
+        "T0022"
+      ],
+      "classification": "INCORRECT_PROVENANCE",
+      "correct_source_ids": [
+        "T0024"
+      ],
+      "reasoning": "Example demonstrates explicit casting in division. T0022 discusses final variables and constants (PI), not casting. T0024 extensively discusses casting and type conversion with examples of implicit and explicit casting. The example appears to be a pedagogical illustration derived from T0024's casting discussion, though the exact code may not appear verbatim.",
+      "evidence": {
+        "T0022": "its value later on you can see here we have a compilation error and it says cannot assign a value to final variable pi [discusses constants, not casting]",
+        "T0024": "in this tutorial we're going to talk about casting and type conversion... [discusses implicit and explicit casting with examples of type conversion]"
+      },
+      "action_required": "Change source_unit_ids from ['T0022'] to ['T0024'] for EXM_0215"
+    },
+    {
+      "knowledge_id": "EXM_0431",
+      "knowledge_type": "example",
+      "claim": "An infinite while‑true loop asks for the principal; if the entered value is between 1,000 and 1,000,000, break exits the loop.",
+      "claimed_source_ids": [
+        "T0048"
+      ],
+      "classification": "SUPPORTED",
+      "correct_source_ids": [
+        "T0048"
+      ],
+      "reasoning": "Claim is correctly attributed. T0048 explicitly describes: 'while true so we're gonna keep asking the same question until the user enters a valid value... if principle is greater than or equal to 1000 and it is less than or equal to 1 million... then we can break out of this infinite loop'. Provenance is correct despite initial investigation suggesting otherwise (T0048 is long and while-loop content appears later in the unit).",
+      "evidence": {
+        "T0048": "I'm gonna wrap these two lines inside an infinite loop while true so we're gonna keep asking the same question until the user enters a valid value so here after we read the principle we can write an if statement like this if principle is greater than or equal to 1000 and it is less than or equal to 1 million... if the user enters a valid value then we can break out of this infinite loop"
+      },
+      "action_required": "None - provenance is correct"
+    }
+  ],
+  "summary": {
+    "total_audited": 3,
+    "SUPPORTED": 1,
+    "INCORRECT_PROVENANCE": 2,
+    "GENUINE_EXTRACTION_ERROR": 0,
+    "INSUFFICIENT_SOURCE_CONTEXT": 0
+  }
+}

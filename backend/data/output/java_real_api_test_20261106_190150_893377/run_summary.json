@@ -1,0 +1,98 @@
+{
+  "classification": "Blocked before live execution",
+  "started_at": "2026-11-06T19:01:50.893377+05:30",
+  "preparation_and_regressions_seconds": 30.10900000000038,
+  "live_execution_seconds": 0,
+  "source_sha256": "54a017edc6b3465c37a6faf051a63dedd81437728df6b99276e998aedb127598",
+  "document_chunks": 18,
+  "source_units": 50,
+  "real_requests_attempted": 0,
+  "successful_requests": 0,
+  "failed_requests": 0,
+  "http_429_errors": 0,
+  "json_validation_failures": 0,
+  "actual_input_tokens": 0,
+  "actual_output_tokens": 0,
+  "actual_total_tokens": 0,
+  "retries": 0,
+  "chunks_extracted": 0,
+  "chunks_failed_after_dispatch": 0,
+  "chunks_not_dispatched": 18,
+  "source_units_extracted": 0,
+  "assembly_status": "not_run",
+  "quality_score": null,
+  "blockers": [
+    "All production Java request payloads differ from the exact payload accepted by frozen Stage A. The bridge refuses them before provider dispatch.",
+    "No current verified quota admission for these request hashes was supplied. Unknown external usage cannot be assumed zero.",
+    "All five inventory entries and .env slots are disabled; verified_at and expires_at are null, every quota_state is quota_unknown, and the expected frozen Stage A credential_approval.json is absent. Existing organization/project mappings were preserved.",
+    "Multi-organization provider permission is unestablished. No multi-organization live rotation was attempted."
+  ],
+  "regressions": [
+    {
+      "group": "pipeline_scheduler",
+      "exit_code": 0,
+      "seconds": 19.29700000000048,
+      "command": [
+        "C:\\Projects\\adaptive-notes\\backend\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests/test_organization_scheduler.py",
+        "tests/test_organization_extraction.py",
+        "tests/test_organization_configured_ceilings.py",
+        "tests/test_organization_live_gate.py",
+        "tests/test_stage_a_bridge.py",
+        "tests/test_java_round_robin_pipeline.py",
+        "tests/test_chunk_splitting.py",
+        "tests/test_assembly_unit.py",
+        "tests/test_rendering_simple.py",
+        "tests/test_serialization.py",
+        "tests/test_extraction_grounding.py",
+        "tests/test_extraction_reliability.py",
+        "tests/test_knowledge_merge.py",
+        "tests/test_token_budget.py",
+        "--basetemp=C:\\Projects\\adaptive-notes\\backend\\data\\output\\java_real_api_test_20261106_190150_893377\\offline_pipeline_scheduler"
+      ],
+      "log": "pipeline_scheduler.log"
+    },
+    {
+      "group": "frozen_stage_a",
+      "exit_code": 0,
+      "seconds": 5.655999999999949,
+      "command": [
+        "C:\\Projects\\adaptive-notes\\backend\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "data/output/t0022_stage_a_admission_v2_20261104_125816/test_admission_v2.py",
+        "data/output/t0022_stage_a_admission_v2_20261104_125816/test_live_stage_a.py",
+        "--basetemp=C:\\Projects\\adaptive-notes\\backend\\data\\output\\java_real_api_test_20261106_190150_893377\\offline_frozen_stage_a"
+      ],
+      "log": "frozen_stage_a.log"
+    },
+    {
+      "group": "frozen_stage_ab",
+      "exit_code": 0,
+      "seconds": 4.905999999999949,
+      "command": [
+        "C:\\Projects\\adaptive-notes\\backend\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "data/output/t0022_safety_infrastructure_20261104_003405/test_control.py",
+        "--basetemp=C:\\Projects\\adaptive-notes\\backend\\data\\output\\java_real_api_test_20261106_190150_893377\\offline_frozen_stage_ab"
+      ],
+      "log": "frozen_stage_ab.log"
+    }
+  ],
+  "frozen_stage_a_matching_chunks": 0
+}

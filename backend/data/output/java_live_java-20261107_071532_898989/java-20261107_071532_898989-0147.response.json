@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-8f3bda94-cc40-4032-8267-dadbc120a3ac",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"final variable\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a variable declared with the keyword final, meaning its value cannot be changed after initialization\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"constant\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a final variable that, by convention, is named using all capital letters\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"arithmetic expression\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a piece of code that produces a value\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"operand\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a number or variable on which an arithmetic operator acts\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"increment operator\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"definition_text\": {\n        \"text\": \"an operator (++) that increases the value of a numeric variable by 1\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"decrement operator\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"definition_text\": {\n        \"text\": \"an operator (--) that decreases the value of a numeric variable by 1\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"exemplifies\": {\n        \"text\": \"addition\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"example_text\": {\n        \"text\": \"int result = 10 + 3; // result is 13\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"increment operator\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"example_text\": {\n        \"text\": \"int X = 1; X++; // X becomes 2\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"example_type\": null\n    }\n  ],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"constant naming convention\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Constants are written in all capital letters to distinguish them from regular variables\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"integer division\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"In Java, dividing two whole numbers yields a whole number; the fractional part is discarded\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"casting to floating‑point\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"To obtain a floating‑point result from division, cast one operand to double (or float) before the operation\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"pi is a final variable (constant) in the example\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Division of two whole numbers in Java produces a whole number result\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Casting an integer expression to double yields a floating‑point result\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The increment operator can be used as a prefix or postfix\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. Identify facts, definitions, examples, explanations, formulas, procedures maybe.\n\nFrom excerpts: teaching about constants, arithmetic operators, casting, increment operator.\n\nCreate facts: \"pi is a final variable or a constant\", \"by convention constants are named in all capital letters\", \"division of two whole numbers yields a whole number\", \"to get floating-point result, cast to double\", \"increment operator increases variable by 1\".\n\nDefinitions: term \"final variable\", \"constant\", \"arithmetic expression\", \"operand\", \"increment operator\", \"decrement operator\"? Provide definition_text.\n\nExamples: addition example 10+3 =13, increment example X from1 to2.\n\nProcedures maybe: steps to cast? Not needed.\n\nWe'll cite refs accordingly.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036218,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c868cf1eaa",
+  "usage": {
+    "completion_tokens": 1229,
+    "prompt_tokens": 3033,
+    "total_tokens": 4262,
+    "completion_time": 2.567452545,
+    "completion_tokens_details": {
+      "reasoning_tokens": 164
+    },
+    "prompt_time": 0.136953788,
+    "prompt_tokens_details": null,
+    "queue_time": 0.377818362,
+    "total_time": 2.704406333
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6te8c1qeamtfkdqvrnpe92g",
+    "debug": null,
+    "seed": 1264498465,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-200f1ad6-389f-43db-9db9-856fee9a65b8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"markdown\":\"# Control Flow in Java\\n\\n## `if` Statements\\n\\n- **Execution**: If the condition in an `if` statement evaluates to `true`, the statement that follows it is executed.\\n- **Code blocks**: Curly braces `{}` define a block of code. The code inside the braces runs only when the surrounding condition is `true`.\\n- **Braces requirement**: Braces are required only when the block contains **multiple statements**. A single statement may omit the braces.\\n- **`else if` clause**: A boolean expression such as `temp > 20 && temp <= 30` can be used in an `else if` clause to test a range of values.\\n- **Structure**: An `if‑else‑if` chain consists of:\\n  1. The initial `if`\\n  2. Zero or more `else if` clauses\\n  3. An optional `else`\\n- **Readability tip**: When removing unnecessary braces, align `else if` and `else` at the same indentation level as the `if`.\\n- **Evaluation order**: If the first condition of an `if‑else` chain is `false`, the program evaluates the next `else if` condition.\\n\\n## Boolean Variables\\n\\n- You can declare a boolean variable, e.g., `boolean hasHighIncome;`.\\n- Example logic:\\n  ```java\\n  if (income > 100_000) {\\n      hasHighIncome = true;\\n  } else {\\n      hasHighIncome = false;\\n  }\\n  ```\\n- **Simplification**: The above can be reduced to a single assignment:\\n  ```java\\n  boolean hasHighIncome = (income > 100_000);\\n  ```\\n  - Wrapping the expression in parentheses improves readability, though it is not required.\\n- **Underscores in literals**: Use underscores between digits (e.g., `100_000`) to make large numbers more readable.\\n\\n## Ternary Operator\\n\\n- When you need to assign a value based on a condition, the **ternary operator** provides a concise alternative to an `if` statement.\\n- Syntax:\\n  ```java\\n  variable = condition ? valueIfTrue : valueIfFalse;\\n  ```\\n- Example:\\n  ```java\\n  String className = (income > 100_000) ? \\\"HighIncome\\\" : \\\"RegularIncome\\\";\\n  ```\\n  - The `?` separates the condition from the true‑case value, and the `:` separates the true‑case from the false‑case.\\n- Using the ternary operator eliminates the need for a multi‑line `if` block.\\n\\n## `switch` Statements\\n\\n- The next topic to explore is **`switch` statements** in Java, which provide an alternative way to select among multiple possible execution paths based on the value of a variable.\\n\"}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output JSON with field markdown. Provide polished notes. Ensure valid compact JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794583585,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_df9620fe21",
+  "usage": {
+    "completion_tokens": 661,
+    "prompt_tokens": 779,
+    "total_tokens": 1440,
+    "completion_time": 1.398630944,
+    "completion_tokens_details": {
+      "reasoning_tokens": 19
+    },
+    "prompt_time": 0.257154975,
+    "prompt_tokens_details": null,
+    "queue_time": 0.296413318,
+    "total_time": 1.655785919
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ar8pg8epvaxjqspdxw8jt9",
+    "debug": null,
+    "seed": 929704005,
+    "usage": null
+  }
+}

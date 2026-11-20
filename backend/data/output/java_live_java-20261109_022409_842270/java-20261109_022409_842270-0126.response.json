@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-79c4d012-74ee-47df-8d81-4094f199d8db",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Arrays store a list of items such as numbers, people, or messages.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"An array is declared by writing the element type followed by square brackets, e.g., int[] numbers.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"To create an array you use the new operator and specify the size in square brackets, e.g., new int[5].\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Array indices start at zero; the first element is accessed with index 0.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Accessing an invalid index (e.g., index 10 in a five‑element array) causes a runtime exception and crashes the program.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Printing an array directly (e.g., System.out.println(array)) yields a string based on the array's memory address, not its contents.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The java.util.Arrays class provides a toString method that returns a readable representation of an array’s elements.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output schema with empty arrays? Extract facts etc. The excerpts are tutorial about Java arrays. We can extract facts: arrays store list of items, declared with type[], need new operator, specify size, index starts at 0, out-of-bounds causes exception, printing array gives memory address string, use Arrays.toString to view items. Also method overloaded toString. Provide facts, explanations, procedures maybe. Use primary excerpts IDs. Let's create facts.\n\nFact1: Arrays store a list of items such as numbers, people, messages. refs Q0000.\n\nFact2: Declaring an array: type followed by square brackets, e.g., int[] numbers. refs Q0000.\n\nFact3: Need new operator and specify size in brackets, e.g., new int[5]. refs Q0001.\n\nFact4: Array indices start at 0; first element accessed with index 0. refs Q0002.\n\nFact5: Accessing invalid index causes an exception and program crashes. refs Q0002.\n\nFact6: Printing an array directly yields a string based on its memory address. refs Q0003.\n\nFact7: java.util.Arrays class provides toString method to display array contents. refs Q0004.\n\nAlso explanation about reference types? Could be explanation.\n\nWe'll output facts array with fact_text and fact_type null. No other categories. Excluded none.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191413,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_245acb052a",
+  "usage": {
+    "completion_tokens": 737,
+    "prompt_tokens": 3137,
+    "total_tokens": 3874,
+    "completion_time": 1.561664916,
+    "completion_tokens_details": {
+      "reasoning_tokens": 281
+    },
+    "prompt_time": 0.163972045,
+    "prompt_tokens_details": null,
+    "queue_time": 0.062873573,
+    "total_time": 1.725636961
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z28jb4e53bsczbf1snsnnp",
+    "debug": null,
+    "seed": 8590656,
+    "usage": null
+  }
+}

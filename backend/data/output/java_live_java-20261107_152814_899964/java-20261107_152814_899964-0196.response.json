@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-3c26062b-0949-46ab-8fc7-56126fe418d3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"The Scanner method nextByte() returns a byte value which can be stored in a byte variable.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"When concatenating a String with a byte, Java performs implicit casting (implicit type conversion) of the byte to a String.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The Scanner method nextLine() adds a new line after the printed label because it reads the remainder of the line including the line separator.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"If a floating‑point number (e.g., 20.1) is entered when using nextInt(), a runtime exception occurs because the method can only parse integer values.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"To read a floating‑point number with Scanner, use nextFloat() or nextDouble() instead of nextInt().\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Scanner.next() returns the next token (a sequence of characters up to whitespace).\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Scanner.nextLine() reads the remainder of the current line, including spaces, whereas Scanner.next() reads only up to the next whitespace.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"When reading a full name with spaces using Scanner, calling next() once returns only the first token; a second call to next() is needed to obtain the second token.\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract facts, definitions, etc. From excerpts about Java Scanner methods. Identify facts: nextByte returns byte, implicit casting, nextLine adds newline, next returns token, need two next calls for full name. Create facts entries. No definitions. No formulas. Provide excluded empty.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065654,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_69334c0be3",
+  "usage": {
+    "completion_tokens": 606,
+    "prompt_tokens": 3039,
+    "total_tokens": 3645,
+    "completion_time": 1.2706854779999999,
+    "completion_tokens_details": {
+      "reasoning_tokens": 59
+    },
+    "prompt_time": 0.370202431,
+    "prompt_tokens_details": null,
+    "queue_time": 0.163668426,
+    "total_time": 1.640887909
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6vaaqcbe4zbfmxt37tb5h5h",
+    "debug": null,
+    "seed": 595045799,
+    "usage": null
+  }
+}

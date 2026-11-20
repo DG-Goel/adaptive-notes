@@ -1,0 +1,877 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-16T08:14:55.485608+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00001"
+      ],
+      "document_id": "DOC001",
+      "content": "Two exchange rates are shown, one quoted as euro‑dollar and the other quoted opposite to the usual market convention.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00001",
+              "quote": "So here you have the exchange rate, two exchange rates.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 589,
+              "end_char": 644,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00001",
+              "quote": "So here you have the exchange rate, two exchange rates.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 589,
+              "end_char": 644,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00001",
+              "quote": "The white one is the euro-dollar exchange rate.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 646,
+              "end_char": 693,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00001",
+              "quote": "I'm quoting it the opposite of the way it's normally quoted.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 695,
+              "end_char": 755,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "exchange rate",
+              "claims": [
+                {
+                  "text": "exchange rate",
+                  "refs": [
+                    "Q0006"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00001",
+                      "quote": "So here you have the exchange rate, two exchange rates."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Two exchange rates are shown, one quoted as euro‑dollar and the other quoted opposite to the usual market convention.",
+              "claims": [
+                {
+                  "text": "Two exchange rates are shown, one quoted as euro‑dollar and the other quoted opposite to the usual market convention.",
+                  "refs": [
+                    "Q0006",
+                    "Q0007",
+                    "Q0008"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00001",
+                      "quote": "So here you have the exchange rate, two exchange rates."
+                    },
+                    {
+                      "source_id": "G00001",
+                      "quote": "The white one is the euro-dollar exchange rate."
+                    },
+                    {
+                      "source_id": "G00001",
+                      "quote": "I'm quoting it the opposite of the way it's normally quoted."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Two exchange rates are shown, one quoted as euro‑dollar and the other quoted opposite to the usual market convention.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So here you have the exchange rate, two exchange rates.",
+                      "The white one is the euro-dollar exchange rate.",
+                      "I'm quoting it the opposite of the way it's normally quoted."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00001",
+                        "quote": "So here you have the exchange rate, two exchange rates.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 589,
+                        "end_char": 644,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00001",
+                        "quote": "The white one is the euro-dollar exchange rate.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 646,
+                        "end_char": 693,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00001",
+                        "quote": "I'm quoting it the opposite of the way it's normally quoted.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 695,
+                        "end_char": 755,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Two exchange rates are shown, one quoted as euro‑dollar and the other quoted opposite to the usual market convention.",
+                "preview_text": "Two exchange rates are shown, one quoted as euro‑dollar and the other quoted opposite to the usual market convention.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "exchange rate",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So here you have the exchange rate, two exchange rates."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00001",
+                        "quote": "So here you have the exchange rate, two exchange rates.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 589,
+                        "end_char": 644,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "exchange rate",
+                "preview_text": "exchange rate",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00001"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "exchange rate",
+      "aliases": []
+    },
+    {
+      "knowledge_id": "CON_0002",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00001",
+        "G00002"
+      ],
+      "document_id": "DOC001",
+      "content": "When the exchange rate goes up, it means an appreciation of the local currency (the dollar).",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00001",
+              "quote": "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 757,
+              "end_char": 934,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00001",
+              "quote": "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 757,
+              "end_char": 934,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00002",
+              "quote": "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 98,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "appreciation",
+              "claims": [
+                {
+                  "text": "appreciation",
+                  "refs": [
+                    "Q0009"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00001",
+                      "quote": "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "When the exchange rate goes up, it means an appreciation of the local currency (the dollar).",
+              "claims": [
+                {
+                  "text": "When the exchange rate goes up, it means an appreciation of the local currency (the dollar).",
+                  "refs": [
+                    "Q0009",
+                    "Q0010"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00001",
+                      "quote": "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar."
+                    },
+                    {
+                      "source_id": "G00002",
+                      "quote": "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "appreciation",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [
+                        "if"
+                      ],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00001",
+                        "quote": "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 757,
+                        "end_char": 934,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "appreciation",
+                "preview_text": "appreciation",
+                "withheld": false
+              },
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "When the exchange rate goes up, it means an appreciation of the local currency (the dollar).",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar.",
+                      "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00001",
+                        "quote": "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 757,
+                        "end_char": 934,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00002",
+                        "quote": "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 98,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "When the exchange rate goes up, it means an appreciation of the local currency (the dollar).",
+                "preview_text": "When the exchange rate goes up, it means an appreciation of the local currency (the dollar).",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00001",
+          "G00002"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "appreciation",
+      "aliases": []
+    },
+    {
+      "knowledge_id": "CON_0003",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00002"
+      ],
+      "document_id": "DOC001",
+      "content": "When the exchange rate goes down, it indicates a depreciation of the local currency.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00002",
+              "quote": "And down is a depreciation.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 100,
+              "end_char": 127,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00002",
+              "quote": "And down is a depreciation.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 100,
+              "end_char": 127,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "depreciation",
+              "claims": [
+                {
+                  "text": "depreciation",
+                  "refs": [
+                    "Q0011"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00002",
+                      "quote": "And down is a depreciation."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "When the exchange rate goes down, it indicates a depreciation of the local currency.",
+              "claims": [
+                {
+                  "text": "When the exchange rate goes down, it indicates a depreciation of the local currency.",
+                  "refs": [
+                    "Q0011"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00002",
+                      "quote": "And down is a depreciation."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "depreciation",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And down is a depreciation."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00002",
+                        "quote": "And down is a depreciation.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 100,
+                        "end_char": 127,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "depreciation",
+                "preview_text": "depreciation",
+                "withheld": false
+              },
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "When the exchange rate goes down, it indicates a depreciation of the local currency.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And down is a depreciation."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00002",
+                        "quote": "And down is a depreciation.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 100,
+                        "end_char": 127,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "When the exchange rate goes down, it indicates a depreciation of the local currency.",
+                "preview_text": "When the exchange rate goes down, it indicates a depreciation of the local currency.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00002"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "depreciation",
+      "aliases": []
+    },
+    {
+      "knowledge_id": "CON_0004",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00002"
+      ],
+      "document_id": "DOC001",
+      "content": "Perceptions about interest‑rate policy in different regions are a main driver of exchange‑rate fluctuations.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00002",
+              "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 619,
+              "end_char": 748,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00002",
+              "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 619,
+              "end_char": 748,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "interest‑rate perception",
+              "claims": [
+                {
+                  "text": "interest‑rate perception",
+                  "refs": [
+                    "Q0018"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00002",
+                      "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Perceptions about interest‑rate policy in different regions are a main driver of exchange‑rate fluctuations.",
+              "claims": [
+                {
+                  "text": "Perceptions about interest‑rate policy in different regions are a main driver of exchange‑rate fluctuations.",
+                  "refs": [
+                    "Q0018"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00002",
+                      "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "interest‑rate perception",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00002",
+                        "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 619,
+                        "end_char": 748,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "interest‑rate perception",
+                "preview_text": "interest‑rate perception",
+                "withheld": false
+              },
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Perceptions about interest‑rate policy in different regions are a main driver of exchange‑rate fluctuations.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00002",
+                        "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 619,
+                        "end_char": 748,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Perceptions about interest‑rate policy in different regions are a main driver of exchange‑rate fluctuations.",
+                "preview_text": "Perceptions about interest‑rate policy in different regions are a main driver of exchange‑rate fluctuations.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00002"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "interest‑rate perception",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 4,
+  "source_units_processed": 2,
+  "extraction_metadata": null
+}

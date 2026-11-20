@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-c7c38a50-6cc6-4c8a-ab4c-670c7640d83c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"F001\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"the exchange rate is depreciating\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"F002\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"the dollar is depreciating\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"F003\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"the exchange rate will fall\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C001\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"exchange rate depreciation\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C001\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the exchange rate falls, the domestic currency is said to be depreciating.\",\n      \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what happens to the exchange rate when it is said to be depreciating?\",\n      \"answer\": \"It falls in value relative to other currencies.\",\n      \"distractors\": [\n        \"It rises in value relative to other currencies.\",\n        \"It remains unchanged.\",\n        \"It becomes more stable.\"\n      ],\n      \"explanation\": \"The speaker states that \\\"the exchange rate will fall\\\" and \\\"the exchange rate is depreciating,\\\" indicating a decline in value.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"exchange rate depreciation\",\n      \"refs\": [\"Q0001\", \"Q0002\"]\n    },\n    {\n      \"question\": \"Which currency does the speaker specifically mention as depreciating?\",\n      \"answer\": \"The dollar\",\n      \"distractors\": [\n        \"The euro\",\n        \"The yen\",\n        \"The pound\"\n      ],\n      \"explanation\": \"The speaker says \\\"and the dollar is depreciating,\\\" directly naming the dollar.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"currency depreciation\",\n      \"refs\": [\"Q0003\"]\n    },\n    {\n      \"question\": \"If the exchange rate falls, what is the likely effect on the domestic currency's purchasing power abroad?\",\n      \"answer\": \"It decreases, making imports more expensive.\",\n      \"distractors\": [\n        \"It increases, making imports cheaper.\",\n        \"It stays the same, with no effect on import prices.\",\n        \"It fluctuates unpredictably without a clear trend.\"\n      ],\n      \"explanation\": \"A falling exchange rate means the domestic currency buys fewer foreign units, reducing purchasing power for imports.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"effects of depreciation\",\n      \"refs\": [\"Q0001\"]\n    },\n    {\n      \"question\": \"What reasoning does the speaker give for why the exchange rate will fall?\",\n      \"answer\": \"Because of the relationship between interest rates and currency values.\",\n      \"distractors\": [\n        \"Because of changes in government policy.\",\n        \"Because of fluctuations in commodity prices.\",\n        \"Because of seasonal tourism patterns.\"\n      ],\n      \"explanation\": \"The speaker links exchange rate movement to interest rate considerations, noting \\\"if we start from the same interest rate...\\\"\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"interest rates and exchange rates\",\n      \"refs\": [\"Q0006\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows. Identify concepts? There's mention exchange rate depreciating, dollar depreciating. Could make facts. Provide rows for facts: \"the exchange rate is depreciating\" from Q0002. Also \"the dollar is depreciating\" Q0003. Also \"exchange rate will fall\" Q0001. Provide availability SOURCE_SUPPORTED? But ASR speech evidence, exact code unavailable. Still text is present, so SOURCE_SUPPORTED? Probably SOURCE_SUPPORTED. basis explicit. literal_kind verbal. instructional_role null. category facts. Provide fact_text field. item maybe \"F001\". element 0 part value.\n\nCreate rows for each fact. Also maybe concept: \"exchange rate depreciation\". concept_name \"exchange rate depreciation\". content from Q0002. Provide concept rows.\n\nLet's output rows and maybe abstentions none. Quiz: create 4 questions about depreciation. Use excerpts. Provide correct answer and distractors.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794813776,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_6b677c2caf",
+  "usage": {
+    "completion_tokens": 1261,
+    "prompt_tokens": 2283,
+    "total_tokens": 3544,
+    "completion_time": 2.6427493699999998,
+    "completion_tokens_details": {
+      "reasoning_tokens": 186
+    },
+    "prompt_time": 0.097036875,
+    "prompt_tokens_details": null,
+    "queue_time": 0.263771071,
+    "total_time": 2.739786245
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hkshs5eayaj9a07vrfvbah",
+    "debug": null,
+    "seed": 1412530577,
+    "usage": null
+  }
+}

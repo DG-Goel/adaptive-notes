@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-bc335c70-d94b-4619-833f-b014136f2bfd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"exchange rate appreciation\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the domestic interest rate rises relative to the foreign interest rate, the exchange rate appreciates (the domestic currency becomes more expensive).\",\n      \"refs\": [\"Q0001\", \"Q0003\", \"Q0014\", \"Q0015\", \"Q0016\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If domestic and foreign interest rates are equal, the current exchange rate equals the expected future exchange rate.\",\n      \"refs\": [\"Q0011\", \"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit definition of terms provided in the excerpts.\",\n      \"source_ids\": [\"G00017\", \"G00018\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Exact equation or formula not captured in the ASR excerpts.\",\n      \"source_ids\": [\"G00017\", \"G00018\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No step‑by‑step procedure described.\",\n      \"source_ids\": [\"G00017\", \"G00018\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what happens to the exchange rate when the domestic interest rate is increased while the foreign rate stays the same?\",\n      \"answer\": \"The exchange rate appreciates (the domestic currency becomes more expensive).\",\n      \"distractors\": [\n        \"The exchange rate depreciates (the domestic currency becomes cheaper).\",\n        \"The exchange rate remains unchanged.\",\n        \"The exchange rate becomes unpredictable.\"\n      ],\n      \"explanation\": \"The speaker states that raising the domestic interest rate causes the exchange rate to go up, which they describe as an appreciation.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"exchange rate response to interest rate change\",\n      \"refs\": [\"Q0001\", \"Q0015\", \"Q0016\"]\n    },\n    {\n      \"question\": \"What does the speaker call the situation where the exchange rate rises as a result of higher domestic interest rates?\",\n      \"answer\": \"Appreciation\",\n      \"distractors\": [\n        \"Depreciation\",\n        \"Stagnation\",\n        \"Volatility\"\n      ],\n      \"explanation\": \"The speaker explicitly says, \\\"That's an appreciation,\\\" referring to the rise in the exchange rate.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"terminology for exchange‑rate movement\",\n      \"refs\": [\"Q0002\"]\n    },\n    {\n      \"question\": \"When domestic and foreign interest rates are equal, what relationship does the speaker describe between the current and expected exchange rates?\",\n      \"answer\": \"They are equal.\",\n      \"distractors\": [\n        \"The current rate is higher than the expected rate.\",\n        \"The expected rate is higher than the current rate.\",\n        \"There is no clear relationship.\"\n      ],\n      \"explanation\": \"The speaker notes that with equal interest rates, the current exchange rate equals the expected exchange rate, implying no capital gain or loss.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"interest parity with equal rates\",\n      \"refs\": [\"Q0011\", \"Q0013\"]\n    },\n    {\n      \"question\": \"Which principle does the speaker reference when explaining the link between interest rates and exchange rates?\",\n      \"answer\": \"Uncovered interest parity\",\n      \"distractors\": [\n        \"Purchasing power parity\",\n        \"Fisher effect\",\n        \"Law of one price\"\n      ],\n      \"explanation\": \"The speaker mentions using \\\"the uncovered interest parity\\\" equation and logic to explain the exchange‑rate movement.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"theoretical basis for exchange‑rate changes\",\n      \"refs\": [\"Q0020\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows etc. The excerpts are vague, no concrete definitions. Likely abstentions for many fields. We can maybe create a concept: \"exchange rate appreciation\". Provide concept_name and content from excerpts. Use primary excerpts.\n\nCreate item \"item1\". rows: concept_name \"exchange rate appreciation\" refs Q0002 etc. content: \"That's an appreciation.\" etc.\n\nAlso maybe fact: \"If domestic interest rate increases, exchange rate goes up.\" from Q0001.\n\nCreate rows accordingly.\n\nQuiz: four questions based on these statements.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794806361,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_df9620fe21",
+  "usage": {
+    "completion_tokens": 1231,
+    "prompt_tokens": 2919,
+    "total_tokens": 4150,
+    "completion_time": 2.5782385960000003,
+    "completion_tokens_details": {
+      "reasoning_tokens": 115
+    },
+    "prompt_time": 0.127687082,
+    "prompt_tokens_details": null,
+    "queue_time": 0.282396003,
+    "total_time": 2.705925678
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hcq871ewstmrtnbj116s83",
+    "debug": null,
+    "seed": 135364285,
+    "usage": null
+  }
+}

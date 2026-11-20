@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-18155b9f-95eb-43b1-9248-ed111066fde6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"The project location is inside the IDEA projects folder.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\", \"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"The base package is set to com.codewithmosh.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"On the speaker's machine the package is probably com.package.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\", \"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"The project is named \\\"hello world\\\".\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\n        \"The project location is inside the IDEA projects folder.\",\n        \"The base package is set to com.codewithmosh.\",\n        \"On the speaker's machine the package is probably com.package.\",\n        \"The project is named \\\"hello world\\\".\"\n      ],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"general\"]\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Likely location of project, package name, etc. Create claims.\n\nExtract facts:\nC1: Project location is inside the idea projects folder. (from Q0000+Q0001)\nC2: Base package is set to com.codewithmosh. (Q0002)\nC3: On my machine the package is probably com.package. (Q0003+Q0004)\n\nAlso context: give project a name hello world (Q0005) maybe a fact.\n\nCreate claims with basis explicit, availability SOURCE_SUPPORTED? But ASR speech evidence => maybe SOURCE_MISSING? According to limitations, exact code unavailable unless verified, but statements are still supported as spoken. Use SOURCE_SUPPORTED? Probably SOURCE_SUPPORTED.\n\nLiteral_kind verbal. instructional_role null.\n\nAdd refs list.\n\nNow schema: fill arrays, likely only facts category.\n\nCreate claims list.\n\nAbstentions none.\n\nProvide empty other categories.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318032,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_69334c0be3",
+  "usage": {
+    "completion_tokens": 677,
+    "prompt_tokens": 3025,
+    "total_tokens": 3702,
+    "completion_time": 1.431702791,
+    "completion_tokens_details": {
+      "reasoning_tokens": 199
+    },
+    "prompt_time": 0.197169114,
+    "prompt_tokens_details": null,
+    "queue_time": 0.167923683,
+    "total_time": 1.628871905
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72v0p66eetr6mqcynhfecdk",
+    "debug": null,
+    "seed": 745433441,
+    "usage": null
+  }
+}

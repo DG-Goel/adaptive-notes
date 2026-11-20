@@ -1,0 +1,62 @@
+{
+  "status": "FAILED",
+  "accepted_items": 0,
+  "failure_stage": "provider truncation guard",
+  "failure": "Response truncated due to max_tokens limit (input: 2035, output: 3944, total: 5979). Increase max_tokens or reduce input size.",
+  "diagnostics": {
+    "total_chunks": 1,
+    "successful_chunks": 0,
+    "failed_chunks": [
+      "JAVA_CHUNK_000"
+    ],
+    "failed_root_ids": [
+      "JAVA_CHUNK_000"
+    ],
+    "split_chunks": [],
+    "completeness": 0.0,
+    "completeness_basis": "legacy resolution ratio; empty-work sentinel is 1.0",
+    "chunk_attempts": [
+      {
+        "chunk_id": "JAVA_CHUNK_000",
+        "attempt": 1,
+        "success": false,
+        "items_extracted": 0,
+        "error": "Response truncated due to max_tokens limit (input: 2035, output: 3944, total: 5979). Increase max_tokens or reduce input size."
+      }
+    ],
+    "scheduled_roots": 1,
+    "successful_roots": 0,
+    "recovered_roots": 0,
+    "failed_roots": 1,
+    "skipped_roots": 0,
+    "root_outcomes": [
+      {
+        "chunk_id": "JAVA_CHUNK_000",
+        "outcome": "FAILED",
+        "source_unit_ids": [
+          "T0022"
+        ],
+        "knowledge_ids": [],
+        "items_extracted": 0
+      }
+    ],
+    "child_outcomes": [],
+    "retry_attempts": 0,
+    "total_attempts": 1,
+    "partial_results": {},
+    "resolution_ratio": 0.0,
+    "extraction_completion_ratio": 0.0,
+    "extraction_successful": false,
+    "source_coverage": {
+      "total_units": 1,
+      "cited_units": [],
+      "uncited_units": [
+        "T0022"
+      ],
+      "citation_ratio": 0.0,
+      "basis": "source-reference coverage, not semantic faithfulness or topic coverage"
+    }
+  },
+  "no_follow_up_request": true,
+  "release": "NO-GO"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-f316068d-5983-4d15-952c-784936f79c76",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"Logical AND operator\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0002\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"The && operator returns true only if both operands are true. Java evaluates the expression from left to right and stops evaluating as soon as it determines the result (short‑circuit). If the first condition is false, the second condition is not evaluated.\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0002\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"Logical OR operator\",\n        \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"The || operator returns true if at least one operand is true. Java evaluates from left to right and stops as soon as a true operand is found (short‑circuit). If the first operand is true, the second is not evaluated.\",\n        \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"Logical NOT operator\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"The ! operator reverses the boolean value of its operand; true becomes false and false becomes true.\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"exemplifies\": {\n        \"text\": \"Temperature range check using &&\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"example_text\": {\n        \"text\": \"int temperature = 22; boolean isWarm = temperature > 20 && temperature < 30; // isWarm is true\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"Loan eligibility using ||\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"example_text\": {\n        \"text\": \"boolean hasHighIncome = true; boolean hasGoodCredit = true; boolean isEligible = hasHighIncome || hasGoodCredit; // isEligible is true\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"example_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"&& returns true only when both conditions are true; otherwise false.\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"|| returns true when at least one condition is true; otherwise false.\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java uses short‑circuit evaluation for both && and || operators.\",\n        \"refs\": [\"Q0001\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"! reverses a boolean value.\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts we have facts about boolean operators, maybe explanations. Let's create facts: AND operator returns true if both conditions true; evaluates left to right, short-circuits. OR operator returns true if at least one condition true; short-circuits. NOT operator reverses value. Also example of temperature check. We'll cite refs.\n\nCreate facts array. No definitions, examples, etc maybe examples: temperature example. Use example type null. Provide exemplifies? Could use exemplifies field with text? Need exemplifies object with refs and text. Provide \"temperature range check\". Use example_text from Q0000+Q0001. Provide refs both.\n\nAlso explanations: explanation of AND operator. Use explanation_text from Q0002? Actually explanation of short-circuit. Provide topic \"Logical AND operator\". Use refs Q0000,Q0001,Q0002.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036356,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_90620edd96",
+  "usage": {
+    "completion_tokens": 992,
+    "prompt_tokens": 3032,
+    "total_tokens": 4024,
+    "completion_time": 2.071323801,
+    "completion_tokens_details": {
+      "reasoning_tokens": 185
+    },
+    "prompt_time": 0.15573059,
+    "prompt_tokens_details": null,
+    "queue_time": 0.378541649,
+    "total_time": 2.227054391
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6teck65ebft28afqhytwewe",
+    "debug": null,
+    "seed": 623355492,
+    "usage": null
+  }
+}

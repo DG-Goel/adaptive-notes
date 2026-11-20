@@ -1,0 +1,632 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-16T05:59:28.527849+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00033"
+      ],
+      "document_id": "DOC001",
+      "content": "An increase in the interest rate reduces aggregate demand because investment falls and because it appreciates the exchange rate, which lowers net exports.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00033",
+              "quote": "We have a new parameter.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 25,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00033",
+              "quote": "So an increase in the interest rate would lead to a reduction in aggregate demand because investment would fall.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 227,
+              "end_char": 339,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00033",
+              "quote": "One, for the reason we had before,\n which is that investment falls.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 610,
+              "end_char": 677,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00033",
+              "quote": "To raise the exchange rate.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 815,
+              "end_char": 842,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00033",
+              "quote": "And when you appreciate the exchange rate,\n net exports decline.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 887,
+              "end_char": 951,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "interest rate",
+              "claims": [
+                {
+                  "text": "interest rate",
+                  "refs": [
+                    "Q0000"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00033",
+                      "quote": "We have a new parameter."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "An increase in the interest rate reduces aggregate demand because investment falls and because it appreciates the exchange rate, which lowers net exports.",
+              "claims": [
+                {
+                  "text": "An increase in the interest rate reduces aggregate demand because investment falls and because it appreciates the exchange rate, which lowers net exports.",
+                  "refs": [
+                    "Q0004",
+                    "Q0009",
+                    "Q0015",
+                    "Q0017"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00033",
+                      "quote": "So an increase in the interest rate would lead to a reduction in aggregate demand because investment would fall."
+                    },
+                    {
+                      "source_id": "G00033",
+                      "quote": "One, for the reason we had before,\n which is that investment falls."
+                    },
+                    {
+                      "source_id": "G00033",
+                      "quote": "To raise the exchange rate."
+                    },
+                    {
+                      "source_id": "G00033",
+                      "quote": "And when you appreciate the exchange rate,\n net exports decline."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "An increase in the interest rate reduces aggregate demand because investment falls and because it appreciates the exchange rate, which lowers net exports.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So an increase in the interest rate would lead to a reduction in aggregate demand because investment would fall.",
+                      "One, for the reason we had before,\n which is that investment falls.",
+                      "To raise the exchange rate.",
+                      "And when you appreciate the exchange rate,\n net exports decline."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00033",
+                        "quote": "So an increase in the interest rate would lead to a reduction in aggregate demand because investment would fall.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 227,
+                        "end_char": 339,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00033",
+                        "quote": "One, for the reason we had before,\n which is that investment falls.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 610,
+                        "end_char": 677,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00033",
+                        "quote": "To raise the exchange rate.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 815,
+                        "end_char": 842,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00033",
+                        "quote": "And when you appreciate the exchange rate,\n net exports decline.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 887,
+                        "end_char": 951,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "An increase in the interest rate reduces aggregate demand because investment falls and because it appreciates the exchange rate, which lowers net exports.",
+                "preview_text": "An increase in the interest rate reduces aggregate demand because investment falls and because it appreciates the exchange rate, which lowers net exports.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "interest rate",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "We have a new parameter."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00033",
+                        "quote": "We have a new parameter.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 25,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "interest rate",
+                "preview_text": "interest rate",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00033"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "interest rate",
+      "aliases": []
+    },
+    {
+      "knowledge_id": "CON_0002",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00033"
+      ],
+      "document_id": "DOC001",
+      "content": "In an open economy, monetary policy operates through two contractionary channels when the interest rate rises: (1) reduced domestic investment and (2) exchange‑rate appreciation that lowers net exports.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00033",
+              "quote": "That's the way monetary policy worked in the closed economy, was through this channel here.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 392,
+              "end_char": 483,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00033",
+              "quote": "Now, we have a second channel, which is this one.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 485,
+              "end_char": 534,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00033",
+              "quote": "So when the interest rate goes up,\n it's contractionary for two reasons.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 536,
+              "end_char": 608,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00033",
+              "quote": "One, for the reason we had before,\n which is that investment falls.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 610,
+              "end_char": 677,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00033",
+              "quote": "But there is a second reason, it's contractionary.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 679,
+              "end_char": 729,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00033",
+              "quote": "To raise the exchange rate.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 815,
+              "end_char": 842,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00033",
+              "quote": "And when you appreciate the exchange rate,\n net exports decline.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 887,
+              "end_char": 951,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "monetary policy channels",
+              "claims": [
+                {
+                  "text": "monetary policy channels",
+                  "refs": [
+                    "Q0006",
+                    "Q0007"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00033",
+                      "quote": "That's the way monetary policy worked in the closed economy, was through this channel here."
+                    },
+                    {
+                      "source_id": "G00033",
+                      "quote": "Now, we have a second channel, which is this one."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "In an open economy, monetary policy operates through two contractionary channels when the interest rate rises: (1) reduced domestic investment and (2) exchange‑rate appreciation that lowers net exports.",
+              "claims": [
+                {
+                  "text": "In an open economy, monetary policy operates through two contractionary channels when the interest rate rises: (1) reduced domestic investment and (2) exchange‑rate appreciation that lowers net exports.",
+                  "refs": [
+                    "Q0008",
+                    "Q0009",
+                    "Q0010",
+                    "Q0015",
+                    "Q0017"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00033",
+                      "quote": "So when the interest rate goes up,\n it's contractionary for two reasons."
+                    },
+                    {
+                      "source_id": "G00033",
+                      "quote": "One, for the reason we had before,\n which is that investment falls."
+                    },
+                    {
+                      "source_id": "G00033",
+                      "quote": "But there is a second reason, it's contractionary."
+                    },
+                    {
+                      "source_id": "G00033",
+                      "quote": "To raise the exchange rate."
+                    },
+                    {
+                      "source_id": "G00033",
+                      "quote": "And when you appreciate the exchange rate,\n net exports decline."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "monetary policy channels",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "That's the way monetary policy worked in the closed economy, was through this channel here.",
+                      "Now, we have a second channel, which is this one."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00033",
+                        "quote": "That's the way monetary policy worked in the closed economy, was through this channel here.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 392,
+                        "end_char": 483,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00033",
+                        "quote": "Now, we have a second channel, which is this one.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 485,
+                        "end_char": 534,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "monetary policy channels",
+                "preview_text": "monetary policy channels",
+                "withheld": false
+              },
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "In an open economy, monetary policy operates through two contractionary channels when the interest rate rises: (1) reduced domestic investment and (2) exchange‑rate appreciation that lowers net exports.",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Claim introduces a number absent from its evidence"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [
+                        "1",
+                        "2"
+                      ],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So when the interest rate goes up,\n it's contractionary for two reasons.",
+                      "One, for the reason we had before,\n which is that investment falls.",
+                      "But there is a second reason, it's contractionary.",
+                      "To raise the exchange rate.",
+                      "And when you appreciate the exchange rate,\n net exports decline."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00033",
+                        "quote": "So when the interest rate goes up,\n it's contractionary for two reasons.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 536,
+                        "end_char": 608,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00033",
+                        "quote": "One, for the reason we had before,\n which is that investment falls.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 610,
+                        "end_char": 677,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00033",
+                        "quote": "But there is a second reason, it's contractionary.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 679,
+                        "end_char": 729,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00033",
+                        "quote": "To raise the exchange rate.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 815,
+                        "end_char": 842,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00033",
+                        "quote": "And when you appreciate the exchange rate,\n net exports decline.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 887,
+                        "end_char": 951,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "In an open economy, monetary policy operates through two contractionary channels when the interest rate rises: (1) reduced domestic investment and (2) exchange‑rate appreciation that lowers net exports.",
+                "preview_text": "",
+                "withheld": true
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00033"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "monetary policy channels",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 2,
+  "source_units_processed": 1,
+  "extraction_metadata": null
+}

@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-d8508956-e2b3-4e7c-ad04-bfc673a67a2f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"exports\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"That's what we're going to call x, exports.\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"z\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"So this is our new key concept here, z.\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"foreign demand\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"That's determined by foreign demand for domestically produced goods.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"In the speaker's explanation, what does the variable \\\"x\\\" represent?\",\n      \"answer\": \"exports\",\n      \"distractors\": [\n        \"imports\",\n        \"domestic consumption\",\n        \"foreign investment\"\n      ],\n      \"explanation\": \"The speaker explicitly says, \\\"That's what we're going to call x, exports,\\\" linking x directly to exports.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Variable meaning\",\n      \"refs\": [\"Q0004\"]\n    },\n    {\n      \"question\": \"According to the speaker, what primarily determines US production?\",\n      \"answer\": \"foreign demand for domestically produced goods\",\n      \"distractors\": [\n        \"domestic savings\",\n        \"government spending\",\n        \"foreign investment\"\n      ],\n      \"explanation\": \"The speaker states, \\\"That's determined by foreign demand for domestically produced goods,\\\" indicating foreign demand as the driver.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Drivers of US production\",\n      \"refs\": [\"Q0003\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts: exports (x), import function, term z. Likely concepts. Provide rows with concept_name and content. Use excerpts.\n\nCreate item \"item1\". For concept exports: concept_name \"exports\", content from Q0004 and Q0008. Provide two rows.\n\nAlso concept import? Not explicit. Maybe concept z from Q0005.\n\nAlso maybe foreign demand concept.\n\nWe'll output rows, no abstentions, no excluded, quiz maybe 2 questions.\n\nQuiz Q1: What does \"x\" represent? Answer exports. Distractors: imports, domestic consumption, foreign investment.\n\nQ2: According to speaker, what drives US production? Answer foreign demand for domestically produced goods. Distractors: domestic savings, government spending, foreign investment.\n\nProvide refs.\n\nNow construct rows.\n\nRow fields: category concepts, field concept_name, text, refs, basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs empty, element 0, part value, item \"item1\".\n\nSimilarly content rows: field content, text from excerpt.\n\nLet's do for exports and z.\n\nAlso maybe concept \"foreign demand\". Provide.\n\nOk.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794769405,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_69dbc96c74",
+  "usage": {
+    "completion_tokens": 1111,
+    "prompt_tokens": 2496,
+    "total_tokens": 3607,
+    "completion_time": 2.418090368,
+    "completion_tokens_details": {
+      "reasoning_tokens": 241
+    },
+    "prompt_time": 0.049863767,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "queue_time": 0.050971852,
+    "total_time": 2.467954135
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g9ff8be2ktpxg3emkt5n19",
+    "debug": null,
+    "seed": 103938736,
+    "usage": null
+  }
+}

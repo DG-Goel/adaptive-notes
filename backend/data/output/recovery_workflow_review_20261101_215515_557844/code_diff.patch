@@ -1,0 +1,925 @@
+--- recover_t0018_exhaustive.py (before)
++++ recover_t0018_exhaustive.py (after)
+@@ -1,277 +1,374 @@
+-#!/usr/bin/env python3
+-"""
+-Exhaustive T0018 recovery attempt.
+-
+-Strategies:
+-1. Smaller source chunks
+-2. Category-wise extraction
+-3. Progressive extraction with strict output limits
+-4. Reduced output constraints
+-"""
+-
++"""Controlled recovery using the existing extractor; no network calls at import time."""
++import argparse
++from hashlib import sha256
+ import json
++from pathlib import Path
+ import sys
+-import os
+-from pathlib import Path
+-from datetime import datetime
+-from dotenv import load_dotenv
+-
+-if sys.platform == 'win32':
+-    os.environ['PYTHONIOENCODING'] = 'utf-8'
+-    if sys.stdout.encoding != 'utf-8':
+-        import io
+-        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+-        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+-
+-sys.path.insert(0, str(Path(__file__).parent))
+-load_dotenv()
+ 
+ from app.extraction.extractor import KnowledgeExtractor
++from app.extraction.knowledge_merge import (
++    CATEGORIES, MergeDecision, merge_recovered_knowledge, normalize_knowledge_ids,
++    validate_provenance,
++)
+ from app.extraction.llm_provider import GroqProvider
+-from app.models.source import SourceDocument, SourceUnit
+-
+-
+-def attempt_1_small_chunks(source_unit: SourceUnit, provider: GroqProvider) -> dict:
+-    """
+-    Attempt 1: Very small source chunks (500 chars max)
+-    """
+-    print("\n" + "="*80)
+-    print("ATTEMPT 1: Small Chunks (500 char limit)")
+-    print("="*80)
+-    
+-    text = source_unit.text
+-    chunk_size = 500
+-    chunks = []
+-    
+-    for i in range(0, len(text), chunk_size):
+-        chunks.append(text[i:i+chunk_size])
+-    
+-    print(f"Split into {len(chunks)} chunks of ~{chunk_size} chars")
+-    
+-    extractor = KnowledgeExtractor(
+-        llm_provider=provider,
+-        max_tokens_per_chunk=800,  # Very conservative
+-        verbose=True
+-    )
+-    
+-    # Create mini source doc for each chunk
+-    all_items = {
+-        'concepts': [],
+-        'definitions': [],
+-        'examples': [],
+-        'facts': [],
+-        'formulas': [],
+-        'procedures': [],
+-        'explanations': [],
+-        'relationships': []
++from app.models.knowledge import KnowledgeDocument
++from app.models.source import SourceDocument
++
++MODEL = "openai/gpt-oss-120b"
++ACTIONS = {"INCLUDE": "include", "EXACT_DUPLICATE": "consolidate",
++           "EXCLUDE_WITH_JUSTIFICATION": "exclude", "PENDING_REVIEW": "pending"}
++
++
++def fingerprint(value):
++    return sha256(json.dumps(value, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
++
++
++def load(path):
++    return json.loads(Path(path).read_text(encoding="utf-8"))
++
++
++def save(directory, name, value):
++    with (directory / name).open("x", encoding="utf-8") as stream:
++        json.dump(value, stream, indent=2, ensure_ascii=False)
++
++
++def entries(document):
++    for category in CATEGORIES:
++        for index, item in enumerate(getattr(document, category)):
++            yield category, index, item
++
++
++def review_items(document, source, base, review=None, *, canonical_id):
++    """Every item is accounted for. Source membership is not semantic approval."""
++    provenance = validate_provenance(document, source, required_source_id=canonical_id)
++    if not provenance.valid:
++        raise ValueError("Invalid recovery provenance: " + "; ".join(provenance.errors))
++    items = list(entries(document))
++    if document.total_items != len(items):
++        raise ValueError("Recovery total_items disagrees with item count")
++    review = review or {"items": []}
++    supplied = review.get("items", [])
++    indexed = {(row["category"], row["item_index"]): row for row in supplied}
++    expected = {(category, index) for category, index, _ in items}
++    if supplied and (len(indexed) != len(supplied) or set(indexed) != expected):
++        raise ValueError("Review must account for every item exactly once")
++    sources = {unit.source_id: unit.text or "" for unit in source.source_units}
++    decisions, rows = [], []
++    for category, index, item in items:
++        payload = item.model_dump(mode="json")
++        key = (category, index)
++        row = indexed.get(key, {
++            "disposition": "PENDING_REVIEW", "reason": "Source support not yet reviewed",
++        })
++        action = row["disposition"]
++        if action not in ACTIONS:
++            raise ValueError("Unknown item disposition")
++        if supplied and row.get("item_fingerprint") != fingerprint(payload):
++            raise ValueError("Stale item review fingerprint")
++        evidence = row.get("source_evidence", [])
++        for quote in evidence:
++            if quote["source_id"] not in item.source_unit_ids:
++                raise ValueError("Review cites evidence outside item provenance")
++            if not quote["quote"] or quote["quote"] not in sources[quote["source_id"]]:
++                raise ValueError("Review evidence is not an exact source passage")
++        if action in {"INCLUDE", "EXACT_DUPLICATE"}:
++            if not evidence or not row.get("reviewer") or not row.get("full_item_reviewed"):
++                raise ValueError("Accepted items require full-item manual review and source evidence")
++        identical = []
++        candidate = {k: v for k, v in payload.items() if k not in {"knowledge_id", "source_unit_ids"}}
++        for _, _, existing in entries(base):
++            other = existing.model_dump(mode="json", exclude={"knowledge_id", "source_unit_ids"})
++            if candidate == other:
++                identical.append(existing.knowledge_id)
++        if action == "INCLUDE" and identical:
++            raise ValueError("Exact duplicate requires an explicit consolidation decision")
++        decisions.append(MergeDecision(
++            category=category, item_index=index, action=ACTIONS[action],
++            reason=row["reason"], target_id=row.get("target_id"),
++        ))
++        rows.append({
++            **row, "category": category, "item_index": index, "old_id": item.knowledge_id,
++            "item_fingerprint": fingerprint(payload), "original_item": payload,
++            "exact_duplicate_targets": identical,
++        })
++    return decisions, {"canonical_source_id": canonical_id, "items_checked": len(items),
++                       "provenance": provenance.model_dump(), "items": rows}
++
++
++def require_smoke(path, source):
++    """Validate supplied real-call evidence; never infer success from historical percentages."""
++    if path is None:
++        raise ValueError("BLOCKED: real Groq smoke-test evidence is required before extraction")
++    return validate_smoke(load(path), source)
++
++
++def validate_smoke(report, source):
++    metadata = report.get("response_metadata", {})
++    if (report.get("provider") != "Groq" or report.get("model") != MODEL
++            or metadata.get("model") != MODEL or report.get("real_request") is not True
++            or report.get("status") != "PASSED" or metadata.get("finish_reason") != "stop"):
++        raise ValueError("BLOCKED: smoke provider/model/status/finish reason is not acceptable")
++    if report.get("source_fingerprint") != fingerprint(source.model_dump(mode="json")):
++        raise ValueError("BLOCKED: smoke evidence does not match these source units")
++    usage = metadata.get("usage", {})
++    if any(type(usage.get(key)) is not int or usage[key] < 0
++           for key in ("prompt_tokens", "completion_tokens", "total_tokens")):
++        raise ValueError("BLOCKED: smoke token usage missing")
++    if not report.get("command") or not report.get("timestamp"):
++        raise ValueError("BLOCKED: smoke execution evidence missing")
++    knowledge = KnowledgeDocument.model_validate(report["knowledge"])
++    if not knowledge.get_all_items() or not validate_provenance(knowledge, source).valid:
++        raise ValueError("BLOCKED: smoke knowledge/schema/provenance invalid")
++    manual = report.get("manual_review", {})
++    if not (manual.get("approved") is True and manual.get("reviewer") and manual.get("reason")):
++        raise ValueError("BLOCKED: smoke extraction quality has not been manually approved")
++    return report
++
++
++def segments_for(unit, manifest=None):
++    """Use the whole source by default; optional boundaries require an explicit source review."""
++    text = unit.text or ""
++    if not manifest:
++        return [{"start": 0, "end": len(text), "text": text, "reason": "Whole canonical source"}]
++    if (manifest.get("source_fingerprint") != fingerprint(unit.model_dump(mode="json"))
++            or manifest.get("reviewed") is not True or not manifest.get("reviewer")):
++        raise ValueError("Segmentation requires review bound to the canonical source")
++    segments, position = [], 0
++    for row in manifest.get("segments", []):
++        start, end = row["start"], row["end"]
++        if type(start) is not int or type(end) is not int or start != position or not start < end <= len(text):
++            raise ValueError("Segment boundaries must cover source contiguously without overlap")
++        if not row.get("reason") or not row.get("context_preserved"):
++            raise ValueError("Sentence/example context review is required")
++        if start and text[start - 1:start].isalnum() and text[start:start + 1].isalnum():
++            raise ValueError("Cannot split within a word")
++        if end < len(text) and text[end - 1:end].isalnum() and text[end:end + 1].isalnum():
++            raise ValueError("Cannot split within a word")
++        segments.append({**row, "text": text[start:end]})
++        position = end
++    if not segments or position != len(text):
++        raise ValueError("Segmentation omits source content")
++    return segments
++
++
++def extract_t0018(source, provider, *, smoke_evidence, manifest=None):
++    """Each segment uses SourceDocument -> existing chunker/extractor/accounting."""
++    validate_smoke(smoke_evidence, source)
++    if type(provider) is not GroqProvider or provider.model != MODEL:
++        raise ValueError("Recovery requires Groq and exactly " + MODEL)
++    unit = next(unit for unit in source.source_units if unit.source_id == "T0018")
++    records, documents = [], []
++    for index, segment in enumerate(segments_for(unit, manifest)):
++        view = source.model_copy(deep=True)
++        view.source_units = [unit.model_copy(update={"text": segment["text"]}, deep=True)]
++        extractor = KnowledgeExtractor(provider, verbose=False, max_retries=2)
++        try:
++            result = extractor.extract(view)
++        except Exception as error:
++            # Never lose already completed segments or print unsanitized provider exceptions.
++            records.append({"segment_index": index, **segment, "outcome": "FAILED",
++                            "error_type": type(error).__name__})
++            for remaining_index, remaining in enumerate(segments_for(unit, manifest)[index + 1:], index + 1):
++                records.append({"segment_index": remaining_index, **remaining,
++                                "outcome": "NOT_ATTEMPTED", "reason": "Extraction could not complete"})
++            break
++        report = validate_provenance(result, source, required_source_id="T0018")
++        accounting = result.extraction_metadata
++        resolved = (accounting.get("extraction_successful") is True
++                    and accounting.get("scheduled_roots", 0) > 0
++                    and accounting.get("failed_roots", 1) == 0
++                    and accounting.get("skipped_roots", 1) == 0
++                    and bool(result.get_all_items()) and report.valid)
++        records.append({
++            "segment_index": index, **segment, "outcome": "SUCCESS" if resolved else "FAILED",
++            "accounting": accounting, "provenance": report.model_dump(),
++            "knowledge": result.model_dump(mode="json"),
++        })
++        documents.append(result)
++        # A permanent failure ends dependent API work; retain prior partial results.
++        error = getattr(provider, "last_error_metadata", None)
++        if isinstance(error, dict) and error.get("retryable") is False and not resolved:
++            for remaining_index, remaining in enumerate(segments_for(unit, manifest)[index + 1:], index + 1):
++                records.append({"segment_index": remaining_index, **remaining,
++                                "outcome": "NOT_ATTEMPTED", "reason": "Permanent provider failure"})
++            break
++    candidate = KnowledgeDocument(
++        document_id=source.document_id, source_filename=source.filename,
++        extraction_timestamp=documents[0].extraction_timestamp if documents else "",
++    )
++    for document in documents:
++        for category in CATEGORIES:
++            getattr(candidate, category).extend(getattr(document, category))
++    candidate.update_statistics()
++    normalized = normalize_knowledge_ids(candidate, artifact_id="T0018-segments")
++    candidate = normalized.document
++    candidate.extraction_metadata = {
++        "segment_id_mappings": [row.model_dump() for row in normalized.mappings],
++        "segment_outcomes": [{"segment_index": row["segment_index"], "outcome": row["outcome"]}
++                             for row in records],
+     }
+-    
+-    for i, chunk_text in enumerate(chunks):
+-        print(f"\n Processing chunk {i+1}/{len(chunks)}...")
+-        
+-        chunk_unit = SourceUnit(
+-            source_id=f"{source_unit.source_id}_CHUNK{i}",
+-            document_id=source_unit.document_id,
+-            type=source_unit.type,
+-            content_role=source_unit.content_role,
+-            text=chunk_text,
+-            position=source_unit.position
++    return candidate, records
++
++
++
++def validate_candidate(candidate, records, source):
++    """Bind replayed segment evidence to canonical text and the final candidate items."""
++    unit = next(unit for unit in source.source_units if unit.source_id == "T0018")
++    position, recovered = 0, {category: [] for category in CATEGORIES}
++    for index, record in enumerate(records):
++        start, end = record.get("start"), record.get("end")
++        if (record.get("segment_index") != index or start != position
++                or type(end) is not int or not start < end <= len(unit.text or "")
++                or record.get("text") != unit.text[start:end]):
++            raise ValueError("Candidate segment evidence does not preserve canonical source")
++        position = end
++        if "knowledge" in record:
++            document = KnowledgeDocument.model_validate(record["knowledge"])
++            provenance = validate_provenance(document, source, required_source_id="T0018")
++            accounting = record.get("accounting", {})
++            if record["outcome"] == "SUCCESS" and not (
++                    provenance.valid and document.get_all_items()
++                    and accounting.get("extraction_successful") is True
++                    and accounting.get("failed_roots") == 0
++                    and accounting.get("skipped_roots") == 0
++                    and accounting.get("scheduled_roots", 0) > 0):
++                raise ValueError("Candidate success lacks valid extraction evidence")
++            for category in CATEGORIES:
++                recovered[category].extend(
++                    item.model_dump(mode="json", exclude={"knowledge_id"})
++                    for item in getattr(document, category))
++        elif record["outcome"] == "SUCCESS":
++            raise ValueError("Successful segment has no extracted knowledge")
++    if not records or position != len(unit.text or ""):
++        raise ValueError("Candidate segment evidence omits source content")
++    for category in CATEGORIES:
++        actual = [item.model_dump(mode="json", exclude={"knowledge_id"})
++                  for item in getattr(candidate, category)]
++        if actual != recovered[category]:
++            raise ValueError("Candidate items differ from preserved segment results")
++    if len({item.knowledge_id for item in candidate.get_all_items()}) != len(candidate.get_all_items()):
++        raise ValueError("Candidate knowledge IDs collide")
++
++
++def finalize_status(candidate, records, review_report, topic_review, source):
++    """Manual source/topic review is mandatory even after all API segments succeed."""
++    if not candidate.get_all_items():
++        return "FAILED"
++    if not records or any(row["outcome"] != "SUCCESS" for row in records):
++        return "PARTIAL"
++    reviewed = review_report["items"]
++    expected_items = {fingerprint(item.model_dump(mode="json")) for _, _, item in entries(candidate)}
++    if len(reviewed) != len(candidate.get_all_items()) or {row.get("item_fingerprint") for row in reviewed} != expected_items:
++        return "PENDING_REVIEW"
++    if any(row["disposition"] == "PENDING_REVIEW" for row in reviewed):
++        return "PENDING_REVIEW"
++    if not any(row["disposition"] in {"INCLUDE", "EXACT_DUPLICATE"} for row in review_report["items"]):
++        return "FAILED"
++    if not topic_review:
++        return "PENDING_REVIEW"
++    expected = fingerprint({"candidate": candidate.model_dump(mode="json"),
++                            "source": source.model_dump(mode="json")})
++    if (topic_review.get("review_fingerprint") != expected or not topic_review.get("reviewer")
++            or topic_review.get("complete") is not True or topic_review.get("unresolved_gaps") != []
++            or not topic_review.get("topics") or topic_review.get("source_reviewed_in_full") is not True):
++        return "PENDING_REVIEW"
++    sources = {unit.source_id: unit.text or "" for unit in source.source_units}
++    accepted = {row["old_id"] for row in review_report["items"]
++                if row["disposition"] in {"INCLUDE", "EXACT_DUPLICATE"}}
++    for topic in topic_review["topics"]:
++        if (not topic.get("reason") or not topic.get("knowledge_ids")
++                or not set(topic["knowledge_ids"]) <= accepted
++                or topic.get("source_id") != "T0018" or not topic.get("source_quote")
++                or topic["source_quote"] not in sources[topic["source_id"]]):
++            return "PENDING_REVIEW"
++    return "RECOVERED"
++
++
++def main(argv=None):
++    parser = argparse.ArgumentParser(description=__doc__)
++    for flag in ("sources", "base", "t0017", "output"):
++        parser.add_argument("--" + flag, type=Path, required=True)
++    parser.add_argument("--model", default=MODEL, choices=[MODEL])
++    parser.add_argument("--provider", default="Groq", choices=["Groq"])
++    parser.add_argument("--t0017-review", type=Path)
++    parser.add_argument("--execute-t0018", action="store_true")
++    parser.add_argument("--smoke-report", type=Path)
++    parser.add_argument("--boundaries", type=Path)
++    parser.add_argument("--candidate", type=Path)
++    parser.add_argument("--t0018-review", type=Path)
++    parser.add_argument("--topic-review", type=Path)
++    args = parser.parse_args(argv)
++    if args.execute_t0018 and args.candidate:
++        parser.error("--execute-t0018 and --candidate are mutually exclusive")
++    if args.output.exists():
++        raise ValueError("Refusing to overwrite existing output directory")
++    source = SourceDocument.model_validate(load(args.sources))
++    if len([unit for unit in source.source_units if unit.source_id == "T0018"]) != 1:
++        raise ValueError("Expected one canonical T0018 source")
++    base = KnowledgeDocument.model_validate(load(args.base))
++    t17 = KnowledgeDocument.model_validate(load(args.t0017))
++    normalized = normalize_knowledge_ids(base, artifact_id=str(args.base.resolve()))
++    decisions, review17 = review_items(
++        t17, source, normalized.document,
++        load(args.t0017_review) if args.t0017_review else None, canonical_id="T0017",
++    )
++    merged = merge_recovered_knowledge(
++        normalized.document, t17, source, artifact_id=str(args.t0017.resolve()),
++        decisions=decisions, required_source_id="T0017",
++    )
++    # Gate before provider construction, credential loading, or any extraction request.
++    smoke = require_smoke(args.smoke_report, source) if args.execute_t0018 else None
++    args.output.mkdir(parents=True, exist_ok=False)
++    save(args.output, "base_preservation.json", normalized.preservation.model_dump())
++    save(args.output, "base_id_mappings.json", [row.model_dump() for row in normalized.mappings])
++    save(args.output, "t0017_review.json", review17)
++    save(args.output, "t0017_merge.json", merged.model_dump(mode="json"))
++    report = {"release": "NO-GO", "t0017_status": "REVIEWED_PARTIAL_MERGE",
++              "t0018_status": "NOT_EXECUTED", "provider": "Groq", "model": MODEL,
++              "input_sha256": {str(path.resolve()): sha256(path.read_bytes()).hexdigest()
++                               for path in (args.sources, args.base, args.t0017)}}
++    if args.execute_t0018:
++        from dotenv import load_dotenv
++        load_dotenv(Path(__file__).parent / ".env", override=False)
++        provider = GroqProvider(model=MODEL)
++        candidate, records = extract_t0018(
++            source, provider, smoke_evidence=smoke, manifest=load(args.boundaries) if args.boundaries else None,
+         )
+-        
+-        chunk_doc = SourceDocument(
+-            document_id=source_unit.document_id,
+-            filename="temp.txt",
+-            page_count=1,
+-            source_units=[chunk_unit]
+-        )
+-        
+-        try:
+-            result = extractor.extract(chunk_doc)
+-            
+-            # Merge results
+-            for key in all_items.keys():
+-                items = getattr(result, key, [])
+-                all_items[key].extend([item.dict() for item in items])
+-            
+-            print(f"   Extracted: {result.total_items} items")
+-            
+-        except Exception as e:
+-            print(f"   ? Failed: {str(e)[:100]}")
+-            return {'success': False, 'error': str(e), 'items': all_items}
+-    
+-    total = sum(len(v) for v in all_items.values())
+-    print(f"\n� Total items extracted: {total}")
+-    
+-    return {'success': True, 'items': all_items, 'total': total}
+-
+-
+-def attempt_2_category_wise(source_unit: SourceUnit, provider: GroqProvider) -> dict:
+-    """
+-    Attempt 2: Extract one category at a time
+-    """
+-    print("\n" + "="*80)
+-    print("ATTEMPT 2: Category-wise Extraction")
+-    print("="*80)
+-    
+-    categories = ['concepts', 'examples', 'procedures']
+-    
+-    all_items = {}
+-    
+-    for category in categories:
+-        print(f"\n Extracting {category} only...")
+-        
+-        # Would need custom prompt for single category
+-        # This is a simplified version
+-        try:
+-            extractor = KnowledgeExtractor(
+-                llm_provider=provider,
+-                max_tokens_per_chunk=1000,
+-                verbose=True
+-            )
+-            
+-            temp_doc = SourceDocument(
+-                document_id=source_unit.document_id,
+-                filename="temp.txt",
+-                page_count=1,
+-                source_units=[source_unit]
+-            )
+-            
+-            # Note: This would need category-specific prompts
+-            # For now, extract normally with lower token limit
+-            result = extractor.extract(temp_doc)
+-            
+-            items = getattr(result, category, [])
+-            all_items[category] = [item.dict() for item in items]
+-            print(f"   Extracted: {len(items)} {category}")
+-            
+-        except Exception as e:
+-            print(f"   ? Failed: {str(e)[:100]}")
+-            all_items[category] = []
+-    
+-    total = sum(len(v) for v in all_items.values())
+-    
+-    if total > 0:
+-        return {'success': True, 'items': all_items, 'total': total}
++        envelope = {"source_fingerprint": fingerprint(source.model_dump(mode="json")),
++                    "smoke_evidence": smoke, "knowledge": candidate.model_dump(mode="json"),
++                    "segments": records}
++        save(args.output, "recovery_candidate.json", envelope)
++    elif args.candidate:
++        envelope = load(args.candidate)
++        if envelope["source_fingerprint"] != fingerprint(source.model_dump(mode="json")):
++            raise ValueError("Candidate source mismatch")
++        # Persisted candidates must retain the same validated real smoke evidence.
++        smoke_path = args.output / "candidate_smoke_evidence.json"
++        save(args.output, smoke_path.name, envelope["smoke_evidence"])
++        require_smoke(smoke_path, source)
++        candidate = KnowledgeDocument.model_validate(envelope["knowledge"])
++        records = envelope["segments"]
+     else:
+-        return {'success': False, 'error': 'No items extracted', 'items': all_items}
+-
+-
+-def main():
+-    print("="*80)
+-    print("EXHAUSTIVE T0018 RECOVERY")
+-    print("="*80)
+-    
+-    # Load source
+-    source_path = Path("data/output/complete_e2e_validation/validation_20261101_174430/source_units.json")
+-    
+-    with open(source_path, 'r', encoding='utf-8') as f:
+-        source_data = json.load(f)
+-    
+-    source_doc = SourceDocument(**source_data)
+-    
+-    # Find T0018
+-    t0018 = None
+-    for unit in source_doc.source_units:
+-        if unit.source_id == 'T0018':
+-            t0018 = unit
+-            break
+-    
+-    if not t0018:
+-        print("? T0018 not found in source units")
+-        return 1
+-    
+-    print(f"\nFound T0018:")
+-    print(f"  Length: {len(t0018.text)} characters")
+-    print(f"  Type: {t0018.type}")
+-    print(f"  Content role: {t0018.content_role}")
+-    
+-    # Initialize provider
+-    try:
+-        provider = GroqProvider(
+-            api_key=os.getenv('GROQ_API_KEY'),
+-            model='llama-3.1-70b-versatile',
+-            use_multi_key=True
+-        )
+-    except Exception as e:
+-        print(f"? Failed to initialize Groq provider: {e}")
+-        return 1
+-    
+-    # Track all attempts
+-    attempts = []
+-    
+-    # Attempt 1: Small chunks
+-    try:
+-        result1 = attempt_1_small_chunks(t0018, provider)
+-        attempts.append(('small_chunks', result1))
+-    except Exception as e:
+-        print(f"? Attempt 1 crashed: {e}")
+-        attempts.append(('small_chunks', {'success': False, 'error': str(e)}))
+-    
+-    # Attempt 2: Category-wise
+-    try:
+-        result2 = attempt_2_category_wise(t0018, provider)
+-        attempts.append(('category_wise', result2))
+-    except Exception as e:
+-        print(f"? Attempt 2 crashed: {e}")
+-        attempts.append(('category_wise', {'success': False, 'error': str(e)}))
+-    
+-    # Summary
+-    print("\n" + "="*80)
+-    print("RECOVERY SUMMARY")
+-    print("="*80)
+-    
+-    for strategy, result in attempts:
+-        success = result.get('success', False)
+-        total = result.get('total', 0)
+-        error = result.get('error', 'N/A')
+-        
+-        print(f"\n{strategy.upper()}:")
+-        print(f"  Success: {success}")
+-        print(f"  Items: {total}")
+-        if not success:
+-            print(f"  Error: {error}")
+-    
+-    # Save best result
+-    best_result = max(
+-        (r for _, r in attempts if r.get('success', False)),
+-        key=lambda r: r.get('total', 0),
+-        default=None
+-    )
+-    
+-    output_path = Path("data/output/complete_e2e_validation/validation_20261101_174430/t0018_recovery_exhaustive.json")
+-    
+-    recovery_report = {
+-        'timestamp': datetime.now().isoformat(),
+-        'source_unit_id': 'T0018',
+-        'source_length': len(t0018.text),
+-        'attempts': [
+-            {
+-                'strategy': strategy,
+-                'success': result.get('success', False),
+-                'total_items': result.get('total', 0),
+-                'error': result.get('error'),
+-                'items': result.get('items', {})
+-            }
+-            for strategy, result in attempts
+-        ],
+-        'final_status': 'RECOVERED' if best_result else 'UNRECOVERABLE',
+-        'recovered_items': best_result.get('items', {}) if best_result else {},
+-        'total_recovered': best_result.get('total', 0) if best_result else 0
+-    }
+-    
+-    with open(output_path, 'w', encoding='utf-8') as f:
+-        json.dump(recovery_report, f, indent=2, ensure_ascii=False)
+-    
+-    print(f"\n{'='*80}")
+-    if best_result:
+-        print(f"� PARTIAL SUCCESS: Recovered {best_result['total']} items")
+-        print(f"  Saved to: {output_path}")
+-        return 0
+-    else:
+-        print("? UNRECOVERABLE: All recovery attempts failed")
+-        print(f"  T0018 remains unextracted")
+-        print(f"  Report saved to: {output_path}")
+-        return 1
++        save(args.output, "recovery_report.json", report)
++        return 2  # Offline inspection/partial merging is not completed recovery.
++    validate_candidate(candidate, records, source)
++    decisions18, review18 = review_items(
++        candidate, source, merged.document,
++        load(args.t0018_review) if args.t0018_review else None, canonical_id="T0018",
++    )
++    merged18 = merge_recovered_knowledge(
++        merged.document, candidate, source, artifact_id="T0018-candidate",
++        decisions=decisions18, required_source_id="T0018",
++    )
++    report["t0018_status"] = finalize_status(
++        candidate, records, review18, load(args.topic_review) if args.topic_review else None, source,
++    )
++    report["segments"] = records
++    save(args.output, "t0018_review.json", review18)
++    save(args.output, "merged_knowledge.json", merged18.document.model_dump(mode="json"))
++    save(args.output, "recovery_id_mappings.json", [row.model_dump() for row in merged18.mappings])
++    save(args.output, "recovery_report.json", report)
++    return 0 if report["t0018_status"] == "RECOVERED" else 2
+ 
+ 
+ if __name__ == "__main__":
+--- /dev/null
++++ tests/test_recovery_workflow.py
+@@ -0,0 +1,279 @@
++"""Offline recovery workflow tests; provider requests are always mocked."""
++import json
++from pathlib import Path
++from unittest.mock import patch
++
++import pytest
++
++import recover_t0018_exhaustive as recovery
++from app.models.knowledge import Concept, KnowledgeDocument
++from app.models.source import SourceDocument, SourceUnit
++
++
++def source():
++    return SourceDocument(document_id="JAVA", filename="java.txt", page_count=1,
++        source_units=[SourceUnit(source_id=sid, document_id="JAVA", position=i,
++                    type="paragraph", content_role="content", text="First topic. Second topic.")
++                      for i, sid in enumerate(["T0017", "T0018"], 1)])
++
++
++def knowledge(sid="T0017", content="First topic.", identifier="CON_0001"):
++    return KnowledgeDocument(document_id="JAVA", source_filename="java.txt",
++        extraction_timestamp="2026-11-01", total_items=1,
++        concepts=[Concept(knowledge_id=identifier, document_id="JAVA",
++                          source_unit_ids=[sid], content=content, concept_name=content)])
++
++
++def review(document, disposition="INCLUDE"):
++    return {"items": [{
++        "category": cat, "item_index": index,
++        "item_fingerprint": recovery.fingerprint(item.model_dump(mode="json")),
++        "disposition": disposition, "reason": "Individually compared with source",
++        "reviewer": "test reviewer", "full_item_reviewed": True,
++        "source_evidence": [{"source_id": item.source_unit_ids[0], "quote": "First topic."}],
++    } for cat, index, item in recovery.entries(document)]}
++
++
++def smoke(s):
++    return {"provider": "Groq", "model": recovery.MODEL, "real_request": True,
++        "status": "PASSED", "command": "recorded command", "timestamp": "2026-11-01",
++        "source_fingerprint": recovery.fingerprint(s.model_dump(mode="json")),
++        "response_metadata": {"model": recovery.MODEL, "finish_reason": "stop",
++                             "usage": {"prompt_tokens": 5, "completion_tokens": 5, "total_tokens": 10}},
++        "knowledge": knowledge().model_dump(mode="json"),
++        "manual_review": {"approved": True, "reviewer": "tester", "reason": "Reviewed full extraction"}}
++
++
++def write(path, value):
++    path.write_text(json.dumps(value), encoding="utf-8")
++    return path
++
++
++def boundaries(s):
++    unit = s.source_units[1]
++    return {"source_fingerprint": recovery.fingerprint(unit.model_dump(mode="json")),
++        "reviewer": "tester", "reviewed": True,
++        "segments": [
++            {"start": 0, "end": 13, "reason": "Sentence boundary", "context_preserved": True},
++            {"start": 13, "end": len(unit.text), "reason": "Complete next topic", "context_preserved": True},
++        ]}
++
++
++def result(sid="T0018", valid=True):
++    document = knowledge(sid)
++    document.extraction_metadata = {
++        "extraction_successful": valid, "scheduled_roots": 1, "failed_roots": int(not valid),
++        "skipped_roots": 0, "root_outcomes": [{"outcome": "SUCCESS" if valid else "FAILED"}],
++    }
++    return document
++
++
++def test_smoke_gate_precedes_provider_construction_and_output_creation(tmp_path):
++    s = write(tmp_path / "sources.json", source().model_dump(mode="json"))
++    b = write(tmp_path / "base.json", knowledge(content="Other").model_dump(mode="json"))
++    t = write(tmp_path / "t17.json", knowledge().model_dump(mode="json"))
++    args = ["--sources", str(s), "--base", str(b), "--t0017", str(t),
++            "--output", str(tmp_path / "fresh"), "--execute-t0018"]
++    with patch.object(recovery, "GroqProvider") as provider:
++        with pytest.raises(ValueError, match="smoke"):
++            recovery.main(args)
++        provider.assert_not_called()
++    assert not (tmp_path / "fresh").exists()
++
++
++@pytest.mark.parametrize("field,value", [("model", "other"), ("provider", "Other"),
++                                        ("real_request", False), ("status", "FAILED")])
++def test_smoke_gate_rejects_wrong_model_provider_and_unverified_evidence(tmp_path, field, value):
++    evidence = smoke(source())
++    evidence[field] = value
++    path = write(tmp_path / "smoke.json", evidence)
++    with pytest.raises(ValueError, match="BLOCKED"):
++        recovery.require_smoke(path, source())
++
++
++def test_valid_smoke_evidence_and_stale_source(tmp_path):
++    path = write(tmp_path / "smoke.json", smoke(source()))
++    assert recovery.require_smoke(path, source())["model"] == recovery.MODEL
++    changed = source()
++    changed.source_units[0].text = "Changed"
++    with pytest.raises(ValueError, match="match"):
++        recovery.require_smoke(path, changed)
++
++
++def test_explicit_paths_and_no_overwrite(tmp_path):
++    with pytest.raises(SystemExit):
++        recovery.main([])
++    with pytest.raises(ValueError, match="overwrite"):
++        recovery.main(["--sources", "s", "--base", "b", "--t0017", "t", "--output", str(tmp_path)])
++    with pytest.raises(SystemExit):
++        recovery.main(["--sources", "s", "--base", "b", "--t0017", "t",
++                       "--output", "fresh", "--model", "another-model"])
++
++
++def test_review_is_item_specific_and_default_pending():
++    k, s, base = knowledge(), source(), knowledge(content="Other")
++    decisions, report = recovery.review_items(k, s, base, canonical_id="T0017")
++    assert decisions[0].action == "pending"
++    assert report["items"][0]["original_item"] == k.concepts[0].model_dump(mode="json")
++    rows = review(k)
++    decisions, _ = recovery.review_items(k, s, base, rows, canonical_id="T0017")
++    assert decisions[0].action == "include"
++    rows["items"][0]["item_fingerprint"] = "stale"
++    with pytest.raises(ValueError, match="Stale"):
++        recovery.review_items(k, s, base, rows, canonical_id="T0017")
++
++
++def test_exact_duplicate_requires_consolidation_and_distinct_items_get_unique_ids():
++    s, k, base = source(), knowledge(), knowledge()
++    with pytest.raises(ValueError, match="duplicate"):
++        recovery.review_items(k, s, base, review(k), canonical_id="T0017")
++    rows = review(k, "EXACT_DUPLICATE")
++    rows["items"][0]["target_id"] = "CON_0001"
++    decisions, _ = recovery.review_items(k, s, base, rows, canonical_id="T0017")
++    merged = recovery.merge_recovered_knowledge(base, k, s, artifact_id="r", decisions=decisions)
++    assert merged.document.total_items == 1
++    distinct = knowledge(content="Second topic.")
++    rows = review(distinct)
++    rows["items"][0]["source_evidence"][0]["quote"] = "Second topic."
++    decisions, _ = recovery.review_items(distinct, s, base, rows, canonical_id="T0017")
++    merged = recovery.merge_recovered_knowledge(base, distinct, s, artifact_id="r", decisions=decisions)
++    assert merged.document.total_items == 2
++    assert len({item.knowledge_id for item in merged.document.get_all_items()}) == 2
++
++
++def test_review_rejects_bad_evidence_and_provenance():
++    k, s = knowledge(), source()
++    rows = review(k)
++    rows["items"][0]["source_evidence"][0]["quote"] = "Invented source text"
++    with pytest.raises(ValueError, match="exact source"):
++        recovery.review_items(k, s, knowledge(content="Other"), rows, canonical_id="T0017")
++    with pytest.raises(ValueError, match="provenance"):
++        recovery.review_items(knowledge("T0018"), s, knowledge(), canonical_id="T0017")
++
++
++def test_source_boundaries_preserve_every_character_and_context():
++    s = source()
++    parts = recovery.segments_for(s.source_units[1], boundaries(s))
++    assert "".join(part["text"] for part in parts) == s.source_units[1].text
++    assert len(recovery.segments_for(s.source_units[1])) == 1
++    invalid = boundaries(s)
++    invalid["segments"][0]["end"] = 3
++    with pytest.raises(ValueError, match="within a word"):
++        recovery.segments_for(s.source_units[1], invalid)
++    invalid = boundaries(s)
++    invalid["segments"][1]["end"] -= 1
++    with pytest.raises(ValueError, match="omits"):
++        recovery.segments_for(s.source_units[1], invalid)
++
++
++@pytest.mark.parametrize("partial", [False, True])
++def test_segment_accounting_canonical_provenance_and_partial_preservation(partial):
++    s = source()
++    with patch("groq.Groq"):
++        provider = recovery.GroqProvider(api_key="test-only", use_multi_key=False)
++    documents = [result(), result(valid=not partial)]
++    before = s.model_dump()
++    with patch.object(recovery.KnowledgeExtractor, "extract", side_effect=documents) as extract:
++        candidate, records = recovery.extract_t0018(s, provider, smoke_evidence=smoke(s), manifest=boundaries(s))
++    assert extract.call_count == 2
++    assert s.model_dump() == before
++    assert all(call.args[0].source_units[0].source_id == "T0018" for call in extract.call_args_list)
++    assert candidate.total_items == 2
++    assert len({item.knowledge_id for item in candidate.get_all_items()}) == 2
++    assert all(item.source_unit_ids == ["T0018"] for item in candidate.get_all_items())
++    assert [row["outcome"] for row in records] == ["SUCCESS", "FAILED" if partial else "SUCCESS"]
++    assert recovery.finalize_status(candidate, records, {"items": []}, None, s) == (
++        "PARTIAL" if partial else "PENDING_REVIEW")
++
++
++def test_zero_items_and_unresolved_segments_never_report_recovered():
++    empty = knowledge()
++    empty.concepts = []
++    empty.update_statistics()
++    assert recovery.finalize_status(empty, [{"outcome": "SUCCESS"}], {"items": []}, {}, source()) == "FAILED"
++    assert recovery.finalize_status(knowledge(), [{"outcome": "NOT_ATTEMPTED"}],
++                                    {"items": []}, {}, source()) == "PARTIAL"
++
++
++def test_topic_review_required_for_recovered():
++    s, candidate = source(), knowledge("T0018")
++    _, report = recovery.review_items(candidate, s, knowledge(content="Other"),
++                                      review(candidate), canonical_id="T0018")
++    topic = {"review_fingerprint": recovery.fingerprint({
++                "candidate": candidate.model_dump(mode="json"), "source": s.model_dump(mode="json")}),
++             "complete": True, "source_reviewed_in_full": True, "reviewer": "tester", "unresolved_gaps": [],
++             "topics": [{"reason": "Covered", "knowledge_ids": ["CON_0001"],
++                         "source_id": "T0018", "source_quote": "First topic."}]}
++    assert recovery.finalize_status(candidate, [{"outcome": "SUCCESS"}], report, topic, s) == "RECOVERED"
++    topic["unresolved_gaps"] = ["Missing example"]
++    assert recovery.finalize_status(candidate, [{"outcome": "SUCCESS"}], report, topic, s) == "PENDING_REVIEW"
++
++
++def test_offline_runner_preserves_historical_inputs(tmp_path):
++    s = write(tmp_path / "sources.json", source().model_dump(mode="json"))
++    b = write(tmp_path / "base.json", knowledge(content="Other").model_dump(mode="json"))
++    t = write(tmp_path / "t17.json", knowledge().model_dump(mode="json"))
++    before = {path: path.read_bytes() for path in (s, b, t)}
++    with patch.object(recovery, "GroqProvider") as provider:
++        assert recovery.main(["--sources", str(s), "--base", str(b), "--t0017", str(t),
++                              "--output", str(tmp_path / "new")]) == 2
++        provider.assert_not_called()
++    assert all(path.read_bytes() == raw for path, raw in before.items())
++
++
++def test_all_real_t0017_items_validate_and_remain_individually_pending():
++    root = Path(__file__).resolve().parents[1]
++    original = root / "data/output/java_transcript_validation/validation_20261101_143618/recovered_T0017_20261101_153250.json"
++    base_dir = root / "data/output/complete_e2e_validation/validation_20261101_174430"
++    k = KnowledgeDocument.model_validate(recovery.load(original))
++    s = SourceDocument.model_validate(recovery.load(base_dir / "source_units.json"))
++    base = KnowledgeDocument.model_validate(recovery.load(base_dir / "knowledge_corrected_v2.json"))
++    raw = original.read_bytes()
++    decisions, report = recovery.review_items(k, s, base, canonical_id="T0017")
++    assert len(decisions) == report["items_checked"] == 23
++    assert all(decision.action == "pending" for decision in decisions)
++    assert original.read_bytes() == raw
++
++def test_direct_helper_also_enforces_smoke_and_no_fallback():
++    with patch("groq.Groq"):
++        provider = recovery.GroqProvider(api_key="test-only", use_multi_key=False)
++    bad = smoke(source())
++    bad["real_request"] = False
++    with patch.object(recovery.KnowledgeExtractor, "extract") as extract:
++        with pytest.raises(ValueError, match="BLOCKED"):
++            recovery.extract_t0018(source(), provider, smoke_evidence=bad)
++        extract.assert_not_called()
++    provider.model = "other-model"
++    with pytest.raises(ValueError, match="requires Groq"):
++        recovery.extract_t0018(source(), provider, smoke_evidence=smoke(source()))
++
++
++def test_exception_retains_completed_segment_results_and_marks_unattempted():
++    s = source()
++    with patch("groq.Groq"):
++        provider = recovery.GroqProvider(api_key="test-only", use_multi_key=False)
++    with patch.object(recovery.KnowledgeExtractor, "extract",
++                      side_effect=[result(), RuntimeError("controlled failure")]):
++        candidate, records = recovery.extract_t0018(
++            s, provider, smoke_evidence=smoke(s), manifest=boundaries(s))
++    assert candidate.total_items == 1
++    assert [row["outcome"] for row in records] == ["SUCCESS", "FAILED"]
++    recovery.validate_candidate(candidate, records, s)
++
++
++@pytest.mark.parametrize("tamper", ["text", "items", "accounting"])
++def test_replayed_candidate_evidence_is_validated(tamper):
++    s = source()
++    with patch("groq.Groq"):
++        provider = recovery.GroqProvider(api_key="test-only", use_multi_key=False)
++    with patch.object(recovery.KnowledgeExtractor, "extract", return_value=result()):
++        candidate, records = recovery.extract_t0018(s, provider, smoke_evidence=smoke(s))
++    recovery.validate_candidate(candidate, records, s)
++    if tamper == "text":
++        records[0]["text"] = "changed"
++    elif tamper == "items":
++        candidate.concepts[0].content = "Invented"
++    else:
++        records[0]["accounting"]["failed_roots"] = 1
++    with pytest.raises(ValueError, match="Candidate"):
++        recovery.validate_candidate(candidate, records, s)

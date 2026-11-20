@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-dec797e1-88bf-41c0-89a0-e59cbdcf5f73",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"openness in financial market\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When you have a dollar to invest financially, you can decide whether to invest in domestic assets or foreign assets.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"expected relative return\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"You need a sense of the expected relative return of domestic and foreign bonds to decide where to invest.\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What does \\\"openness in financial market\\\" allow an investor to decide?\",\n      \"answer\": \"Whether to invest in domestic assets or foreign assets\",\n      \"distractors\": [\n        \"Which currency to use for transactions\",\n        \"How much tax to pay on earnings\",\n        \"The level of government regulation\"\n      ],\n      \"explanation\": \"The primary excerpt states that openness in financial market means you can decide whether to invest in domestic assets or foreign assets when you have a dollar to invest financially.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"openness in financial market\",\n      \"refs\": [\"Q0001\"]\n    },\n    {\n      \"question\": \"According to the lecture, what is needed to compare a domestic bond with a foreign bond?\",\n      \"answer\": \"An expectation of the relative return of the two bonds\",\n      \"distractors\": [\n        \"The current exchange rate alone\",\n        \"The nominal interest rate of the domestic bond only\",\n        \"The political stability of the issuing country\"\n      ],\n      \"explanation\": \"The excerpt explains that to decide what to invest in, you need a sense of the expected relative return of the two bonds, not just the exchange rate.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"bond comparison\",\n      \"refs\": [\"Q0007\"]\n    },\n    {\n      \"question\": \"In the example given, what is the basic financial decision being illustrated?\",\n      \"answer\": \"Choosing between a domestic bond and a foreign bond\",\n      \"distractors\": [\n        \"Choosing between stocks and real estate\",\n        \"Choosing between saving and spending\",\n        \"Choosing between different currencies for travel\"\n      ],\n      \"explanation\": \"The speaker says, \\\"So suppose you have a domestic bond and a foreign bond,\\\" indicating the decision focuses on bond choice.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"investment options\",\n      \"refs\": [\"Q0004\"]\n    },\n    {\n      \"question\": \"Why is the current exchange rate alone insufficient for deciding between a domestic and a foreign bond?\",\n      \"answer\": \"Because it does not indicate the expected return on each bond\",\n      \"distractors\": [\n        \"Because exchange rates are always constant\",\n        \"Because bonds are not affected by exchange rates\",\n        \"Because investors only care about risk, not returns\"\n      ],\n      \"explanation\": \"The excerpt notes that having the current exchange rate does not mean much if you only know the price difference; you need the expected return.\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"exchange rate relevance\",\n      \"refs\": [\"Q0006\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc. From excerpts we have concept of openness in capital account, openness in financial market. So concept items.\n\nCreate item e.g., \"item1\". Provide concept_name and content.\n\nExtract content: \"openness in financial market means something very similar, which is now when you have a dollar to invest financially, invest, not physical investment, not real investment, well, you can decide whether to invest in domestic assets or foreign assets.\"\n\nAlso \"So suppose you have a domestic bond and a foreign bond.\"\n\nWe can make concept: \"openness in financial market\" with content describing choice between domestic and foreign assets.\n\nProvide rows.\n\nAlso maybe concept of expected relative return.\n\nBut need at least concept rows.\n\nQuiz: create 4 questions about teaching.\n\nLet's craft.\n\nNow output JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794769276,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_69dbc96c74",
+  "usage": {
+    "completion_tokens": 1199,
+    "prompt_tokens": 2869,
+    "total_tokens": 4068,
+    "completion_time": 2.541691716,
+    "completion_tokens_details": {
+      "reasoning_tokens": 166
+    },
+    "prompt_time": 0.163715123,
+    "prompt_tokens_details": null,
+    "queue_time": 0.054058375,
+    "total_time": 2.705406839
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g9bgfxekhvenpg5cagtzcg",
+    "debug": null,
+    "seed": 816908754,
+    "usage": null
+  }
+}

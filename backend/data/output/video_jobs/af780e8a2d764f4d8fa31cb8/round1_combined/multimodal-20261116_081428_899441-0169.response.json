@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-670ca1fc-e704-4591-82ec-2aec5d85b85e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Expansionary fiscal policy has no effect on the exchange rate.\",\n      \"refs\": [\"Q0010\", \"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"In an open economy the currency tends to appreciate.\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Raising interest rates requires a domestic reason.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what is the effect of an expansionary fiscal policy on the exchange rate?\",\n      \"answer\": \"No effect on the exchange rate\",\n      \"distractors\": [\n        \"It causes the exchange rate to appreciate\",\n        \"It causes the exchange rate to depreciate\",\n        \"It increases volatility of the exchange rate\"\n      ],\n      \"explanation\": \"The speaker explicitly states that expansionary fiscal policy does not move or affect the exchange rate (Q0010, Q0011).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Fiscal policy and exchange rate\",\n      \"refs\": [\"Q0010\"]\n    },\n    {\n      \"question\": \"What tends to happen to a currency in an open economy, according to the speaker?\",\n      \"answer\": \"The currency tends to appreciate\",\n      \"distractors\": [\n        \"The currency tends to depreciate\",\n        \"The currency remains unchanged\",\n        \"The currency becomes more volatile\"\n      ],\n      \"explanation\": \"The speaker notes that one effect in an open economy is that the currency will tend to appreciate (Q0004).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Open economy currency effect\",\n      \"refs\": [\"Q0004\"]\n    },\n    {\n      \"question\": \"According to the speaker, what is required to raise the interest rate?\",\n      \"answer\": \"A domestic reason\",\n      \"distractors\": [\n        \"International pressure\",\n        \"Monetary policy alone\",\n        \"A fiscal deficit\"\n      ],\n      \"explanation\": \"The speaker mentions that for whatever domestic reason, they need to raise the interest rate (Q0003).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Interest rate determinants\",\n      \"refs\": [\"Q0003\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? The excerpts talk about fiscal policy, interest rate, exchange rate. Could create facts. For example: \"Expansionary fiscal policy has no effect on exchange rate.\" That's a claim. Provide rows in facts category. Use primary excerpt Q0010 etc.\n\nWe'll create rows for fact_text. Provide item label e.g., \"item1\". Provide availability SOURCE_SUPPORTED? The text is directly quoted, so SOURCE_SUPPORTED. basis explicit. literal_kind verbal. instructional_role null. related_refs empty.\n\nCreate multiple rows for each distinct fact.\n\nAlso maybe concept: \"exchange rate\". concept_name \"exchange rate\". content from Q0010? Could be definition? Not defined. Might abstain.\n\nWe'll produce rows for facts:\n\n- Fact: Expansionary fiscal policy has no effect on exchange rate. (Q0010, Q0011)\n- Fact: In an open economy, currency tends to appreciate. (Q0004)\n- Fact: Raising interest rate is a domestic reason (maybe). Use Q0003.\n\nAdd quiz with 3 questions.\n\nQuestion1: According to the speaker, what is the effect of expansionary fiscal policy on exchange rate? Answer: No effect. Distractors: Causes appreciation, Causes depreciation, Increases volatility.\n\nProvide refs Q0010.\n\nBloom: Understand.\n\nQuestion2: What tends to happen to a currency in an open economy? Answer: It tends to appreciate. Distractors: It tends to depreciate, It remains unchanged, It becomes more volatile. Ref Q0004.\n\nQuestion3: According to the speaker, what is needed to raise interest rate? Answer: Domestic reason. Distractors: International pressure, Monetary policy alone, Fiscal deficit. Ref Q0003.\n\nProvide quiz array.\n\nAbstentions none. Excluded none.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794817245,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_19b184c447",
+  "usage": {
+    "completion_tokens": 1114,
+    "prompt_tokens": 2487,
+    "total_tokens": 3601,
+    "completion_time": 2.351444882,
+    "completion_tokens_details": {
+      "reasoning_tokens": 367
+    },
+    "prompt_time": 0.146924015,
+    "prompt_tokens_details": null,
+    "queue_time": 0.373572728,
+    "total_time": 2.4983688969999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hq3d81exarkhe5a9jkee52",
+    "debug": null,
+    "seed": 1978176129,
+    "usage": null
+  }
+}

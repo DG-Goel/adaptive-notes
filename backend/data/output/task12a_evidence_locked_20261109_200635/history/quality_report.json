@@ -1,0 +1,396 @@
+{
+  "educational_review": {
+    "field_review_queue": [
+      {
+        "knowledge_id": "FCT_0001",
+        "path": "/content",
+        "original_output": "In 1918, the treaty was signed.",
+        "source_ids": [
+          "S0"
+        ],
+        "evidence": [
+          {
+            "source_id": "S0",
+            "quote": "The treaty was signed in 1918.",
+            "fields": [
+              "/content"
+            ],
+            "match_count": 1,
+            "start_char": 0,
+            "end_char": 30,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ],
+        "classification": "requires_review",
+        "status": "NOT_REVIEWED",
+        "reviewer": null,
+        "rationale": "No semantic review performed",
+        "confirmed_defect": false,
+        "code_like": false,
+        "literal_code_form": false,
+        "literal_substring": false,
+        "risk": "HIGH",
+        "responsible_stage": "not_established",
+        "signals": {
+          "unsupported_numbers": [],
+          "possibly_lost_qualifiers": [],
+          "possible_contradiction": false
+        },
+        "automatic_signals_are_not_semantic_verification": true,
+        "safe_offline_action": "Use explicit reviewed field disposition; otherwise retain for review",
+        "manual_review_required": true,
+        "targeted_reextraction_required": null
+      },
+      {
+        "knowledge_id": "FCT_0001",
+        "path": "/fact_text",
+        "original_output": "In 1918, the treaty was signed.",
+        "source_ids": [
+          "S0"
+        ],
+        "evidence": [
+          {
+            "source_id": "S0",
+            "quote": "The treaty was signed in 1918.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 0,
+            "end_char": 30,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ],
+        "classification": "requires_review",
+        "status": "NOT_REVIEWED",
+        "reviewer": null,
+        "rationale": "No semantic review performed",
+        "confirmed_defect": false,
+        "code_like": false,
+        "literal_code_form": false,
+        "literal_substring": false,
+        "risk": "HIGH",
+        "responsible_stage": "not_established",
+        "signals": {
+          "unsupported_numbers": [],
+          "possibly_lost_qualifiers": [],
+          "possible_contradiction": false
+        },
+        "automatic_signals_are_not_semantic_verification": true,
+        "safe_offline_action": "Use explicit reviewed field disposition; otherwise retain for review",
+        "manual_review_required": true,
+        "targeted_reextraction_required": null
+      }
+    ],
+    "claim_reviews": [
+      {
+        "item_id": "FCT_0001",
+        "claim_text": "In 1918, the treaty was signed.",
+        "review_scope": "Item content only; other substantive fields require their own review",
+        "status": "NOT_REVIEWED",
+        "reviewer": null,
+        "rationale": "No semantic review performed",
+        "severity": "major",
+        "missing_evidence_or_qualification": null,
+        "supporting_sources": [
+          "S0"
+        ],
+        "quotations": [
+          "The treaty was signed in 1918.",
+          "The treaty was signed in 1918."
+        ],
+        "review": null
+      }
+    ],
+    "issues": [],
+    "readiness": "READY_FOR_MANUAL_REVIEW",
+    "semantic_certification": false
+  },
+  "publication_eligible": false,
+  "status": "UNVERIFIED_PREVIEW",
+  "gates": {
+    "extraction_completion": {
+      "outcome": "PASS",
+      "required": [
+        "offline"
+      ],
+      "completed": [
+        "offline"
+      ]
+    },
+    "structural_validity": {
+      "outcome": "PASS",
+      "missing_items": []
+    },
+    "semantic_faithfulness": {
+      "outcome": "NEEDS_REVIEW",
+      "mechanical_provenance": {
+        "valid": true,
+        "items_checked": 1,
+        "errors": []
+      },
+      "semantic_entailment_verified": false
+    },
+    "educational_completeness": {
+      "outcome": "NEEDS_REVIEW",
+      "source_units_without_primary_knowledge": [],
+      "topic_coverage": "NOT_EVALUATED"
+    },
+    "notes_usability": {
+      "outcome": "NEEDS_REVIEW",
+      "fallbacks": [],
+      "render_warnings": []
+    }
+  },
+  "source_coverage": {
+    "S0": [
+      "FCT_0001"
+    ]
+  },
+  "before": 1,
+  "after": 1,
+  "consolidation": {
+    "decisions": [
+      {
+        "action": "retain",
+        "original": "FCT_0001",
+        "target": "FCT_0001"
+      }
+    ],
+    "original_ids": {
+      "FCT_0001": [
+        "FCT_0001"
+      ]
+    },
+    "id_normalization": [
+      {
+        "artifact_id": "consolidation",
+        "category": "facts",
+        "item_index": 0,
+        "old_id": "FCT_0001",
+        "new_id": "FCT_0001",
+        "content_fingerprint": "d808e8752e688d25b0be85225115f0507292aefa98fea8517d889367383d8b7f",
+        "reason": "preserved"
+      }
+    ],
+    "review_pairs": []
+  },
+  "representation_distribution": {
+    "standard_text": 1
+  },
+  "knowledge_quality": {
+    "supported": null,
+    "partially_supported": null,
+    "unsupported": null,
+    "contradicted": null,
+    "inconclusive": 1
+  },
+  "examples_preserved": 0,
+  "original_knowledge": [
+    {
+      "id": "FCT_0001",
+      "sources": [
+        "S0"
+      ],
+      "fields": {
+        "content": "In 1918, the treaty was signed.",
+        "fact_text": "In 1918, the treaty was signed.",
+        "fact_type": null
+      },
+      "metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "S0",
+              "quote": "The treaty was signed in 1918.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 0,
+              "end_char": 30,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "S0",
+              "quote": "The treaty was signed in 1918.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 0,
+              "end_char": 30,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "In 1918, the treaty was signed.",
+              "claims": [
+                {
+                  "text": "In 1918, the treaty was signed.",
+                  "refs": [
+                    "Q0000"
+                  ],
+                  "basis": "direct_entailment",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": null,
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "S0",
+                      "quote": "The treaty was signed in 1918."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "In 1918, the treaty was signed.",
+              "claims": [
+                {
+                  "text": "In 1918, the treaty was signed.",
+                  "refs": [
+                    "Q0000"
+                  ],
+                  "basis": "direct_entailment",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": null,
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "S0",
+                      "quote": "The treaty was signed in 1918."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "In 1918, the treaty was signed.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "direct_entailment",
+                    "literal_kind": null,
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "The treaty was signed in 1918."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "S0",
+                        "quote": "The treaty was signed in 1918.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 0,
+                        "end_char": 30,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "In 1918, the treaty was signed.",
+                "preview_text": "In 1918, the treaty was signed.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "In 1918, the treaty was signed.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "direct_entailment",
+                    "literal_kind": null,
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "The treaty was signed in 1918."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "S0",
+                        "quote": "The treaty was signed in 1918.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 0,
+                        "end_char": 30,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "In 1918, the treaty was signed.",
+                "preview_text": "In 1918, the treaty was signed.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        }
+      },
+      "suppressed_fields": [],
+      "original_ids": [
+        "FCT_0001"
+      ]
+    }
+  ],
+  "manual_review_required": true,
+  "coverage_dimensions": {
+    "primary_sources_with_items": 1,
+    "primary_sources_total": 1,
+    "accepted_items_before_consolidation": 1,
+    "items_after_consolidation": 1,
+    "rendered_item_ids": 1,
+    "knowledge_ids_missing_from_render": [],
+    "examples_in_audit": 0,
+    "procedures_in_audit": 0,
+    "topic_coverage": "NOT_EVALUATED",
+    "nonquotable_sources": [],
+    "student_fields_withheld_for_review": []
+  },
+  "ingestion": {},
+  "generation_abstentions": []
+}

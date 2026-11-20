@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-6530a085-568c-406f-9f31-ec496d48162c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"add another array here, let's say one, two, three, then comma, now we add the second row, which is another array.\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"add another array here, let's say one, two, three, then comma, now we add the second row, which is another array.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In this row we're going to have three numbers, 4, 5, and 6.\",\n        \"refs\": [\"Q0001\"],\n        \"claims\": [\n          {\n            \"text\": \"In this row we're going to have three numbers, 4, 5, and 6.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0001\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Now let's remove this line, we don't need it anymore, and print this array, so, here's the end result.\",\n        \"refs\": [\"Q0002\"],\n        \"claims\": [\n          {\n            \"text\": \"Now let's remove this line, we don't need it anymore, and print this array, so, here's the end result.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0002\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"You have learned a lot about variables, you have learned that when declaring them, we need to initialize them, and we can always change their value later on throughout the lifetime of our programs.\",\n        \"refs\": [\"Q0003\"],\n        \"claims\": [\n          {\n            \"text\": \"You have learned a lot about variables, you have learned that when declaring them, we need to initialize them, and we can always change their value later on throughout the lifetime of our programs.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0003\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"However, there are times that we don't want the value of a variable to change.\",\n        \"refs\": [\"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"However, there are times that we don't want the value of a variable to change.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"For example, let's declare a variable called pi, and set it to 3.14.\",\n        \"refs\": [\"Q0005\"],\n        \"claims\": [\n          {\n            \"text\": \"For example, let's declare a variable called pi, and set it to 3.14.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0005\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce facts from primary teaching. Extract statements.\n\nExcerpts content: about arrays, rows, numbers, removing line, printing array, variables init, immutable desire, example pi.\n\nCreate items with fact_text text and claims. Each claim basis explicit, availability SOURCE_SUPPORTED? Since primary source present. literal_kind verbal. instructional_role maybe explanation_of_mistake? No. Just teaching statements. Use null for instructional_role? Could be prerequisite or explanation. We'll set null.\n\nProvide refs list containing the excerpt ref.\n\nCreate one fact per excerpt.\n\nAlso abstentions none, excluded none.\n\nReturn schema.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794319975,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c800245357",
+  "usage": {
+    "completion_tokens": 1029,
+    "prompt_tokens": 2031,
+    "total_tokens": 3060,
+    "completion_time": 3.067105131,
+    "completion_tokens_details": {
+      "reasoning_tokens": 121
+    },
+    "prompt_time": 1.229885492,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "queue_time": 0.293455851,
+    "total_time": 4.296990623
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72wvw7bec7tc4drk13s8pnf",
+    "debug": null,
+    "seed": 1779385882,
+    "usage": null
+  }
+}

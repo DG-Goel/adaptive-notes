@@ -1,0 +1,321 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "CON_0025"
+      ],
+      "reason": "Invalid diagram direction"
+    },
+    {
+      "note_ids": [
+        "CON_0033"
+      ],
+      "reason": "Unsupported visual label or value"
+    },
+    {
+      "note_ids": [
+        "CON_0048"
+      ],
+      "reason": "Unsupported visual label or value"
+    },
+    {
+      "note_ids": [
+        "CON_0039",
+        "FCT_0053"
+      ],
+      "reason": "Invalid diagram direction"
+    },
+    {
+      "note_ids": [
+        "FCT_0006"
+      ],
+      "reason": "Unsupported visual label or value"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Multiplier Process Flow",
+      "source_segment_ids": [
+        "CON_0025"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0025"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "CON_0025",
+              "exact_quote": "Multiplier is the process where an increase in income raises consumption, which raises income again, creating a chain of effects."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Multiplier Process",
+            "direction": "left_to_right",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "Increase in Income"
+              },
+              {
+                "id": "n2",
+                "label": "Higher Consumption"
+              },
+              {
+                "id": "n3",
+                "label": "Further Income Increase"
+              },
+              {
+                "id": "n4",
+                "label": "Continues Cycle"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": "raises"
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": "raises"
+              },
+              {
+                "from": "n3",
+                "to": "n4",
+                "label": "creates"
+              },
+              {
+                "from": "n4",
+                "to": "n1",
+                "label": "feeds back"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Open vs Closed Economy Multiplier Comparison",
+      "source_segment_ids": [
+        "CON_0033"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0033"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "CON_0033",
+              "exact_quote": "In an open economy the output multiplier is smaller than in a closed economy because part of the additional demand leaks to foreign goods."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Multiplier Size by Economy Type",
+            "headers": [
+              "Economy Type",
+              "Multiplier Size"
+            ],
+            "rows": [
+              [
+                "Closed Economy",
+                "Larger"
+              ],
+              [
+                "Open Economy",
+                "Smaller"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Trade Balance Definition",
+      "source_segment_ids": [
+        "CON_0048"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0048"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "CON_0048",
+              "exact_quote": "The trade balance is the difference between the demand for domestic goods (DD curve) and the domestic demand for goods (ZZ curve), i.e., net exports equal ZZ minus DD."
+            }
+          ],
+          "payload": {
+            "type": "architecture",
+            "title": "Trade Balance Components",
+            "direction": "vertical",
+            "components": [
+              {
+                "id": "c1",
+                "label": "DD Curve (Demand for Domestic Goods)"
+              },
+              {
+                "id": "c2",
+                "label": "ZZ Curve (Domestic Demand for Goods)"
+              },
+              {
+                "id": "c3",
+                "label": "Net Exports = ZZ - DD"
+              }
+            ],
+            "connections": [
+              {
+                "from": "c1",
+                "to": "c3",
+                "label": "subtract"
+              },
+              {
+                "from": "c2",
+                "to": "c3",
+                "label": "subtract"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Effect of Currency Depreciation on Net Exports",
+      "source_segment_ids": [
+        "CON_0039",
+        "FCT_0053"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0039",
+            "FCT_0053"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "CON_0039",
+              "exact_quote": "When the exchange rate is depreciated, the net export function shifts upward."
+            },
+            {
+              "note_id": "FCT_0053",
+              "exact_quote": "Depreciating the exchange rate moves the net export function up."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Depreciation → Net Export Shift",
+            "direction": "top_to_bottom",
+            "nodes": [
+              {
+                "id": "d1",
+                "label": "Currency Depreciation"
+              },
+              {
+                "id": "d2",
+                "label": "Net Export Function"
+              },
+              {
+                "id": "d3",
+                "label": "Upward Shift"
+              },
+              {
+                "id": "d4",
+                "label": "Higher Net Exports"
+              }
+            ],
+            "edges": [
+              {
+                "from": "d1",
+                "to": "d2",
+                "label": "affects"
+              },
+              {
+                "from": "d2",
+                "to": "d3",
+                "label": "moves"
+              },
+              {
+                "from": "d3",
+                "to": "d4",
+                "label": "results in"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Sequence of Policy Effects: Depreciation and Government Spending",
+      "source_segment_ids": [
+        "FCT_0006"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0006"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0006",
+              "exact_quote": "A typical policy package pairs currency depreciation with reduced government expenditure."
+            }
+          ],
+          "payload": {
+            "type": "sequence",
+            "title": "Policy Package Timeline",
+            "participants": [
+              {
+                "id": "p1",
+                "label": "Policy Makers"
+              },
+              {
+                "id": "p2",
+                "label": "Economy"
+              }
+            ],
+            "events": [
+              {
+                "kind": "action",
+                "from": "p1",
+                "to": "p2",
+                "text": "Depreciate currency"
+              },
+              {
+                "kind": "action",
+                "from": "p1",
+                "to": "p2",
+                "text": "Reduce government expenditure"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

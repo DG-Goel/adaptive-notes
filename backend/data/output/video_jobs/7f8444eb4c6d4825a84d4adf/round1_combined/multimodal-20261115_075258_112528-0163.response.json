@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-70de6a94-a34a-40cd-8e62-ca4a32f978f7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit concept name or content is provided in the excerpts.\",\n      \"source_ids\": [\"G00025\"]\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No term and definition pair is present in the excerpts.\",\n      \"source_ids\": [\"G00025\"]\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Excerpts contain brief statements but lack a structured explanation of a topic.\",\n      \"source_ids\": [\"G00025\"]\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No concrete example illustrating a concept is given.\",\n      \"source_ids\": [\"G00025\"]\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Excerpts do not present verifiable factual statements with supporting context.\",\n      \"source_ids\": [\"G00025\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No formula text is present in the excerpts.\",\n      \"source_ids\": [\"G00025\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No procedural steps or named procedure are described.\",\n      \"source_ids\": [\"G00025\"]\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit relationship between defined subjects and objects is provided.\",\n      \"source_ids\": [\"G00025\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"FAIL: The provided source excerpts do not contain sufficient educational content to generate four distinct short‑answer questions.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"All excerpts are brief, fragmented statements lacking clear concepts, definitions, explanations, examples, facts, formulas, procedures, or relationships needed to form supported quiz items.\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0000\"],\n      \"topic\": \"insufficient_content\"\n    },\n    {\n      \"question\": \"FAIL: The source does not define any term that can be asked about.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"No term‑definition pair appears in the excerpts, so a definition‑based question cannot be created.\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0001\"],\n      \"topic\": \"missing_definition\"\n    },\n    {\n      \"question\": \"FAIL: The source does not present a complete example to query.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"Excerpts lack concrete examples illustrating a principle, preventing an example‑based question.\",\n      \"bloom_level\": \"Understand\",\n      \"refs\": [\"Q0003\"],\n      \"topic\": \"missing_example\"\n    },\n    {\n      \"question\": \"FAIL: The source does not contain a formula or procedural steps for an application question.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"Without a formula or step‑by‑step procedure, an application‑level question cannot be supported.\",\n      \"bloom_level\": \"Apply\",\n      \"refs\": [\"Q0005\"],\n      \"topic\": \"missing_formula_or_procedure\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows etc but source only has vague statements. Likely cannot form concepts etc. So we must abstain for required fields. Provide abstentions for each category maybe. And need quiz of 4 questions but source cannot support? Likely fail. Must explicitly fail.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794729919,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_47082602e2",
+  "usage": {
+    "completion_tokens": 831,
+    "prompt_tokens": 2432,
+    "total_tokens": 3263,
+    "completion_time": 1.736842605,
+    "completion_tokens_details": {
+      "reasoning_tokens": 58
+    },
+    "prompt_time": 0.122147724,
+    "prompt_tokens_details": null,
+    "queue_time": 0.307804251,
+    "total_time": 1.858990329
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f3tenneepvr5h4erp70vbb",
+    "debug": null,
+    "seed": 136802572,
+    "usage": null
+  }
+}

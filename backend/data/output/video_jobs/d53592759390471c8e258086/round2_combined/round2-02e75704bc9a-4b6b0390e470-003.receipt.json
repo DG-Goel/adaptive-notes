@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-6b9f80c6-f754-4dc5-9e87-0d22db679ad2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Interest Rate Differential and Exchange Rate Outcomes\",\n      \"source_segment_ids\": [\"CON_0029\", \"FCT_0062\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"type\": \"table\",\n          \"source_segment_ids\": [\"CON_0029\", \"FCT_0062\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0029\",\n              \"exact_quote\": \"If the domestic interest rate is above that, the international interest rate, then the exchange rate today has to be above the expected exchange rate, because that will give you a expected depreciation of the currency, which will compensate for the fact that the domestic bond is paying a higher interest rate than international bond.\"\n            },\n            {\n              \"note_id\": \"FCT_0062\",\n              \"exact_quote\": \"Conversely, if the domestic bond is paying a lower interest rate, then the exchange rate today is very depreciated, because you have to expect it to appreciate in order to compensate for the interest rate differential.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Interest Rate Differential vs Exchange Rate\",\n            \"headers\": [\"Domestic Rate vs Intl.\", \"Exchange Rate Today\", \"Expected Movement\", \"Resulting Effect\"],\n            \"rows\": [\n              {\n                \"cells\": [\n                  \"Domestic > International\",\n                  \"Above expected exchange rate\",\n                  \"Expected depreciation\",\n                  \"Compensates higher domestic interest\"\n                ]\n              },\n              {\n                \"cells\": [\n                  \"Domestic < International\",\n                  \"Very depreciated\",\n                  \"Expected appreciation\",\n                  \"Compensates lower domestic interest\"\n                ]\n              }\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to find visual candidates. Look for comparisons etc. We have statements about interest rate vs exchange rate, fiscal policy effects, etc. Could make a table comparing scenarios: domestic interest higher vs lower, effect on exchange rate. Also table for fiscal policy impact. Use evidence quotes.\n\nIdentify notes with evidence quotes. Use primary notes that contain exact quotes. For table rows need one exact evidence quote containing all cells. We can combine? Each row must have one exact quote containing all its cells. Might be tricky. Use separate rows each with its own quote.\n\nWe have quote in CON_0029 (unresolved but has excerpt). It contains both scenarios? It mentions both higher and lower interest. Could split? Might use two rows from same quote? Might be okay if each row uses same quote but contains relevant cells. Probably acceptable.\n\nCreate unit with table visual.\n\nProvide source_segment_ids list of involved notes: CON_0029, maybe FCT_0062? That also has excerpt about lower interest rate. Use both.\n\nConstruct table: Scenario, Domestic Interest vs International, Exchange Rate Today, Expected Movement, Effect.\n\nRow1: \"if the domestic interest rate is above ... exchange rate today has to be above the expected exchange rate, because that will give you a expected depreciation...\" (CON_0029)\n\nRow2: \"Conversely, if the domestic bond is paying a lower interest rate, then the exchange rate today is very depreciated, because you have to expect it to appreciate...\" (FCT_0062)\n\nProvide evidence objects.\n\nReturn JSON with units list containing one unit.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794733307,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_60e4b492db",
+  "usage": {
+    "completion_tokens": 728,
+    "prompt_tokens": 2544,
+    "total_tokens": 3272,
+    "completion_time": 1.5277445950000001,
+    "completion_tokens_details": {
+      "reasoning_tokens": 323
+    },
+    "prompt_time": 0.123136691,
+    "prompt_tokens_details": null,
+    "queue_time": 0.246886525,
+    "total_time": 1.650881286
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f71w4weqasxkh980ee31rj",
+    "debug": null,
+    "seed": 1083360217,
+    "usage": null
+  }
+}

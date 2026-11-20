@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-31cf91a2-d8bb-4181-be0a-6031614ae5d0",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"text\": \"The expected exchange rate moved to the right.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": [],\n      \"item\": \"fact1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\"\n    },\n    {\n      \"text\": \"This curve will shift to the right.\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": [],\n      \"item\": \"fact2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\"\n    },\n    {\n      \"text\": \"This is not a parameter here, so this is not moving.\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": [],\n      \"item\": \"fact3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\"\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00042\"],\n      \"reason\": \"No explicit concept name or alias provided in excerpts.\"\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00042\"],\n      \"reason\": \"No term-definition pair present.\"\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00042\"],\n      \"reason\": \"No explanatory passage beyond brief statements.\"\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00042\"],\n      \"reason\": \"No illustrative example format identified.\"\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00042\"],\n      \"reason\": \"No formula text available.\"\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00042\"],\n      \"reason\": \"No procedural steps described.\"\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00042\"],\n      \"reason\": \"No explicit subject‑object relationship stated.\"\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What happened to the expected exchange rate?\",\n      \"answer\": \"It moved to the right.\",\n      \"explanation\": \"The speaker states that the expected exchange rate moved to the right (Q0000).\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0000\"],\n      \"topic\": \"expected exchange rate movement\"\n    },\n    {\n      \"question\": \"Why does the curve shift to the right according to the speaker?\",\n      \"answer\": \"Because moving the current exchange rate causes the curve to shift.\",\n      \"explanation\": \"The speaker explains that moving the exchange rate makes the curve shift right (Q0002).\",\n      \"bloom_level\": \"Understand\",\n      \"refs\": [\"Q0002\"],\n      \"topic\": \"curve shift reasoning\"\n    },\n    {\n      \"question\": \"If the current exchange rate is moved by the same amount, what is the effect on expected capital gain or loss?\",\n      \"answer\": \"There is no expected capital gain or loss.\",\n      \"explanation\": \"The speaker says moving the exchange rate by the same amount avoids generating expected capital gain or loss (Q0001).\",\n      \"bloom_level\": \"Apply\",\n      \"refs\": [\"Q0001\"],\n      \"topic\": \"expected capital gain/loss\"\n    },\n    {\n      \"question\": \"Which curve does not move, and why, as indicated by the speaker?\",\n      \"answer\": \"The parameter curve does not move because it is not a parameter in this context.\",\n      \"explanation\": \"The speaker notes that this is not a parameter here, so it does not move (Q0007).\",\n      \"bloom_level\": \"Analyze\",\n      \"refs\": [\"Q0007\"],\n      \"topic\": \"non‑moving parameter curve\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? The excerpts are dialogue about curves shifting right, exchange rate moves, etc. Likely concept: \"expected exchange rate moves right\" and \"curve shift\". We can create facts rows.\n\nWe need required fields for each category we include. Could include facts: fact_text from Q0000 etc.\n\nCreate rows for facts category: each fact_text claim.\n\nProvide item label e.g., \"item1\". Each row needs all fields.\n\nWe'll make three fact rows maybe. Need at least one row per required field of each item. We'll just have one item with facts? But each fact is separate row, same item? Could use same item \"fact1\" etc.\n\nSimplify: create three rows, each fact.\n\nAlso need abstentions for missing categories like concepts etc. Provide abstention for concepts category unavailable.\n\nQuiz: need four questions based on primary chunks. We have content about exchange rate moving right, curve shift, parameter not moving. Form questions.\n\nProvide quiz array with 4 items.\n\nNow construct rows.\n\nRow example:\n\n{\n\"text\":\"The expected exchange rate moved to the right.\",\n\"refs\":[\"Q0000\"],\n\"basis\":\"explicit\",\n\"availability\":\"SOURCE_SUPPORTED\",\n\"literal_kind\":\"verbal\",\n\"instructional_role\":null,\n\"related_refs\":[],\n\"item\":\"fact1\",\n\"category\":\"facts\",\n\"field\":\"fact_text\",\n\"element\":0,\n\"part\":\"value\"\n}\n\nSimilarly for Q0002: \"This curve will shift to the right.\"\n\nQ0007: \"This is not a parameter here, so this is not moving.\"\n\nProvide abstentions for concepts, definitions, explanations, examples, formulas, procedures, relationships.\n\nQuiz questions:\n\n1. Remember: What happened to the expected exchange rate? Answer: It moved to the right. refs Q0000.\n\n2. Understand: Why does the curve shift to the right? Answer: Because moving the exchange rate causes the curve to shift. refs Q0002.\n\n3. Apply: If you move the current exchange rate by a certain amount, what happens to expected capital gain/loss? Answer: It remains zero (no expected gain/loss). refs Q0001.\n\n4. Analyze: Which curve does not move according to the speaker and why? Answer: The parameter curve does not move because it is not a parameter here. refs Q0007.\n\nProvide explanations.\n\nNow output JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794730314,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4727af4560",
+  "usage": {
+    "completion_tokens": 1521,
+    "prompt_tokens": 2450,
+    "total_tokens": 3971,
+    "completion_time": 3.177482596,
+    "completion_tokens_details": {
+      "reasoning_tokens": 489
+    },
+    "prompt_time": 0.105779488,
+    "prompt_tokens_details": null,
+    "queue_time": 0.161882841,
+    "total_time": 3.283262084
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f46f2mebts9wgs6vnas7ha",
+    "debug": null,
+    "seed": 475907396,
+    "usage": null
+  }
+}

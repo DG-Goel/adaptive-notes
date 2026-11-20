@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-bf879d84-fc46-42b8-8fa2-94161650ec23",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Comparison of US and UK Bond Returns with Expected Currency Movements\",\n      \"source_segment_ids\": [\"CON_0017\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0017\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0017\",\n              \"quote\": \"And then I say, well, I'm going to get 10% in pounds directly, and if I go the US way, I'm going to get 5%, but I'm going to get also 5% in the currency appreciation.\"\n            },\n            {\n              \"note_id\": \"CON_0017\",\n              \"quote\": \"If I do it in dollars, I say I'm going to get 5% either way, in best interacting dollars, or the UK pound, because in the UK bond, in the UK bond, I'm going to get 10%, and then lose 5% because of the currency.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"US vs UK Bond Returns\",\n            \"headers\": [\"Investment\", \"Nominal Return\", \"Currency Effect\", \"Net Return\"],\n            \"rows\": [\n              [\"US Bond (dollar)\", \"5%\", \"+5% appreciation\", \"10%\"],\n              [\"UK Bond (pound)\", \"10%\", \"-5% depreciation\", \"5%\"]\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Equilibrium Condition for Interest Parity\",\n      \"source_segment_ids\": [\"CON_0017\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0017\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0017\",\n              \"quote\": \"In equilibrium, the two are going to be the same once you adjust for the expected appreciation of depreciation of the currency.\"\n            },\n            {\n              \"note_id\": \"CON_0017\",\n              \"quote\": \"And the only way that's going to be in equilibrium is that if we all suspect the dollar to appreciate by 5%.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Interest Parity Equilibrium\",\n            \"direction\": \"DOWN\",\n            \"nodes\": [\n              {\"id\": \"n1\", \"label\": \"Expect dollar appreciation 5%\"},\n              {\"id\": \"n2\", \"label\": \"Adjust returns for currency\"},\n              {\"id\": \"n3\", \"label\": \"US and UK returns equal\"}\n            ],\n            \"edges\": [\n              {\"from\": \"n1\", \"to\": \"n2\", \"label\": \"leads to\"},\n              {\"from\": \"n2\", \"to\": \"n3\", \"label\": \"results in\"}\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visual units. Look for comparisons: interest parity examples comparing returns. Could make table: Item (Investment), Return, Currency effect. Evidence quotes exist. Use table.\n\nAlso maybe flowchart of equilibrium condition? Might be process: if dollar expected to appreciate 5% then returns equal. Could be flowchart.\n\nWe need source_segment_ids: earliest note IDs in primary chunk supporting each visual. Primary chunk is primary dict. Use note IDs like CON_0017 etc.\n\nPick table comparing US bond vs UK bond returns with currency appreciation. Evidence from CON_0017 excerpts.\n\nRows need exact quote containing all cells. Need a quote that includes both items? Might be separate quotes per row. Each row must have one exact evidence quote containing all its cells. Might be tricky. Could use two rows each with its own quote.\n\nRow1: US bond return 5% plus 5% appreciation = 10%? Quote: \"And then I say, well, I'm going to get 10% in pounds directly, and if I go the US way, I'm going to get 5%, but I'm going to get also 5% in the currency appreciation.\" That contains US way 5% + 5% appreciation = 10%? Might be okay.\n\nRow2: UK bond 10% minus 5% depreciation = 5%? Quote: \"If I do it in dollars, I say I'm going to get 5% either way, in best interacting dollars, or the UK pound, because in the UK bond, in the UK bond, I'm going to get 10%, and then lose 5% because of the currency\". Contains 10% and lose 5%.\n\nThus table with columns: Investment, Nominal Return, Currency Effect, Net Return.\n\nProvide rows with values.\n\nCreate visual payload type table.\n\nUnit mode text_and_visual? Since we must not emit text_only, but remaining_text null. So mode visual_only.\n\nProvide unit with source_segment_ids list of involved note IDs: CON_0017.\n\nProvide evidence entries with note_id and quote.\n\nReturn JSON with units array.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794769954,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 1105,
+    "prompt_tokens": 3259,
+    "total_tokens": 4364,
+    "completion_time": 2.2946916760000002,
+    "completion_tokens_details": {
+      "reasoning_tokens": 432
+    },
+    "prompt_time": 0.161216756,
+    "prompt_tokens_details": null,
+    "queue_time": 0.318349583,
+    "total_time": 2.455908432
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ga0762etj9hr92pk1gae2j",
+    "debug": null,
+    "seed": 582730101,
+    "usage": null
+  }
+}

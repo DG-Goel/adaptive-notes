@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-4d5dd381-f4d1-48e5-bef2-68bbad82cbc8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"uncovered interest parity condition\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"That's called, and it's a very important concept in international finance, the uncovered interest parity condition.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What does the uncovered interest parity condition imply about investors in equilibrium?\",\n      \"answer\": \"Investors must be indifferent between holding domestic and foreign bonds.\",\n      \"distractors\": [\n        \"Investors will always prefer the bond with the higher nominal interest rate.\",\n        \"Investors must hold only domestic bonds to avoid currency risk.\",\n        \"Investors should convert all assets into the currency with the lower interest rate.\"\n      ],\n      \"explanation\": \"The primary excerpt states that in equilibrium investors have to be indifferent between investing in one bond or the other (Q0004).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"uncovered interest parity condition\",\n      \"refs\": [\"Q0004\"]\n    },\n    {\n      \"question\": \"According to the speaker, what is the uncovered interest parity condition?\",\n      \"answer\": \"A very important concept in international finance.\",\n      \"distractors\": [\n        \"A minor technical detail in domestic monetary policy.\",\n        \"A rule governing only short‑term government securities.\",\n        \"An outdated theory no longer used in modern finance.\"\n      ],\n      \"explanation\": \"The speaker explicitly calls it \\\"a very important concept in international finance\\\" (Q0000).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"uncovered interest parity condition\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"Which mathematical technique does the speaker mention for approximating terms in the uncovered interest parity condition?\",\n      \"answer\": \"Taylor expansion\",\n      \"distractors\": [\n        \"Fourier analysis\",\n        \"Monte Carlo simulation\",\n        \"Linear regression\"\n      ],\n      \"explanation\": \"The speaker refers to \\\"that kind of approximation, Taylor expansion when these terms are small\\\" (Q0007).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"uncovered interest parity condition\",\n      \"refs\": [\"Q0007\"]\n    },\n    {\n      \"question\": \"If the U.S. interest rate is lower than the U.K. interest rate, under the uncovered interest parity condition the U.S. dollar must:\",\n      \"answer\": \"Be expected to appreciate.\",\n      \"distractors\": [\n        \"Depreciate at the same rate as the interest differential.\",\n        \"Remain unchanged regardless of interest differentials.\",\n        \"Be expected to depreciate.\"\n      ],\n      \"explanation\": \"The speaker explains that a lower U.S. rate is acceptable if the dollar is expected to appreciate (Q0010).\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"uncovered interest parity condition\",\n      \"refs\": [\"Q0010\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc. From excerpts we have concept: uncovered interest parity condition. So concept item. Provide concept_name and content. Use primary excerpts. Provide rows.\n\nAlso maybe definition? term \"uncovered interest parity condition\". Could be definition but no explicit definition. So maybe concept only.\n\nCreate item id e.g. \"item1\". Rows:\n\nconcept_name text \"uncovered interest parity condition\" refs Q0000 etc basis explicit availability SOURCE_SUPPORTED literal_kind verbal part value element0 field concept_name.\n\ncontent: description from Q0000 and Q0004 etc. Use combined? Provide one row content with text from Q0000 and Q0004? Need primary excerpt. Use Q0000 for definition of concept. Content maybe \"the uncovered interest parity condition is a very important concept in international finance\". Use that.\n\nAdd quiz: need 4 questions if possible. We have info about meaning: investors indifferent, approximation, etc. Create 4 MCQs.\n\nProvide refs primary.\n\nNow construct JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794763703,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_df9620fe21",
+  "usage": {
+    "completion_tokens": 1020,
+    "prompt_tokens": 2814,
+    "total_tokens": 3834,
+    "completion_time": 2.156545574,
+    "completion_tokens_details": {
+      "reasoning_tokens": 207
+    },
+    "prompt_time": 0.126952394,
+    "prompt_tokens_details": null,
+    "queue_time": 0.285710391,
+    "total_time": 2.283497968
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g41f2sekea0jtt6btw0yrn",
+    "debug": null,
+    "seed": 1608711653,
+    "usage": null
+  }
+}

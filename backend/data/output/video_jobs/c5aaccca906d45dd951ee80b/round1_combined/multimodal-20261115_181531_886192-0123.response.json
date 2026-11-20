@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-9d46908e-fc5c-4e70-be98-1ff0a6f8b9c2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"short_run\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"short run\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"short_run\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"45-degree line because in the short run equilibrium output is equal to aggregate demand.\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"domestic_production\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Domestic production (y) is equal to demand for domestic goods.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"aggregate_demand\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Aggregate demand refers to demand for domestically produced goods.\",\n      \"refs\": [\"Q0007\", \"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"ZZ_curve\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"ZZ curve\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"ZZ_curve\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Used to represent aggregate demand for domestically produced goods.\",\n      \"refs\": [\"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, domestic production (y) equals what?\",\n      \"answer\": \"Demand for domestic goods\",\n      \"distractors\": [\n        \"Total output of the economy\",\n        \"Imports of foreign goods\",\n        \"Exports of domestically produced goods\"\n      ],\n      \"explanation\": \"The excerpt states that domestic production, y, is equal to demand for domestic goods (Q0000).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Domestic production\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"Why does the speaker use the ZZ curve instead of the DD curve?\",\n      \"answer\": \"Because aggregate demand is for domestically produced goods\",\n      \"distractors\": [\n        \"Because the ZZ curve shows supply\",\n        \"Because the DD curve represents foreign demand\",\n        \"Because the ZZ curve is easier to draw\"\n      ],\n      \"explanation\": \"The speaker says the reason for using ZZ is that aggregate demand is for domestically produced goods (Q0008).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"ZZ curve usage\",\n      \"refs\": [\"Q0008\"]\n    },\n    {\n      \"question\": \"In the short‑run equilibrium described, output is equal to what?\",\n      \"answer\": \"Aggregate demand\",\n      \"distractors\": [\n        \"Potential output\",\n        \"The supply curve\",\n        \"Consumer spending only\"\n      ],\n      \"explanation\": \"The speaker notes that in the short‑run equilibrium output equals aggregate demand (Q0005).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Short‑run equilibrium\",\n      \"refs\": [\"Q0005\"]\n    },\n    {\n      \"question\": \"What does the speaker mean by calling the model \\\"demand‑determined\\\"?\",\n      \"answer\": \"Output is set by aggregate demand in the short run\",\n      \"distractors\": [\n        \"Supply determines output in the long run\",\n        \"Government policy determines output\",\n        \"Technology determines output\"\n      ],\n      \"explanation\": \"The excerpt labels the model as \\\"demand‑determined,\\\" indicating that in the short run output is determined by demand (Q0001).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Demand‑determined model\",\n      \"refs\": [\"Q0001\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? Probably concept: short run equilibrium, aggregate demand, ZZ curve. Create items.\n\nWe'll make one item \"short_run_equilibrium\". Provide concept_name and content.\n\nRows: concept_name from Q0002? \"short run\". content from Q0002 and Q0005.\n\nAlso definition? maybe term \"aggregate demand\". definition not given. So abstention for definitions.\n\nCreate rows for concepts.\n\nAlso maybe fact: domestic production equals demand for domestic goods (Q0000). Fact row.\n\nProceed.\n\nQuiz: four questions about teaching. Use excerpts.\n\nQ1: What does the speaker say domestic production (y) equals? Answer: demand for domestic goods. Distractors: total output, imports, exports. Bloom: Understand.\n\nQ2: What is the reason for using ZZ curve instead of DD? Answer: because aggregate demand is for domestically produced goods. Distractors etc.\n\nQ3: In short run equilibrium output equals what? Answer: aggregate demand. Distractors: potential output, supply curve, consumption.\n\nQ4: What does the speaker describe as a \"demand-determined model\"? Answer: short run model where output is set by demand. Distractors.\n\nProvide refs primary.\n\nNow construct rows.\n\nRow1 concept: item \"short_run\". field concept_name element0 part value text \"short run\". refs Q0002. basis explicit availability SOURCE_SUPPORTED literal_kind verbal instructional_role null related_refs [].\n\nRow2 concept content element0 part value text from Q0002 and Q0005 maybe combine? Need one row per claim. Use Q0005: \"45-degree line because in the short run equilibrium output is equal to aggregate demand.\" Provide.\n\nRow3 fact: item \"domestic_production\". field fact_text element0 part value text \"Domestic production (y) is equal to demand for domestic goods.\" refs Q0000.\n\nRow4 fact: item \"aggregate_demand\". field fact_text element0 part value text \"Aggregate demand refers to demand for domestically produced goods.\" refs Q0007 and Q0008.\n\nRow5 concept: item \"ZZ_curve\". field concept_name text \"ZZ curve\". refs Q0003.\n\nRow6 concept content text \"Used to represent aggregate demand for domestically produced goods.\" refs Q0008.\n\nNow output JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794766748,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_90620edd96",
+  "usage": {
+    "completion_tokens": 1644,
+    "prompt_tokens": 2518,
+    "total_tokens": 4162,
+    "completion_time": 4.208050228,
+    "completion_tokens_details": {
+      "reasoning_tokens": 470
+    },
+    "prompt_time": 1.01277602,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "queue_time": 0.373263523,
+    "total_time": 5.220826248
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g6y9j8ezta0n01mj8nk04p",
+    "debug": null,
+    "seed": 817934739,
+    "usage": null
+  }
+}

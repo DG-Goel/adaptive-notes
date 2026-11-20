@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-c8a995fa-7960-497b-a803-7ac7b1032899",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"context\": null,\n      \"term\": {\n        \"text\": \"main\",\n        \"refs\": [\"Q0004\", \"Q0005\", \"Q0006\"],\n        \"claims\": [\n          {\n            \"text\": \"Every Java program should have at least one function, and that function is called main.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0004\", \"Q0005\", \"Q0006\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"Every Java program should have at least one function, and that function is called main.\",\n        \"refs\": [\"Q0004\", \"Q0005\", \"Q0006\"],\n        \"claims\": [\n          {\n            \"text\": \"Every Java program should have at least one function, and that function is called main.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0004\", \"Q0005\", \"Q0006\"],\n            \"related_refs\": []\n          }\n        ]\n      }\n    },\n    {\n      \"context\": null,\n      \"term\": {\n        \"text\": \"class\",\n        \"refs\": [\"Q0010\", \"Q0011\", \"Q0012\"],\n        \"claims\": [\n          {\n            \"text\": \"A class is a container for one or more related functions.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0010\", \"Q0011\", \"Q0012\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"A class is a container for one or more related functions.\",\n        \"refs\": [\"Q0010\", \"Q0011\", \"Q0012\"],\n        \"claims\": [\n          {\n            \"text\": \"A class is a container for one or more related functions.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0010\", \"Q0011\", \"Q0012\"],\n            \"related_refs\": []\n          }\n        ]\n      }\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need definitions. Extract definitions from primary teaching. Look for definition statements: e.g., \"every Java program should have at least one function, and that function is called main.\" That's definition of main. Also \"a class is a container for one or more related functions.\" definition of class. Also maybe braces? Not definition. So create items.\n\nItem1 term: \"main\". definition_text: that quote. Provide claims.\n\nConstruct claim: text from quote. basis explicit. availability SOURCE_SUPPORTED. literal_kind verbal. instructional_role prerequisite? It's definition, maybe null. Use null.\n\nProvide refs [\"Q0004\",\"Q0005\",\"Q0006\"] maybe combine. Use primary refs.\n\nTerm object also with claims similar.\n\nWe'll output items array with two entries.\n\nAbstentions empty. Excluded empty.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794325409,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 732,
+    "prompt_tokens": 2558,
+    "total_tokens": 3290,
+    "completion_time": 1.9489457,
+    "completion_tokens_details": {
+      "reasoning_tokens": 164
+    },
+    "prompt_time": 0.260053489,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "queue_time": 0.325823299,
+    "total_time": 2.208999189
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7321rwtecxrjzdgheaagxs3",
+    "debug": null,
+    "seed": 60025505,
+    "usage": null
+  }
+}

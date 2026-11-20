@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-d3922fbc-d192-4c4e-aa74-7b4fe583cbde",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"fact1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"I need to expect to lose money on the currency part of the trade.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"One bond paying a higher interest than another must be offset by an expected depreciation of the currency of the higher‑interest bond.\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Traders will move to the higher‑return US‑dollar bond until the currency appreciates enough to erase the advantage.\",\n      \"refs\": [\"Q0014\", \"Q0015\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact4\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The process of exchange‑rate adjustment can create short‑lived arbitrage opportunities.\",\n      \"refs\": [\"Q0019\", \"Q0020\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"Why must a higher‑interest‑rate bond be offset by an expected currency depreciation?\",\n      \"answer\": \"Because without depreciation the total expected return would be higher than a lower‑interest bond, violating the idea of equalizing returns.\",\n      \"explanation\": \"The excerpt explains that when one bond pays higher interest, the investor must expect the currency of that bond to depreciate to compensate, keeping expected returns comparable.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Interest rate differential and currency depreciation\",\n      \"refs\": [\"Q0007\"]\n    },\n    {\n      \"question\": \"What happens to the advantage of a higher‑return US‑dollar bond as the dollar appreciates?\",\n      \"answer\": \"The advantage disappears once the currency appreciates enough.\",\n      \"explanation\": \"The speaker notes that traders move to the US‑dollar bond until the dollar’s appreciation erases the higher return advantage.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"Currency appreciation effect\",\n      \"refs\": [\"Q0015\"]\n    },\n    {\n      \"question\": \"According to the discussion, what creates short‑lived arbitrage opportunities during exchange‑rate adjustment?\",\n      \"answer\": \"The transition from the initial exchange rate to the new equilibrium exchange rate.\",\n      \"explanation\": \"The excerpt mentions that in the process of the exchange moving to a new equilibrium, there may be an opportunity.\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"Arbitrage during exchange‑rate shifts\",\n      \"refs\": [\"Q0019\"]\n    },\n    {\n      \"question\": \"What is the expected outcome if an analyst advises waiting for further currency appreciation before acting?\",\n      \"answer\": \"It is too late because the advantage has already disappeared.\",\n      \"explanation\": \"The speaker says that waiting until the currency has already appreciated enough makes the analyst’s explanation too late.\",\n      \"bloom_level\": \"Evaluate\",\n      \"topic\": \"Timing of investment decisions\",\n      \"refs\": [\"Q0024\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract concepts etc. The excerpts are mostly discussion, no explicit definitions. Likely concepts: \"interest rate differential\", \"expected depreciation\", \"currency appreciation\". Provide rows with content? Might be facts. We'll create facts rows.\n\nExtract fact: need to expect to lose money on currency part of trade. etc.\n\nWe'll produce rows for facts category.\n\nCreate items e.g., item \"fact1\". Provide fact_text from excerpt.\n\nProvide availability SOURCE_MISSING? Since ASR speech, exact code unavailable but text is present, so SOURCE_SUPPORTED? It's explicit quote, so SOURCE_SUPPORTED.\n\nProvide basis explicit.\n\nProvide literal_kind verbal.\n\nProvide instructional_role null.\n\nProvide related_refs empty.\n\nDo several rows.\n\nAlso quiz four questions.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794733083,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_64b2f1c926",
+  "usage": {
+    "completion_tokens": 1091,
+    "prompt_tokens": 2868,
+    "total_tokens": 3959,
+    "completion_time": 2.282823184,
+    "completion_tokens_details": {
+      "reasoning_tokens": 151
+    },
+    "prompt_time": 0.137058631,
+    "prompt_tokens_details": null,
+    "queue_time": 0.324760339,
+    "total_time": 2.419881815
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f6v0h6esfbvwfvgkybssmh",
+    "debug": null,
+    "seed": 1640749147,
+    "usage": null
+  }
+}

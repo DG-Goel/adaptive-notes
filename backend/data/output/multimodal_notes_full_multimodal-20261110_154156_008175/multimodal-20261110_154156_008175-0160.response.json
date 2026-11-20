@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-9eca4932-9b34-4f98-8c4d-39c8dee269ea",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"parseShort\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"parseShort takes a string and returns a short.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"The method parseShort converts a string representation of a number into a short primitive value.\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"The method parseShort converts a string representation of a number into a short primitive value.\",\n            \"basis\": \"direct_entailment\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"parseFloat\",\n        \"refs\": [\"Q0002\"],\n        \"claims\": [\n          {\n            \"text\": \"parseFloat converts a string to a floating‑point number.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0002\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"The method parseFloat parses a string and returns its value as a float.\",\n        \"refs\": [\"Q0002\"],\n        \"claims\": [\n          {\n            \"text\": \"The method parseFloat parses a string and returns its value as a float.\",\n            \"basis\": \"direct_entailment\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0002\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"parseInt\",\n        \"refs\": [\"Q0003\"],\n        \"claims\": [\n          {\n            \"text\": \"parseInt converts a string to an integer.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0003\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"The method parseInt takes a string containing numeric characters and returns its integer value.\",\n        \"refs\": [\"Q0003\"],\n        \"claims\": [\n          {\n            \"text\": \"The method parseInt takes a string containing numeric characters and returns its integer value.\",\n            \"basis\": \"direct_entailment\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0003\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"parseDouble\",\n        \"refs\": [\"Q0017\"],\n        \"claims\": [\n          {\n            \"text\": \"parseDouble parses a string as a double‑precision floating‑point number.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0017\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"The method parseDouble converts a string representation of a number into a double value.\",\n        \"refs\": [\"Q0017\"],\n        \"claims\": [\n          {\n            \"text\": \"The method parseDouble converts a string representation of a number into a double value.\",\n            \"basis\": \"direct_entailment\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0017\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract definitions only. Look for definition teaching. Probably definitions of parseInt, parseFloat, etc. Provide items with term and definition_text. Identify primary excerpts that define term. Eg Q0000 defines parse short returns a short. That's definition of parse short. Q0002 defines parse float. Q0003 about converting string to integer. That's maybe definition of conversion. We'll create items.\n\nEach item: term object with claims, definition_text with claims, refs, text, etc. Use explicit basis. Provide availability SOURCE_SUPPORTED. literal_kind verbal. instructional_role prerequisite? maybe explanation. We'll just set null where unknown.\n\nProvide abstentions none. Excluded none.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326273,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_df9620fe21",
+  "usage": {
+    "completion_tokens": 1129,
+    "prompt_tokens": 3039,
+    "total_tokens": 4168,
+    "completion_time": 2.390073456,
+    "completion_tokens_details": {
+      "reasoning_tokens": 139
+    },
+    "prompt_time": 0.152173861,
+    "prompt_tokens_details": null,
+    "queue_time": 0.284380147,
+    "total_time": 2.542247317
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m732w4r0ey1vc40xh0qt1jf9",
+    "debug": null,
+    "seed": 1434221101,
+    "usage": null
+  }
+}

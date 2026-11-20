@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-9062b6cd-d194-4b3d-901f-38a9ea051b2f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"The popular code editors for building Java applications are NetBeans, Eclipse, and IntelliJ.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\", \"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"Students may use the favorite editor for this course.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\"C1\", \"C2\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"educational\"]\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [\n    {\n      \"ref\": \"Q0005\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0006\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0007\",\n      \"reason\": \"noneducational\"\n    }\n  ],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. The excerpts mention code editors, list NetBeans, Eclipse, IntelliJ. Likely facts. Create claims: C1: \"There are many code editors for building Java applications, the popular ones are NetBeans, Eclipse, and IntelliJ.\" Basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null. refs Q0001,Q0002. Also maybe C2: \"The favorite editor can be used for the course.\" from Q0004. C3: \"That's perfectly fine.\" maybe not educational. Might be excluded. We'll include facts.\n\nWe need categories: facts with fact_text claim IDs. concepts maybe none. definitions none. examples none. explanations none. formulas none. procedures none. relationships none. excluded maybe Q0005? It's noneducational. Also Q0006 context not educational. Q0007 context not educational.\n\nCreate abstentions for missing categories? Not needed.\n\nConstruct schema.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317558,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c868cf1eaa",
+  "usage": {
+    "completion_tokens": 552,
+    "prompt_tokens": 3026,
+    "total_tokens": 3578,
+    "completion_time": 1.157073001,
+    "completion_tokens_details": {
+      "reasoning_tokens": 199
+    },
+    "prompt_time": 0.144991858,
+    "prompt_tokens_details": null,
+    "queue_time": 0.470250621,
+    "total_time": 1.3020648590000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72tj70tefv9jtx5xgk8gmz5",
+    "debug": null,
+    "seed": 606317529,
+    "usage": null
+  }
+}

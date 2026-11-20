@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-21c06a8a-d77d-4f5d-b54a-d2dca0831522",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"package statement\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"Specifies the package to which the class belongs; it is terminated by a semicolon.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"main method\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"A public static method named main with a void return type and a single parameter; it serves as the entry point of a Java program.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"All Java files should have the .java extension.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In Java, every statement must be terminated with a semicolon.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The main method must be declared static and have a void return type.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Comments in Java start with // and are not executed.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The System class is defined in the java.lang package.\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. Identify facts, definitions, etc.\n\nFrom excerpts: facts like \"all Java files should have the .java extension\", \"Java statements end with semicolon\", \"main method must be static and return void\", \"comments start with // and are not executed\", \"System class is in java.lang\". Also definitions: package statement defines package, main class, main method.\n\nCreate facts entries.\n\nAlso definitions: term \"package statement\" definition text, term \"main method\". Provide refs.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794035962,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_854fa9be4c",
+  "usage": {
+    "completion_tokens": 561,
+    "prompt_tokens": 3030,
+    "total_tokens": 3591,
+    "completion_time": 1.170621324,
+    "completion_tokens_details": {
+      "reasoning_tokens": 108
+    },
+    "prompt_time": 0.148817891,
+    "prompt_tokens_details": null,
+    "queue_time": 0.298824971,
+    "total_time": 1.319439215
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6te0jwke3abxcykspzpeha8",
+    "debug": null,
+    "seed": 878182398,
+    "usage": null
+  }
+}

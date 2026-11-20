@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-a037f56f-8af8-4f18-a53c-6d280b4a36a0",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"C1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"trade deficit\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A situation where imports exceed exports.\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"trade surplus\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A situation where exports exceed imports.\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"equilibrium output\",\n      \"refs\": [\"Q0016\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The level of domestic output where total demand equals total supply, found by removing extra curves and keeping the domestic demand curve.\",\n      \"refs\": [\"Q0016\", \"Q0017\", \"Q0018\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What does the term \\\"trade deficit\\\" refer to?\",\n      \"answer\": \"A situation where imports exceed exports.\",\n      \"distractors\": [\n        \"A situation where exports exceed imports.\",\n        \"The point where domestic demand equals domestic supply.\",\n        \"A condition where net exports are zero.\"\n      ],\n      \"explanation\": \"The excerpt states \\\"So here you have a trade deficit\\\" after noting that imports exceed exports, defining the term.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"trade deficit\",\n      \"refs\": [\"Q0002\"]\n    },\n    {\n      \"question\": \"According to the speaker, what characterizes a trade surplus?\",\n      \"answer\": \"Exports exceed imports.\",\n      \"distractors\": [\n        \"Imports exceed exports.\",\n        \"Domestic output equals foreign output.\",\n        \"Net exports are zero.\"\n      ],\n      \"explanation\": \"The excerpt pairs \\\"trade surplus\\\" with the statement that exports exceed imports.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"trade surplus\",\n      \"refs\": [\"Q0002\"]\n    },\n    {\n      \"question\": \"What is meant by \\\"equilibrium output\\\" in the discussion?\",\n      \"answer\": \"The level of domestic output where total demand equals total supply.\",\n      \"distractors\": [\n        \"The point where exports are maximized.\",\n        \"The level where imports equal exports.\",\n        \"The output at which net exports are zero.\"\n      ],\n      \"explanation\": \"The speaker says they will find equilibrium output by erasing extra curves and keeping the domestic demand curve, indicating it is where demand equals supply.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"equilibrium output\",\n      \"refs\": [\"Q0016\", \"Q0017\", \"Q0018\"]\n    },\n    {\n      \"question\": \"Why does the speaker say the downward slope is observed in the graph?\",\n      \"answer\": \"Because net export (export minus input) decreases as domestic output increases.\",\n      \"distractors\": [\n        \"Because domestic output always rises with exports.\",\n        \"Because foreign output declines with higher imports.\",\n        \"Because the demand curve for domestic goods is upward sloping.\"\n      ],\n      \"explanation\": \"The excerpt explains that input is an increasing function of domestic output, while net export is export minus input, leading to a decreasing net export curve.\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"net export curve\",\n      \"refs\": [\"Q0009\", \"Q0010\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? The excerpts are about trade deficit/surplus, equilibrium output, export function. We can create concepts: \"trade deficit\", \"trade surplus\", \"equilibrium output\". Provide content rows.\n\nRows need item label same for each concept. Provide concept_name and content. Use primary excerpts.\n\nLet's make three concepts.\n\nItem \"C1\": concept_name \"trade deficit\". content from Q0002 \"So here you have a trade deficit\". Provide refs Q0002. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\nSimilarly C2: \"trade surplus\" from Q0002 second part? Actually Q0002 includes both. Use Q0002 also. Might need separate rows.\n\nC3: \"equilibrium output\" from Q0016, Q0017, Q0018. Use content \"Now we're going to find equilibrium output.\" etc.\n\nAdd abstentions none.\n\nQuiz: need four questions but maybe limited. We can craft 3? Need four distinct; if cannot, return fewer. We have enough.\n\nCreate questions about definitions: What is trade deficit? etc.\n\nProvide refs.\n\nReturn JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794769478,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8655ddce88",
+  "usage": {
+    "completion_tokens": 1440,
+    "prompt_tokens": 2600,
+    "total_tokens": 4040,
+    "completion_time": 3.029368988,
+    "completion_tokens_details": {
+      "reasoning_tokens": 241
+    },
+    "prompt_time": 0.117395755,
+    "prompt_tokens_details": null,
+    "queue_time": 0.376460803,
+    "total_time": 3.146764743
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g9hnfve9w87kq03j8qpn8z",
+    "debug": null,
+    "seed": 1478779971,
+    "usage": null
+  }
+}

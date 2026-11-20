@@ -1,0 +1,1900 @@
+# Multimodal transcript
+
+Speech is verbatim. Visual content is unverified OCR, never approved code or a reconstructed equation.
+Any prose interpretation in raw OCR is MODEL_INTERPRETATION, not literal evidence.
+
+[00:00:00.000–00:00:05.940] **SPEECH**
+ When you start learning AI, you will come across so many different jargons that will most likely
+
+[00:00:05.940–00:00:13.380] **SPEECH**
+ confuse you. My goal today is to teach you all these fundamental concepts in a most simple and
+
+[00:00:13.380–00:00:19.040] **SPEECH**
+ intuitive way. Let's get started. Artificial intelligence is this overarching field in
+
+[00:00:19.040–00:00:24.980] **SPEECH**
+ computer science where we train computers to perform tasks which we the humans are
+
+[00:00:24.980–00:00:32.220] **SPEECH**
+ generally good at. For example recognizing patterns, visual capabilities, our voice
+
+[00:00:32.220–00:00:38.400] **SPEECH**
+ or text capabilities and so on. Machine learning is an important subdomain
+
+[00:00:38.400–00:00:42.940] **SPEECH**
+ within artificial intelligence and in machine learning there are two main
+
+[00:00:42.940–00:00:48.400] **SPEECH**
+ branches. Statistical machine learning and deep learning. In statistical ML you
+
+[00:00:48.400–00:00:54.340] **SPEECH**
+ will see all this statistical algorithms such as linear regression, decision tree,
+
+[00:00:54.340–00:01:00.840] **SPEECH**
+ k-means etc that you use for tasks such as classification, regression etc. We'll
+
+[00:01:00.840–00:01:06.180] **SPEECH**
+ talk about those tasks more in detail going forward but these are some of the
+
+[00:01:06.180–00:01:10.620] **SPEECH**
+ algorithms that comes in the statistical ML. When you talk about deep
+
+[00:01:10.620–00:01:15.360] **SPEECH**
+ learning, deep learning is mainly about neural networks okay. Whenever you are
+
+[00:01:15.360–00:01:19.480] **SPEECH**
+ using new neural networks you are using deep learning. Within neural networks
+
+[00:01:19.480–00:01:24.000] **SPEECH**
+ there are different architectures such as CNN convolutional neural network, RNN
+
+[00:01:24.000–00:01:28.420] **SPEECH**
+ recurrent neural network transformer very important architecture folks because
+
+[00:01:28.420–00:01:33.420] **SPEECH**
+ transformer is the reason behind modern-day generative AI and agentic AI
+
+[00:01:33.420–00:01:39.340] **SPEECH**
+ boom and when you say gen AI okay or agentic AI that is nothing but an
+
+[00:01:39.340–00:01:45.180] **SPEECH**
+ application of AI okay it is an application or a use case of AI which
+
+[00:01:45.180–00:01:50.500] **SPEECH**
+ mainly uses this transformer architecture now you might be wondering
+
+[00:01:50.500–00:01:56.480] **SPEECH**
+ what comes outside ML which is part of AI but not machine learning well there
+
+[00:01:56.480–00:02:01.460] **SPEECH**
+ are couple of things for example regular expression you might build a system
+
+[00:02:01.460–00:02:07.920] **SPEECH**
+ which you can call AI based system which is as good as humans or similar to
+
+[00:02:07.920–00:02:12.100] **SPEECH**
+ human level performance but it might just use regular expression which has
+
+[00:02:12.100–00:02:15.740] **SPEECH**
+ nothing to do with machine learning regular expression is a general concept
+
+[00:02:15.740–00:02:20.780] **SPEECH**
+ in computer science then you might have a rule-based system okay robotics I mean
+
+[00:02:20.780–00:02:25.780] **SPEECH**
+ in robotics you will deploy a model which is machine learning train but
+
+[00:02:25.780–00:02:29.740] **SPEECH**
+ there are other components of robotics where you don't have to use machine
+
+[00:02:29.740–00:02:36.860] **SPEECH**
+ learning so all of these things help in building this AI system but all of
+
+[00:02:36.860–00:02:40.680] **SPEECH**
+ these components are not part of machine learning okay so I hope this
+
+[00:02:40.680–00:02:46.640] **SPEECH**
+ diagram helps you clarify certain concepts. Many times when I talk to people they think
+
+[00:02:46.640–00:02:52.640] **SPEECH**
+ statistical ML and deep learning is same. They think ML and DL is same but they don't really
+
+[00:02:52.640–00:02:57.920] **SPEECH**
+ know that these are overlapping concepts but there are differences between them and I hope that
+
+[00:02:57.920–00:03:04.560] **SPEECH**
+ this diagram helps you clarify those concepts. Let's discuss statistical ML a bit more in detail.
+
+[00:03:04.560–00:03:11.500] **SPEECH**
+ Have you ever wondered how Google classifies emails as spam and non-spam?
+
+[00:03:12.160–00:03:18.940] **SPEECH**
+ Well when you look at any email you will find some patterns such as limited offer, the email
+
+[00:03:18.940–00:03:22.320] **SPEECH**
+ might be coming from a weird looking ID and so on.
+
+[00:03:22.940–00:03:29.280] **SPEECH**
+ For a moment let's assume Google doesn't have any machine learning algorithm and they
+
+[00:03:29.280–00:03:32.940] **SPEECH**
+ are doing this spam classification using human workforce.
+
+[00:03:32.940–00:03:36.120] **SPEECH**
+ so they have hired this person called a
+
+[00:03:36.120–00:03:42.620] **SPEECH**
+ spam detector whose job is to classify email as spam and non-spam so what they
+
+[00:03:42.620–00:03:49.140] **SPEECH**
+ will do is they will go through some 10,000 past spam emails and 10,000 no
+
+[00:03:49.140–00:03:54.520] **SPEECH**
+ spam emails okay they will train this person on all this data and when you
+
+[00:03:54.520–00:03:59.500] **SPEECH**
+ look at all this spam and non-spam emails as a human you will try to
+
+[00:03:59.500–00:04:05.280] **SPEECH**
+ collect patterns okay. You will have all these patterns in your brain that if email has terms
+
+[00:04:05.280–00:04:12.880] **SPEECH**
+ such as urgency, lucrative offer, if email is coming from suspicious email id then that is spam
+
+[00:04:12.880–00:04:20.460] **SPEECH**
+ otherwise it is non-spam. So the way we can train this human on spam and non-spam emails
+
+[00:04:20.980–00:04:27.740] **SPEECH**
+ in exactly the same way you can train a computer program as well. In computer science there are
+
+[00:04:27.740–00:04:34.360] **SPEECH**
+ methodologies which are available using which you can train a computer program okay so that's
+
+[00:04:34.360–00:04:40.940] **SPEECH**
+ called a training part you give it spam emails no spam emails you know thousands of them and now
+
+[00:04:40.940–00:04:47.580] **SPEECH**
+ computer program will be able to detect when you give a new email it will be able to tell you
+
+[00:04:48.140–00:04:54.580] **SPEECH**
+ whether it's a spam or no spam it is short of like when we look at certain patterns for example when
+
+[00:04:54.580–00:05:02.680] **SPEECH**
+ I give you this particular table and when I give you a new input okay so one
+
+[00:05:02.680–00:05:07.360] **SPEECH**
+ two three this is the output and I'll be like okay what is the output for input
+
+[00:05:07.360–00:05:12.280] **SPEECH**
+ four well post this video you'll be able to recognize right that it is 16
+
+[00:05:12.280–00:05:18.360] **SPEECH**
+ because when you looked at this data you extracted certain patterns that it's a
+
+[00:05:18.360–00:05:22.860] **SPEECH**
+ square right one square is one two square is four three square is nine and
+
+[00:05:22.860–00:05:28.800] **SPEECH**
+ so on. Similarly computer can also extract patterns. So in machine learning
+
+[00:05:28.800–00:05:33.360] **SPEECH**
+ typically there are two phases the first one is training and the second one
+
+[00:05:33.360–00:05:38.520] **SPEECH**
+ where you give computer the real task where it will give you the prediction is
+
+[00:05:38.520–00:05:45.000] **SPEECH**
+ called inference. So if you compare this with a traditional software program if
+
+[00:05:45.000–00:05:51.180] **SPEECH**
+ you have done coding you would give your input and your equation to your
+
+[00:05:51.180–00:05:55.440] **SPEECH**
+ program your program is essentially your equation right like you write all the
+
+[00:05:55.440–00:06:00.600] **SPEECH**
+ code and code is some kind of logic such as y is equal to x squared and then you
+
+[00:06:00.600–00:06:05.440] **SPEECH**
+ give input and computer program will give output in machine learning what
+
+<a id="c84d9308f45c7d45d803"></a>
+[00:06:03.446] **UNVERIFIED VISUAL** · Text Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\363.446417.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\363.446417.png.inference.png) · evidence `c84d9308f45c7d45d803`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+`````text
+$y = x^2$
+Input
+1
+2
+3
+...
+10000
+Traditional Software Program
+Output
+1
+4
+9
+...
+10^8
+codebasics.io
+`````
+
+<a id="4cde6a0ea5c93e3e3e3f"></a>
+[00:06:03.446] **UNVERIFIED VISUAL** · Formula Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\363.446417.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\363.446417.png.inference.png) · evidence `4cde6a0ea5c93e3e3e3f`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+`````text
+$$y = x^2$$
+
+Traditional Software Program
+
+Output
+1
+4
+9
+...
+10^8
+
+Input
+1
+2
+3
+...
+10000
+
+codebasics.io
+`````
+
+[00:06:05.440–00:06:09.800] **SPEECH**
+ happens is you give input output see there are three things right input
+
+<a id="97662b8df9446b470169"></a>
+[00:06:06.449] **UNVERIFIED VISUAL** · Text Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\366.449417.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\366.449417.png.inference.png) · evidence `97662b8df9446b470169`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#c84d9308f45c7d45d803).
+
+<a id="341043d5f347222beb04"></a>
+[00:06:06.449] **UNVERIFIED VISUAL** · Formula Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\366.449417.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\366.449417.png.inference.png) · evidence `341043d5f347222beb04`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#4cde6a0ea5c93e3e3e3f).
+
+<a id="d507dddc65cae0040d4d"></a>
+[00:06:09.452] **UNVERIFIED VISUAL** · Text Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\369.452417.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\369.452417.png.inference.png) · evidence `d507dddc65cae0040d4d`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+`````text
+Input Output
+1 1
+2 4
+3 9
+...
+10000 10^8
+ML Program
+→ y = x²
+Input
+1
+2
+3
+...
+10000
+Traditional Software Program
+Output
+1
+4
+9
+...
+10^8
+codebasics.io
+`````
+
+<a id="29bbe23ef00fd619ada0"></a>
+[00:06:09.452] **UNVERIFIED VISUAL** · Formula Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\369.452417.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\369.452417.png.inference.png) · evidence `29bbe23ef00fd619ada0`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+`````text
+$$y = x^2$$
+Traditional Software Program
+Output
+1
+4
+9
+...
+10^8
+Input
+1
+2
+3
+...
+10000
+`````
+
+[00:06:09.800–00:06:14.640] **SPEECH**
+ output and equation so here in traditional software program you gave
+
+<a id="e9ecde848cabf837278f"></a>
+[00:06:12.455] **UNVERIFIED VISUAL** · Text Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\372.455417.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\372.455417.png.inference.png) · evidence `e9ecde848cabf837278f`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#d507dddc65cae0040d4d).
+
+<a id="3c6ef278f828bd8eb486"></a>
+[00:06:12.455] **UNVERIFIED VISUAL** · Formula Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\372.455417.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\372.455417.png.inference.png) · evidence `3c6ef278f828bd8eb486`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#29bbe23ef00fd619ada0).
+
+<a id="ab266abf8ce2bdd60993"></a>
+[00:06:12.831] **UNVERIFIED VISUAL** · Text Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\372.830792.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\372.830792.png.inference.png) · evidence `ab266abf8ce2bdd60993`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#d507dddc65cae0040d4d).
+
+<a id="1f172c2022bd0b174817"></a>
+[00:06:12.831] **UNVERIFIED VISUAL** · Formula Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\372.830792.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\372.830792.png.inference.png) · evidence `1f172c2022bd0b174817`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#29bbe23ef00fd619ada0).
+
+[00:06:14.640–00:06:19.160] **SPEECH**
+ input and equation and it gave you output in machine learning program you
+
+<a id="5da78068b05ccb0e9c2c"></a>
+[00:06:15.458] **UNVERIFIED VISUAL** · Text Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\375.458417.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\375.458417.png.inference.png) · evidence `5da78068b05ccb0e9c2c`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#d507dddc65cae0040d4d).
+
+<a id="cb0cd584067c5a9514f5"></a>
+[00:06:15.458] **UNVERIFIED VISUAL** · Formula Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\375.458417.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\375.458417.png.inference.png) · evidence `cb0cd584067c5a9514f5`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#29bbe23ef00fd619ada0).
+
+<a id="d352f1db2f8885c1bc64"></a>
+[00:06:18.461] **UNVERIFIED VISUAL** · Text Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\378.461417.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\378.461417.png.inference.png) · evidence `d352f1db2f8885c1bc64`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#d507dddc65cae0040d4d).
+
+<a id="7eee60eb96c97a76b2d3"></a>
+[00:06:18.461] **UNVERIFIED VISUAL** · Formula Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\378.461417.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\378.461417.png.inference.png) · evidence `7eee60eb96c97a76b2d3`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#29bbe23ef00fd619ada0).
+
+<a id="fc9c059000e715b4cb8d"></a>
+[00:06:21.464] **UNVERIFIED VISUAL** · Text Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\381.464417.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\381.464417.png.inference.png) · evidence `fc9c059000e715b4cb8d`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+`````text
+Input Output
+1 1
+2 4
+3 9
+...
+10000 10^8
+ML Program
+y = x²
+→ y = x²
+Input
+1
+2
+3
+...
+10000
+Traditional Software Program
+Output
+1
+4
+9
+...
+10^8
+codebasics.io
+`````
+
+<a id="b2726422cf1768857c66"></a>
+[00:06:21.464] **UNVERIFIED VISUAL** · Formula Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\381.464417.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\381.464417.png.inference.png) · evidence `b2726422cf1768857c66`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+`````text
+$$y = x^2$$
+
+Traditional Software Program
+
+Input
+1
+2
+3
+...
+10000
+
+Output
+1
+4
+9
+...
+10^8
+
+codebasics.io
+`````
+
+<a id="3c91aa0e40a68fe3f46f"></a>
+[00:06:22.090] **UNVERIFIED VISUAL** · Text Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\382.090042.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\382.090042.png.inference.png) · evidence `3c91aa0e40a68fe3f46f`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#fc9c059000e715b4cb8d).
+
+<a id="e38e3654e5bd1ddfbd93"></a>
+[00:06:22.090] **UNVERIFIED VISUAL** · Formula Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\382.090042.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\77f4c011cccb851c\382.090042.png.inference.png) · evidence `e38e3654e5bd1ddfbd93`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+`````text
+$$y = x^2$$
+
+Traditional Software Program
+
+Input
+1
+2
+3
+...
+10000
+
+Output
+1
+4
+9
+...
+10^8
+`````
+
+[00:06:42.580–00:06:47.720] **SPEECH**
+ give input output and it will derive
+
+[00:07:12.420–00:07:16.200] **SPEECH**
+ terms traditional software program takes
+
+[00:07:16.200–00:07:20.520] **SPEECH**
+ an important distinction between traditional software programming and
+
+[00:07:20.520–00:07:24.720] **SPEECH**
+ machine learning. So just to go over the definition machine learning is a
+
+[00:07:24.720–00:07:30.060] **SPEECH**
+ discipline in computer science where we train machines on data so that they can
+
+[00:07:30.060–00:07:35.020] **SPEECH**
+ make predictions without explicit programming. Folks this is very important
+
+[00:07:35.020–00:07:40.300] **SPEECH**
+ you don't do explicit programming you just give input output and it will come
+
+[00:07:40.300–00:07:46.040] **SPEECH**
+ up with the logic or the pattern that it is noticing. In machine learning
+
+[00:07:46.040–00:07:52.980] **SPEECH**
+ there are two main major categories of tasks that we perform classification and
+
+[00:07:52.980–00:07:58.360] **SPEECH**
+ regression. So when you are classifying email as spam or non-spam or let's say
+
+[00:07:58.360–00:08:02.700] **SPEECH**
+ you are giving an image and you are asking it to classify as cat and dog or
+
+[00:08:02.700–00:08:05.940] **SPEECH**
+ let's say you have a damaged car you're saying okay whether it's damaged or
+
+[00:08:05.940–00:08:10.340] **SPEECH**
+ non-damaged this is classification because you have input and you are
+
+[00:08:10.340–00:08:15.540] **SPEECH**
+ mapping it to one of the categories and you don't need to necessarily have two
+
+[00:08:15.540–00:08:19.060] **SPEECH**
+ output categories you can have multiple categories for example in google news
+
+[00:08:19.530–00:08:23.040] **SPEECH**
+ you will see that there is a news article and it will classify it as
+
+[00:08:23.040–00:08:26.920] **SPEECH**
+ business sports technology health and so on okay
+
+[00:08:26.920–00:08:30.660] **SPEECH**
+ so you can have multiple categories or you can have two categories if you have
+
+[00:08:30.660–00:08:33.540] **SPEECH**
+ two categories as an output it's called binary classification
+
+[00:08:34.090–00:08:37.620] **SPEECH**
+ for multiple it's called multi-class classification
+
+[00:08:37.620–00:08:41.620] **SPEECH**
+ okay so that is classification now let's talk about regression
+
+[00:08:41.620–00:08:47.040] **SPEECH**
+ So I live here in US and we use this real estate website Zillow. In India
+
+[00:08:47.040–00:08:52.360] **SPEECH**
+ there is magicbricksmakant.com etc and when you look at any homes price it
+
+[00:08:52.360–00:08:57.680] **SPEECH**
+ will show you an estimated price of that home. Okay so this is the listed price
+
+[00:08:57.680–00:09:04.360] **SPEECH**
+ but if you scroll below you will see this estimated price which they call it
+
+[00:09:04.360–00:09:10.180] **SPEECH**
+ Zestimate. Now the way they do this is they have all past home prices okay
+
+[00:09:10.180–00:09:14.960] **SPEECH**
+ where you have home configuration bedrooms and area and age and so on and
+
+[00:09:14.960–00:09:18.300] **SPEECH**
+ you already have prices because those homes are already sold so you have all
+
+[00:09:18.300–00:09:23.260] **SPEECH**
+ that past data using that you will train a machine learning model okay and let's
+
+[00:09:23.260–00:09:27.900] **SPEECH**
+ say you save that model now when a new home comes let's say when you list a new
+
+[00:09:27.900–00:09:34.240] **SPEECH**
+ home you're giving area bedroom age etc and that model will infer what should
+
+[00:09:34.240–00:09:40.120] **SPEECH**
+ be the price so let's say the price of this home should be 925 K okay so this
+
+[00:09:40.120–00:09:45.940] **SPEECH**
+ type of problem is called regression because you don't have a fixed categories where you are
+
+[00:09:45.940–00:09:54.100] **SPEECH**
+ mapping your input okay you your output basically can be any number the price can be 925 k 923 k
+
+[00:09:54.100–00:10:03.780] **SPEECH**
+ 921.45 k the the possibilities are so wide in case of classification you have discrete possibilities
+
+[00:10:03.780–00:10:09.680] **SPEECH**
+ you have fixed class labels okay let's say two categories or four categories
+
+[00:10:09.680–00:10:16.520] **SPEECH**
+ spam non-spam etc whereas here it's a number so this is called regression okay
+
+[00:10:16.520–00:10:22.480] **SPEECH**
+ so classification and regression are two major category of problems that we
+
+[00:10:22.480–00:10:28.020] **SPEECH**
+ solve using machine learning and here I have listed a few of these problems okay
+
+[00:10:28.020–00:10:37.900] **SPEECH**
+ Now, whenever you have training data, which is input-output pairs, if you think mathematically,
+
+[00:10:38.280–00:10:46.000] **SPEECH**
+ then this input is called x, and this output is called y. So this is x and y pair, right?
+
+[00:10:46.120–00:10:56.280] **SPEECH**
+ So this is x, this is y. Here again, this entire thing is x, and this is y. So whenever
+
+[00:10:56.280–00:11:02.800] **SPEECH**
+ you have these kind of labels is also called labeled data okay this category
+
+[00:11:02.800–00:11:09.380] **SPEECH**
+ of problems is called supervised machine learning there is another category called
+
+[00:11:09.380–00:11:13.580] **SPEECH**
+ unsupervised machine learning see in supervised machine learning you have to
+
+[00:11:13.580–00:11:17.680] **SPEECH**
+ prepare all this data you have to go through all your past emails tag them as
+
+[00:11:17.680–00:11:22.820] **SPEECH**
+ input output so there is a labeling afford here but what if you have huge
+
+[00:11:22.820–00:11:27.820] **SPEECH**
+ amount of data and you don't want to label it and you just want to do
+
+[00:11:27.820–00:11:32.060] **SPEECH**
+ something good out of it well that's unsupervised learning so let me give you
+
+[00:11:32.060–00:11:38.180] **SPEECH**
+ an example let's say you have a kid who is playing with all these toys so if you
+
+[00:11:38.180–00:11:41.640] **SPEECH**
+ have a kid in your home you know what happens when they're done playing
+
+[00:11:41.640–00:11:47.320] **SPEECH**
+ with the toys it's a mess you know on the floors you see all these toys now
+
+[00:11:47.320–00:11:54.040] **SPEECH**
+ you can ask your kid to put these toys into separate buckets so you can have a
+
+[00:11:54.040–00:11:58.680] **SPEECH**
+ bucket for a doll you can have a bucket for a car truck and so on you can
+
+[00:11:58.680–00:12:05.360] **SPEECH**
+ instruct your kid to classify these things into three categories okay that
+
+[00:12:05.360–00:12:10.000] **SPEECH**
+ will be supervised machine learning but what if instead of giving this fixed
+
+[00:12:10.000–00:12:16.980] **SPEECH**
+ buckets you give them only two buckets and you say okay just categorize them
+
+[00:12:16.980–00:12:22.660] **SPEECH**
+ you're not telling the kid how exactly to categorize. You're just saying notice
+
+[00:12:22.660–00:12:28.620] **SPEECH**
+ the patterns and somehow categorize them into two buckets. Well the kid who is in
+
+[00:12:28.620–00:12:32.740] **SPEECH**
+ let's say 6th or 7th grade is has developed enough cognitive abilities
+
+[00:12:32.740–00:12:38.120] **SPEECH**
+ that they might classify them by color. They will put all red color toys in one
+
+[00:12:38.120–00:12:44.080] **SPEECH**
+ bucket, blue toys into another bucket or they might put all cars in one bucket
+
+[00:12:44.080–00:12:50.500] **SPEECH**
+ and trucks in one bucket or all bigger toys in one bucket smaller toys in one
+
+[00:12:50.500–00:12:56.120] **SPEECH**
+ bucket okay so this type of problem-solving is called unsupervised
+
+[00:12:56.120–00:12:59.840] **SPEECH**
+ learning because you are not supervising your kid you are not saying hey do this
+
+[00:12:59.840–00:13:06.860] **SPEECH**
+ and that they are just using their brain they are noticing some patterns and they
+
+[00:13:06.860–00:13:13.820] **SPEECH**
+ categorize them as per that patterns unsupervised machine learning is pretty
+
+[00:13:13.820–00:13:16.980] **SPEECH**
+ useful in the industry. In my own company
+
+[00:13:16.980–00:13:42.200] **SPEECH**
+ we can use this concept of clustering. So clustering is a technique
+
+[00:13:42.200–00:13:49.600] **SPEECH**
+ that comes under unsupervised machine learning where you notice patterns for example in legal
+
+[00:13:49.600–00:13:55.780] **SPEECH**
+ documents you will have certain type of words or certain format okay. So you notice patterns
+
+[00:13:55.780–00:14:03.560] **SPEECH**
+ and you try to put them in a different bucket okay. So that is called clustering. When I was
+
+[00:14:03.560–00:14:09.560] **SPEECH**
+ working at Bloomberg we used unsupervised learning for a different purpose. So we had
+
+[00:14:09.560–00:14:17.200] **SPEECH**
+ all these earning estimates we will first cluster them and many times we will notice all these data
+
+[00:14:17.200–00:14:25.060] **SPEECH**
+ points c which do not belong to any cluster and we will mark them as outliers. So unsupervised
+
+[00:14:25.060–00:14:33.490] **SPEECH**
+ learning can also be used for outlier detection and at that time we used an algorithm called
+
+[00:14:33.490–00:14:39.370] **SPEECH**
+ DB scan there is another algorithm called K means okay so DB scan K means hierarchical
+
+[00:14:39.370–00:14:47.630] **SPEECH**
+ clustering all these are unsupervised machine learning algorithms whereas random forest xg boost
+
+[00:14:47.630–00:14:53.150] **SPEECH**
+ decision tree linear regression that there's an entire list I'm just showing few of them
+
+[00:14:53.150–00:14:59.390] **SPEECH**
+ these are supervised machine learning algorithms and I have classified them into
+
+[00:14:59.390–00:15:05.890] **SPEECH**
+ a regression and classification category here. So just to go over the definition of unsupervised
+
+[00:15:05.890–00:15:13.130] **SPEECH**
+ learning we provide an unlabeled data set to an ML program and it learns to identify patterns and
+
+[00:15:13.130–00:15:22.330] **SPEECH**
+ structures in data without any explicit guidance. If we talk about tooling we of course have Python
+
+[00:15:22.330–00:15:29.850] **SPEECH**
+ right. Python is the programming language of AI. Then we have pandas and numpy that we use for data
+
+[00:15:29.850–00:15:36.690] **SPEECH**
+ cleaning and exploration. We also have matplotlib, seaborn. Then we use jupyter notebook for
+
+[00:15:36.690–00:15:45.330] **SPEECH**
+ developing our code. Then we have libraries such as xgboost and scikit-learn that we use to train
+
+[00:15:45.330–00:15:50.870] **SPEECH**
+ machine learning models. Okay so these are the major concepts that you need to know when it
+
+[00:15:50.870–00:15:55.690] **SPEECH**
+ comes to statistical machine learning. Now let's talk about deep learning. We
+
+[00:15:55.690–00:16:00.410] **SPEECH**
+ previously saw that you can solve a variety of problems such as classifying
+
+[00:16:00.410–00:16:06.790] **SPEECH**
+ if the transaction is fraud or not or classifying if the image is cat or dog
+
+[00:16:06.790–00:16:12.330] **SPEECH**
+ but if you look at these two use cases you will notice one important difference
+
+[00:16:12.330–00:16:20.790] **SPEECH**
+ when you look at the data set. The first use case is a structured data. The
+
+[00:16:20.790–00:16:26.590] **SPEECH**
+ mean by that is here you have defined rows and columns you have a structure in
+
+[00:16:26.590–00:16:32.390] **SPEECH**
+ your data that Tondulmal, Samosa is a vendor, 120k is the amount and so on but
+
+[00:16:32.390–00:16:38.050] **SPEECH**
+ when it comes to image it is just bunch of pixels there is no formatting to it
+
+[00:16:38.050–00:16:43.030] **SPEECH**
+ same thing with text and video okay there are no like rows and columns it's
+
+[00:16:43.030–00:16:49.350] **SPEECH**
+ not in a tabular format with very well defined structure so when you give
+
+[00:16:49.350–00:16:54.950] **SPEECH**
+ unstructured data to machine learning model for the training it will have
+
+[00:16:54.950–00:17:00.050] **SPEECH**
+ problems because here these columns that you see they are called features okay
+
+[00:17:00.050–00:17:06.890] **SPEECH**
+ vendor, amount, location and if you are using statistical machine learning
+
+[00:17:06.890–00:17:13.230] **SPEECH**
+ algorithms such as decision tree or xgboost and so on they perform well on
+
+[00:17:13.230–00:17:18.350] **SPEECH**
+ structured data but when it comes to unstructured data it becomes difficult
+
+[00:17:18.350–00:17:24.210] **SPEECH**
+ for them to recognize those patterns. Now we as a human when we look at this
+
+[00:17:24.210–00:17:29.870] **SPEECH**
+ image we quickly identify that this is a cat and how do we do that exactly if you
+
+[00:17:29.870–00:17:35.530] **SPEECH**
+ dig deep into you know how your brain works we would detect all these
+
+[00:17:35.530–00:17:41.290] **SPEECH**
+ different features such as round eyes, pointy ears, this whiskers and so on.
+
+[00:17:41.630–00:17:47.530] **SPEECH**
+ The way our brain works is nonlinear because we have all these neurons in
+
+[00:17:47.530–00:17:54.090] **SPEECH**
+ our brain and we can in parallel recognize all these patterns and we can
+
+[00:17:54.090–00:17:59.270] **SPEECH**
+ make sense out of it okay we can connect dots and make sense out of it in case of
+
+[00:17:59.270–00:18:04.410] **SPEECH**
+ cat see there are pointy ears whiskers and so on you might have a different
+
+[00:18:04.410–00:18:10.750] **SPEECH**
+ image where the location of the whiskers eyes etc would change so you
+
+[00:18:10.750–00:18:17.070] **SPEECH**
+ can't run a static algorithm where you say okay if the middle pixel are brown
+
+[00:18:17.070–00:18:21.570] **SPEECH**
+ color let's say if I have an algorithm for example where I say okay in if the
+
+[00:18:21.570–00:18:27.150] **SPEECH**
+ pixel here are brown if the shape here is round then this is a cat I can't do
+
+[00:18:27.150–00:18:33.130] **SPEECH**
+ that because the location of eye might change the location of whisker might
+
+[00:18:33.130–00:18:40.310] **SPEECH**
+ change so I need to develop a novel approach where I can detect these
+
+[00:18:40.310–00:18:47.050] **SPEECH**
+ features irrespective of where they are located what is their scale and so on
+
+[00:18:47.050–00:18:50.190] **SPEECH**
+ on and for that we need to use neural
+
+[00:18:50.190–00:19:12.830] **SPEECH**
+ are very naive and they have never seen
+
+[00:19:17.050–00:19:23.150] **SPEECH**
+ so that you give them an image and they will be able to tell you whether this image has Koala or not.
+
+[00:19:24.290–00:19:26.150] **SPEECH**
+ You can make this a teamwork and
+
+[00:19:26.150–00:19:34.010] **SPEECH**
+ give individual responsibility to each of these students such as Mike can work on detecting only eyes,
+
+[00:19:34.810–00:19:37.190] **SPEECH**
+ Mohan can work on detecting only nose.
+
+[00:19:37.950–00:19:41.990] **SPEECH**
+ So each of these students are working on detecting a specific part of
+
+[00:19:42.530–00:19:44.470] **SPEECH**
+ Koala's body from an image.
+
+[00:19:44.470–00:19:50.970] **SPEECH**
+ The way they give their decision is by using a score of 0 to 1, where 0 means this is definitely
+
+[00:19:50.970–00:19:57.810] **SPEECH**
+ not coalesce eyes, 0.5 means yeah it looks like coalesce eyes, I'm not sure maybe 50-50,
+
+[00:19:58.370–00:20:01.050] **SPEECH**
+ 1 means it is definitely coalesce eyes.
+
+[00:20:01.810–00:20:07.290] **SPEECH**
+ Once these students are trained and we will look into how exactly you can train them
+
+[00:20:07.290–00:20:12.290] **SPEECH**
+ that is also very important part of neural network but that will cover in the later part
+
+[00:20:12.290–00:20:19.930] **SPEECH**
+ of the video but for now just assume that these students are trained to detect specific part of
+
+[00:20:19.930–00:20:27.310] **SPEECH**
+ Koala's body. So Mike has become now expert Koala eye detector similarly Mohan is an expert Koala
+
+[00:20:27.310–00:20:36.710] **SPEECH**
+ nose detector. When you give them an image of a lion Mike will say the decision is 0.03 because
+
+[00:20:36.710–00:20:44.070] **SPEECH**
+ the eyes they are like round eyeballs but they don't look like Koala's eyes so 0.03.
+
+[00:20:45.190–00:20:49.950] **SPEECH**
+ Similarly for nose he can just give some score and if the score is more than 0.5 we'll say yeah
+
+[00:20:49.950–00:20:57.450] **SPEECH**
+ those are Koala's eyes or nose. You can extend this collaboration further and make Shakib an
+
+[00:20:57.450–00:21:05.770] **SPEECH**
+ ear detection expert. And then these three students can go to Serena and
+
+[00:21:05.770–00:21:13.830] **SPEECH**
+ Serena can work on deciding if the image has koalas face or not. So once Mike
+
+[00:21:13.830–00:21:18.730] **SPEECH**
+ Mohan and Saqib says that this image has koalas eyes nose and ears, Serena can
+
+[00:21:18.730–00:21:25.490] **SPEECH**
+ use their work to figure out if the image has koalas face or not. And she
+
+<a id="9845116c8963d98a7a3f"></a>
+[00:21:48.224] **UNVERIFIED VISUAL** · Text Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1308.223583.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1308.223583.png.inference.png) · evidence `9845116c8963d98a7a3f`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+`````text
+Mike
+Mohan
+face = eyes * 0.2 + nose * 0.5 + ears * 0.3
+codebasics.io
+`````
+
+<a id="d0e611f8d6da013e15c9"></a>
+[00:21:48.224] **UNVERIFIED VISUAL** · Formula Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1308.223583.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1308.223583.png.inference.png) · evidence `d0e611f8d6da013e15c9`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+`````text
+face = eyes * 0.2 + nose * 0.5 + ears * 0.3
+
+codebasics.io
+`````
+
+[00:21:50.210–00:21:55.190] **SPEECH**
+ can use a formula like this because if
+
+<a id="54f2c92f361a28741981"></a>
+[00:21:51.227] **UNVERIFIED VISUAL** · Text Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1311.226583.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1311.226583.png.inference.png) · evidence `54f2c92f361a28741981`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#9845116c8963d98a7a3f).
+
+<a id="5b5a313f317177181ad7"></a>
+[00:21:51.227] **UNVERIFIED VISUAL** · Formula Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1311.226583.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1311.226583.png.inference.png) · evidence `5b5a313f317177181ad7`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#d0e611f8d6da013e15c9).
+
+<a id="b308469c2cb1cc33030e"></a>
+[00:21:53.229] **UNVERIFIED VISUAL** · Text Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1313.228583.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1313.228583.png.inference.png) · evidence `b308469c2cb1cc33030e`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#9845116c8963d98a7a3f).
+
+<a id="6dabc01ff3d0df47950d"></a>
+[00:21:53.229] **UNVERIFIED VISUAL** · Formula Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1313.228583.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1313.228583.png.inference.png) · evidence `6dabc01ff3d0df47950d`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#d0e611f8d6da013e15c9).
+
+<a id="6970f428c9ef55ad48d9"></a>
+[00:21:54.230] **UNVERIFIED VISUAL** · Text Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1314.229583.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1314.229583.png.inference.png) · evidence `6970f428c9ef55ad48d9`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+`````text
+Mike
+Mohan
+face = eyes * 0.2 + nose * 0.5 + ears * 0.3
+Sakib
+codebasics.io
+`````
+
+<a id="f721e1228c88ad76d8e2"></a>
+[00:21:54.230] **UNVERIFIED VISUAL** · Formula Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1314.229583.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1314.229583.png.inference.png) · evidence `f721e1228c88ad76d8e2`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+Exact repeated reading: [earlier occurrence](#d0e611f8d6da013e15c9).
+
+<a id="4ff8bb0690407601c64e"></a>
+[00:21:57.233] **UNVERIFIED VISUAL** · Text Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1317.232583.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1317.232583.png.inference.png) · evidence `4ff8bb0690407601c64e`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+`````text
+face + eyes * 0.2 + nose* 0.5 + ears* 0.3
+
+codebasics.io
+`````
+
+<a id="9e62629acfcccae7798c"></a>
+[00:21:57.233] **UNVERIFIED VISUAL** · Formula Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1317.232583.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1317.232583.png.inference.png) · evidence `9e62629acfcccae7798c`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+`````text
+face + eyes * 0.2 + nose * 0.5 + ears * 0.3
+
+codebasics.io
+`````
+
+<a id="2aecfa9479a10943c29b"></a>
+[00:21:58.108] **UNVERIFIED VISUAL** · Text Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1318.108458.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1318.108458.png.inference.png) · evidence `2aecfa9479a10943c29b`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+`````text
+Mike
+
+codebasics.io
+`````
+
+<a id="d84522796849a5aa6000"></a>
+[00:21:58.108] **UNVERIFIED VISUAL** · Formula Recognition: · success
+[Frame](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1318.108458.png) · [OCR input](C:\Projects\adaptive-notes\backend\data\output\video_jobs\11284183534fe7ba4df1e61c\source\ocr\abc997da612978ba\1318.108458.png.inference.png) · evidence `d84522796849a5aa6000`
+**AMBIGUOUS READING**: competing readings of this frame remain unresolved; see unresolved_source_gaps.json.
+`````text
+codebasics.io
+`````
+
+[00:22:18.730–00:22:25.170] **SPEECH**
+ the image has Koala's face or not. For
+
+[00:22:55.120–00:22:58.160] **SPEECH**
+ looking like Koala's face here. You can
+
+[00:23:23.060–00:23:28.140] **SPEECH**
+ more weightage to face. Because when we
+
+[00:23:53.020–00:23:58.120] **SPEECH**
+ they are working on a specific sub task
+
+[00:23:58.120–00:24:08.490] **SPEECH**
+ features. So just imagine that these students are not trained right now. You put all of
+
+[00:24:08.490–00:24:17.890] **SPEECH**
+ them in a classroom and then you supply an image to this classroom and they will initially
+
+[00:24:17.890–00:24:22.250] **SPEECH**
+ make a random guess. So Mike will randomly guess whether this image has koala's eyes
+
+[00:24:22.250–00:24:28.330] **SPEECH**
+ or not and similarly everyone will make a random guess and finally Sergey will tell
+
+[00:24:28.330–00:24:34.470] **SPEECH**
+ whether this is koala or not. And once Sargay has a decision he will go out out of the classroom
+
+[00:24:34.470–00:24:41.070] **SPEECH**
+ and there is a supervisor who is standing. The supervisor knows the correct answer. So Sargay
+
+[00:24:41.070–00:24:48.870] **SPEECH**
+ will say hello sir this doesn't look like koala and supervisor will be like no you are wrong.
+
+[00:24:49.330–00:24:55.590] **SPEECH**
+ This is koala. Sargay then goes back to the classroom and says hey guys this is actually
+
+[00:24:55.590–00:25:01.610] **SPEECH**
+ Koala what score did you give me? Serena and Nidhi will then go back to rest of
+
+[00:25:01.610–00:25:07.410] **SPEECH**
+ the classroom and say hey Mike Mohan Sakib this is actually Koala's ears eyes
+
+[00:25:07.410–00:25:14.510] **SPEECH**
+ and nose you need to be careful next time so they use this experience of
+
+[00:25:14.510–00:25:20.670] **SPEECH**
+ mistake so basically as a group they made a mistake and the mistake or the
+
+[00:25:44.030–00:25:50.650] **SPEECH**
+ error has been passed from Sargay to
+
+[00:25:50.650–00:25:58.190] **SPEECH**
+ is then Sergey goes out and tells the supervisor that this is Koala or not. The supervisor will
+
+[00:25:58.190–00:26:04.150] **SPEECH**
+ tell you if the answer is correct or not and the error feedback is passed on to rest of the group
+
+[00:26:04.150–00:26:11.610] **SPEECH**
+ and the group keeps on adjusting their weights or adjusting their brains in a way that
+
+[00:26:12.370–00:26:18.110] **SPEECH**
+ they can finally come up with the right answer. You can be given thousands or ten thousand such
+
+[00:26:18.110–00:26:26.130] **SPEECH**
+ koalas images and after training this group for so many images eventually the group becomes better
+
+[00:26:26.130–00:26:33.610] **SPEECH**
+ at koalas face detection. Initially it will make a lot of error but as the time goes it will keep
+
+[00:26:33.610–00:26:41.370] **SPEECH**
+ on improving. Now how it improves the weights for that it uses are derivative and some mathematics.
+
+[00:26:41.590–00:26:47.130] **SPEECH**
+ Okay I hope through that analogy based explanation you got some understanding. To summarize in
+
+[00:26:47.130–00:26:52.250] **SPEECH**
+ artificial neural network, you have all these layers. You have input layer, hidden layer,
+
+[00:26:52.850–00:26:57.730] **SPEECH**
+ output layer. You can have any number of hidden layer okay and in terms of neuron also you can
+
+[00:26:57.730–00:27:03.130] **SPEECH**
+ have any number. I'm just showing you one specific example here and let's say you are using this
+
+[00:27:03.130–00:27:10.210] **SPEECH**
+ neural network for cat and dog detection then it might happen that these middle neurons will
+
+[00:27:10.210–00:27:16.810] **SPEECH**
+ detect whether it's cats ears eyes tails dog ear eyes tails etc and then the
+
+[00:27:16.810–00:27:23.830] **SPEECH**
+ second layer will do higher level pattern detection which is if in the
+
+[00:27:23.830–00:27:28.710] **SPEECH**
+ image you have cats ears and eyes that means you have cats head and so on. I'm
+
+[00:27:28.710–00:27:34.070] **SPEECH**
+ just giving you an easy explanation so that you understand it easily. In real
+
+[00:27:34.070–00:27:38.770] **SPEECH**
+ life the kind of features that neural network detects will be little different
+
+[00:27:38.770–00:27:41.330] **SPEECH**
+ okay. It won't be like exactly like get eye
+
+[00:27:42.210–00:27:45.890] **SPEECH**
+ cat ears and so on. It will be different but you can use
+
+[00:27:45.890–00:27:50.330] **SPEECH**
+ this explanation to get your concept clear. So now what happens is
+
+[00:27:50.330–00:27:54.450] **SPEECH**
+ this short of becomes more like a google map. You want to travel from Delhi
+
+[00:27:54.450–00:27:58.310] **SPEECH**
+ to Bangalore and you have all this map but you will
+
+[00:27:58.310–00:28:02.790] **SPEECH**
+ take a specific route. So in a trained neural network when you
+
+[00:28:02.790–00:28:07.030] **SPEECH**
+ give an input image it will activate certain paths. It's like
+
+[00:28:07.030–00:28:13.210] **SPEECH**
+ When you in a Google map, when you say Delhi to Bangalore or you say New York to
+
+[00:28:13.870–00:28:19.290] **SPEECH**
+ Washington DC, it will activate certain paths or routes. So same thing will happen and
+
+[00:28:19.770–00:28:26.610] **SPEECH**
+ It will lead to a decision. This green arrow will lead to a decision that it's a cat or it's a dog
+
+[00:28:26.610–00:28:34.390] **SPEECH**
+ So the definition of deep learning is that it's a machine learning technique that uses neural networks to learn from
+
+[00:28:35.010–00:28:36.570] **SPEECH**
+ large amounts of data
+
+[00:28:37.030–00:28:41.750] **SPEECH**
+ Usually in deep learning you need large amount of training samples, okay
+
+[00:28:41.750–00:28:47.970] **SPEECH**
+ So it learns from large amount of data mimicking the human brain's ability to recognize patterns and
+
+[00:28:48.550–00:28:50.290] **SPEECH**
+ make decisions and
+
+[00:28:50.290–00:28:53.950] **SPEECH**
+ See it won't get everything right all the time. I see this
+
+[00:28:54.540–00:29:02.110] **SPEECH**
+ picture all the time in social media where your neural network gets confused between chihuahua and muffin
+
+[00:29:02.110–00:29:07.630] **SPEECH**
+ but as a human also right when you look at this image you might get a confused
+
+[00:29:07.630–00:29:12.910] **SPEECH**
+ whether it's a dog or it's a cupcake anyways so that is deep learning now you
+
+[00:29:12.910–00:29:17.930] **SPEECH**
+ might have a question deep learning versus statistical machine learning when
+
+[00:29:17.930–00:29:23.670] **SPEECH**
+ should I use what and folks many times when people say ML they actually mean
+
+[00:29:23.670–00:29:29.070] **SPEECH**
+ statistical ML okay so they don't always say statistical ML okay so that's why I
+
+[00:29:29.070–00:29:34.670] **SPEECH**
+ DL versus ML. So, when do you use what? Well, there are few
+
+[00:29:34.670–00:29:39.210] **SPEECH**
+ criteria's you need to look at. Let's say you start working on a any AI project
+
+[00:29:39.210–00:29:43.470] **SPEECH**
+ and now you want to figure out, should I use statistical ML or deep
+
+[00:29:43.470–00:29:48.850] **SPEECH**
+ learning? You have to look at bunch of parameters. Number one, features. If you
+
+[00:29:48.850–00:29:53.930] **SPEECH**
+ have simple features, let's say structure data, tables, use statistical machine
+
+[00:29:53.930–00:29:58.270] **SPEECH**
+ learning. But if you have complex features, images, videos and so on, use
+
+[00:29:58.270–00:30:03.730] **SPEECH**
+ deep learning. Having said that this doesn't mean that you can't use deep
+
+[00:30:03.730–00:30:07.870] **SPEECH**
+ learning for structured data. I have seen problem statements where you have huge
+
+[00:30:07.870–00:30:12.430] **SPEECH**
+ amount of structured data and people still use deep learning. So you have to
+
+[00:30:12.430–00:30:18.230] **SPEECH**
+ use these loose guidelines and then you have to experiment to see what approach
+
+[00:30:18.230–00:30:24.090] **SPEECH**
+ gives you the best performance. The second criteria is of course we talked
+
+[00:30:24.090–00:30:27.710] **SPEECH**
+ about it like structure versus unstructured data and you notice
+
+[00:30:27.710–00:30:33.750] **SPEECH**
+ unstructured data you get videos, audio, text, images and so on. Then comes data
+
+[00:30:33.750–00:30:39.890] **SPEECH**
+ volume. If you have a huge number of training samples usually deep learning
+
+[00:30:39.890–00:30:46.330] **SPEECH**
+ will perform better. Okay so these are the criterias that you use to choose
+
+[00:30:46.330–00:30:51.970] **SPEECH**
+ between statistical ML versus deep learning. Now let's discuss different
+
+[00:31:16.970–00:31:20.970] **SPEECH**
+ types of neural network architectures.
+
+[00:31:20.970–00:31:27.550] **SPEECH**
+ at the other end you will get the juice. So you are feeding information forward
+
+[00:31:27.550–00:31:32.990] **SPEECH**
+ there is no loop nothing information goes from input hidden to output layer
+
+[00:31:32.990–00:31:39.050] **SPEECH**
+ okay so this is the picture of a feed forward neural network. A recurrent
+
+[00:31:39.050–00:31:44.250] **SPEECH**
+ neural network is sort of like creating a soup so you put some ingredient then
+
+[00:31:44.250–00:31:49.990] **SPEECH**
+ you test it you get some feedback now you add more ingredients or you adjust
+
+[00:31:49.990–00:31:55.750] **SPEECH**
+ the ingredients okay. So that is this feedback process. So that is recurrent neural network.
+
+[00:31:56.070–00:32:01.450] **SPEECH**
+ So here although I am showing you this one picture this is a time dimension. So the neural
+
+[00:32:01.450–00:32:07.610] **SPEECH**
+ network is only one but this a1 output you feed it back okay. So this is a time axis folks okay
+
+[00:32:07.610–00:32:15.990] **SPEECH**
+ just remember this is your time axis. So you get the feedback then you again give new input
+
+[00:32:15.990–00:32:21.450] **SPEECH**
+ you train the model, you again get feedback and so on, short of like preparing a soup.
+
+[00:32:22.110–00:32:26.470] **SPEECH**
+ And the third, the most important architecture is Transformer.
+
+[00:32:27.890–00:32:33.810] **SPEECH**
+ I'm not going to go over Transformer architecture here because it requires a detailed discussion
+
+[00:32:33.810–00:32:42.250] **SPEECH**
+ much more in-depth, but this is the reason behind all the modern day gen AI and agent
+
+[00:32:42.250–00:32:49.090] **SPEECH**
+ KI application. So when you're using chat GPT to write a poem about samosa you know it writes
+
+[00:32:49.090–00:32:55.210] **SPEECH**
+ this nice poem and this kind of creativity is possible because of the underlying model
+
+[00:32:55.650–00:33:06.210] **SPEECH**
+ it can be GPT 4 0 0 1 mini whatever so that model is powered by transformer architecture
+
+[00:33:06.210–00:33:11.710] **SPEECH**
+ and GPT stands for generative pre-trained transformer UC there's a transformer so
+
+[00:33:11.710–00:33:17.070] **SPEECH**
+ transformer is a generic architecture and GPT is an architecture which is
+
+[00:33:17.070–00:33:22.050] **SPEECH**
+ derived based on transformer or it is an approach that is derived based on
+
+[00:33:22.050–00:33:27.330] **SPEECH**
+ transformer. So this diagram summarizes different architectures. Now let's look
+
+[00:33:27.330–00:33:32.850] **SPEECH**
+ at the tooling for deep learning. So for the framework there are two main
+
+[00:33:32.850–00:33:39.150] **SPEECH**
+ frameworks PyTorch by meta, TensorFlow by Google. PyTorch is by the way more
+
+[00:34:03.570–00:34:09.130] **SPEECH**
+ popular nowadays. TensorFlow gives you
+
+[00:34:37.010–00:34:41.310] **SPEECH**
+ which you can have it locally on your
+
+[00:34:41.310–00:34:47.290] **SPEECH**
+ allow for samosa. Other than text, it can also produce images where you give a description
+
+[00:34:47.290–00:34:52.790] **SPEECH**
+ and it will create a new image for you. You can also generate videos from a text prompt.
+
+[00:34:53.390–00:34:58.790] **SPEECH**
+ I have access to open AI's Sora tool where you see all these videos. Here the prompt
+
+[00:34:58.790–00:35:06.450] **SPEECH**
+ is a translucent octopus climbing up a mountain. This is totally artificially generated. Then
+
+[00:35:06.450–00:35:12.690] **SPEECH**
+ have this video where this dog is reading a book. Again artificially generated. Look at this video
+
+[00:35:12.690–00:35:18.490] **SPEECH**
+ looks so real but once again this is generated from the tax prompt. To summarize generative AI
+
+[00:35:18.490–00:35:24.310] **SPEECH**
+ is a category of AI where the objective is to generate new content. New content can be
+
+[00:35:24.310–00:35:30.510] **SPEECH**
+ text, audio, video, anything. If you look at chat GPT behind the scene it is using a model
+
+[00:35:30.510–00:35:37.250] **SPEECH**
+ called GPT and GPT has different versions GPT 3, GPT 4, GPT 4.0 and so on
+
+[00:35:37.950–00:35:44.390] **SPEECH**
+ similarly meta has this open source model called llama so you can go to
+
+[00:35:44.390–00:35:50.210] **SPEECH**
+ meta.ai and you will get similar experience as JET GPT the model behind
+
+[00:35:50.210–00:35:54.490] **SPEECH**
+ the scene is llama which is an open source model there are many companies
+
+[00:36:19.090–00:36:23.410] **SPEECH**
+ producing all these models. For example
+
+[00:36:48.810–00:36:52.710] **SPEECH**
+ audio gen. If you go to this website you
+
+[00:37:16.950–00:37:20.990] **SPEECH**
+ all about generating new content, then
+
+[00:37:20.990–00:37:25.130] **SPEECH**
+ The theoretical foundation chapter in this course so you can check that.
+
+[00:37:25.530–00:37:31.550] **SPEECH**
+ So all these problems where you are not essentially generating a new text but you are doing let's
+
+[00:37:31.550–00:37:37.770] **SPEECH**
+ say classification or you are doing regression those are considered to be traditional AI
+
+[00:37:38.130–00:37:44.390] **SPEECH**
+ and in today's world even in the era of gen AI we still use traditional AI because it is
+
+[00:37:44.390–00:37:49.830] **SPEECH**
+ lightweight and for certain type of issues using traditional AI makes total sense.
+
+[00:37:49.830–00:37:55.950] **SPEECH**
+ if I have to summarize the differences between these two then the purpose of traditional AI
+
+[00:37:55.950–00:38:01.890] **SPEECH**
+ was to analyze predict classify or make decisions whereas generative AI means you are generating
+
+[00:38:01.890–00:38:08.230] **SPEECH**
+ new content all together okay so these are the task sample tasks which we already discussed then the
+
+[00:38:08.910–00:38:16.750] **SPEECH**
+ type of output in traditional AI is usually yes no labels you know numbers if you are doing
+
+[00:38:40.670–00:38:44.010] **SPEECH**
+ health price prediction, etc.
+
+[00:38:44.010–00:38:49.450] **SPEECH**
+ Whereas in GenAI, you do pre-training on massive data set, you know, like all the texts
+
+[00:38:49.450–00:38:51.810] **SPEECH**
+ from internet and books and so on.
+
+[00:38:52.490–00:38:58.550] **SPEECH**
+ Then if you think about human-like capacities, traditional AI has limited capabilities, whereas
+
+[00:38:58.550–00:39:00.650] **SPEECH**
+ generative AI has high capabilities.
+
+[00:39:01.590–00:39:05.070] **SPEECH**
+ You can do the work of a poet, for example, using generative AI.
+
+[00:39:05.310–00:39:07.270] **SPEECH**
+ Using traditional AI, you cannot do it.
+
+[00:39:07.270–00:39:14.230] **SPEECH**
+ then in terms of tooling for traditional AI we use tools like these XGBoost,
+
+[00:39:14.630–00:39:24.800] **SPEECH**
+ scikit-lan, etc. whereas in GenAI you use all these tools mainly LLMs. Modern
+
+[00:39:24.800–00:39:29.280] **SPEECH**
+ day generative AI revolution has become possible because of large language
+
+[00:39:29.280–00:39:35.220] **SPEECH**
+ models also known as LLMs. Chat GPT is powered by LLM called GPT. Google has
+
+[00:39:42.320–00:39:43.240] **SPEECH**
+ Gemini,
+
+[00:39:43.240–00:39:55.720] **SPEECH**
+ analogy based understanding of LLM so that
+
+[00:39:55.720–00:39:58.460] **SPEECH**
+ you can build an intuition behind LLMs
+
+[00:39:58.460–00:40:03.900] **SPEECH**
+ and then in the later lectures we will cover some of the technical aspects of it.
+
+[00:40:07.370–00:40:12.570] **SPEECH**
+ Peter Pandey has a curious parrot called Buddy. Buddy has a great mimicking ability and a sharp
+
+[00:40:12.570–00:40:18.810] **SPEECH**
+ memory. Buddy listens to all the conversations in Peter's home and can mimic them very accurately.
+
+[00:40:19.330–00:40:22.290] **SPEECH**
+ Now when he hears feeling hungry I would like to have some
+
+[00:40:22.290–00:40:28.030] **SPEECH**
+ for this case the probability of him saying biryani cherries or food is much higher than
+
+[00:40:28.030–00:40:30.470] **SPEECH**
+ the words such as bicycle or book.
+
+[00:40:31.390–00:40:35.690] **SPEECH**
+ Buddy doesn't understand the meaning of biryani or food or cherries the way humans do.
+
+[00:40:36.130–00:40:41.490] **SPEECH**
+ All he is doing is using statistical probability along with some randomness to predict the
+
+[00:40:41.490–00:40:46.870] **SPEECH**
+ next word or set of words purely based on the past conversations he has listened to.
+
+[00:40:47.270–00:40:50.010] **SPEECH**
+ We can call Buddy a Stochastic Parrot.
+
+[00:40:50.490–00:40:54.650] **SPEECH**
+ Stochastic means a system that is characterized by randomness or probability.
+
+[00:40:55.390–00:40:58.310] **SPEECH**
+ A language model is somewhat like a stochastic parrot.
+
+[00:40:58.730–00:41:03.550] **SPEECH**
+ They are computer programs that use a technology called neural networks to predict the next
+
+[00:41:03.550–00:41:04.890] **SPEECH**
+ set of words for a sentence.
+
+[00:41:05.530–00:41:10.510] **SPEECH**
+ Just like how Buddy is trained on Peter's Home Conversations dataset, you can have
+
+[00:41:10.510–00:41:16.130] **SPEECH**
+ a language model that is trained on, for example, all movie-related articles from Wikipedia
+
+[00:41:16.600–00:41:20.510] **SPEECH**
+ and it will be able to predict the next set of words for a movie-related sentence.
+
+[00:41:20.510–00:41:25.510] **SPEECH**
+ Gmail autocomplete is one of the many applications that uses a language model
+
+[00:41:25.510–00:41:29.970] **SPEECH**
+ underneath. Now that we have some understanding of a language model let's
+
+[00:41:29.970–00:41:34.470] **SPEECH**
+ understand what the heck is a large language model. Let's go back to our buddy
+
+[00:41:34.470–00:41:40.270] **SPEECH**
+ example. Our buddy got some divine superpower and now he can listen to
+
+[00:41:40.270–00:41:44.350] **SPEECH**
+ Peter's neighbors conversations, conversations that are happening in
+
+[00:41:44.350–00:41:50.410] **SPEECH**
+ schools and universities in the town. In fact not only in his town but all the
+
+[00:41:50.410–00:41:51.670] **SPEECH**
+ towns across the world.
+
+[00:41:52.770–00:41:58.150] **SPEECH**
+ With this extra power and knowledge, NowBuddy can complete the next set of words on a history
+
+[00:41:58.150–00:42:02.430] **SPEECH**
+ subject, give you a nutrition advice, or even write a poem.
+
+[00:42:03.150–00:42:09.270] **SPEECH**
+ Like our powerful Parrot Buddy, large language models are trained on a huge volume of data
+
+[00:42:09.270–00:42:14.030] **SPEECH**
+ such as Wikipedia articles, Google news articles, online books, and so on.
+
+[00:42:14.030–00:42:20.050] **SPEECH**
+ If you look inside the LLM, you will find a neural network containing trillions of parameters
+
+[00:42:20.050–00:42:23.950] **SPEECH**
+ that can capture more complex patterns and nuances in a language.
+
+[00:42:24.790–00:42:30.210] **SPEECH**
+ ChatGPT is an application that uses LLM called GPT-3 or GPT-4 behind the scenes.
+
+[00:42:31.090–00:42:36.370] **SPEECH**
+ Other examples of LLMs are Palm II by Google and Llama by Meta.
+
+[00:42:37.490–00:42:43.690] **SPEECH**
+ On top of statistical predictions, LLM uses another approach called reinforcement learning
+
+[00:42:43.690–00:42:49.010] **SPEECH**
+ with human feedback, RLHF. Let's understand this once again with Buddy.
+
+[00:42:49.910–00:42:54.650] **SPEECH**
+ One day Peter was having a conversation with his cute little 2 year old son.
+
+[00:42:55.590–00:42:58.610] **SPEECH**
+ Son, don't eat too much bananas. Else?
+
+[00:43:02.230–00:43:07.670] **SPEECH**
+ Hearing this, Peter realized that Buddy has been listening to the conversation from abusive
+
+[00:43:07.670–00:43:11.850] **SPEECH**
+ parents in his town. What he said was the effect of that.
+
+[00:43:11.850–00:43:17.510] **SPEECH**
+ Peter then starts keeping a close eye on what Buddy is saying. For a same question,
+
+[00:43:17.770–00:43:22.970] **SPEECH**
+ Buddy can produce multiple answers and all Peter has to do is tell him which
+
+[00:43:22.970–00:43:28.250] **SPEECH**
+ one is toxic and which one is not. After this training, Buddy doesn't use any
+
+[00:43:28.250–00:43:34.350] **SPEECH**
+ toxic language. While training chat GPT, OpenAI used a similar approach of human
+
+[00:43:34.350–00:43:41.370] **SPEECH**
+ intervention, RLHF. OpenAI used a huge workforce of humans to make chat GPT
+
+[00:43:41.370–00:43:45.710] **SPEECH**
+ less toxic. While LLMs are very powerful they don't have any subjective
+
+[00:43:45.710–00:43:52.090] **SPEECH**
+ experience emotions or consciousness that we as humans have. LLMs work purely
+
+[00:43:52.090–00:43:55.510] **SPEECH**
+ based on the data that they have been trained on. I hope you like this short
+
+[00:43:55.510–00:44:01.070] **SPEECH**
+ explanation which was based on analogy. Obviously the technical working of this
+
+[00:44:01.070–00:44:04.570] **SPEECH**
+ thing is little different than analogy but this should give you a good
+
+[00:44:04.570–00:44:07.610] **SPEECH**
+ intuition on this topic. Let's now get a
+
+[00:44:07.610–00:44:31.360] **SPEECH**
+ example of my own company Atleak Technologies where we have 50 people and
+
+[00:44:31.360–00:44:34.760] **SPEECH**
+ we want to build this HR assistant chat
+
+[00:44:34.760–00:44:59.940] **SPEECH**
+ files okay say if you ask this question to chat GPT it will not be able to
+
+[00:44:59.940–00:45:06.240] **SPEECH**
+ answer because atlix is a private company and all that data on the leave
+
+[00:45:06.240–00:45:13.640] **SPEECH**
+ etc is stored in this PDF files which are private to that organization. You can
+
+[00:45:13.640–00:45:19.700] **SPEECH**
+ use something called retrieval augmented generation and you can build a custom
+
+[00:45:19.700–00:45:27.910] **SPEECH**
+ chatbot for atlix where you can use any LLM like Claude or GPT let's say and
+
+[00:45:27.910–00:45:36.130] **SPEECH**
+ and that llm can look into that data and how does that mechanism work well don't worry about it
+
+[00:45:36.130–00:45:43.990] **SPEECH**
+ we are going to talk about rag in detail in the further lectures but just assume for now you
+
+[00:45:43.990–00:45:50.850] **SPEECH**
+ have a way where you can make llm look into that external source of knowledge and then it can
+
+[00:45:50.850–00:45:54.350] **SPEECH**
+ answer these type of questions. This chat
+
+[00:45:54.350–00:46:18.690] **SPEECH**
+ So see now the complexity is increased previously you are just asking question
+
+[00:46:18.690–00:46:25.470] **SPEECH**
+ it was giving answer. Now it can perform actions such as registering your leaves okay. So here
+
+[00:46:25.470–00:46:32.990] **SPEECH**
+ you obviously have policy documents etc but in addition you added API integration to your HR
+
+[00:46:32.990–00:46:38.810] **SPEECH**
+ management system. Let's say your HR management system has some kind of APIs and you hook these
+
+[00:46:38.810–00:46:47.670] **SPEECH**
+ APIs to LLM. You make these APIs available as tools to your LLM and then LLM can specifically
+
+[00:46:47.670–00:46:51.590] **SPEECH**
+ look into your query so when you're logging as an employee let's say Mohan
+
+[00:46:51.590–00:46:56.050] **SPEECH**
+ Sharma is your name it knows that it needs to go into that database and look
+
+[00:46:56.050–00:46:59.710] **SPEECH**
+ for Mohan Sharma when I ask this question how many leaves do I have left
+
+[00:46:59.710–00:47:03.650] **SPEECH**
+ and then when I say apply for two-day lives it has that context it knows that
+
+[00:47:03.650–00:47:07.610] **SPEECH**
+ this is Mohan's login and I need to apply for leave for Mohan and it will
+
+[00:47:07.610–00:47:12.790] **SPEECH**
+ use this API which has been made available to LLM it's like there is an
+
+[00:47:12.790–00:47:16.330] **SPEECH**
+ LLM which is like a human brain and you are giving it a tool like a screw
+
+[00:47:16.330–00:47:20.070] **SPEECH**
+ driver or a phone these are all the tools so you can make all these tools
+
+[00:47:20.070–00:47:25.430] **SPEECH**
+ available to LLM and build this chatbot this is called tool augmented chatbot
+
+[00:47:25.430–00:47:31.770] **SPEECH**
+ see if you increase complexity to this you can call it an AI agent but I'm not
+
+[00:47:31.770–00:47:38.310] **SPEECH**
+ calling it an agent yet because this doesn't have autonomy it is performing a
+
+[00:47:38.310–00:47:44.510] **SPEECH**
+ very simple task okay so we call it tool augmented chatbot so the two use cases
+
+[00:47:44.510–00:47:46.230] **SPEECH**
+ that we looked at.
+
+[00:47:50.650–00:48:07.130] **SPEECH**
+ Workflow. So let's look at agent now. Let's say
+
+[00:48:07.130–00:48:12.550] **SPEECH**
+ you want your chat board to handle even more complex questions such as
+
+[00:48:12.550–00:48:14.590] **SPEECH**
+ prepare for Sara's maternity leave,
+
+[00:48:15.070–00:48:17.850] **SPEECH**
+ and it will do multi-step planning for it.
+
+[00:48:18.350–00:48:19.510] **SPEECH**
+ Let's say new intern is joining,
+
+[00:48:19.710–00:48:22.590] **SPEECH**
+ you'll say onboard the new intern joining next Monday.
+
+[00:48:23.150–00:48:25.810] **SPEECH**
+ And see, it will create onboarding checklist,
+
+[00:48:26.210–00:48:27.890] **SPEECH**
+ it will schedule welcoming meeting,
+
+[00:48:28.730–00:48:33.430] **SPEECH**
+ it will send access request to IT department and so on.
+
+[00:48:34.050–00:48:36.510] **SPEECH**
+ So if you think about this chat board,
+
+[00:48:36.790–00:48:38.990] **SPEECH**
+ what it is doing is it is taking the question
+
+[00:49:03.070–00:49:08.590] **SPEECH**
+ which is on board the new intern joining
+
+[00:49:08.590–00:49:14.230] **SPEECH**
+ to it and it is using this tool to send a welcome meeting then you want to create
+
+[00:49:14.230–00:49:19.130] **SPEECH**
+ intense profile in HR management system so let's say this is your HRMS right
+
+[00:49:19.130–00:49:27.230] **SPEECH**
+ HR management system and the this this will create intense profile in that
+
+[00:49:27.230–00:49:34.530] **SPEECH**
+ system then it will create a IT helpdesk ticket to get a Wi-Fi credentials
+
+[00:49:34.530–00:49:38.750] **SPEECH**
+ email, Slack access. See so it has access
+
+[00:49:38.750–00:50:02.750] **SPEECH**
+ to all these tools. So when you are building this kind of agentic AI system you provide access to all these tools. Knowledge, memory etc. And then it will use reasoning model to create a plan and you know it will perform all these steps. The next step can be to order laptop and ID card. And once again you have some kind of system, IT
+
+[00:50:02.750–00:50:09.790] **SPEECH**
+ system that you're using. So at every step you have some LLM which is doing some generation.
+
+[00:50:10.330–00:50:16.590] **SPEECH**
+ It is extracting the details and then it is accessing all these tools to perform
+
+[00:50:17.130–00:50:24.690] **SPEECH**
+ the actions. So this is an agentic AI system and this chatbot is your AI agent. So there are
+
+[00:50:24.690–00:50:29.990] **SPEECH**
+ a few characteristics that you will observe here. The first one is goal-oriented planning.
+
+[00:50:29.990–00:50:35.530] **SPEECH**
+ So previously you were asking a simple question how many leaves do I have left
+
+[00:50:35.530–00:50:41.050] **SPEECH**
+ it will say seven okay what is a polysemon C cleave it will say XYZ so it
+
+[00:50:41.050–00:50:47.410] **SPEECH**
+ is simple Q&A reactive you're asking question it is giving answer very very
+
+[00:50:47.410–00:50:53.930] **SPEECH**
+ basic chat board but here it is agentic where you're saying onboard the new
+
+[00:50:53.930–00:50:58.290] **SPEECH**
+ intern you're not giving detailed instructions on how to onboard a new
+
+[00:50:58.290–00:51:04.090] **SPEECH**
+ in turn and then so this one the first thing is goal okay so you gave it a goal
+
+[00:51:04.090–00:51:10.410] **SPEECH**
+ and you gave it access to the tools okay so these are all the tools and
+
+[00:51:10.410–00:51:17.690] **SPEECH**
+ knowledge and memory all these tools and it will do multi-step reasoning goal
+
+[00:51:17.690–00:51:23.610] **SPEECH**
+ oriented planning and it will do autonomous decision-making so it is
+
+[00:51:23.610–00:51:27.730] **SPEECH**
+ actually performing the actions if you have simple Q&A chat board it is
+
+[00:51:27.730–00:51:29.470] **SPEECH**
+ answering a question. It is not doing the
+
+[00:51:29.470–00:51:51.950] **SPEECH**
+ we call it agentic chatboard. This chatboard you can call agent as well. So
+
+[00:51:51.950–00:51:56.330] **SPEECH**
+ AI agent and agentic AI is kind of it's the same thing basically. There is
+
+[00:51:56.330–00:51:59.710] **SPEECH**
+ subtle difference which is AI agent can
+
+[00:51:59.710–00:52:24.810] **SPEECH**
+ agents and what is agent? Agent is something that can perceive environment
+
+[00:52:47.930–00:52:54.790] **SPEECH**
+ it can make decision and take actions. Of
+
+[00:52:54.790–00:53:00.090] **SPEECH**
+ see when it created that email or when it created that system in IT to order
+
+[00:53:00.090–00:53:04.730] **SPEECH**
+ laptop for a new intern it had that freedom it is not asking you every time
+
+[00:53:04.730–00:53:09.330] **SPEECH**
+ it will just do it okay and it will reason through complex task and
+
+[00:53:09.330–00:53:14.310] **SPEECH**
+ proactively take multi-step actions to accomplish course without needing
+
+[00:53:14.310–00:53:18.910] **SPEECH**
+ detailed instructions see this is important you are just giving it a goal
+
+[00:53:18.910–00:53:24.790] **SPEECH**
+ will figure out a plan and it will execute it. Now you can build AI agents
+
+[00:53:24.790–00:53:31.770] **SPEECH**
+ through coding by using there are a lot of frameworks such as Agno, Google
+
+[00:53:31.770–00:53:39.730] **SPEECH**
+ agent development kit. OpenAI also has a toolkit to build agents you know OpenAI
+
+[00:53:39.730–00:53:46.210] **SPEECH**
+ it has a Python package and so on. You can also build agentic AI system using
+
+[00:53:46.210–00:53:54.130] **SPEECH**
+ low code or no code tools such as n8n. Here is one workflow that I'm showing
+
+[00:53:54.130–00:53:59.870] **SPEECH**
+ you in n18 this is the name of the tool where when a new employee is onboarding
+
+[00:53:59.870–00:54:05.350] **SPEECH**
+ you will trigger the workflow through some event through some recurrent
+
+[00:54:05.350–00:54:13.150] **SPEECH**
+ schedule etc and then you will have an AI agent and AI agent has memory it has
+
+[00:54:13.150–00:54:18.490] **SPEECH**
+ chat model which is LLM, it has tool and so on and it will let's say in this case
+
+[00:54:18.490–00:54:24.710] **SPEECH**
+ it is using anthropic's Claude tool it has a memory in Postgres and then in
+
+[00:54:24.710–00:54:28.170] **SPEECH**
+ terms of tool it has access to Jira so you know in a software organization
+
+[00:54:28.170–00:54:33.070] **SPEECH**
+ when a new employee joins you want to create their Jira account okay you can
+
+[00:54:33.070–00:54:38.310] **SPEECH**
+ have multiple tools you can have a tool to order a laptop you can have a tool
+
+[00:54:38.310–00:54:43.350] **SPEECH**
+ to order multiple things you know whatever is needed to unload that
+
+[00:54:43.350–00:54:49.630] **SPEECH**
+ employee and then you will check is it a manager yes then you add them to a
+
+[00:54:49.630–00:54:55.370] **SPEECH**
+ slack channel which is specific to managers or you add them to the slack
+
+[00:54:55.370–00:55:00.210] **SPEECH**
+ channel for individual contributors and so on this is just a one simple example
+
+[00:55:00.210–00:55:06.030] **SPEECH**
+ you can have a much more complex workflow. N18 is a drag-and-drop tool you
+
+[00:55:06.030–00:55:10.410] **SPEECH**
+ don't have to do coding, you can integrate all these LLMs and build agentic AI
+
+[00:55:10.410–00:55:14.750] **SPEECH**
+ system. So this is one example of agentic AI system. There are other low code tools
+
+[00:55:14.750–00:55:21.290] **SPEECH**
+ such as Zapier and so on. If you want to summarize the difference between the
+
+[00:55:21.290–00:55:26.990] **SPEECH**
+ three chatbots that we discussed. Rag chatbot is very reactive. You know you
+
+[00:55:26.990–00:55:31.930] **SPEECH**
+ are asking question okay how many leaves any employee get in a year. It's a
+
+[00:55:31.930–00:55:39.130] **SPEECH**
+ standard answer okay what is the policy on sick live very reactive tool augmented chat
+
+[00:55:39.130–00:55:44.530] **SPEECH**
+ board has one additional thing which is tool uses so it is specifically looking into your employee
+
+[00:55:45.130–00:55:51.170] **SPEECH**
+ records and telling you how many leaves you have left or if you are applying for a leave it will
+
+[00:55:51.170–00:55:58.030] **SPEECH**
+ register that into system whereas when you have agent or an agentic AI chat board it will have
+
+[00:55:58.030–00:56:03.670] **SPEECH**
+ reasoning, planning, proactivity all these features. At this stage you already know
+
+[00:56:03.670–00:56:08.170] **SPEECH**
+ the difference between AI agent and agentic AI. Let's explore this further and
+
+[00:56:08.170–00:56:13.210] **SPEECH**
+ also understand the difference between these two and generative AI. To summarize
+
+[00:56:13.210–00:56:20.810] **SPEECH**
+ AI agent has access to tools knowledge memory LLM is obviously an integral
+
+[00:56:20.810–00:56:26.750] **SPEECH**
+ component of it and it can perform autonomous task okay. It can pursue the
+
+[00:56:51.130–00:56:56.550] **SPEECH**
+ environment, make decision and take
+
+[00:57:21.470–00:57:26.530] **SPEECH**
+ you have you can post URL, you can run
+
+[00:57:50.030–00:57:56.210] **SPEECH**
+ which is using LLM models like Google
+
+[00:57:56.210–00:57:59.270] **SPEECH**
+ so many things. So that is your
+
+[00:58:18.510–00:58:23.930] **SPEECH**
+ autonomously when you give your goal to it then you're building this
+
+[00:58:23.930–00:58:30.170] **SPEECH**
+ agentic AI system. So the purpose for generative AI is just to create new content right whatever
+
+[00:58:30.170–00:58:35.510] **SPEECH**
+ interaction you are doing with chat GPT asking a question it is generating answer that is generative
+
+[00:58:35.510–00:58:42.890] **SPEECH**
+ AI. But if you use same chat GPT to perform deep research let's say you are performing deep research
+
+[00:58:42.890–00:58:49.110] **SPEECH**
+ in chat GPT or perplexity where it is taking multiple actions it is going to internet
+
+[00:58:49.110–00:58:51.930] **SPEECH**
+ accessing different tools and there is
+
+[00:59:11.370–00:59:17.110] **SPEECH**
+ unstructured content which is like a text, audio, etc. In agentic AI you are
+
+[00:59:17.110–00:59:19.130] **SPEECH**
+ actually performing the action. It's not
+
+[00:59:25.010–00:59:42.710] **SPEECH**
+ autonomy or no autonomy. It is just ask or waiting for your prompt giving the answer whereas agentic AI has high autonomy. Planning and reasoning. In Gen AI there is minimal planning right whereas agentic AI there is multi-step
+
+[00:59:42.710–00:59:43.530] **SPEECH**
+ detail planning
+
+[00:59:57.110–01:00:06.210] **SPEECH**
+ it creates a plan it performs action then it will review then it will correct
+
+[01:00:06.210–01:00:11.070] **SPEECH**
+ review correct and it gives you a final output. When you use chat GPT for simple
+
+[01:00:11.070–01:00:17.130] **SPEECH**
+ Q&A that is generative AI. By the way chat GPT I can put here also if you're using chat GPT or
+
+[01:00:17.130–01:00:23.430] **SPEECH**
+ perplexity for deep research then that is agentic AI. Okay so I hope you understood the difference
+
+[01:00:23.430–01:00:29.030] **SPEECH**
+ between gen AI and agentic AI and the third component which is AI agent is nothing it's just
+
+[01:00:29.030–01:00:36.910] **SPEECH**
+ a sub component within agentic AI. It is one component in agentic AI. Agentic AI can have one or more agents.

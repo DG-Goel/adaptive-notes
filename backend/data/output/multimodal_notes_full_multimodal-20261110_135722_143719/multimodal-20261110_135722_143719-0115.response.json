@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-4af9e80b-2638-44d6-b475-a66a5844789f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Use this for printing multi-dimensional arrays.\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"Use this for printing multi-dimensional arrays.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Now we have this matrix which has two rows, and in each row we have three columns.\",\n        \"refs\": [\"Q0002\"],\n        \"claims\": [\n          {\n            \"text\": \"Now we have this matrix which has two rows, and in each row we have three columns.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0002\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"We can also create a three dimensional array, all we have to do is to add another pair of brackets and specify the length of that dimension.\",\n        \"refs\": [\"Q0003\"],\n        \"claims\": [\n          {\n            \"text\": \"We can also create a three dimensional array, all we have to do is to add another pair of brackets and specify the length of that dimension.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0003\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"So, let's back to a two dimensional array, we're going to get rid of the new operator and use curly braces.\",\n        \"refs\": [\"Q0007\"],\n        \"claims\": [\n          {\n            \"text\": \"So, let's back to a two dimensional array, we're going to get rid of the new operator and use curly braces.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0007\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Now, let's say in this matrix we're going to have two rows and three columns.\",\n        \"refs\": [\"Q0008\"],\n        \"claims\": [\n          {\n            \"text\": \"Now, let's say in this matrix we're going to have two rows and three columns.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0008\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"So each row is an array itself, because it's a list of items, right?\",\n        \"refs\": [\"Q0009\"],\n        \"claims\": [\n          {\n            \"text\": \"So each row is an array itself, because it's a list of items, right?\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0009\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [\n    {\n      \"ref\": \"Q0001\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0004\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0005\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0006\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0010\",\n      \"reason\": \"noneducational\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract facts. Identify statements: printing multi-dimensional arrays, description of matrix rows/columns, creating 3D array by adding brackets, curly brace syntax, etc. Provide claims with explicit basis. Availability? source_supported? Since primary source present. Use explicit. literal_kind verbal. instructional_role maybe explanation. Provide refs. Let's craft items.\n\nWe'll list each fact.\n\nFact1: \"Use this for printing multi-dimensional arrays.\" from Q0000. claim text same. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role explanation_of_mistake? Actually it's instruction. maybe \"prerequisite\"? Use null? Choose null.\n\nFact2: \"Now we have this matrix which has two rows, and in each row we have three columns.\" Q0002.\n\nFact3: \"We can also create a three dimensional array, all we have to do is to add another pair of brackets and specify the length of that dimension.\" Q0003.\n\nFact4: \"So, let's back to a two dimensional array, we're going to get rid of the new operator and use curly braces.\" Q0007.\n\nFact5: \"Now, let's say in this matrix we're going to have two rows and three columns.\" Q0008.\n\nFact6: \"So each row is an array itself, because it's a list of items, right?\" Q0009.\n\nOther quotes like \"Take a look.\", \"Pretty easy.\", \"Now what about the curly brace syntax?\" are not factual teaching? Might be excluded as noneducational? Could be excluded as promotion? Probably noneducational. We'll put excluded.\n\nAbstentions none.\n\nNow format.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794319909,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5082008e34",
+  "usage": {
+    "completion_tokens": 1291,
+    "prompt_tokens": 2119,
+    "total_tokens": 3410,
+    "completion_time": 2.731595392,
+    "completion_tokens_details": {
+      "reasoning_tokens": 335
+    },
+    "prompt_time": 0.127919867,
+    "prompt_tokens_details": null,
+    "queue_time": 0.288505582,
+    "total_time": 2.859515259
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72wsx33ez5s484bce6ythm0",
+    "debug": null,
+    "seed": 1034017895,
+    "usage": null
+  }
+}

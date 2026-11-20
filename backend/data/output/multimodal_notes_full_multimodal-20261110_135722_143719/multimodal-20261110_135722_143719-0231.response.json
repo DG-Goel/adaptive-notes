@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-bff54cfc-6639-4fa3-a89b-b7f4c1664e62",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Switch statements can execute different code depending on the value of an expression.\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"Switch statements can execute different code depending on the value of an expression.\",\n            \"refs\": [\"Q0000\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The exercise asks to write a program that reads a number and prints \\\"fizz\\\" if the number is divisible by 5, \\\"buzz\\\" if divisible by 3, \\\"fizzbuzz\\\" if divisible by both 5 and 3, and otherwise prints the number itself.\",\n        \"refs\": [\"Q0005\", \"Q0007\", \"Q0008\"],\n        \"claims\": [\n          {\n            \"text\": \"If the number is divisible by 5, the program should output \\\"fizz\\\".\",\n            \"refs\": [\"Q0005\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"If the number is divisible by 3, the program should output \\\"buzz\\\".\",\n            \"refs\": [\"Q0007\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"If the number is divisible by both 5 and 3, the program should output \\\"fizzbuzz\\\".\",\n            \"refs\": [\"Q0008\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"If the number is not divisible by 5 or 3, the program should print the number itself.\",\n            \"refs\": [\"Q0008\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"To read input from the user, the program should use a Scanner object.\",\n        \"refs\": [\"Q0010\"],\n        \"claims\": [\n          {\n            \"text\": \"Reading a number from the console requires creating and using a Scanner object.\",\n            \"refs\": [\"Q0010\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract facts from primary teaching. The excerpts describe switch statements and fizzbuzz exercise. Facts: switch statements execute different code depending on value of expression. Exercise: write program that reads number, prints \"fizz\" if divisible by 5, \"buzz\" if divisible by 3, \"fizzbuzz\" if both, else prints number. Also need scanner object to read number. So create items with fact_text and claims. Each claim includes text, refs, basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role maybe prerequisite or explanation. Provide refs list of Q0000 etc. Let's produce.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794324652,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a7bb72c24",
+  "usage": {
+    "completion_tokens": 844,
+    "prompt_tokens": 2942,
+    "total_tokens": 3786,
+    "completion_time": 1.777295875,
+    "completion_tokens_details": {
+      "reasoning_tokens": 127
+    },
+    "prompt_time": 0.144547868,
+    "prompt_tokens_details": null,
+    "queue_time": 0.160304659,
+    "total_time": 1.9218437430000002
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m731apa3em69sg6gnzx855yn",
+    "debug": null,
+    "seed": 318796482,
+    "usage": null
+  }
+}

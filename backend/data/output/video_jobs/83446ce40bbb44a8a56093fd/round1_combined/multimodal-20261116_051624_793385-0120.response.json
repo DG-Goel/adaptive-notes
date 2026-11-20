@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-d2679ec6-a50d-4e63-8f61-6364df462043",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"bond_concept_1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"expected capital gain\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"bond_concept_1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"You have a 10% expected capital gain from buying that bond.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"bond_concept_2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"short foreign bond, long US bond\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"bond_concept_2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Go short massively the foreign bond and go very long the US bond.\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"bond_fact_1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The two bonds are paying the same interest rate.\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"exchange_fact_1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If the interests are the same, the exchange rate must jump exactly by the same amount as the expected value of the dollar change in the future.\",\n      \"refs\": [\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What percentage expected capital gain is mentioned for the bond?\",\n      \"answer\": \"10%\",\n      \"distractors\": [\"5%\", \"15%\", \"20%\"],\n      \"explanation\": \"The excerpt states a 10% expected capital gain from buying the bond.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"expected capital gain\",\n      \"refs\": [\"Q0003\"]\n    },\n    {\n      \"question\": \"According to the dialogue, what is the recommended position on the foreign bond?\",\n      \"answer\": \"Short massively\",\n      \"distractors\": [\"Long moderately\", \"Hold unchanged\", \"Buy heavily\"],\n      \"explanation\": \"The speaker says to go short massively the foreign bond.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"bond positioning\",\n      \"refs\": [\"Q0006\"]\n    },\n    {\n      \"question\": \"What condition must the exchange rate meet if the interest rates of two bonds are the same?\",\n      \"answer\": \"It must jump exactly by the expected future dollar change amount.\",\n      \"distractors\": [\n        \"It must stay constant.\",\n        \"It must decrease by half the expected change.\",\n        \"It must increase by twice the expected change.\"\n      ],\n      \"explanation\": \"The excerpt explains the exchange rate must jump exactly by the same amount as the expected value of the dollar change in the future.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"exchange rate condition\",\n      \"refs\": [\"Q0011\"]\n    },\n    {\n      \"question\": \"What is the relationship between the two bonds' interest rates as described?\",\n      \"answer\": \"They are the same.\",\n      \"distractors\": [\"One is higher than the other.\", \"Both are zero.\", \"One is variable, the other fixed.\"],\n      \"explanation\": \"The excerpt explicitly says the two bonds are paying the same interest rate.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"bond interest rates\",\n      \"refs\": [\"Q0004\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract any educational content. The excerpts are mostly dialogue, not clear concepts. Might have a concept about bonds, expected capital gain, short US vs foreign bond. Could create rows for concepts? But need primary excerpts supporting. We can create concept: \"expected capital gain\" from Q0003. Also \"short foreign bond, long US bond\" from Q0006. Provide rows.\n\nCreate items maybe item \"bond_strategy\". Provide concept_name and content.\n\nRows: concept_name \"expected capital gain\" text from Q0003. content maybe explanation? Q0003 says \"you have a 10% expected capital gain from buying that bond\". That's a fact.\n\nAlso concept \"short foreign bond, long US bond\" from Q0006.\n\nWe need required fields for concepts: concept_name and content. Provide rows.\n\nAlso maybe facts: fact_text \"The two bonds are paying the same interest rate.\" from Q0004.\n\nCreate rows for facts.\n\nQuiz: need 4 questions if possible. We have limited info. Can make questions about expected capital gain, same interest rate, strategy short foreign long US, exchange rate jump condition from Q0011.\n\nCreate 4 MCQs.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794806431,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_90620edd96",
+  "usage": {
+    "completion_tokens": 1378,
+    "prompt_tokens": 2547,
+    "total_tokens": 3925,
+    "completion_time": 3.205278241,
+    "completion_tokens_details": {
+      "reasoning_tokens": 244
+    },
+    "prompt_time": 0.12082084,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "queue_time": 0.372887875,
+    "total_time": 3.326099081
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hcsbrner8sz7w4ydkvj9s9",
+    "debug": null,
+    "seed": 697958321,
+    "usage": null
+  }
+}

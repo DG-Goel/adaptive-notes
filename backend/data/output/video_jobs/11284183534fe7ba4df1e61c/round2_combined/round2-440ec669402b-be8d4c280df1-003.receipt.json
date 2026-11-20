@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-486c6b00-ee58-40f4-ae39-b2e9f0dfa558",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Neural Network Architecture Types\",\n      \"source_segment_ids\": [\"CON_0035\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0035\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0035\",\n              \"exact_quote\": \"So you are feeding information forward there is no loop nothing information goes from input hidden to output layer okay so this is the picture of a feed forward neural network.\"\n            },\n            {\n              \"note_id\": \"CON_0035\",\n              \"exact_quote\": \"A recurrent neural network is sort of like creating a soup so you put some ingredient then you test it you get some feedback now you add more ingredients or you adjust the ingredients okay.\"\n            },\n            {\n              \"note_id\": \"CON_0035\",\n              \"exact_quote\": \"And the third, the most important architecture is Transformer.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Neural Network Architecture Types\",\n            \"headers\": [\"Architecture\", \"Data Flow\", \"Key Characteristic\"],\n            \"rows\": [\n              [\"Feed‑Forward Neural Network\", \"Input → Hidden → Output (no loops)\", \"Static forward propagation\"],\n              [\"Recurrent Neural Network (RNN)\", \"Input ↔ Hidden (feedback loops)\", \"Handles sequential/temporal data\"],\n              [\"Transformer\", \"Self‑attention across all positions\", \"Parallel processing, foundation of modern LLMs\"]\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Collaborative Feature Detection Workflow\",\n      \"source_segment_ids\": [\"CON_0031\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0031\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0031\",\n              \"exact_quote\": \"You can make this a teamwork and give individual responsibility to each of these students such as Mike can work on detecting only eyes, Mohan can work on detecting only nose.\"\n            },\n            {\n              \"note_id\": \"CON_0031\",\n              \"exact_quote\": \"So each of these students are working on detecting a specific part of Koala's body from an image.\"\n            },\n            {\n              \"note_id\": \"CON_0031\",\n              \"exact_quote\": \"And then these three students can go to Serena and Serena can work on deciding if the image has koalas face or not.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Collaborative Feature Detection\",\n            \"direction\": \"top-down\",\n            \"nodes\": [\n              {\"id\": \"n1\", \"label\": \"Mike – Detect eyes\"},\n              {\"id\": \"n2\", \"label\": \"Mohan – Detect nose\"},\n              {\"id\": \"n3\", \"label\": \"Saqib – Detect ears\"},\n              {\"id\": \"n4\", \"label\": \"Serena – Aggregate scores → decide face\"}\n            ],\n            \"edges\": [\n              {\"from\": \"n1\", \"to\": \"n4\", \"label\": \"eye score (0‑1)\"},\n              {\"from\": \"n2\", \"to\": \"n4\", \"label\": \"nose score (0‑1)\"},\n              {\"from\": \"n3\", \"to\": \"n4\", \"label\": \"ear score (0‑1)\"}\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visual units where appropriate. Identify candidates: maybe architecture of feedforward vs recurrent vs transformer table. Use source excerpts. Provide visual unit with table comparing architectures. Also sequence for training feedback? Provide flowchart of collaborative detection (CON_0031). Use those as visuals. Return JSON units list.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794646559,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a655021f7d",
+  "usage": {
+    "completion_tokens": 865,
+    "prompt_tokens": 3273,
+    "total_tokens": 4138,
+    "completion_time": 1.79910062,
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_time": 0.159059701,
+    "prompt_tokens_details": null,
+    "queue_time": 0.158286879,
+    "total_time": 1.958160321
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cmah4hey2ab3fb2qyaxgrj",
+    "debug": null,
+    "seed": 1750456539,
+    "usage": null
+  }
+}

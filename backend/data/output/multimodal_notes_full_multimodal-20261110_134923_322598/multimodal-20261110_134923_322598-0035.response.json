@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-5932d10e-e268-415f-991a-26f4de68c197",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": [\n        \"C1\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    },\n    {\n      \"fact_text\": [\n        \"C2\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    },\n    {\n      \"fact_text\": [\n        \"C3\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    },\n    {\n      \"fact_text\": [\n        \"C4\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"A Java program has a main class and a main method.\",\n      \"refs\": [\n        \"Q0001\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"Java class names use PascalCase, capitalizing the first letter of each word.\",\n      \"refs\": [\n        \"Q0003\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"Java method names use camelCase, capitalizing each word except the first.\",\n      \"refs\": [\n        \"Q0004\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"The capital M in the class name is due to the PascalCase naming convention for classes.\",\n      \"refs\": [\n        \"Q0005\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify facts: naming conventions, main class/method, capital M. Create claims.\n\nWe'll include facts category.\n\nCreate claims C1: \"A Java program has a main class and a main method.\" from Q0001. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null.\n\nC2: \"Java class names use PascalCase, capitalizing the first letter of each word.\" from Q0003. C3: \"Java method names use camelCase, capitalizing each word except the first.\" from Q0004. C4: \"The capital M in the class name is due to PascalCase convention.\" from Q0005 (and Q0002 maybe). Provide.\n\nNow schema: concepts empty, definitions empty, explanations empty, examples empty, facts include these claim texts. facts array each with fact_text list of claim IDs? Actually fact_text expects strings. We need to reference claim IDs in fact_text? The spec: each scalar category field is list of claim IDs. So fact_text:[\"C1\"] etc. fact_type is null? We can set is_null true.\n\nProvide claims list.\n\nAbstentions empty.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318777,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c868cf1eaa",
+  "usage": {
+    "completion_tokens": 812,
+    "prompt_tokens": 3354,
+    "total_tokens": 4166,
+    "completion_time": 1.701815294,
+    "completion_tokens_details": {
+      "reasoning_tokens": 247
+    },
+    "prompt_time": 0.277140912,
+    "prompt_tokens_details": null,
+    "queue_time": 0.389004501,
+    "total_time": 1.9789562059999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72vqctqeytsw3xx0r9zyv3s",
+    "debug": null,
+    "seed": 1918124155,
+    "usage": null
+  }
+}

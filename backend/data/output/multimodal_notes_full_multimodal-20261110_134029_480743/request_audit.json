@@ -1,0 +1,209 @@
+{
+  "operations": [
+    {
+      "id": "multimodal-20261110_134029_480743-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "slot": 1,
+      "request_hash": "f09f0298c23d1516eef84b759ea40edef4dceaf214fc6c9790d08b89a76cb4b9",
+      "state": "validation_failed",
+      "created": 1794318088.5217228,
+      "completed": 1794318094.2717578,
+      "validation": "validation_failed"
+    },
+    {
+      "id": "multimodal-20261110_134029_480743-0003",
+      "org": "org_01jmkg4pjje008tpsxb8p971e6",
+      "slot": 2,
+      "request_hash": "cd01db31dbedd6718fee958d35e726b58e522dd7beb14dcf11443b18e19e8776",
+      "state": "success",
+      "created": 1794318094.6922266,
+      "completed": 1794318099.4818137,
+      "validation": "passed_mechanical_only"
+    },
+    {
+      "id": "multimodal-20261110_134029_480743-0006",
+      "org": "org_01jdd4wt65fc2vkztp4f2p4tes",
+      "slot": 3,
+      "request_hash": "be58f9ee8b13ee5c00899357a6e654b174ee45d849407eaf7c399d52715c8892",
+      "state": "success",
+      "created": 1794318099.8517456,
+      "completed": 1794318105.8850305,
+      "validation": "passed_mechanical_only"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "multimodal-20261110_134029_480743-0000",
+      "number": 1,
+      "created": 1794318088.5217228,
+      "dispatched": 1794318091.9702806,
+      "completed": 1794318094.2496367,
+      "input_reserved": 3576,
+      "output_reserved": 3000,
+      "input_actual": 2959,
+      "output_actual": 788,
+      "reasoning": 88,
+      "charged": 3747,
+      "http_status": 200,
+      "finish": "stop",
+      "duration": 2.264999999999418,
+      "category": "response"
+    },
+    {
+      "request_id": "multimodal-20261110_134029_480743-0003",
+      "number": 1,
+      "created": 1794318094.6922266,
+      "dispatched": 1794318097.7984993,
+      "completed": 1794318099.4528263,
+      "input_reserved": 3577,
+      "output_reserved": 3000,
+      "input_actual": 2960,
+      "output_actual": 519,
+      "reasoning": 64,
+      "charged": 3479,
+      "http_status": 200,
+      "finish": "stop",
+      "duration": 1.6410000000032596,
+      "category": "response"
+    },
+    {
+      "request_id": "multimodal-20261110_134029_480743-0006",
+      "number": 1,
+      "created": 1794318099.8517456,
+      "dispatched": 1794318103.0313516,
+      "completed": 1794318105.8529613,
+      "input_reserved": 3798,
+      "output_reserved": 3000,
+      "input_actual": 3140,
+      "output_actual": 502,
+      "reasoning": 74,
+      "charged": 3642,
+      "http_status": 200,
+      "finish": "stop",
+      "duration": 2.813000000001921,
+      "category": "response"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1178,
+      "request_id": "multimodal-20261110_134029_480743-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794318088.522727,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"fc61ba7e4b3570fc3a4b1e3a66ec9f9091e430dbef857f693195a44e0151824e\", \"estimated_input\": 3576, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 1179,
+      "request_id": "multimodal-20261110_134029_480743-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794318091.9713447,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 1180,
+      "request_id": "multimodal-20261110_134029_480743-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794318094.2567475,
+      "event": "response_saved",
+      "details": "{\"sha256\": \"a5b07a0699663cd01f412de7203e0095d0741a98820536e4982611757300ad26\"}"
+    },
+    {
+      "sequence": 1181,
+      "request_id": "multimodal-20261110_134029_480743-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794318094.2646408,
+      "event": "operation_error",
+      "details": "{\"message\": \"Duplicate or unknown claim reference\", \"type\": \"ValueError\"}"
+    },
+    {
+      "sequence": 1182,
+      "request_id": "multimodal-20261110_134029_480743-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794318094.2717578,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"validation_failed\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"not_passed\"}"
+    },
+    {
+      "sequence": 1183,
+      "request_id": "multimodal-20261110_134029_480743-0003",
+      "org": "org_01jmkg4pjje008tpsxb8p971e6",
+      "created": 1794318094.693227,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"fc61ba7e4b3570fc3a4b1e3a66ec9f9091e430dbef857f693195a44e0151824e\", \"estimated_input\": 3577, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 1184,
+      "request_id": "multimodal-20261110_134029_480743-0003",
+      "org": "org_01jmkg4pjje008tpsxb8p971e6",
+      "created": 1794318097.8013122,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 1185,
+      "request_id": "multimodal-20261110_134029_480743-0003",
+      "org": "org_01jmkg4pjje008tpsxb8p971e6",
+      "created": 1794318099.463798,
+      "event": "response_saved",
+      "details": "{\"sha256\": \"b37b4d53a8f8ec64389b9cfc4c9bb28a6c4ae64c0d2c6f4235580413dda8426e\"}"
+    },
+    {
+      "sequence": 1186,
+      "request_id": "multimodal-20261110_134029_480743-0003",
+      "org": "org_01jmkg4pjje008tpsxb8p971e6",
+      "created": 1794318099.4748135,
+      "event": "quote_resolution",
+      "details": "{\"resolutions\": [{\"claim_reviews\": [], \"context_counts_as_completed\": false, \"context_source_ids\": [], \"excluded\": {}, \"exclusion_scope\": \"excerpt_only_not_whole_source_unit\", \"policy\": \"grounded_fields_v2\", \"primary_source_ids\": [\"G00001\"], \"review_required\": true, \"semantic_entailment_verified\": false, \"semantic_status\": \"unverified\", \"unaccounted_refs\": [\"Q0000\", \"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\", \"Q0006\"], \"used_refs\": []}, {\"policy\": \"canonical_grounded_v4\", \"projection\": \"common content copied from its evidenced main field; no factual repair\"}, {\"abstentions\": [{\"availability\": \"SOURCE_MISSING\", \"category\": \"concepts\", \"counts_as_completed\": false, \"reason\": \"No concept definitions or introductions are present in the provided excerpts.\", \"source_ids\": [\"G00001\"]}, {\"availability\": \"SOURCE_MISSING\", \"category\": \"definitions\", \"counts_as_completed\": false, \"reason\": \"No term definitions are provided in the excerpts.\", \"source_ids\": [\"G00001\"]}, {\"availability\": \"SOURCE_MISSING\", \"category\": \"explanations\", \"counts_as_completed\": false, \"reason\": \"No explanatory content about Java concepts or programming practices is included.\", \"source_ids\": [\"G00001\"]}, {\"availability\": \"SOURCE_MISSING\", \"category\": \"examples\", \"counts_as_completed\": false, \"reason\": \"No concrete code examples or illustrative scenarios are present.\", \"source_ids\": [\"G00001\"]}, {\"availability\": \"SOURCE_MISSING\", \"category\": \"facts\", \"counts_as_completed\": false, \"reason\": \"No factual statements about Java language features or programming principles are given.\", \"source_ids\": [\"G00001\"]}, {\"availability\": \"SOURCE_MISSING\", \"category\": \"formulas\", \"counts_as_completed\": false, \"reason\": \"No mathematical or algorithmic formulas are included.\", \"source_ids\": [\"G00001\"]}, {\"availability\": \"SOURCE_MISSING\", \"category\": \"procedures\", \"counts_as_completed\": false, \"reason\": \"No step\\u2011by\\u2011step procedures or instructional sequences are provided.\", \"source_ids\": [\"G00001\"]}, {\"availability\": \"SOURCE_MISSING\", \"category\": \"relationships\", \"counts_as_completed\": false, \"reason\": \"No relational statements linking concepts or entities are present.\", \"source_ids\": [\"G00001\"]}], \"annotations\": [], \"human_review_decisions_unchanged\": true, \"policy\": \"evidence_first_12a_v1\", \"semantic_entailment_verified\": false}, {\"policy\": \"typed_claim_refs_v1\", \"projection\": \"Typed claim references expanded; unchanged Task 12A schema and resolver applied\", \"unassigned_claims_approved\": false, \"unassigned_review_claims\": []}]}"
+    },
+    {
+      "sequence": 1187,
+      "request_id": "multimodal-20261110_134029_480743-0003",
+      "org": "org_01jmkg4pjje008tpsxb8p971e6",
+      "created": 1794318099.4828153,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"success\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"passed_mechanical_only\"}"
+    },
+    {
+      "sequence": 1188,
+      "request_id": "multimodal-20261110_134029_480743-0006",
+      "org": "org_01jdd4wt65fc2vkztp4f2p4tes",
+      "created": 1794318099.8527453,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"fc61ba7e4b3570fc3a4b1e3a66ec9f9091e430dbef857f693195a44e0151824e\", \"estimated_input\": 3798, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 1189,
+      "request_id": "multimodal-20261110_134029_480743-0006",
+      "org": "org_01jdd4wt65fc2vkztp4f2p4tes",
+      "created": 1794318103.0313516,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 1190,
+      "request_id": "multimodal-20261110_134029_480743-0006",
+      "org": "org_01jdd4wt65fc2vkztp4f2p4tes",
+      "created": 1794318105.8637438,
+      "event": "response_saved",
+      "details": "{\"sha256\": \"ce5c9c217a3bea5740da6fda24a9007b5f03a89e165fff7d5443a47adfc008b4\"}"
+    },
+    {
+      "sequence": 1191,
+      "request_id": "multimodal-20261110_134029_480743-0006",
+      "org": "org_01jdd4wt65fc2vkztp4f2p4tes",
+      "created": 1794318105.8795059,
+      "event": "quote_resolution",
+      "details": "{\"resolutions\": [{\"claim_reviews\": [], \"context_counts_as_completed\": false, \"context_source_ids\": [], \"excluded\": {}, \"exclusion_scope\": \"excerpt_only_not_whole_source_unit\", \"policy\": \"grounded_fields_v2\", \"primary_source_ids\": [\"G00002\"], \"review_required\": true, \"semantic_entailment_verified\": false, \"semantic_status\": \"unverified\", \"unaccounted_refs\": [\"Q0000\", \"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\", \"Q0006\", \"Q0007\", \"Q0008\"], \"used_refs\": []}, {\"policy\": \"canonical_grounded_v4\", \"projection\": \"common content copied from its evidenced main field; no factual repair\"}, {\"abstentions\": [{\"availability\": \"SOURCE_MISSING\", \"category\": \"concepts\", \"counts_as_completed\": false, \"reason\": \"No conceptual teaching content present in the provided excerpts.\", \"source_ids\": [\"G00002\"]}, {\"availability\": \"SOURCE_MISSING\", \"category\": \"definitions\", \"counts_as_completed\": false, \"reason\": \"No definitions are provided in the excerpts.\", \"source_ids\": [\"G00002\"]}, {\"availability\": \"SOURCE_MISSING\", \"category\": \"explanations\", \"counts_as_completed\": false, \"reason\": \"No explanatory material is present in the excerpts.\", \"source_ids\": [\"G00002\"]}, {\"availability\": \"SOURCE_MISSING\", \"category\": \"examples\", \"counts_as_completed\": false, \"reason\": \"No example content is provided.\", \"source_ids\": [\"G00002\"]}, {\"availability\": \"SOURCE_MISSING\", \"category\": \"facts\", \"counts_as_completed\": false, \"reason\": \"No factual teaching statements are present.\", \"source_ids\": [\"G00002\"]}, {\"availability\": \"SOURCE_MISSING\", \"category\": \"formulas\", \"counts_as_completed\": false, \"reason\": \"No formulas are included in the excerpts.\", \"source_ids\": [\"G00002\"]}, {\"availability\": \"SOURCE_MISSING\", \"category\": \"procedures\", \"counts_as_completed\": false, \"reason\": \"No procedural instructions are provided.\", \"source_ids\": [\"G00002\"]}, {\"availability\": \"SOURCE_MISSING\", \"category\": \"relationships\", \"counts_as_completed\": false, \"reason\": \"No relational teaching content is present.\", \"source_ids\": [\"G00002\"]}], \"annotations\": [], \"human_review_decisions_unchanged\": true, \"policy\": \"evidence_first_12a_v1\", \"semantic_entailment_verified\": false}, {\"policy\": \"typed_claim_refs_v1\", \"projection\": \"Typed claim references expanded; unchanged Task 12A schema and resolver applied\", \"unassigned_claims_approved\": false, \"unassigned_review_claims\": []}]}"
+    },
+    {
+      "sequence": 1192,
+      "request_id": "multimodal-20261110_134029_480743-0006",
+      "org": "org_01jdd4wt65fc2vkztp4f2p4tes",
+      "created": 1794318105.8871303,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"success\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"passed_mechanical_only\"}"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-947d793e-1b22-479f-accb-f503ec6f64a4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"If a number is divisible by 5, the program should print \\\"fizz\\\".\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"If a number is divisible by 3, the program should print \\\"buzz\\\".\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"If a number is divisible by both 5 and 3, the program should print \\\"fizzbuzz\\\".\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"If a number is not divisible by 5 or 3, the program should print the number itself.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"Order of conditional checks in fizzbuzz implementation\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"When the first condition checks only divisibility by 5, numbers divisible by both 5 and 3 (e.g., 15) satisfy that condition and cause the program to print only \\\"fizz\\\", skipping later else‑if branches that would produce \\\"fizzbuzz\\\".\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"formulas\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract facts, definitions, etc. From excerpts about fizzbuzz. Likely facts: description of divisibility checks. No definitions. We'll produce facts.\n\nCreate fact_text with text from excerpts. Need whole claim supported by refs. For example: \"If a number is divisible by 5, print 'fizz'.\" supported by Q0002 and Q0003. Another: \"If a number is divisible by 3, print 'buzz'.\" etc. Also \"If a number is divisible by both 5 and 3, print 'fizzbuzz'.\" Also note bug: order matters, first condition catches 15 leading to only fizz. That's an explanation maybe. We'll put as explanation.\n\nLet's output facts array with multiple items. Also explanations array for bug.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036423,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_6fb4303df4",
+  "usage": {
+    "completion_tokens": 567,
+    "prompt_tokens": 3020,
+    "total_tokens": 3587,
+    "completion_time": 1.202043718,
+    "completion_tokens_details": {
+      "reasoning_tokens": 162
+    },
+    "prompt_time": 0.142358001,
+    "prompt_tokens_details": null,
+    "queue_time": 0.321660529,
+    "total_time": 1.344401719
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6teen8retpbbvk26ewqk7wh",
+    "debug": null,
+    "seed": 1589352537,
+    "usage": null
+  }
+}

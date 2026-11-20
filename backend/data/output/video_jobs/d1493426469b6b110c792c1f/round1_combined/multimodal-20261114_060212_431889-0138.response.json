@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-fe2ea28c-65ea-4189-acea-3122ebc0589c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The round method returns a long.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"Implicit casting cannot store a long (8 bytes) into an int (4 bytes).\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"Explicit casting can be used to convert a long to an int when the value fits.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 3,\n      \"part\": \"value\",\n      \"text\": \"The result of Math.round(Math.random() * 100) is a number between 0 and 100.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 4,\n      \"part\": \"value\",\n      \"text\": \"A number between 0 and 100 can be stored in an int.\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"code excerpt not reliably available\",\n      \"source_ids\": [\"G00067\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"code/formula excerpt not reliably available\",\n      \"source_ids\": [\"G00067\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc based on excerpts. Extract facts: casting long to int, round returns long, need explicit cast, result between 0-100, can store in int. Create rows.\n\nItem id maybe \"item1\". Provide rows for facts.\n\nLet's produce rows:\n\nFact1: round method returns a long. text from Q0000. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\nFact2: implicit casting cannot store long into int. from Q0000.\n\nFact3: explicit casting can be used. from Q0000.\n\nFact4: result of expression is number between 0 to 100. from Q0001.\n\nFact5: can store in integer. from Q0002.\n\nFact6: removing round method and casting gives something. maybe demonstration but not factual.\n\nWe'll include these.\n\nAbstentions for unavailable code excerpts: code not quoted, so abstain for formulas/procedures.\n\nProvide excluded empty.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636242,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_bb691ea66b",
+  "usage": {
+    "completion_tokens": 868,
+    "prompt_tokens": 4364,
+    "total_tokens": 5232,
+    "completion_time": 1.8334604570000002,
+    "completion_tokens_details": {
+      "reasoning_tokens": 206
+    },
+    "prompt_time": 0.441686807,
+    "prompt_tokens_details": null,
+    "queue_time": 0.375352117,
+    "total_time": 2.275147264
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cafn24ec0tj0wwr93s4d6h",
+    "debug": null,
+    "seed": 312234982,
+    "usage": null
+  }
+}

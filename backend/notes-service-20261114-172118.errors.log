@@ -1,0 +1,140 @@
+127.0.0.1 - - [14/Nov/2026 17:21:19] "GET /api/videos HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 17:21:19] "POST /api/video-notes HTTP/1.1" 202 -
+127.0.0.1 - - [14/Nov/2026 17:30:08] "GET /api/videos HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 17:30:09] "GET /api/videos HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 17:30:09] "GET /api/videos/video4.mp4 HTTP/1.1" 206 -
+127.0.0.1 - - [14/Nov/2026 17:33:32] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 17:33:32] "GET /api/videos HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from 127.0.0.1 - - [14/Nov/2026 17:33:32] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54 HTTP/1.1" 200 -
+('127.0.0.1', 2076)
+127.0.0.1 - - [14/Nov/2026 17:33:32] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54 HTTP/1.1" 200 -
+Traceback (most recent call last):
+127.0.0.1 - - [14/Nov/2026 17:33:32] "GET /api/videos HTTP/1.1" 200 -
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Projects\adaptive-notes\backend\video_notes_jobs.py", line 302, in do_GET
+    self.route()
+  File "C:\Projects\adaptive-notes\backend\video_notes_jobs.py", line 299, in route
+    self.send_body(json.dumps(result).encode(), 'application/json', code)
+  File "C:\Projects\adaptive-notes\backend\video_notes_jobs.py", line 256, in send_body
+    self.wfile.write(data)
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [14/Nov/2026 17:33:37] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54/study HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 17:39:47] "GET /api/videos HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 10551)
+Traceback (most recent call last):
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+127.0.0.1 - - [14/Nov/2026 17:39:47] "GET /api/videos HTTP/1.1" 200 -
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Projects\adaptive-notes\backend\video_notes_jobs.py", line 302, in do_GET
+    self.route()
+  File "C:\Projects\adaptive-notes\backend\video_notes_jobs.py", line 299, in route
+    self.send_body(json.dumps(result).encode(), 'application/json', code)
+  File "C:\Projects\adaptive-notes\backend\video_notes_jobs.py", line 256, in send_body
+    self.wfile.write(data)
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [14/Nov/2026 17:39:47] "GET /api/videos/video.mp4 HTTP/1.1" 206 -
+127.0.0.1 - - [14/Nov/2026 17:39:47] "GET /api/videos/video2.mp4 HTTP/1.1" 206 -
+127.0.0.1 - - [14/Nov/2026 17:39:47] "GET /api/videos/video4.mp4 HTTP/1.1" 206 -
+127.0.0.1 - - [14/Nov/2026 17:39:47] "GET /api/videos/video3.mp4 HTTP/1.1" 206 -
+127.0.0.1 - - [14/Nov/2026 17:39:51] "GET /api/videos HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 55266)
+Traceback (most recent call last):
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Projects\adaptive-notes\backend\video_notes_jobs.py", line 302, in do_GET
+    self.route()
+  File "C:\Projects\adaptive-notes\backend\video_notes_jobs.py", line 299, in route
+    self.send_body(json.dumps(result).encode(), 'application/json', code)
+  File "C:\Projects\adaptive-notes\backend\video_notes_jobs.py", line 256, in send_body
+    self.wfile.write(data)
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+127.0.0.1 - - [14/Nov/2026 17:39:51] "GET /api/videos HTTP/1.1" 200 -
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [14/Nov/2026 17:39:51] "GET /api/videos/video4.mp4 HTTP/1.1" 206 -
+127.0.0.1 - - [14/Nov/2026 17:39:53] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 17:39:53] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 17:39:53] "GET /api/videos HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 58574)
+Traceback (most recent call last):
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Projects\adaptive-notes\backend\video_notes_jobs.py", line 302, in do_GET
+    self.route()
+  File "C:\Projects\adaptive-notes\backend\video_notes_jobs.py", line 299, in route
+    self.send_body(json.dumps(result).encode(), 'application/json', code)
+  File "C:\Projects\adaptive-notes\backend\video_notes_jobs.py", line 256, in send_body
+    self.wfile.write(data)
+  File "C:\Users\divan\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [14/Nov/2026 17:39:53] "GET /api/videos HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 17:42:34] "POST /api/video-notes/ask HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 17:42:43] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54/study HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 17:42:59] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 17:42:59] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54/study HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 17:45:24] "GET /api/videos HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 18:00:59] "POST /api/video-notes/ask HTTP/1.1" 502 -
+127.0.0.1 - - [14/Nov/2026 18:11:04] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 18:11:04] "GET /api/videos HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 18:11:04] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54/markdown HTTP/1.1" 404 -
+127.0.0.1 - - [14/Nov/2026 18:24:36] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54/study HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 18:24:42] "POST /api/video-notes HTTP/1.1" 202 -
+127.0.0.1 - - [14/Nov/2026 18:24:42] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 18:24:43] "POST /api/video-notes HTTP/1.1" 202 -
+127.0.0.1 - - [14/Nov/2026 18:24:43] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 18:24:47] "POST /api/video-notes HTTP/1.1" 202 -
+127.0.0.1 - - [14/Nov/2026 18:24:47] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 18:24:48] "POST /api/video-notes HTTP/1.1" 202 -
+127.0.0.1 - - [14/Nov/2026 18:24:48] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 18:26:25] "POST /api/video-notes/ask HTTP/1.1" 503 -
+127.0.0.1 - - [14/Nov/2026 18:27:21] "POST /api/video-notes/ask HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 18:28:09] "GET /api/video-notes/11284183534fe7ba4df1e61c HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 18:28:09] "GET /api/video-notes/2ae27f10970fcf5f9ed1d70c HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 18:28:09] "GET /api/video-notes/d1493426469b6b110c792c1f HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 18:28:09] "GET /api/video-notes/f470d84dadd7c82a8b3eaf54 HTTP/1.1" 200 -

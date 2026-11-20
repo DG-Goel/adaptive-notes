@@ -1,0 +1,75 @@
+{
+  "operations": [
+    {
+      "id": "java-20261106_165352_030420-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "slot": 1,
+      "request_hash": "b432ca46acf83c1cd7fd95b4de74298d0725b63d490a1d89379b492f1b901dab",
+      "state": "failed",
+      "created": 1793984044.7706704,
+      "completed": 1793984051.009538,
+      "validation": "failed"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "java-20261106_165352_030420-0000",
+      "number": 1,
+      "created": 1793984044.7706704,
+      "dispatched": 1793984045.473813,
+      "completed": 1793984051.0037992,
+      "input_reserved": 2705,
+      "output_reserved": 4000,
+      "input_actual": null,
+      "output_actual": null,
+      "reasoning": null,
+      "charged": 6705,
+      "http_status": 400,
+      "finish": null,
+      "duration": 5.53099999999904,
+      "category": "permanent_request"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 15,
+      "request_id": "java-20261106_165352_030420-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1793984044.7726653,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"aa0ff99e3d1d7b77726eaf2e1fdfb50ed9aca48e8832249872ba0308632bf31b\", \"estimated_input\": 2705, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 4000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 16,
+      "request_id": "java-20261106_165352_030420-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1793984045.475816,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 17,
+      "request_id": "java-20261106_165352_030420-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1793984051.0037992,
+      "event": "provider_error",
+      "details": "{\"category\": \"permanent_request\", \"error_code\": \"json_validate_failed\", \"message\": \"Groq API call failed: Error code: 400 - {'error': {'message': \\\"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\\\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\\"concepts\\\":[{\\\"concept_name\\\":\\\"Java\\\",\\\"content\\\":\\\"Java\\\",\\\"source_unit_ids\\\":[\\\"T0001\\\"],\\\"source_evidence\\\":[{\\\"source_id\\\":\\\"T0001\\\",\\\"quote_id\\\":\\\"Q0001\\\",\\\"quote\\\":\\\"My name is Mosh and I\\\\'m gonna be your instructor in this Java course.\\\",\\\"fields\\\":[\\\"/concept_name\\\",\\\"/content\\\"]}]},{\\\"concept_name\\\":\\\"instructor\\\",\\\"content\\\":\\\"instructor\\\",\\\"source_unit_ids\\\":[\\\"T0001\\\"],\\\"source_evidence\\\":[{\\\"source_id\\\":\\\"T0001\\\",\\\"quote_id\\\":\\\"Q0001\\\",\\\"quote\\\":\\\"My name is Mosh and I\\\\'m gonna be your instructor in this Java course.\\\",\\\"fields\\\":[\\\"/concept_name\\\",\\\"/content\\\"]}]},{\\\"concept_name\\\":\\\"course\\\",\\\"content\\\":\\\"course\\\",\\\"source_unit_ids\\\":[\\\"T0001\\\"],\\\"source_evidence\\\":[{\\\"source_id\\\":\\\"T0001\\\",\\\"quote_id\\\":\\\"Q0002\\\",\\\"quote\\\":\\\"In this course, you\\\\'re gonna learn everything you need to get started programming in Java.\\\",\\\"fields\\\":[\\\"/concept_\", \"retry_after\": null, \"retry_after_header\": null, \"retryable\": false, \"status_code\": 400}"
+    },
+    {
+      "sequence": 18,
+      "request_id": "java-20261106_165352_030420-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1793984051.010538,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"failed\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"not_passed\"}"
+    },
+    {
+      "sequence": 19,
+      "request_id": "java-20261106_165352_030420-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1793984051.0178244,
+      "event": "operation_error",
+      "details": "{\"message\": \"Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \\\"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\\\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\\"concepts\\\":[{\\\"concept_name\\\":\\\"Java\\\",\\\"content\\\":\\\"Java\\\",\\\"source_unit_ids\\\":[\\\"T0001\\\"],\\\"source_evidence\\\":[{\\\"source_id\\\":\\\"T0001\\\",\\\"quote_id\\\":\\\"Q0001\\\",\\\"quote\\\":\\\"My name is Mosh and I\\\\'m gonna be your instructor in this Java course.\\\",\\\"fields\\\":[\\\"/concept_name\\\",\\\"/content\\\"]}]},{\\\"concept_name\\\":\\\"instructor\\\",\\\"content\\\":\\\"instructor\\\",\\\"source_unit_ids\\\":[\\\"T0001\\\"],\\\"source_evidence\\\":[{\\\"source_id\\\":\\\"T0001\\\",\\\"quote_id\\\":\\\"Q0001\\\",\\\"quote\\\":\\\"My name is Mosh and I\\\\'m gonna be your instructor in this Java course.\\\",\\\"fields\\\":[\\\"/concept_name\\\",\\\"/content\\\"]}]},{\\\"concept_name\\\":\\\"course\\\",\\\"content\\\":\\\"course\\\",\\\"source_unit_ids\\\":[\\\"T0001\\\"],\\\"source_evidence\\\":[{\\\"source_id\\\":\\\"T0001\\\",\\\"quote_id\\\":\\\"Q0002\\\",\\\"quote\\\":\\\"In this course, you\\\\'re gonna learn everything you need to get started programming in Java.\\\",\\\"fields\\\":[\\\"/concept_\", \"type\": \"GroqProviderError\"}"
+    }
+  ]
+}

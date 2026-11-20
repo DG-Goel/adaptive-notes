@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-812bc059-c187-4608-87c7-00898185ae1c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No procedural teaching found in the provided primary excerpts.\",\n      \"source_ids\": [\"G00020\", \"G00021\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract procedures; none present. So items empty, abstentions for missing procedures? Category procedures missing => abstain with reason \"SOURCE_MISSING\"? Use primary_source_ids. Provide empty items.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794599177,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 124,
+    "prompt_tokens": 2887,
+    "total_tokens": 3011,
+    "completion_time": 0.257631601,
+    "completion_tokens_details": {
+      "reasoning_tokens": 41
+    },
+    "prompt_time": 0.273664948,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "queue_time": 0.321270496,
+    "total_time": 0.531296549
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b74jenew2rw2nd4fkv2c6v",
+    "debug": null,
+    "seed": 483876000,
+    "usage": null
+  }
+}

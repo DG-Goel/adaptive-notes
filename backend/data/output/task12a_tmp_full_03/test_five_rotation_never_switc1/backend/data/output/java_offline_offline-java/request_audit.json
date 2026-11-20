@@ -1,0 +1,75 @@
+{
+  "operations": [
+    {
+      "id": "offline-java-0000",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "89ab5f9bf2aec95f9fbd977491ea71f96aa8acd7ac2a85263304bfe7afb4eeb1",
+      "state": "uncertain",
+      "created": 1794237358.8224132,
+      "completed": 1794237358.8224132,
+      "validation": "uncertain"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "offline-java-0000",
+      "number": 1,
+      "created": 1794237358.8224132,
+      "dispatched": 1794237358.8224132,
+      "completed": null,
+      "input_reserved": 3294,
+      "output_reserved": 3000,
+      "input_actual": null,
+      "output_actual": null,
+      "reasoning": null,
+      "charged": 6294,
+      "http_status": null,
+      "finish": null,
+      "duration": 0.0,
+      "category": "transient_network"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794237358.8224132,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"7cd83b2aca537f217a657d43082fd9794a3e13487c29dd84bb5b8b6bdc539c26\", \"estimated_input\": 3294, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 2,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794237358.8224132,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 3,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794237358.8224132,
+      "event": "provider_error",
+      "details": "{\"category\": \"transient_network\", \"error_code\": null, \"message\": \"Groq API call failed: Request timed out.\", \"retry_after\": null, \"retry_after_header\": null, \"retryable\": true, \"status_code\": null}"
+    },
+    {
+      "sequence": 4,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794237358.8224132,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"uncertain\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"not_passed\"}"
+    },
+    {
+      "sequence": 5,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794237358.8224132,
+      "event": "operation_error",
+      "details": "{\"message\": \"Groq API call failed: Groq API call failed: Request timed out.\", \"type\": \"GroqProviderError\"}"
+    }
+  ]
+}

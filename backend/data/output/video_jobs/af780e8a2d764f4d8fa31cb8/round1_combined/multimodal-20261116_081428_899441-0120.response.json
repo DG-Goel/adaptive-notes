@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-6aba73e9-b89e-4471-9ecc-025127998d4a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"bond_gain\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"You have a 10% expected capital gain from buying that bond.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"bond_interest\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The two bonds are paying the same interest rate.\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"bond_appreciation\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"One bond will appreciate by 10% relative to the other.\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"positioning_strategy\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"You should short the foreign bond massively and go very long the US bond.\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"exchange_rate_condition\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If the interests are the same, the exchange rate must jump exactly by the expected future dollar change for the incentive to disappear.\",\n      \"refs\": [\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what is the expected capital gain from buying the bond?\",\n      \"answer\": \"10% expected capital gain\",\n      \"distractors\": [\n        \"5% expected capital gain\",\n        \"15% expected capital gain\",\n        \"No expected capital gain\"\n      ],\n      \"explanation\": \"The excerpt states, \\\"you have a 10% expected capital gain from buying that bond\\\" (Q0003).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Expected capital gain\",\n      \"refs\": [\"Q0003\"]\n    },\n    {\n      \"question\": \"What does the speaker suggest you do with the foreign and US bonds?\",\n      \"answer\": \"Short the foreign bond massively and go very long the US bond\",\n      \"distractors\": [\n        \"Long the foreign bond and short the US bond\",\n        \"Hold both bonds equally\",\n        \"Sell both bonds immediately\"\n      ],\n      \"explanation\": \"The speaker says, \\\"you go short massively the foreign bond, and you go very long the US bond\\\" (Q0006).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Bond positioning strategy\",\n      \"refs\": [\"Q0006\"]\n    },\n    {\n      \"question\": \"If the two bonds have the same interest rate, under what condition does the exchange rate incentive disappear?\",\n      \"answer\": \"When the exchange rate jumps exactly by the expected future dollar change\",\n      \"distractors\": [\n        \"When the exchange rate remains constant\",\n        \"When the exchange rate moves opposite to the expected dollar change\",\n        \"When the exchange rate doubles\"\n      ],\n      \"explanation\": \"The excerpt explains that with equal interests, the incentive ends only if \\\"the exchange rate jumps exactly by the same amount as the expected value of the dollar change in the future\\\" (Q0011).\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"Exchange rate condition\",\n      \"refs\": [\"Q0011\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract any educational content. The excerpts are mostly dialogue, not clear teaching. Might have concept about bonds, expected capital gain, short/long. Could form facts. We'll create rows for facts.\n\nExtract fact: \"you have a 10% expected capital gain from buying that bond\" (Q0003). Also \"The two bonds are paying the same interest rate.\" (Q0004). \"one is going to appreciate by 10% relative to the other.\" (Q0005). \"So clearly, you go short massively the foreign bond, and you go very long the US bond.\" (Q0006). Also about exchange rate jump equals expected value (Q0011).\n\nCreate facts rows.\n\nQuiz: create maybe 3 questions.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794817104,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_854fa9be4c",
+  "usage": {
+    "completion_tokens": 1172,
+    "prompt_tokens": 2543,
+    "total_tokens": 3715,
+    "completion_time": 2.456543223,
+    "completion_tokens_details": {
+      "reasoning_tokens": 156
+    },
+    "prompt_time": 0.121592612,
+    "prompt_tokens_details": null,
+    "queue_time": 2.27136396,
+    "total_time": 2.578135835
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hpz3bkebtr6m9hhhfeh6k8",
+    "debug": null,
+    "seed": 202836452,
+    "usage": null
+  }
+}

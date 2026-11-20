@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-b1bf1b45-94ef-483e-ba0d-47d0f517e06e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"C001\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"uncovered interest parity\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C001\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The uncovered interest parity is the extra equation needed when an endogenous variable such as a floating exchange rate is introduced.\",\n      \"refs\": [\"Q0000\", \"Q0001\", \"Q0003\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"F001\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The exchange rate is floating.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What additional equation is introduced when a floating exchange rate is present?\",\n      \"answer\": \"uncovered interest parity\",\n      \"distractors\": [\n        \"covered interest parity\",\n        \"Purchasing Power Parity\",\n        \"Fisher equation\"\n      ],\n      \"explanation\": \"The excerpts state that an extra equation is needed for the new endogenous variable and identify it as the uncovered interest parity.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"uncovered interest parity\",\n      \"refs\": [\"Q0001\", \"Q0003\"]\n    },\n    {\n      \"question\": \"According to the speaker, why is the initial condition insufficient?\",\n      \"answer\": \"Because the exchange rate is floating.\",\n      \"distractors\": [\n        \"Because interest rates are fixed.\",\n        \"Because inflation is zero.\",\n        \"Because the model lacks a consumption function.\"\n      ],\n      \"explanation\": \"The speaker says, “Here, that's not going to be enough, because we also have an exchange rate floating around.”\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"floating exchange rate\",\n      \"refs\": [\"Q0000\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. The excerpts talk about exchange rate, extra equation, uncovered interest. Likely concepts: uncovered interest parity. Create rows for concepts maybe. Provide rows with content and concept_name. Use primary excerpts. Let's make one concept item \"uncovered interest parity\". content from Q0003 and Q0000. Provide rows.\n\nAlso maybe fact: exchange rate floating. Provide fact row.\n\nCreate abstentions none. Quiz: 4 questions? limited info. Maybe 2 questions.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794817715,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_803c0ba83d",
+  "usage": {
+    "completion_tokens": 719,
+    "prompt_tokens": 2161,
+    "total_tokens": 2880,
+    "completion_time": 1.514171554,
+    "completion_tokens_details": {
+      "reasoning_tokens": 104
+    },
+    "prompt_time": 0.102503215,
+    "prompt_tokens_details": null,
+    "queue_time": 0.37676644,
+    "total_time": 1.6166747689999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hqhs86excb15b8jsjcdkyz",
+    "debug": null,
+    "seed": 59386954,
+    "usage": null
+  }
+}

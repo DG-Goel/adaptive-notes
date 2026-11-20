@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-9676f391-cd49-47d2-8d2d-8285deae493f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"We have to give our project a name, let's call it hello world.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"The project is located inside the idea projects folder.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"The base package is set to com.codewithmosh on the speaker's machine.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"On another machine the base package will probably be com.package.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"A class is a container for related methods.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"We use classes to organize our code.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0006\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"A package is a concept used to group related classes.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0007\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\n        \"We have to give our project a name, let's call it hello world.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    },\n    {\n      \"fact_text\": [\n        \"The project is located inside the idea projects folder.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    },\n    {\n      \"fact_text\": [\n        \"The base package is set to com.codewithmosh on the speaker's machine.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    },\n    {\n      \"fact_text\": [\n        \"On another machine the base package will probably be com.package.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    },\n    {\n      \"fact_text\": [\n        \"A class is a container for related methods.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    },\n    {\n      \"fact_text\": [\n        \"We use classes to organize our code.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    },\n    {\n      \"fact_text\": [\n        \"A package is a concept used to group related classes.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify facts: project name, location, base package, package example, class definition, package concept. Create claims.\n\nAssign IDs C1 etc.\n\nClaims list with fields. Then categories: facts etc.\n\nWe'll put facts for each statement.\n\nC1: \"We have to give our project a name, let's call it hello world.\" basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, refs Q0000, related_refs [].\n\nC2: location of project inside idea projects folder. basis explicit, refs Q0001.\n\nC3: base package set to com.codewithmosh on my machine. basis explicit, refs Q0001.\n\nC4: your machine is probably going to be com.package. basis explicit, refs Q0002.\n\nC5: \"I told you that a class is a container for related methods.\" basis explicit, refs Q0005.\n\nC6: \"We use classes to organize our code.\" basis explicit, refs Q0006.\n\nC7: \"We have a concept called package, and we use a package to group related classes.\" basis explicit, refs Q0007.\n\nOther excerpts are unclear, ignore.\n\nNow fill categories: facts with fact_text from claim texts. fact_type maybe null? Provide is_null true.\n\nExplanations none.\n\nProcedures none.\n\nRelationships none.\n\nConcepts maybe package concept? Could be concept but we have claim already.\n\nWe'll put facts entries referencing claim IDs.\n\nCreate abstentions none.\n\nNow output JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318501,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4727af4560",
+  "usage": {
+    "completion_tokens": 1249,
+    "prompt_tokens": 3069,
+    "total_tokens": 4318,
+    "completion_time": 2.621725003,
+    "completion_tokens_details": {
+      "reasoning_tokens": 315
+    },
+    "prompt_time": 0.19141449,
+    "prompt_tokens_details": null,
+    "queue_time": 0.164940909,
+    "total_time": 2.813139493
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72veyp0e7ks9t6f5cnr0m5x",
+    "debug": null,
+    "seed": 272776206,
+    "usage": null
+  }
+}

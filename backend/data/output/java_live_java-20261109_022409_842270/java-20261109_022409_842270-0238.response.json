@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-c6642d95-3520-4bde-b61f-b70086b81b9d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"Logical AND operator (&&) in Java\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"The && operator evaluates the left-hand condition first; if it is false, Java short‑circuits and does not evaluate the right-hand condition, because the overall expression cannot be true. The result is true only when both conditions are true.\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"Logical OR operator (||) in Java\",\n        \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"The || operator evaluates the left-hand condition first; if it is true, Java short‑circuits and does not evaluate the right-hand condition, because the overall expression is already true. The result is true when at least one of the conditions is true.\",\n        \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"Logical NOT operator (!) in Java\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"The ! operator reverses the boolean value of its operand: true becomes false and false becomes true.\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"exemplifies\": {\n        \"text\": \"AND operator with temperature range\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"example_text\": {\n        \"text\": \"int temperature = 22; boolean isWarm = temperature > 20 && temperature < 30; // isWarm is true. If temperature is 12, isWarm becomes false.\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"OR operator with loan eligibility\",\n        \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\"]\n      },\n      \"example_text\": {\n        \"text\": \"boolean hasHighIncome = true; boolean hasGoodCredit = true; boolean isEligible = hasHighIncome || hasGoodCredit; // isEligible is true because at least one condition is true.\",\n        \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\"]\n      },\n      \"example_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"The && operator returns true only when both operands are true; otherwise it returns false.\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The || operator returns true when at least one operand is true; it returns false only when both operands are false.\",\n        \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The ! operator inverts a boolean value.\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts about boolean operators AND, OR, NOT. Extract facts, explanations, procedures maybe. Let's create facts: AND returns true if both conditions true; short-circuit behavior. OR returns true if at least one true; short-circuit. NOT reverses value.\n\nAlso examples: temperature example for AND, loan eligibility for OR.\n\nProcedures maybe not.\n\nWe'll cite refs. Use Q0000, Q0001 for AND example. Q0002- Q0004 for OR example. Q0005 for NOT mention but no example.\n\nCreate facts array.\n\nAlso explanations: explain short-circuit.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191619,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "usage": {
+    "completion_tokens": 943,
+    "prompt_tokens": 3139,
+    "total_tokens": 4082,
+    "completion_time": 1.969325081,
+    "completion_tokens_details": {
+      "reasoning_tokens": 134
+    },
+    "prompt_time": 0.153565164,
+    "prompt_tokens_details": null,
+    "queue_time": 0.165829985,
+    "total_time": 2.122890245
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z2etq1eeeayddh5qq7ydfe",
+    "debug": null,
+    "seed": 1701616335,
+    "usage": null
+  }
+}

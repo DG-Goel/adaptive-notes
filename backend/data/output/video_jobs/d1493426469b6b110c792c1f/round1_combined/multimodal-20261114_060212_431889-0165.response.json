@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-a5e980c5-d062-48e3-afc6-eff15f990e71",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"mortgage_payment_code\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"months in year\",\n      \"refs\": [\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"mortgage_payment_code\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"12\",\n      \"refs\": [\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"mortgage_payment_code\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"percent\",\n      \"refs\": [\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"mortgage_payment_code\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"100\",\n      \"refs\": [\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"mortgage_payment_code\",\n      \"category\": \"explanations\",\n      \"field\": \"explanation_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Use the pow method of the math class to raise a number to the power of n.\",\n      \"refs\": [\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"mortgage_payment_code\",\n      \"category\": \"explanations\",\n      \"field\": \"explanation_text\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"Declare constants to avoid magic numbers in code.\",\n      \"refs\": [\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"mortgage_payment_code\",\n      \"category\": \"explanations\",\n      \"field\": \"explanation_text\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"Calculate monthly interest by dividing annual interest by percent and months in year.\",\n      \"refs\": [\"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Exact mortgage payment formula not present in primary source excerpts.\",\n      \"source_ids\": [\"G00079\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc based on excerpts. Likely about mortgage payment formula? But primary excerpts only talk about code constants, pow method, etc. No formula given. So we have limited facts. We can create rows for concepts: maybe \"months in year\", \"percent\". But need primary excerpt. Q0010 mentions months in year set to 12 and percent set to 100. So concept_name \"months in year\" with definition? Use concept content? We'll create concept rows.\n\nAlso explanation about pow method Q0011? Actually Q0011 is reason for constant. Q0012 about monthly interest calculation.\n\nWe'll produce rows with availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, related_refs empty.\n\nCategory concepts, fields concept_name, content, aliases maybe.\n\nCreate item \"mortgage_payment_code\". element indices.\n\nRows:\n\n1 concept_name months in year text \"months in year\" refs [\"Q0010\"].\n\n2 content \"12\" refs [\"Q0010\"].\n\n3 concept_name percent text \"percent\" refs [\"Q0010\"].\n\n4 content \"100\" refs [\"Q0010\"].\n\n5 explanation about pow method: category explanations, field explanation_text \"Use the pow method of the math class to raise a number to the power of n.\" refs [\"Q0011\"]? Actually Q0011 is about pow? Q0011 is about pow method. So explanation.\n\n6 explanation about avoiding magic numbers: explanation_text \"Declare constants to avoid magic numbers in code.\" refs [\"Q0011\"]? Actually Q0011 is reason for constant. Use Q0011.\n\nAlso explanation about calculating monthly interest: explanation_text \"Calculate monthly interest by dividing annual interest by percent and months.\" refs [\"Q0012\"].\n\nWe need related_refs maybe none.\n\nProvide abstentions for missing formula etc.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636359,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c868cf1eaa",
+  "usage": {
+    "completion_tokens": 1186,
+    "prompt_tokens": 4215,
+    "total_tokens": 5401,
+    "completion_time": 2.470055732,
+    "completion_tokens_details": {
+      "reasoning_tokens": 380
+    },
+    "prompt_time": 0.205288635,
+    "prompt_tokens_details": null,
+    "queue_time": 0.3767818,
+    "total_time": 2.675344367
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cak6kfe4s9v7ky367fnt3f",
+    "debug": null,
+    "seed": 169601636,
+    "usage": null
+  }
+}

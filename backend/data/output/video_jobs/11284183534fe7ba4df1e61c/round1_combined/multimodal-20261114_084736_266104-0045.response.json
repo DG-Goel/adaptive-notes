@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-0b04853e-517d-432f-a091-6bc8b6afec85",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Large Language Model (LLM)\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"LLMs are trained on a huge volume of data such as Wikipedia articles, news articles, online books, etc., and contain neural networks with trillions of parameters that capture complex language patterns.\",\n      \"refs\": [\"Q0001\", \"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Reinforcement Learning with Human Feedback (RLHF)\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"LLMs use reinforcement learning with human feedback (RLHF) to improve responses and reduce toxic language.\",\n      \"refs\": [\"Q0005\", \"Q0015\", \"Q0016\", \"Q0014\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Retrieval Augmented Generation (RAG)\",\n      \"refs\": [\"Q0022\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"RAG combines LLMs with external data sources via APIs, allowing the model to retrieve relevant documents (e.g., HR policies) and use them to answer queries or perform actions.\",\n      \"refs\": [\"Q0022\", \"Q0027\", \"Q0028\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"definition1\",\n      \"category\": \"definitions\",\n      \"field\": \"term\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"RLHF\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"definition1\",\n      \"category\": \"definitions\",\n      \"field\": \"definition_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Reinforcement Learning with Human Feedback, an approach where humans provide feedback to guide the LLM's learning and reduce undesirable outputs.\",\n      \"refs\": [\"Q0005\", \"Q0015\", \"Q0016\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract concepts etc. Likely concepts: LLM, RLHF, retrieval augmented generation, etc. Provide rows. Use primary excerpts. Provide abstentions for missing fields. Let's craft items.\n\nItem1: concept LLM. concept_name \"Large Language Model\". content from Q0001, Q0002, Q0003. Provide rows for concept_name and content. Use availability SOURCE_SUPPORTED, basis explicit. literal_kind verbal. instructional_role null. refs list.\n\nSimilarly RLHF concept. Item2.\n\nRetrieval Augmented Generation concept. Item3 from Q0022.\n\nAlso maybe \"RLHF\" as term. Provide definitions? Could use definitions category: term \"RLHF\", definition_text from Q0005.\n\nLet's produce rows.\n\nWe need item label same for both rows of concept. Use item \"concept1\". Provide element 0 for concept_name, part value. element 1 for content, part value.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794646404,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a7bb72c24",
+  "usage": {
+    "completion_tokens": 1162,
+    "prompt_tokens": 3133,
+    "total_tokens": 4295,
+    "completion_time": 2.453619058,
+    "completion_tokens_details": {
+      "reasoning_tokens": 191
+    },
+    "prompt_time": 0.181489614,
+    "prompt_tokens_details": null,
+    "queue_time": 0.164903974,
+    "total_time": 2.635108672
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cm5rc2e2nt68hjjfb8k8d7",
+    "debug": null,
+    "seed": 760924263,
+    "usage": null
+  }
+}

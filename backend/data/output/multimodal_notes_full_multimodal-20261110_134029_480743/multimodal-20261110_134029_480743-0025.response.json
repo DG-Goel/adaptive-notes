@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-852dff17-4fe9-4913-b82e-2de3b2443d1d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"We start by specifying the return type of that function.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"Some functions return a value like a number, a day time and so on, other functions don't return anything.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"So the return type of these functions is void.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"Void is a reserved keyword in java and that's why I've coded that in blue here.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"explanation_of_mistake\",\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"Now, after the return type, we have the name of our function.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"So here we should give our function a proper descriptive name, like send email.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"correct_demonstration\",\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"This name clearly identifies the\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0006\"],\n      \"related_refs\": []\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify facts: return type, void, function name etc. Create claims.\n\nClaims:\nC1: \"We start by specifying the return type of that function.\" basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role prerequisite? It's instruction. maybe prerequisite. related_refs none.\n\nC2: \"Some functions return a value like a number, a day time and so on, other functions don't return anything.\" basis explicit, SOURCE_SUPPORTED, literal_kind verbal, instructional_role explanation_of_mistake? No. just fact. fact_type? We'll put fact_type null.\n\nC3: \"So the return type of these functions is void.\" basis explicit, SOURCE_SUPPORTED, literal_kind verbal, instructional_role explanation_of_mistake? It's statement. maybe fact.\n\nC4: \"Void is a reserved keyword in java and that's why I've coded that in blue here.\" basis explicit, SOURCE_SUPPORTED, literal_kind verbal, instructional_role explanation_of_mistake? It's explanation.\n\nC5: \"Now, after the return type, we have the name of our function.\" basis explicit.\n\nC6: \"So here we should give our function a proper descriptive name, like send email.\" basis explicit.\n\nC7: \"This name clearly identifies the\" incomplete sentence, but we can include as partial.\n\nNow map to categories: facts, explanations, definitions maybe. We'll put facts for C1-C3, explanations for C4, definitions maybe none. Provide claims list and abstentions none.\n\nAlso need sections arrays; can leave empty arrays for categories not used.\n\nWe'll include claims with refs to Q0000 etc.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318377,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_fe269835c7",
+  "usage": {
+    "completion_tokens": 982,
+    "prompt_tokens": 2976,
+    "total_tokens": 3958,
+    "completion_time": 2.827809562,
+    "completion_tokens_details": {
+      "reasoning_tokens": 339
+    },
+    "prompt_time": 0.051693849,
+    "prompt_tokens_details": {
+      "cached_tokens": 2560
+    },
+    "queue_time": 0.324464609,
+    "total_time": 2.879503411
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72vb5hke5ytjrm8xqh3t7k2",
+    "debug": null,
+    "seed": 1391891956,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-65bb1691-9b2b-4d56-b748-a8a0cbfc9348",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"explanations\",\n      \"field\": \"explanation_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Parenthesis always have the highest priority, then we have multiplication and division, and finally we have addition and subtraction.\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"explanations\",\n      \"field\": \"explanation_text\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"So be aware of the order of these operations.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"definitions\",\n      \"field\": \"term\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"casting\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"definitions\",\n      \"field\": \"definition_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"In this tutorial we're going to talk about casting and type conversion.\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Declare a short variable called x and set it to 1.\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"Declare an integer called y and set it to x plus 2.\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"In this example, we're adding a short to an integer.\",\n      \"refs\": [\"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 3,\n      \"part\": \"value\",\n      \"text\": \"Printing y yields 3.\",\n      \"refs\": [\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"explanations\",\n      \"field\": \"explanation_text\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"Because we are dealing with two different types of values, one is a short, the other is an integer, one of these values should be converted to the other type, so they are equal.\",\n      \"refs\": [\"Q0014\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 4,\n      \"part\": \"value\",\n      \"text\": \"So we get 26.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Code snippet not directly quoted; ASR speech evidence insufficient for exact code.\",\n      \"source_ids\": [\"G00059\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit formula excerpt provided.\",\n      \"source_ids\": [\"G00059\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for facts, explanations, etc from excerpts. Identify claims: order of operations, casting explanation, result y=3, etc.\n\nCreate rows.\n\nItem id maybe \"item1\". Use each claim.\n\nLet's produce rows:\n\n1. Parenthesis highest priority etc. category explanations, field explanation_text, element0, part value, text from Q0004. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\n2. Casting and type conversion tutorial mention. category definitions? term \"casting\", definition_text from Q0005. basis explicit.\n\n3. short variable x=1. maybe fact about declaration. category facts fact_text.\n\n4. integer y = x + 2. fact.\n\n5. Adding short to integer. fact.\n\n6. Result y = 3. fact.\n\n7. Explanation of why conversion happens. explanation_text from Q0014.\n\n8. Order of operations awareness. from Q0003.\n\nAlso \"So we get 26.\" unclear context maybe result of something else, but we can include as fact.\n\nProvide abstentions for unavailable code/formula (code not quoted). Excluded none.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636563,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_ca5edfaab2",
+  "usage": {
+    "completion_tokens": 1446,
+    "prompt_tokens": 3357,
+    "total_tokens": 4803,
+    "completion_time": 3.026234896,
+    "completion_tokens_details": {
+      "reasoning_tokens": 242
+    },
+    "prompt_time": 0.613168698,
+    "prompt_tokens_details": null,
+    "queue_time": 0.379833383,
+    "total_time": 3.639403594
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7casd5ded3svn7sy5j4vb3e",
+    "debug": null,
+    "seed": 1977257475,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-a875b455-2a70-4586-9194-f09ec36c39dc",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Exchange‑Rate Movement vs. Currency Appreciation\",\n      \"source_segment_ids\": [\"CON_0001\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"type\": \"table\",\n          \"source_segment_ids\": [\"CON_0001\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0001\",\n              \"quote\": \"If the exchange rate goes up, it means appreciation of the local currency; if it goes down, it means depreciation.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Exchange‑Rate Movement vs. Currency Appreciation\",\n            \"headers\": [\"Exchange‑Rate Movement\", \"Currency Effect\"],\n            \"rows\": [\n              {\n                \"Exchange‑Rate Movement\": \"goes up\",\n                \"Currency Effect\": \"appreciation of the local currency\"\n              },\n              {\n                \"Exchange‑Rate Movement\": \"goes down\",\n                \"Currency Effect\": \"depreciation of the local currency\"\n              }\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to find visual candidates. Look for comparisons, processes. We have exchange rate up/down appreciation; interest rate changes affect exchange rate; net exports vs output/income; uncovered interest parity. Could make table comparing exchange rate movement vs currency appreciation/depreciation. Also table for net exports determinants. Flowchart for process: domestic interest rate increase -> exchange rate appreciation -> capital loss etc. But need exact quotes for edges. We have quotes: \"If the exchange rate goes up, it means appreciation of the local currency; if it goes down, it means depreciation.\" That's a comparison. Use table.\n\nAlso quote: \"Net exports is a function of output, domestic income, and imports; it declines when output or domestic income rise because more of the demand is satisfied by foreign goods.\" Could table rows: Item: Output increase -> Net exports decline; Item: Domestic income rise -> Net exports decline; maybe also foreign income rise -> Net exports increase (from CON_0018 but unresolved). Not fully supported.\n\nWe have \"The difference between the domestic interest rate and foreign interest rates that must be compensated for when the domestic rate changes.\" That's definition of interest differential.\n\nMaybe flowchart: \"When the domestic interest rate is increased relative to the rest of the world, the exchange rate must appreciate.\" Quote from CON_0036. Also \"An increase in the domestic interest rate leads to a higher domestic currency value (appreciation).\" from CON_0037 (unresolved). Use only resolved.\n\nThus flowchart: start -> increase domestic interest rate -> exchange rate appreciation. Need decision? Not.\n\nProbably just table visual.\n\nReturn units list with one table.\n\nProvide source_segment_ids, needs_review false, missing_information null, evidence list with note_id and exact quote.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794733302,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_bb691ea66b",
+  "usage": {
+    "completion_tokens": 627,
+    "prompt_tokens": 3226,
+    "total_tokens": 3853,
+    "completion_time": 1.320254318,
+    "completion_tokens_details": {
+      "reasoning_tokens": 359
+    },
+    "prompt_time": 0.180303177,
+    "prompt_tokens_details": null,
+    "queue_time": 0.801533582,
+    "total_time": 1.500557495
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f71p89ec8rhf2965hq8akq",
+    "debug": null,
+    "seed": 569163609,
+    "usage": null
+  }
+}

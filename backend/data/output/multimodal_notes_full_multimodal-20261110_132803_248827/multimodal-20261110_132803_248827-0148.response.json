@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-46b30593-b0c8-4856-93c5-c25f1b9c9ca5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"In Java, the main function is the entry point of a program.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"refs\": [\"Q0001\", \"Q0006\", \"Q0007\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"Functions (methods) do not exist independently; they belong to a class.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"explanation_of_mistake\",\n      \"refs\": [\"Q0004\", \"Q0008\", \"Q0009\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"When a Java program is executed, the main function is called and its code runs.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"correct_demonstration\",\n      \"refs\": [\"Q0001\", \"Q0002\"],\n      \"related_refs\": []\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Likely claim: main method is entry point, functions don't exist on their own, etc. Create claims.\n\nExtract primary excerpts: Q0000 \"to our programs.\" not useful. Q0001 \"Whenever we execute a Java program, the main\". Q0002 \"function gets called, and the code inside this function gets executed.\" Q0003 \"Okay?\" ignore. Q0004 \"Now, these functions don't exist on their own.\" Q0005 \"They should always\". Combine.\n\nCreate claims:\n\nC1: In Java, the main function is the entry point of a program. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role prerequisite? maybe explanation. refs [\"Q0001\",\"Q0006\",\"Q0007\"].\n\nC2: Functions (methods) do not exist independently; they belong to a class. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role explanation_of_mistake? maybe explanation. refs [\"Q0004\",\"Q0008\",\"Q0009\"].\n\nC3: When a Java program is executed, the main function is called and its code runs. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role correct_demonstration. refs [\"Q0001\",\"Q0002\"].\n\nAdd abstentions none.\n\nNow fill schema arrays. No concepts, definitions, etc. So empty arrays.\n\nProvide claims list.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317753,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8655ddce88",
+  "usage": {
+    "completion_tokens": 656,
+    "prompt_tokens": 3028,
+    "total_tokens": 3684,
+    "completion_time": 1.389670384,
+    "completion_tokens_details": {
+      "reasoning_tokens": 298
+    },
+    "prompt_time": 0.199027373,
+    "prompt_tokens_details": null,
+    "queue_time": 0.377861618,
+    "total_time": 1.588697757
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72tr4ymeka9n1jyzcwqswga",
+    "debug": null,
+    "seed": 1559741314,
+    "usage": null
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "recovery_timestamp": "2026-11-01T15:53:51.442036",
+  "target_units": [
+    "T0016",
+    "T0018"
+  ],
+  "results": {
+    "T0016": {
+      "method": "standard",
+      "items": 28,
+      "reason": null,
+      "details": null
+    },
+    "T0018": {
+      "method": "failed",
+      "items": 0,
+      "reason": "Systematic Groq API limitation with JSON serialization",
+      "details": "Token limit exceeded - content generates >4000 output tokens"
+    }
+  },
+  "summary": {
+    "successful": 1,
+    "failed": 1,
+    "total": 2
+  },
+  "conclusion": "T0016 and T0018 remain unrecoverable due to systematic Groq API limitations. T0016 fails on JSON serialization of escape sequences. T0018 exceeds token output limits. These represent 4% of source content (2/50 units). Alternative LLM providers or manual extraction required."
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-7b7dcd5f-eaef-4dc0-8798-b74bcd19acff",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Exchange Rate Relationship\",\n      \"source_segment_ids\": [\"REL_0003\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"REL_0003\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"REL_0003\",\n              \"quote\": \"```mermaid\\nflowchart LR\\n    A[\\\"expected exchange rate\\\"] --> B[\\\"current exchange rate\\\"]\\n```\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Exchange Rate Relationship\",\n            \"direction\": \"LR\",\n            \"nodes\": [\n              { \"id\": \"A\", \"label\": \"expected exchange rate\", \"kind\": \"action\" },\n              { \"id\": \"B\", \"label\": \"current exchange rate\", \"kind\": \"action\" }\n            ],\n            \"edges\": [\n              { \"from\": \"A\", \"to\": \"B\", \"label\": \"\" }\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visual units. Find visuals: flowchart from REL_0003 text is mermaid flowchart showing expected exchange rate -> current exchange rate. That's a visual already but we need to create payload. Use flowchart type. Evidence from REL_0003. Also maybe comparison table? FCT_0078 says two bonds same interest rate – could compare bonds? But only one fact. Probably only flowchart.\n\nCreate unit with title maybe \"Exchange Rate Relationship\". source_segment_ids include REL_0003. mode text_and_visual? Since we only visual, remaining_text null. Visual payload: type flowchart, title, direction LR, nodes and edges. Nodes: A label \"expected exchange rate\", B label \"current exchange rate\". Edge from A to B label maybe \"→\". Use exact phrase? The quote shows \"expected exchange rate\" and \"current exchange rate\". Relationship phrase maybe \"to\". In mermaid it's arrow. Use label \"\".\n\nProvide evidence array with note_id REL_0003 and quote the mermaid code.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794806798,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c800245357",
+  "usage": {
+    "completion_tokens": 477,
+    "prompt_tokens": 3074,
+    "total_tokens": 3551,
+    "completion_time": 0.991942079,
+    "completion_tokens_details": {
+      "reasoning_tokens": 216
+    },
+    "prompt_time": 0.143958664,
+    "prompt_tokens_details": null,
+    "queue_time": 0.288110914,
+    "total_time": 1.135900743
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hd4mr2eyat196ptsa4dhwm",
+    "debug": null,
+    "seed": 1172542741,
+    "usage": null
+  }
+}

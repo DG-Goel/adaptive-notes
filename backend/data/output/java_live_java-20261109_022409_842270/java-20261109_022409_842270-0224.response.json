@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-9745c3e1-6323-4b66-8886-19d3311b669f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"One byte is sufficient to store numbers up to 30.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Camel notation capitalizes the first letter of each word except the first word.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Mortgage calculation uses the principal multiplied by an expression and then divided.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The NumberFormat class can format a value as currency.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"If a non‑numeric value is entered, the program crashes due to lack of input validation.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Entering a negative value causes the program to behave improperly.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Conditional statements can be used to validate values entered by the user.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The section covers variables and constants.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Primitive types store simple values; reference types hold references to complex objects.\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"There are two types of casting: implicit and explicit.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The course teaches how to work with numbers, strings, arrays, and how to read input from the terminal.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output schema with empty arrays except extracted items. Identify educational facts: about mortgage calculator code, need input validation, conditional statements, variables/constants, primitive/reference types, casting, type conversion, reading input. Extract facts.\n\nCreate facts entries.\n\nEach fact_text with text and refs.\n\nLet's list facts:\n\n1. One byte is sufficient to store numbers up to 30. refs Q0000.\n\n2. Camel notation capitalizes first letter of each word except first. refs Q0000.\n\n3. Mortgage calculation uses principal multiplied by expression then divided. refs Q0000.\n\n4. NumberFormat class formats value as currency. refs Q0001.\n\n5. Input validation needed; non-numeric input causes crash. refs Q0002.\n\n6. Negative input causes improper behavior. refs Q0002.\n\n7. Conditional statements can be used to validate user input. refs Q0003.\n\n8. Variables and constants are covered in section. refs Q0003.\n\n9. Primitive types store simple values; reference types hold references to complex objects. refs Q0003 and Q0004.\n\n10. Two types of casting: implicit and explicit. refs Q0004.\n\n11. Working with numbers, strings, arrays, and reading input from terminal are taught. refs Q0004.\n\nExclude none.\n\nReturn JSON with empty other arrays.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191612,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c3da0d4bb9",
+  "usage": {
+    "completion_tokens": 855,
+    "prompt_tokens": 3137,
+    "total_tokens": 3992,
+    "completion_time": 1.787596197,
+    "completion_tokens_details": {
+      "reasoning_tokens": 269
+    },
+    "prompt_time": 0.1527753,
+    "prompt_tokens_details": null,
+    "queue_time": 0.166456089,
+    "total_time": 1.9403714970000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z2em67ev4bwxjbsxbgnqf8",
+    "debug": null,
+    "seed": 473414508,
+    "usage": null
+  }
+}

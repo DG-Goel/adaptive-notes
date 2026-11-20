@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-f0ac86e0-4120-4198-8afd-0ad650e6aec7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Uncovered interest parity\",\n      \"refs\": [\"Q0000\", \"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If the domestic interest rate is above the international interest rate, the exchange rate today must be above the expected exchange rate, because the expected depreciation of the currency compensates for the higher domestic interest rate. Conversely, if the domestic bond pays a lower interest rate, the exchange rate today is very depreciated, as it must be expected to appreciate to compensate for the interest rate differential.\",\n      \"refs\": [\"Q0000\", \"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Expected exchange rate\",\n      \"refs\": [\"Q0000\", \"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The exchange rate that market participants anticipate for a future period, used in the uncovered interest parity condition to determine the required level of today's exchange rate given interest rate differentials.\",\n      \"refs\": [\"Q0000\", \"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A higher domestic interest rate relative to the international rate implies that today's exchange rate must be above the expected future exchange rate.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A lower domestic interest rate relative to the international rate implies that today's exchange rate is very depreciated, expecting future appreciation.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Exact equation for exchange rate not provided in quoted text.\",\n      \"source_ids\": [\"G00031\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc based on excerpts. The excerpts discuss uncovered interest parity: domestic interest > international => exchange rate today above expected, etc. So we can create concepts: \"Uncovered interest parity\". Provide content from Q0000 and Q0001. Also maybe \"expected exchange rate\". Provide concept_name and content.\n\nWe have primary source G00031, but code/formula unavailable. So we can abstain for formulas.\n\nCreate item \"concept1\". Rows:\n\nconcept_name: \"Uncovered interest parity\" from Q0000? content: combine both quotes.\n\nProvide availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, related_refs empty.\n\nAlso maybe concept \"expected exchange rate\". Provide separate.\n\nLet's produce rows.\n\nAlso maybe facts: \"If domestic interest rate is above international, exchange rate today must be above expected exchange rate.\" That's a fact.\n\nCreate fact item.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794666280,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_49bfac06f1",
+  "usage": {
+    "completion_tokens": 1017,
+    "prompt_tokens": 3166,
+    "total_tokens": 4183,
+    "completion_time": 2.135182452,
+    "completion_tokens_details": {
+      "reasoning_tokens": 187
+    },
+    "prompt_time": 0.165712996,
+    "prompt_tokens_details": null,
+    "queue_time": 0.29774592,
+    "total_time": 2.300895448
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7d74bbsedz8sxrmzan2f3sw",
+    "debug": null,
+    "seed": 1849068468,
+    "usage": null
+  }
+}

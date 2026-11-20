@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-ba48bb13-44ca-43ab-b7f5-46ec5b400e35",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": [\n        \"C1\",\n        \"C2\",\n        \"C3\",\n        \"C4\",\n        \"C5\",\n        \"C6\",\n        \"C7\",\n        \"C8\",\n        \"C9\",\n        \"C10\"\n      ],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\n          \"teaching\"\n        ]\n      }\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"Popular Java code editors are NetBeans, Eclipse, and IntelliJ.\",\n      \"refs\": [\n        \"Q0000\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"The instructor mentions a favorite editor for the Java course.\",\n      \"refs\": [\n        \"Q0001\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"IntelliJ IDEA Community Edition is free and sufficient for the course.\",\n      \"refs\": [\n        \"Q0004\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"Installation can be done by dragging and dropping the downloaded app onto the Applications folder.\",\n      \"refs\": [\n        \"Q0005\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"The smallest building block in Java programs are functions.\",\n      \"refs\": [\n        \"Q0008\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"A function is a block of code that performs a task.\",\n      \"refs\": [\n        \"Q0009\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"Each button on a TV remote control performs a task, serving as a metaphor for functions.\",\n      \"refs\": [\n        \"Q0010\",\n        \"Q0011\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C8\",\n      \"text\": \"Functions in programming languages are exactly the same.\",\n      \"refs\": [\n        \"Q0012\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C9\",\n      \"text\": \"Examples of functions include sending emails, converting weight from pounds to kilograms, and validating user input.\",\n      \"refs\": [\n        \"Q0013\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C10\",\n      \"text\": \"The tutorial will show how to code a function in Java.\",\n      \"refs\": [\n        \"Q0014\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify teaching: code editor recommendation, function definition concept. Create claims.\n\nClaims:\nC1: Popular Java code editors are NetBeans, Eclipse, IntelliJ. (explicit)\nC2: Instructor's favorite editor is mentioned (unspecified) \"I'm the favorite editor\" maybe ambiguous. We'll include as claim.\nC3: Download IntelliJ IDEA Community Edition is free enough. (explicit)\nC4: Drag and drop onto applications folder to install. (explicit)\nC5: Functions are smallest building block in Java programs. (explicit)\nC6: A function is a block of code that performs a task. (explicit)\nC7: Metaphor: buttons on remote control each perform a task. (explicit)\nC8: Functions in programming languages are exactly the same. (explicit)\nC9: Examples of functions: sending email, converting weight, validating input. (explicit)\nC10: We'll see how to code a function in Java. (explicit)\n\nNow map to categories: facts maybe. Use facts array.\n\nWe'll put each claim text and refs.\n\nAll availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role maybe null.\n\nNo concepts, definitions, etc.\n\nProvide empty arrays for others.\n\nAbstentions none.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318688,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 1260,
+    "prompt_tokens": 3534,
+    "total_tokens": 4794,
+    "completion_time": 2.65748982,
+    "completion_tokens_details": {
+      "reasoning_tokens": 266
+    },
+    "prompt_time": 0.221169708,
+    "prompt_tokens_details": null,
+    "queue_time": 0.327061766,
+    "total_time": 2.878659528
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72vmmweepy8656dpy8zjx7y",
+    "debug": null,
+    "seed": 637672896,
+    "usage": null
+  }
+}

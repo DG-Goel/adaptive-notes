@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-b12459df-bd8f-4dad-8133-085eee320242",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"Select \\\"Create project from template\\\".\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"Create a command line application.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"A command line application can run from the command line.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"A command line application does not have a graphical user interface.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"Select it from this drop down list.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"Click now.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"A GUI is an alternative.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0006\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\"C1\", \"C2\", \"C3\", \"C4\"],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify statements: selecting create project from template, creating command line app, runs from command line, no GUI. Create claims. Then categories: facts maybe. We'll put claims and then facts referencing them.\n\nCreate claims:\nC1: \"Select 'Create project from template'.\" basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, refs Q0000.\nC2: \"Create a command line application.\" basis explicit, refs Q0001.\nC3: \"A command line application can run from the command line.\" refs Q0002.\nC4: \"A command line application does not have a graphical user interface.\" refs Q0003.\nC5: \"Select it from this drop down list.\" refs Q0004 (context).\nC6: \"Click now.\" refs Q0005.\nC7: \"A GUI is an alternative.\" refs Q0006.\nC8: \"Command line application is not as exciting as ...\" not factual, maybe ignore.\n\nNow categories: facts include C1-C4 maybe. definitions none. concepts none. examples none. explanations none. formulas none. procedures none. relationships none.\n\nAdd abstentions for missing categories? Not needed.\n\nConstruct schema. Need arrays for each category with claim IDs. For facts: fact_text list of claim IDs? Actually fact_text expects strings, but we reference claim IDs via claim refs? In schema, facts items have fact_text array of strings. We should map claim IDs to fact entries? Probably we create fact objects with fact_text referencing claim text? But we must use claim IDs in category arrays, not inside fact objects. Actually top-level fields: facts is array of fact objects. We need to create fact objects with fact_text from claim texts. Use claim IDs in fact_text? The spec: \"Each scalar category field is a nonempty list of claim IDs, e.g. fact_text:[\"C1\"]\". So fact objects have fact_text list of claim IDs. So we create one fact object per claim? Could group. Simpler: one fact object with fact_text list of all C1-C4. Provide fact_type null.\n\nWe'll set fact_type is_null true.\n\nSimilarly maybe concepts none.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317976,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "usage": {
+    "completion_tokens": 1090,
+    "prompt_tokens": 2992,
+    "total_tokens": 4082,
+    "completion_time": 2.293846631,
+    "completion_tokens_details": {
+      "reasoning_tokens": 459
+    },
+    "prompt_time": 0.185010855,
+    "prompt_tokens_details": null,
+    "queue_time": 0.168650141,
+    "total_time": 2.478857486
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72tyy93ehvbhwmgvr525m5t",
+    "debug": null,
+    "seed": 1004524935,
+    "usage": null
+  }
+}

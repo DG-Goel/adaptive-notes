@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-2485da19-b3ed-476b-a43b-e7e4f02a4c02",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00100\"],\n      \"reason\": \"No definitions were provided in the primary teaching excerpts.\"\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output definitions. No definitions present in excerpts. So items empty, abstain for missing definitions? We must abstain for missing part of actual teaching point. There's no definition teaching. So abstention with availability SOURCE_MISSING? Use primary_source_ids. Provide reason. Excluded none.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326613,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8655ddce88",
+  "usage": {
+    "completion_tokens": 141,
+    "prompt_tokens": 3277,
+    "total_tokens": 3418,
+    "completion_time": 0.295882353,
+    "completion_tokens_details": {
+      "reasoning_tokens": 60
+    },
+    "prompt_time": 0.154985706,
+    "prompt_tokens_details": null,
+    "queue_time": 0.377809129,
+    "total_time": 0.450868059
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7336jp0emxtmcqn54v77y5c",
+    "debug": null,
+    "seed": 549827659,
+    "usage": null
+  }
+}

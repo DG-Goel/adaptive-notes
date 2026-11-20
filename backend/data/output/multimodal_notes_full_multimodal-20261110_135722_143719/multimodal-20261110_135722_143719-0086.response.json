@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-511374cf-43e5-4d54-87d0-092c422a38a8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"You can check the length of the input provided by the user.\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"You can check the length of the input provided by the user.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"You can check a username's length and give an error if it exceeds a limit such as 20 characters.\",\n        \"refs\": [\"Q0001\"],\n        \"claims\": [\n          {\n            \"text\": \"You can check a username's length and give an error if it exceeds a limit such as 20 characters.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0001\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The indexOf method returns the index of the first occurrence of a character or string passed to it.\",\n        \"refs\": [\"Q0003\"],\n        \"claims\": [\n          {\n            \"text\": \"The indexOf method returns the index of the first occurrence of a character or string passed to it.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0003\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"If you pass 'h' to indexOf, it returns 0; if you pass 'e', it returns 1 because those are the positions of the first occurrences in the string.\",\n        \"refs\": [\"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"If you pass 'h' to indexOf, it returns 0; if you pass 'e', it returns 1 because those are the positions of the first occurrences in the string.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"If you pass a character or string that does not exist in the message, indexOf returns -1.\",\n        \"refs\": [\"Q0005\"],\n        \"claims\": [\n          {\n            \"text\": \"If you pass a character or string that does not exist in the message, indexOf returns -1.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0005\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The replace method can replace one or more characters with something else.\",\n        \"refs\": [\"Q0007\"],\n        \"claims\": [\n          {\n            \"text\": \"The replace method can replace one or more characters with something else.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0007\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"For example, you can replace any exclamation marks with the word \\\"store\\\".\",\n        \"refs\": [\"Q0008\"],\n        \"claims\": [\n          {\n            \"text\": \"For example, you can replace any exclamation marks with the word \\\"store\\\".\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0008\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output facts from primary teaching. Extract statements: length check, indexOf method, returns -1, replace method. Create items with claims. Provide refs. All explicit. No code. So facts:\n\n1. You can check length of user input. (from Q0000)\n2. Example: check username length and give error if >20 chars. (Q0001)\n3. indexOf method returns index of first occurrence of character/string. (Q0003)\n4. Example: indexOf('h') returns 0, indexOf('e') returns 1. (Q0004)\n5. If character/string not present, indexOf returns -1. (Q0005)\n6. replace method can replace characters with something else. (Q0007)\n7. Example: replace exclamation marks with \"store\". (Q0008)\n\nAlso Q0002 \"Pretty useful.\" not factual. Skip.\n\nCreate items each with fact_text text combine? Probably each fact separate. Provide claims with availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role maybe prerequisite or explanation. Use related_refs empty.\n\nProvide refs list overall includes all Q refs used.\n\nNo abstentions, excluded empty.\n\nReturn schema.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794319709,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_60e4b492db",
+  "usage": {
+    "completion_tokens": 1278,
+    "prompt_tokens": 3584,
+    "total_tokens": 4862,
+    "completion_time": 2.708803787,
+    "completion_tokens_details": {
+      "reasoning_tokens": 251
+    },
+    "prompt_time": 1.032869467,
+    "prompt_tokens_details": null,
+    "queue_time": 0.260236287,
+    "total_time": 3.741673254
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72wksjsemfa8wrrxej1hgzn",
+    "debug": null,
+    "seed": 1665425749,
+    "usage": null
+  }
+}

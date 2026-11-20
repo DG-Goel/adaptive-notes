@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-7fdffd07-16d7-4294-bca9-604120c8f488",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"context\": null,\n      \"term\": {\n        \"text\": \"if statement\",\n        \"refs\": [\"Q0019\"],\n        \"claims\": [\n          {\n            \"text\": \"Here we have an if statement, and this statement has three clauses or three sections.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0019\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"Here we have an if statement, and this statement has three clauses or three sections.\",\n        \"refs\": [\"Q0019\"],\n        \"claims\": [\n          {\n            \"text\": \"Here we have an if statement, and this statement has three clauses or three sections.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0019\"],\n            \"related_refs\": []\n          }\n        ]\n      }\n    },\n    {\n      \"context\": null,\n      \"term\": {\n        \"text\": \"clause\",\n        \"refs\": [\"Q0020\"],\n        \"claims\": [\n          {\n            \"text\": \"Here's the first clause, here's the second clause, and here's the third clause.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0020\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"Here's the first clause, here's the second clause, and here's the third clause.\",\n        \"refs\": [\"Q0020\"],\n        \"claims\": [\n          {\n            \"text\": \"Here's the first clause, here's the second clause, and here's the third clause.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0020\"],\n            \"related_refs\": []\n          }\n        ]\n      }\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract definitions. Look for excerpts defining terms. Q0018: \"Now, let me define a few terms.\" but no definitions. Q0019: defines \"if statement\" has three clauses. That's a definition of if statement structure. So term: \"if statement\". definition_text: \"Here we have an if statement, and this statement has three clauses or three sections.\" Also Q0020 defines clauses. Could be separate. We'll create items for term \"if statement\" and maybe \"clause\". Use primary excerpts Q0019 and Q0020. Provide claims with explicit basis. literal_kind verbal. instructional_role prerequisite? It's definition. Use null for instructional_role? maybe null. Provide refs. Include context null. Items array with two definitions. No abstentions. Excluded none.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326539,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_93703442d9",
+  "usage": {
+    "completion_tokens": 666,
+    "prompt_tokens": 3127,
+    "total_tokens": 3793,
+    "completion_time": 1.409129817,
+    "completion_tokens_details": {
+      "reasoning_tokens": 163
+    },
+    "prompt_time": 0.184443641,
+    "prompt_tokens_details": null,
+    "queue_time": 0.494078586,
+    "total_time": 1.593573458
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7334909ezrakm10v3nxbqze",
+    "debug": null,
+    "seed": 1482697,
+    "usage": null
+  }
+}

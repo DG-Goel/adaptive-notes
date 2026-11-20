@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-72e6187d-1b6d-40cb-bdd5-f7d24ba34e2b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Enter a value between 1 and 30.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If the user enters an invalid value, we simply print an error message.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Number of payments cannot be resolved in the current code location.\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"identified_mistake\",\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Adding data validation improves program maintainability.\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"explanation_of_mistake\",\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item5\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Long methods hurt maintainability because readers must scan many statements.\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"explanation_of_mistake\",\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item6\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Breaking code into smaller, easier‑to‑read chunks improves understandability.\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"correct_demonstration\",\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item7\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Control flow statements include conditional statements, loops, and switch.\",\n      \"refs\": [\"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item8\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Conditional statements like if and switch are used for making decisions.\",\n      \"refs\": [\"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item9\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Loops execute code repetitively; four types of loops were covered.\",\n      \"refs\": [\"Q0014\", \"Q0015\", \"Q0016\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Exact code/formula unavailable in primary source; only ambiguous OCR fragments exist.\",\n      \"source_ids\": [\"G00122\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Procedure steps not explicitly quoted; only general discussion present.\",\n      \"source_ids\": [\"G00122\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for educational content from primary excerpts. Identify concepts? Probably facts about data validation, control flow, etc.\n\nCreate rows: e.g., fact: \"Enter a value between 1 and 30.\" etc.\n\nWe'll produce rows with availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role maybe explanation_of_mistake? Not needed. Use appropriate fields.\n\nWe'll need item id, say \"item1\". Category facts, field fact_text, element0, part value.\n\nCreate multiple rows.\n\nAlso abstentions for unavailable code/formula. Provide one abstention for formulas category unavailable.\n\nExcluded none.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636740,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c868cf1eaa",
+  "usage": {
+    "completion_tokens": 1241,
+    "prompt_tokens": 4590,
+    "total_tokens": 5831,
+    "completion_time": 2.5954474210000003,
+    "completion_tokens_details": {
+      "reasoning_tokens": 130
+    },
+    "prompt_time": 0.236144888,
+    "prompt_tokens_details": null,
+    "queue_time": 0.375029146,
+    "total_time": 2.831592309
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7caytvkewqrmmp8kwa2r79c",
+    "debug": null,
+    "seed": 1315086628,
+    "usage": null
+  }
+}

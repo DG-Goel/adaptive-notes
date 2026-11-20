@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-d694557c-c377-4032-bac6-ea43c8d41b7f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"function_definition\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"function definition syntax in Java\",\n      \"refs\": [\"Q0001\", \"Q0007\", \"Q0011\", \"Q0015\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": null,\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"function_definition\",\n      \"category\": \"concepts\",\n      \"field\": \"aliases\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"method declaration\",\n      \"refs\": [\"Q0011\", \"Q0015\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": null,\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"function_parameters\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"function parameters in Java\",\n      \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": null,\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"function_parameters\",\n      \"category\": \"concepts\",\n      \"field\": \"aliases\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"method arguments\",\n      \"refs\": [\"Q0004\", \"Q0005\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": null,\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"brace_placement\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"placement of opening brace for Java methods\",\n      \"refs\": [\"Q0011\", \"Q0012\", \"Q0013\", \"Q0015\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": null,\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"brace_placement\",\n      \"category\": \"concepts\",\n      \"field\": \"aliases\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"same-line opening brace style\",\n      \"refs\": [\"Q0011\", \"Q0015\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": null,\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"main_method\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Java main method as entry point\",\n      \"refs\": [\"Q0016\", \"Q0017\", \"Q0018\", \"Q0022\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": null,\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"main_method\",\n      \"category\": \"concepts\",\n      \"field\": \"aliases\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"entry point function\",\n      \"refs\": [\"Q0017\", \"Q0018\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": null,\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"email_function\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"send email function example\",\n      \"refs\": [\"Q0004\", \"Q0005\", \"Q0019\", \"Q0020\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": null,\n      \"instructional_role\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows for concepts etc. From excerpts: talk about function definition syntax, parameters, braces, main function. Create concepts: function definition, parameters, braces placement, main method. Provide rows.\n\nWe'll output rows with availability SOURCE_MISSING? Since ASR speech, exact code unavailable. So availability PARTIALLY_SUPPORTED? Probably SOURCE_MISSING for code literals. Use explicit basis.\n\nCreate items e.g., item \"function_definition\". Provide fields.\n\nLet's craft few rows.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794316921,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8ea50c0161",
+  "usage": {
+    "completion_tokens": 1120,
+    "prompt_tokens": 2627,
+    "total_tokens": 3747,
+    "completion_time": 2.336879772,
+    "completion_tokens_details": {
+      "reasoning_tokens": 97
+    },
+    "prompt_time": 0.141304354,
+    "prompt_tokens_details": null,
+    "queue_time": 0.321212481,
+    "total_time": 2.478184126
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72syr0cewhsy9jsb8g24x43",
+    "debug": null,
+    "seed": 241358188,
+    "usage": null
+  }
+}

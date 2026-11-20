@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-01b4eef3-4266-4622-b6af-88cf5d658644",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"binary classification\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"multi-class classification\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"definitions\",\n      \"field\": \"term\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"regression\",\n      \"refs\": [\"Q0004\", \"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"definitions\",\n      \"field\": \"definition_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"a problem where the output can be any numeric value rather than a fixed set of categories\",\n      \"refs\": [\"Q0004\", \"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"definitions\",\n      \"field\": \"term\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"supervised machine learning\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"definitions\",\n      \"field\": \"definition_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"learning approach that uses labeled input-output pairs (x, y) for training\",\n      \"refs\": [\"Q0009\", \"Q0005\", \"Q0006\", \"Q0007\", \"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"definitions\",\n      \"field\": \"term\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"unsupervised machine learning\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"definitions\",\n      \"field\": \"definition_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"learning approach that works with data without labeled output values\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item5\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"labeled data\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item6\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"x and y pair\",\n      \"refs\": [\"Q0005\", \"Q0006\", \"Q0007\", \"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows about concepts etc. From excerpts: classification vs regression, binary/multi-class, regression definition, x and y pairs, supervised vs unsupervised. Create rows.\n\nWe'll produce rows for concepts: \"binary classification\", \"multi-class classification\", \"regression\", \"supervised machine learning\", \"unsupervised machine learning\", \"labeled data\". Also term definitions.\n\nDefine items e.g., item1.\n\nProvide each row with text, refs, basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs empty.\n\nProvide category definitions maybe.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794644465,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_bb691ea66b",
+  "usage": {
+    "completion_tokens": 1208,
+    "prompt_tokens": 2440,
+    "total_tokens": 3648,
+    "completion_time": 2.537956119,
+    "completion_tokens_details": {
+      "reasoning_tokens": 123
+    },
+    "prompt_time": 0.108841578,
+    "prompt_tokens_details": null,
+    "queue_time": 0.372744327,
+    "total_time": 2.6467976970000002
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cjajnyea2b79gyc6rhah0k",
+    "debug": null,
+    "seed": 740987051,
+    "usage": null
+  }
+}

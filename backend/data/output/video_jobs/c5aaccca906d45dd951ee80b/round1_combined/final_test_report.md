@@ -1,0 +1,111 @@
+# Java run
+
+{
+  "classification": "Full live extraction completed",
+  "selected_slots": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "rotation_policy": "next_free_key",
+  "continue_validation_failures": true,
+  "live": true,
+  "source_sha256": "7501329c968fd24ec1c090862cab46429413e6814ba565976f3df503d5bbc322",
+  "total_chunks": 36,
+  "completed_chunks": 36,
+  "recovered_truncations": 6,
+  "requests_attempted": 42,
+  "http_successes": 37,
+  "http_429": 0,
+  "input_tokens": 95422,
+  "output_tokens": 47377,
+  "unknown_usage_attempts": 5,
+  "elapsed_seconds": 600.6835095882416,
+  "errors": [
+    {
+      "request_id": "multimodal-20261115_181531_886192-0014",
+      "chunk_number": 3,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}"
+    },
+    {
+      "request_id": "multimodal-20261115_181531_886192-0095",
+      "chunk_number": 15,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_181531_886192-0109",
+      "chunk_number": 17,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [\\n    {\\n      \"item\": \"concept1\",\\n      \"category\": \"concepts\",\\n      \"field\": \"concept_name\",\\n      \"element\": 0,\\n      \"part\": \"value\",\\n      \"text\": \"trade balance\",\\n      \"refs\": [\"Q0005\"],\\n      \"basis\": \"explicit\",\\n      \"availability\": \"SOURCE_SUPPORTED\",\\n      \"literal_kind\": \"verbal\",\\n      \"instructional_role\": null,\\n      \"related_refs\": []\\n    },\\n    {\\n      \"item\": \"concept1\",\\n      \"category\": \"concepts\",\\n      \"field\": \"content\",\\n      \"element\": 0,\\n      \"part\": \"value\",\\n      \"text\": \"At the point where the trade balance is zero, exports equal imports.\",\\n      \"refs\": [\"Q0005\"],\\n      \"basis\": \"explicit\",\\n      \"availability\": \"SOURCE_SUPPORTED\",\\n      \"literal_kind\": \"verbal\",\\n      \"instructional_role\": null,"
+    },
+    {
+      "request_id": "multimodal-20261115_181531_886192-0137",
+      "chunk_number": 21,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}"
+    },
+    {
+      "request_id": "multimodal-20261115_181531_886192-0158",
+      "chunk_number": 24,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}"
+    },
+    {
+      "request_id": "multimodal-20261115_181531_886192-0176",
+      "chunk_number": 27,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}"
+    }
+  ],
+  "assembly": "completed",
+  "quality_score": null,
+  "total_actual_tokens": null,
+  "invocation_elapsed_seconds": 603.0930000000008,
+  "elapsed_basis": "First durable claim to latest operation completion, including resume gaps and quota waits; invocation time is separate.",
+  "physical_call_seconds": 153.3000000000029,
+  "token_count_note": "Input/output sums include reported usage only; missing usage is not zero consumption.",
+  "unresolved_source_ids": [
+    "V95811cb7339c372f4322",
+    "V81bac22ec327dc7978d7",
+    "V5fa5048375b5c247edb3",
+    "Vc6c731456d74b72959f9",
+    "Vb1981ff77b14b12ea992",
+    "Vc6832c85a1466750fe33",
+    "V7030e69b231f211dc76d",
+    "Vf45044e19909d831b4d1",
+    "V1896d5c79c7f8d46223a",
+    "V07b59ad6db394ea204c7",
+    "V9ac642806e3919120910",
+    "V18f6e10ea9a61885b088",
+    "V87ba9417130e5ed901af",
+    "V320db3d9eff9c52c3379",
+    "V6faf8a4736feb377a191",
+    "V91f51a2971818e3594ab",
+    "V3b65c37c136fd8ed0228",
+    "Vdb682b0253774b6d63ba",
+    "V3ae0f6a200e3b1b2a69d",
+    "Ved5fc1f148357549c504",
+    "V929266db1046d1401c87",
+    "V4f1e369e9392d16c6fc3",
+    "V11e03de6d79e34589f39",
+    "V94139ffc346bb77efa3b",
+    "V1824010b2ab3046579d5",
+    "V24bd62a7850af9eb7dbd",
+    "V1ff8422f360c9107d058",
+    "V6b687ab3371f37eaea2a",
+    "V79e4b9a26d1e3d033079",
+    "V6d9f51b24ff5a40c9852"
+  ],
+  "ingestion_status": "success",
+  "source_representation_complete": false,
+  "missing_chunk_serials": [],
+  "notes_status": "UNVERIFIED_PREVIEW",
+  "items": 94,
+  "source_units_with_items": 36
+}
+
+Semantic checks are heuristics. Educational quality has not yet been manually reviewed. No quality score is inferred from HTTP success.

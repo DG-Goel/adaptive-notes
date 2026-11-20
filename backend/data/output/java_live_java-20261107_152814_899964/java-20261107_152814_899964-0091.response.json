@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-9d70b846-fcf1-4986-ba91-a4a7851e79f7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"excluded\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"A primitive type does not have members, so using the dot operator on a primitive variable shows nothing.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Reference types are classes that have members (fields and methods) which can be accessed with the dot operator.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Primitive types store simple values, while reference types store complex objects.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Variables of primitive types hold independent copies of values; changing one variable does not affect another variable that was assigned its value.\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Variables of reference types hold references to objects; assigning one reference variable to another makes both refer to the same object, so changes via one reference affect the other.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output JSON with empty arrays maybe facts etc. Extract educational content: concepts? We have explanations about primitive vs reference types, dot operator, members. Could map to facts, explanations. Use schema. Provide facts: e.g., \"A primitive type does not have members, so dot operator shows nothing.\" Provide refs Q0000. Another fact: \"Reference types have members accessible via dot operator.\" refs Q0001. Fact about primitive and reference stored values and memory independence. refs Q0003,Q0004. Provide explanation maybe. We'll put in facts array. No concepts etc. Provide excluded empty.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065456,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_02b0d31eca",
+  "usage": {
+    "completion_tokens": 474,
+    "prompt_tokens": 3028,
+    "total_tokens": 3502,
+    "completion_time": 0.988381643,
+    "completion_tokens_details": {
+      "reasoning_tokens": 124
+    },
+    "prompt_time": 0.139911811,
+    "prompt_tokens_details": null,
+    "queue_time": 0.333180701,
+    "total_time": 1.128293454
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6va4p20et8bsv8rqf9dwf75",
+    "debug": null,
+    "seed": 1282880375,
+    "usage": null
+  }
+}

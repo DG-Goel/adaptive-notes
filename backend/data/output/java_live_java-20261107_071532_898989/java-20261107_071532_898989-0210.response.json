@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-1eca65a2-2042-4947-a630-b8c290f349db",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"Avoiding magic numbers\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Using constants or final variables instead of literal numbers makes code more understandable for others, as literals like 12 may not be immediately clear.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"Choosing appropriate data types\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Select data types based on the range of values needed; use int for principal amounts up to two billion, and float for small interest rates instead of double.\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"Using meaningful variable names\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Descriptive variable names improve code readability; avoid short or ambiguous names like \\\"MI\\\" for monthly interest.\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Declaring constants for months in a year (12) and percent (100) prevents magic numbers.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"A scanner object can be used to read user input for principal, interest rate, and period.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output schema with empty arrays maybe facts etc. Extract educational content: mentions avoiding magic numbers, using constants, meaningful variable names, data types. So we can create facts, explanations, definitions? Probably facts: \"Avoid magic numbers in code\" etc. Use excerpts refs. Let's produce facts.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036297,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 520,
+    "prompt_tokens": 3042,
+    "total_tokens": 3562,
+    "completion_time": 1.100846967,
+    "completion_tokens_details": {
+      "reasoning_tokens": 61
+    },
+    "prompt_time": 0.137986071,
+    "prompt_tokens_details": null,
+    "queue_time": 0.330963889,
+    "total_time": 1.238833038
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6teata8es1b0tqxdfzn7wv2",
+    "debug": null,
+    "seed": 1946035785,
+    "usage": null
+  }
+}

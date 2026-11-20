@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-2a6d5783-5d1a-43bd-847d-419253bac40e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"The anatomy of a Java program will be examined.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"The tutorial will look at the anatomy of Java programs.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"The smallest building block in Java programs are functions.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"A function is a block of code that performs a task.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"Buttons on a TV remote are used as a metaphor for functions.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"Each button performs a task.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"Functions in programming languages are exactly the same.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0006\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C8\",\n      \"text\": \"Examples of functions include sending emails, converting weight units, and validating user input.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0007\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C9\",\n      \"text\": \"The tutorial will show how to code a function in Java.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0008\"],\n      \"related_refs\": []\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": [\"function\"],\n      \"definition_text\": [\"A function is a block of code that performs a task.\"],\n      \"context\": {\n        \"is_null\": false,\n        \"value\": [\"Q0003\"]\n      }\n    }\n  ],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": [\"The smallest building block in Java programs are functions.\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"Q0002\"]\n      }\n    },\n    {\n      \"fact_text\": [\"Functions in programming languages are exactly the same.\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"Q0006\"]\n      }\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from these excerpts. Identify facts: anatomy of Java program, smallest building block are functions, function definition, metaphor, each button performs a task, functions same, examples, coding a function. Create claims.\n\nAssign IDs C1 etc. Provide availability SOURCE_SUPPORTED. basis explicit. literal_kind verbal. instructional_role maybe explanation_of_mistake? No. Probably none -> null.\n\nCreate categories: facts maybe. definitions? Could define function. Use definitions category with term \"function\". Provide definition_text from Q0003. Provide context null? context maybe null.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318370,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4727af4560",
+  "usage": {
+    "completion_tokens": 1027,
+    "prompt_tokens": 3057,
+    "total_tokens": 4084,
+    "completion_time": 2.169612782,
+    "completion_tokens_details": {
+      "reasoning_tokens": 124
+    },
+    "prompt_time": 0.155304567,
+    "prompt_tokens_details": null,
+    "queue_time": 0.161393541,
+    "total_time": 2.324917349
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72vaze8es4t1f0n1w513k3j",
+    "debug": null,
+    "seed": 576783280,
+    "usage": null
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-319fe299-c2b4-40ac-be3f-b78c09133eed",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"example_text\": {\n        \"text\": \"Here is one workflow that I'm showing you in n18 this is the name of the tool where when a new employee is onboarding you will trigger the workflow through some event through some recurrent schedule etc and then you will have an AI agent and AI agent has memory it has chat model which is LLM, it has tool and so on and it will let's say in this case it is using anthropic's Claude tool it has a memory in Postgres and then in terms of tool it has access to Jira so you know in a software organization\",\n        \"refs\": [\"Q0005\"],\n        \"claims\": [\n          {\n            \"text\": \"Here is one workflow that I'm showing you in n18 ... it has access to Jira ...\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0005\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"example_type\": null,\n      \"exemplifies\": {\n        \"text\": \"Here is one workflow that I'm showing you in n18 ... it has access to Jira ...\",\n        \"refs\": [\"Q0005\"],\n        \"claims\": [\n          {\n            \"text\": \"Here is one workflow that I'm showing you in n18 ... it has access to Jira ...\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0005\"],\n            \"related_refs\": []\n          }\n        ]\n      }\n    },\n    {\n      \"example_text\": {\n        \"text\": \"when a new employee joins you want to create their Jira account okay you can have multiple tools you can have a tool to order a laptop you can have a tool to order multiple things you know whatever is needed to unload that employee and then you will check is it a manager yes then you add them to a slack channel which is specific to managers or you add them to the slack channel for individual contributors and so on this is just a one simple example you can have a much more complex\",\n        \"refs\": [\"Q0007\"],\n        \"claims\": [\n          {\n            \"text\": \"when a new employee joins you want to create their Jira account ... this is just a one simple example you can have a much more complex\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0007\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"example_type\": null,\n      \"exemplifies\": {\n        \"text\": \"when a new employee joins you want to create their Jira account ... this is just a one simple example you can have a much more complex\",\n        \"refs\": [\"Q0007\"],\n        \"claims\": [\n          {\n            \"text\": \"when a new employee joins you want to create their Jira account ... this is just a one simple example you can have a much more complex\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0007\"],\n            \"related_refs\": []\n          }\n        ]\n      }\n    },\n    {\n      \"example_text\": {\n        \"text\": \"So this is one example of agentic AI system.\",\n        \"refs\": [\"Q0010\"],\n        \"claims\": [\n          {\n            \"text\": \"So this is one example of agentic AI system.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0010\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"example_type\": null,\n      \"exemplifies\": {\n        \"text\": \"So this is one example of agentic AI system.\",\n        \"refs\": [\"Q0010\"],\n        \"claims\": [\n          {\n            \"text\": \"So this is one example of agentic AI system.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0010\"],\n            \"related_refs\": []\n          }\n        ]\n      }\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output examples section. Identify teaching examples. Likely examples of workflows. Provide items with example_text etc. Use primary excerpts that are examples. Which are examples? Q0005 describes workflow, Q0007 example of onboarding, Q0010 \"So this is one example of agentic AI system.\" Q0011 mentions low code tools. We'll include those as examples.\n\nCreate items array with each example. Provide claims: text from excerpt, basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role correct_demonstration? It's an example demonstration. Use correct_demonstration.\n\nRefs list the excerpt ref. related_refs empty.\n\nexample_type maybe null.\n\nexemplifies maybe same as example_text? Could leave null.\n\nWe'll output items with those three examples. Abstentions empty, excluded empty.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794598978,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_47082602e2",
+  "usage": {
+    "completion_tokens": 1163,
+    "prompt_tokens": 3801,
+    "total_tokens": 4964,
+    "completion_time": 3.22678581,
+    "completion_tokens_details": {
+      "reasoning_tokens": 164
+    },
+    "prompt_time": 0.207078101,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "queue_time": 0.311694323,
+    "total_time": 3.433863911
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b6ydqwe69va9pq6aet1ppm",
+    "debug": null,
+    "seed": 1802049563,
+    "usage": null
+  }
+}

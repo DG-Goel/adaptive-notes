@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-6fc13b16-62df-4ba2-9101-52503a40c3ae",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"abstract class\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"definition_text\": {\n        \"text\": \"abstract class is abstract it cannot be instantiated\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"factory method\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a method that creates and returns an instance of a class, acting like a factory\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"method overloading\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"having multiple implementations of a method with different parameter types\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"example_type\": null,\n      \"exemplifies\": {\n        \"text\": \"currency formatting\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"example_text\": {\n        \"text\": \"call NumberFormat.format with value 1234567.891 to get a string like $1,234,567.89\",\n        \"refs\": [\"Q0003\"]\n      }\n    }\n  ],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"renaming variable for percent formatting\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_type\": null,\n      \"explanation_text\": {\n        \"text\": \"When switching to percent formatting, rename variable to reflect its purpose to avoid confusion\",\n        \"refs\": [\"Q0004\"]\n      }\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"NumberFormat class cannot be instantiated directly using new operator\",\n        \"refs\": [\"Q0000\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"NumberFormat.getCurrencyInstance() returns an instance of NumberFormat\",\n        \"refs\": [\"Q0001\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"NumberFormat.format returns a string representation of the number formatted as currency\",\n        \"refs\": [\"Q0003\"]\n      }\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays except extracted items. From excerpts, we can extract facts, definitions, examples, explanations maybe. Identify: abstract class definition? There's explanation of abstract class concept. Could be definition: \"abstract class is abstract it cannot be instantiated\". So definition term \"abstract class\". Provide definition_text. Also factory method definition. Also method overloading explanation. Also formatting example. Let's create definitions, facts, examples, explanations.\n\nDefinition: term \"abstract class\" with text from Q0000. definition_text: \"abstract class is abstract it cannot be instantiated\". refs Q0000.\n\nDefinition: term \"factory method\" from Q0001. definition_text: \"a method that creates and returns an instance of a class, acting like a factory\". refs Q0001.\n\nDefinition: term \"method overloading\" from Q0003. definition_text: \"having multiple implementations of a method with different parameter types\". refs Q0003.\n\nFact: \"NumberFormat class cannot be instantiated directly using new operator\". refs Q0000.\n\nFact: \"NumberFormat.getCurrencyInstance() returns an instance of NumberFormat\". refs Q0001.\n\nFact: \"NumberFormat.format returns a string representation of the number formatted as currency\". refs Q0003.\n\nExample: example of formatting number 1234567.891 using format method. example_text from Q0003. exemplifies maybe \"currency formatting\". refs Q0003.\n\nExplanation: explanation of why rename variable when using getPercentInstance. from Q0004. explanation_text: \"When switching to percent formatting, rename variable to reflect its purpose to avoid confusion\". refs Q0004.\n\nAlso maybe explanation of renaming objects in IntelliJ from Q0005 but that's tool tip not core.\n\nWe'll output arrays accordingly. No concepts, relationships, formulas, procedures. excluded empty.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036286,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_64b2f1c926",
+  "usage": {
+    "completion_tokens": 955,
+    "prompt_tokens": 3027,
+    "total_tokens": 3982,
+    "completion_time": 2.291076676,
+    "completion_tokens_details": {
+      "reasoning_tokens": 372
+    },
+    "prompt_time": 0.069776549,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "queue_time": 0.331951291,
+    "total_time": 2.360853225
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6teaes5eh080ht7j8nhn0zs",
+    "debug": null,
+    "seed": 639736181,
+    "usage": null
+  }
+}

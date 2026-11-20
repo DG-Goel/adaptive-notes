@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-2fd17466-e0ee-4f6f-80b2-cf8f727d13ce",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Net exports decline.\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Appreciation\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"An increase in the value of the domestic currency relative to foreign currencies.\",\n      \"refs\": [\"Q0002\", \"Q0003\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the source, what happens to net exports when the domestic currency appreciates?\",\n      \"answer\": \"Net exports decline.\",\n      \"distractors\": [\n        \"Net exports increase.\",\n        \"Net exports remain unchanged.\",\n        \"Net exports become unpredictable.\"\n      ],\n      \"explanation\": \"The primary excerpt Q0004 states directly that \\\"Net exports decline.\\\" when there is an appreciation.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Effect of appreciation on net exports\",\n      \"refs\": [\"Q0004\"]\n    },\n    {\n      \"question\": \"What term is used in the source to describe an increase in the domestic currency’s value?\",\n      \"answer\": \"Appreciation\",\n      \"distractors\": [\n        \"Depreciation\",\n        \"Inflation\",\n        \"Stagnation\"\n      ],\n      \"explanation\": \"The excerpt Q0002 provides the word \\\"Appreciate\\\" as the response to a question about what happens when there is an appreciation, indicating the term used is \\\"Appreciation\\\".\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Currency appreciation terminology\",\n      \"refs\": [\"Q0002\"]\n    },\n    {\n      \"question\": \"In the discussion, what is the implied first effect of moving a parameter related to exchange rates?\",\n      \"answer\": \"It moves the \\\"yes\\\" to the left.\",\n      \"distractors\": [\n        \"It moves the \\\"yes\\\" to the right.\",\n        \"It causes the exchange rate to stay constant.\",\n        \"It eliminates the need for parameters.\"\n      ],\n      \"explanation\": \"Excerpt Q0006 states: \\\"So this movement will move the yes to the left as a first effect,\\\" indicating the described first effect.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Parameter movement effect\",\n      \"refs\": [\"Q0006\"]\n    },\n    {\n      \"question\": \"According to the source, what direction does the exchange rate move when the parameter is adjusted as described?\",\n      \"answer\": \"To the right.\",\n      \"distractors\": [\n        \"To the left.\",\n        \"Upward.\",\n        \"Downward.\"\n      ],\n      \"explanation\": \"Excerpt Q0014 explicitly says \\\"To the right,\\\" indicating the direction of movement.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Exchange rate direction\",\n      \"refs\": [\"Q0014\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract claims. The excerpts are mostly questions and short answers. We can create facts: \"Net exports decline.\" etc. Create rows.\n\nItem label maybe \"item1\". We'll make facts.\n\nRows:\n- fact_text \"Net exports decline.\" from Q0004.\n- fact_text \"Appreciate.\"? That's answer maybe \"Appreciate.\" treat as fact: \"Appreciation occurs.\" but ambiguous. Use explicit.\n\n- fact_text \"So this movement will move the yes to the left as a first effect.\" unclear.\n\nProbably only one clear fact: net exports decline when appreciation.\n\nCreate rows for facts.\n\nAlso maybe concept: appreciation.\n\nCreate concept item \"appreciation\" with concept_name and content.\n\nContent from Q0002 \"Appreciate.\" and Q0003 question.\n\nWe'll produce rows.\n\nQuiz: create questions about net exports decline.\n\nNeed 4 questions but maybe limited. We'll make 2.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794817309,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_69334c0be3",
+  "usage": {
+    "completion_tokens": 1061,
+    "prompt_tokens": 2573,
+    "total_tokens": 3634,
+    "completion_time": 2.2261817600000002,
+    "completion_tokens_details": {
+      "reasoning_tokens": 192
+    },
+    "prompt_time": 0.134631027,
+    "prompt_tokens_details": null,
+    "queue_time": 0.164236153,
+    "total_time": 2.360812787
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hq5cjqentvqj09fw3wgw6b",
+    "debug": null,
+    "seed": 1157095980,
+    "usage": null
+  }
+}

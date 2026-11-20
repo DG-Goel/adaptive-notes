@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-355a44f3-ed97-49d9-a23c-55d2b5fbe4eb",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"openness in financial market\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Openness in financial markets means you can decide whether to invest a dollar in domestic assets or foreign assets.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the lecture, what choice does openness in financial markets give an investor?\",\n      \"answer\": \"Whether to invest in domestic assets or foreign assets\",\n      \"distractors\": [\n        \"Whether to invest in real estate or stocks\",\n        \"Whether to save money in a bank or spend it\",\n        \"Whether to borrow money or lend money\"\n      ],\n      \"explanation\": \"The primary excerpt (Q0001) states that openness in financial markets lets you decide whether to invest in domestic assets or foreign assets.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"openness in financial market\",\n      \"refs\": [\"Q0001\"]\n    },\n    {\n      \"question\": \"What is the basic comparison needed when evaluating two bond investments, according to the speaker?\",\n      \"answer\": \"The expected relative return of the two bonds\",\n      \"distractors\": [\n        \"The current exchange rate between the currencies\",\n        \"The total market capitalization of each bond\",\n        \"The credit rating of the bond issuers\"\n      ],\n      \"explanation\": \"The excerpt Q0007 mentions that to decide what to invest in, you need a sense of the expected relative return of the two options.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"expected relative return\",\n      \"refs\": [\"Q0007\"]\n    },\n    {\n      \"question\": \"In the example with a dollar bond, what interest rate is mentioned as a typical current rate?\",\n      \"answer\": \"5%\",\n      \"distractors\": [\n        \"2%\",\n        \"10%\",\n        \"15%\"\n      ],\n      \"explanation\": \"Excerpt Q0017 says \\\"say, 5% nowadays\\\" when describing the interest rate of a dollar bond.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"dollar bond interest rate\",\n      \"refs\": [\"Q0017\"]\n    },\n    {\n      \"question\": \"If you invest $1 in a dollar bond with a 5% interest rate, how much interest do you earn after one year?\",\n      \"answer\": \"$0.05\",\n      \"distractors\": [\n        \"$0.50\",\n        \"$0.005\",\n        \"$1.05\"\n      ],\n      \"explanation\": \"Excerpt Q0020 states that with $1 you will get $0.05 on that dollar at the end of the year.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"interest calculation\",\n      \"refs\": [\"Q0020\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc. From excerpts we have concept of openness in capital account, openness in financial market. So concept items.\n\nCreate item e.g., item \"concept1\". Provide concept_name and content.\n\nExtract content: Q0000 defines concept: \"openness in capital account, in financial market.\" Also Q0001 explains meaning.\n\nWe'll make rows.\n\nRows needed: for concepts: required content and concept_name. Provide two rows.\n\nRow1: concept_name text \"openness in financial market\" refs Q0000? Actually concept name from Q0000 \"openness in capital account, in financial market\". Use that.\n\nRow2: content text from Q0001 describing decision to invest domestic vs foreign assets. Use that.\n\nProvide availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, related_refs [].\n\nAlso maybe another concept: \"expected relative return\" from Q0007. Could be separate concept.\n\nBut we need at least one concept item. Provide one.\n\nQuiz: need up to four questions. Create 4 based on excerpts.\n\nQ1: What does openness in financial markets allow an investor to decide? Answer: whether to invest in domestic or foreign assets. Distractors.\n\nProvide refs Q0001.\n\nBloom: Understand.\n\nSimilarly other questions.\n\nReturn JSON with rows, abstentions empty, excluded empty, quiz array.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794766545,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5a93aea882",
+  "usage": {
+    "completion_tokens": 1066,
+    "prompt_tokens": 2870,
+    "total_tokens": 3936,
+    "completion_time": 2.245583232,
+    "completion_tokens_details": {
+      "reasoning_tokens": 281
+    },
+    "prompt_time": 0.129883564,
+    "prompt_tokens_details": null,
+    "queue_time": 0.164617597,
+    "total_time": 2.375466796
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g6r5n7e5rvpar2hwq116az",
+    "debug": null,
+    "seed": 962729494,
+    "usage": null
+  }
+}

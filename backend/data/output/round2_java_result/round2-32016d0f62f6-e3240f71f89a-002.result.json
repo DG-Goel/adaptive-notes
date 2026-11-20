@@ -1,0 +1,333 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0048",
+        "FCT_0049"
+      ],
+      "reason": "Candidate requires review"
+    },
+    {
+      "note_ids": [
+        "FCT_0066",
+        "FCT_0067",
+        "FCT_0068",
+        "FCT_0069",
+        "FCT_0070",
+        "FCT_0072",
+        "FCT_0074"
+      ],
+      "reason": "Candidate requires review"
+    },
+    {
+      "note_ids": [
+        "FCT_0070",
+        "FCT_0071"
+      ],
+      "reason": "Candidate requires review"
+    },
+    {
+      "note_ids": [
+        "FCT_0081",
+        "FCT_0083",
+        "FCT_0084",
+        "FCT_0085"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Java Naming Conventions",
+      "source_segment_ids": [
+        "FCT_0048",
+        "FCT_0049"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0048",
+            "FCT_0049"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0048",
+              "exact_quote": "Java class names use PascalCase, meaning the first letter of every word is uppercase."
+            },
+            {
+              "note_id": "FCT_0049",
+              "exact_quote": "Java method names use camelCase, meaning the first letter of the first word is lowercase and the first letter of each subsequent word is uppercase."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Java Naming Conventions",
+            "headers": [
+              "Element",
+              "Convention",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Class name",
+                "PascalCase",
+                "MyMainClass"
+              ],
+              [
+                "Method name",
+                "camelCase",
+                "calculateTotal"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Java Compilation and Execution Flow",
+      "source_segment_ids": [
+        "FCT_0066",
+        "FCT_0067",
+        "FCT_0068",
+        "FCT_0069",
+        "FCT_0070",
+        "FCT_0072",
+        "FCT_0074"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0066",
+            "FCT_0067",
+            "FCT_0068",
+            "FCT_0069",
+            "FCT_0070",
+            "FCT_0072",
+            "FCT_0074"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0066",
+              "exact_quote": "Compiling a Java source file produces a `.class` file (e.g., main.class) that contains the bytecode representation of the source."
+            },
+            {
+              "note_id": "FCT_0067",
+              "exact_quote": "When running a Java program from an IDE (e.g., IntelliJ), the generated `.class` files are stored in a separate output folder, not alongside the source files."
+            },
+            {
+              "note_id": "FCT_0068",
+              "exact_quote": "The compiled `.class` file resides in the package directory structure (e.g., `helloWorld/com/codewithmosh/main.class`)."
+            },
+            {
+              "note_id": "FCT_0069",
+              "exact_quote": "Java bytecode is platform‑independent; the same `.class` file can run on Windows, macOS, Linux, or any OS with a Java Runtime Environment (JRE)."
+            },
+            {
+              "note_id": "FCT_0070",
+              "exact_quote": "The Java Runtime Environment includes the Java Virtual Machine (JVM), which translates Java bytecode to native code for the underlying operating system."
+            },
+            {
+              "note_id": "FCT_0072",
+              "exact_quote": "To run a Java program you invoke the Java virtual machine (JVM) by typing `java` followed by the full path to the main class file."
+            },
+            {
+              "note_id": "FCT_0074",
+              "exact_quote": "When the `java` command is executed, the JVM searches the folder hierarchy for the specified package and class, loads the bytecode, and converts it to native code for the operating system."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Compile‑Run Process",
+            "direction": "top-down",
+            "nodes": [
+              {
+                "id": "src",
+                "label": "Java source file (.java)"
+              },
+              {
+                "id": "compile",
+                "label": "javac compiler"
+              },
+              {
+                "id": "class",
+                "label": "Bytecode file (.class)"
+              },
+              {
+                "id": "jvm",
+                "label": "JVM (part of JRE)"
+              },
+              {
+                "id": "native",
+                "label": "Native code executed by OS"
+              }
+            ],
+            "edges": [
+              {
+                "from": "src",
+                "to": "compile",
+                "label": "javac"
+              },
+              {
+                "from": "compile",
+                "to": "class",
+                "label": "produces"
+              },
+              {
+                "from": "class",
+                "to": "jvm",
+                "label": "java command loads"
+              },
+              {
+                "from": "jvm",
+                "to": "native",
+                "label": "translates & runs"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Java Runtime Architecture",
+      "source_segment_ids": [
+        "FCT_0070",
+        "FCT_0071"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0070",
+            "FCT_0071"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0070",
+              "exact_quote": "The Java Runtime Environment includes the Java Virtual Machine (JVM), which translates Java bytecode to native code for the underlying operating system."
+            },
+            {
+              "note_id": "FCT_0071",
+              "exact_quote": "Because the JVM performs this translation at runtime, Java applications are portable across different operating systems."
+            }
+          ],
+          "payload": {
+            "type": "architecture",
+            "title": "Java Runtime Stack",
+            "direction": "left-to-right",
+            "components": [
+              {
+                "id": "jre",
+                "label": "Java Runtime Environment"
+              },
+              {
+                "id": "jvm",
+                "label": "Java Virtual Machine"
+              },
+              {
+                "id": "bytecode",
+                "label": "Bytecode (.class)"
+              },
+              {
+                "id": "native",
+                "label": "Native OS code"
+              }
+            ],
+            "connections": [
+              {
+                "from": "jre",
+                "to": "jvm",
+                "label": "contains"
+              },
+              {
+                "from": "jvm",
+                "to": "bytecode",
+                "label": "loads"
+              },
+              {
+                "from": "jvm",
+                "to": "native",
+                "label": "translates to"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Variable Declaration Syntax",
+      "source_segment_ids": [
+        "FCT_0081",
+        "FCT_0083",
+        "FCT_0084",
+        "FCT_0085"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0081",
+            "FCT_0083",
+            "FCT_0084",
+            "FCT_0085"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0081",
+              "exact_quote": "In Java, a variable is declared with a type, a name, and an initial value, e.g., int age = 30."
+            },
+            {
+              "note_id": "FCT_0083",
+              "exact_quote": "When declaring a variable, you first specify its type and then give it a name (identifier)."
+            },
+            {
+              "note_id": "FCT_0084",
+              "exact_quote": "The equal sign (=) is the assignment operator that assigns a value to a variable."
+            },
+            {
+              "note_id": "FCT_0085",
+              "exact_quote": "Initializing a variable means giving it an initial value."
+            }
+          ],
+          "payload": {
+            "type": "data_structure",
+            "title": "Variable Declaration",
+            "subtype": "array",
+            "values": [
+              {
+                "id": "type",
+                "label": "Data type (e.g., int)"
+              },
+              {
+                "id": "name",
+                "label": "Identifier (e.g., age)"
+              },
+              {
+                "id": "operator",
+                "label": "="
+              },
+              {
+                "id": "value",
+                "label": "Initial value (e.g., 30)"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

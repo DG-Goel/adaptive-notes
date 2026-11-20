@@ -1,0 +1,242 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-15T08:06:25.845389+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00031"
+      ],
+      "document_id": "DOC001",
+      "content": "If the domestic interest rate is above the international interest rate, the exchange rate today must be above the expected exchange rate, implying an expected depreciation of the currency; conversely, if the domestic bond pays a lower interest rate, the exchange rate today is very depreciated because it is expected to appreciate to compensate for the interest rate differential.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00031",
+              "quote": "If the domestic interest rate is above that,\n the international interest rate, then the exchange rate today\n has to be above the expected exchange rate,\n because that will give you a expected depreciation\n of the currency, which will compensate for the fact\n that the domestic bond is paying a higher interest\n rate than international bond.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 341,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00031",
+              "quote": "If the domestic interest rate is above that,\n the international interest rate, then the exchange rate today\n has to be above the expected exchange rate,\n because that will give you a expected depreciation\n of the currency, which will compensate for the fact\n that the domestic bond is paying a higher interest\n rate than international bond.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 341,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00031",
+              "quote": "Conversely, if the domestic bond is paying a lower interest\n rate, then the exchange rate today is very depreciated,\n because you have to expect it to appreciate in order\n to compensate for the interest rate differential.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 343,
+              "end_char": 564,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "interest rate parity",
+              "claims": [
+                {
+                  "text": "interest rate parity",
+                  "refs": [
+                    "Q0000"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00031",
+                      "quote": "If the domestic interest rate is above that,\n the international interest rate, then the exchange rate today\n has to be above the expected exchange rate,\n because that will give you a expected depreciation\n of the currency, which will compensate for the fact\n that the domestic bond is paying a higher interest\n rate than international bond."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "If the domestic interest rate is above the international interest rate, the exchange rate today must be above the expected exchange rate, implying an expected depreciation of the currency; conversely, if the domestic bond pays a lower interest rate, the exchange rate today is very depreciated because it is expected to appreciate to compensate for the interest rate differential.",
+              "claims": [
+                {
+                  "text": "If the domestic interest rate is above the international interest rate, the exchange rate today must be above the expected exchange rate, implying an expected depreciation of the currency; conversely, if the domestic bond pays a lower interest rate, the exchange rate today is very depreciated because it is expected to appreciate to compensate for the interest rate differential.",
+                  "refs": [
+                    "Q0000",
+                    "Q0001"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00031",
+                      "quote": "If the domestic interest rate is above that,\n the international interest rate, then the exchange rate today\n has to be above the expected exchange rate,\n because that will give you a expected depreciation\n of the currency, which will compensate for the fact\n that the domestic bond is paying a higher interest\n rate than international bond."
+                    },
+                    {
+                      "source_id": "G00031",
+                      "quote": "Conversely, if the domestic bond is paying a lower interest\n rate, then the exchange rate today is very depreciated,\n because you have to expect it to appreciate in order\n to compensate for the interest rate differential."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "interest rate parity",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Important source qualification may have been lost"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [
+                        "if"
+                      ],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "If the domestic interest rate is above that,\n the international interest rate, then the exchange rate today\n has to be above the expected exchange rate,\n because that will give you a expected depreciation\n of the currency, which will compensate for the fact\n that the domestic bond is paying a higher interest\n rate than international bond."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00031",
+                        "quote": "If the domestic interest rate is above that,\n the international interest rate, then the exchange rate today\n has to be above the expected exchange rate,\n because that will give you a expected depreciation\n of the currency, which will compensate for the fact\n that the domestic bond is paying a higher interest\n rate than international bond.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 341,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "interest rate parity",
+                "preview_text": "",
+                "withheld": true
+              },
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "If the domestic interest rate is above the international interest rate, the exchange rate today must be above the expected exchange rate, implying an expected depreciation of the currency; conversely, if the domestic bond pays a lower interest rate, the exchange rate today is very depreciated because it is expected to appreciate to compensate for the interest rate differential.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "If the domestic interest rate is above that,\n the international interest rate, then the exchange rate today\n has to be above the expected exchange rate,\n because that will give you a expected depreciation\n of the currency, which will compensate for the fact\n that the domestic bond is paying a higher interest\n rate than international bond.",
+                      "Conversely, if the domestic bond is paying a lower interest\n rate, then the exchange rate today is very depreciated,\n because you have to expect it to appreciate in order\n to compensate for the interest rate differential."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00031",
+                        "quote": "If the domestic interest rate is above that,\n the international interest rate, then the exchange rate today\n has to be above the expected exchange rate,\n because that will give you a expected depreciation\n of the currency, which will compensate for the fact\n that the domestic bond is paying a higher interest\n rate than international bond.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 341,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00031",
+                        "quote": "Conversely, if the domestic bond is paying a lower interest\n rate, then the exchange rate today is very depreciated,\n because you have to expect it to appreciate in order\n to compensate for the interest rate differential.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 343,
+                        "end_char": 564,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "If the domestic interest rate is above the international interest rate, the exchange rate today must be above the expected exchange rate, implying an expected depreciation of the currency; conversely, if the domestic bond pays a lower interest rate, the exchange rate today is very depreciated because it is expected to appreciate to compensate for the interest rate differential.",
+                "preview_text": "If the domestic interest rate is above the international interest rate, the exchange rate today must be above the expected exchange rate, implying an expected depreciation of the currency; conversely, if the domestic bond pays a lower interest rate, the exchange rate today is very depreciated because it is expected to appreciate to compensate for the interest rate differential.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00031"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "interest rate parity",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 1,
+  "source_units_processed": 1,
+  "extraction_metadata": null
+}

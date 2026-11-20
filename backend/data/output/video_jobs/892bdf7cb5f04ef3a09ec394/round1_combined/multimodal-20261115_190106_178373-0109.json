@@ -1,0 +1,592 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-15T19:04:39.274437+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00023"
+      ],
+      "document_id": "DOC001",
+      "content": "Domestic demand for goods is the same as demand for domestically produced goods. Trade balance is 0, meaning exports are exactly equal to imports. Net exports are equal to 0.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00023",
+              "quote": "And that also means that the trade balance is 0,\n meaning at that point, exports is exactly equal to imports.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 387,
+              "end_char": 496,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00023",
+              "quote": "Well, in this point, domestic demand for goods\n is the same as demand for domestically produced\n goods, for domestic goods.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 262,
+              "end_char": 385,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00023",
+              "quote": "And that also means that the trade balance is 0,\n meaning at that point, exports is exactly equal to imports.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 387,
+              "end_char": 496,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00023",
+              "quote": "So net exports are equal to 0.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 498,
+              "end_char": 528,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "Trade balance zero point",
+              "claims": [
+                {
+                  "text": "Trade balance zero point",
+                  "refs": [
+                    "Q0005"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00023",
+                      "quote": "And that also means that the trade balance is 0,\n meaning at that point, exports is exactly equal to imports."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Domestic demand for goods is the same as demand for domestically produced goods. Trade balance is 0, meaning exports are exactly equal to imports. Net exports are equal to 0.",
+              "claims": [
+                {
+                  "text": "Domestic demand for goods is the same as demand for domestically produced goods.",
+                  "refs": [
+                    "Q0004"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00023",
+                      "quote": "Well, in this point, domestic demand for goods\n is the same as demand for domestically produced\n goods, for domestic goods."
+                    }
+                  ],
+                  "related_evidence": []
+                },
+                {
+                  "text": "Trade balance is 0, meaning exports are exactly equal to imports.",
+                  "refs": [
+                    "Q0005"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00023",
+                      "quote": "And that also means that the trade balance is 0,\n meaning at that point, exports is exactly equal to imports."
+                    }
+                  ],
+                  "related_evidence": []
+                },
+                {
+                  "text": "Net exports are equal to 0.",
+                  "refs": [
+                    "Q0006"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00023",
+                      "quote": "So net exports are equal to 0."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Domestic demand for goods is the same as demand for domestically produced goods.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Well, in this point, domestic demand for goods\n is the same as demand for domestically produced\n goods, for domestic goods."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00023",
+                        "quote": "Well, in this point, domestic demand for goods\n is the same as demand for domestically produced\n goods, for domestic goods.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 262,
+                        "end_char": 385,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Trade balance is 0, meaning exports are exactly equal to imports.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And that also means that the trade balance is 0,\n meaning at that point, exports is exactly equal to imports."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00023",
+                        "quote": "And that also means that the trade balance is 0,\n meaning at that point, exports is exactly equal to imports.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 387,
+                        "end_char": 496,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Net exports are equal to 0.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So net exports are equal to 0."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00023",
+                        "quote": "So net exports are equal to 0.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 498,
+                        "end_char": 528,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Domestic demand for goods is the same as demand for domestically produced goods. Trade balance is 0, meaning exports are exactly equal to imports. Net exports are equal to 0.",
+                "preview_text": "Domestic demand for goods is the same as demand for domestically produced goods. Trade balance is 0, meaning exports are exactly equal to imports. Net exports are equal to 0.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "Trade balance zero point",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And that also means that the trade balance is 0,\n meaning at that point, exports is exactly equal to imports."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00023",
+                        "quote": "And that also means that the trade balance is 0,\n meaning at that point, exports is exactly equal to imports.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 387,
+                        "end_char": 496,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Trade balance zero point",
+                "preview_text": "Trade balance zero point",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00023"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "Trade balance zero point",
+      "aliases": []
+    },
+    {
+      "knowledge_id": "CON_0002",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00023"
+      ],
+      "document_id": "DOC001",
+      "content": "The net export function is export minus import divided by the exchange rate. It is a decreasing function of domestic output.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00023",
+              "quote": "The net export function is simply that minus that divided\n by the exchange rate.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 614,
+              "end_char": 694,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00023",
+              "quote": "The net export function is simply that minus that divided\n by the exchange rate.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 614,
+              "end_char": 694,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00023",
+              "quote": "It's a decreasing function of output.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 736,
+              "end_char": 773,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "Net export function",
+              "claims": [
+                {
+                  "text": "Net export function",
+                  "refs": [
+                    "Q0010"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00023",
+                      "quote": "The net export function is simply that minus that divided\n by the exchange rate."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "The net export function is export minus import divided by the exchange rate. It is a decreasing function of domestic output.",
+              "claims": [
+                {
+                  "text": "The net export function is export minus import divided by the exchange rate.",
+                  "refs": [
+                    "Q0010"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00023",
+                      "quote": "The net export function is simply that minus that divided\n by the exchange rate."
+                    }
+                  ],
+                  "related_evidence": []
+                },
+                {
+                  "text": "It is a decreasing function of domestic output.",
+                  "refs": [
+                    "Q0013"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00023",
+                      "quote": "It's a decreasing function of output."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "The net export function is export minus import divided by the exchange rate.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "The net export function is simply that minus that divided\n by the exchange rate."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00023",
+                        "quote": "The net export function is simply that minus that divided\n by the exchange rate.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 614,
+                        "end_char": 694,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "It is a decreasing function of domestic output.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "It's a decreasing function of output."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00023",
+                        "quote": "It's a decreasing function of output.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 736,
+                        "end_char": 773,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "The net export function is export minus import divided by the exchange rate. It is a decreasing function of domestic output.",
+                "preview_text": "The net export function is export minus import divided by the exchange rate. It is a decreasing function of domestic output.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "Net export function",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "The net export function is simply that minus that divided\n by the exchange rate."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00023",
+                        "quote": "The net export function is simply that minus that divided\n by the exchange rate.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 614,
+                        "end_char": 694,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Net export function",
+                "preview_text": "Net export function",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00023"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "Net export function",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 2,
+  "source_units_processed": 1,
+  "extraction_metadata": null
+}

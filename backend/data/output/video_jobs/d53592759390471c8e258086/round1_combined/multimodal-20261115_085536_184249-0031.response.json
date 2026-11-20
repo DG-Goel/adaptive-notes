@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-796ed33a-a490-4d65-9d7a-8f67d6a242f7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"net exports\",\n      \"refs\": [\"Q0012\", \"Q0010\", \"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Net exports increase when foreign (rest‑of‑the‑world) income rises and decline when the real exchange rate rises.\",\n      \"refs\": [\"Q0010\", \"Q0011\", \"Q0015\", \"Q0017\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"real exchange rate\",\n      \"refs\": [\"Q0015\", \"Q0017\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A higher real exchange rate makes domestic goods more expensive relative to foreign goods, reducing exports and increasing imports.\",\n      \"refs\": [\"Q0015\", \"Q0017\", \"Q0018\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"foreign income effect\",\n      \"refs\": [\"Q0010\", \"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the rest‑of‑the‑world’s income rises, its demand for domestically produced goods rises, so our exports increase.\",\n      \"refs\": [\"Q0010\", \"Q0011\", \"Q0013\", \"Q0014\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What happens to net exports when foreign (rest‑of‑the‑world) income rises?\",\n      \"answer\": \"Net exports increase.\",\n      \"explanation\": \"The speaker explains that higher foreign income raises demand for domestically produced goods, causing exports to rise (Q0010, Q0011).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"foreign income effect on net exports\",\n      \"refs\": [\"Q0010\", \"Q0011\"]\n    },\n    {\n      \"question\": \"How does a higher real exchange rate affect a country's exports and imports?\",\n      \"answer\": \"Exports decline and imports increase.\",\n      \"explanation\": \"A higher real exchange rate makes domestic goods more expensive relative to foreign goods, reducing exports and raising imports (Q0015, Q0017, Q0018).\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"real exchange rate impact\",\n      \"refs\": [\"Q0015\", \"Q0017\", \"Q0018\"]\n    },\n    {\n      \"question\": \"Why does an increase in the real exchange rate make domestic goods more expensive?\",\n      \"answer\": \"Because the real exchange rate measures the price of domestic goods relative to foreign goods; a rise means domestic prices are higher in foreign currency terms.\",\n      \"explanation\": \"The speaker states that a higher real exchange rate makes our goods more expensive relative to foreign goods (Q0015, Q0017).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"real exchange rate definition\",\n      \"refs\": [\"Q0015\", \"Q0017\"]\n    },\n    {\n      \"question\": \"If foreign income rises and the real exchange rate also rises simultaneously, what is the net effect on net exports?\",\n      \"answer\": \"The effects offset: higher foreign income pushes net exports up, while a higher real exchange rate pushes net exports down.\",\n      \"explanation\": \"One excerpt notes net exports rise with foreign income (Q0010, Q0011); another notes net exports fall with a higher real exchange rate (Q0015, Q0018). Together they produce opposing forces.\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"combined effects on net exports\",\n      \"refs\": [\"Q0010\", \"Q0011\", \"Q0015\", \"Q0018\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows etc but content is mostly conceptual about net exports, exchange rate. Extract concepts: net exports, real exchange rate, foreign income effect. Provide rows for concepts with content and concept_name. Use primary excerpts.\n\nCreate rows for concept net exports: content from Q0012 etc. Provide concept_name \"net exports\". Provide content claim: \"net exports is declining on the real exchange rate\" (Q0012) and also \"net exports is increasing in the income of the rest of the world\" (Q0013- Q0011). We'll make separate rows.\n\nAlso concept \"real exchange rate\": content from Q0015, Q0017.\n\nAlso concept \"foreign income effect on exports\": from Q0010 etc.\n\nProvide abstentions none.\n\nQuiz: four questions.\n\nReturn JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794733017,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_19b184c447",
+  "usage": {
+    "completion_tokens": 1420,
+    "prompt_tokens": 2804,
+    "total_tokens": 4224,
+    "completion_time": 2.979356397,
+    "completion_tokens_details": {
+      "reasoning_tokens": 164
+    },
+    "prompt_time": 0.163336125,
+    "prompt_tokens_details": null,
+    "queue_time": 0.376019154,
+    "total_time": 3.142692522
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f6rz1aembb37sja12sp9x8",
+    "debug": null,
+    "seed": 2087359487,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-3a863a5c-df62-425e-8e04-3bb3435184aa",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00005\"],\n      \"reason\": \"The primary source excerpts contain definitions and descriptions but no teaching examples.\"\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output examples. The excerpts contain definitions, not examples. No example teaching. So items empty, abstentions for missing examples? We must abstain for missing part of actual teaching point. There's no example category, so abstain? Provide abstention with availability SOURCE_MISSING? Use primary_source_ids. Reason: \"no examples provided\".",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794598781,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_245acb052a",
+  "usage": {
+    "completion_tokens": 151,
+    "prompt_tokens": 3336,
+    "total_tokens": 3487,
+    "completion_time": 0.31790375,
+    "completion_tokens_details": {
+      "reasoning_tokens": 71
+    },
+    "prompt_time": 0.138346865,
+    "prompt_tokens_details": null,
+    "queue_time": 0.053541379,
+    "total_time": 0.456250615
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b6rfkvehgtrkb4zta3y44m",
+    "debug": null,
+    "seed": 1368350043,
+    "usage": null
+  }
+}

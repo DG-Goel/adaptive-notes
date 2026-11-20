@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-bd365f77-2526-4d83-bb9f-fe5c0a5944e5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"exchange rate\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"the dollar becomes more expensive (appreciation) when the domestic interest rate rises\",\n      \"refs\": [\"Q0001\", \"Q0003\", \"Q0015\", \"Q0016\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If domestic and international interest rates are equal, the expected exchange rate equals the current exchange rate and no capital gain or loss is expected\",\n      \"refs\": [\"Q0011\", \"Q0012\", \"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"uncovered interest parity\",\n      \"refs\": [\"Q0020\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"the relationship linking interest rate differentials to expected changes in exchange rates\",\n      \"refs\": [\"Q0020\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what happens to the exchange rate when the domestic interest rate is increased?\",\n      \"answer\": \"It appreciates (the currency becomes more expensive).\",\n      \"distractors\": [\n        \"It depreciates (the currency becomes cheaper).\",\n        \"It remains unchanged.\",\n        \"It becomes more volatile.\"\n      ],\n      \"explanation\": \"The speaker states that raising the domestic interest rate causes the exchange rate to go up, describing it as an appreciation.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"interest rate effect on exchange rate\",\n      \"refs\": [\"Q0001\", \"Q0003\"]\n    },\n    {\n      \"question\": \"When domestic and international interest rates are equal, what does the speaker say about expected capital gains from the currency position?\",\n      \"answer\": \"No capital gain or loss is expected.\",\n      \"distractors\": [\n        \"A large capital gain is expected.\",\n        \"A small capital loss is expected.\",\n        \"The capital gain depends on inflation.\"\n      ],\n      \"explanation\": \"The speaker explains that with equal interest rates, the expected exchange rate equals the current rate, so no capital gain or loss arises.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"equal interest rates and capital gains\",\n      \"refs\": [\"Q0011\", \"Q0012\", \"Q0013\"]\n    },\n    {\n      \"question\": \"In the context of the discussion, what does the term \\\"appreciation\\\" refer to?\",\n      \"answer\": \"The currency becomes more expensive relative to foreign currency.\",\n      \"distractors\": [\n        \"The currency loses value relative to foreign currency.\",\n        \"The interest rate decreases.\",\n        \"Inflation rises in the domestic economy.\"\n      ],\n      \"explanation\": \"The speaker uses \\\"appreciation\\\" to describe the dollar becoming more expensive when the exchange rate goes up.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"definition of appreciation\",\n      \"refs\": [\"Q0002\", \"Q0003\", \"Q0016\"]\n    },\n    {\n      \"question\": \"Which theoretical framework does the speaker reference to explain the link between interest rates and exchange rates?\",\n      \"answer\": \"Uncovered interest parity.\",\n      \"distractors\": [\n        \"Purchasing power parity.\",\n        \"The Fisher effect.\",\n        \"The liquidity preference theory.\"\n      ],\n      \"explanation\": \"The speaker mentions using the equation and logic behind uncovered interest parity to relate interest rate changes to exchange rate movements.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"uncovered interest parity\",\n      \"refs\": [\"Q0020\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract claims. Mainly about interest rate ↑ => exchange rate ↑ (appreciation). Create rows. Probably concepts: exchange rate, interest rate, appreciation. Provide rows with content. Also quiz.\n\nWe'll produce rows for concepts: concept_name \"exchange rate\", content \"the dollar becomes more expensive\". Use primary excerpts.\n\nLet's craft rows.\n\nItem label e.g., \"item1\". Provide rows for concept_name and content.\n\nAlso maybe fact: \"If domestic interest rate increases, exchange rate appreciates.\"\n\nCreate rows with availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null.\n\nAdd refs.\n\nQuiz: 4 questions.\n\nQ1: What happens to exchange rate when domestic interest rate rises? Answer: It appreciates (goes up). Distractors: depreciates, stays same, falls.\n\nQ2: When domestic and international interest rates are equal, what is expected capital gain? Answer: None. Distractors etc.\n\nQ3: What does \"appreciation\" mean in context? Answer: Currency becomes more expensive. Distractors.\n\nQ4: Which theory is referenced for linking interest rates and exchange rates? Answer: uncovered interest parity. Distractors.\n\nProvide refs first primary excerpt supporting each.\n\nNow output JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794817035,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_87b3c396db",
+  "usage": {
+    "completion_tokens": 1415,
+    "prompt_tokens": 2917,
+    "total_tokens": 4332,
+    "completion_time": 2.984381924,
+    "completion_tokens_details": {
+      "reasoning_tokens": 250
+    },
+    "prompt_time": 0.131044078,
+    "prompt_tokens_details": null,
+    "queue_time": 0.290546211,
+    "total_time": 3.115426002
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hpwzv7eees36h6w2351n4g",
+    "debug": null,
+    "seed": 1572790115,
+    "usage": null
+  }
+}

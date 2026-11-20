@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-6a6f56e5-3e3f-4694-9831-33f01d7006fd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"break statement\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"When Java sees the break statement it will ignore everything else after and it will terminate the loop.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"continue statement\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"When Java sees the continue statement it moves control to the beginning of the loop, causing the remaining statements in the current iteration to be ignored.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"The break statement terminates a loop.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The continue statement moves control to the beginning of a loop.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [\n    {\n      \"procedure_name\": {\n        \"text\": \"Handling quit input in a loop\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"steps\": [\n        {\n          \"text\": \"Read user input inside the loop.\",\n          \"refs\": [\"Q0000\"]\n        },\n        {\n          \"text\": \"If the input equals \\\"quit\\\", execute a break statement to exit the loop.\",\n          \"refs\": [\"Q0001\"]\n        },\n        {\n          \"text\": \"Otherwise, print the input.\",\n          \"refs\": [\"Q0001\"]\n        }\n      ],\n      \"prerequisites\": null,\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"A loop that reads input, breaks on \\\"quit\\\", and prints other inputs.\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      }\n    },\n    {\n      \"procedure_name\": {\n        \"text\": \"Skipping echo for \\\"pass\\\" input\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"steps\": [\n        {\n          \"text\": \"Read user input.\",\n          \"refs\": [\"Q0003\"]\n        },\n        {\n          \"text\": \"If the input equals \\\"pass\\\", execute a continue statement to skip printing and start the next iteration.\",\n          \"refs\": [\"Q0003\"]\n        },\n        {\n          \"text\": \"Otherwise, print the input.\",\n          \"refs\": [\"Q0003\"]\n        }\n      ],\n      \"prerequisites\": null,\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"A loop that ignores \\\"pass\\\" inputs using continue, while printing other inputs.\",\n        \"refs\": [\"Q0003\"]\n      }\n    }\n  ],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts: teaching about break and continue statements in loops, handling quit input. So facts, explanations, procedures maybe.\n\nExtract facts: break statement terminates a loop. continue statement moves control to beginning of loop. Also that break stops loop when condition met, continue skips rest of iteration.\n\nCreate explanations: topic maybe \"break statement\" explanation text. Use excerpts.\n\nProcedures: maybe steps to implement check.\n\nWe'll cite refs covering each claim. Use Q0002 for break description, Q0003 for continue, Q0004 recap.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065856,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_96d96a151c",
+  "usage": {
+    "completion_tokens": 808,
+    "prompt_tokens": 3028,
+    "total_tokens": 3836,
+    "completion_time": 1.6978157249999999,
+    "completion_tokens_details": {
+      "reasoning_tokens": 121
+    },
+    "prompt_time": 0.176779621,
+    "prompt_tokens_details": null,
+    "queue_time": 0.301038171,
+    "total_time": 1.874595346
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6vagw5eefp9z0wfe3d7hynv",
+    "debug": null,
+    "seed": 559972950,
+    "usage": null
+  }
+}

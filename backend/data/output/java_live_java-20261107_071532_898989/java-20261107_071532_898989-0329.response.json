@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-0de75249-cd0b-4577-b34f-0efa9a61bd24",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [\n    {\n      \"concept_name\": {\n        \"text\": \"clean coding\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"aliases\": null,\n      \"content\": {\n        \"text\": \"Techniques for changing the structure of code to make it clean and beautiful, improving maintainability.\",\n        \"refs\": [\"Q0003\"]\n      }\n    }\n  ],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"control flow statements\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"Statements like if and switch for making decisions in programs, and loops for executing code repeatedly.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"control flow of programs\",\n        \"refs\": [\"Q0001\", \"Q0002\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Control flow is managed using comparison operators, logical operators, and three types of control flow statements: conditionals (if, switch) and loops (for, while, do‑while, foreach), as well as break and continue for altering loop execution.\",\n        \"refs\": [\"Q0001\", \"Q0002\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"code maintainability\",\n        \"refs\": [\"Q0000\", \"Q0003\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Long methods reduce maintainability; breaking code into smaller, readable chunks improves understandability and makes it easier for others to work with the code.\",\n        \"refs\": [\"Q0000\", \"Q0003\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Breaking code into smaller chunks makes it easier to read and understand.\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Clean code is valued because it is understandable by humans, not just computers.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [\n    {\n      \"ref\": \"Q0004\",\n      \"reason\": \"promotion\"\n    },\n    {\n      \"ref\": \"Q0005\",\n      \"reason\": \"promotion\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract educational items. The excerpts talk about code maintainability, control flow, clean code, etc. We can create facts, definitions, explanations. No formulas. Let's produce JSON with arrays. Identify primary excerpts IDs.\n\nWe can extract:\n\n- Fact: \"Breaking code into smaller chunks makes it easier to read and understand.\" from Q0000 and Q0001.\n\n- Explanation: topic \"control flow of programs\" with explanation text from Q0001 and Q0002.\n\n- Definition maybe term \"control flow statements\" definition text from Q0002.\n\n- Fact about clean code importance from Q0003.\n\n- Possibly concept \"clean coding\" with description.\n\nWe need to cite refs covering whole claim.\n\nLet's craft.\n\nAlso exclude promotional excerpt Q0004, Q0005 as noneducational (promotion). Provide excluded list.\n\nNow produce JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036675,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 760,
+    "prompt_tokens": 3010,
+    "total_tokens": 3770,
+    "completion_time": 1.590290328,
+    "completion_tokens_details": {
+      "reasoning_tokens": 174
+    },
+    "prompt_time": 0.134770062,
+    "prompt_tokens_details": null,
+    "queue_time": 0.332208929,
+    "total_time": 1.7250603899999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6tepancevt80g7n0ar9e03j",
+    "debug": null,
+    "seed": 464556617,
+    "usage": null
+  }
+}

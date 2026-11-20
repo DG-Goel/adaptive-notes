@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-4dbebc05-720a-429d-a0cc-0307fba188db",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [\n    {\n      \"concept_name\": {\n        \"text\": \"for loop\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"content\": {\n        \"text\": \"A for loop iterates a known number of times, using an initialization, a loop condition, and an increment/decrement operation.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"aliases\": null\n    },\n    {\n      \"concept_name\": {\n        \"text\": \"while loop\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"content\": {\n        \"text\": \"A while loop repeats as long as a condition remains true, with the loop variable typically updated inside the loop body.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"aliases\": null\n    }\n  ],\n  \"definitions\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"For loops are preferable when the number of iterations is known ahead of time.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"While loops are better suited for situations where the number of iterations is not known in advance.\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"String comparison in Java should use the .equals() method rather than the == operator, because == compares object references.\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"example_text\": {\n        \"text\": \"for (int i = 0; i < 5; i++) { System.out.println(i); } // prints 0 1 2 3 4\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"example_type\": null,\n      \"exemplifies\": {\n        \"text\": \"for loop example\",\n        \"refs\": [\"Q0000\"]\n      }\n    },\n    {\n      \"example_text\": {\n        \"text\": \"int i = 5; while (i > 0) { System.out.println(i); i--; } // prints 5 4 3 2 1\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"example_type\": null,\n      \"exemplifies\": {\n        \"text\": \"while loop example\",\n        \"refs\": [\"Q0000\"]\n      }\n    }\n  ],\n  \"explanations\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts: facts about for loops, while loops, when to use. Extract facts, definitions maybe. Let's create facts: \"For loops can be used when the number of iterations is known ahead of time.\" etc. Use refs Q0002. Also fact: \"While loops are better when the number of iterations is not known.\" refs Q0002 and Q0003. Also fact about initializing I etc. Might be facts. No definitions. No formulas. No examples? Could include example text but need example_text field. Could extract example of printing numbers. Use Q0000 as example. Provide example_type null. Provide exemplifies maybe \"for loop example\". Use refs Q0000.\n\nAlso concept maybe \"for loop\" and \"while loop\". Provide concept_name and content. Use Q0000 for for loop concept, Q0001 for while loop concept.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065848,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_803c0ba83d",
+  "usage": {
+    "completion_tokens": 777,
+    "prompt_tokens": 3024,
+    "total_tokens": 3801,
+    "completion_time": 1.638605277,
+    "completion_tokens_details": {
+      "reasoning_tokens": 187
+    },
+    "prompt_time": 0.178905959,
+    "prompt_tokens_details": null,
+    "queue_time": 0.561995088,
+    "total_time": 1.817511236
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6vagkygenb9jw9gpeyngzjj",
+    "debug": null,
+    "seed": 2066674073,
+    "usage": null
+  }
+}

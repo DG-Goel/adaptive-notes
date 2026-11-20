@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-95fc208e-be2a-4529-9ec8-7e1aac5ede97",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [\n    {\n      \"concept_name\": {\n        \"text\": \"clean code\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"aliases\": null,\n      \"content\": {\n        \"text\": \"Writing clean code involves structuring code to be readable, maintainable, and understandable by humans, not just computers.\",\n        \"refs\": [\"Q0003\"]\n      }\n    }\n  ],\n  \"definitions\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"control flow statements\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_type\": null,\n      \"explanation_text\": {\n        \"text\": \"Control flow statements include conditional statements such as if and switch for making decisions, and loops such as for, while, do‑while, and foreach for executing code repeatedly. Break and continue statements can alter loop execution.\",\n        \"refs\": [\"Q0001\", \"Q0002\"]\n      }\n    },\n    {\n      \"topic\": {\n        \"text\": \"code maintainability\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_type\": null,\n      \"explanation_text\": {\n        \"text\": \"When a method becomes too long, it hurts maintainability because readers must scan many statements to understand the logic. Breaking the code into smaller, well‑named chunks improves readability and maintainability.\",\n        \"refs\": [\"Q0000\"]\n      }\n    }\n  ],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"Dividing code into smaller, logical sections makes it easier to read and understand.\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"Good programmers write code that humans can understand, not just code that a computer can execute.\",\n        \"refs\": [\"Q0002\"]\n      }\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [\n    {\n      \"ref\": \"Q0004\",\n      \"reason\": \"promotion\"\n    },\n    {\n      \"ref\": \"Q0005\",\n      \"reason\": \"promotion\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract educational items. The excerpts are mostly promotional, but contain some teaching about control flow, clean code, maintainability. We can extract facts, explanations, definitions maybe. Identify primary excerpts.\n\nWe can create facts: \"Breaking code into smaller chunks makes it easier to read and understand.\" supported by Q0000 and Q0001.\n\nExplanations: topic control flow statements etc.\n\nLet's craft JSON with arrays.\n\nWe'll include facts, explanations, maybe definitions? No explicit definitions.\n\nExamples none.\n\nProcedures none.\n\nRelationships none.\n\nConcepts maybe \"clean code\" as concept.\n\nLet's produce.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191820,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e1a78f200e",
+  "usage": {
+    "completion_tokens": 629,
+    "prompt_tokens": 3117,
+    "total_tokens": 3746,
+    "completion_time": 1.3107245189999999,
+    "completion_tokens_details": {
+      "reasoning_tokens": 123
+    },
+    "prompt_time": 0.128489623,
+    "prompt_tokens_details": null,
+    "queue_time": 0.390880512,
+    "total_time": 1.439214142
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z2n0aeebmbq8npsrmhs758",
+    "debug": null,
+    "seed": 1437089238,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-142b7d70-7bda-4caa-b4f4-2acdfb20ee9b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"demand for domestic goods\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"For domestic goods, it is the same as domestic demand for goods, minus the part of demand that is satisfied by input.\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"foreign demand for US goods\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A component of demand for domestically produced goods that comes from foreigners demanding US products.\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"exchange adjustment in domestic demand calculation\",\n      \"refs\": [\"Q0003\", \"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Domestic demand is divided by the exchange rate because inputs may be priced in foreign currency and must be converted.\",\n      \"refs\": [\"Q0003\", \"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What does \\\"demand for domestic goods\\\" refer to according to the source?\",\n      \"answer\": \"Domestic demand for goods minus the portion satisfied by imported inputs.\",\n      \"distractors\": [\n        \"Total national consumption of all goods.\",\n        \"Only the demand for goods produced abroad.\",\n        \"The sum of exports and imports.\"\n      ],\n      \"explanation\": \"The source states that demand for domestic goods is the same as domestic demand for goods, minus the part of demand that is satisfied by input (Q0002).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"demand for domestic goods\",\n      \"refs\": [\"Q0002\"]\n    },\n    {\n      \"question\": \"Why is the domestic demand figure divided by an exchange rate in the calculation?\",\n      \"answer\": \"Because inputs may be priced in foreign currency and need conversion to domestic currency.\",\n      \"distractors\": [\n        \"To adjust for inflation in the domestic economy.\",\n        \"To account for taxes on imported goods.\",\n        \"Because domestic producers set prices in foreign currency.\"\n      ],\n      \"explanation\": \"The source explains that division by the exchange rate is needed since inputs may be priced in euros and must be converted to dollars (Q0003, Q0004).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"exchange adjustment\",\n      \"refs\": [\"Q0003\", \"Q0004\"]\n    },\n    {\n      \"question\": \"According to the excerpt, what new component of domestic demand appears in an open economy?\",\n      \"answer\": \"Demand from foreigners for domestically produced US goods.\",\n      \"distractors\": [\n        \"Demand for imported luxury cars.\",\n        \"Demand for government services.\",\n        \"Demand for raw materials from abroad.\"\n      ],\n      \"explanation\": \"The source notes a component of demand for domestically produced goods that did not exist before: what foreigners demand for the US (Q0009).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"foreign demand\",\n      \"refs\": [\"Q0009\"]\n    },\n    {\n      \"question\": \"Which of the following statements is consistent with the speaker’s warning about a certain type of demand?\",\n      \"answer\": \"Demand for foreign‑produced cars does not affect the demand for domestically produced cars.\",\n      \"distractors\": [\n        \"Demand for foreign‑produced cars increases domestic car production.\",\n        \"Demand for foreign‑produced cars reduces the need for domestic inputs.\",\n        \"Demand for foreign‑produced cars is included in domestic demand calculations.\"\n      ],\n      \"explanation\": \"The speaker says that demand for foreign‑produced cars will not affect the demand for four cars produced domestically because it is not demand for that (Q0008).\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"impact of foreign demand\",\n      \"refs\": [\"Q0008\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts: \"demand for domestic goods\". Provide concept_name and content. Use excerpts. Let's create item \"item1\". Rows: concept_name, content. Also maybe definition? but not explicit definition. Use concept.\n\nRows:\nitem=item1 category=concepts field=concept_name element0 part=value text=\"demand for domestic goods\" refs [Q0001] basis explicit availability SOURCE_SUPPORTED literal_kind verbal instructional_role null related_refs [].\n\ncontent row: text from Q0002 maybe combined. \"For domestic goods, it's the same as domestic demand for goods, minus that part of demand that is satisfied by input.\" refs Q0002 basis explicit.\n\nAlso maybe another concept: \"foreign demand for US goods\". Use Q0009.\n\nAdd second concept item2.\n\nNow abstentions none.\n\nQuiz: need 4 questions. We have limited content. Could ask definition of demand for domestic goods, subtraction of input, effect of foreign demand, exchange division. Need distractors plausible.\n\nCreate 4 questions.\n\nProvide refs primary.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794766615,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d577f40f11",
+  "usage": {
+    "completion_tokens": 1532,
+    "prompt_tokens": 2446,
+    "total_tokens": 3978,
+    "completion_time": 3.228498754,
+    "completion_tokens_details": {
+      "reasoning_tokens": 219
+    },
+    "prompt_time": 0.133671915,
+    "prompt_tokens_details": null,
+    "queue_time": 0.063037048,
+    "total_time": 3.362170669
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g6t9m4era932tcgz2z4ytq",
+    "debug": null,
+    "seed": 408123272,
+    "usage": null
+  }
+}

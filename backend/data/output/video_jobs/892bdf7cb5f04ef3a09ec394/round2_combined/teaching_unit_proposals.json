@@ -1,0 +1,539 @@
+[
+  {
+    "title": "Effect of Real Exchange Rate Changes on Relative Goods Prices",
+    "source_segment_ids": [
+      "CON_0004",
+      "CON_0005"
+    ],
+    "mode": "visual_only",
+    "remaining_text": null,
+    "visuals": [
+      {
+        "type": "table",
+        "source_segment_ids": [
+          "CON_0004",
+          "CON_0005"
+        ],
+        "needs_review": false,
+        "missing_information": [],
+        "evidence": [
+          {
+            "note_id": "CON_0004",
+            "quote": "when the real exchange rate goes up, domestic goods become more expensive relative to international goods"
+          },
+          {
+            "note_id": "CON_0005",
+            "quote": "when the real exchange rate goes down, domestic goods become cheaper relative to foreign goods"
+          }
+        ],
+        "payload": {
+          "type": "table",
+          "title": "Real Exchange Rate Impact",
+          "headers": [
+            "Real Exchange Rate Change",
+            "Effect on Domestic Goods Price"
+          ],
+          "rows": [
+            [
+              "goes up",
+              "domestic goods become more expensive relative to international goods"
+            ],
+            [
+              "goes down",
+              "domestic goods become cheaper relative to foreign goods"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Comparison of US and UK Bond Returns with Expected Currency Movements",
+    "source_segment_ids": [
+      "CON_0017"
+    ],
+    "mode": "visual_only",
+    "remaining_text": null,
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0017"
+        ],
+        "needs_review": false,
+        "missing_information": [],
+        "evidence": [
+          {
+            "note_id": "CON_0017",
+            "quote": "And then I say, well, I'm going to get 10% in pounds directly, and if I go the US way, I'm going to get 5%, but I'm going to get also 5% in the currency appreciation."
+          },
+          {
+            "note_id": "CON_0017",
+            "quote": "If I do it in dollars, I say I'm going to get 5% either way, in best interacting dollars, or the UK pound, because in the UK bond, in the UK bond, I'm going to get 10%, and then lose 5% because of the currency."
+          }
+        ],
+        "payload": {
+          "type": "table",
+          "title": "US vs UK Bond Returns",
+          "headers": [
+            "Investment",
+            "Nominal Return",
+            "Currency Effect",
+            "Net Return"
+          ],
+          "rows": [
+            [
+              "US Bond (dollar)",
+              "5%",
+              "+5% appreciation",
+              "10%"
+            ],
+            [
+              "UK Bond (pound)",
+              "10%",
+              "-5% depreciation",
+              "5%"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Equilibrium Condition for Interest Parity",
+    "source_segment_ids": [
+      "CON_0017"
+    ],
+    "mode": "visual_only",
+    "remaining_text": null,
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0017"
+        ],
+        "needs_review": false,
+        "missing_information": [],
+        "evidence": [
+          {
+            "note_id": "CON_0017",
+            "quote": "In equilibrium, the two are going to be the same once you adjust for the expected appreciation of depreciation of the currency."
+          },
+          {
+            "note_id": "CON_0017",
+            "quote": "And the only way that's going to be in equilibrium is that if we all suspect the dollar to appreciate by 5%."
+          }
+        ],
+        "payload": {
+          "type": "flowchart",
+          "title": "Interest Parity Equilibrium",
+          "direction": "DOWN",
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "Expect dollar appreciation 5%"
+            },
+            {
+              "id": "n2",
+              "label": "Adjust returns for currency"
+            },
+            {
+              "id": "n3",
+              "label": "US and UK returns equal"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": "leads to"
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": "results in"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Effect of Real Exchange Rate Changes on Trade",
+    "source_segment_ids": [
+      "CON_0036",
+      "CON_0039"
+    ],
+    "mode": "text_and_visual",
+    "remaining_text": null,
+    "visuals": [
+      {
+        "type": "table",
+        "source_segment_ids": [
+          "CON_0036",
+          "CON_0039"
+        ],
+        "needs_review": false,
+        "missing_information": [],
+        "evidence": [
+          {
+            "note_id": "CON_0036",
+            "quote": "Exports decrease when the real exchange rate rises."
+          },
+          {
+            "note_id": "CON_0039",
+            "quote": "Imports increase when the real exchange rate (epsilon) rises."
+          }
+        ],
+        "payload": {
+          "type": "table",
+          "title": "Real Exchange Rate Rise → Trade Impact",
+          "headers": [
+            "Item",
+            "Effect"
+          ],
+          "rows": [
+            [
+              "Exports",
+              "decrease"
+            ],
+            [
+              "Imports",
+              "increase"
+            ]
+          ]
+        }
+      },
+      {
+        "type": "flowchart",
+        "source_segment_ids": [
+          "CON_0040",
+          "CON_0036",
+          "CON_0039"
+        ],
+        "needs_review": false,
+        "missing_information": [],
+        "evidence": [
+          {
+            "note_id": "CON_0040",
+            "quote": "When epsilon goes up, domestic goods become more expensive."
+          },
+          {
+            "note_id": "CON_0036",
+            "quote": "Exports decrease when the real exchange rate rises."
+          },
+          {
+            "note_id": "CON_0039",
+            "quote": "Imports increase when the real exchange rate (epsilon) rises."
+          }
+        ],
+        "payload": {
+          "type": "flowchart",
+          "title": "Causal Chain of Real Exchange Rate Increase",
+          "direction": "DOWN",
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "Real exchange rate ↑",
+              "kind": "start"
+            },
+            {
+              "id": "n2",
+              "label": "Domestic goods become more expensive",
+              "kind": "action"
+            },
+            {
+              "id": "n3",
+              "label": "Exports decrease",
+              "kind": "action"
+            },
+            {
+              "id": "n4",
+              "label": "Imports increase",
+              "kind": "action"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": "causes"
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": "leads to"
+            },
+            {
+              "from": "n2",
+              "to": "n4",
+              "label": "leads to"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Multiplier Chain Reaction",
+    "source_segment_ids": [
+      "CON_0043"
+    ],
+    "mode": "visual_only",
+    "remaining_text": null,
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0043"
+        ],
+        "needs_review": false,
+        "missing_information": [],
+        "evidence": [
+          {
+            "note_id": "CON_0043",
+            "quote": "The multiplier arises because an increase in income raises consumption, which raises income again, creating a chain reaction."
+          }
+        ],
+        "payload": {
+          "type": "flowchart",
+          "title": "Multiplier Chain Reaction",
+          "direction": "DOWN",
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "Increase in income",
+              "kind": "start"
+            },
+            {
+              "id": "n2",
+              "label": "Raises consumption",
+              "kind": "action"
+            },
+            {
+              "id": "n3",
+              "label": "Raises income again",
+              "kind": "action"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": "raises"
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": "raises"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Trade Outcome Comparison",
+    "source_segment_ids": [
+      "CON_0053",
+      "CON_0054"
+    ],
+    "mode": "visual_only",
+    "remaining_text": null,
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0053",
+          "CON_0054"
+        ],
+        "needs_review": false,
+        "missing_information": [],
+        "evidence": [
+          {
+            "note_id": "CON_0053",
+            "quote": "I would have ended up with a bigger trade deficit."
+          },
+          {
+            "note_id": "CON_0054",
+            "quote": "I end up with a trade surplus rather than a trade deficit."
+          }
+        ],
+        "payload": {
+          "type": "table",
+          "title": "Trade Outcome Comparison",
+          "headers": [
+            "Outcome",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Trade deficit",
+              "I would have ended up with a bigger trade deficit."
+            ],
+            [
+              "Trade surplus",
+              "I end up with a trade surplus rather than a trade deficit."
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Net Export Function Characteristics",
+    "source_segment_ids": [
+      "CON_0047",
+      "CON_0046"
+    ],
+    "mode": "visual_only",
+    "remaining_text": null,
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0047",
+          "CON_0046"
+        ],
+        "needs_review": false,
+        "missing_information": [],
+        "evidence": [
+          {
+            "note_id": "CON_0047",
+            "quote": "The net export function is export minus import divided by the exchange rate. It is a decreasing function of domestic output."
+          },
+          {
+            "note_id": "CON_0046",
+            "quote": "Domestic demand for goods is the same as demand for domestically produced goods. Trade balance is 0, meaning exports are exactly equal to imports. Net exports are equal to 0."
+          }
+        ],
+        "payload": {
+          "type": "table",
+          "title": "Net Export Function Characteristics",
+          "headers": [
+            "Item",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Net export function",
+              "export minus import divided by the exchange rate; decreasing function of domestic output."
+            ],
+            [
+              "Trade balance (0)",
+              "Exports equal imports; net exports equal 0."
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Exports increase leads to higher equilibrium output",
+    "source_segment_ids": [
+      "REL_0004"
+    ],
+    "mode": "visual_only",
+    "remaining_text": null,
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "REL_0004"
+        ],
+        "needs_review": false,
+        "missing_information": [],
+        "evidence": [
+          {
+            "note_id": "REL_0004",
+            "quote": "```mermaid\nflowchart LR\n    A[\"Exports increasing\"] --> B[\"Higher equilibrium output\"]\n```"
+          }
+        ],
+        "payload": {
+          "type": "flowchart",
+          "title": "Exports increase leads to higher equilibrium output",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "A",
+              "label": "Exports increasing"
+            },
+            {
+              "id": "B",
+              "label": "Higher equilibrium output"
+            }
+          ],
+          "edges": [
+            {
+              "from": "A",
+              "to": "B",
+              "label": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Effects of Currency Depreciation vs Appreciation",
+    "source_segment_ids": [
+      "CON_0067",
+      "FCT_0099",
+      "CON_0062",
+      "CON_0066"
+    ],
+    "mode": "visual_only",
+    "remaining_text": null,
+    "visuals": [
+      {
+        "type": "table",
+        "source_segment_ids": [
+          "CON_0067",
+          "FCT_0099",
+          "CON_0062",
+          "CON_0066"
+        ],
+        "needs_review": false,
+        "missing_information": [],
+        "evidence": [
+          {
+            "note_id": "CON_0067",
+            "quote": "depreciation is expansionary because it shifts expenditures of residents and foreigners toward domestic goods"
+          },
+          {
+            "note_id": "FCT_0099",
+            "quote": "Depreciation improves the trade balance and increases demand for domestic goods."
+          },
+          {
+            "note_id": "CON_0062",
+            "quote": "net exports decrease when the currency appreciates."
+          },
+          {
+            "note_id": "CON_0066",
+            "quote": "moves the net export function up"
+          }
+        ],
+        "payload": {
+          "type": "table",
+          "title": "Currency Movement Effects",
+          "headers": [
+            "Currency Movement",
+            "Effect Description"
+          ],
+          "rows": [
+            [
+              "Depreciation",
+              "shifts expenditures of residents and foreigners toward domestic goods"
+            ],
+            [
+              "Depreciation",
+              "improves the trade balance and increases demand for domestic goods"
+            ],
+            [
+              "Appreciation",
+              "net exports decrease"
+            ],
+            [
+              "Depreciation",
+              "moves the net export function up"
+            ]
+          ]
+        }
+      }
+    ]
+  }
+]

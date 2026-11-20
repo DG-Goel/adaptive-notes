@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-95f1858b-c11c-4648-ad60-9642f21fef4a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"exchange_rate_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"exchange rate\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"exchange_rate_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Two exchange rates are shown, one quoted as euro‑dollar and the other quoted opposite to the usual convention.\",\n      \"refs\": [\"Q0006\",\"Q0007\",\"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"appreciation_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"appreciation\",\n      \"refs\": [\"Q0009\",\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"appreciation_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the exchange rate goes up, it means an appreciation of the local currency (the dollar). This yields more foreign currency per unit of domestic currency.\",\n      \"refs\": [\"Q0009\",\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"depreciation_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"depreciation\",\n      \"refs\": [\"Q0009\",\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"depreciation_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the exchange rate goes down, it indicates a depreciation of the local currency.\",\n      \"refs\": [\"Q0009\",\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"interest_rate_policy_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"interest rate policy\",\n      \"refs\": [\"Q0018\",\"Q0019\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"interest_rate_policy_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Perceptions about interest rate policy in different regions drive major FX fluctuations; tighter US policy relative to the world leads to dollar appreciation.\",\n      \"refs\": [\"Q0018\",\"Q0019\",\"Q0020\",\"Q0021\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"policy_rate_path_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"policy rate path\",\n      \"refs\": [\"Q0031\",\"Q0032\",\"Q0033\",\"Q0034\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"policy_rate_path_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The market’s expectation of future policy rates over upcoming FOMC meetings, shown for both the US and Europe, influences exchange rate expectations.\",\n      \"refs\": [\"Q0031\",\"Q0032\",\"Q0033\",\"Q0034\",\"Q0035\",\"Q0036\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows for concepts etc. From excerpts, we have concepts like \"exchange rate\", \"appreciation\", \"depreciation\", \"interest rate policy\", \"policy rate path\". Provide rows.\n\nCreate items e.g., item \"exchange_rate_concept\". Provide concept_name and content.\n\nWe'll output rows and maybe abstentions for missing formulas etc.\n\nLet's craft few rows.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794666154,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8655ddce88",
+  "usage": {
+    "completion_tokens": 1289,
+    "prompt_tokens": 3395,
+    "total_tokens": 4684,
+    "completion_time": 2.7317376060000003,
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_time": 0.236949018,
+    "prompt_tokens_details": null,
+    "queue_time": 0.686075452,
+    "total_time": 2.968686624
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7d70eeferpam07km0tgajvp",
+    "debug": null,
+    "seed": 1129978944,
+    "usage": null
+  }
+}

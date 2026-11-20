@@ -1,0 +1,75 @@
+{
+  "operations": [
+    {
+      "id": "java-20261107_044142_852892-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "slot": 1,
+      "request_hash": "55862da9e1dce13b2267a9c1f62fbdd4ede0933456df1bd26c5455a2dea1c282",
+      "state": "validation_failed",
+      "created": 1794026900.3415878,
+      "completed": 1794026903.8913333,
+      "validation": "validation_failed"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "java-20261107_044142_852892-0000",
+      "number": 1,
+      "created": 1794026900.3415878,
+      "dispatched": 1794026901.3452742,
+      "completed": 1794026903.7324882,
+      "input_reserved": 2977,
+      "output_reserved": 3000,
+      "input_actual": 3020,
+      "output_actual": 731,
+      "reasoning": 244,
+      "charged": 3751,
+      "http_status": 200,
+      "finish": "stop",
+      "duration": 2.375,
+      "category": "response"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 38,
+      "request_id": "java-20261107_044142_852892-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794026900.3425832,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"9dc8094e84a97c6da130e489d00fa9fac31b4e6783ed806208847c984d4571f0\", \"estimated_input\": 2977, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 39,
+      "request_id": "java-20261107_044142_852892-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794026901.3473976,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 40,
+      "request_id": "java-20261107_044142_852892-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794026903.7511408,
+      "event": "response_saved",
+      "details": "{\"sha256\": \"29981cc0c632deb3d750b97c03a8ef431c9bde13b456ce75790b3b93c01110cb\"}"
+    },
+    {
+      "sequence": 41,
+      "request_id": "java-20261107_044142_852892-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794026903.8834443,
+      "event": "operation_error",
+      "details": "{\"message\": \"Common/category text mismatch\", \"type\": \"ValueError\"}"
+    },
+    {
+      "sequence": 42,
+      "request_id": "java-20261107_044142_852892-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794026903.8923383,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"validation_failed\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"not_passed\"}"
+    }
+  ]
+}

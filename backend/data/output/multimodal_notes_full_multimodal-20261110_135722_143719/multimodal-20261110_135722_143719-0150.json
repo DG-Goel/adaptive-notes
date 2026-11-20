@@ -1,0 +1,1743 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-10T14:17:40.962985+00:00",
+  "concepts": [],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [
+    {
+      "knowledge_id": "FCT_0001",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00068"
+      ],
+      "document_id": "DOC001",
+      "content": "Casting the result of Math.random() * 100 to int without parentheses causes the fractional part to be lost, resulting in zero.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00068",
+              "quote": "Because here we're applying this casting\n to the result of this method call, not this entire expression.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 69,
+              "end_char": 173,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00068",
+              "quote": "As you saw earlier, every time we call the random method\n it generates a number between zero to one.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 175,
+              "end_char": 275,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00068",
+              "quote": "So when we cast\n that number to an integer, we'll lose the fraction, we always get zero,\n and zero times 100 is zero.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 276,
+              "end_char": 393,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00068",
+              "quote": "Because here we're applying this casting\n to the result of this method call, not this entire expression.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 69,
+              "end_char": 173,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00068",
+              "quote": "As you saw earlier, every time we call the random method\n it generates a number between zero to one.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 175,
+              "end_char": 275,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00068",
+              "quote": "So when we cast\n that number to an integer, we'll lose the fraction, we always get zero,\n and zero times 100 is zero.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 276,
+              "end_char": 393,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "Casting the result of Math.random() * 100 to int without parentheses causes the fractional part to be lost, resulting in zero.",
+              "claims": [
+                {
+                  "text": "Casting the result of Math.random() * 100 to int without parentheses causes the fractional part to be lost, resulting in zero.",
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "explanation_of_mistake",
+                  "refs": [
+                    "Q0002",
+                    "Q0003",
+                    "Q0004"
+                  ],
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00068",
+                      "quote": "Because here we're applying this casting\n to the result of this method call, not this entire expression."
+                    },
+                    {
+                      "source_id": "G00068",
+                      "quote": "As you saw earlier, every time we call the random method\n it generates a number between zero to one."
+                    },
+                    {
+                      "source_id": "G00068",
+                      "quote": "So when we cast\n that number to an integer, we'll lose the fraction, we always get zero,\n and zero times 100 is zero."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Casting the result of Math.random() * 100 to int without parentheses causes the fractional part to be lost, resulting in zero.",
+              "claims": [
+                {
+                  "text": "Casting the result of Math.random() * 100 to int without parentheses causes the fractional part to be lost, resulting in zero.",
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "explanation_of_mistake",
+                  "refs": [
+                    "Q0002",
+                    "Q0003",
+                    "Q0004"
+                  ],
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00068",
+                      "quote": "Because here we're applying this casting\n to the result of this method call, not this entire expression."
+                    },
+                    {
+                      "source_id": "G00068",
+                      "quote": "As you saw earlier, every time we call the random method\n it generates a number between zero to one."
+                    },
+                    {
+                      "source_id": "G00068",
+                      "quote": "So when we cast\n that number to an integer, we'll lose the fraction, we always get zero,\n and zero times 100 is zero."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Casting the result of Math.random() * 100 to int without parentheses causes the fractional part to be lost, resulting in zero.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "explanation_of_mistake",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": true
+                    },
+                    "evidence": [
+                      "Because here we're applying this casting\n to the result of this method call, not this entire expression.",
+                      "As you saw earlier, every time we call the random method\n it generates a number between zero to one.",
+                      "So when we cast\n that number to an integer, we'll lose the fraction, we always get zero,\n and zero times 100 is zero."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00068",
+                        "quote": "Because here we're applying this casting\n to the result of this method call, not this entire expression.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 69,
+                        "end_char": 173,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00068",
+                        "quote": "As you saw earlier, every time we call the random method\n it generates a number between zero to one.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 175,
+                        "end_char": 275,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00068",
+                        "quote": "So when we cast\n that number to an integer, we'll lose the fraction, we always get zero,\n and zero times 100 is zero.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 276,
+                        "end_char": 393,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Casting the result of Math.random() * 100 to int without parentheses causes the fractional part to be lost, resulting in zero.",
+                "preview_text": "Casting the result of Math.random() * 100 to int without parentheses causes the fractional part to be lost, resulting in zero.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "Casting the result of Math.random() * 100 to int without parentheses causes the fractional part to be lost, resulting in zero.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "explanation_of_mistake",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": true
+                    },
+                    "evidence": [
+                      "Because here we're applying this casting\n to the result of this method call, not this entire expression.",
+                      "As you saw earlier, every time we call the random method\n it generates a number between zero to one.",
+                      "So when we cast\n that number to an integer, we'll lose the fraction, we always get zero,\n and zero times 100 is zero."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00068",
+                        "quote": "Because here we're applying this casting\n to the result of this method call, not this entire expression.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 69,
+                        "end_char": 173,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00068",
+                        "quote": "As you saw earlier, every time we call the random method\n it generates a number between zero to one.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 175,
+                        "end_char": 275,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00068",
+                        "quote": "So when we cast\n that number to an integer, we'll lose the fraction, we always get zero,\n and zero times 100 is zero.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 276,
+                        "end_char": 393,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Casting the result of Math.random() * 100 to int without parentheses causes the fractional part to be lost, resulting in zero.",
+                "preview_text": "Casting the result of Math.random() * 100 to int without parentheses causes the fractional part to be lost, resulting in zero.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00068"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Casting the result of Math.random() * 100 to int without parentheses causes the fractional part to be lost, resulting in zero.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0002",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00068"
+      ],
+      "document_id": "DOC001",
+      "content": "Wrapping the entire expression (Math.random() * 100) in parentheses before casting yields an integer between 0 and 100.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00068",
+              "quote": "To solve this\n we need to wrap this entire expression in parenthesis.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 394,
+              "end_char": 463,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00068",
+              "quote": "So, we add parenthesis around this, and now\n when we run this we get an integer between 0\n and 100.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 465,
+              "end_char": 564,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00068",
+              "quote": "To solve this\n we need to wrap this entire expression in parenthesis.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 394,
+              "end_char": 463,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00068",
+              "quote": "So, we add parenthesis around this, and now\n when we run this we get an integer between 0\n and 100.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 465,
+              "end_char": 564,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "Wrapping the entire expression (Math.random() * 100) in parentheses before casting yields an integer between 0 and 100.",
+              "claims": [
+                {
+                  "text": "Wrapping the entire expression (Math.random() * 100) in parentheses before casting yields an integer between 0 and 100.",
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "corrected_approach",
+                  "refs": [
+                    "Q0005",
+                    "Q0006"
+                  ],
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00068",
+                      "quote": "To solve this\n we need to wrap this entire expression in parenthesis."
+                    },
+                    {
+                      "source_id": "G00068",
+                      "quote": "So, we add parenthesis around this, and now\n when we run this we get an integer between 0\n and 100."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Wrapping the entire expression (Math.random() * 100) in parentheses before casting yields an integer between 0 and 100.",
+              "claims": [
+                {
+                  "text": "Wrapping the entire expression (Math.random() * 100) in parentheses before casting yields an integer between 0 and 100.",
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "corrected_approach",
+                  "refs": [
+                    "Q0005",
+                    "Q0006"
+                  ],
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00068",
+                      "quote": "To solve this\n we need to wrap this entire expression in parenthesis."
+                    },
+                    {
+                      "source_id": "G00068",
+                      "quote": "So, we add parenthesis around this, and now\n when we run this we get an integer between 0\n and 100."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Wrapping the entire expression (Math.random() * 100) in parentheses before casting yields an integer between 0 and 100.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "corrected_approach",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "To solve this\n we need to wrap this entire expression in parenthesis.",
+                      "So, we add parenthesis around this, and now\n when we run this we get an integer between 0\n and 100."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00068",
+                        "quote": "To solve this\n we need to wrap this entire expression in parenthesis.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 394,
+                        "end_char": 463,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00068",
+                        "quote": "So, we add parenthesis around this, and now\n when we run this we get an integer between 0\n and 100.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 465,
+                        "end_char": 564,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Wrapping the entire expression (Math.random() * 100) in parentheses before casting yields an integer between 0 and 100.",
+                "preview_text": "Wrapping the entire expression (Math.random() * 100) in parentheses before casting yields an integer between 0 and 100.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "Wrapping the entire expression (Math.random() * 100) in parentheses before casting yields an integer between 0 and 100.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "corrected_approach",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "To solve this\n we need to wrap this entire expression in parenthesis.",
+                      "So, we add parenthesis around this, and now\n when we run this we get an integer between 0\n and 100."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00068",
+                        "quote": "To solve this\n we need to wrap this entire expression in parenthesis.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 394,
+                        "end_char": 463,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00068",
+                        "quote": "So, we add parenthesis around this, and now\n when we run this we get an integer between 0\n and 100.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 465,
+                        "end_char": 564,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Wrapping the entire expression (Math.random() * 100) in parentheses before casting yields an integer between 0 and 100.",
+                "preview_text": "Wrapping the entire expression (Math.random() * 100) in parentheses before casting yields an integer between 0 and 100.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00068"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Wrapping the entire expression (Math.random() * 100) in parentheses before casting yields an integer between 0 and 100.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0003",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00069"
+      ],
+      "document_id": "DOC001",
+      "content": "NumberFormat is an abstract class in java.text and cannot be instantiated directly with the new operator.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00069",
+              "quote": "Number format is abstract, it cannot\n be instantiated.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 353,
+              "end_char": 407,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00069",
+              "quote": "So in Java we have this concept of abstract\n classes, so some classes are abstract and they are basically like a half baked\n cake.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 408,
+              "end_char": 538,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00069",
+              "quote": "We cannot use the new operator to create an instance of them.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 539,
+              "end_char": 600,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00069",
+              "quote": "Number format is abstract, it cannot\n be instantiated.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 353,
+              "end_char": 407,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00069",
+              "quote": "So in Java we have this concept of abstract\n classes, so some classes are abstract and they are basically like a half baked\n cake.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 408,
+              "end_char": 538,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00069",
+              "quote": "We cannot use the new operator to create an instance of them.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 539,
+              "end_char": 600,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "NumberFormat is an abstract class in java.text and cannot be instantiated directly with the new operator.",
+              "claims": [
+                {
+                  "text": "NumberFormat is an abstract class in java.text and cannot be instantiated directly with the new operator.",
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "identified_mistake",
+                  "refs": [
+                    "Q0018",
+                    "Q0019",
+                    "Q0020"
+                  ],
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00069",
+                      "quote": "Number format is abstract, it cannot\n be instantiated."
+                    },
+                    {
+                      "source_id": "G00069",
+                      "quote": "So in Java we have this concept of abstract\n classes, so some classes are abstract and they are basically like a half baked\n cake."
+                    },
+                    {
+                      "source_id": "G00069",
+                      "quote": "We cannot use the new operator to create an instance of them."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "NumberFormat is an abstract class in java.text and cannot be instantiated directly with the new operator.",
+              "claims": [
+                {
+                  "text": "NumberFormat is an abstract class in java.text and cannot be instantiated directly with the new operator.",
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "identified_mistake",
+                  "refs": [
+                    "Q0018",
+                    "Q0019",
+                    "Q0020"
+                  ],
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00069",
+                      "quote": "Number format is abstract, it cannot\n be instantiated."
+                    },
+                    {
+                      "source_id": "G00069",
+                      "quote": "So in Java we have this concept of abstract\n classes, so some classes are abstract and they are basically like a half baked\n cake."
+                    },
+                    {
+                      "source_id": "G00069",
+                      "quote": "We cannot use the new operator to create an instance of them."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "NumberFormat is an abstract class in java.text and cannot be instantiated directly with the new operator.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "identified_mistake",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Number format is abstract, it cannot\n be instantiated.",
+                      "So in Java we have this concept of abstract\n classes, so some classes are abstract and they are basically like a half baked\n cake.",
+                      "We cannot use the new operator to create an instance of them."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00069",
+                        "quote": "Number format is abstract, it cannot\n be instantiated.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 353,
+                        "end_char": 407,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00069",
+                        "quote": "So in Java we have this concept of abstract\n classes, so some classes are abstract and they are basically like a half baked\n cake.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 408,
+                        "end_char": 538,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00069",
+                        "quote": "We cannot use the new operator to create an instance of them.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 539,
+                        "end_char": 600,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "NumberFormat is an abstract class in java.text and cannot be instantiated directly with the new operator.",
+                "preview_text": "NumberFormat is an abstract class in java.text and cannot be instantiated directly with the new operator.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "NumberFormat is an abstract class in java.text and cannot be instantiated directly with the new operator.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "identified_mistake",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Number format is abstract, it cannot\n be instantiated.",
+                      "So in Java we have this concept of abstract\n classes, so some classes are abstract and they are basically like a half baked\n cake.",
+                      "We cannot use the new operator to create an instance of them."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00069",
+                        "quote": "Number format is abstract, it cannot\n be instantiated.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 353,
+                        "end_char": 407,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00069",
+                        "quote": "So in Java we have this concept of abstract\n classes, so some classes are abstract and they are basically like a half baked\n cake.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 408,
+                        "end_char": 538,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00069",
+                        "quote": "We cannot use the new operator to create an instance of them.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 539,
+                        "end_char": 600,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "NumberFormat is an abstract class in java.text and cannot be instantiated directly with the new operator.",
+                "preview_text": "NumberFormat is an abstract class in java.text and cannot be instantiated directly with the new operator.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00069"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "NumberFormat is an abstract class in java.text and cannot be instantiated directly with the new operator.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0004",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00069"
+      ],
+      "document_id": "DOC001",
+      "content": "To obtain a NumberFormat instance, use the static factory method getCurrencyInstance(), which returns a NumberFormat object.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00069",
+              "quote": "This class has a bunch of methods that start\n with get.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 833,
+              "end_char": 888,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00069",
+              "quote": "So we have get currency instance, and when we\n call this method, this will create an instance of the number format class and\n return it.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 889,
+              "end_char": 1025,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00069",
+              "quote": "So instead of using the new operator, we're going to use\n this method here.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 1026,
+              "end_char": 1101,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00069",
+              "quote": "This is what we call a factory method.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 1102,
+              "end_char": 1140,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00069",
+              "quote": "This class has a bunch of methods that start\n with get.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 833,
+              "end_char": 888,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00069",
+              "quote": "So we have get currency instance, and when we\n call this method, this will create an instance of the number format class and\n return it.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 889,
+              "end_char": 1025,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00069",
+              "quote": "So instead of using the new operator, we're going to use\n this method here.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1026,
+              "end_char": 1101,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00069",
+              "quote": "This is what we call a factory method.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1102,
+              "end_char": 1140,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "To obtain a NumberFormat instance, use the static factory method getCurrencyInstance(), which returns a NumberFormat object.",
+              "claims": [
+                {
+                  "text": "To obtain a NumberFormat instance, use the static factory method getCurrencyInstance(), which returns a NumberFormat object.",
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "correct_demonstration",
+                  "refs": [
+                    "Q0024",
+                    "Q0025",
+                    "Q0026",
+                    "Q0027"
+                  ],
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00069",
+                      "quote": "This class has a bunch of methods that start\n with get."
+                    },
+                    {
+                      "source_id": "G00069",
+                      "quote": "So we have get currency instance, and when we\n call this method, this will create an instance of the number format class and\n return it."
+                    },
+                    {
+                      "source_id": "G00069",
+                      "quote": "So instead of using the new operator, we're going to use\n this method here."
+                    },
+                    {
+                      "source_id": "G00069",
+                      "quote": "This is what we call a factory method."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "To obtain a NumberFormat instance, use the static factory method getCurrencyInstance(), which returns a NumberFormat object.",
+              "claims": [
+                {
+                  "text": "To obtain a NumberFormat instance, use the static factory method getCurrencyInstance(), which returns a NumberFormat object.",
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "correct_demonstration",
+                  "refs": [
+                    "Q0024",
+                    "Q0025",
+                    "Q0026",
+                    "Q0027"
+                  ],
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00069",
+                      "quote": "This class has a bunch of methods that start\n with get."
+                    },
+                    {
+                      "source_id": "G00069",
+                      "quote": "So we have get currency instance, and when we\n call this method, this will create an instance of the number format class and\n return it."
+                    },
+                    {
+                      "source_id": "G00069",
+                      "quote": "So instead of using the new operator, we're going to use\n this method here."
+                    },
+                    {
+                      "source_id": "G00069",
+                      "quote": "This is what we call a factory method."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "To obtain a NumberFormat instance, use the static factory method getCurrencyInstance(), which returns a NumberFormat object.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "correct_demonstration",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "This class has a bunch of methods that start\n with get.",
+                      "So we have get currency instance, and when we\n call this method, this will create an instance of the number format class and\n return it.",
+                      "So instead of using the new operator, we're going to use\n this method here.",
+                      "This is what we call a factory method."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00069",
+                        "quote": "This class has a bunch of methods that start\n with get.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 833,
+                        "end_char": 888,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00069",
+                        "quote": "So we have get currency instance, and when we\n call this method, this will create an instance of the number format class and\n return it.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 889,
+                        "end_char": 1025,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00069",
+                        "quote": "So instead of using the new operator, we're going to use\n this method here.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1026,
+                        "end_char": 1101,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00069",
+                        "quote": "This is what we call a factory method.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1102,
+                        "end_char": 1140,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "To obtain a NumberFormat instance, use the static factory method getCurrencyInstance(), which returns a NumberFormat object.",
+                "preview_text": "To obtain a NumberFormat instance, use the static factory method getCurrencyInstance(), which returns a NumberFormat object.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "To obtain a NumberFormat instance, use the static factory method getCurrencyInstance(), which returns a NumberFormat object.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "correct_demonstration",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "This class has a bunch of methods that start\n with get.",
+                      "So we have get currency instance, and when we\n call this method, this will create an instance of the number format class and\n return it.",
+                      "So instead of using the new operator, we're going to use\n this method here.",
+                      "This is what we call a factory method."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00069",
+                        "quote": "This class has a bunch of methods that start\n with get.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 833,
+                        "end_char": 888,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00069",
+                        "quote": "So we have get currency instance, and when we\n call this method, this will create an instance of the number format class and\n return it.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 889,
+                        "end_char": 1025,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00069",
+                        "quote": "So instead of using the new operator, we're going to use\n this method here.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1026,
+                        "end_char": 1101,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00069",
+                        "quote": "This is what we call a factory method.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1102,
+                        "end_char": 1140,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "To obtain a NumberFormat instance, use the static factory method getCurrencyInstance(), which returns a NumberFormat object.",
+                "preview_text": "To obtain a NumberFormat instance, use the static factory method getCurrencyInstance(), which returns a NumberFormat object.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00069"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "To obtain a NumberFormat instance, use the static factory method getCurrencyInstance(), which returns a NumberFormat object.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0005",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00068"
+      ],
+      "document_id": "DOC001",
+      "content": "NumberFormat can format numbers as currency, adding a dollar sign and commas for thousands.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00068",
+              "quote": "Quite often when we work with numbers, we need to format them\n as currency values.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 565,
+              "end_char": 647,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00068",
+              "quote": "For example, we might have a number like this,\n imagine this is the price of a product, to display this to the user, you want to add a\n dollar sign here, and separate every three digits with a comma.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 648,
+              "end_char": 847,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00068",
+              "quote": "Quite often when we work with numbers, we need to format them\n as currency values.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 565,
+              "end_char": 647,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00068",
+              "quote": "For example, we might have a number like this,\n imagine this is the price of a product, to display this to the user, you want to add a\n dollar sign here, and separate every three digits with a comma.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 648,
+              "end_char": 847,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "NumberFormat can format numbers as currency, adding a dollar sign and commas for thousands.",
+              "claims": [
+                {
+                  "text": "NumberFormat can format numbers as currency, adding a dollar sign and commas for thousands.",
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "refs": [
+                    "Q0007",
+                    "Q0008"
+                  ],
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00068",
+                      "quote": "Quite often when we work with numbers, we need to format them\n as currency values."
+                    },
+                    {
+                      "source_id": "G00068",
+                      "quote": "For example, we might have a number like this,\n imagine this is the price of a product, to display this to the user, you want to add a\n dollar sign here, and separate every three digits with a comma."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "NumberFormat can format numbers as currency, adding a dollar sign and commas for thousands.",
+              "claims": [
+                {
+                  "text": "NumberFormat can format numbers as currency, adding a dollar sign and commas for thousands.",
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "refs": [
+                    "Q0007",
+                    "Q0008"
+                  ],
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00068",
+                      "quote": "Quite often when we work with numbers, we need to format them\n as currency values."
+                    },
+                    {
+                      "source_id": "G00068",
+                      "quote": "For example, we might have a number like this,\n imagine this is the price of a product, to display this to the user, you want to add a\n dollar sign here, and separate every three digits with a comma."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "NumberFormat can format numbers as currency, adding a dollar sign and commas for thousands.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Quite often when we work with numbers, we need to format them\n as currency values.",
+                      "For example, we might have a number like this,\n imagine this is the price of a product, to display this to the user, you want to add a\n dollar sign here, and separate every three digits with a comma."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00068",
+                        "quote": "Quite often when we work with numbers, we need to format them\n as currency values.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 565,
+                        "end_char": 647,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00068",
+                        "quote": "For example, we might have a number like this,\n imagine this is the price of a product, to display this to the user, you want to add a\n dollar sign here, and separate every three digits with a comma.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 648,
+                        "end_char": 847,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "NumberFormat can format numbers as currency, adding a dollar sign and commas for thousands.",
+                "preview_text": "NumberFormat can format numbers as currency, adding a dollar sign and commas for thousands.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "NumberFormat can format numbers as currency, adding a dollar sign and commas for thousands.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Quite often when we work with numbers, we need to format them\n as currency values.",
+                      "For example, we might have a number like this,\n imagine this is the price of a product, to display this to the user, you want to add a\n dollar sign here, and separate every three digits with a comma."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00068",
+                        "quote": "Quite often when we work with numbers, we need to format them\n as currency values.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 565,
+                        "end_char": 647,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00068",
+                        "quote": "For example, we might have a number like this,\n imagine this is the price of a product, to display this to the user, you want to add a\n dollar sign here, and separate every three digits with a comma.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 648,
+                        "end_char": 847,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "NumberFormat can format numbers as currency, adding a dollar sign and commas for thousands.",
+                "preview_text": "NumberFormat can format numbers as currency, adding a dollar sign and commas for thousands.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00068"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "NumberFormat can format numbers as currency, adding a dollar sign and commas for thousands.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0006",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00068"
+      ],
+      "document_id": "DOC001",
+      "content": "NumberFormat can format a decimal like 0.1 as a percentage, displaying it as 10%.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00068",
+              "quote": "Or if we might have a number like 0.1, and\n we want to represent this as a percentage value.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 849,
+              "end_char": 941,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00068",
+              "quote": "So instead of 0.1\n we want to display 10%.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 942,
+              "end_char": 984,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00068",
+              "quote": "Or if we might have a number like 0.1, and\n we want to represent this as a percentage value.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 849,
+              "end_char": 941,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00068",
+              "quote": "So instead of 0.1\n we want to display 10%.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 942,
+              "end_char": 984,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "NumberFormat can format a decimal like 0.1 as a percentage, displaying it as 10%.",
+              "claims": [
+                {
+                  "text": "NumberFormat can format a decimal like 0.1 as a percentage, displaying it as 10%.",
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "refs": [
+                    "Q0009",
+                    "Q0010"
+                  ],
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00068",
+                      "quote": "Or if we might have a number like 0.1, and\n we want to represent this as a percentage value."
+                    },
+                    {
+                      "source_id": "G00068",
+                      "quote": "So instead of 0.1\n we want to display 10%."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "NumberFormat can format a decimal like 0.1 as a percentage, displaying it as 10%.",
+              "claims": [
+                {
+                  "text": "NumberFormat can format a decimal like 0.1 as a percentage, displaying it as 10%.",
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "refs": [
+                    "Q0009",
+                    "Q0010"
+                  ],
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00068",
+                      "quote": "Or if we might have a number like 0.1, and\n we want to represent this as a percentage value."
+                    },
+                    {
+                      "source_id": "G00068",
+                      "quote": "So instead of 0.1\n we want to display 10%."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "NumberFormat can format a decimal like 0.1 as a percentage, displaying it as 10%.",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Important source qualification may have been lost"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [
+                        "if"
+                      ],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Or if we might have a number like 0.1, and\n we want to represent this as a percentage value.",
+                      "So instead of 0.1\n we want to display 10%."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00068",
+                        "quote": "Or if we might have a number like 0.1, and\n we want to represent this as a percentage value.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 849,
+                        "end_char": 941,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00068",
+                        "quote": "So instead of 0.1\n we want to display 10%.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 942,
+                        "end_char": 984,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "NumberFormat can format a decimal like 0.1 as a percentage, displaying it as 10%.",
+                "preview_text": "",
+                "withheld": true
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "NumberFormat can format a decimal like 0.1 as a percentage, displaying it as 10%.",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Important source qualification may have been lost"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [
+                        "if"
+                      ],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Or if we might have a number like 0.1, and\n we want to represent this as a percentage value.",
+                      "So instead of 0.1\n we want to display 10%."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00068",
+                        "quote": "Or if we might have a number like 0.1, and\n we want to represent this as a percentage value.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 849,
+                        "end_char": 941,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00068",
+                        "quote": "So instead of 0.1\n we want to display 10%.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 942,
+                        "end_char": 984,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "NumberFormat can format a decimal like 0.1 as a percentage, displaying it as 10%.",
+                "preview_text": "",
+                "withheld": true
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00068"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "NumberFormat can format a decimal like 0.1 as a percentage, displaying it as 10%.",
+      "fact_type": null
+    }
+  ],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 6,
+  "source_units_processed": 2,
+  "extraction_metadata": null
+}

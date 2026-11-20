@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-c2b293e1-232f-40c9-b732-a95bbbe7eb65",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"Escape sequences in Java strings\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"In Java, certain characters like double quotes, backslashes, newlines, and tabs cannot be placed directly inside string literals because the compiler interprets them specially. To include them, you must prefix the character with a backslash (\\\\) which tells the compiler to treat the following character as a literal part of the string.\",\n        \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"exemplifies\": {\n        \"text\": \"Including double quotes in a string\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"example_text\": {\n        \"text\": \"String s = \\\"\\\\\\\"Hello Marsh\\\\\\\"\\\"; // prints \\\"Hello Marsh\\\"\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"Including a backslash in a Windows file path\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"example_text\": {\n        \"text\": \"String path = \\\"C:\\\\\\\\Windows\\\\\\\\\\\"; // prints C:\\\\Windows\\\\\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"Adding a newline character\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_text\": {\n        \"text\": \"String multiLine = \\\"C Drive\\\\nWindows\\\"; // prints C Drive on first line, Windows on second line\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"Adding a tab character\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_text\": {\n        \"text\": \"String tabbed = \\\"C Drive\\\\tWindows\\\"; // prints C Drive    Windows (with a tab space)\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"The four commonly used escape sequences in Java strings are \\\\\\\" (double quote), \\\\\\\\ (backslash), \\\\n (newline), and \\\\t (tab).\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts about Java string escape sequences. Extract facts, examples, explanations, definitions maybe. Let's create facts: escape sequences: \\\" double quote, \\\\ backslash, \\n newline, \\t tab. Also that backslash escapes. Provide examples. Use excerpts IDs.\n\nWe'll produce facts, examples, explanations. No definitions? Could define \"escape sequence\". Not given explicitly. Might skip.\n\nCreate facts entries with fact_text and fact_type null. Use refs Q0001 etc.\n\nExamples: showing string with escaped double quotes, backslash, newline, tab. Use appropriate excerpt refs.\n\nExplanations: explain why need backslash.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191410,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_69334c0be3",
+  "usage": {
+    "completion_tokens": 770,
+    "prompt_tokens": 3148,
+    "total_tokens": 3918,
+    "completion_time": 1.620333153,
+    "completion_tokens_details": {
+      "reasoning_tokens": 139
+    },
+    "prompt_time": 0.140221166,
+    "prompt_tokens_details": null,
+    "queue_time": 0.167204826,
+    "total_time": 1.7605543190000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z28f8betevg08q0be6t18n",
+    "debug": null,
+    "seed": 542183736,
+    "usage": null
+  }
+}

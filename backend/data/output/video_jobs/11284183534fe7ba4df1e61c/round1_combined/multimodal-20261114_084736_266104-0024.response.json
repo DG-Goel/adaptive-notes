@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-0db40411-e824-4679-b2dd-91519ec2480a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"I001\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Specialized student detectors for facial features\",\n      \"refs\": [\"Q0005\", \"Q0006\", \"Q0009\", \"Q0012\", \"Q0013\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"I001\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Mike detects eyes, Mohan detects nose, and a third student detects ears; each outputs a confidence score (0‑1) which are combined by a higher‑level detector (Serena) to decide if the image contains a koala face.\",\n      \"refs\": [\"Q0005\", \"Q0006\", \"Q0007\", \"Q0009\", \"Q0010\", \"Q0011\", \"Q0012\", \"Q0013\", \"Q0014\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc based on excerpts. Likely concept: \"neural network ensemble of specialized detectors\". Extract concept_name and content. Use primary excerpts. Provide rows.\n\nWe'll create item \"I001\". concept_name from Q0005 etc: \"Mike detects eyes, Mohan detects nose\". content combine.\n\nProvide rows: concept_name, content. availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, related_refs empty.\n\nAdd abstentions none, excluded none.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794646067,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 444,
+    "prompt_tokens": 3896,
+    "total_tokens": 4340,
+    "completion_time": 0.922646198,
+    "completion_tokens_details": {
+      "reasoning_tokens": 102
+    },
+    "prompt_time": 0.2239253,
+    "prompt_tokens_details": null,
+    "queue_time": 0.584905642,
+    "total_time": 1.146571498
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ckvgj8ek7aa0xar0wvcbgj",
+    "debug": null,
+    "seed": 535580614,
+    "usage": null
+  }
+}

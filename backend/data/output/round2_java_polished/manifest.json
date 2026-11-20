@@ -1,0 +1,828 @@
+{
+  "source_sha256": "be6998c008c7857ed479d344da0a15c28e5e4fca634229c2d2e57a3924d51e6e",
+  "stage": "round2_text_polish",
+  "configuration": {
+    "prompt_policy": "quote_catalog_v1",
+    "wire_format": "native",
+    "target_category": null,
+    "provider": "Groq",
+    "model": "openai/gpt-oss-120b",
+    "temperature": 0,
+    "response_format": "json_object",
+    "reasoning_effort": "low",
+    "strict_evidence": true,
+    "fallback": false,
+    "tokens_per_minute": 8000,
+    "preferred_output_tokens": 2000,
+    "min_output_tokens": 500,
+    "max_retries": 0,
+    "scheduler_ceilings": [
+      25,
+      850,
+      6800,
+      170000
+    ]
+  },
+  "requests": [
+    {
+      "request_id": "round2-polish-be6998c008c785-f2de732074b3-4",
+      "start": 4,
+      "end": 9,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- The course will teach the basics of Java.\n- The course will teach how Java code gets executed.\n- The course will teach how to build simple algorithms.\n- The course will cover installing all the necessary tools to build Java applications.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 424,
+        "max_output_tokens": 2000,
+        "total_tokens": 2424,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-3dc61fb34d9f-11",
+      "start": 11,
+      "end": 29,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- JDK stands for Java Development Kit and is a software development environment for building Java applications.\n- The JDK includes a compiler, reusable code libraries, and a Java runtime environment.\n- Oracle.com provides the Java SE (Standard Edition) download page for the JDK.\n- The JDK can be downloaded for various platforms such as Linux, macOS, and Windows.\n- On macOS, the JDK is provided as a .dmg file.\n- Installation of the JDK requires accepting the license agreement.\n- The JDK installation wizard on macOS guides the user through clicking continue, entering the computer password, and completing the installation.\n- Popular code editors for building Java applications are NetBeans, Eclipse, and IntelliJ.\n- The instructor’s favorite editor can be used for the course.\n- IntelliJ IDEA Community Edition is free and sufficient for the course.\n- After downloading, the application should be dragged into the Applications folder.\n- The smallest building block in Java programs are functions.\n- A function is a block of code that performs a task.\n- Each button on a remote control performs a task, analogous to functions in programming.\n- Functions in programming languages are analogous to remote control buttons.\n- Examples of functions include sending emails, converting weight units, and validating user input.\n- The tutorial will demonstrate how to code a function in Java.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 752,
+        "max_output_tokens": 2000,
+        "total_tokens": 2752,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-2876645e9e21-31",
+      "start": 31,
+      "end": 53,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- The return type of a function is specified first.\n- Some functions return a value like a number or a date/time, while other functions do not return anything.\n- The return type of functions that do not return a value is void.\n- Void is a reserved keyword in Java.\n- After the return type, the name of the function appears.\n- A function should have a descriptive name, such as send email.\n- The function name clearly identifies its purpose.\n- After the function name, parentheses contain the parameters for the function.\n- Parameters are used to pass values to a function.\n- Example parameters for a send email function include the receiver, subject, and content of the email.\n- This tutorial will not cover parameters now and will address them later.\n- In Java we put the left brace on the same line where we define our function.\n- In Java we add a pair of curly braces after the parenthesis and write the actual Java code inside them.\n- Every Java program should have at least one function called main, which is the entry point and gets executed when the program runs.\n- Functions in Java must belong to a class; they cannot exist on their own.\n- A class is a container for one or more related functions (methods) and is used to organize code.\n- By analogy, a class is like a supermarket section that contains related products.\n- Every Java program should have at least one class that contains the main function.\n- The class definition starts with the keyword class, followed by a descriptive name, and a pair of curly braces.\n- Functions defined inside a class are called methods.\n- A Java program must contain a main class and inside this main class we have the main method.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 835,
+        "max_output_tokens": 2000,
+        "total_tokens": 2835,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-451ff03671ef-62",
+      "start": 62,
+      "end": 68,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- When creating a new Java project in IntelliJ IDEA, you select Java as the language and ensure the project SDK is set (e.g., JDK 12).\n- A command‑line Java application is created by selecting the “command line application” template, which produces a program without a graphical user interface.\n- The base package for a Java project is conventionally the reverse domain name of the organization.\n- A package groups related classes and helps organize code as an application grows.\n- The base package name shown in the IDE may be something like com.codewithmosh, but you can use any package name such as com.package.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 533,
+        "max_output_tokens": 2000,
+        "total_tokens": 2533,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-3516c3c32dac-70",
+      "start": 70,
+      "end": 84,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- All Java files should have the Java extension.\n- In Java, statements should be terminated with a semicolon.\n- The main method in a Java program should always be static.\n- The return type of the main method is void, meaning it does not return a value.\n- The System.out.println method prints a line of text to the terminal.\n- A string in Java is a sequence of characters enclosed in double quotes.\n- Right‑clicking on a Java source file (e.g., main.java) shows a context‑menu item called “open in terminal”.\n- The “open in terminal” command is called “open in terminal” on macOS and “open in command prompt” on Windows.\n- Compiling a Java source file produces a `.class` file (e.g., main.class) that contains the bytecode representation of the source.\n- When running a Java program from an IDE (e.g., IntelliJ), the generated `.class` files are stored in a separate output folder, not alongside the source files.\n- The compiled `.class` file resides in the package directory structure (e.g., `helloWorld/com/codewithmosh/main.class`).\n- Java bytecode is platform‑independent; the same `.class` file can run on Windows, macOS, Linux, or any OS with a Java Runtime Environment (JRE).\n- The JVM translates Java bytecode to native code for the underlying operating system.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 724,
+        "max_output_tokens": 2000,
+        "total_tokens": 2724,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-7007f287f394-88",
+      "start": 88,
+      "end": 94,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Because the JVM performs this translation at runtime, Java applications are portable across different operating systems.\n- To run a Java program you invoke the Java virtual machine (JVM) by typing `java` followed by the full path to the main class file.\n- The full path to the main class includes the package name, e.g., `com.codewithmosh.main`, and is case‑sensitive.\n- When the `java` command is executed, the JVM searches the folder hierarchy for the specified package and class, loads the bytecode, and converts it to native code for the operating system.\n- Running a Java program from an IDE such as IntelliJ hides the compilation and execution steps from the user.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 548,
+        "max_output_tokens": 2000,
+        "total_tokens": 2548,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-4fe4026967fa-96",
+      "start": 96,
+      "end": 101,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Java was developed by James Gosling in 1995 at Sun Microsystems, which was later acquired by Oracle in 2010.\n- Java has four main editions: Standard Edition (core platform), Enterprise Edition (large‑scale distributed systems), Micro Edition (mobile devices), and Java Card (smart cards).\n- The latest version of Java at the time of the lecture was Java Standard Edition 12, released in March 2019.\n- According to indeed.com, the average salary of a Java developer in the US is just over $100,000 per year.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 501,
+        "max_output_tokens": 2000,
+        "total_tokens": 2501,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-371074515f68-103",
+      "start": 103,
+      "end": 132,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Variables are used to temporarily store data in computer's memory.\n- In Java, a variable is declared with a type, a name, and an initial value, e.g., int age = 30.\n- When declaring a variable, you first specify its type and then give it a name (identifier).\n- The equal sign (=) is the assignment operator that assigns a value to a variable.\n- Initializing a variable means giving it an initial value.\n- Variables must be initialized before they are read.\n- Assigning a value stores that value in a memory location associated with the variable's label.\n- A variable's value can be changed after initialization by assigning a new value.\n- Declaring multiple variables on the same line is technically possible but not recommended because it makes code ugly and hard to read; it is better to declare one variable per line.\n- Variable names should follow camel case notation: capitalize the first letter of every word except the first word.\n- Whole-number types store numbers without a decimal point.\n- Float occupies 4 bytes and double occupies 8 bytes.\n- Double can store larger numbers than float.\n- Char stores a single character and takes 2 bytes, supporting international letters.\n- Boolean stores true/false values.\n- An integer occupies 4 bytes and can store values up to about 2 billion.\n- A byte occupies 1 byte and can store values up to 127.\n- Use meaningful and descriptive variable names.\n- In Java you can use underscores to separate groups of three digits in numeric literals.\n- Attempting to store a value larger than the integer range (e.g., 3 billion) causes a compile‑time error: \"integer number too large\".\n- Java treats integer literals without a suffix as int, so a numeric literal that exceeds the int range must be suffixed with an L (or l) to be interpreted as long.\n- Java treats decimal literals as double by default; assigning a decimal literal to a float variable without a suffix causes a compilation error.\n- To represent a float literal, append an f (or F) suffix to the numeric value.\n- A char literal must be enclosed in single quotes, while a string literal uses double quotes.\n- A boolean variable can hold only the values true or false.\n- Java reserved keywords (e.g., public, static, void, class, package) cannot be used as identifiers for variables, classes, or methods.\n- Java has eight primitive types (byte, short, int, long, float, double, char, boolean) used for simple values; all other types are reference types.\n- Declaring and initializing a primitive variable (e.g., byte h = 30;) differs syntactically from creating an instance of a reference type.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 1099,
+        "max_output_tokens": 2000,
+        "total_tokens": 3099,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-f57e6828e08e-134",
+      "start": 134,
+      "end": 144,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Packages create a namespace for classes, allowing the same class name to exist in different packages without conflict.\n- To use a class from a different package, you must import it.\n- IntelliJ can suggest class names and automatically insert import statements when a class is selected.\n- The `new` operator allocates memory for reference type objects; primitive types do not require explicit memory allocation.\n- Reference type objects are managed by the Java runtime, which automatically releases memory; programmers do not manually free memory.\n- Objects (instances of classes) have members that can be accessed using the dot operator, whereas primitive types have no members.\n- Code snippets (live templates) can be triggered by typing shortcuts (e.g., `sout`) and pressing Tab to generate boilerplate code.\n- Reference‑type variables store a reference (address) to an object in memory rather than the actual value.\n- Assigning a primitive variable copies the actual value into a new memory location; assigning a reference variable copies the address, not the object itself.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 664,
+        "max_output_tokens": 2000,
+        "total_tokens": 2664,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-c368bd9a6038-146",
+      "start": 146,
+      "end": 177,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- In Java, a string literal is a string value.\n- The String class is defined in the java.lang package, which is automatically imported.\n- Reference types are copied by reference, whereas primitive types are copied by value.\n- When declaring a String variable, you can instantiate it using the new operator.\n- Using new String(...) to create a String is redundant because a shorter literal initialization exists.\n- A String can be initialized directly with a string literal without using the new operator.\n- Strings are reference types in Java.\n- String variables can be concatenated using the plus (+) operator.\n- Because String is a class, its members can be accessed using the dot (.) operator.\n- so we can type message dot, and these are all the methods or functions defined in the string class.\n- For example, we have this method here ends with, and with this we can check to see if our string ends with a character or sequence of characters.\n- For example, here we can pass your string to see if our message ends with two exclamation marks.\n- Now, instead of printing the message, let's print this expression here.\n- So, let's run the program, we get true.\n- So this method that we have called here returns a boolean value which can be true or false.\n- We also have another method starts with, let's take a look, now in this case we get false because our message doesn't start with two exclamation marks.\n- Another useful method is length, so we can call that to get the length of a string which is the number of characters, so message dot length, take a look, so in this string we have 13 characters.\n- You can check the length of the input provided by the user.\n- You can check a username's length and give an error if it exceeds a limit such as 20 characters.\n- The indexOf method returns the index of the first occurrence of a character or string passed to it.\n- If you pass 'h' to indexOf, it returns 0; if you pass 'e', it returns 1 because those are the positions of the first occurrences in the string.\n- The replace method can replace one or more characters with something else.\n- For example, you can replace any exclamation marks with the word \"store\".\n- In the replace method, the first and second values are parameters, while the actual values passed (e.g., exclamation mark and asterisk) are arguments.\n- Arguments are the actual values that we pass to methods.\n- Many programmers do not know the difference between parameters and arguments.\n- The replace method does not modify the original string; it returns a new string.\n- In Java, strings are immutable; they cannot be mutated.\n- The toLowerCase method returns a new string with all characters converted to lower case, leaving the original string unchanged.\n- The trim method returns a new string with leading and trailing whitespace removed, without altering the original string.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 1171,
+        "max_output_tokens": 2000,
+        "total_tokens": 3171,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-24af9eb272c7-179",
+      "start": 179,
+      "end": 201,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Arrays are used to store a list of items such as numbers, people, or messages.\n- To create an array you place square brackets after the type and use the new operator with the type repeated and the size in brackets.\n- When creating an array, you must specify the size (number of elements) you want it to hold.\n- Variable names should reflect that they hold a collection, e.g., use 'numbers' instead of 'number' for an array.\n- When printing an array directly, Java returns a string based on the object's memory address.\n- The java.util.Arrays class provides a toString method that can be used to obtain a readable representation of an array.\n- If the array type is boolean, all items are initialized to false by default.\n- If you have a string array, all items are initialized to an empty string by default.\n- The length of a Java array can be obtained via its length field.\n- Java arrays have a fixed size; once created, their length cannot be changed.\n- Arrays can be sorted using the sort method of the Arrays class.\n- Java supports multi‑dimensional arrays; a two‑dimensional array is declared with two pairs of square brackets.\n- Accessing an element in a multi‑dimensional array requires providing an index for each dimension.\n- Printing a multi‑dimensional array with the default toString method yields a non‑readable string; a deepToString method should be used instead.\n- Use this for printing multi-dimensional arrays.\n- Now we have this matrix which has two rows, and in each row we have three columns.\n- We can also create a three dimensional array, all we have to do is to add another pair of brackets and specify the length of that dimension.\n- So, let's back to a two dimensional array, we're going to get rid of the new operator and use curly braces.\n- Now, let's say in this matrix we're going to have two rows and three columns.\n- So each row is an array itself, because it's a list of items, right?\n- add another array here, let's say one, two, three, then comma, now we add the second row, which is another array.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 940,
+        "max_output_tokens": 2000,
+        "total_tokens": 2940,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-9aa5536926dc-205",
+      "start": 205,
+      "end": 210,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Now let's remove this line, we don't need it anymore, and print this array, so, here's the end result.\n- You have learned a lot about variables, you have learned that when declaring them, we need to initialize them, and we can always change their value later on throughout the lifetime of our programs.\n- However, there are times that we don't want the value of a variable to change.\n- For example, let's declare a variable called pi, and set it to 3.14.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 486,
+        "max_output_tokens": 2000,
+        "total_tokens": 2486,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-945a6d2df7b7-212",
+      "start": 212,
+      "end": 226,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Adding an 'f' suffix makes a numeric literal a float because the Java compiler treats decimal numbers as double by default.\n- Pi is used to calculate the area of a circle.\n- Constants are used to prevent values like pi from being changed unintentionally.\n- Attempting to assign a new value to a final variable (e.g., final pi) results in a compilation error.\n- By convention, constants are named using all capital letters.\n- Java provides the same arithmetic operators as mathematics: addition, subtraction, multiplication, division, and modulus (remainder).\n- Example: declaring an integer result and assigning 10 + 3 stores the value 13 in result.\n- In Java, the division of two whole numbers yields a whole number.\n- Assigning the result of a double expression to an int variable causes a compilation error.\n- An expression is a piece of code that produces a value.\n- Changing the variable type to double fixes the compilation error and yields a floating‑point result.\n- Java supports addition, subtraction, multiplication, and division as arithmetic operators.\n- Arithmetic operators work on numbers called operands.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 677,
+        "max_output_tokens": 2000,
+        "total_tokens": 2677,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-4d37cbad3880-233",
+      "start": 233,
+      "end": 238,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- The compound assignment operator (+=) adds a value to a variable and assigns the result to that variable.\n- Compound assignment operators exist for subtraction (-=), multiplication (*=), and division (/=) as well.\n- Multiplication and division have higher precedence than addition and subtraction.\n- In the expression 10 + 3 * 2, the multiplication is evaluated first (3 * 2 = 6) and then added to 10, yielding 16.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 474,
+        "max_output_tokens": 2000,
+        "total_tokens": 2474,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-ae33185523f1-240",
+      "start": 240,
+      "end": 267,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Parentheses always have the highest priority, then multiplication and division, and finally addition and subtraction.\n- In this tutorial we're going to talk about casting and type conversion.\n- A short variable called x is declared and set to 1.\n- An integer variable called y is declared and set to x plus 2.\n- In this example, a short is added to an integer.\n- Printing y yields 3.\n- Because the expression involves a short and an integer, one of the values is converted to the other type so they are compatible.\n- A short variable occupies two bytes.\n- An int variable occupies four bytes.\n- Values that fit in a short can also be stored in an int.\n- When a short is used in an expression with an int, Java implicitly casts the short to an int.\n- Byte can be automatically converted to short, short to int, int to long, and so on up the numeric hierarchy.\n- Implicit casting occurs automatically when converting a value to a larger numeric type without loss of data.\n- Changing the variable type to double resolves the compilation error.\n- When an int is added to a double, the int is implicitly cast to double before the addition.\n- Explicit casting is required when converting from a larger numeric type to a smaller one (e.g., double to int).\n- Explicit casting can only be performed between compatible primitive numeric types.\n- String values cannot be directly cast to numeric types; they must be parsed using wrapper class methods such as Integer.parseInt.\n- parse short takes a string and returns a short.\n- Java provides parse methods for float and double, with distinct method names.\n- parse float is a method for converting a string to a float.\n- To convert a string x to an integer, use Integer.parseInt(x).\n- Parsing a non‑integer string with Integer.parseInt throws an exception.\n- When the user enters a floating‑point value like 1.1, use Double.parseDouble (or Float.parseFloat) instead of Integer.parseInt.\n- Java provides a Math class in java.lang that is always available without import.\n- The Math.round method rounds a floating‑point number to the nearest whole number.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 956,
+        "max_output_tokens": 2000,
+        "total_tokens": 2956,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-ebe971a687c0-269",
+      "start": 269,
+      "end": 275,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Casting the result of Math.random() * 100 to int without parentheses causes the fractional part to be lost, resulting in zero.\n- Wrapping the entire expression (Math.random() * 100) in parentheses before casting yields an integer between 0 and 100.\n- NumberFormat can format numbers as currency, adding a dollar sign and commas for thousands.\n- NumberFormat is an abstract class in java.text and cannot be instantiated directly with the new operator.\n- To obtain a NumberFormat instance, use the static factory method getCurrencyInstance(), which returns a NumberFormat object.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 521,
+        "max_output_tokens": 2000,
+        "total_tokens": 2521,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-a473de354dc6-277",
+      "start": 277,
+      "end": 294,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- In java we have this scanner class that is defined in java.util package.\n- Let's import this and create a scanner object, so new scanner.\n- Now here inside this parenthesis, we need to specify where we're going to read data from.\n- Are we going to read it from the terminal window?\n- Are we going to read it from a file or what?\n- To work with the terminal window, we type system.in.\n- This is one of the fields in the system class.\n- A field, as I told you before, is like a variable that we in the class.\n- So we have system.in, we also have system.out, which we use to print something on the terminal, right?\n- Now let's use system.in and terminate this statement with a semicolon.\n- Now this object has a bunch of methods for reading data, and all these methods start with next.\n- There are methods nextByte, nextLine, nextBoolean for reading a byte, a line, and a boolean respectively.\n- Calling the nextByte method returns a byte value that can be stored in a byte variable.\n- Concatenating a string with a byte causes implicit casting of the byte to a string.\n- The println method adds a new line after the printed label.\n- To avoid the extra new line, use the print method instead of println.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 699,
+        "max_output_tokens": 2000,
+        "total_tokens": 2699,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-7eb5c96eab0b-298",
+      "start": 298,
+      "end": 304,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- The next method returns a string, which can cause a compilation issue if a different type is expected.\n- Each call to the next method reads one token; tokens are separated by whitespace.\n- To obtain a full name containing a space you must call next twice (once for each token) or use the nextLine method.\n- The nextLine method returns the entire line entered by the user, regardless of spaces or tabs.\n- The trim method removes leading and trailing whitespace from a string.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 492,
+        "max_output_tokens": 2000,
+        "total_tokens": 2492,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-1ce663bce3b9-306",
+      "start": 306,
+      "end": 345,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- The next line method returns a string that we are storing in this variable.\n- Before storing the result in this variable, we can use the dot operator to access the members of this string object, call the trim method, and then store the result in this variable.\n- We are chaining multiple methods here.\n- Running the program produces output.\n- The output includes a few spaces, the word 'mosh', and 'howdy', resulting in a beautiful output.\n- The instructor announces that it is time for a project.\n- Students are asked to use what they have learned in this section to build a mortgage calculator.\n- When the program runs, it asks a few questions.\n- The first question asks for the principal, or the amount of loan.\n- Example principal value: $100,000.\n- The second question asks for the annual interest rate.\n- Example interest rate: 3.92%.\n- The third question asks for the period in years.\n- Example period: 30 years.\n- The program calculates monthly payments and displays them as currency.\n- We need to multiply this number by 12 (months in a year) to calculate the number of payments.\n- To raise a number to the power of n, use the pow method of the Math class.\n- The Math class pow (or power) method takes two arguments, a and b.\n- Two final variables (constants) are declared: monthsInYear set to 12 and percent set to 100.\n- Declaring these constants avoids magic numbers in the code.\n- Monthly interest is calculated by taking the annual interest, dividing it by percent, and then dividing by months in a year.\n- The number 12 represents the number of months in a year.\n- Use int for the principal amount because it can store values up to about 2 billion.\n- Read the annual interest rate as a float; float is sufficient because the interest rate is a small number.\n- Read the period (years) as a byte because the maximum number of years to support is 30.\n- Use meaningful variable names; avoid magic names like \"MI\" for monthly interest.\n- Use camel case notation: capitalize the first letter of each word except the first.\n- Mortgage calculation: multiply the principal by one expression and divide by another expression.\n- After collecting all input data, compute the mortgage using the formula.\n- The NumberFormat class is used to format the mortgage value as a currency.\n- The result is stored in the string variable mortgageFormatted and printed.\n- A variable can be avoided by inserting the expression directly to increase readability, though this is optional.\n- The implementation presented is a mortgage calculator.\n- The program has a number of problems.\n- The first problem is input validation.\n- If a non‑numeric value is entered, the program crashes.\n- Conditional statements can be used to rescue the program from these input issues.\n- The next section will teach how to use conditional statements to validate user input.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 1169,
+        "max_output_tokens": 2000,
+        "total_tokens": 3169,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-dedf431acf9c-347",
+      "start": 347,
+      "end": 375,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Variables and constants include primitive and reference types; primitive types store simple values while reference types hold references to complex objects.\n- There are two types of casting: implicit casting and explicit casting.\n- You can work with numbers, strings, and arrays, and read input from the terminal.\n- Control flow statements are used to control the flow of execution of programs.\n- Comparison operators are used for comparing values.\n- Logical operators such as logical AND, logical OR, and logical NOT are used for implementing real‑world rules.\n- There are three different types of control‑flow statements.\n- Conditional statements are used for making decisions in programs; loops are used for executing code repetitively; error handling can be revisited in a mortgage‑calculator example.\n- If the user enters an invalid value, the program can keep asking them to try again.\n- The section begins with a discussion of comparison operators.\n- Comparison operators are used to compare primitive values.\n- Equality can be tested by checking whether two variables, such as x and y, are equal.\n- Two integer variables, x and y, can be declared.\n- The equality operator (==) compares two values and returns true when they are equal.\n- A boolean expression is an expression that evaluates to a true or false value.\n- An expression is a piece of code that produces a value.\n- A boolean expression produces a boolean value, true or false.\n- The inequality operator ( != ) returns false when the two operands are equal.\n- The expression x is not equal to y returns false when x and y have the same value.\n- Java provides the comparison operators: greater than (&gt;), greater than or equal to (&gt;=), less than (&lt;), and less than or equal to (&lt;=).\n- Logical operators can be used to combine multiple boolean expressions.\n- In a previous tutorial it was stated that a boolean expression produces a boolean value.\n- An integer variable named temperature is declared and initialized to 22.\n- A boolean variable can be declared to check if temperature is greater than 20 and less than 30.\n- The &amp;&amp; operator represents the logical AND operator in Java.\n- If both conditions are true, the result of the boolean expression is true; otherwise it is false.\n- Java evaluates a boolean expression from left to right and uses short‑circuit evaluation: if the first condition is false, the second condition is not evaluated.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 1053,
+        "max_output_tokens": 2000,
+        "total_tokens": 3053,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-907e69261d07-377",
+      "start": 377,
+      "end": 379,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Java will not evaluate the rest of this expression, it simply returns true.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 378,
+        "max_output_tokens": 2000,
+        "total_tokens": 2378,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-d84a54d25499-381",
+      "start": 381,
+      "end": 408,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- If the condition in an if statement is true, the statement that follows the if will be executed.\n- Curly braces define a code block; code inside the braces is executed when the surrounding condition is true.\n- Braces are required only when a block contains multiple statements; a single statement can omit braces.\n- A boolean expression such as \"temp &gt; 20 &amp;&amp; temp &lt;= 30\" can be used in an else if clause to test a range of values.\n- An if‑else‑if chain can have three clauses: the initial if, one or more else if, and an optional else.\n- When removing unnecessary braces, align else if and else clauses at the same indentation level as the if clause for better readability.\n- If the first condition of an if‑else chain is false, the program proceeds to evaluate the next else if condition.\n- Underscores can be used between digits in numeric literals to make code more readable.\n- A boolean variable called hasHighIncome can be declared.\n- If income is greater than $100,000, set hasHighIncome to true; otherwise set it to false.\n- An if statement can be written to test a condition and assign a boolean variable.\n- A boolean variable can be given an initial value (e.g., false) before the if statement.\n- The if statement can be simplified by directly assigning the boolean expression result to the variable.\n- Wrapping the boolean expression in parentheses improves readability, though not required.\n- you learned there cannot be used here.\n- In other words, we cannot add income greater than $100,000 here.\n- Because here we have a boolean expression, but on the left side we have declared a string variable.\n- So we want to set this to a different string depending on the result of this expression.\n- And this is where we use the ternary operator.\n- So we start with our condition, then we type a question mark, if this condition is true, we add this value here.\n- Otherwise, we add the other value.\n- So this question mark and colon is the ternary operator in java, it has three pieces, first we have a condition, if this condition is true, this value will be returned and assigned to our class name variable, otherwise this other value will be returned.\n- Now we can completely get rid of this if statement.\n- So, put the ternary operator in your toolbox, it's very helpful.\n- Next we're going to look at switch statements in java.\n- In this tutorial, we're going to look at switch statements in java.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 1050,
+        "max_output_tokens": 2000,
+        "total_tokens": 3050,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-2d4021d9b8c2-410",
+      "start": 410,
+      "end": 424,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Switch statements execute different parts of code depending on the value of an expression, kind of similar to if statements.\n- An if statement can be used to check the role of the current user and print different messages or give different features depending on the role.\n- A switch statement can be used to implement the same role‑checking logic and can look cleaner than an if‑else chain.\n- A default clause in a switch statement executes when none of the previous case clauses match.\n- A break statement is not required after the last case in a switch block because execution automatically exits the block.\n- Switch statements can compare strings or integers; when using integers, case labels are numeric literals.\n- A compilation error occurs if the switch variable type does not match the type of the case labels (e.g., using a string variable with integer case labels).\n- 10 is also divisible by 5, so we get fizz.\n- A number that is divisible by 3 results in buzz.\n- Other else clauses are ignored when a previous condition is true.\n- Place the most specific conditions at the top and the most generic ones at the bottom.\n- If the number is divisible by 5 and 3, print fizzbuzz; this is a very specific condition.\n- Otherwise, if the number is only divisible by 5, print fizz; else if divisible by 3, print buzz; otherwise print the number itself.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 744,
+        "max_output_tokens": 2000,
+        "total_tokens": 2744,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-bb7b7c4b4f06-426",
+      "start": 426,
+      "end": 433,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Using loops reduces code nesting and improves readability compared to repeated if‑else statements.\n- Loops allow repeating statements without duplicating code.\n- A for loop in Java consists of three parts: an initialization statement, a boolean condition, and an increment statement.\n- A for loop repeats one or more statements a specified number of times.\n- If the loop body contains a single statement, braces are optional; multiple statements require a code block.\n- When the for loop runs with i initialized to 0 and condition i &lt; 5, the loop body executes five times, printing \"hello world\" each iteration.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 532,
+        "max_output_tokens": 2000,
+        "total_tokens": 2532,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-be6998c008c785-8945329f567a-437",
+      "start": 437,
+      "end": 464,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- A while loop can be written by declaring a loop variable, setting a condition in parentheses, and placing the loop body inside braces; the variable can be decremented each iteration to count down.\n- A while loop can be used when the number of iterations is not known in advance, such as reading user input until \"quit\" is entered.\n- One way to solve this problem is to check the input before printing it.\n- If the input does not equal quit, then we print it.\n- Condition: input does not equal quit.\n- If this condition is true, then we print the input.\n- We can reverse this condition: if the user types quit, break out of the loop.\n- Remove the not operator: if the user types quit, we break.\n- Otherwise, continue execution and print this input on the terminal.\n- When Java sees the break statement it will ignore everything else after and terminate the loop.\n- The continue statement moves control to the beginning of a loop.\n- If the user types pass, we don't want to echo that, but also we don't want to terminate the loop.\n- the brick statement terminates a loop, and the continuous statement moves control to the beginning of a loop.\n- using true as the loop condition simplifies the code.\n- a loop with condition true executes forever until the user types quit.\n- if you use while true, make sure you have a break statement in your loop.\n- So we get each item on a new line.\n- Beautiful.\n- Now, there is another way to write the same code using the for each loop.\n- Here we type for, in parentheses we declare a loop variable, but the type of this variable should be based on the type of items in our array.\n- So here we have a string array and that means every item in this array is a string.\n- So here we should declare a string variable, we call it fruit here we type a colon and then the name of our array fruits.\n- Now in each iteration, fruit will hold the value of one item in this array.\n- So here we don't have to declare a numeric counter, we don't have to write a boolean expression like this, we don't have to increment our counter, it's much easier to iterate over an array.\n- Now, if we print fruit, we get the exact same result as before.\n- Take a look.\n- So, the first three items are from our for loop and here's the result of our for each loop.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 1005,
+        "max_output_tokens": 2000,
+        "total_tokens": 3005,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    }
+  ]
+}

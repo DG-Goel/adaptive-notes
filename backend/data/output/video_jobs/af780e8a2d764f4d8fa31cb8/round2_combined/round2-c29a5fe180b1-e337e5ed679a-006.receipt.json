@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-1b01bbe9-0a6b-4a2a-8c30-1401dde9efd4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Effects of Interest‑Rate Increase in an Open Economy\",\n      \"source_segment_ids\": [\"CON_0044\", \"CON_0049\", \"CON_0050\", \"FCT_0092\", \"FCT_0093\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0044\", \"CON_0049\", \"CON_0050\", \"FCT_0092\", \"FCT_0093\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0044\",\n              \"exact_quote\": \"In an open economy, monetary policy affects aggregate demand through two channels: investment reduction and exchange‑rate appreciation.\"\n            },\n            {\n              \"note_id\": \"CON_0049\",\n              \"exact_quote\": \"When I increase interest rate from here to there, then my exchange rate has to appreciate.\"\n            },\n            {\n              \"note_id\": \"CON_0050\",\n              \"exact_quote\": \"So an expansionary domestic monetary policy will lead to a contraction in output, which is what we get out of monetary policy, but it will also lead to an appreciation of the currency.\"\n            },\n            {\n              \"note_id\": \"FCT_0092\",\n              \"exact_quote\": \"Net exports decline.\"\n            },\n            {\n              \"note_id\": \"FCT_0093\",\n              \"exact_quote\": \"The US moves to the left, causing output to fall.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"concept_tree\",\n            \"title\": \"Interest‑Rate Increase → Economic Outcomes\",\n            \"nodes\": [\n              {\n                \"id\": \"n0\",\n                \"label\": \"Interest‑Rate Increase\"\n              },\n              {\n                \"id\": \"n1\",\n                \"label\": \"Investment Reduction\",\n                \"parent\": \"n0\"\n              },\n              {\n                \"id\": \"n2\",\n                \"label\": \"Exchange‑Rate Appreciation\",\n                \"parent\": \"n0\"\n              },\n              {\n                \"id\": \"n3\",\n                \"label\": \"Currency Appreciation → Net‑Exports Decline\",\n                \"parent\": \"n2\"\n              },\n              {\n                \"id\": \"n4\",\n                \"label\": \"Output Contraction\",\n                \"parent\": \"n0\"\n              }\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Sequence of Events After an Interest‑Rate Rise\",\n      \"source_segment_ids\": [\"CON_0049\", \"CON_0050\", \"FCT_0092\", \"FCT_0093\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0049\", \"CON_0050\", \"FCT_0092\", \"FCT_0093\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0049\",\n              \"exact_quote\": \"When I increase interest rate from here to there, then my exchange rate has to appreciate.\"\n            },\n            {\n              \"note_id\": \"CON_0050\",\n              \"exact_quote\": \"So an expansionary domestic monetary policy will lead to a contraction in output, which is what we get out of monetary policy, but it will also lead to an appreciation of the currency.\"\n            },\n            {\n              \"note_id\": \"FCT_0092\",\n              \"exact_quote\": \"Net exports decline.\"\n            },\n            {\n              \"note_id\": \"FCT_0093\",\n              \"exact_quote\": \"The US moves to the left, causing output to fall.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Impact Chain of an Interest‑Rate Increase\",\n            \"direction\": \"DOWN\",\n            \"nodes\": [\n              {\n                \"id\": \"s0\",\n                \"label\": \"Start: Interest‑Rate Rise\",\n                \"kind\": \"start\"\n              },\n              {\n                \"id\": \"a1\",\n                \"label\": \"Currency Appreciates\",\n                \"kind\": \"action\"\n              },\n              {\n                \"id\": \"a2\",\n                \"label\": \"Net Exports Decline\",\n                \"kind\": \"action\"\n              },\n              {\n                \"id\": \"a3\",\n                \"label\": \"Output Contracts\",\n                \"kind\": \"action\"\n              },\n              {\n                \"id\": \"s1\",\n                \"label\": \"End\",\n                \"kind\": \"success\"\n              }\n            ],\n            \"edges\": [\n              {\n                \"from\": \"s0\",\n                \"to\": \"a1\",\n                \"label\": \"\"\n              },\n              {\n                \"from\": \"a1\",\n                \"to\": \"a2\",\n                \"label\": \"\"\n              },\n              {\n                \"from\": \"a2\",\n                \"to\": \"a3\",\n                \"label\": \"\"\n              },\n              {\n                \"from\": \"a3\",\n                \"to\": \"s1\",\n                \"label\": \"\"\n              }\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visuals. Identify relationships: interest rate increase -> exchange rate appreciation, monetary policy channels, etc. Could make concept tree: Monetary policy effects -> investment reduction, exchange-rate appreciation. Also flowchart: increase interest rate -> higher rates -> currency appreciation -> net exports decline. Use tables maybe. We'll output units.\n\nCreate one concept_tree for \"Interest rate increase leads to exchange rate appreciation\" with branches: Investment reduction, Exchange-rate appreciation, Output contraction, Net exports decline. Use notes.\n\nProvide evidence quotes.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794817942,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_02b0d31eca",
+  "usage": {
+    "completion_tokens": 1229,
+    "prompt_tokens": 2586,
+    "total_tokens": 3815,
+    "completion_time": 2.574627323,
+    "completion_tokens_details": {
+      "reasoning_tokens": 109
+    },
+    "prompt_time": 0.310784296,
+    "prompt_tokens_details": null,
+    "queue_time": 0.327818962,
+    "total_time": 2.885411619
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hqrnk8exmaa7agx6evg9cn",
+    "debug": null,
+    "seed": 1496049432,
+    "usage": null
+  }
+}

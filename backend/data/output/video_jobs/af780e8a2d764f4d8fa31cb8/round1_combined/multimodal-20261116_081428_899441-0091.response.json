@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-5ca36b48-aa25-4e6e-88ba-f8b7ab1de695",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"I001\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"An increase in the foreign interest rate causes the exchange rate to fall (depreciate).\",\n      \"refs\": [\"Q0005\", \"Q0008\", \"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I002\",\n      \"category\": \"explanations\",\n      \"field\": \"explanation_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the foreign interest rate rises, the exchange rate falls, meaning the currency depreciates.\",\n      \"refs\": [\"Q0005\", \"Q0008\", \"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C001\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"exchange rate depreciation\",\n      \"refs\": [\"Q0009\", \"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C001\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The exchange rate is falling, indicating the dollar is depreciating.\",\n      \"refs\": [\"Q0009\", \"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I003\",\n      \"category\": \"explanations\",\n      \"field\": \"explanation_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When interest rates are equal internationally, the exchange rate equals the expected exchange rate.\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I004\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The US interest rate is stabilizing while Europe is hiking more.\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What happens to the exchange rate when the foreign interest rate increases?\",\n      \"answer\": \"It falls (depreciates).\",\n      \"distractors\": [\n        \"It rises (appreciates).\",\n        \"It stays the same.\",\n        \"It becomes more stable.\"\n      ],\n      \"explanation\": \"The speaker states that an increase in the foreign interest rate leads to a fall in the exchange rate, causing depreciation.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Effect of foreign interest rate on exchange rate\",\n      \"refs\": [\"Q0005\", \"Q0008\"]\n    },\n    {\n      \"question\": \"Which country's interest rate was described as stabilizing?\",\n      \"answer\": \"The United States.\",\n      \"distractors\": [\n        \"Europe\",\n        \"Japan\",\n        \"Canada\"\n      ],\n      \"explanation\": \"The speaker says, \\\"The US is sort of stabilizing here, and Europe is beginning to hike a little more than the US.\\\"\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Interest rate trends\",\n      \"refs\": [\"Q0007\"]\n    },\n    {\n      \"question\": \"According to the speaker, when international interest rates are equal, what is the relationship between the exchange rate and the expected exchange rate?\",\n      \"answer\": \"They are equal.\",\n      \"distractors\": [\n        \"The exchange rate is higher than the expected rate.\",\n        \"The exchange rate is lower than the expected rate.\",\n        \"There is no defined relationship.\"\n      ],\n      \"explanation\": \"The speaker notes, \\\"We start from interest rate equal to international interest rate, therefore, the exchange rate is equal to expected exchange rate.\\\"\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Interest parity condition\",\n      \"refs\": [\"Q0004\"]\n    },\n    {\n      \"question\": \"What term describes the dollar’s movement when the exchange rate falls?\",\n      \"answer\": \"Depreciating.\",\n      \"distractors\": [\n        \"Appreciating\",\n        \"Stabilizing\",\n        \"Volatile\"\n      ],\n      \"explanation\": \"The speaker says, \\\"and the dollar is depreciating,\\\" linking the fall in exchange rate to dollar depreciation.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Currency depreciation\",\n      \"refs\": [\"Q0010\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract concepts etc. The excerpts talk about exchange rate, foreign interest rate, depreciation. We can create facts: increase foreign interest rate leads to exchange rate fall (depreciation). Provide rows.\n\nIdentify items: maybe one concept \"exchange rate depreciation\". Provide content.\n\nWe'll produce rows for facts and explanations.\n\nLet's create item \"I001\". category facts fact_text.\n\nRow: text \"An increase in the foreign interest rate causes the exchange rate to fall (depreciate).\" refs Q0005,Q0008,Q0009. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\nAlso row for explanation: item I002 category explanations topic \"Effect of foreign interest rate on exchange rate\", explanation_text from Q0008,Q0009. etc.\n\nAlso concept: item C001 category concepts concept_name \"exchange rate depreciation\", content from Q0009,Q0010.\n\nAdd abstentions for missing definitions etc.\n\nQuiz: need 4 questions. Q1: What happens to exchange rate when foreign interest rate rises? Answer: It falls (depreciates). Distractors: rises, stays same, becomes more stable. Bloom: Understand. refs Q0005,Q0008.\n\nQ2: Which country’s interest rate was described as stabilizing? Answer: US. Distractors: Europe, Japan, Canada. Bloom: Remember. refs Q0007.\n\nQ3: According to the speaker, what is the relationship between equal interest rates and exchange rate? Answer: Exchange rate equals expected exchange rate. Distractors: Exchange rate equals current rate, Exchange rate equals foreign rate, No relationship. Bloom: Understand. refs Q0004.\n\nQ4: What term describes the dollar’s movement when the exchange rate falls? Answer: Depreciating. Distractors: Appreciating, Stabilizing, Volatile. Bloom: Remember. refs Q0010.\n\nNow construct rows list.\n\nWe need fields per schema. For facts: fields fact_text, part value, element 0.\n\nRow example.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794817035,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c800245357",
+  "usage": {
+    "completion_tokens": 1639,
+    "prompt_tokens": 2513,
+    "total_tokens": 4152,
+    "completion_time": 3.428665643,
+    "completion_tokens_details": {
+      "reasoning_tokens": 413
+    },
+    "prompt_time": 0.139815788,
+    "prompt_tokens_details": null,
+    "queue_time": 0.290787961,
+    "total_time": 3.568481431
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hpwzt5ekq8xptez4csn08f",
+    "debug": null,
+    "seed": 1189037923,
+    "usage": null
+  }
+}

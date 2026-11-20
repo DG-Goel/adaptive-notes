@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-c41598c1-8d12-4a5b-a879-8b70ab70910f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"division_behavior\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"In Java, dividing two whole numbers yields a whole number.\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"division_behavior\",\n      \"category\": \"facts\",\n      \"field\": \"fact_type\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"behavior\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"floating_point_cast\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Casting operands to float or double before division produces a floating‑point result.\",\n      \"refs\": [\"Q0003\", \"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"floating_point_cast\",\n      \"category\": \"facts\",\n      \"field\": \"fact_type\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"technique\",\n      \"refs\": [\"Q0003\", \"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"type_mismatch_error\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Assigning the result of a double division to an int variable causes a compilation error.\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"type_mismatch_error\",\n      \"category\": \"facts\",\n      \"field\": \"fact_type\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"error\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"expression_definition\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"expression\",\n      \"refs\": [\"Q0007\", \"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"expression_definition\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A piece of code that produces a value.\",\n      \"refs\": [\"Q0007\", \"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc based on excerpts. Extract facts: division of two whole numbers yields whole number; casting to double gives floating point. Provide rows. Also concept: expression produces a value. Provide rows.\n\nCreate items maybe \"division_behavior\". Use refs Q0002, Q0003, Q0005, Q0006, Q0009.\n\nConstruct rows.\n\nWe'll include facts category.\n\nRow example: {\"text\":\"In Java, dividing two whole numbers yields a whole number.\",\"refs\":[\"Q0002\"],...}\n\nSet availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, related_refs [].\n\nDo similar for casting.\n\nAlso concept expression.\n\nProvide abstentions none, excluded none.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636518,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_19b184c447",
+  "usage": {
+    "completion_tokens": 1016,
+    "prompt_tokens": 2901,
+    "total_tokens": 3917,
+    "completion_time": 2.112566855,
+    "completion_tokens_details": {
+      "reasoning_tokens": 149
+    },
+    "prompt_time": 0.129054605,
+    "prompt_tokens_details": null,
+    "queue_time": 0.37068796,
+    "total_time": 2.24162146
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7car2cke1h8q378mymx1q2s",
+    "debug": null,
+    "seed": 1244818901,
+    "usage": null
+  }
+}

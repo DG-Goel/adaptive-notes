@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-d1f9d35f-36ae-4879-b268-92410a7f7a2a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00021\"],\n      \"reason\": \"No primary excerpt provides a concept name or content.\"\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00021\"],\n      \"reason\": \"No primary excerpt defines a term.\"\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00021\"],\n      \"reason\": \"No primary excerpt offers an explanatory passage.\"\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00021\"],\n      \"reason\": \"No primary excerpt presents a concrete example.\"\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00021\"],\n      \"reason\": \"No primary excerpt states a factual claim.\"\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00021\"],\n      \"reason\": \"No primary excerpt contains a formula.\"\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00021\"],\n      \"reason\": \"No primary excerpt outlines a procedure.\"\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00021\"],\n      \"reason\": \"No primary excerpt describes a relationship between entities.\"\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract concepts etc. The excerpts are vague, no clear teaching. Likely no required fields. So rows empty, abstentions for missing content? We must provide abstentions for each category where required fields missing? Probably one abstention per category indicating source missing. Use PRIMARY excerpts? Might just output empty rows, empty quiz, and abstentions for each category with reason \"SOURCE_MISSING\". Provide source_ids list. Let's do for concepts, definitions, explanations, examples, facts, formulas, procedures, relationships.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794769678,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_93703442d9",
+  "usage": {
+    "completion_tokens": 499,
+    "prompt_tokens": 2274,
+    "total_tokens": 2773,
+    "completion_time": 1.102511196,
+    "completion_tokens_details": {
+      "reasoning_tokens": 106
+    },
+    "prompt_time": 0.024479853,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "queue_time": 0.370525333,
+    "total_time": 1.126991049
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g9qtxke2gvb32acedtwp1h",
+    "debug": null,
+    "seed": 2103040844,
+    "usage": null
+  }
+}

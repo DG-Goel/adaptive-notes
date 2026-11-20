@@ -1,0 +1,187 @@
+{
+  "timestamp": "20261101_180000",
+  "total_reviewed": 9,
+  "classification_summary": {
+    "VERIFIER_FALSE_POSITIVE": 6,
+    "INSUFFICIENT_SOURCE_CONTEXT": 1,
+    "GENUINE_ERROR": 1,
+    "REQUIRES_DETAILED_REVIEW": 1
+  },
+  "confidence_summary": {
+    "HIGH": 4,
+    "MEDIUM": 4,
+    "NONE": 1
+  },
+  "reviews": [
+    {
+      "knowledge_id": "CON_0167",
+      "knowledge_type": "concept",
+      "claim": "Array elements are accessed with an index that starts at 0.",
+      "source_unit_ids": [
+        "T0019"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['0'] but source has ['1', '2', '10', '3']",
+      "classification": "VERIFIER_FALSE_POSITIVE",
+      "evidence": "Source explicitly states \"to reference the first element...we use zero\"",
+      "supporting_passage": "to reference the first element or first item we use zero",
+      "confidence": "HIGH",
+      "recommendation": "No correction needed. Verifier failed to recognize support.",
+      "corrected_claim": null
+    },
+    {
+      "knowledge_id": "CON_0205",
+      "knowledge_type": "concept",
+      "claim": "Manual conversion of a value to a different type using a cast syntax, e.g., (double) 5.",
+      "source_unit_ids": [
+        "T0024"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['5'] but source has ['1', '2', '3', '4', '3.1']",
+      "classification": "INSUFFICIENT_SOURCE_CONTEXT",
+      "evidence": "Casting discussed but specific example not found",
+      "supporting_passage": "",
+      "confidence": "MEDIUM",
+      "recommendation": "Clarify if example is illustrative or direct quote",
+      "corrected_claim": null
+    },
+    {
+      "knowledge_id": "DEF_0239",
+      "knowledge_type": "definition",
+      "claim": "Method that returns a double value uniformly distributed between 0.0 (inclusive) and 1.0 (exclusive).",
+      "source_unit_ids": [
+        "T0026"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['0.0', '1.0'] but source has ['3.1', '1.1', '2', '1', '0', '100']",
+      "classification": "VERIFIER_FALSE_POSITIVE",
+      "evidence": "Source explicitly states random generates number between 0 and 1",
+      "supporting_passage": "between 0 and 1",
+      "confidence": "HIGH",
+      "recommendation": "No correction needed",
+      "corrected_claim": null
+    },
+    {
+      "knowledge_id": "EXM_0215",
+      "knowledge_type": "example",
+      "claim": "double result = (double)5 / 2; // result is 2.5",
+      "source_unit_ids": [
+        "T0024"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['5', '2.5'] but source has ['1', '2', '3', '4', '3.1']",
+      "classification": "GENUINE_ERROR",
+      "evidence": "Specific example (double)5 / 2 not found in T0024",
+      "supporting_passage": "",
+      "confidence": "MEDIUM",
+      "recommendation": "Remove specific example or find correct source",
+      "corrected_claim": "Explicit casting allows narrowing conversions (e.g., converting double to int)"
+    },
+    {
+      "knowledge_id": "EXM_0273",
+      "knowledge_type": "example",
+      "claim": "Calling next() twice on input \"Marsh Hamid\" returns \"Marsh\" then \"Hamid\".",
+      "source_unit_ids": [
+        "T0030"
+      ],
+      "verifier_reason": "Entity mismatch: claimed entities ['Marsh Hamid'] not found in source",
+      "classification": "VERIFIER_FALSE_POSITIVE",
+      "evidence": "Source contains the example used in claim",
+      "supporting_passage": "Marsh",
+      "confidence": "HIGH",
+      "recommendation": "No correction needed",
+      "corrected_claim": null
+    },
+    {
+      "knowledge_id": "EXM_0380",
+      "knowledge_type": "example",
+      "claim": "Input 5 → fizz; Input 10 → fizz; Input 3 → buzz; Input 15 → fizzbuzz; Input 2 → 2",
+      "source_unit_ids": [
+        "T0041",
+        "T0042"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['10', '2'] but source has ['3', '5', '0', '15', '12', '14']",
+      "classification": "VERIFIER_FALSE_POSITIVE",
+      "evidence": "FizzBuzz logic present in source",
+      "supporting_passage": "",
+      "confidence": "HIGH",
+      "recommendation": "No correction needed. Verifier sensitive to numeric order.",
+      "corrected_claim": null
+    },
+    {
+      "knowledge_id": "EXM_0403",
+      "knowledge_type": "example",
+      "claim": "Printing \"hello world\" inside a for loop with I from 0 to 4 results in five lines of output.",
+      "source_unit_ids": [
+        "T0043"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['4'] but source has ['0']",
+      "classification": "VERIFIER_FALSE_POSITIVE",
+      "evidence": "For loop with hello world example in source",
+      "supporting_passage": "",
+      "confidence": "MEDIUM",
+      "recommendation": "Verify iteration count matches source example",
+      "corrected_claim": null
+    },
+    {
+      "knowledge_id": "EXM_0431",
+      "knowledge_type": "example",
+      "claim": "An infinite while‑true loop asks for the principal; if the entered value is between 1,000 and 1,000,000, break exits the loop.",
+      "source_unit_ids": [
+        "T0048"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['000'] but source has ['1,000', '1', '0', '30', '3.9', '1000']",
+      "classification": "REQUIRES_DETAILED_REVIEW",
+      "evidence": "Not pre-classified, needs manual inspection",
+      "supporting_passage": "",
+      "confidence": "NONE",
+      "recommendation": "Perform detailed source comparison",
+      "corrected_claim": null
+    },
+    {
+      "knowledge_id": "PRC_0253",
+      "knowledge_type": "procedure",
+      "claim": "Call Math.random() to obtain a double in [0,1). Multiply the result by 100. Cast the final expression to int.",
+      "source_unit_ids": [
+        "T0027"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['0,1'] but source has ['0', '100', '8', '4', '0.1', '10']",
+      "classification": "VERIFIER_FALSE_POSITIVE",
+      "evidence": "Procedure for generating random integers described in source",
+      "supporting_passage": "",
+      "confidence": "MEDIUM",
+      "recommendation": "Verify step-by-step matches source explanation",
+      "corrected_claim": null
+    }
+  ],
+  "genuine_errors": [
+    {
+      "knowledge_id": "EXM_0215",
+      "knowledge_type": "example",
+      "claim": "double result = (double)5 / 2; // result is 2.5",
+      "source_unit_ids": [
+        "T0024"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['5', '2.5'] but source has ['1', '2', '3', '4', '3.1']",
+      "classification": "GENUINE_ERROR",
+      "evidence": "Specific example (double)5 / 2 not found in T0024",
+      "supporting_passage": "",
+      "confidence": "MEDIUM",
+      "recommendation": "Remove specific example or find correct source",
+      "corrected_claim": "Explicit casting allows narrowing conversions (e.g., converting double to int)"
+    }
+  ],
+  "corrections_needed": [
+    {
+      "knowledge_id": "EXM_0215",
+      "knowledge_type": "example",
+      "claim": "double result = (double)5 / 2; // result is 2.5",
+      "source_unit_ids": [
+        "T0024"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['5', '2.5'] but source has ['1', '2', '3', '4', '3.1']",
+      "classification": "GENUINE_ERROR",
+      "evidence": "Specific example (double)5 / 2 not found in T0024",
+      "supporting_passage": "",
+      "confidence": "MEDIUM",
+      "recommendation": "Remove specific example or find correct source",
+      "corrected_claim": "Explicit casting allows narrowing conversions (e.g., converting double to int)"
+    }
+  ]
+}

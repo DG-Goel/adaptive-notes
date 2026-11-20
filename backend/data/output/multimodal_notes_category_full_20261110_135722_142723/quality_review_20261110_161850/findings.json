@@ -1,0 +1,758 @@
+[
+  {
+    "finding_id": "Q01",
+    "priority": 1,
+    "kind": "unsupported_paraphrase",
+    "issue": "The note claims loops reduce nesting versus repeated if-else statements. G00104 compares two if-else implementations, then starts a separate loop lesson; the cited excerpts do not establish this loop comparison. The unsupported paraphrase remains visible.",
+    "recommended_action": "Re-review this item and separate the two source topics; do not fix it by inventing a general rule.",
+    "records": [
+      {
+        "knowledge_id": "FCT_0383",
+        "content": "Using loops reduces code nesting and improves readability compared to repeated if‑else statements.",
+        "markdown_line": 2686,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00104",
+            "start": 7520.16,
+            "end": 7581.67
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00104",
+            "quote": "This solution doesn't have any repetition or duplication in the code,\n but it has a nested structure, and these nested structures make\n our code hard to read and understand.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 469,
+            "end_char": 642,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          },
+          {
+            "source_id": "G00104",
+            "quote": "The previous solution\n had a bit of repetition, but it had a flat structure, there is no nesting here.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 643,
+            "end_char": 745,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          },
+          {
+            "source_id": "G00104",
+            "quote": "And this code is cleaner and easier to read.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 747,
+            "end_char": 791,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      }
+    ],
+    "external_reference": null
+  },
+  {
+    "finding_id": "Q02",
+    "priority": 1,
+    "kind": "technical_error_inherited_from_transcript",
+    "issue": "The visible note says String-array elements default to empty strings. G00049 contains the same claim, but Java reference-array components default to null. Source-faithful extraction does not make the claim technically correct.",
+    "recommended_action": "Retain the original source reading and add a separately attributed technical correction after review; do not silently rewrite the transcript.",
+    "records": [
+      {
+        "knowledge_id": "FCT_0163",
+        "content": "If you have a string array, all items are initialized to an empty string by default.",
+        "markdown_line": 1142,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00049",
+            "start": 3397.92,
+            "end": 3478.08
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00049",
+            "quote": "If you have a string array, all items get initialized to an empty string,\n okay?",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 216,
+            "end_char": 296,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      }
+    ],
+    "external_reference": "https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html#jls-4.12.5"
+  },
+  {
+    "finding_id": "Q03",
+    "priority": 1,
+    "kind": "unresolved_transcript_terminology",
+    "issue": "The visible note repeats brick statement and continuous statement from G00114. These conflict with the surrounding notes on break and continue. It carries no item-specific technical-terminology warning.",
+    "recommended_action": "Flag these transcript readings for audio/source confirmation and retain any reviewed correction separately.",
+    "records": [
+      {
+        "knowledge_id": "FCT_0401",
+        "content": "the brick statement terminates a loop, and the continuous statement moves control to the beginning of a loop.",
+        "markdown_line": 2824,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00114",
+            "start": 8250.8,
+            "end": 8337.02
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00114",
+            "quote": "So to recap,\n the brick statement terminates a loop, and the continuous statement\n moves control to the beginning of a loop.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 394,
+            "end_char": 518,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      }
+    ],
+    "external_reference": null
+  },
+  {
+    "finding_id": "Q04",
+    "priority": 1,
+    "kind": "case_sensitive_example_ambiguity",
+    "issue": "The visible candidate uses com.codewithmosh.main despite its source explicitly saying to use capital M. A reader could copy a conflicting class name.",
+    "recommended_action": "Keep the literal class name unresolved until source evidence is confirmed; do not turn the speech-derived example into approved code.",
+    "records": [
+      {
+        "knowledge_id": "FCT_0073",
+        "content": "The full path to the main class includes the package name, e.g., `com.codewithmosh.main`, and is case‑sensitive.",
+        "markdown_line": 471,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00018",
+            "start": 1183.45,
+            "end": 1262.73
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00018",
+            "quote": "So, the full path to this class\n is com.codewithmosh.main\n Make sure to use a capital M\n here because this is case sensitive.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 599,
+            "end_char": 724,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      }
+    ],
+    "external_reference": null
+  },
+  {
+    "finding_id": "Q05",
+    "priority": 2,
+    "kind": "unusable_formula_fragment",
+    "issue": "The visible mortgage note refers to one expression divided by another. It does not teach the formula. The source gaps correctly retain VISUAL_CONTEXT_REQUIRED, but the marker is absent from the notes body.",
+    "recommended_action": "Surface the mortgage gap beside the affected section and link the existing visual supplement. Do not reconstruct the equation.",
+    "records": [
+      {
+        "knowledge_id": "FCT_0295",
+        "content": "Mortgage calculation: multiply the principal by one expression and divide by another expression.",
+        "markdown_line": 2080,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00081",
+            "start": 5702.42,
+            "end": 5763.38
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00081",
+            "quote": "So we get a principal, multiply it by\n this expression, and then divide it by this other expression.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 695,
+            "end_char": 795,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      }
+    ],
+    "external_reference": null
+  },
+  {
+    "finding_id": "Q06",
+    "priority": 2,
+    "kind": "context_dependent_definition",
+    "issue": "The short-circuit definition says the rest of this expression is not evaluated and simply returns true, without naming the triggering condition or distinguishing OR from AND. Its source is the OR demonstration.",
+    "recommended_action": "Keep the OR context explicit; a general definition needs sufficient reviewed evidence. Avoid an unconditional short-circuit rule.",
+    "records": [
+      {
+        "knowledge_id": "DEF_0001",
+        "content": "Java will not evaluate the rest of this expression, it simply returns true.",
+        "markdown_line": 2352,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00088",
+            "start": 6246.84,
+            "end": 6321.74
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00088",
+            "quote": "Java will not evaluate the rest of this expression, it simply returns\n true.",
+            "fields": [
+              "/definition_text"
+            ],
+            "match_count": 1,
+            "start_char": 1,
+            "end_char": 77,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      }
+    ],
+    "external_reference": null
+  },
+  {
+    "finding_id": "Q07",
+    "priority": 2,
+    "kind": "low_information_fragments",
+    "issue": "Visible items include print this expression here, Use this for printing multi-dimensional arrays, Running the program produces output, Beautiful, and Take a look. These depend on absent screen context or add no learning content.",
+    "recommended_action": "Use reviewed educational filtering and attach demonstrations to source-linked context instead of retaining every utterance as a standalone fact.",
+    "records": [
+      {
+        "knowledge_id": "FCT_0135",
+        "content": "Now, instead of printing the message, let's print this expression here.",
+        "markdown_line": 943,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00040",
+            "start": 2746.47,
+            "end": 2811.33
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00040",
+            "quote": "Now, instead of printing the message, let's\n print this expression here.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 349,
+            "end_char": 421,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      },
+      {
+        "knowledge_id": "FCT_0172",
+        "content": "Use this for printing multi-dimensional arrays.",
+        "markdown_line": 1208,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00052",
+            "start": 3616.21,
+            "end": 3706.23
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00052",
+            "quote": "Use this for printing multi-dimensional arrays.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 1,
+            "end_char": 48,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      },
+      {
+        "knowledge_id": "FCT_0272",
+        "content": "Running the program produces output.",
+        "markdown_line": 1908,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00077",
+            "start": 5413.18,
+            "end": 5482.52
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00077",
+            "quote": "Let's run the program.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 348,
+            "end_char": 370,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      },
+      {
+        "knowledge_id": "FCT_0410",
+        "content": "Beautiful.",
+        "markdown_line": 2902,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00116",
+            "start": 8396.26,
+            "end": 8457.62
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00116",
+            "quote": "Beautiful.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 36,
+            "end_char": 46,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      },
+      {
+        "knowledge_id": "FCT_0418",
+        "content": "Take a look.",
+        "markdown_line": 2946,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00116",
+            "start": 8396.26,
+            "end": 8457.62
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00116",
+            "quote": "Take a look.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 813,
+            "end_char": 825,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      }
+    ],
+    "external_reference": null
+  },
+  {
+    "finding_id": "Q08",
+    "priority": 2,
+    "kind": "repetition",
+    "issue": "The remote-control analogy is repeated, the expression definition is an exact normalized duplicate, and the switch tutorial transition is repeated. Existing consolidation retained all 420 items.",
+    "recommended_action": "Consolidate repeated teaching points while preserving distinct source occurrences and correction sequences.",
+    "records": [
+      {
+        "knowledge_id": "FCT_0022",
+        "content": "Each button on a remote control performs a task, analogous to functions in programming.",
+        "markdown_line": 121,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00004",
+            "start": 188.59,
+            "end": 276.02
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00004",
+            "quote": "As a metaphor, think of the buttons on the remote\n control of your TV.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 927,
+            "end_char": 997,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          },
+          {
+            "source_id": "G00004",
+            "quote": "Each button performs a task.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 998,
+            "end_char": 1026,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      },
+      {
+        "knowledge_id": "FCT_0023",
+        "content": "Functions in programming languages are analogous to remote control buttons.",
+        "markdown_line": 127,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00004",
+            "start": 188.59,
+            "end": 276.02
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00004",
+            "quote": "Functions\n in programming languages are exactly the same.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 1027,
+            "end_char": 1084,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      },
+      {
+        "knowledge_id": "FCT_0197",
+        "content": "An expression is a piece of code that produces a value.",
+        "markdown_line": 1377,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00055",
+            "start": 3828.62,
+            "end": 3888.67
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00055",
+            "quote": "And by the way, an expression is a piece of code that produces a value.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 671,
+            "end_char": 742,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          },
+          {
+            "source_id": "G00055",
+            "quote": "So, what we have here is an expression, because it produces a value.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 744,
+            "end_char": 812,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      },
+      {
+        "knowledge_id": "FCT_0322",
+        "content": "An expression is a piece of code that produces a value.",
+        "markdown_line": 2255,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00084",
+            "start": 5935.19,
+            "end": 6029.26
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00084",
+            "quote": "So earlier I told you that an expression is a piece of code",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 1341,
+            "end_char": 1400,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      },
+      {
+        "knowledge_id": "FCT_0363",
+        "content": "Next we're going to look at switch statements in java.",
+        "markdown_line": 2554,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00096",
+            "start": 6910.47,
+            "end": 6983.12
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00096",
+            "quote": "Next we're going to look at switch statements\n in java.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 875,
+            "end_char": 930,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      },
+      {
+        "knowledge_id": "FCT_0364",
+        "content": "In this tutorial, we're going to look at switch statements in java.",
+        "markdown_line": 2558,
+        "content_withheld": false,
+        "source_units": [
+          {
+            "source_id": "G00096",
+            "start": 6910.47,
+            "end": 6983.12
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00096",
+            "quote": "In this tutorial, we're going to look at switch statements in java.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 931,
+            "end_char": 998,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      }
+    ],
+    "external_reference": null
+  },
+  {
+    "finding_id": "Q09",
+    "priority": 2,
+    "kind": "safeguard_working",
+    "issue": "The structured output contains risky candidates about next parsing bytes, all variables being declared in code blocks, and the initial wrong FizzBuzz behavior. Their content fields are withheld in Markdown, with excerpts or unresolved warnings. They must not be described as fully rendered approved facts.",
+    "recommended_action": "Retain the safeguards; improve item-specific context and avoid counting withheld fields as completed learning points.",
+    "records": [
+      {
+        "knowledge_id": "FCT_0261",
+        "content": "Calling the next method can only parse byte values; entering a floating point number such as 20.1 causes an exception.",
+        "markdown_line": 1832,
+        "content_withheld": true,
+        "source_units": [
+          {
+            "source_id": "G00075",
+            "start": 5286.34,
+            "end": 5357.38
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00075",
+            "quote": "Enter, we are 20, now what if we type\n a floating point number, like 20.1, we get\n an exception, because this method can only parse\n byte values.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 75,
+            "end_char": 220,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      },
+      {
+        "knowledge_id": "FCT_0347",
+        "content": "Variables must be declared inside code blocks (curly braces).",
+        "markdown_line": 2440,
+        "content_withheld": true,
+        "source_units": [
+          {
+            "source_id": "G00093",
+            "start": 6635.1,
+            "end": 6729.16
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00093",
+            "quote": "Declaration not allowed here.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 472,
+            "end_char": 501,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          },
+          {
+            "source_id": "G00093",
+            "quote": "So we cannot declare a variable here.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 502,
+            "end_char": 539,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          },
+          {
+            "source_id": "G00093",
+            "quote": "We can only declare variables inside code blocks, like this\n code block over here.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 541,
+            "end_char": 623,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          },
+          {
+            "source_id": "G00093",
+            "quote": "So to declare this variable,\n we need to add curly braces to define a new code block.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 624,
+            "end_char": 709,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      },
+      {
+        "knowledge_id": "FCT_0375",
+        "content": "If a number is divisible by both 5 and 3, the first condition evaluates to true and fizz is printed.",
+        "markdown_line": 2647,
+        "content_withheld": true,
+        "source_units": [
+          {
+            "source_id": "G00102",
+            "start": 7369.56,
+            "end": 7439.42
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00102",
+            "quote": "Here's the reason,\n with this implementation, if we enter 15, this first\n condition will evaluate to true, so we get fizz.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 229,
+            "end_char": 351,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      }
+    ],
+    "external_reference": "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Scanner.html#next()"
+  },
+  {
+    "finding_id": "Q10",
+    "priority": 2,
+    "kind": "unmarked_numeric_repair_in_audit",
+    "issue": "The structured byte-range candidate supplies -128 although the quoted transcript reads 128 to 127. The candidate is withheld in Markdown. The mathematically correct value is still an unmarked repair relative to its quoted source.",
+    "recommended_action": "Preserve the source mismatch and require explicit reviewed correction provenance.",
+    "records": [
+      {
+        "knowledge_id": "FCT_0091",
+        "content": "Primitive types have specific byte sizes and ranges: byte uses 1 byte and stores values from -128 to 127; short uses 2 bytes and stores values up to about 32,000; int uses 4 bytes and stores values up to roughly 2 billion; long uses 8 bytes and stores even larger numbers.",
+        "markdown_line": 607,
+        "content_withheld": true,
+        "source_units": [
+          {
+            "source_id": "G00025",
+            "start": 1732.31,
+            "end": 1797.43
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "G00025",
+            "quote": "So in the category\n of primitive types we have byte, which takes one byte of memory,\n and in one byte we can store values from 128\n to 127.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 478,
+            "end_char": 617,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          },
+          {
+            "source_id": "G00025",
+            "quote": "So next we have short which takes 2 bytes\n and with this we can store values up to 32,000.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 680,
+            "end_char": 770,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          },
+          {
+            "source_id": "G00025",
+            "quote": "Next we have\n integer, which we have seen before, integers take 4 bytes of memory and\n allow us to store values up to 2 billion.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 771,
+            "end_char": 899,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          },
+          {
+            "source_id": "G00025",
+            "quote": "Then we have long\n which takes 8 bytes, and with this we can store even larger numbers.",
+            "fields": [
+              "/fact_text"
+            ],
+            "match_count": 1,
+            "start_char": 900,
+            "end_char": 987,
+            "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+          }
+        ]
+      }
+    ],
+    "external_reference": "https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html#jls-4.12.5"
+  }
+]

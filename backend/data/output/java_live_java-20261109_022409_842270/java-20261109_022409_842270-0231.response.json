@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-d34a99c1-6d5a-4d12-a0b7-defcdaaf6b90",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"boolean expression\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a piece of code that produces a boolean value true or false\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"example_type\": null,\n      \"exemplifies\": {\n        \"text\": \"Comparing two integers x and y with the equality operator (==) yields true when the values are equal.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"example_text\": {\n        \"text\": \"int x = 5; int y = 5; System.out.println(x == y); // prints true\",\n        \"refs\": [\"Q0003\"]\n      }\n    }\n  ],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"logical operators\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_type\": null,\n      \"explanation_text\": {\n        \"text\": \"Logical operators (and, or, not) are used for implementing real‑world rules in programs.\",\n        \"refs\": [\"Q0001\"]\n      }\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"The equality operator (==) compares two values for equality.\",\n        \"refs\": [\"Q0003\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"A single equal sign (=) is the assignment operator.\",\n        \"refs\": [\"Q0003\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"Comparison operators include ==, !=, >, >=, <, and <=.\",\n        \"refs\": [\"Q0004\"]\n      }\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [\n    {\n      \"procedure_name\": {\n        \"text\": \"Add error handling to mortgage calculator\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"prerequisites\": null,\n      \"steps\": [\n        {\n          \"text\": \"Prompt the user for input.\",\n          \"refs\": [\"Q0002\"]\n        },\n        {\n          \"text\": \"Validate the input; if invalid, display an error message and repeat the prompt.\",\n          \"refs\": [\"Q0002\"]\n        },\n        {\n          \"text\": \"Proceed with the calculation once a valid value is entered.\",\n          \"refs\": [\"Q0002\"]\n        }\n      ],\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"The tutorial revisits the mortgage calculator and adds error handling so that if a user enters an invalid value, the program keeps asking them to try again.\",\n        \"refs\": [\"Q0002\"]\n      }\n    }\n  ],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output schema with empty arrays except extracted educational items. The excerpts are promotional plus teaching about control flow, comparison operators, boolean expressions. Extract facts, definitions, explanations, examples, formulas, procedures maybe.\n\nWe can create facts: \"== is the equality operator\" etc. Need cite refs.\n\nLet's extract:\n\nFact: \"== is the equality operator (compares two values for equality)\". refs Q0003.\n\nFact: \"=\" is the assignment operator. refs Q0003.\n\nDefinition: Boolean expression is a piece of code that produces a boolean value true or false. refs Q0004.\n\nFact: Comparison operators include ==, !=, >, >=, <, <=. refs Q0004.\n\nExplanation: Logical operators (and, or, not) are used for implementing real world rules. refs Q0001.\n\nProcedure: Adding error handling to mortgage calculator: ask user to re-enter until valid. refs Q0002 (mentions).\n\nExample: comparing x and y using == yields true if equal. refs Q0003.\n\nWe must follow schema fields.\n\nLet's construct arrays.\n\nconcepts none.\n\ndefinitions: one definition.\n\nfacts: multiple.\n\nexamples: one.\n\nexplanations: one.\n\nprocedures: one.\n\nrelationships none.\n\nexcluded none.\n\nProvide JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191615,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_245acb052a",
+  "usage": {
+    "completion_tokens": 915,
+    "prompt_tokens": 3132,
+    "total_tokens": 4047,
+    "completion_time": 1.929746548,
+    "completion_tokens_details": {
+      "reasoning_tokens": 257
+    },
+    "prompt_time": 0.036593791,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "queue_time": 0.062657756,
+    "total_time": 1.966340339
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z2eqg5e8k9a0db1w94qkr9",
+    "debug": null,
+    "seed": 666608204,
+    "usage": null
+  }
+}

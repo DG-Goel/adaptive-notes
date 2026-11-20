@@ -1,0 +1,75 @@
+{
+  "operations": [
+    {
+      "id": "offline-java-0000",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "76ab13548f98815c6af729db267dcf5fb399e95a7c1dd75c457bcc4df746c3c4",
+      "state": "failed",
+      "created": 1794035914.4087877,
+      "completed": 1794035914.4087877,
+      "validation": "failed"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "offline-java-0000",
+      "number": 1,
+      "created": 1794035914.4087877,
+      "dispatched": 1794035914.4087877,
+      "completed": 1794035914.4087877,
+      "input_reserved": 3407,
+      "output_reserved": 3000,
+      "input_actual": null,
+      "output_actual": null,
+      "reasoning": null,
+      "charged": 6407,
+      "http_status": 429,
+      "finish": null,
+      "duration": 0.0,
+      "category": "rate_limit"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794035914.4087877,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"46d334f3f69f1a900eb3e476971f52a809653449327e4a91b285d5afd1ea1a91\", \"estimated_input\": 3407, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 2,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794035914.4087877,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 3,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794035914.4087877,
+      "event": "provider_error",
+      "details": "{\"category\": \"rate_limit\", \"error_code\": null, \"message\": \"Groq API call failed: Error code: 429 - {'error': {'message': 'rate limit reached'}}\", \"retry_after\": 60.0, \"retry_after_header\": \"60\", \"retryable\": true, \"status_code\": 429}"
+    },
+    {
+      "sequence": 4,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794035914.4087877,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"failed\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"rate_limited\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"not_passed\"}"
+    },
+    {
+      "sequence": 5,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794035914.4087877,
+      "event": "operation_error",
+      "details": "{\"message\": \"Groq API call failed: Groq API call failed: Error code: 429 - {'error': {'message': 'rate limit reached'}}\", \"type\": \"GroqProviderError\"}"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "status": "UNVERIFIED_PREVIEW",
+  "gates": {
+    "extraction_completion": {
+      "outcome": "PASS",
+      "required": [
+        "synthetic-primary"
+      ],
+      "completed": [
+        "synthetic-primary"
+      ]
+    },
+    "structural_validity": {
+      "outcome": "PASS",
+      "missing_items": []
+    },
+    "semantic_faithfulness": {
+      "outcome": "NEEDS_REVIEW",
+      "mechanical_provenance": {
+        "valid": true,
+        "items_checked": 1,
+        "errors": []
+      },
+      "semantic_entailment_verified": false
+    },
+    "educational_completeness": {
+      "outcome": "NEEDS_REVIEW",
+      "source_units_without_primary_knowledge": [
+        "C"
+      ],
+      "topic_coverage": "NOT_EVALUATED"
+    },
+    "notes_usability": {
+      "outcome": "NEEDS_REVIEW",
+      "fallbacks": [],
+      "render_warnings": []
+    }
+  },
+  "source_coverage": {
+    "S": [
+      "FCT_0001"
+    ],
+    "C": []
+  },
+  "before": 1,
+  "after": 1,
+  "consolidation": {
+    "decisions": [
+      {
+        "action": "retain",
+        "original": "FCT_0001",
+        "target": "FCT_0001"
+      }
+    ],
+    "original_ids": {
+      "FCT_0001": [
+        "FCT_0001"
+      ]
+    },
+    "id_normalization": [
+      {
+        "artifact_id": "consolidation",
+        "category": "facts",
+        "item_index": 0,
+        "old_id": "FCT_0001",
+        "new_id": "FCT_0001",
+        "content_fingerprint": "e4f16f315ce415e729c763f15c1ca107d60df2b61030108ff4466f65c197d4f1",
+        "reason": "preserved"
+      }
+    ],
+    "review_pairs": []
+  },
+  "representation_distribution": {
+    "standard_text": 1
+  },
+  "knowledge_quality": {
+    "supported": null,
+    "partially_supported": null,
+    "unsupported": null,
+    "contradicted": null,
+    "inconclusive": 1
+  },
+  "examples_preserved": 0,
+  "original_knowledge": [
+    {
+      "id": "FCT_0001",
+      "sources": [
+        "S",
+        "C"
+      ],
+      "fields": {
+        "content": "int x = 1;",
+        "fact_text": "int x = 1;",
+        "fact_type": null
+      },
+      "metadata": {
+        "primary_source_ids": [
+          "S"
+        ],
+        "context_source_ids": [
+          "C"
+        ]
+      },
+      "original_ids": [
+        "FCT_0001"
+      ]
+    }
+  ],
+  "manual_review_required": true
+}

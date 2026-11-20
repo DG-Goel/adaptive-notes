@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-d31525a7-5ec3-4676-8b8e-ca42b7532e19",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"mortgage_calculator\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The program formats the mortgage result as currency using the NumberFormat class.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"mortgage_calculator\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"The implementation has several problems, starting with input validation.\",\n      \"refs\": [\"Q0005\", \"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"mortgage_calculator\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"If a non‑numeric value is entered, the program crashes.\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"mortgage_calculator\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 3,\n      \"part\": \"value\",\n      \"text\": \"Entering a negative value also leads to improper behavior.\",\n      \"refs\": [\"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"mortgage_calculator\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 4,\n      \"part\": \"value\",\n      \"text\": \"Conditional statements can be used to rescue the program from these input issues.\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"conditional_statements\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"conditional statements\",\n      \"refs\": [\"Q0009\", \"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"conditional_statements\",\n      \"category\": \"explanations\",\n      \"field\": \"explanation_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Conditional statements allow validation of user‑entered values.\",\n      \"refs\": [\"Q0009\", \"Q0010\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"explanation_of_mistake\",\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"implementation_preference\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The author prefers declaring a variable for readability rather than using a long expression.\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"implementation_preference\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"Following this preference is optional.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc based on excerpts. Likely facts about mortgage calculator, input validation, conditional statements. Provide rows with availability SOURCE_SUPPORTED, basis explicit. Provide item id maybe \"item1\". We'll create rows for facts: mortgage calculation uses NumberFormat class to format as currency (Q0000). Input validation problem (Q0006). Non-numeric input crashes (Q0007). Negative input improper (Q0008). Conditional statements rescue (Q0009). Next section about conditional statements (Q0010). Also concept: \"conditional statements\". Provide concept_name. Let's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636589,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f73454f048",
+  "usage": {
+    "completion_tokens": 1135,
+    "prompt_tokens": 3353,
+    "total_tokens": 4488,
+    "completion_time": 2.402071321,
+    "completion_tokens_details": {
+      "reasoning_tokens": 123
+    },
+    "prompt_time": 0.146585594,
+    "prompt_tokens_details": null,
+    "queue_time": 0.278079702,
+    "total_time": 2.548656915
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cat7p3etkrgmchd68783hq",
+    "debug": null,
+    "seed": 217244736,
+    "usage": null
+  }
+}

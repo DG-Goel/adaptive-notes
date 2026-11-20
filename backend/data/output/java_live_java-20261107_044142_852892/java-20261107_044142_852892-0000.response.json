@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-ffb733a0-86ff-42cd-9a7a-faa341905b55",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [\n    {\n      \"concept_name\": {\n        \"text\": \"Java Development Kit (JDK)\",\n        \"refs\": [\"Q0007\"]\n      },\n      \"content\": {\n        \"text\": \"development kit and it's basically a software development environment for building Java applications it has a compiler it has a bunch of code that we can reuse it has a Java Runtime environment at a bunch of other stuff\",\n        \"refs\": [\"Q0007\"]\n      },\n      \"aliases\": null\n    }\n  ],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"JDK is short for Java Development Kit\",\n        \"refs\": [\"Q0006\"]\n      },\n      \"content\": {\n        \"text\": \"jdk is short for Java\",\n        \"refs\": [\"Q0006\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"JDK includes a compiler, a Java Runtime Environment, and reusable code\",\n        \"refs\": [\"Q0007\"]\n      },\n      \"content\": {\n        \"text\": \"it has a compiler it has a bunch of code that we can reuse it has a Java Runtime environment\",\n        \"refs\": [\"Q0007\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [\n    {\n      \"ref\": \"Q0000\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0001\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0002\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0003\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0004\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0005\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0008\",\n      \"reason\": \"noneducational\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays except maybe facts? The excerpts are promotional, not educational content. Might be excluded as noneducational? But they contain some educational info about JDK. Could extract facts: \"JDK stands for Java Development Kit\", \"JDK includes compiler, runtime, etc.\" Use excerpts Q0006- Q0007. So create facts entries.\n\nAlso maybe concepts: \"Java Development Kit (JDK)\". Provide concept name with refs Q0006,Q0007. Provide content same as quote? Must match exactly. Use content field for concept? concepts have concept_name, content, aliases. We'll set content same as quote? Probably concept content is description. Use quote from Q0007 describing JDK. Provide aliases null.\n\nAlso facts: fact_text \"JDK is short for Java Development Kit\". refs Q0006. fact_type null.\n\nAnother fact: \"JDK includes a compiler, a Java Runtime Environment, and reusable code\". refs Q0007.\n\nProcedures maybe install JDK steps but not fully described.\n\nWe'll output excluded list for promotional excerpts like Q0000, Q0001 etc reason noneducational. Include those refs.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794026903,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c800245357",
+  "usage": {
+    "completion_tokens": 731,
+    "prompt_tokens": 3020,
+    "total_tokens": 3751,
+    "completion_time": 1.523747647,
+    "completion_tokens_details": {
+      "reasoning_tokens": 244
+    },
+    "prompt_time": 0.150668904,
+    "prompt_tokens_details": null,
+    "queue_time": 0.301486579,
+    "total_time": 1.674416551
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6t5c4abetfrqq7v4gv5e2gp",
+    "debug": null,
+    "seed": 87716672,
+    "usage": null
+  }
+}

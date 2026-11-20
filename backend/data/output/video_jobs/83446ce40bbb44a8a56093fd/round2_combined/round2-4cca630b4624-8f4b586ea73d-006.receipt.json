@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-22f8b666-d58c-4ad3-9e94-57bbd8c5b82c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Effect on Exchange Rate\",\n      \"source_segment_ids\": [\"FCT_0084\", \"FCT_0085\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0084\", \"FCT_0085\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0084\",\n              \"quote\": \"It doesn't move the exchange rate.\"\n            },\n            {\n              \"note_id\": \"FCT_0085\",\n              \"quote\": \"It has no implication for the exchange rate.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Effect on Exchange Rate\",\n            \"headers\": [\"Item\", \"Effect\"],\n            \"rows\": [\n              [\"FCT_0084\", \"doesn't move the exchange rate\"],\n              [\"FCT_0085\", \"has no implication for the exchange rate\"]\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visual units. Look for comparisons etc. We have statements like \"It doesn't move the exchange rate.\" and \"It has no implication for the exchange rate.\" Could compare two facts? Both say no effect. Might make table comparing items FCT_0084 and FCT_0085 both no effect on exchange rate. Use table.\n\nAlso maybe compare \"Fiscal policy only affects exchange rates if it influences interest rates.\" and \"If fiscal policy affects interest rates, it can influence exchange rates.\" Could be conditional but maybe flowchart? Might be decision: fiscal policy -> interest rates? But evidence limited.\n\nWe likely only produce one table visual. Provide unit with source_segment_ids list of note IDs used. Mode text_and_visual? Since we must not emit text_only units, remaining_text null. Provide visual payload.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794806851,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c800245357",
+  "usage": {
+    "completion_tokens": 424,
+    "prompt_tokens": 2643,
+    "total_tokens": 3067,
+    "completion_time": 0.884507474,
+    "completion_tokens_details": {
+      "reasoning_tokens": 171
+    },
+    "prompt_time": 0.119795093,
+    "prompt_tokens_details": null,
+    "queue_time": 0.286578766,
+    "total_time": 1.004302567
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hd68rjeneb5tvz500yg8py",
+    "debug": null,
+    "seed": 1875394171,
+    "usage": null
+  }
+}

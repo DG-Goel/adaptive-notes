@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-44554f0c-222f-46b4-aa6c-0914db991922",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"Reference types in Java store a reference (address) to an object in memory rather than the actual object value.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"When a variable of a reference type is declared, it holds the address of the object in memory. Assigning one reference variable to another copies the reference, so both variables point to the same object. Updating the object through any reference is reflected when accessed via the other reference.\",\n        \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Primitive variables store the actual value in their memory location, while reference variables store the address of an object.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Assigning one reference variable to another copies the reference, causing both variables to refer to the same object.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Changes made to an object via one reference variable are visible through any other reference variable that points to the same object.\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts about reference types vs primitive. Extract facts, explanations, definitions maybe. Let's create facts: reference types store address, primitive store value. Also assignment copies reference. Also both variables reference same object, changes visible.\n\nCreate explanations: concept of reference types.\n\nNo definitions given explicitly? Could define \"reference type\". Use excerpt Q0001 etc.\n\nWe'll produce facts and explanations. No formulas, etc.\n\nProvide refs arrays.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065460,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5a93aea882",
+  "usage": {
+    "completion_tokens": 479,
+    "prompt_tokens": 3032,
+    "total_tokens": 3511,
+    "completion_time": 1.020576119,
+    "completion_tokens_details": {
+      "reasoning_tokens": 95
+    },
+    "prompt_time": 0.842644396,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "queue_time": 1.550007941,
+    "total_time": 1.863220515
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6va4rbtet3a03e3kz529ajq",
+    "debug": null,
+    "seed": 645606781,
+    "usage": null
+  }
+}

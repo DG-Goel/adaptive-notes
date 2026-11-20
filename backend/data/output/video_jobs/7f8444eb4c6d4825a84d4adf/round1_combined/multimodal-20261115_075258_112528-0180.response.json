@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-704d297f-8442-44d5-a190-7c7dc7a222fc",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit concept name or content present in the provided excerpts.\",\n      \"source_ids\": [\"G00028\"]\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No term and definition text are provided.\",\n      \"source_ids\": [\"G00028\"]\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explanatory topic or explanation text is present.\",\n      \"source_ids\": [\"G00028\"]\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No exemplified example text is provided.\",\n      \"source_ids\": [\"G00028\"]\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No factual statements are given.\",\n      \"source_ids\": [\"G00028\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No formula text is present.\",\n      \"source_ids\": [\"G00028\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No procedural content, name, or steps are provided.\",\n      \"source_ids\": [\"G00028\"]\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No relationship statements are present.\",\n      \"source_ids\": [\"G00028\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"FAIL: The source excerpts do not contain sufficient educational content to generate four supported quiz questions.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"All provided excerpts are brief conversational statements without explicit concepts, definitions, explanations, examples, facts, formulas, procedures, or relationships required for quiz generation.\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0000\"],\n      \"topic\": \"insufficient_content\"\n    },\n    {\n      \"question\": \"FAIL: The source excerpts do not provide any definable term or concept to ask about.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"No term-definition pair is present in the excerpts, making a definition-based question impossible.\",\n      \"bloom_level\": \"Understand\",\n      \"refs\": [\"Q0001\"],\n      \"topic\": \"no_definition\"\n    },\n    {\n      \"question\": \"FAIL: No factual statement is available to form a fact-based question.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"The excerpts contain only dialogue without verifiable factual content.\",\n      \"bloom_level\": \"Apply\",\n      \"refs\": [\"Q0002\"],\n      \"topic\": \"no_fact\"\n    },\n    {\n      \"question\": \"FAIL: No formula or procedural step is provided to create an application or analysis question.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"The source lacks any formula, code, or step-by-step instruction required for higher-order questions.\",\n      \"bloom_level\": \"Analyze\",\n      \"refs\": [\"Q0003\"],\n      \"topic\": \"no_formula\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows but content is just dialogue, no concepts. Likely abstentions for all categories. Provide quiz? Can't support. Must fail explicitly.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794729920,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f73454f048",
+  "usage": {
+    "completion_tokens": 771,
+    "prompt_tokens": 2689,
+    "total_tokens": 3460,
+    "completion_time": 2.037153138,
+    "completion_tokens_details": {
+      "reasoning_tokens": 33
+    },
+    "prompt_time": 0.062437048,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "queue_time": 0.284442449,
+    "total_time": 2.099590186
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f3tfpnefsa3g50fnbktn6d",
+    "debug": null,
+    "seed": 262425339,
+    "usage": null
+  }
+}

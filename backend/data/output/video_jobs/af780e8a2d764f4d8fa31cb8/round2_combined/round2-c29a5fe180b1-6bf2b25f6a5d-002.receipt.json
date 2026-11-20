@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-6e8ba9a5-c0df-41b1-ad11-f8ab78f17c30",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Mandela Fleming model components\",\n      \"source_segment_ids\": [\"CON_0009\", \"CON_0010\", \"CON_0011\", \"CON_0012\", \"CON_0014\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0009\", \"CON_0010\", \"CON_0011\", \"CON_0012\", \"CON_0014\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0009\",\n              \"exact_quote\": \"A framework that connects monetary policies in different countries to exchange‑rate movements and examines how those movements affect short‑run real activity.\"\n            },\n            {\n              \"note_id\": \"CON_0010\",\n              \"exact_quote\": \"The price of one currency relative to another, whose movements are driven by monetary policy differences and affect aggregate demand and output in the short run.\"\n            },\n            {\n              \"note_id\": \"CON_0011\",\n              \"exact_quote\": \"A short‑run macroeconomic model that fixes nominal prices and analyzes the interaction of the goods market (IS) and money market (LM).\"\n            },\n            {\n              \"note_id\": \"CON_0012\",\n              \"exact_quote\": \"Net exports is a term added to the model representing the difference between exports and imports, functioning as a component of demand.\"\n            },\n            {\n              \"note_id\": \"CON_0014\",\n              \"exact_quote\": \"Net exports increase when foreign (rest‑of‑the‑world) income rises and decline when the real exchange rate rises.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"concept_tree\",\n            \"title\": \"Mandela Fleming model\",\n            \"nodes\": [\n              {\n                \"id\": \"n0\",\n                \"label\": \"Mandela Fleming model\"\n              },\n              {\n                \"id\": \"n1\",\n                \"label\": \"Monetary‑policy differences drive exchange‑rate movements\",\n                \"parent\": \"n0\"\n              },\n              {\n                \"id\": \"n2\",\n                \"label\": \"Exchange‑rate movements affect short‑run real activity\",\n                \"parent\": \"n0\"\n              },\n              {\n                \"id\": \"n3\",\n                \"label\": \"Fixed nominal prices (IS‑LM framework)\",\n                \"parent\": \"n0\"\n              },\n              {\n                \"id\": \"n4\",\n                \"label\": \"Net exports as demand component\",\n                \"parent\": \"n0\"\n              },\n              {\n                \"id\": \"n5\",\n                \"label\": \"Net exports rise with foreign income, fall with real exchange‑rate rise\",\n                \"parent\": \"n4\"\n              }\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Determinants of Net Exports\",\n      \"source_segment_ids\": [\"CON_0013\", \"CON_0014\", \"CON_0015\", \"CON_0016\", \"EXP_0002\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0013\", \"CON_0014\", \"CON_0015\", \"CON_0016\", \"EXP_0002\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0013\",\n              \"exact_quote\": \"Net exports are a decreasing function of domestic output and domestic income.\"\n            },\n            {\n              \"note_id\": \"EXP_0002\",\n              \"exact_quote\": \"Because higher domestic income leads to higher imports, part of the extra demand goes to foreign goods, reducing net exports.\"\n            },\n            {\n              \"note_id\": \"CON_0014\",\n              \"exact_quote\": \"Net exports increase when foreign (rest‑of‑the‑world) income rises and decline when the real exchange rate rises.\"\n            },\n            {\n              \"note_id\": \"CON_0015\",\n              \"exact_quote\": \"foreign income\\n\\nAvailable source excerpt: That is demand for domestically produced goods rises when foreign income goes up.\\n\\nAvailable source excerpt: So if the income in the other country goes up, then their imports will go up, which is our exports that go up.\"\n            },\n            {\n              \"note_id\": \"CON_0016\",\n              \"exact_quote\": \"When the real exchange rate rises, domestic goods become relatively more expensive, reducing net exports.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"concept_tree\",\n            \"title\": \"Net exports determinants\",\n            \"nodes\": [\n              {\n                \"id\": \"m0\",\n                \"label\": \"Net exports\"\n              },\n              {\n                \"id\": \"m1\",\n                \"label\": \"Decrease with higher domestic output/income\",\n                \"parent\": \"m0\"\n              },\n              {\n                \"id\": \"m2\",\n                \"label\": \"Decrease when real exchange rate rises (domestic goods become more expensive)\",\n                \"parent\": \"m0\"\n              },\n              {\n                \"id\": \"m3\",\n                \"label\": \"Increase with higher foreign income (foreign demand for domestic goods)\",\n                \"parent\": \"m0\"\n              }\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visuals. Identify hierarchies: Mandela Fleming model components: exchange-rate movements, short-run real activity, etc. Could make concept tree. Also net exports relationships. Provide JSON units.\n\nWe'll create a concept tree for Mandela Fleming model: root \"Mandela Fleming model\" with children: \"exchange‑rate movements driven by monetary policy differences\", \"affect short‑run real activity\", \"price of one currency relative to another\", \"short‑run macro model (IS‑LM) with fixed nominal prices\", \"net exports component\". Use evidence notes.\n\nAlso a concept tree for net exports determinants: root \"Net exports\" with branches: \"decreasing function of domestic output/income\" (CON_0013), \"increase when foreign income rises\" (CON_0014, CON_0015), \"decrease when real exchange rate rises\" (CON_0014, CON_0016), \"higher domestic income leads to higher imports reducing net exports\" (EXP_0002). Provide evidence.\n\nAlso maybe a flowchart for interest rate tightening effect on exchange rate: start \"US interest rates rise\" -> \"Dollar appreciates\" (FCT_0003) -> \"Exchange rate goes down (depreciation of local currency?)\" but need evidence. Might be ambiguous.\n\nWe'll produce two units visual_only.\n\nConstruct JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794817878,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8655ddce88",
+  "usage": {
+    "completion_tokens": 1432,
+    "prompt_tokens": 3005,
+    "total_tokens": 4437,
+    "completion_time": 3.025811462,
+    "completion_tokens_details": {
+      "reasoning_tokens": 274
+    },
+    "prompt_time": 0.188938078,
+    "prompt_tokens_details": null,
+    "queue_time": 0.370611566,
+    "total_time": 3.21474954
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hqpprge8z90h2gsyh07h9v",
+    "debug": null,
+    "seed": 890234836,
+    "usage": null
+  }
+}

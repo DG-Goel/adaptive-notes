@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-dad6d94d-5804-486a-82e1-9e02016f1462",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"meaningful variable names help understand code\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Using meaningful and descriptive names for variables improves code readability and comprehension.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"byte takes one byte of memory and stores values from -128 to 127\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"short takes two bytes of memory and stores values up to 32,000\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"int (integer) takes four bytes of memory and allows storing values up to two billion\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"long takes eight bytes of memory and can store even larger numbers\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"float takes four bytes for storing decimal numbers\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"double takes eight bytes for storing decimal numbers\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"char takes two bytes and stores a single character, supporting international letters\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"boolean stores true or false values\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Underscores can be used in numeric literals to separate digits for readability\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts we have facts about primitive types sizes, etc. Create facts. Also maybe definitions of types. We'll produce facts list.\n\nExtract:\n\n- byte takes one byte of memory and stores values from -128 to 127. (ref Q0001)\n- short takes two bytes and stores values up to 32,000. (ref Q0001)\n- int (integer) takes four bytes and stores values up to two billion. (ref Q0001)\n- long takes eight bytes and stores even larger numbers. (ref Q0001)\n- float takes four bytes for decimal numbers. (ref Q0002)\n- double takes eight bytes for decimal numbers. (ref Q0002)\n- char takes two bytes and stores a single character, supports international letters. (ref Q0002)\n- boolean stores true/false. (ref Q0002)\n- underscore can be used in numeric literals for readability. (ref Q0004, Q0005)\n\nAlso maybe fact about best practice naming. That's a fact? It's advice. Could be explanation. We'll put explanation.\n\nCreate explanations: meaningful variable names help understand code. (ref Q0004)\n\nNow produce JSON with empty arrays for others. Excluded empty.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036031,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_fe269835c7",
+  "usage": {
+    "completion_tokens": 826,
+    "prompt_tokens": 3041,
+    "total_tokens": 3867,
+    "completion_time": 1.738393026,
+    "completion_tokens_details": {
+      "reasoning_tokens": 258
+    },
+    "prompt_time": 0.126111808,
+    "prompt_tokens_details": null,
+    "queue_time": 0.331271289,
+    "total_time": 1.8645048339999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6te2pa9e2xt5s1d06yfzmfx",
+    "debug": null,
+    "seed": 54670712,
+    "usage": null
+  }
+}

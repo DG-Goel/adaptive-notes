@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-fca7be2c-a8f6-4e76-9999-348b69f63835",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"Our send email function should have parameters like who is the receiver.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"What is the subject of this email, what is the content of this email, and so on.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"We are not going to worry about parameters now; we will look at them in the future.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"identified_mistake\",\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"After the parenthesis we add a pair of curly braces.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"correct_demonstration\",\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"We use these parameters to pass values to our function.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"explanation_of_mistake\",\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"Inside these braces we write the actual code.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"continuation\",\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\"C1\", \"C2\", \"C5\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"parameter_usage\"]\n      }\n    },\n    {\n      \"fact_text\": [\"C4\", \"C6\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"function_body_structure\"]\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify statements: Q0000: \"our send email function should have parameters like who is the receiver,\" => claim about function parameters. Q0001: \"what is the subject of this email, what is the content of this email, and so on.\" Q0002: \"we're not going to worry about parameters, we'll look at them in the future.\" Q0003: \"after the parenthesis we add a pair of curly braces\". Q0004 context: \"We use these parameters to pass values to our function.\" Q0005 context: \"and inside these braces we write the actual\". Need create claims with availability SOURCE_SUPPORTED? Since explicit statements. basis explicit. literal_kind verbal. instructional_role maybe prerequisite? For parameters explanation. We'll assign IDs C1..C6.\n\nNow categories: facts maybe. We'll put facts with fact_text claim IDs. No definitions, formulas, etc.\n\nCreate claims list.\n\nThen facts: each fact_text array with claim IDs.\n\nExplanations maybe none.\n\nAbstentions none.\n\nProvide empty arrays for other categories.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317698,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f73454f048",
+  "usage": {
+    "completion_tokens": 891,
+    "prompt_tokens": 2992,
+    "total_tokens": 3883,
+    "completion_time": 1.893849777,
+    "completion_tokens_details": {
+      "reasoning_tokens": 232
+    },
+    "prompt_time": 0.390164621,
+    "prompt_tokens_details": null,
+    "queue_time": 0.290345272,
+    "total_time": 2.284014398
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72tpf4yeyqrvhx9f41m4wxm",
+    "debug": null,
+    "seed": 168126350,
+    "usage": null
+  }
+}

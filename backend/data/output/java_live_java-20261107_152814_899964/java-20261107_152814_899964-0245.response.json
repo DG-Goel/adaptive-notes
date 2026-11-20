@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-48393d28-99a1-414b-be83-8c4c38f919d8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"if statement\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"we have an if statement and this statement has three clauses or three sections here's the first Clause\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"clause\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"the if Clause, the else if and else clauses are placed after these right braces forming a hierarchy with a parent followed by two children\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"use of braces in single-statement if\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"braces are only required if we have multiple statements; some people always add braces, others consider them unnecessary noise for single statements\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"formatting of if‑else chains\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"the else if clause is a little bit indented while the else clause is at the same level as the if clause, which can look ugly; aligning all clauses at the same level improves readability\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"braces are only required if we have multiple statements\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays maybe facts etc. Extract any educational items: definitions of if statement clauses, explanation about braces. So create definitions: term \"if statement\" with definition. Also maybe concept? Use excerpts.\n\nLet's create definitions array with term and definition_text. Use Q0001 for term \"if statement\". definition_text from same excerpt: \"we have an if statement and this statement has three clauses or three sections here's the first Clause\". Also include context maybe null.\n\nAlso definition for \"clause\" maybe. Use Q0002: \"second Clause\" etc but definition? Could be explanation.\n\nWe also have explanation about braces controversy. Could be explanation item with topic \"use of braces in single-statement if\". Use Q0000 and Q0001.\n\nCreate facts? maybe fact about braces required only for multiple statements. Use Q0000.\n\nFormulas none.\n\nProcedures none.\n\nRelationships none.\n\nExcluded empty.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065770,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_fe269835c7",
+  "usage": {
+    "completion_tokens": 663,
+    "prompt_tokens": 3034,
+    "total_tokens": 3697,
+    "completion_time": 1.584285323,
+    "completion_tokens_details": {
+      "reasoning_tokens": 193
+    },
+    "prompt_time": 0.041241245,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "queue_time": 0.327275513,
+    "total_time": 1.625526568
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6vae873eajvtj46bbr3hadc",
+    "debug": null,
+    "seed": 337142837,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-62ac9b26-f91d-4e5c-a389-adae964ccfd8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"String literal\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a string value written directly in code, e.g., \\\"hello world\\\"\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"exemplifies\": {\n        \"text\": \"String concatenation using the plus operator\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"example_text\": {\n        \"text\": \"message + \\\"!!\\\"\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"Using endsWith method\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_text\": {\n        \"text\": \"message.endsWith(\\\"!!\\\") // returns true\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"Using startsWith method\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_text\": {\n        \"text\": \"message.startsWith(\\\"!!\\\") // returns false\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_type\": null\n    }\n  ],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"endsWith method\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"returns a boolean value indicating whether the string ends with the specified character sequence\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"startsWith method\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"returns a boolean value indicating whether the string starts with the specified character sequence\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"length method\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"returns the number of characters in the string\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"String class is defined in the java.lang package\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"java.lang package is automatically imported, so no import statement is needed\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"String is a reference type in Java\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Using the new operator with String is redundant; a string literal can be assigned directly\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"String literals provide a shorthand to create String objects\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The length of the string \\\"hello world!!\\\" is 13 characters\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. Identify facts, definitions, examples, explanations, formulas none. Extract facts like \"String class is defined in java.lang package and automatically imported\". Also method explanations. Let's create facts and explanations.\n\nWe'll cite refs.\n\nFacts:\n- \"String class is defined in java.lang package\" (Q0000)\n- \"java.lang package is automatically imported\" (Q0000)\n- \"String is a reference type\" (Q0002)\n- \"Using new String is redundant; can initialize with string literal\" (Q0001)\n- \"String literals are shorthand for creating String objects\" (Q0002)\n- \"String length is number of characters\" (Q0005)\n\nExplanations:\n- Explain endsWith method returns boolean (Q0004)\n- startsWith method returns boolean (Q0004)\n- length method returns length (Q0004/Q0005)\n\nExamples:\n- Concatenation using + operator (Q0003)\n- Using endsWith with \"!!\" returns true (Q0004)\n- Using startsWith with \"!!\" returns false (Q0004)\n\nDefinitions maybe term \"String literal\" definition (Q0000). Provide term and definition.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036099,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_93703442d9",
+  "usage": {
+    "completion_tokens": 1112,
+    "prompt_tokens": 3028,
+    "total_tokens": 4140,
+    "completion_time": 2.3336722180000002,
+    "completion_tokens_details": {
+      "reasoning_tokens": 252
+    },
+    "prompt_time": 0.140107637,
+    "prompt_tokens_details": null,
+    "queue_time": 0.378695663,
+    "total_time": 2.473779855
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6te4qgeesx8jzb7mtqy0027",
+    "debug": null,
+    "seed": 1906503098,
+    "usage": null
+  }
+}

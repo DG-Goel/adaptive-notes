@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-3ba73e43-ccea-4560-a8a8-f39dffb11063",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"primitive type\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a type for storing simple values\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"reference type\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a type for storing complex objects\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"dot operator\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"an operator used to access members of an object or class\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"independence of primitive variables\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Two primitive variables declared separately occupy different memory locations, so changing the value of one does not affect the other.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"dot operator on primitive variable\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"When a variable is of a primitive type, it has no members, so using the dot operator after it shows no suggestions.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"dot operator on class instance\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"For a variable that is an instance of a class, the dot operator can be used to access its fields and methods, such as calling a print function on a PrintString field.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Primitive variables store simple values and are not objects.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Reference variables store complex objects.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Changing the value of one primitive variable does not affect another primitive variable that was assigned its previous value.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output JSON with empty arrays maybe facts etc. Extract educational content: concepts like primitive type, reference type, dot operator, memory locations independence. Create facts, definitions, explanations. Use excerpts refs.\n\nWe'll produce facts: primitive type stores simple values; reference type stores complex objects. Fact: primitive variables have independent memory locations. Fact: changing one primitive variable does not affect another. Fact: reference types behave differently (not fully described). Also explanation of dot operator not showing members for primitive.\n\nCreate definitions: term \"primitive type\" definition text from Q0003 and Q0002. term \"reference type\". term \"dot operator\". Provide context maybe null.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036093,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "usage": {
+    "completion_tokens": 819,
+    "prompt_tokens": 3028,
+    "total_tokens": 3847,
+    "completion_time": 1.7058300210000001,
+    "completion_tokens_details": {
+      "reasoning_tokens": 136
+    },
+    "prompt_time": 0.179886124,
+    "prompt_tokens_details": null,
+    "queue_time": 0.16805835,
+    "total_time": 1.885716145
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6te4jd3en7bpnp3081gnqqn",
+    "debug": null,
+    "seed": 999529403,
+    "usage": null
+  }
+}

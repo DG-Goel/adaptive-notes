@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-38643109-eb7f-4b3c-bc8f-2ac816467eaa",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Traditional software programming takes an input and an equation and produces an output, whereas machine learning takes input‑output pairs and derives the underlying relationship.\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"Traditional software programming takes an input and an equation and produces an output, whereas machine learning takes input‑output pairs and derives the underlying relationship.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Machine learning is a discipline in computer science where we train machines on data so that they can make predictions without explicit programming.\",\n        \"refs\": [\"Q0001\"],\n        \"claims\": [\n          {\n            \"text\": \"Machine learning is a discipline in computer science where we train machines on data so that they can make predictions without explicit programming.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0001\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In machine learning you do not perform explicit programming; you give input‑output examples and the system discovers the logic or pattern.\",\n        \"refs\": [\"Q0002\"],\n        \"claims\": [\n          {\n            \"text\": \"In machine learning you do not perform explicit programming; you give input‑output examples and the system discovers the logic or pattern.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0002\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Machine learning tasks are mainly divided into two categories: classification and regression.\",\n        \"refs\": [\"Q0003\"],\n        \"claims\": [\n          {\n            \"text\": \"Machine learning tasks are mainly divided into two categories: classification and regression.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0003\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Classification maps inputs to one of several categories (e.g., spam vs. non‑spam, cat vs. dog, damaged vs. non‑damaged) and can involve multiple categories such as business, sports, technology, health.\",\n        \"refs\": [\"Q0004\", \"Q0005\"],\n        \"claims\": [\n          {\n            \"text\": \"Classification maps inputs to one of several categories (e.g., spam vs. non‑spam, cat vs. dog, damaged vs. non‑damaged) and can involve multiple categories such as business, sports, technology, health.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0004\", \"Q0005\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output facts from primary excerpts. Identify statements.\n\nQ0000: distinction between traditional software programming and machine learning: traditional: given input and equation gives output; ML: give input-output and it will derive terms.\n\nQ0001: definition of ML: discipline in CS where we train machines on data so they can make predictions without explicit programming.\n\nQ0002: you don't do explicit programming, just give input output and it will come up with logic/pattern.\n\nQ0003: two main categories of tasks: classification and regression.\n\nQ0004+Q0005: classification example: mapping input to categories, can have multiple categories.\n\nCreate items with fact_text, fact_type value with claims.\n\nWe'll produce each fact as separate item.\n\nProvide refs list per fact (the excerpt refs). Use basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role explanation_of_mistake? Actually these are definitions/explanations. Use instructional_role null? Could be \"prerequisite\" or \"explanation_of_mistake\"? Probably null.\n\nWe'll set instructional_role null.\n\nNow construct JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794595240,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_854fa9be4c",
+  "usage": {
+    "completion_tokens": 1029,
+    "prompt_tokens": 2996,
+    "total_tokens": 4025,
+    "completion_time": 2.172188348,
+    "completion_tokens_details": {
+      "reasoning_tokens": 223
+    },
+    "prompt_time": 0.186543597,
+    "prompt_tokens_details": null,
+    "queue_time": 0.294215317,
+    "total_time": 2.358731945
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b3cbqqejxrppn9rqteqq47",
+    "debug": null,
+    "seed": 994796387,
+    "usage": null
+  }
+}

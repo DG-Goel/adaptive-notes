@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-2e1efb68-9fa7-4ffe-910d-6bae611a58a7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"boolean expression\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a piece of code that produces a boolean value true or false\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"comparison operators\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"operators used to compare primitive values such as equality (==), inequality (!=), greater than (>), greater than or equal (>=), less than (<), and less than or equal (<=)\",\n        \"refs\": [\"Q0001\", \"Q0004\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"logical operators\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"operators such as logical AND (&&), logical OR (||), and logical NOT (!) used for implementing real‑world rules\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"The equality operator (==) compares two values and returns true if they are equal, otherwise false.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The inequality operator (!=) returns false when the two compared values are equal.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The expression X <= Y evaluates to true when X is less than or equal to Y.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"exemplifies\": {\n        \"text\": \"x == y\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"example_text\": {\n        \"text\": \"When x and y have the same value, the expression x == y evaluates to true.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"x != y\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_text\": {\n        \"text\": \"When x and y are equal, the expression x != y evaluates to false.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"x <= y\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_text\": {\n        \"text\": \"If X is less than or equal to Y, the expression evaluates to true.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_type\": null\n    }\n  ],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"control flow statements\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Control flow statements include conditional statements for making decisions, loops for repeated execution, and error handling constructs.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"logical operators usage\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Logical operators (&&, ||, !) are used to combine or invert boolean expressions to implement complex decision rules.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. Identify facts, definitions, explanations, etc.\n\nFrom excerpts: teaching about comparison operators, equality, inequality, boolean expression, logical operators, control flow.\n\nWe can create facts: Equality operator uses ==, returns boolean. Inequality uses != returns false when equal. Greater than etc.\n\nDefinitions: boolean expression definition. Comparison operators definition. Logical operators definition.\n\nExamples: example of x == y yields true.\n\nExplanations: explanation of control flow statements categories.\n\nProcedures maybe not.\n\nCreate JSON with arrays.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065716,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c868cf1eaa",
+  "usage": {
+    "completion_tokens": 985,
+    "prompt_tokens": 3025,
+    "total_tokens": 4010,
+    "completion_time": 2.062846288,
+    "completion_tokens_details": {
+      "reasoning_tokens": 114
+    },
+    "prompt_time": 0.127091279,
+    "prompt_tokens_details": null,
+    "queue_time": 0.379865311,
+    "total_time": 2.189937567
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6vacjehem0smvzj5hvmdjae",
+    "debug": null,
+    "seed": 1149864029,
+    "usage": null
+  }
+}

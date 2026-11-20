@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-2ae243e2-ae07-4714-988d-81a9335dccc1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"reference type\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a type whose variable holds the address of an object in memory rather than the actual object itself\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"reference vs primitive assignment\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"When a reference type variable is assigned to another, the second variable receives the same memory address, so both variables refer to the same object; changing the object through one variable is visible through the other.\",\n        \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Primitive variables store the actual value in their memory location.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Reference type variables store a reference (address) to an object in memory.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Assigning one reference variable to another copies the reference, not the object.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Two reference variables that reference the same object will reflect changes made through either variable.\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts about reference types vs primitive. Extract facts, explanations, definitions maybe. Let's create facts: reference type stores address, primitive stores value. Also that assigning point2 = point1 makes both reference same object. Also updating via one reflects in other. Also that primitive copy copies value.\n\nCreate explanations: concept of reference types.\n\nNo definitions given explicitly? Could define \"reference type\". Use excerpts.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036095,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a7bb72c24",
+  "usage": {
+    "completion_tokens": 546,
+    "prompt_tokens": 3032,
+    "total_tokens": 3578,
+    "completion_time": 1.146782747,
+    "completion_tokens_details": {
+      "reasoning_tokens": 92
+    },
+    "prompt_time": 0.122843787,
+    "prompt_tokens_details": null,
+    "queue_time": 0.168184968,
+    "total_time": 1.269626534
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6te4n8ye2watgr4hv7046d6",
+    "debug": null,
+    "seed": 1680673511,
+    "usage": null
+  }
+}

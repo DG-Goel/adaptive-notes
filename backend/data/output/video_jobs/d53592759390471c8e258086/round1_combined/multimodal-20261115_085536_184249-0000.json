@@ -1,0 +1,852 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-15T08:55:53.564868+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00001",
+        "G00002"
+      ],
+      "document_id": "DOC001",
+      "content": "If the exchange rate goes up, it means appreciation of the local currency; if it goes down, it means depreciation.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00001",
+              "quote": "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 757,
+              "end_char": 934,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00001",
+              "quote": "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 757,
+              "end_char": 934,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00002",
+              "quote": "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 98,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00002",
+              "quote": "And down is a depreciation.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 100,
+              "end_char": 127,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "exchange rate convention",
+              "claims": [
+                {
+                  "text": "exchange rate convention",
+                  "refs": [
+                    "Q0009"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00001",
+                      "quote": "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "If the exchange rate goes up, it means appreciation of the local currency; if it goes down, it means depreciation.",
+              "claims": [
+                {
+                  "text": "If the exchange rate goes up, it means appreciation of the local currency; if it goes down, it means depreciation.",
+                  "refs": [
+                    "Q0009",
+                    "Q0010",
+                    "Q0011"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00001",
+                      "quote": "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar."
+                    },
+                    {
+                      "source_id": "G00002",
+                      "quote": "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up."
+                    },
+                    {
+                      "source_id": "G00002",
+                      "quote": "And down is a depreciation."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "exchange rate convention",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Important source qualification may have been lost"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [
+                        "if"
+                      ],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00001",
+                        "quote": "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 757,
+                        "end_char": 934,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "exchange rate convention",
+                "preview_text": "",
+                "withheld": true
+              },
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "If the exchange rate goes up, it means appreciation of the local currency; if it goes down, it means depreciation.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar.",
+                      "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up.",
+                      "And down is a depreciation."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00001",
+                        "quote": "There are some conventions in FX markets,\n but this is, as we have defined in this course,\n is if it goes up, it means an appreciation\n of a local currency, that is, the dollar.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 757,
+                        "end_char": 934,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00002",
+                        "quote": "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 98,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00002",
+                        "quote": "And down is a depreciation.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 100,
+                        "end_char": 127,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "If the exchange rate goes up, it means appreciation of the local currency; if it goes down, it means depreciation.",
+                "preview_text": "If the exchange rate goes up, it means appreciation of the local currency; if it goes down, it means depreciation.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00001",
+          "G00002"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "exchange rate convention",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [
+    {
+      "knowledge_id": "FCT_0002",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00001"
+      ],
+      "document_id": "DOC001",
+      "content": "The euro‑dollar exchange rate is quoted opposite of the way it is normally quoted.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00001",
+              "quote": "I'm quoting it the opposite of the way it's normally quoted.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 695,
+              "end_char": 755,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00001",
+              "quote": "I'm quoting it the opposite of the way it's normally quoted.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 695,
+              "end_char": 755,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "The euro‑dollar exchange rate is quoted opposite of the way it is normally quoted.",
+              "claims": [
+                {
+                  "text": "The euro‑dollar exchange rate is quoted opposite of the way it is normally quoted.",
+                  "refs": [
+                    "Q0008"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00001",
+                      "quote": "I'm quoting it the opposite of the way it's normally quoted."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "The euro‑dollar exchange rate is quoted opposite of the way it is normally quoted.",
+              "claims": [
+                {
+                  "text": "The euro‑dollar exchange rate is quoted opposite of the way it is normally quoted.",
+                  "refs": [
+                    "Q0008"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00001",
+                      "quote": "I'm quoting it the opposite of the way it's normally quoted."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "The euro‑dollar exchange rate is quoted opposite of the way it is normally quoted.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "I'm quoting it the opposite of the way it's normally quoted."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00001",
+                        "quote": "I'm quoting it the opposite of the way it's normally quoted.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 695,
+                        "end_char": 755,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "The euro‑dollar exchange rate is quoted opposite of the way it is normally quoted.",
+                "preview_text": "The euro‑dollar exchange rate is quoted opposite of the way it is normally quoted.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "The euro‑dollar exchange rate is quoted opposite of the way it is normally quoted.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "I'm quoting it the opposite of the way it's normally quoted."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00001",
+                        "quote": "I'm quoting it the opposite of the way it's normally quoted.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 695,
+                        "end_char": 755,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "The euro‑dollar exchange rate is quoted opposite of the way it is normally quoted.",
+                "preview_text": "The euro‑dollar exchange rate is quoted opposite of the way it is normally quoted.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00001"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "The euro‑dollar exchange rate is quoted opposite of the way it is normally quoted.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0003",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00002"
+      ],
+      "document_id": "DOC001",
+      "content": "Perceptions about interest‑rate policy in different parts of the world are a main driver of large exchange‑rate fluctuations.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00002",
+              "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 619,
+              "end_char": 748,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00002",
+              "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 619,
+              "end_char": 748,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "Perceptions about interest‑rate policy in different parts of the world are a main driver of large exchange‑rate fluctuations.",
+              "claims": [
+                {
+                  "text": "Perceptions about interest‑rate policy in different parts of the world are a main driver of large exchange‑rate fluctuations.",
+                  "refs": [
+                    "Q0018"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00002",
+                      "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Perceptions about interest‑rate policy in different parts of the world are a main driver of large exchange‑rate fluctuations.",
+              "claims": [
+                {
+                  "text": "Perceptions about interest‑rate policy in different parts of the world are a main driver of large exchange‑rate fluctuations.",
+                  "refs": [
+                    "Q0018"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00002",
+                      "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Perceptions about interest‑rate policy in different parts of the world are a main driver of large exchange‑rate fluctuations.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00002",
+                        "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 619,
+                        "end_char": 748,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Perceptions about interest‑rate policy in different parts of the world are a main driver of large exchange‑rate fluctuations.",
+                "preview_text": "Perceptions about interest‑rate policy in different parts of the world are a main driver of large exchange‑rate fluctuations.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "Perceptions about interest‑rate policy in different parts of the world are a main driver of large exchange‑rate fluctuations.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00002",
+                        "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 619,
+                        "end_char": 748,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Perceptions about interest‑rate policy in different parts of the world are a main driver of large exchange‑rate fluctuations.",
+                "preview_text": "Perceptions about interest‑rate policy in different parts of the world are a main driver of large exchange‑rate fluctuations.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00002"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Perceptions about interest‑rate policy in different parts of the world are a main driver of large exchange‑rate fluctuations.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0004",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00002"
+      ],
+      "document_id": "DOC001",
+      "content": "The US dollar appreciated relative to the Japanese yen during the period described.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00002",
+              "quote": "With respect to the Japanese yen, that's the blue line,\n it was the whole cycle is even more dramatic.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 305,
+              "end_char": 407,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00002",
+              "quote": "With respect to the Japanese yen, that's the blue line,\n it was the whole cycle is even more dramatic.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 305,
+              "end_char": 407,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "The US dollar appreciated relative to the Japanese yen during the period described.",
+              "claims": [
+                {
+                  "text": "The US dollar appreciated relative to the Japanese yen during the period described.",
+                  "refs": [
+                    "Q0014"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00002",
+                      "quote": "With respect to the Japanese yen, that's the blue line,\n it was the whole cycle is even more dramatic."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "The US dollar appreciated relative to the Japanese yen during the period described.",
+              "claims": [
+                {
+                  "text": "The US dollar appreciated relative to the Japanese yen during the period described.",
+                  "refs": [
+                    "Q0014"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00002",
+                      "quote": "With respect to the Japanese yen, that's the blue line,\n it was the whole cycle is even more dramatic."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "The US dollar appreciated relative to the Japanese yen during the period described.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "With respect to the Japanese yen, that's the blue line,\n it was the whole cycle is even more dramatic."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00002",
+                        "quote": "With respect to the Japanese yen, that's the blue line,\n it was the whole cycle is even more dramatic.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 305,
+                        "end_char": 407,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "The US dollar appreciated relative to the Japanese yen during the period described.",
+                "preview_text": "The US dollar appreciated relative to the Japanese yen during the period described.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "The US dollar appreciated relative to the Japanese yen during the period described.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "With respect to the Japanese yen, that's the blue line,\n it was the whole cycle is even more dramatic."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00002",
+                        "quote": "With respect to the Japanese yen, that's the blue line,\n it was the whole cycle is even more dramatic.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 305,
+                        "end_char": 407,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "The US dollar appreciated relative to the Japanese yen during the period described.",
+                "preview_text": "The US dollar appreciated relative to the Japanese yen during the period described.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00002"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "The US dollar appreciated relative to the Japanese yen during the period described.",
+      "fact_type": null
+    }
+  ],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 4,
+  "source_units_processed": 2,
+  "extraction_metadata": null
+}

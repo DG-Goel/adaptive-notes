@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-5207fc4f-6ac4-42ca-ae52-dc852f1f4ed8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"parameter\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"Parameters are the placeholders defined in a method signature.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"argument\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"Arguments are the actual values passed to a method when it is called.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"exemplifies\": {\n        \"text\": \"replace method\",\n        \"refs\": [\"Q0001\", \"Q0003\"]\n      },\n      \"example_text\": {\n        \"text\": \"replace('!', '*') changes all exclamation marks to asterisks and returns a new string, leaving the original string unchanged.\",\n        \"refs\": [\"Q0001\", \"Q0003\"]\n      },\n      \"example_type\": null\n    }\n  ],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"The length of a string can be checked and an error can be given if it exceeds a specified limit (e.g., 20 characters).\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The indexOf method returns the index of the first occurrence of a character or substring, or -1 if it does not exist.\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The replace method takes two arguments (target and replacement) and returns a new string with all occurrences of the target replaced.\",\n        \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java strings are immutable; methods that appear to modify a string actually return a new string object.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The toLowerCase method returns a new string with all characters converted to lowercase, leaving the original string unchanged.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The toUpperCase method returns a new string with all characters converted to uppercase, leaving the original string unchanged.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The trim method removes leading and trailing whitespace from a string and returns a new string.\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract facts, definitions, etc. From excerpts about string methods in Java. Identify facts like length check, indexOf returns -1 if not found, replace returns new string, parameters vs arguments, immutability, toLowerCase, toUpperCase, trim removes whitespace. Create appropriate schema entries. Use refs. Let's produce facts. No definitions? Could define parameter vs argument as definition. Provide definition with term and definition_text. Use excerpts Q0002. Also maybe concept? Not needed. We'll output facts, definitions, maybe procedures? Not described steps. So just facts and definitions. Also examples? Could include example of replace. Use example_text. Provide exemplifies maybe. We'll include one example. Provide relationships? Not needed.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036152,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4140daa9c2",
+  "usage": {
+    "completion_tokens": 869,
+    "prompt_tokens": 3035,
+    "total_tokens": 3904,
+    "completion_time": 1.844156383,
+    "completion_tokens_details": {
+      "reasoning_tokens": 155
+    },
+    "prompt_time": 0.189604589,
+    "prompt_tokens_details": null,
+    "queue_time": 0.257098242,
+    "total_time": 2.033760972
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6te6c1qewyssp18k544zrj4",
+    "debug": null,
+    "seed": 647500686,
+    "usage": null
+  }
+}

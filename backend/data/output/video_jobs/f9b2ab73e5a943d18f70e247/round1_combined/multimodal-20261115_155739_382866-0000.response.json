@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-28bd9648-1d38-4d20-9ab6-6d77ad191519",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Mandel Fleming mold\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A mold that is extremely useful and should be understood thoroughly; the instructor will go slowly over it and encourages questions to ensure comprehension.\",\n      \"refs\": [\"Q0001\", \"Q0004\", \"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Exchange‑rate appreciation and depreciation\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the quoted exchange rate goes up, it indicates an appreciation of the local currency (e.g., the dollar); when it goes down, it indicates a depreciation.\",\n      \"refs\": [\"Q0009\", \"Q0010\", \"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What is the name of the mold described as extremely useful in the lecture?\",\n      \"answer\": \"Mandel Fleming mold\",\n      \"explanation\": \"The instructor introduces the \\\"Mandel Fleming mold\\\" and emphasizes its usefulness (Q0000, Q0001).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Mandel Fleming mold\",\n      \"refs\": [\"Q0000\", \"Q0001\"]\n    },\n    {\n      \"question\": \"According to the instructor, what percentage of the quiz can be covered by understanding the mold well?\",\n      \"answer\": \"70%\",\n      \"explanation\": \"The speaker states that understanding the mold well gives control over about 70% of the last quiz (Q0003).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Mandel Fleming mold coverage\",\n      \"refs\": [\"Q0003\"]\n    },\n    {\n      \"question\": \"In the FX market conventions described, what does an increase in the quoted exchange rate signify?\",\n      \"answer\": \"Appreciation of the local currency\",\n      \"explanation\": \"The instructor explains that a rise in the quoted rate means the local currency (e.g., the dollar) has appreciated (Q0009, Q0010).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Exchange‑rate appreciation\",\n      \"refs\": [\"Q0009\", \"Q0010\"]\n    },\n    {\n      \"question\": \"What does a decrease in the quoted exchange rate indicate?\",\n      \"answer\": \"Depreciation of the local currency\",\n      \"explanation\": \"The lecture notes that when the rate goes down, it reflects a depreciation of the local currency (Q0011).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Exchange‑rate depreciation\",\n      \"refs\": [\"Q0011\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows etc. The excerpts talk about \"Mandel Fleming mold\"? Probably concept. We can extract concept: \"Mandel Fleming mold\" described as useful. Also exchange rate conventions: appreciation means increase, depreciation decrease. Create rows for concepts and definitions maybe. Provide quiz 4 Q.\n\nLet's craft rows: item \"concept1\" category concepts fields concept_name and content. Use Q0000 for name? \"Mandel Fleming mold\". content from Q0001 and Q0004 etc.\n\nAlso concept exchange rate conventions: item \"concept2\". concept_name \"exchange rate appreciation/depreciation\". content from Q0009,Q0010,Q0011.\n\nRows need fields: concept_name, content. Provide availability SOURCE_SUPPORTED? But ASR speech evidence flagged as uncertain exact code but text is present, so SOURCE_SUPPORTED? Probably SOURCE_SUPPORTED.\n\nProvide basis explicit.\n\nAdd quiz: 4 short answer.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794758273,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_ca5edfaab2",
+  "usage": {
+    "completion_tokens": 1087,
+    "prompt_tokens": 2752,
+    "total_tokens": 3839,
+    "completion_time": 2.302961551,
+    "completion_tokens_details": {
+      "reasoning_tokens": 187
+    },
+    "prompt_time": 0.122115621,
+    "prompt_tokens_details": null,
+    "queue_time": 0.373748817,
+    "total_time": 2.425077172
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7fyvqr8ef79fd6rc5mn773b",
+    "debug": null,
+    "seed": 854336297,
+    "usage": null
+  }
+}

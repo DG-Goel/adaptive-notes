@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-323d7c78-54ae-4353-8af0-c750db7dd537",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"C1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Depreciating exchange rate shifts net export function upward\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"And given my assumption, when you depreciate the exchange rate, then it moves the net export function up.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Reducing government expenditure offsets expansionary effect of currency depreciation\",\n      \"refs\": [\"Q0009\", \"Q0015\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"And a typical package is you depreciate your currency, but you also reduce government expenditure, OK? One of them is by reducing government expenditure.\",\n      \"refs\": [\"Q0009\", \"Q0015\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What happens to the net export function when the exchange rate is depreciated?\",\n      \"answer\": \"It moves up.\",\n      \"distractors\": [\n        \"It moves down.\",\n        \"It stays the same.\",\n        \"It becomes more elastic.\"\n      ],\n      \"explanation\": \"The speaker states that depreciating the exchange rate moves the net export function up.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Effect of exchange rate depreciation on net exports\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"Which policy combination is described as a typical package in the discussion?\",\n      \"answer\": \"Depreciate the currency and reduce government expenditure.\",\n      \"distractors\": [\n        \"Depreciate the currency and increase taxes.\",\n        \"Appreciate the currency and increase government spending.\",\n        \"Appreciate the currency and reduce government expenditure.\"\n      ],\n      \"explanation\": \"The speaker mentions a typical package of depreciating the currency while also reducing government expenditure.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Typical policy package\",\n      \"refs\": [\"Q0009\"]\n    },\n    {\n      \"question\": \"What is the purpose of reducing government expenditure in the described package?\",\n      \"answer\": \"To offset the expansionary impact of currency depreciation.\",\n      \"distractors\": [\n        \"To further stimulate output.\",\n        \"To increase the trade deficit.\",\n        \"To raise the exchange rate.\"\n      ],\n      \"explanation\": \"The speaker indicates that reducing government expenditure is used to counteract the expansionary effect of a depreciated currency.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Role of fiscal policy in the package\",\n      \"refs\": [\"Q0015\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows. Identify concepts: maybe \"depreciate exchange rate moves net export function up\". Create concept rows.\n\nWe have limited info, no formulas. We'll create concepts items.\n\nItem label e.g., \"C1\". Provide concept_name and content.\n\nExtract primary excerpts for each.\n\nLet's make two concepts: \"Depreciating exchange rate shifts net export function upward\" and \"Reducing government expenditure offsets expansionary effect\".\n\nCreate rows.\n\nRows need fields per schema.\n\nFor concept C1: concept_name row, content row.\n\nconcept_name text: \"Depreciating exchange rate shifts net export function upward\". refs Q0000. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\ncontent row: text from Q0000 maybe combine with Q0009? Use Q0000: \"And given my assumption, when you depreciate the exchange rate, then it moves the net export function up.\" refs Q0000.\n\nSimilarly concept C2: \"Reducing government expenditure can offset expansionary impact of currency depreciation\". Use Q0009 and Q0015.\n\nconcept_name row text: \"Reducing government expenditure offsets expansionary effect of currency depreciation\". refs Q0009,Q0015.\n\ncontent row: combine Q0009 \"And a typical package is you depreciate your currency, but you also reduce government expenditure, OK?\" and Q0015 \"One of them is by reducing government expenditure.\".\n\nCreate rows.\n\nNo abstentions needed.\n\nQuiz: need 4 questions but maybe limited. We can craft 3? Need up to four, can be fewer. We'll make 3.\n\nQ1: What happens to net export function when exchange rate is depreciated? Answer: It moves up. Distractors: moves down, stays same, becomes more elastic. Bloom: Understand. refs Q0000.\n\nQ2: Which policy combination is described as a typical package? Answer: Depreciate currency and reduce government expenditure. Distractors etc. refs Q0009.\n\nQ3: What is the effect of reducing government expenditure in this context? Answer: Offsets the expansionary impact. Distractors. refs Q0015.\n\nProvide JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794766874,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e1a78f200e",
+  "usage": {
+    "completion_tokens": 1323,
+    "prompt_tokens": 2955,
+    "total_tokens": 4278,
+    "completion_time": 2.7644706230000002,
+    "completion_tokens_details": {
+      "reasoning_tokens": 444
+    },
+    "prompt_time": 0.160105423,
+    "prompt_tokens_details": null,
+    "queue_time": 0.377858865,
+    "total_time": 2.924576046
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g72716esyt51d287c86hpg",
+    "debug": null,
+    "seed": 2111440824,
+    "usage": null
+  }
+}

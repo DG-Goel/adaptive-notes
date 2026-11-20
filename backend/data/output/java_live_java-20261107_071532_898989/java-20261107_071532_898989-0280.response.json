@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-82667096-98b2-4cf9-82ec-9b447fc4a5aa",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"DRY\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"DRY stands for \\\"don't repeat yourself\\\", a programming concept that advises against repeating code.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"Trade-offs in code structure\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Solutions may trade off repetition for nesting; less repetition can increase nesting complexity, making code harder to read.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Place the most specific conditions at the top of an if‑else chain and the most generic ones at the bottom.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Repeating the same expression in multiple places violates the DRY principle.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Nested if‑else statements can make code harder to read and understand.\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract facts, explanations, definitions, etc. From excerpts about programming conditions, DRY, trade-offs. Identify facts: e.g., specific condition order. Also explanation of DRY. Let's create facts and explanations.\n\nWe'll cite refs.\n\nCreate facts: \"Place most specific conditions before generic ones in if-else chain.\" refs Q0000.\n\nAnother fact: \"Repeated expressions violate DRY principle.\" refs Q0001.\n\nAnother fact: \"Nested if-else statements can be hard to read.\" refs Q0003,Q0004.\n\nExplanation: DRY principle definition? Could be definition: term DRY, definition text. Use Q0001.\n\nDefinition term: DRY. definition_text: \"DRY stands for 'don't repeat yourself', a programming concept that advises against repeating code.\" refs Q0001.\n\nExplanation of trade-offs: explanation_text: \"Solutions may trade off repetition for nesting; less repetition can increase nesting complexity, making code harder to read.\" refs Q0004.\n\nExamples: maybe example of fizzbuzz code? Could be example_text: \"if number % 15 == 0: print('FizzBuzz') elif number % 5 == 0: print('Fizz') elif number % 3 == 0: print('Buzz') else: print(number)\" but not fully present. Not enough exact text. So skip.\n\nProcedures none.\n\nRelationships none.\n\nReturn excluded empty.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036426,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8655ddce88",
+  "usage": {
+    "completion_tokens": 673,
+    "prompt_tokens": 3040,
+    "total_tokens": 3713,
+    "completion_time": 1.401204961,
+    "completion_tokens_details": {
+      "reasoning_tokens": 287
+    },
+    "prompt_time": 0.155193247,
+    "prompt_tokens_details": null,
+    "queue_time": 0.379436273,
+    "total_time": 1.556398208
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6teeqrqecprtnek10fx3dyr",
+    "debug": null,
+    "seed": 589260403,
+    "usage": null
+  }
+}

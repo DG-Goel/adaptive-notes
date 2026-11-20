@@ -1,0 +1,117 @@
+{
+  "overall_outcome": "FAIL",
+  "release": "NO-GO",
+  "returned_items": 21,
+  "pipeline_accepted_items": 0,
+  "semantic_item_breakdown": {
+    "Partially supported": 2,
+    "Supported": 19,
+    "Unsupported": 0,
+    "Contradicted": 0,
+    "Inconclusive": 0
+  },
+  "generation": {
+    "http_status": 200,
+    "json_valid": true,
+    "finish_reason": "length",
+    "usage": {
+      "prompt_tokens": 1919,
+      "completion_tokens": 4000,
+      "total_tokens": 5919
+    },
+    "truncation": "Indicated by provider length finish reason at 4000 completion tokens, despite syntactically valid JSON. Output completeness is not established.",
+    "returned_categories": [
+      "concepts",
+      "definitions",
+      "explanations",
+      "examples",
+      "facts"
+    ],
+    "omitted_categories": [
+      "formulas",
+      "procedures",
+      "relationships"
+    ]
+  },
+  "mechanical_evidence": {
+    "pipeline_stage": "Not reached: existing provider truncation guard rejected the response before extractor evidence validation.",
+    "pipeline_accepted_items": 0,
+    "offline_diagnostic_strict_passes": 0,
+    "offline_diagnostic_strict_failures": 21,
+    "canonical_source_ids": "All 21 items and all evidence entries incorrectly use JAVA_CHUNK_000 rather than T0022.",
+    "field_coverage": "Every item omits required content and /content evidence. Other returned paths refer to populated field leaves; aliases use indexed paths. No procedures/steps were returned, so live step-path compliance remains untested.",
+    "quotations": "All quotation strings exactly match T0022 text, but their source IDs are invalid and literal matches do not establish entailment.",
+    "quotes_exact": true
+  },
+  "coverage": [
+    {
+      "fact": "Increment demonstration 1 to 2",
+      "status": "Present in raw content, not accepted",
+      "items": [
+        "/examples/2"
+      ],
+      "note": "Both values and increment action explicitly retained."
+    },
+    {
+      "fact": "Final variable pi compilation error",
+      "status": "Missing",
+      "items": [],
+      "note": "The raw output mentions final variable pi in quotations but omits the assignment error itself."
+    },
+    {
+      "fact": "Integer declaration versus double-expression compilation error and declaration repair",
+      "status": "Missing",
+      "items": [],
+      "note": "This is a separate error from final pi reassignment. Source says change the declared result to double; it does not say that this repairs final pi assignment."
+    },
+    {
+      "fact": "Float-or-double conversion alternatives",
+      "status": "Present in raw content, not accepted",
+      "items": [
+        "/explanations/1"
+      ],
+      "note": "Alternatives explicitly preserved."
+    },
+    {
+      "fact": "pi to PI naming correction",
+      "status": "Partially represented, not correctly extracted",
+      "items": [
+        "/concepts/0"
+      ],
+      "note": "The naming-correction quotation is present, but PI is misclassified as a concept alias. No explicit pi-to-PI correction claim is returned."
+    },
+    {
+      "fact": "Other source coverage",
+      "status": "Mixed",
+      "note": "Expression definition, operand label, arithmetic operator names, spoken addition result, conversion narration, whole-number division, and prefix/postfix applicability are present. No unstated final prefix/postfix result is supplied. Naming convention remains in evidence only; successful double-result demonstration and repeated-conversion context are incomplete. Noncore pronunciation anecdote omitted."
+    }
+  ],
+  "comparison_with_previous": {
+    "previous_directory": "groq_compact_smoke_20261101_173556_937901",
+    "previous": {
+      "returned_items": 15,
+      "accepted_items": 0,
+      "finish_reason": "stop",
+      "prompt_tokens": 1572,
+      "completion_tokens": 3611,
+      "total_tokens": 5183,
+      "failure": "Procedure parent path /steps; unsupported additions."
+    },
+    "current": {
+      "returned_items": 21,
+      "accepted_items": 0,
+      "finish_reason": "length",
+      "prompt_tokens": 1919,
+      "completion_tokens": 4000,
+      "total_tokens": 5919,
+      "failure": "Token-limit finish; all source IDs wrong; missing content evidence; alias/definition problems."
+    },
+    "improvements": "Raw content now includes increment 1 to 2 and float-or-double alternatives. No earlier reconstructed casting expressions, unstated modulus symbol, or truncation explanation in final JSON.",
+    "regressions": "Truncation, invalid canonical IDs, missing content/evidence and more fragmentation. Cannot conclude overall quality improved; both tests fail."
+  },
+  "recommended_next_step": "Offline investigation of chunk-ID/source-ID confusion, omission of common required content and output duplication under the existing budget; propose narrowly scoped corrections for review. No further live request or budget change is authorized.",
+  "requests": 1,
+  "retries": 0,
+  "credential_rotation": false,
+  "fallback": false
+}

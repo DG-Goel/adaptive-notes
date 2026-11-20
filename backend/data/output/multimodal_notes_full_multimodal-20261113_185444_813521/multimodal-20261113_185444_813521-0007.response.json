@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-3c868837-79ef-473d-9106-7c36da573907",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"topic\": {\n        \"text\": \"Spam classification using machine learning\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\", \"Q0006\", \"Q0007\", \"Q0008\", \"Q0009\", \"Q0010\", \"Q0011\"],\n        \"claims\": [\n          {\n            \"text\": \"Google classifies emails as spam or non‑spam by learning patterns from large collections of labeled emails.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0000\", \"Q0001\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"A human can be trained to recognize spam by reviewing thousands of examples and memorising patterns such as urgent language or suspicious sender IDs.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"Machine learning follows the same idea: a computer program is trained on many spam and non‑spam emails to learn those patterns.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0005\", \"Q0006\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"Training is the phase where the model learns from labeled data; inference is the phase where the trained model predicts the label for new, unseen emails.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0010\", \"Q0011\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"This process is analogous to a traditional program that computes a fixed formula (e.g., y = x²) for given inputs, whereas a machine‑learning model derives its own mapping from data.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0011\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"explanation_text\": {\n        \"text\": \"The teaching explains that spam detection can be understood as pattern learning: a human can be trained on many examples to recognize spam, and similarly a machine‑learning model is trained on labeled emails to learn patterns, after which it can infer the label of new messages.\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\", \"Q0006\", \"Q0010\", \"Q0011\"],\n        \"claims\": [\n          {\n            \"text\": \"Training a model on labeled spam and non‑spam emails enables it to detect patterns and classify new emails.\",\n            \"basis\": \"direct_entailment\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0005\", \"Q0006\", \"Q0010\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"Inference uses the learned patterns to predict whether a new email is spam.\",\n            \"basis\": \"direct_entailment\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0010\", \"Q0011\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"explanation_type\": {\n        \"text\": \"verbal explanation of machine‑learning spam classification\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0005\", \"Q0010\"],\n        \"claims\": [\n          {\n            \"text\": \"The explanation is a verbal description, not code or formula.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0000\", \"Q0001\"],\n            \"related_refs\": []\n          }\n        ]\n      }\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output explanations extraction. The excerpts are about spam classification analogy, training, inference. We must create items with explanation_text containing claims. Identify teaching points: human spam detection analogy, training phase, inference phase, pattern extraction. Create claims with explicit basis, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role explanation_of_mistake? No, it's explanation. Use \"prerequisite\" or \"explanation\". Probably null for instructional_role? Must be one of list or null. Use null.\n\nProvide refs list of excerpt refs used. Provide topic maybe? Not required? schema requires topic field inside each item. Yes each item has topic object with claims etc. We need to fill topic with claim summarizing topic? Could be \"Spam classification using machine learning\". Provide claim text, refs, etc.\n\nWe'll produce one item covering overall explanation. Provide explanation_type value with claims etc. Use explicit basis.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794596415,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a655021f7d",
+  "usage": {
+    "completion_tokens": 1189,
+    "prompt_tokens": 3090,
+    "total_tokens": 4279,
+    "completion_time": 2.522676217,
+    "completion_tokens_details": {
+      "reasoning_tokens": 187
+    },
+    "prompt_time": 0.190695318,
+    "prompt_tokens_details": null,
+    "queue_time": 0.165040531,
+    "total_time": 2.713371535
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b4g73hesssfcmrcxdg0m7v",
+    "debug": null,
+    "seed": 1707982295,
+    "usage": null
+  }
+}

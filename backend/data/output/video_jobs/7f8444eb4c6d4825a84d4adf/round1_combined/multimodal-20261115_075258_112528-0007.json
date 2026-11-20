@@ -1,0 +1,708 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-15T07:53:13.909261+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00002"
+      ],
+      "document_id": "DOC001",
+      "content": "You get more of the foreign currency per unit of the domestic currency when the domestic currency goes up, indicating an appreciation of the domestic currency.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00002",
+              "quote": "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 98,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00002",
+              "quote": "Big appreciation of the dollar, depreciation of the yen,\n and a reversal since late 2022 and so on.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 409,
+              "end_char": 508,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00002",
+              "quote": "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 98,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "appreciation",
+              "claims": [
+                {
+                  "text": "appreciation",
+                  "refs": [
+                    "Q0000",
+                    "Q0005"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00002",
+                      "quote": "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up."
+                    },
+                    {
+                      "source_id": "G00002",
+                      "quote": "Big appreciation of the dollar, depreciation of the yen,\n and a reversal since late 2022 and so on."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "You get more of the foreign currency per unit of the domestic currency when the domestic currency goes up, indicating an appreciation of the domestic currency.",
+              "claims": [
+                {
+                  "text": "You get more of the foreign currency per unit of the domestic currency when the domestic currency goes up, indicating an appreciation of the domestic currency.",
+                  "refs": [
+                    "Q0000"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00002",
+                      "quote": "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "appreciation",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up.",
+                      "Big appreciation of the dollar, depreciation of the yen,\n and a reversal since late 2022 and so on."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00002",
+                        "quote": "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 98,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00002",
+                        "quote": "Big appreciation of the dollar, depreciation of the yen,\n and a reversal since late 2022 and so on.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 409,
+                        "end_char": 508,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "appreciation",
+                "preview_text": "appreciation",
+                "withheld": false
+              },
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "You get more of the foreign currency per unit of the domestic currency when the domestic currency goes up, indicating an appreciation of the domestic currency.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00002",
+                        "quote": "That is, you get more of the foreign currency\n per unit of the domestic currency when it goes up.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 98,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "You get more of the foreign currency per unit of the domestic currency when the domestic currency goes up, indicating an appreciation of the domestic currency.",
+                "preview_text": "You get more of the foreign currency per unit of the domestic currency when the domestic currency goes up, indicating an appreciation of the domestic currency.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00002"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "appreciation",
+      "aliases": []
+    },
+    {
+      "knowledge_id": "CON_0002",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00002"
+      ],
+      "document_id": "DOC001",
+      "content": "When the domestic currency goes down, it loses value relative to foreign currencies, which is a depreciation.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00002",
+              "quote": "And down is a depreciation.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 100,
+              "end_char": 127,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00002",
+              "quote": "Big appreciation of the dollar, depreciation of the yen,\n and a reversal since late 2022 and so on.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 409,
+              "end_char": 508,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00002",
+              "quote": "And down is a depreciation.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 100,
+              "end_char": 127,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "depreciation",
+              "claims": [
+                {
+                  "text": "depreciation",
+                  "refs": [
+                    "Q0001",
+                    "Q0005"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00002",
+                      "quote": "And down is a depreciation."
+                    },
+                    {
+                      "source_id": "G00002",
+                      "quote": "Big appreciation of the dollar, depreciation of the yen,\n and a reversal since late 2022 and so on."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "When the domestic currency goes down, it loses value relative to foreign currencies, which is a depreciation.",
+              "claims": [
+                {
+                  "text": "When the domestic currency goes down, it loses value relative to foreign currencies, which is a depreciation.",
+                  "refs": [
+                    "Q0001"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00002",
+                      "quote": "And down is a depreciation."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "depreciation",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And down is a depreciation.",
+                      "Big appreciation of the dollar, depreciation of the yen,\n and a reversal since late 2022 and so on."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00002",
+                        "quote": "And down is a depreciation.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 100,
+                        "end_char": 127,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00002",
+                        "quote": "Big appreciation of the dollar, depreciation of the yen,\n and a reversal since late 2022 and so on.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 409,
+                        "end_char": 508,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "depreciation",
+                "preview_text": "depreciation",
+                "withheld": false
+              },
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "When the domestic currency goes down, it loses value relative to foreign currencies, which is a depreciation.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And down is a depreciation."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00002",
+                        "quote": "And down is a depreciation.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 100,
+                        "end_char": 127,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "When the domestic currency goes down, it loses value relative to foreign currencies, which is a depreciation.",
+                "preview_text": "When the domestic currency goes down, it loses value relative to foreign currencies, which is a depreciation.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00002"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "depreciation",
+      "aliases": []
+    },
+    {
+      "knowledge_id": "CON_0003",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00002"
+      ],
+      "document_id": "DOC001",
+      "content": "Investors’ perceptions about interest‑rate policy in different regions drive major currency fluctuations; the dollar rose because investors saw the US as further along in its business cycle.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00002",
+              "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 619,
+              "end_char": 748,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00002",
+              "quote": "So the reason we have seen a lot of this decline here, so the reason for the rise here\n of the dollar is mostly because investors in general\n perceived that the US was more advanced in its business\n cycle.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 750,
+              "end_char": 955,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00002",
+              "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 619,
+              "end_char": 748,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00002",
+              "quote": "So the reason we have seen a lot of this decline here, so the reason for the rise here\n of the dollar is mostly because investors in general\n perceived that the US was more advanced in its business\n cycle.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 750,
+              "end_char": 955,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "interest rate perception",
+              "claims": [
+                {
+                  "text": "interest rate perception",
+                  "refs": [
+                    "Q0008",
+                    "Q0009"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00002",
+                      "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world."
+                    },
+                    {
+                      "source_id": "G00002",
+                      "quote": "So the reason we have seen a lot of this decline here, so the reason for the rise here\n of the dollar is mostly because investors in general\n perceived that the US was more advanced in its business\n cycle."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Investors’ perceptions about interest‑rate policy in different regions drive major currency fluctuations; the dollar rose because investors saw the US as further along in its business cycle.",
+              "claims": [
+                {
+                  "text": "Investors’ perceptions about interest‑rate policy in different regions drive major currency fluctuations; the dollar rose because investors saw the US as further along in its business cycle.",
+                  "refs": [
+                    "Q0008",
+                    "Q0009"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00002",
+                      "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world."
+                    },
+                    {
+                      "source_id": "G00002",
+                      "quote": "So the reason we have seen a lot of this decline here, so the reason for the rise here\n of the dollar is mostly because investors in general\n perceived that the US was more advanced in its business\n cycle."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "interest rate perception",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world.",
+                      "So the reason we have seen a lot of this decline here, so the reason for the rise here\n of the dollar is mostly because investors in general\n perceived that the US was more advanced in its business\n cycle."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00002",
+                        "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 619,
+                        "end_char": 748,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00002",
+                        "quote": "So the reason we have seen a lot of this decline here, so the reason for the rise here\n of the dollar is mostly because investors in general\n perceived that the US was more advanced in its business\n cycle.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 750,
+                        "end_char": 955,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "interest rate perception",
+                "preview_text": "interest rate perception",
+                "withheld": false
+              },
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Investors’ perceptions about interest‑rate policy in different regions drive major currency fluctuations; the dollar rose because investors saw the US as further along in its business cycle.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world.",
+                      "So the reason we have seen a lot of this decline here, so the reason for the rise here\n of the dollar is mostly because investors in general\n perceived that the US was more advanced in its business\n cycle."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00002",
+                        "quote": "But one of the main drivers of these fluctuations is perceptions about interest rate policy\n in the different parts of the world.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 619,
+                        "end_char": 748,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00002",
+                        "quote": "So the reason we have seen a lot of this decline here, so the reason for the rise here\n of the dollar is mostly because investors in general\n perceived that the US was more advanced in its business\n cycle.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 750,
+                        "end_char": 955,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Investors’ perceptions about interest‑rate policy in different regions drive major currency fluctuations; the dollar rose because investors saw the US as further along in its business cycle.",
+                "preview_text": "Investors’ perceptions about interest‑rate policy in different regions drive major currency fluctuations; the dollar rose because investors saw the US as further along in its business cycle.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00002"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "interest rate perception",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 3,
+  "source_units_processed": 1,
+  "extraction_metadata": null
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-f22b11c2-815e-4f34-a813-ae4c5b287790",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"array\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"definition_text\": {\n        \"text\": \"an array is a reference type used to store a list of items such as numbers, people, or messages\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"to declare an array of integers you write int[] followed by the variable name\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"arrays are reference types and must be created with the new operator\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"the size (length) of an array is specified in square brackets after the new operator\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"array indices start at 0; the first element is accessed with index 0\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"accessing an index outside the array bounds (e.g., index 10 in a length‑5 array) throws an exception and crashes the program\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"printing an array directly (e.g., System.out.println(array)) yields a string based on the object's memory address, not its contents\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"the java.util.Arrays class provides a toString method that returns a readable representation of an array's items\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"the Arrays.toString method is overloaded for each primitive type and for reference types\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract facts, definitions, etc. From excerpts about Java arrays. Identify facts: arrays store list of items, reference types, need new operator, specify size, index starts at 0, out-of-bounds causes exception, printing array gives memory address string, use Arrays.toString method. Also method overloaded. Create facts entries. No definitions? Could define \"array\" as list of items. That's a definition. Use excerpts. Provide schema JSON. Include excluded empty. No concepts etc. Provide facts array with each fact_text and fact_type maybe null. Cite refs. Let's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065523,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c868cf1eaa",
+  "usage": {
+    "completion_tokens": 692,
+    "prompt_tokens": 3030,
+    "total_tokens": 3722,
+    "completion_time": 1.44840736,
+    "completion_tokens_details": {
+      "reasoning_tokens": 121
+    },
+    "prompt_time": 0.151916176,
+    "prompt_tokens_details": null,
+    "queue_time": 0.378789924,
+    "total_time": 1.6003235359999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6va6q6wec09zsvr0httxrk9",
+    "debug": null,
+    "seed": 711733223,
+    "usage": null
+  }
+}

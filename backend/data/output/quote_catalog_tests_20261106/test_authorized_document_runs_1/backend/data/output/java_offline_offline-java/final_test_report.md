@@ -1,0 +1,26 @@
+# Java run
+
+{
+  "classification": "Partial live execution",
+  "live": false,
+  "source_sha256": "cf49d345e48f41fee931710170a8a6e10406dffa3d7d9f85cdb2ca7cfc954a01",
+  "total_chunks": 2,
+  "completed_chunks": 2,
+  "recovered_truncations": 1,
+  "requests_attempted": 3,
+  "http_successes": 2,
+  "http_429": 0,
+  "input_tokens": 200,
+  "output_tokens": 400,
+  "unknown_usage_attempts": 1,
+  "elapsed_seconds": 0.06300000000010186,
+  "errors": [],
+  "assembly": "completed",
+  "quality_score": null,
+  "total_actual_tokens": null,
+  "token_count_note": "Input/output sums include reported usage only; missing usage is not zero consumption.",
+  "items": 2,
+  "source_units_with_items": 2
+}
+
+Semantic checks are heuristics. Educational quality has not yet been manually reviewed. No quality score is inferred from HTTP success.

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-47804ee8-3d33-4aba-83f9-25fa79eaa00f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"units\":[{\"title\":\"FizzBuzz Condition Actions\",\"source_segment_ids\":[\"FCT_0379\",\"FCT_0380\",\"FCT_0375\",\"FCT_0376\",\"FCT_0377\"],\"mode\":\"visual_only\",\"remaining_text\":\"\",\"visuals\":[{\"source_segment_ids\":[\"FCT_0379\",\"FCT_0380\",\"FCT_0375\",\"FCT_0376\",\"FCT_0377\"],\"needs_review\":false,\"missing_information\":[],\"evidence\":[{\"note_id\":\"FCT_0379\",\"quote\":\"If the number is divisible by 5 and 3, print fizzbuzz; this is a very specific condition.\"},{\"note_id\":\"FCT_0380\",\"quote\":\"Otherwise, if the number is only divisible by 5, print fizz; else if divisible by 3, print buzz; otherwise print the number itself.\"},{\"note_id\":\"FCT_0375\",\"quote\":\"if we enter 15, this first condition will evaluate to true, so we get fizz.\"},{\"note_id\":\"FCT_0376\",\"quote\":\"Other else clauses are ignored when a previous condition is true.\"},{\"note_id\":\"FCT_0377\",\"quote\":\"Place the most specific conditions at the top and the most generic ones at the bottom.\"}],\"payload\":{\"type\":\"table\",\"title\":\"FizzBuzz Condition Actions\",\"headers\":[\"Condition\",\"Action\"],\"rows\":[[\"number % 15 == 0\",\"print fizzbuzz\"],[\"number % 5 == 0\",\"print fizz\"],[\"number % 3 == 0\",\"print buzz\"],[\"else\",\"print number\"]]}}]}]}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visuals if supported. We have info about fizzbuzz conditions ordering. Could make a table comparing conditions. Use source segments: primary FCT_0379, FCT_0380, context FCT_0375, FCT_0376, FCT_0377. Build table: condition vs action. Provide evidence quotes. Provide unit with visual. Only up to two visuals. We'll do one table. No text-only units. Return units list with one unit. Mode text_and_visual? Since we have only visual, but need remaining_text maybe empty. Use mode text_and_visual? Could be visual_only. Use visual_only. Provide remaining_text empty. Provide source_segment_ids list. Provide needs_review false. missing_information empty. evidence array with note_id and quote for each cell maybe. Provide payload type table. Let's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794580137,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_64b2f1c926",
+  "usage": {
+    "completion_tokens": 520,
+    "prompt_tokens": 1570,
+    "total_tokens": 2090,
+    "completion_time": 1.097925713,
+    "completion_tokens_details": {
+      "reasoning_tokens": 173
+    },
+    "prompt_time": 0.086594652,
+    "prompt_tokens_details": null,
+    "queue_time": 0.314989997,
+    "total_time": 1.184520365
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7amzg0we8h8dsk6g5yyhf3k",
+    "debug": null,
+    "seed": 1968613364,
+    "usage": null
+  }
+}

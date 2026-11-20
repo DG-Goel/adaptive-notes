@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-5b3212c9-ab47-4542-983a-dcd3f53ff0d6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"the brick statement terminates a loop, and the continuous statement moves control to the beginning of a loop.\",\n        \"refs\": [\"Q0005\"],\n        \"claims\": [\n          {\n            \"text\": \"the brick statement terminates a loop, and the continuous statement moves control to the beginning of a loop.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0005\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"using true as the loop condition simplifies the code.\",\n        \"refs\": [\"Q0008\"],\n        \"claims\": [\n          {\n            \"text\": \"using true as the loop condition simplifies the code.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0008\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"a loop with condition true executes forever until the user types quit.\",\n        \"refs\": [\"Q0009\"],\n        \"claims\": [\n          {\n            \"text\": \"a loop with condition true executes forever until the user types quit.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0009\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"using while true without a break statement creates an infinite loop that never terminates and can be dangerous in terms of memory consumption.\",\n        \"refs\": [\"Q0011\"],\n        \"claims\": [\n          {\n            \"text\": \"using while true without a break statement creates an infinite loop that never terminates and can be dangerous in terms of memory consumption.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0011\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"if you use while true, make sure you have a break statement in your loop.\",\n        \"refs\": [\"Q0012\"],\n        \"claims\": [\n          {\n            \"text\": \"if you use while true, make sure you have a break statement in your loop.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0012\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract facts. Identify statements: Q0005 explains brick statement terminates loop, continuous moves control to beginning. That's a fact. Also Q0008 simplify code using true as loop condition. Q0009 loop executes forever until quit. Q0011 warning about infinite loop. Q0012 advice make sure break. Provide claims. Build items.\n\nLet's create one fact per teaching point.\n\nFact1: \"the brick statement terminates a loop, and the continuous statement moves control to the beginning of a loop.\" source Q0005. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role explanation_of_mistake? Actually it's explanation. Use \"prerequisite\"? maybe \"explanation_of_mistake\"? It's just explanation. Use null? Choose null.\n\nFact2: \"using true as loop condition simplifies code.\" source Q0008. explicit.\n\nFact3: \"a loop with condition true executes forever until the user types quit.\" source Q0009.\n\nFact4: \"using while true requires a break statement to avoid an infinite loop that never terminates and can be dangerous in memory consumption.\" sources Q0011 and Q0012 combine? Could make separate facts.\n\nMake separate Fact4: from Q0011 warning. Fact5: from Q0012 advice.\n\nNow construct schema. Provide items array with each fact having fact_text with text and refs and claims. fact_type null.\n\nAbstentions none. Excluded none.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794324998,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4200b3f836",
+  "usage": {
+    "completion_tokens": 991,
+    "prompt_tokens": 2321,
+    "total_tokens": 3312,
+    "completion_time": 2.092899071,
+    "completion_tokens_details": {
+      "reasoning_tokens": 299
+    },
+    "prompt_time": 0.12694152,
+    "prompt_tokens_details": null,
+    "queue_time": 0.324647895,
+    "total_time": 2.219840591
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m731n859ehatk3pb7x6xersk",
+    "debug": null,
+    "seed": 109386012,
+    "usage": null
+  }
+}

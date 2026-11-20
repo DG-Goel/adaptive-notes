@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-289363c5-663b-4b86-a99e-9c4360ee1772",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"fact1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Japan hasn't had hikes in interest rates for three decades.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The scale here is very small.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"These are a few basis points.\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact4\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"People expect interest rates in the US to go down relative to interest rates in Japan.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact5\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The direction of change is towards the US loosening monetary policy before the rest of the world does.\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the source, how long has Japan gone without interest rate hikes?\",\n      \"answer\": \"Three decades\",\n      \"distractors\": [\n        \"One decade\",\n        \"Two decades\",\n        \"Five decades\"\n      ],\n      \"explanation\": \"The excerpt states \\\"Japan hasn't had hikes in interest rates for three decades\\\" (Q0000).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Japan interest‑rate history\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"What does the speaker describe the scale of as?\",\n      \"answer\": \"Very small\",\n      \"distractors\": [\n        \"Moderate\",\n        \"Large\",\n        \"Enormous\"\n      ],\n      \"explanation\": \"The excerpt says \\\"The scale here is very small\\\" (Q0001).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Scale description\",\n      \"refs\": [\"Q0001\"]\n    },\n    {\n      \"question\": \"How many basis points are mentioned in the discussion?\",\n      \"answer\": \"A few\",\n      \"distractors\": [\n        \"Several dozen\",\n        \"Dozens\",\n        \"Hundreds\"\n      ],\n      \"explanation\": \"The speaker notes \\\"These are a few basis points\\\" (Q0002).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Basis‑point magnitude\",\n      \"refs\": [\"Q0002\"]\n    },\n    {\n      \"question\": \"What is the expected direction of US interest rates relative to Japan's?\",\n      \"answer\": \"US rates are expected to go down relative to Japan\",\n      \"distractors\": [\n        \"US rates are expected to rise relative to Japan\",\n        \"US rates are expected to stay the same as Japan\",\n        \"US rates are expected to be higher than Japan\"\n      ],\n      \"explanation\": \"The excerpt states \\\"people expect interest rates in the US has to go down relative to interest rates in Japan\\\" (Q0003).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"US‑Japan rate expectation\",\n      \"refs\": [\"Q0003\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows. Extract concepts? The excerpts talk about interest rates comparison. Could create facts. Required fields: for facts need fact_text. Provide rows with availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, etc. Item label maybe \"item1\". Provide one fact per excerpt? Could combine. Provide at least one required field per category used. We can use facts category. Provide rows for each fact. Also maybe concepts? Not needed. Provide abstentions none. Excluded none. Quiz: need up to four questions based on primary excerpts. Create questions about statements. Provide correct answer from excerpt. Distractors plausible.\n\nLet's craft four facts:\n\nFact1: Japan hasn't had hikes in interest rates for three decades. (from Q0000)\n\nFact2: The scale here is very small. (Q0001) maybe vague but okay.\n\nFact3: These are a few basis points. (Q0002)\n\nFact4: People expect US interest rates to go down relative to Japan. (Q0003)\n\nFact5: Direction of change is US loosening before rest of world. (Q0005)\n\nWe need at least one fact row, but can include multiple rows. Provide rows with element 0 each? For scalar fields, element=0, part=value.\n\nWe'll create separate items for each fact: item \"fact1\",\"fact2\"... Provide category facts, field fact_text.\n\nNow quiz: four questions.\n\nQ1: According to the source, how long has Japan gone without interest rate hikes? Answer: three decades. Distractors: one decade, two decades, five decades.\n\nQ2: What does the speaker describe the scale of as? Answer: very small. Distractors: moderate, large, enormous.\n\nQ3: How many basis points are mentioned? Answer: a few. Distractors: several dozen, dozens, hundreds.\n\nQ4: What is the expected direction of US interest rates relative to Japan? Answer: US rates expected to go down relative to Japan. Distractors: US rates expected to rise, US rates expected to stay same, US rates expected to be higher than Japan.\n\nProvide bloom levels: Remember.\n\nProvide refs: primary excerpt refs.\n\nNow construct JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794816893,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_90620edd96",
+  "usage": {
+    "completion_tokens": 1486,
+    "prompt_tokens": 2982,
+    "total_tokens": 4468,
+    "completion_time": 3.113404076,
+    "completion_tokens_details": {
+      "reasoning_tokens": 451
+    },
+    "prompt_time": 0.132636974,
+    "prompt_tokens_details": null,
+    "queue_time": 0.376376984,
+    "total_time": 3.24604105
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hprne5effvdpa51meqcw0k",
+    "debug": null,
+    "seed": 354305842,
+    "usage": null
+  }
+}

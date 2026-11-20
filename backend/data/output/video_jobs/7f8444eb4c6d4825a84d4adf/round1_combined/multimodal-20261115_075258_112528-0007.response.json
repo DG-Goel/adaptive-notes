@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-27526317-d8a2-4f85-ae27-fda550ad789c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept_appreciation\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"appreciation\",\n      \"refs\": [\"Q0000\", \"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept_appreciation\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"You get more of the foreign currency per unit of the domestic currency when the domestic currency goes up, indicating an appreciation of the domestic currency.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept_depreciation\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"depreciation\",\n      \"refs\": [\"Q0001\", \"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept_depreciation\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the domestic currency goes down, it loses value relative to foreign currencies, which is a depreciation.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept_interest_rate_perception\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"interest rate perception\",\n      \"refs\": [\"Q0008\", \"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept_interest_rate_perception\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Investors’ perceptions about interest‑rate policy in different regions drive major currency fluctuations; the dollar rose because investors saw the US as further along in its business cycle.\",\n      \"refs\": [\"Q0008\", \"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What happens to the amount of foreign currency you receive per unit of domestic currency when the domestic currency appreciates?\",\n      \"answer\": \"You receive more foreign currency per unit of domestic currency.\",\n      \"explanation\": \"The source states that appreciation means you get more of the foreign currency per unit of the domestic currency when it goes up.\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0000\"],\n      \"topic\": \"appreciation\"\n    },\n    {\n      \"question\": \"Define depreciation in the context of currency values.\",\n      \"answer\": \"Depreciation is when the domestic currency loses value relative to foreign currencies, so you get less foreign currency per unit.\",\n      \"explanation\": \"The source describes depreciation as the domestic currency going down and losing value.\",\n      \"bloom_level\": \"Understand\",\n      \"refs\": [\"Q0001\"],\n      \"topic\": \"depreciation\"\n    },\n    {\n      \"question\": \"According to the speaker, what primary factor caused the recent rise of the dollar?\",\n      \"answer\": \"Investors perceived that the US was more advanced in its business cycle, reflecting favorable interest‑rate expectations.\",\n      \"explanation\": \"The source links the dollar’s rise to investors’ perception of the US being further along in its business cycle.\",\n      \"bloom_level\": \"Analyze\",\n      \"refs\": [\"Q0009\"],\n      \"topic\": \"interest rate perception\"\n    },\n    {\n      \"question\": \"How did the Japanese yen’s performance compare to the dollar’s during the same period?\",\n      \"answer\": \"The yen experienced a large depreciation while the dollar appreciated.\",\n      \"explanation\": \"The source notes a big appreciation of the dollar and depreciation of the yen, describing opposite movements.\",\n      \"bloom_level\": \"Understand\",\n      \"refs\": [\"Q0005\"],\n      \"topic\": \"currency movement comparison\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows etc. The source only talks about appreciation/depreciation. Likely concepts: appreciation, depreciation, foreign currency, domestic currency. Create rows for concepts with content. Provide abstentions for missing fields. Then quiz 4 questions.\n\nLet's craft rows: item \"concept_appreciation\". concept_name \"appreciation\". content from Q0000 and Q0005. Provide refs. basis explicit. availability SOURCE_SUPPORTED. literal_kind verbal. instructional_role null.\n\nSimilarly depreciation.\n\nAlso maybe concept \"interest rate perception\" but not needed.\n\nWe need required fields for concepts: concept_name and content. Provide rows.\n\nRows list.\n\nAbstentions none maybe.\n\nQuiz: 4 questions about appreciation, depreciation, cause (interest rate perception), and effect on yen.\n\nProvide answers.\n\nNow output JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794729194,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_96d96a151c",
+  "usage": {
+    "completion_tokens": 1296,
+    "prompt_tokens": 2576,
+    "total_tokens": 3872,
+    "completion_time": 2.733064149,
+    "completion_tokens_details": {
+      "reasoning_tokens": 165
+    },
+    "prompt_time": 0.134174965,
+    "prompt_tokens_details": null,
+    "queue_time": 0.294334733,
+    "total_time": 2.867239114
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f349jhem4tgrvvkreyf8sf",
+    "debug": null,
+    "seed": 1707367735,
+    "usage": null
+  }
+}

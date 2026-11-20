@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-40e734cb-9086-4f44-a329-9542613ef547",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"interest rate differential\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When one bond pays a higher interest than another, the higher return must be offset by an expected depreciation of the currency of the higher‑interest bond.\",\n      \"refs\": [\"Q0007\", \"Q0008\", \"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"expected depreciation\",\n      \"refs\": [\"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The anticipated loss in value of a currency that is expected to depreciate, used to offset a higher interest rate on a bond denominated in that currency.\",\n      \"refs\": [\"Q0008\", \"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"currency appreciation to set expected exchange rate\",\n      \"refs\": [\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"To fix the expected future exchange rate, the model assumes the currency must appreciate today so it can later depreciate.\",\n      \"refs\": [\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, how is a higher interest rate on a bond compensated in the model?\",\n      \"answer\": \"By expecting a depreciation of the currency of the higher‑interest bond.\",\n      \"distractors\": [\n        \"By increasing the bond’s face value.\",\n        \"By holding the currency constant.\",\n        \"By shortening the bond’s maturity.\"\n      ],\n      \"explanation\": \"The speaker says the higher return must be offset by an expected depreciation of the currency that is paying the higher interest (Q0007‑Q0009).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"interest rate differential\",\n      \"refs\": [\"Q0007\", \"Q0008\", \"Q0009\"]\n    },\n    {\n      \"question\": \"What does the term “expected depreciation” refer to in the discussion?\",\n      \"answer\": \"The anticipated loss in value of a currency used to offset a higher interest rate on a bond.\",\n      \"distractors\": [\n        \"A guaranteed drop in the bond’s price.\",\n        \"A sudden increase in inflation.\",\n        \"A fixed exchange rate set by the central bank.\"\n      ],\n      \"explanation\": \"The speaker describes expected depreciation as the loss in value of the currency that is expected to depreciate, used to offset the higher interest (Q0008‑Q0009).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"expected depreciation\",\n      \"refs\": [\"Q0008\", \"Q0009\"]\n    },\n    {\n      \"question\": \"Why does the model require the currency to appreciate today?\",\n      \"answer\": \"To set a fixed expected future exchange rate that will later depreciate.\",\n      \"distractors\": [\n        \"To increase the current interest rate.\",\n        \"To eliminate any currency risk entirely.\",\n        \"To match the inflation rate of the bond’s issuer.\"\n      ],\n      \"explanation\": \"The speaker explains that fixing the expected exchange rate involves appreciating the currency today so it can depreciate in the future (Q0010).\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"currency appreciation\",\n      \"refs\": [\"Q0010\"]\n    },\n    {\n      \"question\": \"What market behavior does the speaker describe when traders move to a higher‑return bond?\",\n      \"answer\": \"Traders quickly shift to the US dollar bond because it offers a higher return until the currency appreciates enough.\",\n      \"distractors\": [\n        \"Traders avoid the US dollar bond due to exchange‑rate risk.\",\n        \"Traders hold their current bonds regardless of returns.\",\n        \"Traders wait for central bank intervention before moving.\"\n      ],\n      \"explanation\": \"The speaker notes that traders immediately go to the US dollar bond for its higher return, and this continues until the currency appreciates (Q0014‑Q0016).\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"trader response to interest differentials\",\n      \"refs\": [\"Q0014\", \"Q0015\", \"Q0016\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows, abstentions, excluded, quiz. The excerpts are mostly discussion, no concrete concepts? We can extract concepts like \"interest rate differential\", \"expected depreciation\". Create rows for concepts: concept_name and content. Use primary excerpts.\n\nLet's make items: item \"concept1\". rows: concept_name \"interest rate differential\" from Q0007. content \"one bond is paying a higher interest than the other one, need to offset that\". Provide refs.\n\nAlso concept \"expected depreciation\" from Q0008/Q0009.\n\nAlso concept \"currency appreciation\" from Q0010.\n\nAdd rows for definitions? Not explicit definitions.\n\nWe need required fields for concepts: concept_name and content. Provide rows.\n\nAbstentions: none needed.\n\nQuiz: create 4 questions based on these concepts.\n\nQuestion1: What does the speaker mean by needing to offset a higher interest rate? Answer: by expecting depreciation of the currency of the higher‑interest bond. Distractors.\n\nProvide refs.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794813371,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5082008e34",
+  "usage": {
+    "completion_tokens": 1564,
+    "prompt_tokens": 2959,
+    "total_tokens": 4523,
+    "completion_time": 3.30706168,
+    "completion_tokens_details": {
+      "reasoning_tokens": 204
+    },
+    "prompt_time": 0.146849225,
+    "prompt_tokens_details": null,
+    "queue_time": 0.28303589,
+    "total_time": 3.453910905
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hkd5nye0yamntyexszr366",
+    "debug": null,
+    "seed": 2026923457,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-18663a06-0e94-4fe9-95ef-a4e42b564e6a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"trade deficit\",\n      \"refs\": [\"Q0004\", \"Q0006\", \"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A situation where a country imports more than it exports, creating a negative balance of trade.\",\n      \"refs\": [\"Q0004\", \"Q0006\", \"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"exchange rate depreciation\",\n      \"refs\": [\"Q0012\", \"Q0013\", \"Q0014\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A policy action that lowers the value of the domestic currency relative to foreign currencies, making domestic goods cheaper abroad.\",\n      \"refs\": [\"Q0012\", \"Q0013\", \"Q0014\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"net exports\",\n      \"refs\": [\"Q0015\", \"Q0016\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The difference between a country's exports and imports; it rises when the exchange rate is depreciated.\",\n      \"refs\": [\"Q0015\", \"Q0016\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the excerpt, what is the only tool mentioned for addressing a trade deficit?\",\n      \"answer\": \"The exchange rate\",\n      \"distractors\": [\n        \"Fiscal policy\",\n        \"Tariff adjustments\",\n        \"Monetary base expansion\"\n      ],\n      \"explanation\": \"The speaker says, “And the only tool you have is the exchange rate,” indicating it is the sole instrument discussed.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"policy tool for trade deficit\",\n      \"refs\": [\"Q0017\"]\n    },\n    {\n      \"question\": \"What effect does depreciating the domestic currency have on domestic goods, as described?\",\n      \"answer\": \"It makes them cheaper relative to foreign goods\",\n      \"distractors\": [\n        \"It makes them more expensive abroad\",\n        \"It has no effect on price competitiveness\",\n        \"It raises domestic wages\"\n      ],\n      \"explanation\": \"The excerpt states, “You make the domestic goods cheaper relative to the rest of the world.”\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"exchange rate depreciation effect\",\n      \"refs\": [\"Q0013\"]\n    },\n    {\n      \"question\": \"How does a depreciation of the currency influence net exports, according to the speaker?\",\n      \"answer\": \"It increases net exports\",\n      \"distractors\": [\n        \"It decreases net exports\",\n        \"It leaves net exports unchanged\",\n        \"It makes net exports unpredictable\"\n      ],\n      \"explanation\": \"The speaker says, “And that will increase net exports.”\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"depreciation and net exports\",\n      \"refs\": [\"Q0015\"]\n    },\n    {\n      \"question\": \"What assumption does the speaker describe as “very realistic” in the context of the discussion?\",\n      \"answer\": \"That prices are completely sticky\",\n      \"distractors\": [\n        \"That exchange rates are perfectly flexible\",\n        \"That trade deficits are always harmful\",\n        \"That fiscal policy can instantly adjust\"\n      ],\n      \"explanation\": \"The excerpt begins with, “And because this is a very realistic assumption,” followed by a discussion of sticky prices and depreciation.\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"assumption about price stickiness\",\n      \"refs\": [\"Q0000\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows. Identify concepts? The excerpts talk about trade deficit, depreciate currency, net exports. So we can create concepts: \"trade deficit\", \"exchange rate depreciation\", \"net exports\". Provide content rows.\n\nCreate item \"item1\". rows for concept_name and content.\n\nAlso maybe explanation? but limited.\n\nWe'll output rows for concepts.\n\nAlso quiz: need 4 questions but maybe limited. We have enough.\n\nCreate questions about what depreciation does, tool, etc.\n\nProvide refs primary Q0012 etc.\n\nNow construct JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794769608,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4727af4560",
+  "usage": {
+    "completion_tokens": 1337,
+    "prompt_tokens": 2577,
+    "total_tokens": 3914,
+    "completion_time": 2.786434845,
+    "completion_tokens_details": {
+      "reasoning_tokens": 110
+    },
+    "prompt_time": 0.118939345,
+    "prompt_tokens_details": null,
+    "queue_time": 0.164588874,
+    "total_time": 2.90537419
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g9nmrze7ksj6easdsk02tp",
+    "debug": null,
+    "seed": 1964995682,
+    "usage": null
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "operations": [
+    {
+      "id": "offline-java-0000",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "3877bcb0825f8a18c24254bd8172c89eac45fe0acbeb88e7d50ec0b5d8eb6d2c",
+      "state": "success",
+      "created": 1794233066.8839428,
+      "completed": 1794233066.8839428,
+      "validation": "passed_mechanical_only"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "offline-java-0000",
+      "number": 1,
+      "created": 1794233066.8839428,
+      "dispatched": 1794233066.8839428,
+      "completed": 1794233066.8839428,
+      "input_reserved": 3072,
+      "output_reserved": 3000,
+      "input_actual": 100,
+      "output_actual": 200,
+      "reasoning": 40,
+      "charged": 300,
+      "http_status": 200,
+      "finish": "stop",
+      "duration": 0.0,
+      "category": "response"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794233066.8839428,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"bdbc4f3b0cf597baa9b2ef19ba21cac51aaad5b025d3f7346554e1ed40cd88d5\", \"estimated_input\": 3072, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 2,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794233066.8839428,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 3,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794233066.8839428,
+      "event": "response_saved",
+      "details": "{\"sha256\": \"01885ba2c805d24ff047ebdda0177728e3eaf3678a209e0070491d355b2c9079\"}"
+    },
+    {
+      "sequence": 4,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794233066.8839428,
+      "event": "quote_resolution",
+      "details": "{\"resolutions\": [{\"claim_reviews\": [{\"category\": \"concepts\", \"field\": \"concept_name\", \"limitation\": \"Signals can have false positives; partial support, contradiction and entailment require claim-level review.\", \"review_required\": true, \"semantic_verified\": false, \"signals\": {\"possible_contradiction\": false, \"possibly_lost_qualifiers\": [], \"unsupported_numbers\": []}, \"status\": \"unverified\"}, {\"category\": \"concepts\", \"field\": \"content\", \"limitation\": \"Signals can have false positives; partial support, contradiction and entailment require claim-level review.\", \"review_required\": true, \"semantic_verified\": false, \"signals\": {\"possible_contradiction\": false, \"possibly_lost_qualifiers\": [], \"unsupported_numbers\": []}, \"status\": \"unverified\"}], \"context_counts_as_completed\": false, \"context_source_ids\": [], \"excluded\": {}, \"exclusion_scope\": \"excerpt_only_not_whole_source_unit\", \"policy\": \"grounded_fields_v2\", \"primary_source_ids\": [\"T0001\", \"T0002\"], \"review_required\": true, \"semantic_entailment_verified\": false, \"semantic_status\": \"unverified\", \"unaccounted_refs\": [\"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\", \"Q0006\", \"Q0007\", \"Q0008\", \"Q0009\", \"Q0010\", \"Q0011\", \"Q0012\", \"Q0013\", \"Q0014\", \"Q0015\", \"Q0016\", \"Q0017\", \"Q0018\", \"Q0019\", \"Q0020\", \"Q0021\", \"Q0022\", \"Q0023\", \"Q0024\", \"Q0025\", \"Q0026\", \"Q0027\", \"Q0028\", \"Q0029\", \"Q0030\", \"Q0031\", \"Q0032\", \"Q0033\", \"Q0034\", \"Q0035\", \"Q0036\", \"Q0037\", \"Q0038\", \"Q0039\"], \"used_refs\": [\"Q0000\"]}]}"
+    },
+    {
+      "sequence": 5,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794233066.8839428,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"success\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"passed_mechanical_only\"}"
+    },
+    {
+      "sequence": 6,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794233066.8839428,
+      "event": "successful_checkpoint_recovery",
+      "details": "{\"items\": 1, \"redispatched\": false, \"response_sha256\": \"01885ba2c805d24ff047ebdda0177728e3eaf3678a209e0070491d355b2c9079\"}"
+    }
+  ]
+}

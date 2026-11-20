@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-d2851394-2b71-47ac-b4e0-862a2270f33c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"investment_example\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"They pay you 10%, the other one pays you 5%.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"investment_example\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"I have $1 of wealth that I want to invest.\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"investment_example\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"Suppose I get 0.8 pounds per dollar.\",\n      \"refs\": [\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"investment_example\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 3,\n      \"part\": \"value\",\n      \"text\": \"That will give me 0.8 times 1 plus 1.1 plus i star tomorrow.\",\n      \"refs\": [\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What are the two interest rates mentioned in the discussion?\",\n      \"answer\": \"10% and 5%\",\n      \"distractors\": [\n        \"8% and 12%\",\n        \"5% and 7%\",\n        \"10% and 15%\"\n      ],\n      \"explanation\": \"The speaker states that one option pays 10% and the other pays 5%, directly indicating the two rates.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"interest rates\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"According to the example, how many pounds does one dollar convert to?\",\n      \"answer\": \"0.8 pounds per dollar\",\n      \"distractors\": [\n        \"1.0 pounds per dollar\",\n        \"0.5 pounds per dollar\",\n        \"1.2 pounds per dollar\"\n      ],\n      \"explanation\": \"The speaker explicitly says, \\\"suppose I get 0.8 pounds per dollar,\\\" providing the conversion rate.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"currency conversion\",\n      \"refs\": [\"Q0010\"]\n    },\n    {\n      \"question\": \"What initial amount of wealth does the speaker have to invest?\",\n      \"answer\": \"$1\",\n      \"distractors\": [\n        \"$10\",\n        \"$100\",\n        \"$0.5\"\n      ],\n      \"explanation\": \"The speaker says, \\\"I have $1 of wealth that I want to invest,\\\" indicating the starting capital.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"initial investment amount\",\n      \"refs\": [\"Q0007\"]\n    },\n    {\n      \"question\": \"Why does the speaker say the information may be insufficient?\",\n      \"answer\": \"Because currency exposure could cause a loss despite returns\",\n      \"distractors\": [\n        \"Because the interest rates are unknown\",\n        \"Because bond prices are volatile\",\n        \"Because tax rates are unclear\"\n      ],\n      \"explanation\": \"The speaker notes that even if the return looks positive, loss can occur due to currency exposure, making the information incomplete.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"currency exposure risk\",\n      \"refs\": [\"Q0004\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows. Identify concepts? There's talk of returns, currency exposure. Likely facts? We have statements: \"They pay you 10%, the other one pays you 5%.\" That's a fact about rates. Also \"I have $1 of wealth that I want to invest.\" etc. We'll create facts rows.\n\nCreate item e.g., item \"investment_example\". Provide fact_text rows.\n\nRow1: fact_text \"They pay you 10%, the other one pays you 5%.\" refs Q0000 basis explicit availability SOURCE_SUPPORTED literal_kind verbal instructional_role null related_refs [] element0 part value.\n\nRow2: fact_text \"I have $1 of wealth that I want to invest.\" Q0007.\n\nRow3: fact_text \"Suppose I get 0.8 pounds per dollar.\" Q0010.\n\nRow4: fact_text \"That will give me 0.8 times 1 plus 1.1 plus i* tomorrow.\" Q0011 (though unclear). Provide as verbatim.\n\nAlso maybe concept: \"currency exposure\". But no definition.\n\nWe need required fields for facts: fact_text only. So rows as above.\n\nNo abstentions needed.\n\nQuiz: need 4 questions. Use these facts.\n\nQ1: What are the two interest rates mentioned? Answer: 10% and 5%. Distractors: 8% and 12%, 5% and 7%, 10% and 15%. Bloom: Remember. refs Q0000.\n\nQ2: How much pound does one dollar convert to in the example? Answer: 0.8 pounds per dollar. Distractors: 1.0, 0.5, 1.2. Bloom: Remember. refs Q0010.\n\nQ3: What initial amount of wealth does the speaker have to invest? Answer: $1. Distractors: $10, $100, $0.5. Bloom: Remember. refs Q0007.\n\nQ4: According to the speaker, why might the information be insufficient? Answer: Because currency exposure could cause a loss despite returns. Distractors: Because interest rates are unknown, Because bond prices are volatile, Because tax rates are unclear. Bloom: Understand. refs Q0004.\n\nProvide JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794767008,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_93703442d9",
+  "usage": {
+    "completion_tokens": 1417,
+    "prompt_tokens": 2513,
+    "total_tokens": 3930,
+    "completion_time": 3.787530215,
+    "completion_tokens_details": {
+      "reasoning_tokens": 462
+    },
+    "prompt_time": 0.033642862,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "queue_time": 0.376395946,
+    "total_time": 3.821173077
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g7693kec08bwx6rfmx37rb",
+    "debug": null,
+    "seed": 1444177541,
+    "usage": null
+  }
+}

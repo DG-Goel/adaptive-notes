@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-995cfe62-5810-4ca7-b580-e7afc4bada30",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"Package\",\n        \"refs\": [\"Q0005\"],\n        \"claims\": [\n          {\n            \"text\": \"A package creates a namespace for classes, allowing classes with the same name to exist in different packages without conflict.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0005\", \"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"Packages create a name space for our classes, so we can have the same class in different packages without conflict.\",\n        \"refs\": [\"Q0005\", \"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"Packages create a name space for classes, preventing naming conflicts between classes with the same name in different packages.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0005\", \"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need definitions. Extract definition of package? From quotes: \"So packages create a name space for our classes.\" Also \"We can have the same class, but in different packages, they don't conflict.\" Provide term and definition_text. Create items. Claims: explicit basis. availability SOURCE_SUPPORTED. literal_kind verbal. instructional_role prerequisite? maybe explanation. Use refs. Provide one item. No abstentions. No excluded.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794325912,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_96d96a151c",
+  "usage": {
+    "completion_tokens": 392,
+    "prompt_tokens": 2530,
+    "total_tokens": 2922,
+    "completion_time": 0.832318052,
+    "completion_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "prompt_time": 0.13201219,
+    "prompt_tokens_details": null,
+    "queue_time": 0.288529515,
+    "total_time": 0.964330242
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m732h5wmev7ttde4nmzy5ggz",
+    "debug": null,
+    "seed": 1360725865,
+    "usage": null
+  }
+}

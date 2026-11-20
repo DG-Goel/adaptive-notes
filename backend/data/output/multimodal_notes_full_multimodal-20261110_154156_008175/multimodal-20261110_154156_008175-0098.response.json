@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-27203564-e5a8-47a2-b0fd-9c772d70570d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"String\",\n        \"refs\": [\"Q0003\"],\n        \"claims\": [\n          {\n            \"text\": \"In this tutorial, we're going to look at strings in Java.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0003\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"this hello word that we have here is a string, or more accurately it's a string literal, that means a string value.\",\n        \"refs\": [\"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"this hello word that we have here is a string, or more accurately it's a string literal, that means a string value.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0004\"],\n            \"related_refs\": [\"Q0003\", \"Q0006\", \"Q0017\"]\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract definitions. Look for definition of term? Probably \"string\" definition. Use excerpts that define string. Identify primary teaching definitions.\n\nExcerpts: Q0003 intro strings. Q0004 defines string literal. Q0006 about java.lang.String class auto import. Q0017 says strings are reference types. Q0018 short way. So definition term \"string\". Provide definition_text with claims.\n\nCreate one item with term \"String\" and definition_text from Q0004 maybe also Q0003. Use primary excerpt Q0004 as primary. Include other refs as related.\n\nConstruct claims: text from Q0004: \"this hello word that we have here is a string, or more accurately it's a string literal, that means a string value.\" basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role prerequisite? maybe explanation. Use null for instructional_role? Could set null.\n\nProvide refs list includes Q0004. related_refs include Q0003, Q0006, Q0017.\n\nNow output schema. No abstentions, no excluded.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794325996,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8655ddce88",
+  "usage": {
+    "completion_tokens": 520,
+    "prompt_tokens": 3319,
+    "total_tokens": 3839,
+    "completion_time": 1.093643532,
+    "completion_tokens_details": {
+      "reasoning_tokens": 216
+    },
+    "prompt_time": 0.151956911,
+    "prompt_tokens_details": null,
+    "queue_time": 1.085291077,
+    "total_time": 1.245600443
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m732kpcrey7a7a2cae1y59x1",
+    "debug": null,
+    "seed": 856919015,
+    "usage": null
+  }
+}

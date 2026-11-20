@@ -1,0 +1,252 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0080",
+        "FCT_0081",
+        "FCT_0082",
+        "CON_0038",
+        "EXP_0058"
+      ],
+      "reason": "Source note is unresolved"
+    },
+    {
+      "note_ids": [
+        "CON_0043",
+        "CON_0044",
+        "CON_0049",
+        "CON_0050",
+        "CON_0051",
+        "CON_0052"
+      ],
+      "reason": "Unsupported visual label or value"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Interest Rate Parity Relationships",
+      "source_segment_ids": [
+        "FCT_0080",
+        "FCT_0081",
+        "FCT_0082",
+        "CON_0038",
+        "EXP_0058"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0080",
+            "FCT_0081",
+            "FCT_0082",
+            "CON_0038",
+            "EXP_0058"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0080",
+              "exact_quote": "When the exchange rate moves up, the domestic interest rate has to go up."
+            },
+            {
+              "note_id": "FCT_0081",
+              "exact_quote": "There is a positive relationship between the exchange rate and the domestic interest rate."
+            },
+            {
+              "note_id": "FCT_0082",
+              "exact_quote": "If the domestic interest rate equals the international interest rate, the exchange rate must equal the expected exchange rate."
+            },
+            {
+              "note_id": "CON_0038",
+              "exact_quote": "If the domestic interest rate is above that, the international interest rate, then the exchange rate today has to be above the expected exchange rate, because that will give you a expected depreciation of the currency, which will compensate for the fact that the domestic bond is paying a higher interest rate than international bond."
+            },
+            {
+              "note_id": "EXP_0058",
+              "exact_quote": "Conversely, if the domestic bond is paying a lower interest rate, then the exchange rate today is very depreciated, because you have to expect it to appreciate in order to compensate for the interest rate differential."
+            }
+          ],
+          "payload": {
+            "type": "concept_tree",
+            "title": "Interest Rate Parity Relationships",
+            "nodes": [
+              {
+                "id": "n0",
+                "label": "Interest Rate Parity"
+              },
+              {
+                "id": "n1",
+                "label": "Domestic interest rate = International interest rate",
+                "parent": "n0"
+              },
+              {
+                "id": "n2",
+                "label": "Exchange rate = Expected exchange rate",
+                "parent": "n1"
+              },
+              {
+                "id": "n3",
+                "label": "Domestic interest rate > International interest rate",
+                "parent": "n0"
+              },
+              {
+                "id": "n4",
+                "label": "Exchange rate today > Expected exchange rate (expected depreciation)",
+                "parent": "n3"
+              },
+              {
+                "id": "n5",
+                "label": "Domestic interest rate < International interest rate",
+                "parent": "n0"
+              },
+              {
+                "id": "n6",
+                "label": "Exchange rate today < Expected exchange rate (expected appreciation)",
+                "parent": "n5"
+              },
+              {
+                "id": "n7",
+                "label": "Positive relationship: higher exchange rate ↔ higher domestic interest rate",
+                "parent": "n0"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Effect of Interest‑Rate Increase on Exchange Rate and Aggregate Demand",
+      "source_segment_ids": [
+        "CON_0043",
+        "CON_0044",
+        "CON_0049",
+        "CON_0050",
+        "CON_0051",
+        "CON_0052"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0043",
+            "CON_0044",
+            "CON_0049",
+            "CON_0050",
+            "CON_0051",
+            "CON_0052"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0043",
+              "exact_quote": "An increase in the interest rate reduces aggregate demand because investment falls and the exchange rate appreciates, lowering net exports."
+            },
+            {
+              "note_id": "CON_0044",
+              "exact_quote": "In an open economy, monetary policy affects aggregate demand through two channels: investment reduction and exchange‑rate appreciation."
+            },
+            {
+              "note_id": "CON_0049",
+              "exact_quote": "When I increase interest rate from here to there, then my exchange rate has to appreciate."
+            },
+            {
+              "note_id": "CON_0050",
+              "exact_quote": "So an expansionary domestic monetary policy will lead to a contraction in output, which is what we get out of monetary policy, but it will also lead to an appreciation of the currency."
+            },
+            {
+              "note_id": "CON_0051",
+              "exact_quote": "And the compensation will come through an expected capital loss through the currency."
+            },
+            {
+              "note_id": "CON_0052",
+              "exact_quote": "And of course, the precision is already built in here, which is what makes monetary policy more powerful than the closed economy, because you get the next export channel."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Interest‑Rate Increase → Exchange‑Rate Appreciation → Aggregate‑Demand Effects",
+            "direction": "DOWN",
+            "nodes": [
+              {
+                "id": "s1",
+                "label": "Start",
+                "kind": "start"
+              },
+              {
+                "id": "a1",
+                "label": "Increase domestic interest rate",
+                "kind": "action"
+              },
+              {
+                "id": "d1",
+                "label": "Exchange rate appreciates",
+                "kind": "decision"
+              },
+              {
+                "id": "a2",
+                "label": "Investment falls",
+                "kind": "action"
+              },
+              {
+                "id": "a3",
+                "label": "Net exports fall (due to stronger currency)",
+                "kind": "action"
+              },
+              {
+                "id": "a4",
+                "label": "Aggregate demand contracts",
+                "kind": "action"
+              },
+              {
+                "id": "s2",
+                "label": "Output contracts & currency appreciates",
+                "kind": "success"
+              }
+            ],
+            "edges": [
+              {
+                "from": "s1",
+                "to": "a1",
+                "label": ""
+              },
+              {
+                "from": "a1",
+                "to": "d1",
+                "label": ""
+              },
+              {
+                "from": "d1",
+                "to": "a2",
+                "label": "Investment channel"
+              },
+              {
+                "from": "d1",
+                "to": "a3",
+                "label": "Exchange‑rate channel"
+              },
+              {
+                "from": "a2",
+                "to": "a4",
+                "label": ""
+              },
+              {
+                "from": "a3",
+                "to": "a4",
+                "label": ""
+              },
+              {
+                "from": "a4",
+                "to": "s2",
+                "label": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

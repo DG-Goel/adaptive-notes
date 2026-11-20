@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-17c937d9-80ca-4e2a-8f53-372f2751c11e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit relationship teaching found in the provided primary excerpts.\",\n      \"source_ids\": [\"G00010\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract relationships. The excerpts list concepts but no explicit relationships. Likely none, so items empty, abstentions for missing relationships? We must abstain for missing part of teaching? Probably no relationships present, so abstain? Provide abstention with availability PARTIALLY_SUPPORTED? Actually no teaching of relationships, so abstain with reason \"SOURCE_MISSING\"? Use primary source ids.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794599522,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_47082602e2",
+  "usage": {
+    "completion_tokens": 158,
+    "prompt_tokens": 3089,
+    "total_tokens": 3247,
+    "completion_time": 0.333912275,
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_time": 0.12666089,
+    "prompt_tokens_details": null,
+    "queue_time": 0.312442985,
+    "total_time": 0.460573165
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b7f38zes0bhq1fcvvawpt4",
+    "debug": null,
+    "seed": 151938112,
+    "usage": null
+  }
+}

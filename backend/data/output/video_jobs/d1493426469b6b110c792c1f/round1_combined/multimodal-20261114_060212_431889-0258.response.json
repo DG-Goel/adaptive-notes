@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-aba0d124-acf2-4913-a1b2-9110932fcec6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"for_each_loop\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"for each loop\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"for_each_loop\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Now, there is another way to write the same code using the for each loop. Here we type for, in parentheses we declare a loop variable, but the type of this variable should be based on the type of items in our array. So here we have a string array and that means every item in this array is a string. So here we should declare a string variable, we call it fruit here we type a colon and then the name of our array fruits. Now in each iteration, fruit will hold the value of one item in this array. So here we don't have to declare a numeric counter, we don't have to write a boolean expression like this, we don't have to increment our counter, it's much easier to iterate over an array. Now, if we print fruit, we get the exact same result as before.\",\n      \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\", \"Q0006\", \"Q0007\", \"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Code example not verifiable due to ambiguous OCR/ASR source.\",\n      \"source_ids\": [\"G00116\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Procedure steps not explicitly provided in primary excerpts.\",\n      \"source_ids\": [\"G00116\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No formula content in primary excerpts.\",\n      \"source_ids\": [\"G00116\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc based on excerpts. Likely concepts: for each loop, foreach loop. Provide rows. Use primary excerpts. Create items e.g., item \"for_each_loop\". Provide fields. Let's craft rows: concept_name, content? category concepts fields: content, concept_name, aliases. Use excerpts as content. Provide one row per field.\n\nWe'll make item \"for_each_loop\". concept_name from Q0002? \"for each loop\". content from Q0002- Q0008. Provide text concatenated? Use each excerpt as separate row? Probably one row per field. Provide content row with text from Q0002 etc combined? Use minimal.\n\nWe'll produce rows:\n\n1 concept_name: \"for each loop\" refs Q0002 basis explicit availability SOURCE_SUPPORTED literal_kind verbal part value element0.\n\n2 content: combine explanation: \"Now, there is another way to write the same code using the for each loop. Here we type for, in parentheses we declare a loop variable, but the type of this variable should be based on the type of items in our array. So here we have a string array and that means every item in this array is a string. So here we should declare a string variable, we call it fruit here we type a colon and then the name of our array fruits. Now in each iteration, fruit will hold the value of one item in this array. So here we don't have to declare a numeric counter, we don't have to write a boolean expression like this, we don't have to increment our counter, it's much easier to iterate over an array. Now, if we print fruit, we get the exact same result as before.\" refs Q0002- Q0008.\n\nProvide availability SOURCE_SUPPORTED.\n\nAlso maybe examples: exemplar code but code is nonquotable ambiguous, so abstain.\n\nThus rows only concepts.\n\nProvide abstentions for examples, formulas, procedures etc missing.\n\nProvide excluded none.\n\nLet's output.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636458,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8ea50c0161",
+  "usage": {
+    "completion_tokens": 960,
+    "prompt_tokens": 4229,
+    "total_tokens": 5189,
+    "completion_time": 2.520926081,
+    "completion_tokens_details": {
+      "reasoning_tokens": 398
+    },
+    "prompt_time": 0.147913272,
+    "prompt_tokens_details": {
+      "cached_tokens": 1536
+    },
+    "queue_time": 0.324872083,
+    "total_time": 2.668839353
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cap788ej9b3zxaxdk9s4da",
+    "debug": null,
+    "seed": 1575442293,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-f42a3340-4f56-46d2-9cd5-a1e1596bc51c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\n        \"G00001\",\n        \"G00002\",\n        \"G00003\"\n      ],\n      \"reason\": \"No primary teaching excerpts contain explanations of Java concepts or code; only introductory and promotional statements are present.\"\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract explanations. The excerpts are all promotional, no technical explanations. So items empty, abstentions for missing explanations? We have no explanation teaching. So abstain with reason \"SOURCE_MISSING\"? Actually missing part of teaching: explanations absent. Use abstention with availability PARTIALLY_SUPPORTED? Probably SOURCE_MISSING. source_ids from primary_source_ids. Provide one abstention. Excluded none.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326865,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_27194a498a",
+  "usage": {
+    "completion_tokens": 191,
+    "prompt_tokens": 3429,
+    "total_tokens": 3620,
+    "completion_time": 0.404428802,
+    "completion_tokens_details": {
+      "reasoning_tokens": 83
+    },
+    "prompt_time": 0.165666528,
+    "prompt_tokens_details": null,
+    "queue_time": 0.165768671,
+    "total_time": 0.57009533
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m733e8xheh1v7wmsycvj4k7h",
+    "debug": null,
+    "seed": 325973428,
+    "usage": null
+  }
+}

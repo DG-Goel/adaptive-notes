@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-3ae07225-2cd7-40df-8fa3-512013dccc4c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"class\",\n      \"refs\": [\"Q0006\", \"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"aliases\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"method\",\n      \"refs\": [\"Q00107\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"function\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"main function\",\n      \"refs\": [\"Q0018\", \"Q0025\", \"Q0026\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"def1\",\n      \"category\": \"definitions\",\n      \"field\": \"term\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"class\",\n      \"refs\": [\"Q0006\", \"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"def1\",\n      \"category\": \"definitions\",\n      \"field\": \"definition_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"a container for one or more related functions\",\n      \"refs\": [\"Q0006\", \"Q0007\", \"Q0008\", \"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"def2\",\n      \"category\": \"definitions\",\n      \"field\": \"term\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"function\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"def2\",\n      \"category\": \"definitions\",\n      \"field\": \"definition_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"code inside this function gets executed when the function is called\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"def3\",\n      \"category\": \"definitions\",\n      \"field\": \"term\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"main function\",\n      \"refs\": [\"Q0018\", \"Q0025\", \"Q0026\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"def3\",\n      \"category\": \"definitions\",\n      \"field\": \"definition_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"the entry point of a Java program; the function named main that must be present in at least one class\",\n      \"refs\": [\"Q0018\", \"Q0025\", \"Q0026\", \"Q0017\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc. From excerpts we have info about class, functions, main method. Create concepts: class, function, method, main function. Provide rows.\n\nWe'll produce rows with availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, related_refs empty.\n\nItem id maybe \"item1\". Use appropriate fields.\n\nLet's craft rows:\n\nconcept_name \"class\" from Q0006,Q0007 etc. category concepts field concept_name element0 part value.\n\nAlso aliases maybe \"method\" for functions? Provide.\n\nAlso definitions: term \"class\", definition_text from excerpts: \"a container for one or more related functions\". Use Q0006,Q0007,Q0008.\n\nSimilarly term \"function\" definition \"code inside function gets executed\". Use Q0002.\n\nTerm \"main function\" definition from Q0018,Q0025,Q0026.\n\nProvide examples? maybe none.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794316930,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8ea50c0161",
+  "usage": {
+    "completion_tokens": 1270,
+    "prompt_tokens": 2710,
+    "total_tokens": 3980,
+    "completion_time": 2.667344804,
+    "completion_tokens_details": {
+      "reasoning_tokens": 187
+    },
+    "prompt_time": 0.184600736,
+    "prompt_tokens_details": null,
+    "queue_time": 0.322713978,
+    "total_time": 2.85194554
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72sz0hkebxsh79h35470te1",
+    "debug": null,
+    "seed": 113612655,
+    "usage": null
+  }
+}

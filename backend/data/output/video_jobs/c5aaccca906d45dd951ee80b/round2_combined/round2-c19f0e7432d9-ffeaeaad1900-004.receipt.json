@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-4be5ff07-7b4e-4528-89dc-606e273a5ad3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Country Trade Balance Comparison\",\n      \"source_segment_ids\": [\"FCT_0087\", \"FCT_0006\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"type\": \"table\",\n          \"source_segment_ids\": [\"FCT_0087\", \"FCT_0006\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0087\",\n              \"quote\": \"The United States had huge trade deficits.\"\n            },\n            {\n              \"note_id\": \"FCT_0006\",\n              \"quote\": \"China had massive amounts of exports in the late 1990s and 2000s.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Country Trade Balance Comparison\",\n            \"headers\": [\"Country\", \"Trade Balance Description\"],\n            \"rows\": [\n              [\"United States\", \"huge trade deficits\"],\n              [\"China\", \"massive amounts of exports\"]\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Effect of Exchange‑Rate Change on Trade Balance\",\n      \"source_segment_ids\": [\"CON_0055\", \"CON_0063\", \"CON_0062\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"type\": \"flowchart\",\n          \"source_segment_ids\": [\"CON_0055\", \"CON_0063\", \"CON_0062\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0055\",\n              \"quote\": \"when you depreciate the exchange rate, then it moves the net export function up.\"\n            },\n            {\n              \"note_id\": \"CON_0063\",\n              \"quote\": \"A change in the exchange rate influences the trade balance by affecting net exports.\"\n            },\n            {\n              \"note_id\": \"CON_0062\",\n              \"quote\": \"Net exports equal Z minus D, the distance between the ZZ and DD curves.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Effect of Exchange‑Rate Change on Trade Balance\",\n            \"direction\": \"DOWN\",\n            \"nodes\": [\n              {\"id\": \"n1\", \"kind\": \"start\", \"label\": \"Exchange rate change\"},\n              {\"id\": \"n2\", \"kind\": \"action\", \"label\": \"depreciate the exchange rate\"},\n              {\"id\": \"n3\", \"kind\": \"action\", \"label\": \"net export function moves up\"},\n              {\"id\": \"n4\", \"kind\": \"action\", \"label\": \"net exports affect trade balance\"},\n              {\"id\": \"n5\", \"kind\": \"success\", \"label\": \"trade balance shifts\"}\n            ],\n            \"edges\": [\n              {\"from\": \"n1\", \"to\": \"n2\", \"label\": \"exchange rate change\"},\n              {\"from\": \"n2\", \"to\": \"n3\", \"label\": \"moves the net export function up\"},\n              {\"from\": \"n3\", \"to\": \"n4\", \"label\": \"affects net exports\"},\n              {\"from\": \"n4\", \"to\": \"n5\", \"label\": \"influences trade balance\"}\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visual units. Identify comparisons etc. From notes: depreciation moves net export function up; depreciation vs reduce govt expenditure; trade deficits vs surpluses; US deficits vs China exports; domestic consumption low vs massive exports; demand for domestic goods vs foreign goods; trade balance = DD vs ZZ; net exports = Z-D; exchange rate influences trade balance. Could make table comparing US vs China trade deficits/surpluses. Also table of effects: depreciation vs govt expenditure reduction on net exports. Also maybe flowchart of how exchange rate change affects net exports via curves. Provide visuals.\n\nCreate units with source_segment_ids list of note IDs used. Provide evidence entries with note_id and quote (exact). Use quotes from text.\n\nLet's craft two tables.\n\nTable1: Country | Trade Balance Description\nRows: United States – huge trade deficits (FCT_0087)\nChina – massive exports (FCT_0006) and low currency (CON_0058) maybe combine but need single quote containing both? Each row must have one exact evidence quote containing all its cells. For US row, quote: \"The United States had huge trade deficits.\" For China row, need quote that mentions massive exports. Use \"China had massive amounts of exports in the late 1990s and 2000s.\" That's fine.\n\nTable2: Policy Action | Effect on Net Exports\nRows: Depreciate exchange rate – moves net export function up (CON_0055)\nReduce government expenditure – also reduces net exports? Actually text: \"you depreciate your currency, but you also reduce government expenditure, OK? One of them is by reducing government expenditure.\" Not clear effect. Might not be supported. Maybe use \"And a typical package is you depreciate your currency, but you also reduce government expenditure, OK? One of them is by reducing government expenditure.\" Not explicit effect. Might skip.\n\nMaybe flowchart: Exchange rate change -> shifts net export curve -> changes trade balance. Need evidence for each connection. We have CON_0055: depreciation moves net export function up. Also CON_0063: change in exchange rate influences trade balance by affecting net exports. Also CON_0062: Net exports equal Z minus D. Could make flowchart: Exchange rate change (action) -> Net exports change (decision?) -> Trade balance change. Use edges with phrases from quotes.\n\nEdge labels must be exact phrase from source in order: e.g., \"depreciate the exchange rate\" then \"moves the net export function up\". Use those.\n\nLet's craft flowchart nodes: start: \"Exchange rate change\". action: \"depreciate the exchange rate\". decision? maybe not. Next node: \"net export function moves up\". Next node: \"trade balance changes\". Use edges with labels from quotes.\n\nWill produce one flowchart visual.\n\nNow JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794767162,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a655021f7d",
+  "usage": {
+    "completion_tokens": 1339,
+    "prompt_tokens": 1992,
+    "total_tokens": 3331,
+    "completion_time": 2.777476542,
+    "completion_tokens_details": {
+      "reasoning_tokens": 581
+    },
+    "prompt_time": 0.089096231,
+    "prompt_tokens_details": null,
+    "queue_time": 0.155713517,
+    "total_time": 2.866572773
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g7b0c7e9yt9qhny4hwqk26",
+    "debug": null,
+    "seed": 1910930201,
+    "usage": null
+  }
+}

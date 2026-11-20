@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-d5670d06-91fe-4192-96ac-392c8f1e175a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": [\n        \"C1\",\n        \"C2\",\n        \"C3\",\n        \"C4\",\n        \"C5\",\n        \"C6\"\n      ],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\n          \"instructional\"\n        ]\n      }\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"Select Java on the left side and ensure the project SDK is not blank.\",\n      \"refs\": [\n        \"Q0000\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"The JDK version 12 was downloaded and is selected for the project.\",\n      \"refs\": [\n        \"Q0001\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"If the SDK is not visible, select it from the drop‑down list.\",\n      \"refs\": [\n        \"Q0002\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"Create a project from a template and choose a command‑line application.\",\n      \"refs\": [\n        \"Q0003\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"A command‑line application does not have a graphical user interface (GUI).\",\n      \"refs\": [\n        \"Q0004\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"Building command‑line applications is simpler than building GUI applications and is recommended for learning Java fundamentals.\",\n      \"refs\": [\n        \"Q0005\",\n        \"Q0006\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify facts: selecting Java SDK, JDK version 12 selected, ensure not blank, select from dropdown, create command line app, no GUI, command line apps simpler. Create claims accordingly.\n\nProvide categories: facts maybe. No definitions etc.\n\nCreate claims C1 etc.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318855,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_90620edd96",
+  "usage": {
+    "completion_tokens": 734,
+    "prompt_tokens": 3293,
+    "total_tokens": 4027,
+    "completion_time": 1.53162796,
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_time": 0.200838305,
+    "prompt_tokens_details": null,
+    "queue_time": 0.379622656,
+    "total_time": 1.732466265
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72vsrsbe0h9czy8meyph5zs",
+    "debug": null,
+    "seed": 1697451899,
+    "usage": null
+  }
+}

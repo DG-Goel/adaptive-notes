@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-06d91127-240c-472e-9422-825cf48cd5db",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit teaching examples were provided in the primary excerpts.\",\n      \"source_ids\": [\"G00001\", \"G00002\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract examples. No explicit examples present, just explanations. So items empty, abstain? No examples category missing => abstention with reason missing part of teaching? There are no examples, so abstain with availability SOURCE_MISSING? Provide source_ids primary.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794598721,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 137,
+    "prompt_tokens": 2955,
+    "total_tokens": 3092,
+    "completion_time": 0.285057509,
+    "completion_tokens_details": {
+      "reasoning_tokens": 54
+    },
+    "prompt_time": 0.257196464,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "queue_time": 0.321409818,
+    "total_time": 0.542253973
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b6pnbceyjaf4d5we11ns0b",
+    "debug": null,
+    "seed": 1066488057,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-c1e2f33e-cedd-47ab-8d3a-175cdbcca48c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"command line application\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"an application that we can run from the command line; it doesn't have a graphical user interface or a GUI\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"package\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a namespace for related classes; the base package for a Java project is the domain name of your company in reverse\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"JDK version 12 is selected for the project\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The base package for the project is set to com.codewithmarsh\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays except extracted items. From excerpts, educational content about Java project setup. We can extract facts, definitions, explanations maybe. For example definition of command line application, package, class. Let's create facts and definitions.\n\nDefinition: \"command line application ... does not have a graphical user interface\". term \"command line application\". refs Q0001.\n\nDefinition: \"package ... a namespace for classes, base package is domain name reversed\". term \"package\". refs Q0004.\n\nFact: JDK version 12 selected. fact about JDK version. refs Q0001.\n\nFact: Base package set to com.codewithmarsh. fact. refs Q0004.\n\nWe need schema fields. Provide definitions array with term and definition_text, context maybe null.\n\nFacts array with fact_text and fact_type maybe null.\n\nNo concepts, examples, etc.\n\nAlso excluded empty.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065322,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_fe269835c7",
+  "usage": {
+    "completion_tokens": 506,
+    "prompt_tokens": 3030,
+    "total_tokens": 3536,
+    "completion_time": 1.053930202,
+    "completion_tokens_details": {
+      "reasoning_tokens": 185
+    },
+    "prompt_time": 0.13209601,
+    "prompt_tokens_details": null,
+    "queue_time": 0.325117705,
+    "total_time": 1.186026212
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6va0k9aexy89hv4j3rjp18r",
+    "debug": null,
+    "seed": 1457069017,
+    "usage": null
+  }
+}

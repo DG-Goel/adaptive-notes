@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-4fce542a-543c-4ad2-bc1a-d0ced09a3a2b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"context\": null,\n      \"term\": {\n        \"text\": \"expression\",\n        \"refs\": [\"Q0007\"],\n        \"claims\": [\n          {\n            \"text\": \"an expression is a piece of code that produces a value\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0007\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"an expression is a piece of code that produces a value\",\n        \"refs\": [\"Q0007\"],\n        \"claims\": [\n          {\n            \"text\": \"an expression is a piece of code that produces a value\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0007\"],\n            \"related_refs\": []\n          }\n        ]\n      }\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output definitions extraction. Look for definitions in primary quotes. Definition of expression? Quote Q0007: \"And by the way, an expression is a piece of code that produces a value.\" That's a definition. Also Q0008 repeats. So create item with term and definition_text. term likely \"expression\". definition_text from Q0007 (or Q0008). Provide claims. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role explanation_of_mistake? Actually it's definition, role maybe prerequisite? Could be \"prerequisite\". Use null for related_refs. refs list Q0007. term text \"expression\". term claims similar. Provide context maybe null. Provide items array with one object. No abstentions? All needed present. Excluded none.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326119,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c3da0d4bb9",
+  "usage": {
+    "completion_tokens": 423,
+    "prompt_tokens": 3358,
+    "total_tokens": 3781,
+    "completion_time": 0.928684493,
+    "completion_tokens_details": {
+      "reasoning_tokens": 160
+    },
+    "prompt_time": 0.123107072,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "queue_time": 0.169016398,
+    "total_time": 1.051791565
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m732qfz1e1rv8dk7e6pn9rvh",
+    "debug": null,
+    "seed": 1397291150,
+    "usage": null
+  }
+}

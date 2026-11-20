@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-5d2e25cf-700d-498e-a74c-932a66d3c9cb",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"int\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"definition_text\": {\n        \"text\": \"by default Java sees whole numbers as integers\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"long\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"to represent a whole number larger than the int range, add an uppercase or lowercase L suffix; uppercase L is preferred because lowercase l looks like 1\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"float\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"by default Java sees numbers with a decimal point as double; to store a decimal number as float, add an uppercase or lowercase F suffix\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"double\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"default type for numbers with a decimal point in Java\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"char\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"stores a single character; the character literal must be surrounded by single quotes\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"String\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"stores a series of characters; string literals are surrounded by double quotes\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"boolean\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"definition_text\": {\n        \"text\": \"stores a true or false value\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"reserved keywords\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"definition_text\": {\n        \"text\": \"words that are part of the Java language syntax (e.g., public, static, void, class, package) and cannot be used as identifiers for variables, classes, or methods\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"example_text\": {\n        \"text\": \"3L\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"example_type\": null,\n      \"exemplifies\": {\n        \"text\": \"long literal\",\n        \"refs\": [\"Q0001\"]\n      }\n    },\n    {\n      \"example_text\": {\n        \"text\": \"3.5F\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"example_type\": null,\n      \"exemplifies\": {\n        \"text\": \"float literal\",\n        \"refs\": [\"Q0003\"]\n      }\n    },\n    {\n      \"example_text\": {\n        \"text\": \"boolean isEligible = true;\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_type\": null,\n      \"exemplifies\": {\n        \"text\": \"boolean variable assignment\",\n        \"refs\": [\"Q0004\"]\n      }\n    }\n  ],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"integer number too large\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"incompatible types required float but found double\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts about Java primitive types, suffixes, errors. So facts, definitions, examples maybe.\n\nExtract definitions: e.g., \"int\" default integer, \"long\" suffix L, \"float\" suffix F, \"double\", \"char\", \"boolean\", \"reserved keywords\". Provide term and definition_text.\n\nAlso facts: error messages etc.\n\nLet's create definitions list.\n\nDefinition 1: term \"int\" (or integer) default type for whole numbers in Java. Excerpt Q0000 mentions default integer.\n\nDefinition 2: term \"long\" need suffix L to indicate long literal. Q0001.\n\nDefinition 3: term \"float\" need suffix F. Q0002/Q0003.\n\nDefinition 4: term \"double\" default for decimal numbers. Q0002.\n\nDefinition 5: term \"char\" stores single character, single quotes. Q0003.\n\nDefinition 6: term \"String\" stores series of characters, double quotes. Q0003 mentions.\n\nDefinition 7: term \"boolean\" stores true/false. Q0004.\n\nDefinition 8: term \"reserved keywords\" cannot be used as identifiers. Q0004.\n\nExamples: maybe example of long literal: \"3L\". Example of float literal: \"3.5F\". Provide example_text and exemplifies (maybe variable). Use excerpts.\n\nFacts: error messages: \"integer number too large\", \"incompatible types required float but found double\". Provide fact_text.\n\nProcedures not needed.\n\nNow construct JSON.\n\nEach definition includes term with refs, definition_text with refs, context maybe null.\n\nUse refs list covering relevant excerpts.\n\nLet's map:\n\nDefinition int: term refs Q0000, definition_text refs Q0000.\n\nDefinition long: term \"long\" refs Q0001, definition_text refs Q0001.\n\nDefinition suffix L: maybe part of long definition.\n\nDefinition float: term \"float\" refs Q0002, definition_text refs Q0002.\n\nDefinition suffix F: term \"float suffix\" maybe but we can include in same.\n\nDefinition double: term \"double\" refs Q0002.\n\nDefinition char: term \"char\" refs Q0003, definition_text refs Q0003.\n\nDefinition String: term \"String\" refs Q0003.\n\nDefinition boolean: term \"boolean\" refs Q0004.\n\nDefinition reserved keywords: term \"reserved keywords\" refs Q0004.\n\nExamples: long literal example: \"3L\" from Q0001. Example_text \"3L\". exemplifies maybe variable. Use refs Q0001.\n\nFloat literal example: \"3.5F\" from Q0003. Use Q0003.\n\nBoolean example: variable isEligible = true; from Q0004. Use Q0004.\n\nFacts: error \"integer number too large\" from Q0000. Fact_text with refs Q0000.\n\nFact: \"incompatible types required float but found double\" from Q0002. refs Q0002.\n\nNow produce JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065450,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c800245357",
+  "usage": {
+    "completion_tokens": 1555,
+    "prompt_tokens": 3026,
+    "total_tokens": 4581,
+    "completion_time": 3.297372936,
+    "completion_tokens_details": {
+      "reasoning_tokens": 611
+    },
+    "prompt_time": 0.137867493,
+    "prompt_tokens_details": null,
+    "queue_time": 0.301173409,
+    "total_time": 3.435240429
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6va4dq4edtbjhebjn7bcw58",
+    "debug": null,
+    "seed": 432790757,
+    "usage": null
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "status": "NEEDS_MORE_CORRECTION",
+  "review_scope": "Targeted assistant source comparison and engineering metrics; not a full independent audit of every material claim",
+  "overall_rating": null,
+  "previous_provisional_rating": 50,
+  "reason_no_new_rating": "Task 5 requires an independent semantic/completeness review before assigning a new overall score.",
+  "run": {
+    "classification": "Partial live execution",
+    "selected_slots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "rotation_policy": "pinned_primary_round_robin_recovery_same_org",
+    "continue_validation_failures": true,
+    "live": true,
+    "source_sha256": "54a017edc6b3465c37a6faf051a63dedd81437728df6b99276e998aedb127598",
+    "total_chunks": 50,
+    "completed_chunks": 48,
+    "recovered_truncations": 0,
+    "requests_attempted": 50,
+    "http_successes": 48,
+    "http_429": 0,
+    "input_tokens": 150754,
+    "output_tokens": 50556,
+    "unknown_usage_attempts": 2,
+    "elapsed_seconds": 624.5879549980164,
+    "errors": [
+      {
+        "request_id": "java-20261109_022409_842270-0021",
+        "chunk_number": 4,
+        "type": "GroqProviderError",
+        "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '' does not validate with /required: missing properties: 'formulas'\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"concepts\": [],\\n  \"definitions\": [],\\n  \"examples\": [],\\n  \"facts\": [\\n    {\\n      \"fact_text\": {\\n        \"text\": \"Select Java SDK (JDK) version 12 for the project; ensure project SDK is not blank.\",\\n        \"refs\": [\"Q0000\", \"Q0001\"]\\n      },\\n      \"fact_type\": null\\n    },\\n    {\\n      \"fact_text\": {\\n        \"text\": \"Create a command line application project; it runs from the command line and has no graphical user interface.\",\\n        \"refs\": [\"Q0001\"]\\n      },\\n      \"fact_type\": null\\n    },\\n    {\\n      \"fact_text\": {\\n        \"text\": \"The base package for a Java project follows the reversed domain name convention, e.g., com.codewithm"
+      },
+      {
+        "request_id": "java-20261109_022409_842270-0308",
+        "chunk_number": 45,
+        "type": "GroqProviderError",
+        "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '' does not validate with /required: missing properties: 'formulas'\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"concepts\": [],\\n  \"definitions\": [],\\n  \"examples\": [],\\n  \"facts\": [\\n    {\\n      \"fact_text\": {\\n        \"text\": \"In Java, the equals method of String objects should be used to compare string values.\",\\n        \"refs\": [\"Q0000\"]\\n      },\\n      \"fact_type\": null\\n    },\\n    {\\n      \"fact_text\": {\\n        \"text\": \"The not operator is applied so that the loop continues while the input does not equal \\\\\"quit\\\\\".\",\\n        \"refs\": [\"Q0000\"]\\n      },\\n      \"fact_type\": null\\n    },\\n    {\\n      \"fact_text\": {\\n        \"text\": \"Creating a new Scanner object inside each iteration of a while loop unnecessarily creates multiple objects and pollute"
+      }
+    ],
+    "assembly": "completed",
+    "quality_score": null,
+    "total_actual_tokens": null,
+    "invocation_elapsed_seconds": 625.078,
+    "elapsed_basis": "First durable claim to latest operation completion, including resume gaps and quota waits; invocation time is separate.",
+    "physical_call_seconds": 139.4200000000003,
+    "token_count_note": "Input/output sums include reported usage only; missing usage is not zero consumption.",
+    "notes_status": "UNVERIFIED_PREVIEW",
+    "items": 458,
+    "source_units_with_items": 48
+  },
+  "metrics": {
+    "raw_items": 458,
+    "consolidated_items": 458,
+    "categories": {
+      "concepts": 13,
+      "definitions": 54,
+      "facts": 219,
+      "explanations": 74,
+      "procedures": 36,
+      "examples": 55,
+      "formulas": 3,
+      "relationships": 4
+    },
+    "sections": 46,
+    "neutral_sections": 5,
+    "words_approx": 22090,
+    "internal_json_blocks": 0,
+    "primary_sources_with_items": 48,
+    "missing_primary_sources": [
+      "T0004",
+      "T0045"
+    ],
+    "possible_duplicate_pairs": 92,
+    "automatic_merges": 0,
+    "automatic_code_fidelity_flags": 51,
+    "formula_review_flags": 3
+  },
+  "gate_outcomes": {
+    "extraction_completion": "FAIL",
+    "structural_validity": "PASS",
+    "semantic_faithfulness": "FAIL",
+    "educational_completeness": "NEEDS_REVIEW",
+    "notes_usability": "NEEDS_REVIEW"
+  },
+  "findings": [
+    {
+      "id": "fizzbuzz",
+      "assessment": "Behavior improved; evidence association still incomplete",
+      "details": "New procedure checks divisibility by both first. Incorrect input 15 output is explicitly labeled incorrect and the mistake is explained. Corrected procedure cites T0041 only; explicit correction is in T0042. No complete semantic certification."
+    },
+    {
+      "id": "mortgage",
+      "assessment": "Raw failure persists; safer display",
+      "details": "Raw mortgage = P * R is incomplete relative to T0031/T0032/T0033. Renderer marks unreviewed fragment rather than a complete formula. Missing visuals were not reconstructed."
+    },
+    {
+      "id": "code",
+      "assessment": "Raw reconstruction persists",
+      "details": "New examples include String declarations and output comments absent verbatim from T0018. 51 non-verbatim code-like examples flagged by the substring safeguard; these are not 51 proven algorithm errors. Student preview shows source passages; generated snippets remain in audit. Procedure-step code is not fully covered by the example-only detector."
+    },
+    {
+      "id": "qualification",
+      "assessment": "Still requires review",
+      "details": "Statements that nested if/else is bad practice or repeated expressions are not a good solution overgeneralize the nuanced readability/duplication trade-off described in T0042."
+    },
+    {
+      "id": "formulas",
+      "assessment": "Conservative warning limitations",
+      "details": "Two arithmetic expressions and one incomplete mortgage expression are all marked NEEDS_REVIEW. The arithmetic expressions are not thereby proven incomplete; review is required to avoid excessive warnings."
+    },
+    {
+      "id": "organization",
+      "assessment": "Measured presentation improvement with verbosity cost",
+      "details": "46 topic/source sections and no audit JSON blocks replace one Main Content section. 22,090 words versus the previous 11,602 is substantially longer. No independent readability certification."
+    },
+    {
+      "id": "coverage",
+      "assessment": "Fresh run incomplete",
+      "details": "All 50 requests attempted; T0004/T0045 have no accepted output due schema failures. Other citations do not prove educational completeness. No previous differently-prompted output was silently substituted."
+    }
+  ],
+  "reviewed_artifact_extracts": [
+    {
+      "knowledge_id": "PRC_0397",
+      "category": "procedures",
+      "source_ids": [
+        "T0041"
+      ],
+      "content": "A simple console program that reads an integer and prints fizz, buzz, fizzbuzz, or the number based on divisibility rules.",
+      "steps": [
+        "Import java.util.Scanner and instantiate a Scanner object to read from System.in.",
+        "Print a prompt asking the user to enter a number.",
+        "Read the integer using scanner.nextInt() and store it in a variable (e.g., number).",
+        "Check if number % 5 == 0 and number % 3 == 0; if true, print \"fizzbuzz\".",
+        "Else if number % 5 == 0, print \"fizz\".",
+        "Else if number % 3 == 0, print \"buzz\".",
+        "Else, print the number itself."
+      ]
+    },
+    {
+      "knowledge_id": "EXM_0174",
+      "category": "examples",
+      "source_ids": [
+        "T0041"
+      ],
+      "content": "Input 5 → fizz; Input 10 → fizz; Input 3 → buzz; Input 15 → fizz (incorrect; should be fizzbuzz)",
+      "steps": null
+    },
+    {
+      "knowledge_id": "EXM_0175",
+      "category": "examples",
+      "source_ids": [
+        "T0042"
+      ],
+      "content": "If the number is divisible by 5 and 3, print fizzbuzz; otherwise if divisible by 5, print fizz; else if divisible by 3, print buzz; else print the number.",
+      "steps": null
+    },
+    {
+      "knowledge_id": "EXM_0176",
+      "category": "examples",
+      "source_ids": [
+        "T0042"
+      ],
+      "content": "First check if the number is divisible by 5; if also divisible by 3, print fizzbuzz, else print fizz. Then check if divisible by 3 and print buzz; otherwise print the number.",
+      "steps": null
+    },
+    {
+      "knowledge_id": "EXM_0177",
+      "category": "examples",
+      "source_ids": [
+        "T0042"
+      ],
+      "content": "Printing a hello world message five times without repeating the print statement.",
+      "steps": null
+    },
+    {
+      "knowledge_id": "EXP_0127",
+      "category": "explanations",
+      "source_ids": [
+        "T0041"
+      ],
+      "content": "When the first condition checks only divisibility by 5 and is placed before the combined check for 5 and 3, a number like 15 satisfies the first condition, so 'fizz' is printed and the later else‑if branches are skipped.",
+      "steps": null
+    },
+    {
+      "knowledge_id": "EXP_0128",
+      "category": "explanations",
+      "source_ids": [
+        "T0042"
+      ],
+      "content": "Place the most specific conditions at the top and the most generic ones at the bottom to ensure correct execution.",
+      "steps": null
+    },
+    {
+      "knowledge_id": "EXP_0129",
+      "category": "explanations",
+      "source_ids": [
+        "T0042"
+      ],
+      "content": "Nested if-else statements can make code harder to read, while a flat structure may involve some repetition but is cleaner and easier to understand.",
+      "steps": null
+    },
+    {
+      "knowledge_id": "FRM_0014",
+      "category": "formulas",
+      "source_ids": [
+        "T0023"
+      ],
+      "content": "10 + 3 * 2 = 16",
+      "steps": null
+    },
+    {
+      "knowledge_id": "FRM_0015",
+      "category": "formulas",
+      "source_ids": [
+        "T0023"
+      ],
+      "content": "(10 + 3) * 2 = 26",
+      "steps": null
+    },
+    {
+      "knowledge_id": "FRM_0007",
+      "category": "formulas",
+      "source_ids": [
+        "T0031"
+      ],
+      "content": "mortgage = P * R",
+      "steps": null
+    }
+  ],
+  "rubric": [
+    {
+      "dimension": "Content completeness",
+      "weight": 30,
+      "previous_rating": 50,
+      "new_rating": null
+    },
+    {
+      "dimension": "Accuracy and source faithfulness",
+      "weight": 25,
+      "previous_rating": 50,
+      "new_rating": null
+    },
+    {
+      "dimension": "Explanation quality",
+      "weight": 15,
+      "previous_rating": 50,
+      "new_rating": null
+    },
+    {
+      "dimension": "Organization and readability",
+      "weight": 10,
+      "previous_rating": 25,
+      "new_rating": null
+    },
+    {
+      "dimension": "Examples and code",
+      "weight": 10,
+      "previous_rating": 50,
+      "new_rating": null
+    },
+    {
+      "dimension": "Source traceability",
+      "weight": 10,
+      "previous_rating": 75,
+      "new_rating": null
+    }
+  ]
+}

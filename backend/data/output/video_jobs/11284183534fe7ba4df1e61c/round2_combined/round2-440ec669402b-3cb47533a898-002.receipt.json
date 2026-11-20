@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-c2c39078-f7cb-4750-b896-8feca2f66b70",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Supervised vs Unsupervised Machine Learning\",\n      \"source_segment_ids\": [\"CON_0022\", \"CON_0023\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0022\", \"CON_0023\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0022\",\n              \"exact_quote\": \"this category of problems is called supervised machine learning\"\n            },\n            {\n              \"note_id\": \"CON_0023\",\n              \"exact_quote\": \"this is called unsupervised machine learning\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Supervised vs Unsupervised Learning\",\n            \"headers\": [\"Learning Type\", \"Label Requirement\", \"Typical Use‑case\"],\n            \"rows\": [\n              [\"Supervised\", \"Requires labeled data (input‑output pairs)\", \"Spam detection, price prediction\"],\n              [\"Unsupervised\", \"Uses unlabeled data, discovers patterns\", \"Customer segmentation, clustering\"]\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Classification vs Regression\",\n      \"source_segment_ids\": [\"CON_0024\", \"CON_0020\", \"CON_0021\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0024\", \"CON_0020\", \"CON_0021\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0024\",\n              \"exact_quote\": \"you have fixed class labels... this is called regression\"\n            },\n            {\n              \"note_id\": \"CON_0020\",\n              \"exact_quote\": \"two categories as an output it's called binary classification\"\n            },\n            {\n              \"note_id\": \"CON_0021\",\n              \"exact_quote\": \"this type of problem is called regression because you don't have a fixed categories\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Classification vs Regression\",\n            \"headers\": [\"Aspect\", \"Classification\", \"Regression\"],\n            \"rows\": [\n              [\"Output Type\", \"Discrete class label (e.g., spam / non‑spam)\", \"Continuous numeric value (e.g., house price)\"],\n              [\"Typical Goal\", \"Assign input to a category\", \"Predict a numeric quantity\"],\n              [\"Example Labels\", \"spam, non‑spam, cat, dog\", \"price, temperature, age\"]\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Unsupervised Learning Process (Clustering)\",\n      \"source_segment_ids\": [\"CON_0027\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0027\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0027\",\n              \"exact_quote\": \"they will put all red color toys in one bucket, blue toys into another bucket\"\n            },\n            {\n              \"note_id\": \"CON_0027\",\n              \"exact_quote\": \"this type of problem‑solving is called unsupervised learning\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Clustering Workflow\",\n            \"direction\": \"top-down\",\n            \"nodes\": [\n              {\"id\": \"n1\", \"label\": \"Raw Unlabeled Data\"},\n              {\"id\": \"n2\", \"label\": \"Feature Extraction\"},\n              {\"id\": \"n3\", \"label\": \"Similarity Measurement\"},\n              {\"id\": \"n4\", \"label\": \"Cluster Assignment\"},\n              {\"id\": \"n5\", \"label\": \"Resulting Groups (Buckets)\"}\n            ],\n            \"edges\": [\n              {\"from\": \"n1\", \"to\": \"n2\", \"label\": \"\"},\n              {\"from\": \"n2\", \"to\": \"n3\", \"label\": \"\"},\n              {\"from\": \"n3\", \"to\": \"n4\", \"label\": \"\"},\n              {\"from\": \"n4\", \"to\": \"n5\", \"label\": \"\"}\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Neural Network Hierarchical Feature Detection\",\n      \"source_segment_ids\": [\"DEF_0004\", \"EXM_0006\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"DEF_0004\", \"EXM_0006\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"DEF_0004\",\n              \"exact_quote\": \"middle neurons will detect ... ears eyes tails\"\n            },\n            {\n              \"note_id\": \"DEF_0004\",\n              \"exact_quote\": \"second layer will do higher level pattern detection\"\n            },\n            {\n              \"note_id\": \"EXM_0006\",\n              \"exact_quote\": \"a trained neural network activates certain paths for a given input image\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Neural Network Path Activation\",\n            \"direction\": \"left-to-right\",\n            \"nodes\": [\n              {\"id\": \"i\", \"label\": \"Input Image\"},\n              {\"id\": \"h1\", \"label\": \"Layer 1 (Edge/Color Detectors)\"},\n              {\"id\": \"h2\", \"label\": \"Layer 2 (Part Detectors: ears, eyes, tails)\"},\n              {\"id\": \"h3\", \"label\": \"Layer 3 (Object Detectors: cat head, dog head)\"},\n              {\"id\": \"o\", \"label\": \"Output Classification\"}\n            ],\n            \"edges\": [\n              {\"from\": \"i\", \"to\": \"h1\", \"label\": \"\"},\n              {\"from\": \"h1\", \"to\": \"h2\", \"label\": \"\"},\n              {\"from\": \"h2\", \"to\": \"h3\", \"label\": \"\"},\n              {\"from\": \"h3\", \"to\": \"o\", \"label\": \"\"}\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce units for visual candidates only. Identify notes that are visual candidates: those with clear comparative, flow, etc. Likely classification vs regression table, supervised vs unsupervised flow, clustering example, etc. Use source excerpts.\n\nWe create units with mode text_and_visual? Visual candidates only means include units where we add visual. Provide remaining_text maybe empty.\n\nLet's craft:\n\nUnit1: Supervised vs Unsupervised ML table. source ids CON_0022, CON_0023. Provide table.\n\nUnit2: Classification vs Regression table. source ids CON_0024, CON_0020, CON_0021.\n\nUnit3: Clustering concept flowchart? maybe architecture? Use clustering description CON_0028? Actually CON_0028 is outlier detection definition, not visual. Use CON_0027 clustering description for flowchart of unsupervised learning process.\n\nUnit4: Neural network hierarchical detection flowchart using EXM_0006 and DEF_0004.\n\nReturn JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794646557,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 1602,
+    "prompt_tokens": 3080,
+    "total_tokens": 4682,
+    "completion_time": 3.324087055,
+    "completion_tokens_details": {
+      "reasoning_tokens": 206
+    },
+    "prompt_time": 0.123044382,
+    "prompt_tokens_details": null,
+    "queue_time": 0.320457514,
+    "total_time": 3.447131437
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cmacncehatbdwbxf61pvjb",
+    "debug": null,
+    "seed": 1068745057,
+    "usage": null
+  }
+}

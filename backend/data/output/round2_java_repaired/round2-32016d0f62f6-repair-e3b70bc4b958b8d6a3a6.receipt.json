@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-e27b4380-540d-4fe1-90e1-ed8eaf84fdd8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"units\":[{\"title\":\"While‑loop control flow\",\"source_segment_ids\":[\"FCT_0389\",\"FCT_0390\",\"FCT_0394\",\"FCT_0395\",\"FCT_0396\",\"FCT_0397\"],\"mode\":\"text_and_visual\",\"remaining_text\":\"\",\"visuals\":[{\"source_segment_ids\":[\"FCT_0389\",\"FCT_0390\",\"FCT_0394\",\"FCT_0395\",\"FCT_0396\",\"FCT_0397\"],\"needs_review\":false,\"missing_information\":[],\"evidence\":[{\"note_id\":\"FCT_0389\",\"quote\":\"Condition: input does not equal quit.\"},{\"note_id\":\"FCT_0390\",\"quote\":\"A while loop can be written by declaring a loop variable, setting a condition in parentheses, and placing the loop body inside braces; the variable can be decremented each iteration to count down.\"},{\"note_id\":\"FCT_0394\",\"quote\":\"If this condition is true, then we print the input.\"},{\"note_id\":\"FCT_0395\",\"quote\":\"We can reverse this condition: if the user types quit, break out of the loop.\"},{\"note_id\":\"FCT_0396\",\"quote\":\"Remove the not operator: if the user types quit, we break.\"},{\"note_id\":\"FCT_0397\",\"quote\":\"Otherwise, continue execution and print this input on the terminal.\"}],\"payload\":{\"type\":\"flowchart\",\"title\":\"While‑loop execution\",\"direction\":\"DOWN\",\"nodes\":[{\"id\":\"n0\",\"label\":\"Start\"},{\"id\":\"n1\",\"label\":\"Condition: input does not equal quit\"},{\"id\":\"n2\",\"label\":\"Print input\"},{\"id\":\"n3\",\"label\":\"Loop back\"},{\"id\":\"n4\",\"label\":\"Break (input equals quit)\"}],\"edges\":[{\"from\":\"n0\",\"to\":\"n1\",\"label\":\"\"},{\"from\":\"n1\",\"to\":\"n2\",\"label\":\"true\"},{\"from\":\"n2\",\"to\":\"n3\",\"label\":\"\"},{\"from\":\"n3\",\"to\":\"n1\",\"label\":\"\"},{\"from\":\"n1\",\"to\":\"n4\",\"label\":\"false\"}]}}]}]}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visuals if supported. The notes describe while loop condition and actions. Could make flowchart of while loop: condition input != quit, then print, then loop back. Also maybe table comparing for loop init values? But primary notes include FCT_0388 unresolved, but context has for loop steps. Could make flowchart for while loop. Use source ids for nodes.\n\nCreate one flowchart visual.\n\nConstruct evidence linking notes.\n\nWe'll output units list with one visual unit, mode text_and_visual? Since we have no extra text, maybe text_and_visual but remaining_text empty. Provide source_segment_ids primary chunk ids that support visual: need earliest supporting note belongs to primary chunk. Primary notes include FCT_0389 (while loop condition), FCT_0390 (while loop structure), FCT_0395 etc. Use earliest primary that mentions condition: FCT_0389 has condition. Use that as primary.\n\nCreate visual payload flowchart DOWN with nodes: start, condition, print, loop back.\n\nProvide evidence: each node label from note phrases.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794580141,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_49bfac06f1",
+  "usage": {
+    "completion_tokens": 682,
+    "prompt_tokens": 1511,
+    "total_tokens": 2193,
+    "completion_time": 1.443511521,
+    "completion_tokens_details": {
+      "reasoning_tokens": 221
+    },
+    "prompt_time": 0.083840535,
+    "prompt_tokens_details": null,
+    "queue_time": 0.287204241,
+    "total_time": 1.527352056
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7amzk94evwrndry3qkc8fgp",
+    "debug": null,
+    "seed": 1495584714,
+    "usage": null
+  }
+}

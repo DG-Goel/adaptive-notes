@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-5bea9521-d0ef-4957-987a-14211922d5a8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Effects of Real Exchange Rate Changes\",\n      \"source_segment_ids\": [\"CON_0003\", \"CON_0004\", \"FCT_0004\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"type\": \"table\",\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"source_segment_ids\": [\"CON_0003\", \"CON_0004\", \"FCT_0004\"],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0003\",\n              \"quote\": \"When the real exchange rate rises, it is called a real appreciation, meaning domestic goods become more expensive relative to foreign goods.\"\n            },\n            {\n              \"note_id\": \"CON_0004\",\n              \"quote\": \"When the real exchange rate falls, it is called a real depreciation, meaning domestic goods become cheaper relative to foreign goods.\"\n            },\n            {\n              \"note_id\": \"FCT_0004\",\n              \"quote\": \"U.S. exports are decreasing as the real exchange rate rises.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Real Exchange Rate Changes and Their Economic Effects\",\n            \"headers\": [\"Item\", \"Description\"],\n            \"rows\": [\n              [\n                \"real exchange rate rises\",\n                \"real appreciation, domestic goods become more expensive relative to foreign goods\"\n              ],\n              [\n                \"real exchange rate falls\",\n                \"real depreciation, domestic goods become cheaper relative to foreign goods\"\n              ],\n              [\n                \"real exchange rate rises\",\n                \"U.S. exports are decreasing\"\n              ]\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visual units. Identify comparisons: real exchange rate rise/fall and effects. Could make table: Real exchange rate change vs effect on goods price and export demand. Use notes CON_0003, CON_0004, CON_0026, FCT_0004.\n\nCreate table rows each supported by exact quote. Use quotes from notes.\n\nRow1: \"real exchange rate rises\" -> \"real appreciation\" -> \"domestic goods become more expensive relative to foreign goods\". From CON_0003 and CON_0026.\n\nRow2: \"real exchange rate falls\" -> \"real depreciation\" -> \"domestic goods become cheaper relative to foreign goods\". From CON_0004.\n\nRow3: \"real exchange rate rises\" -> \"U.S. exports are decreasing\". From FCT_0004.\n\nWe need each row exact quote containing all cells? Must contain all cells in one quote. Might not have combined. Might need separate rows per note. Could make table with Item and Description only.\n\nSimplify: Table with Item and Description.\n\nRow1: Item: \"real exchange rate rises\" Description: \"real appreciation, domestic goods become more expensive relative to foreign goods\". Quote from CON_0003 includes both? It says \"When the real exchange rate rises, it is called a real appreciation, meaning domestic goods become more expensive relative to foreign goods.\" Good.\n\nRow2: Item: \"real exchange rate falls\" Description: \"real depreciation, domestic goods become cheaper relative to foreign goods\". From CON_0004.\n\nRow3: Item: \"real exchange rate rises\" Description: \"U.S. exports are decreasing\". From FCT_0004.\n\nNow produce unit with visual_only, payload table.\n\nProvide source_segment_ids list of note IDs used: CON_0003, CON_0004, FCT_0004.\n\nEvidence entries per row.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794767154,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_fe269835c7",
+  "usage": {
+    "completion_tokens": 765,
+    "prompt_tokens": 3448,
+    "total_tokens": 4213,
+    "completion_time": 1.59329785,
+    "completion_tokens_details": {
+      "reasoning_tokens": 387
+    },
+    "prompt_time": 0.200230987,
+    "prompt_tokens_details": null,
+    "queue_time": 0.319206887,
+    "total_time": 1.793528837
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g7as0reha9mw8e3n3n27g2",
+    "debug": null,
+    "seed": 648492977,
+    "usage": null
+  }
+}

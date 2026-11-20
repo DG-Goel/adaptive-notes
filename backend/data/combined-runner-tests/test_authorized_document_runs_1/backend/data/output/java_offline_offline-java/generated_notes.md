@@ -1,0 +1,18 @@
+> UNVERIFIED PREVIEW — semantic and educational review required.
+
+# Study notes: java
+
+*Generated from assembled notes*
+
+---
+
+## expression
+
+A value is an expression.
+
+*[Knowledge ID: CON_0001 | Sources: T0001]*
+
+---
+
+*Render complete: 1 items from 1 sections*
+

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-10715420-07dd-4e3d-9dd3-191762b59bfe",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"units\":[{\"title\":\"Algorithm recommendation by feature type\",\"source_segment_ids\":[\"FCT_0024\",\"FCT_0025\",\"FCT_0026\"],\"mode\":\"visual_only\",\"remaining_text\":\"\",\"visuals\":[{\"source_segment_ids\":[\"FCT_0024\",\"FCT_0025\",\"FCT_0026\"],\"needs_review\":false,\"missing_information\":[],\"evidence\":[{\"note_id\":\"FCT_0024\",\"quote\":\"If you have simple features, such as structured data in tables, you should use statistical machine learning.\"},{\"note_id\":\"FCT_0025\",\"quote\":\"If you have complex features, such as images, videos, or other unstructured data, you should use deep learning.\"},{\"note_id\":\"FCT_0026\",\"quote\":\"Deep learning can also be applied to structured data, even though it is not the default recommendation.\"}],\"payload\":{\"type\":\"table\",\"title\":\"Algorithm recommendation by feature type\",\"headers\":[\"Feature type\",\"Recommended approach\"],\"rows\":[[\"simple features, such as structured data in tables\",\"statistical machine learning\"],[\"complex features, such as images, videos, or other unstructured data\",\"deep learning\"],[\"structured data with huge amount of data\",\"deep learning (possible)\"]]}}]}]}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visuals. Look for comparisons or flow. We have statistical ML vs deep learning guidelines. Could make table comparing feature types and recommended algorithm. Use notes: FCT_0024 (simple features -> statistical ML), FCT_0025 (complex features -> deep learning), FCT_0026 (deep learning can also be applied to structured data), FCT_0030 (huge training samples -> deep learning better), FCT_0028 (guidelines experiment). So table.\n\nCreate visual unit with type table. Provide source ids. Need evidence quotes. Use short exact quotes.\n\nLet's craft one visual table: \"Algorithm recommendation by feature type\". Headers: Feature type, Recommended approach. Rows: \"simple features, such as structured data in tables\" -> \"statistical machine learning\". Quote from FCT_0024. \"complex features, such as images, videos, or other unstructured data\" -> \"deep learning\". Quote from FCT_0025. Also maybe \"huge amount of structured data\" -> \"deep learning (possible)\". Quote from FCT_0026. Provide source ids.\n\nOnly up to two visuals. One table enough.\n\nReturn JSON with units list containing one unit with mode text_and_visual? Since we have visual plus remaining_text? But we can set mode visual_only and no remaining_text. That's allowed. Return no text-only units.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794603073,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 556,
+    "prompt_tokens": 1793,
+    "total_tokens": 2349,
+    "completion_time": 1.162232592,
+    "completion_tokens_details": {
+      "reasoning_tokens": 286
+    },
+    "prompt_time": 0.106891309,
+    "prompt_tokens_details": null,
+    "queue_time": 0.318031258,
+    "total_time": 1.269123901
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7baveqve4grjm3vh5xz74f9",
+    "debug": null,
+    "seed": 119089784,
+    "usage": null
+  }
+}

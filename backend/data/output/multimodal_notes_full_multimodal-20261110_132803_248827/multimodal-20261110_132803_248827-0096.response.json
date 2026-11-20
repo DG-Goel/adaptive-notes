@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-aa26dfaf-8074-4738-9f6a-c6547a85ca40",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"we're going to look at the anatomy of Java programs.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"The smallest building block\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"in Java programs are functions.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"A function is a block of code that performs a task.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\", \"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"As a metaphor, think of the buttons on the remote that performs a task.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"Each button performs a task.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0009\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"Functions\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0010\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\n        \"we're going to look at the anatomy of Java programs.\",\n        \"The smallest building block\",\n        \"in Java programs are functions.\",\n        \"A function is a block of code that performs a task.\",\n        \"As a metaphor, think of the buttons on the remote that performs a task.\",\n        \"Each button performs a task.\",\n        \"Functions\"\n      ],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"statement\"]\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify statements: anatomy of Java programs, smallest building block, functions are building blocks, function is block of code that performs a task, metaphor remote buttons, each button performs a task, functions. Create claims. All primary. Basis explicit. availability SOURCE_SUPPORTED? ASR speech evidence but exact code unavailable; still textual claim supported. Use SOURCE_SUPPORTED. literal_kind verbal. instructional_role maybe concept introduction. We'll assign null. Provide refs list. Then categories: facts maybe. We'll put facts with claim IDs. No definitions etc. Provide abstentions none. Build schema.\n\nLet's assign IDs C1..C5.\n\nC1: \"the anatomy of Java programs\" from Q0000. Text: \"we're going to look at the anatomy of Java programs.\" basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, refs [\"Q0000\"], related_refs [].\n\nC2: \"The smallest building block\" from Q0001. Text: \"The smallest building block\". Might be incomplete but claim. Use SOURCE_SUPPORTED.\n\nC3: \"in Java programs are functions.\" combine Q0002. Text: \"in Java programs are functions.\" maybe phrase. We'll keep.\n\nC4: \"A function is a block of code that performs a task.\" combine Q0003 and Q0004.\n\nC5: \"As a metaphor, think of the buttons on the remote that performs a task.\" combine Q0005.\n\nC6: \"Each button performs a task.\" from Q0009.\n\nC7: \"Functions\" from Q0010 just term.\n\nBut maybe too many. We'll include 5 claims.\n\nNow categories: facts maybe. We'll put fact_text list of claim IDs in order.\n\nProvide empty other categories.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317610,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e5b4e54fbb",
+  "usage": {
+    "completion_tokens": 1069,
+    "prompt_tokens": 3052,
+    "total_tokens": 4121,
+    "completion_time": 2.241073904,
+    "completion_tokens_details": {
+      "reasoning_tokens": 366
+    },
+    "prompt_time": 0.195323133,
+    "prompt_tokens_details": null,
+    "queue_time": 0.378683825,
+    "total_time": 2.436397037
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72tkrdbencsg4e52r5mgdgh",
+    "debug": null,
+    "seed": 2090508402,
+    "usage": null
+  }
+}

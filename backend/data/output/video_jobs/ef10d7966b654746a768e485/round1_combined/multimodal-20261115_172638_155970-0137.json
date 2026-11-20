@@ -1,0 +1,573 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-15T17:32:49.874687+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00027"
+      ],
+      "document_id": "DOC001",
+      "content": "Output will go up and then there will be a multiplier; the increase in output will be more than the increase in government expenditure, though less than in a closed economy.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00027",
+              "quote": "Output will go up, and then there will be a multiplier.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 37,
+              "end_char": 92,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00027",
+              "quote": "Output will go up, and then there will be a multiplier.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 37,
+              "end_char": 92,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00027",
+              "quote": "So output will go up by more than the initial increasing\n goal and expenditure.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 94,
+              "end_char": 173,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00027",
+              "quote": "It will go up by more, but not as much\n as it did in the closed economy.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 203,
+              "end_char": 275,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00027",
+              "quote": "So the increasing output will be more than the increasing\n government expenditure, but it will be not as much as it would\n have been had we had a close economy.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 277,
+              "end_char": 437,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "multiplier effect",
+              "claims": [
+                {
+                  "text": "multiplier effect",
+                  "refs": [
+                    "Q0001"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00027",
+                      "quote": "Output will go up, and then there will be a multiplier."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Output will go up and then there will be a multiplier; the increase in output will be more than the increase in government expenditure, though less than in a closed economy.",
+              "claims": [
+                {
+                  "text": "Output will go up and then there will be a multiplier; the increase in output will be more than the increase in government expenditure, though less than in a closed economy.",
+                  "refs": [
+                    "Q0001",
+                    "Q0002",
+                    "Q0004",
+                    "Q0005"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00027",
+                      "quote": "Output will go up, and then there will be a multiplier."
+                    },
+                    {
+                      "source_id": "G00027",
+                      "quote": "So output will go up by more than the initial increasing\n goal and expenditure."
+                    },
+                    {
+                      "source_id": "G00027",
+                      "quote": "It will go up by more, but not as much\n as it did in the closed economy."
+                    },
+                    {
+                      "source_id": "G00027",
+                      "quote": "So the increasing output will be more than the increasing\n government expenditure, but it will be not as much as it would\n have been had we had a close economy."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Output will go up and then there will be a multiplier; the increase in output will be more than the increase in government expenditure, though less than in a closed economy.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": true
+                    },
+                    "evidence": [
+                      "Output will go up, and then there will be a multiplier.",
+                      "So output will go up by more than the initial increasing\n goal and expenditure.",
+                      "It will go up by more, but not as much\n as it did in the closed economy.",
+                      "So the increasing output will be more than the increasing\n government expenditure, but it will be not as much as it would\n have been had we had a close economy."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00027",
+                        "quote": "Output will go up, and then there will be a multiplier.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 37,
+                        "end_char": 92,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00027",
+                        "quote": "So output will go up by more than the initial increasing\n goal and expenditure.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 94,
+                        "end_char": 173,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00027",
+                        "quote": "It will go up by more, but not as much\n as it did in the closed economy.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 203,
+                        "end_char": 275,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00027",
+                        "quote": "So the increasing output will be more than the increasing\n government expenditure, but it will be not as much as it would\n have been had we had a close economy.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 277,
+                        "end_char": 437,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Output will go up and then there will be a multiplier; the increase in output will be more than the increase in government expenditure, though less than in a closed economy.",
+                "preview_text": "Output will go up and then there will be a multiplier; the increase in output will be more than the increase in government expenditure, though less than in a closed economy.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "multiplier effect",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Output will go up, and then there will be a multiplier."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00027",
+                        "quote": "Output will go up, and then there will be a multiplier.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 37,
+                        "end_char": 92,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "multiplier effect",
+                "preview_text": "multiplier effect",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00027"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "multiplier effect",
+      "aliases": []
+    },
+    {
+      "knowledge_id": "CON_0002",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00027",
+        "G00028"
+      ],
+      "document_id": "DOC001",
+      "content": "When part of the extra income from additional government expenditure is spent on foreign goods, the trade balance shifts from zero to a deficit.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00027",
+              "quote": "And that's reflected in that the trade deficit,\n in this particular example, we start with a situation\n where the trade was balanced.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 731,
+              "end_char": 864,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00028",
+              "quote": "And we end up with a trade deficit.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 42,
+              "end_char": 77,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00027",
+              "quote": "And that's reflected in that the trade deficit,\n in this particular example, we start with a situation\n where the trade was balanced.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 731,
+              "end_char": 864,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00028",
+              "quote": "And we end up with a trade deficit.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 42,
+              "end_char": 77,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00028",
+              "quote": "That trade deficit is exactly the same reason\n why we got a smaller multiply, is\n because part of the extra demand that\n comes from the extra income that\n created by the additional expenditure,\n by the aggregate demand effect of additional expenditure,\n went to the demand for foreign goods.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 79,
+              "end_char": 370,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "trade deficit",
+              "claims": [
+                {
+                  "text": "trade deficit",
+                  "refs": [
+                    "Q0012",
+                    "Q0014"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00027",
+                      "quote": "And that's reflected in that the trade deficit,\n in this particular example, we start with a situation\n where the trade was balanced."
+                    },
+                    {
+                      "source_id": "G00028",
+                      "quote": "And we end up with a trade deficit."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "When part of the extra income from additional government expenditure is spent on foreign goods, the trade balance shifts from zero to a deficit.",
+              "claims": [
+                {
+                  "text": "When part of the extra income from additional government expenditure is spent on foreign goods, the trade balance shifts from zero to a deficit.",
+                  "refs": [
+                    "Q0012",
+                    "Q0014",
+                    "Q0015"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00027",
+                      "quote": "And that's reflected in that the trade deficit,\n in this particular example, we start with a situation\n where the trade was balanced."
+                    },
+                    {
+                      "source_id": "G00028",
+                      "quote": "And we end up with a trade deficit."
+                    },
+                    {
+                      "source_id": "G00028",
+                      "quote": "That trade deficit is exactly the same reason\n why we got a smaller multiply, is\n because part of the extra demand that\n comes from the extra income that\n created by the additional expenditure,\n by the aggregate demand effect of additional expenditure,\n went to the demand for foreign goods."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "trade deficit",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And that's reflected in that the trade deficit,\n in this particular example, we start with a situation\n where the trade was balanced.",
+                      "And we end up with a trade deficit."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00027",
+                        "quote": "And that's reflected in that the trade deficit,\n in this particular example, we start with a situation\n where the trade was balanced.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 731,
+                        "end_char": 864,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00028",
+                        "quote": "And we end up with a trade deficit.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 42,
+                        "end_char": 77,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "trade deficit",
+                "preview_text": "trade deficit",
+                "withheld": false
+              },
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "When part of the extra income from additional government expenditure is spent on foreign goods, the trade balance shifts from zero to a deficit.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And that's reflected in that the trade deficit,\n in this particular example, we start with a situation\n where the trade was balanced.",
+                      "And we end up with a trade deficit.",
+                      "That trade deficit is exactly the same reason\n why we got a smaller multiply, is\n because part of the extra demand that\n comes from the extra income that\n created by the additional expenditure,\n by the aggregate demand effect of additional expenditure,\n went to the demand for foreign goods."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00027",
+                        "quote": "And that's reflected in that the trade deficit,\n in this particular example, we start with a situation\n where the trade was balanced.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 731,
+                        "end_char": 864,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00028",
+                        "quote": "And we end up with a trade deficit.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 42,
+                        "end_char": 77,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00028",
+                        "quote": "That trade deficit is exactly the same reason\n why we got a smaller multiply, is\n because part of the extra demand that\n comes from the extra income that\n created by the additional expenditure,\n by the aggregate demand effect of additional expenditure,\n went to the demand for foreign goods.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 79,
+                        "end_char": 370,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "When part of the extra income from additional government expenditure is spent on foreign goods, the trade balance shifts from zero to a deficit.",
+                "preview_text": "When part of the extra income from additional government expenditure is spent on foreign goods, the trade balance shifts from zero to a deficit.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00027",
+          "G00028"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "trade deficit",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 2,
+  "source_units_processed": 2,
+  "extraction_metadata": null
+}

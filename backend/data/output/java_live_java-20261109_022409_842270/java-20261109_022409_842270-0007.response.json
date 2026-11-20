@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-b44dd3f5-f293-42e6-86e4-55d173cc3bf9",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"function\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a block of code that performs a task\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"return type\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"the type of value a function returns; if a function does not return a value the return type is void\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"void\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a reserved keyword in Java indicating that a function does not return a value\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"IntelliJ IDEA Community Edition is free and sufficient for this Java course\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [\n    {\n      \"procedure_name\": {\n        \"text\": \"Install IntelliJ IDEA Community Edition on macOS\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"steps\": [\n        {\n          \"text\": \"Download IntelliJ IDEA Community Edition from the official website\",\n          \"refs\": [\"Q0001\"]\n        },\n        {\n          \"text\": \"Drag the downloaded application onto the Applications folder\",\n          \"refs\": [\"Q0001\"]\n        }\n      ],\n      \"prerequisites\": null,\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"Installation of IntelliJ IDEA Community Edition\",\n        \"refs\": [\"Q0001\"]\n      }\n    },\n    {\n      \"procedure_name\": {\n        \"text\": \"Create a basic function in Java\",\n        \"refs\": [\"Q0003\", \"Q0004\", \"Q0005\"]\n      },\n      \"steps\": [\n        {\n          \"text\": \"Specify the return type (e.g., void for no return value)\",\n          \"refs\": [\"Q0003\"]\n        },\n        {\n          \"text\": \"Provide a descriptive function name\",\n          \"refs\": [\"Q0004\"]\n        },\n        {\n          \"text\": \"Add parentheses and list parameters inside them (optional for now)\",\n          \"refs\": [\"Q0004\"]\n        },\n        {\n          \"text\": \"Enclose the function body within curly braces and write the Java code inside\",\n          \"refs\": [\"Q0005\"]\n        }\n      ],\n      \"prerequisites\": null,\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"Steps to code a function in Java\",\n        \"refs\": [\"Q0003\", \"Q0004\", \"Q0005\"]\n      }\n    }\n  ],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output JSON schema with empty arrays maybe some facts etc. Extract educational content: facts about installing IntelliJ, function anatomy. Create facts, definitions, procedures? Probably facts: \"IntelliJ IDEA Community Edition is free\". Need cite Q0001. Also definition: function is a block of code that performs a task. Cite Q0002. Also definition: return type void is a reserved keyword. Cite Q0003. Also procedure: steps to install IntelliJ: download, drag to Applications. Cite Q0001. Also procedure: steps to write a function: specify return type, name, parentheses, parameters, braces. Cite Q0003-5. We'll output accordingly.\n\nSchema requires arrays for each category. Fill with items.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191203,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_90620edd96",
+  "usage": {
+    "completion_tokens": 854,
+    "prompt_tokens": 3136,
+    "total_tokens": 3990,
+    "completion_time": 1.770837971,
+    "completion_tokens_details": {
+      "reasoning_tokens": 154
+    },
+    "prompt_time": 0.132174152,
+    "prompt_tokens_details": null,
+    "queue_time": 0.385984594,
+    "total_time": 1.9030121229999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z224rxe8ctyz7hmx9h6gwx",
+    "debug": null,
+    "seed": 1120288096,
+    "usage": null
+  }
+}

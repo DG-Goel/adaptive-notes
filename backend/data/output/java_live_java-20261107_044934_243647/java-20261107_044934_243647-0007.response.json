@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-ba9bdab7-058b-49e0-b125-4788cd1b9e69",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"function\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"function is a block of code that performs a task\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"download IntelliJ IDEA click on this link over here download the community edition which is absolutely free and it's more than enough for this course\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"now before we do this first we need to accept the license agreement all right now let's download the dmg let me open this we're gonna say this package let's double click this and here we see this installation wizard it's super easy just click continue and install you have to enter your computer's password and then alright done beautiful so we can move this to trash\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"the smallest building block in java programs are functions\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays except extracted items. From excerpts we have facts about installing software, function definition. Extract facts, definitions, procedures maybe. Let's create facts: installing IntelliJ, downloading dmg, function anatomy. Provide fact_text with text exactly from excerpt. Use refs. No context. No definitions? Could define \"function\" as block of code... that's definition. Use excerpt Q0002 and Q0003. Definition term \"function\". definition_text from Q0002+Q0003 combined? Must be exact text of definition. Might need combine but can't add. Use exact phrase \"function is a block of code that performs a task\". That's in Q0002. So definition term \"function\". definition_text that sentence. refs Q0002. context null.\n\nAlso fact about installing IntelliJ: \"download IntelliJ IDEA ... community edition which is absolutely free\". Use Q0001.\n\nAlso fact about installing dmg etc. Use Q0000.\n\nProcedures: maybe steps to install software. Could create procedure \"install IntelliJ\". Steps from Q0000 and Q0001. But need content text exactly? Procedure content field is description. Could use \"download the dmg, double click, click continue, install, enter password, move to trash\". That's from Q0000. Use that as content. Steps array need values with text and refs. Could split steps but we have limited. Might skip procedures.\n\nWe'll output concepts empty. definitions one. facts three. examples none. explanations none. formulas none. procedures none. relationships none. excluded empty.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794027056,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_b1dd3e7a63",
+  "usage": {
+    "completion_tokens": 665,
+    "prompt_tokens": 2839,
+    "total_tokens": 3504,
+    "completion_time": 1.381847291,
+    "completion_tokens_details": {
+      "reasoning_tokens": 322
+    },
+    "prompt_time": 0.12465442,
+    "prompt_tokens_details": null,
+    "queue_time": 0.384975163,
+    "total_time": 1.5065017109999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6t5gsbjeqms804mtr4gdhm6",
+    "debug": null,
+    "seed": 1101525902,
+    "usage": null
+  }
+}

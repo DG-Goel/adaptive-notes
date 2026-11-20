@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-6d7e4d10-3a37-4ecb-bddd-2fc49054733a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"if statement\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"we have an if statement and this statement has three clauses or three sections here's the first Clause\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"Clause\",\n        \"refs\": [\"Q0001\", \"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"the if statement has three clauses or three sections: the first Clause, the second Clause, and the third Clause\",\n        \"refs\": [\"Q0001\", \"Q0002\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"braces are only required if we have multiple statements; some people always add braces, others consider them unnecessary noise for single statements\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"removing unnecessary braces and reformatting can simplify the code and make it more readable\",\n        \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays maybe facts etc. The excerpts talk about if statements, braces, clauses. Could extract concepts? maybe definitions of \"if statement\", \"clause\". We have primary excerpts. We must cite. Let's create definitions: term \"if statement\" with definition text from Q0001: \"we have an if statement and this statement has three clauses or three sections here's the first Clause\". Also term \"Clause\" definition? Could use Q0001 and Q0002. Also fact about braces optional. Use Q0000 and Q0001. Provide examples? maybe example of code but not full. Might just include definitions and facts.\n\nWe'll output JSON with definitions array containing two definitions. Also facts array with fact about braces optional controversy. Provide refs.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036362,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 521,
+    "prompt_tokens": 3034,
+    "total_tokens": 3555,
+    "completion_time": 1.283779837,
+    "completion_tokens_details": {
+      "reasoning_tokens": 161
+    },
+    "prompt_time": 0.036911345,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "queue_time": 0.327266907,
+    "total_time": 1.320691182
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6tect3dew0r5xr59ezyrz0e",
+    "debug": null,
+    "seed": 1860942521,
+    "usage": null
+  }
+}

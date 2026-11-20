@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-a9c2d6a8-0675-4805-9b8e-a568f31fa1e2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"JDK is a software development environment for building Java applications.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\", \"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"JDK includes a compiler.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"JDK includes a Java runtime environment.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"JDK provides other tools and resources for Java development.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"The JDK page can be seen on Oracle.com.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"JDK stands for Java Development Kit.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0006\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"Java SE stands for Java Standard Edition.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0007\"],\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify statements: excerpts describe JDK as software development environment, Java applications, compiler, runtime, etc. Create claims.\n\nClaims list each with id, text, basis explicit, availability SOURCE_SUPPORTED? Since ASR speech, exact code unavailable but statements are supported. Use SOURCE_SUPPORTED.\n\nLiteral_kind verbal. instructional_role null.\n\nRefs list excerpt refs.\n\nCreate concepts maybe? But can leave empty arrays.\n\nWe'll output claims and empty other categories, no abstentions.\n\nLet's craft claims:\n\nC1: \"JDK is a software development environment for building Java applications.\" combine Q0000,Q0001.\n\nC2: \"JDK includes a compiler.\" from Q0002.\n\nC3: \"JDK includes a Java runtime environment.\" from Q0003.\n\nC4: \"JDK provides other tools and resources.\" from Q0003 maybe.\n\nC5: \"The JDK page can be seen on Oracle.com.\" from Q0004.\n\nC6: \"JDK stands for Java Development Kit.\" from Q0006.\n\nC7: \"Java SE stands for Java Standard Edition.\" from Q0007.\n\nInclude context download maybe not needed.\n\nNow produce schema. concepts etc empty arrays. claims array with those.\n\nAbstentions empty.\n\nProvide JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317489,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_19b184c447",
+  "usage": {
+    "completion_tokens": 865,
+    "prompt_tokens": 3019,
+    "total_tokens": 3884,
+    "completion_time": 1.828456622,
+    "completion_tokens_details": {
+      "reasoning_tokens": 266
+    },
+    "prompt_time": 0.213651105,
+    "prompt_tokens_details": null,
+    "queue_time": 0.636762546,
+    "total_time": 2.042107727
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72tg2ene5vvpze6enzyeg99",
+    "debug": null,
+    "seed": 1658967154,
+    "usage": null
+  }
+}

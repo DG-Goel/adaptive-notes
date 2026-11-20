@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-45b99b75-4630-40ef-ad44-ffb287677123",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Appreciation leads to net exports decline.\",\n      \"refs\": [\"Q0002\", \"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No excerpt provides a clear concept name and content.\",\n      \"source_ids\": [\"G00041\"]\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No definition excerpt present.\",\n      \"source_ids\": [\"G00041\"]\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explanatory excerpt present.\",\n      \"source_ids\": [\"G00041\"]\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No example excerpt present.\",\n      \"source_ids\": [\"G00041\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No formula excerpt present.\",\n      \"source_ids\": [\"G00041\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No procedural excerpt present.\",\n      \"source_ids\": [\"G00041\"]\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No relationship excerpt present.\",\n      \"source_ids\": [\"G00041\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What happens to net exports when there is an appreciation?\",\n      \"answer\": \"Net exports decline.\",\n      \"explanation\": \"The excerpt states \\\"Appreciate.\\\" followed by \\\"Net exports decline.\\\" indicating that appreciation leads to a decline in net exports.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Appreciation effect on net exports\",\n      \"refs\": [\"Q0002\", \"Q0004\"]\n    },\n    {\n      \"question\": \"According to the discussion, what moves to the left as a first effect?\",\n      \"answer\": \"The \\\"yes\\\" moves to the left.\",\n      \"explanation\": \"The speaker says \\\"That means that moves the yes to the left\\\" and later repeats \\\"So this movement will move the yes to the left as a first effect.\\\"\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Direction of movement in the model\",\n      \"refs\": [\"Q0005\", \"Q0006\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract claims. The excerpts are mostly questions and short answers. Teaching content: exchange rate appreciation leads to net exports decline. Also UIP condition etc. We can create rows for concepts? Probably facts: \"Appreciation leads to net exports decline.\" So fact_text. Provide row.\n\nItem label maybe item1.\n\nRow: text \"Appreciation leads to net exports decline.\" refs Q0002,Q0004. basis explicit. availability SOURCE_SUPPORTED. literal_kind verbal. instructional_role null. related_refs [].\n\nAlso concept: \"exchange rate movement direction\" maybe concept_name \"exchange rate movement\". content? Hard.\n\nWe may abstain for missing fields.\n\nQuiz: need four short-answer questions supported by primary excerpts.\n\nQ1: What happens to net exports when there is an appreciation? Answer: Net exports decline. Explanation: from Q0002 and Q0004.\n\nQ2: In the discussed scenario, what moves to the left as a first effect? Answer: The \"yes\" (presumably the exchange rate). Use Q0005,Q0006.\n\nQ3: According to the discussion, what does UIP stand for? Not in excerpt. Can't.\n\nMaybe: What parameter is being taken as given? Answer: The foreign interest rate? Not clear.\n\nWe have limited.\n\nWe can produce only two questions.\n\nReturn rows with one fact. Abstentions for missing categories.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794733279,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_49bfac06f1",
+  "usage": {
+    "completion_tokens": 934,
+    "prompt_tokens": 2488,
+    "total_tokens": 3422,
+    "completion_time": 2.008195868,
+    "completion_tokens_details": {
+      "reasoning_tokens": 284
+    },
+    "prompt_time": 0.1279516,
+    "prompt_tokens_details": null,
+    "queue_time": 0.293012276,
+    "total_time": 2.136147468
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f70zpne5y9pa7j5y9c4gvf",
+    "debug": null,
+    "seed": 1461708419,
+    "usage": null
+  }
+}

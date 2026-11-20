@@ -1,0 +1,125 @@
+{
+  "assessment_type": "Provisional assistant review; not independent human certification or a complete atomic-claim audit",
+  "ratings_are_not_measured_percent_correct": true,
+  "rubric_anchors": {
+    "0": "absent/unusable",
+    "25": "major weaknesses",
+    "50": "significant correction required",
+    "75": "usable with limited correction",
+    "100": "strongly meets criterion"
+  },
+  "categories": [
+    {
+      "category": "Content completeness",
+      "weight_percent": 30,
+      "rating": 50,
+      "evidence": "Broad coverage, but the mortgage expression is incomplete and context is lost in a central process."
+    },
+    {
+      "category": "Factual accuracy and faithfulness",
+      "weight_percent": 25,
+      "rating": 50,
+      "evidence": "Critical FizzBuzz procedure error; incomplete formula and overgeneralized claims require correction. This is a rating, not an accuracy percentage."
+    },
+    {
+      "category": "Explanation quality",
+      "weight_percent": 15,
+      "rating": 50,
+      "evidence": "Useful definitions/explanations, but the example/error/correction relationship is not consistently preserved."
+    },
+    {
+      "category": "Organization and readability",
+      "weight_percent": 10,
+      "rating": 25,
+      "evidence": "One Main Content section; no topic-level instructional hierarchy; technical supplemental JSON interrupts study flow."
+    },
+    {
+      "category": "Examples and code correctness",
+      "weight_percent": 10,
+      "rating": 50,
+      "evidence": "42 examples provide useful reinforcement, but reconstructed source code and an incorrect procedure prevent reliable independent study. Examples were not compiled."
+    },
+    {
+      "category": "Source traceability",
+      "weight_percent": 10,
+      "rating": 75,
+      "evidence": "All 50 source IDs represented and IDs preserved; exact evidence links still do not establish complete semantic support."
+    }
+  ],
+  "provisional_weighted_rating": 50.0,
+  "calculation": "sum(weight_percent * rating / 100)",
+  "disposition": "Not ready as a standalone study guide; unresolved critical errors override the aggregate rating",
+  "counts": {
+    "knowledge_items": 376,
+    "definitions": 60,
+    "examples": 42,
+    "procedures": 14,
+    "formulas": 1,
+    "possible_duplicate_review_pairs": 75,
+    "word_count_approximate": 11602,
+    "top_level_topic_sections": 1
+  },
+  "limitations": [
+    "Not every one of 376 items checked for entailment",
+    "No empirical completeness percentage or accuracy percentage established",
+    "No code compilation benchmark performed",
+    "75 review pairs are possible duplicates, not 75 confirmed duplicates",
+    "This assessment does not change extraction acceptance or original quality-gate results"
+  ],
+  "critical_findings": [
+    {
+      "knowledge_id": "PRC_0332",
+      "source_units": [
+        "T0041",
+        "T0042"
+      ],
+      "finding": "Buggy demonstration presented as a working FizzBuzz procedure. Combined divisibility branch is after individual branches; 15 returns fizz rather than fizzbuzz. Source explicitly calls the first version wrong and then repairs it."
+    },
+    {
+      "knowledge_id": "FRM_0003",
+      "source_units": [
+        "T0031",
+        "T0032"
+      ],
+      "finding": "mortgage equals principal multiplied by monthly interest rate is an incomplete expression presented as the formula. Transcript explicitly continues with another expression and an exponent n. Missing visually referenced components must be marked unavailable, not treated as a complete formula."
+    },
+    {
+      "knowledge_id": "EXM_0117",
+      "source_units": [
+        "T0022"
+      ],
+      "finding": "Literal double result = (double)10 / 3; plus result/comment is reconstructed from spoken explanation, not a verbatim source code snippet. This violates the project source-only literal-code contract, independently of whether the snippet computes a plausible value."
+    }
+  ],
+  "fizzbuzz_logic_check": [
+    {
+      "input": 5,
+      "procedure_result": "fizz",
+      "source_required_result": "fizz"
+    },
+    {
+      "input": 3,
+      "procedure_result": "buzz",
+      "source_required_result": "buzz"
+    },
+    {
+      "input": 15,
+      "procedure_result": "fizz",
+      "source_required_result": "fizzbuzz"
+    },
+    {
+      "input": 30,
+      "procedure_result": "fizz",
+      "source_required_result": "fizzbuzz"
+    },
+    {
+      "input": 2,
+      "procedure_result": "2",
+      "source_required_result": "2"
+    }
+  ],
+  "official_references": [
+    "https://dev.java/learn/language/constructs/basics/controlling-flow/",
+    "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/io/PrintStream.html"
+  ]
+}

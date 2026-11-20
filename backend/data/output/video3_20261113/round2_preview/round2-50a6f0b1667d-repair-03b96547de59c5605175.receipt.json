@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-cef1b455-6a1d-465f-8ee4-031621f0eaa1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"units\":[{\"title\":\"Unsupervised clustering algorithms\",\"source_segment_ids\":[\"FCT_0022\"],\"mode\":\"visual_only\",\"remaining_text\":\"\",\"visuals\":[{\"source_segment_ids\":[\"FCT_0022\"],\"needs_review\":false,\"missing_information\":[],\"evidence\":[{\"note_id\":\"FCT_0022\",\"quote\":\"Algorithms such as DBSCAN, K-means, and hierarchical clustering are examples of unsupervised machine learning algorithms.\"}],\"payload\":{\"type\":\"table\",\"title\":\"Unsupervised clustering algorithms\",\"headers\":[\"Algorithm\"],\"rows\":[[\"DBSCAN\"],[\"K-means\"],[\"hierarchical clustering\"]]}}]}]}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visuals if supported. Look for comparisons or flow. We have unsupervised learning definition and clustering, algorithms list. Could make table comparing algorithms (DBSCAN, K-means, hierarchical). Source notes: FCT_0022 lists them. So table visual.\n\nCreate payload with type table, title \"Unsupervised clustering algorithms\", headers maybe \"Algorithm\". Rows each algorithm phrase from source: \"DBSCAN\", \"K-means\", \"hierarchical clustering\". Use exact quotes? Source phrase: \"Algorithms such as DBSCAN, K-means, and hierarchical clustering are examples...\" So rows use those terms.\n\nEvidence: need note_id and exact quote. Use note_id FCT_0022 and quote snippet.\n\nCreate unit with source_segment_ids [\"FCT_0022\"], mode \"visual_only\"? Since visual only unit. remaining_text empty. visuals array with one visual.\n\nReturn JSON with units list.\n\nNo more than two visuals.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794603071,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5a93aea882",
+  "usage": {
+    "completion_tokens": 338,
+    "prompt_tokens": 1528,
+    "total_tokens": 1866,
+    "completion_time": 0.704343132,
+    "completion_tokens_details": {
+      "reasoning_tokens": 196
+    },
+    "prompt_time": 0.071104454,
+    "prompt_tokens_details": null,
+    "queue_time": 0.157409319,
+    "total_time": 0.775447586
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7bavd8geznajejbvp2tr53q",
+    "debug": null,
+    "seed": 1978645096,
+    "usage": null
+  }
+}

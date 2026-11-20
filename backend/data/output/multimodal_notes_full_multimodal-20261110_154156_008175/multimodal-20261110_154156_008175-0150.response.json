@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-1ab4eae5-38a5-4857-8ec7-dc6d2b22e747",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"casting and type conversion\",\n        \"refs\": [\"Q0005\"],\n        \"claims\": [\n          {\n            \"text\": \"In this tutorial we're going to talk about casting and type conversion.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0005\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"In this tutorial we're going to talk about casting and type conversion.\",\n        \"refs\": [\"Q0005\"],\n        \"claims\": [\n          {\n            \"text\": \"In this tutorial we're going to talk about casting and type conversion.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0005\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"operator precedence\",\n        \"refs\": [\"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"Parenthesis always have the highest priority, then we have multiplication and division, and finally we have addition and subtraction.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"Parenthesis always have the highest priority, then we have multiplication and division, and finally we have addition and subtraction.\",\n        \"refs\": [\"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"Parenthesis always have the highest priority, then we have multiplication and division, and finally we have addition and subtraction.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract definitions. Look for definition teaching in excerpts. Probably definition of casting/type conversion? Excerpts: Q005 \"In this tutorial we're going to talk about casting and type conversion.\" That's a definition intro. Also Q004 about order of operations is definition of precedence. Provide items.\n\nCreate items with term and definition_text. term likely \"casting\" or \"type conversion\" or \"operator precedence\". Use primary excerpts.\n\nWe'll produce one item for \"casting and type conversion\". term text \"casting and type conversion\". definition_text from Q005. Claims: explicit basis, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role prerequisite? maybe explanation. Use null for related_refs.\n\nAlso maybe definition of operator precedence from Q004. term \"operator precedence\". definition_text from Q004.\n\nReturn abstentions empty, excluded empty.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326128,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_69334c0be3",
+  "usage": {
+    "completion_tokens": 692,
+    "prompt_tokens": 3780,
+    "total_tokens": 4472,
+    "completion_time": 1.588682014,
+    "completion_tokens_details": {
+      "reasoning_tokens": 166
+    },
+    "prompt_time": 0.338260888,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "queue_time": 0.163265784,
+    "total_time": 1.926942902
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m732qqekesyt10s66tg5zwbw",
+    "debug": null,
+    "seed": 1480716459,
+    "usage": null
+  }
+}

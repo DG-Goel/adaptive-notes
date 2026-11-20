@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-41f8c00a-54d3-4d6c-a361-51f453e2f229",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"assumption\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Now, we're going to assume from now on that this second effect is not as strong as the volume effect.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"Our assumption will be that net exports decrease when the currency appreciates.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"If your goods become more expensive than on net, you're going to have less net exports as an assumption.\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what is assumed about the second effect?\",\n      \"answer\": \"It is not as strong as the volume effect.\",\n      \"distractors\": [\n        \"It is stronger than the volume effect.\",\n        \"It has the same strength as the volume effect.\",\n        \"It is unrelated to the volume effect.\"\n      ],\n      \"explanation\": \"The speaker explicitly states they will assume the second effect is not as strong as the volume effect (Q0000).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"assumption about second effect\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"What assumption is made regarding net exports when the currency appreciates?\",\n      \"answer\": \"Net exports will decrease.\",\n      \"distractors\": [\n        \"Net exports will increase.\",\n        \"Net exports will stay the same.\",\n        \"Net exports will become unpredictable.\"\n      ],\n      \"explanation\": \"The speaker says the assumption will be that net exports decrease when the currency appreciates (Q0003).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"assumption about net exports\",\n      \"refs\": [\"Q0003\"]\n    },\n    {\n      \"question\": \"In the speaker's view, why would net exports decline as an assumption?\",\n      \"answer\": \"Because goods become more expensive, reducing demand.\",\n      \"distractors\": [\n        \"Because domestic production increases.\",\n        \"Because foreign exchange rates become more favorable.\",\n        \"Because tariffs are lowered.\"\n      ],\n      \"explanation\": \"The speaker explains that if goods become more expensive, net exports will be less, presented as an assumption (Q0004).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"reason for net export decline\",\n      \"refs\": [\"Q0004\"]\n    },\n    {\n      \"question\": \"Which statement reflects the speaker's attitude toward trick questions in the quiz?\",\n      \"answer\": \"They will not include trick questions.\",\n      \"distractors\": [\n        \"They plan to include several trick questions.\",\n        \"They are unsure about the presence of trick questions.\",\n        \"They will let students create trick questions.\"\n      ],\n      \"explanation\": \"The speaker explicitly says they are not going to have trick questions (Q0007).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"quiz design attitude\",\n      \"refs\": [\"Q0007\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows. Identify concepts: assumption. So concept_name \"assumption\". content from quotes about assumption. Provide rows.\n\nItem label e.g. \"item1\". Provide concept rows: concept_name and content.\n\nExtract primary excerpts: Q0000, Q0002, Q0003, Q0004 maybe.\n\nCreate rows:\n\nitem: \"item1\", category: concepts, field: concept_name, element 0, part value, text \"assumption\", refs [\"Q0000\"], basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\ncontent row: field content, element0, part value, text from Q0000 \"Now, we're going to assume from now on that this second effect is not as strong as the volume effect.\", refs [\"Q0000\"], etc.\n\nAlso another content from Q0003 about net exports decrease when currency appreciates as assumption.\n\nWe can have multiple rows same item.\n\nQuiz: need 4 questions about teaching in primary excerpts. Could ask: What is assumed about the second effect? Answer: It is not as strong as the volume effect. Distractors.\n\nCreate 4 questions.\n\nProvide JSON.\n\nAbstentions none. Excluded none.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794766873,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_bb691ea66b",
+  "usage": {
+    "completion_tokens": 1245,
+    "prompt_tokens": 2503,
+    "total_tokens": 3748,
+    "completion_time": 2.612809007,
+    "completion_tokens_details": {
+      "reasoning_tokens": 251
+    },
+    "prompt_time": 0.218255425,
+    "prompt_tokens_details": null,
+    "queue_time": 0.568150027,
+    "total_time": 2.831064432
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g7258necsvbp7pejv9g6wm",
+    "debug": null,
+    "seed": 1860016428,
+    "usage": null
+  }
+}

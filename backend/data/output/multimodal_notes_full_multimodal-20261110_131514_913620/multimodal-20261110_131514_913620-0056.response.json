@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-d9d1b89f-25ab-4dba-bd40-4245ef9bd84c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"We name our classes using the Pascal naming convention\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"The first letter of every word should be upper case\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"We name our methods using the camel naming convention\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"In camel naming the first letter of every word should be upper case\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"Except the first word\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"That is why we have a capital M\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    }\n  ],\n  \"items\": [\n    {\n      \"category\": \"concepts\",\n      \"fields\": [\n        {\n          \"name\": \"content\",\n          \"is_null\": false,\n          \"groups\": [[\"C1\", \"C2\", \"C3\", \"C4\", \"C5\", \"C6\"]],\n          \"variables\": []\n        },\n        {\n          \"name\": \"concept_name\",\n          \"is_null\": false,\n          \"groups\": [[\"C1\"]],\n          \"variables\": []\n        },\n        {\n          \"name\": \"aliases\",\n          \"is_null\": true,\n          \"groups\": [],\n          \"variables\": []\n        }\n      ]\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract claims about naming conventions. Create claims: class naming Pascal (first letter upper case each word). method naming camel (first word lower, subsequent words capital). Provide definitions maybe concepts. We'll produce claims list.\n\nIdentify excerpts: Q0000, Q0001, Q0002, Q0003, Q0004, Q0005. Also Q0023 context but not primary.\n\nCreate claims:\n\nC1: \"We name our classes using the Pascal naming convention.\" basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, refs [Q0000], related_refs [].\n\nC2: \"In Pascal naming, the first letter of every word should be uppercase.\" basis explicit, refs Q0001, literal_kind verbal.\n\nC3: \"We name our methods using the camel naming convention.\" basis explicit, refs Q0002.\n\nC4: \"In camel naming, the first letter of every word should be uppercase.\" Wait that's same as Pascal? Actually camel: first letter of every word except first should be uppercase. Use Q0003 and Q0004. Combine? Might split.\n\nC4: \"In camel naming, the first letter of every word should be uppercase.\" from Q0003 (but that's same as Pascal, maybe mis). Use as is.\n\nC5: \"In camel naming, except the first word.\" from Q0004.\n\nC6: \"That is why we have a capital M.\" from Q0005 (explanation of capital M in method name).\n\nAlso maybe concept claim about naming conventions overall.\n\nNow items: categories definitions? Could be concepts: naming conventions. Provide concepts with content claim ids.\n\nWe'll create items for concepts: content field groups with claim ids C1-C6? content maybe combine? Use groups list of claim ids.\n\nDefine concept_name \"Naming conventions in Java\". content claim ids maybe C1-C6.\n\nNow produce schema.\n\nAbstentions none. Excluded none.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794316680,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 1012,
+    "prompt_tokens": 2798,
+    "total_tokens": 3810,
+    "completion_time": 2.120336967,
+    "completion_tokens_details": {
+      "reasoning_tokens": 398
+    },
+    "prompt_time": 0.183297672,
+    "prompt_tokens_details": null,
+    "queue_time": 0.321390833,
+    "total_time": 2.303634639
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72sqcx3ex3t0chywgdm3a69",
+    "debug": null,
+    "seed": 1323714059,
+    "usage": null
+  }
+}

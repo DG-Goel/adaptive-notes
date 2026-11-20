@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-5e3241b3-3084-4a2e-909b-9cbd7ba4dd9d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"I001\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"interest rate\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I001\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Japan hasn't had hikes in interest rates for three decades, but even now, you begin to see some. People expect US interest rates to go down relative to Japan, with the direction of change being US monetary policy loosening before the rest of the world, which leads to big swings.\",\n      \"refs\": [\"Q0000\", \"Q0003\", \"Q0004\", \"Q0005\", \"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What has Japan's interest rate movement been for the past three decades?\",\n      \"answer\": \"Japan has not had any hikes in interest rates for three decades.\",\n      \"explanation\": \"The speaker states, \\\"Japan hasn't had hikes in interest rates for three decades, but even now, you begin to see some.\\\" (Q0000)\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Japan interest rate history\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"How does the speaker describe the expected direction of US interest rates relative to Japan?\",\n      \"answer\": \"US interest rates are expected to go down (loosen) relative to Japan.\",\n      \"explanation\": \"The speaker says, \\\"people expect interest rates in the US has to go down relative to interest rates in Japan\\\" and \\\"the direction of the change is in that way.\\\" (Q0003, Q0004)\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"US vs Japan rate expectations\",\n      \"refs\": [\"Q0003\", \"Q0004\"]\n    },\n    {\n      \"question\": \"According to the speaker, which region is expected to loosen monetary policy first?\",\n      \"answer\": \"The United States is expected to loosen monetary policy before the rest of the world.\",\n      \"explanation\": \"The speaker notes, \\\"the direction of the change is towards the US loosening monetary policy before the rest of the world does.\\\" (Q0005)\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"Global monetary policy sequence\",\n      \"refs\": [\"Q0005\"]\n    },\n    {\n      \"question\": \"What effect does the speaker say this expectation has on currency movements?\",\n      \"answer\": \"It leads to big swings in currency values.\",\n      \"explanation\": \"The speaker links the expectation to volatility: \\\"And that's what is leading to its big swings.\\\" (Q0006)\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"Currency volatility from rate expectations\",\n      \"refs\": [\"Q0006\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows but content is just statements about interest rates. Likely concepts: \"interest rate\", \"policy rate\". Provide rows for concepts with content. Use primary excerpts. Provide abstentions for missing definitions etc. Quiz 4 questions.\n\nLet's craft rows: item \"I001\". concept_name \"interest rate\". content from Q0000 etc. Provide separate rows for each field.\n\nRows need all required fields per category. For concepts: required content and concept_name. Provide two rows.\n\nRow1: item I001, category concepts, field concept_name, element0, part value, text \"interest rate\", refs [\"Q0000\"], basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\nRow2: content: combine relevant excerpt maybe Q0000+Q0003+Q0004+Q0005. Text: \"Japan hasn't had hikes in interest rates for three decades, but even now, you begin to see some. People expect US interest rates to go down relative to Japan, with US loosening monetary policy before the rest of the world.\" Use primary excerpts. Provide refs list all used. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null.\n\nAbstentions for definitions etc.\n\nQuiz: 4 short answer.\n\nQ1: What has Japan's interest rate movement been for three decades? Answer: It hasn't had hikes. Explanation using Q0000. Bloom: Remember.\n\nQ2: According to the speaker, how is the direction of US interest rate change expected relative to Japan? Answer: US rates are expected to loosen (go down) relative to Japan. Use Q0003,Q0004. Bloom: Understand.\n\nQ3: What is the implied sequence of monetary policy changes globally according to the speaker? Answer: US will loosen before the rest of the world. Use Q0005. Bloom: Apply.\n\nQ4: What effect does the speaker say this expectation has on currency swings? Answer: It leads to big swings. Use Q0006. Bloom: Analyze.\n\nProvide JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794732952,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_19b184c447",
+  "usage": {
+    "completion_tokens": 1169,
+    "prompt_tokens": 2904,
+    "total_tokens": 4073,
+    "completion_time": 2.426589708,
+    "completion_tokens_details": {
+      "reasoning_tokens": 420
+    },
+    "prompt_time": 0.156230376,
+    "prompt_tokens_details": null,
+    "queue_time": 0.372625947,
+    "total_time": 2.5828200839999997
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f6pzzze09b7mp81zmqxfa0",
+    "debug": null,
+    "seed": 18491097,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-0cab3910-9677-4c14-a223-d9551592ac2d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If the Fed says we need fiscal expansion and does not move the interest rate, then the exchange rate won't move.\",\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Increasing the expected exchange rate is a shock examined in the model.\",\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The LEM is controlled by the domestic central bank.\",\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The IES movement is questioned.\",\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"item5\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When asking whether something moves, one should always fix something.\",\n      \"refs\": [\"Q0006\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"item6\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Fixing the interest rate is a way to isolate effects.\",\n      \"refs\": [\"Q0007\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"item7\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If output remains the same after moving the expected exchange rate, then the S has moved.\",\n      \"refs\": [\"Q0010\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"item8\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If output changes after moving the expected exchange rate, then the S did not move.\",\n      \"refs\": [\"Q0011\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows but content is about model shocks. Extract claims: e.g., increasing expected exchange rate moves something, LEM controlled by central bank, etc. Provide rows for concepts? Probably concepts: \"expected exchange rate\". Provide facts? We'll create rows with availability SOURCE_MISSING because no explicit text? Actually quotes give statements. Use explicit basis. Provide rows under facts.\n\nWe'll output rows for each claim.\n\nLet's do facts category.\n\nRow1: \"If the Fed says we need fiscal expansion and does not move interest rate, then the exchange rate won't move.\" from Q0000.\n\nRow2: \"Increasing the expected exchange rate is a shock examined in the model.\" from Q0002.\n\nRow3: \"The LEM is controlled by the domestic central bank.\" from Q0004.\n\nRow4: \"The IES movement is questioned.\" from Q0005.\n\nRow5: \"When asking whether something moves, one should always fix something.\" from Q0006.\n\nRow6: \"Fixing the interest rate is a way to isolate effects.\" from Q0007.\n\nRow7: \"If output remains the same after moving expected exchange rate, then S has moved.\" from Q0010.\n\nRow8: \"If output changes, then S did not move.\" from Q0011.\n\nProvide item label e.g., \"item1\". Provide fields: fact_text, category facts, field fact_text, element 0, part value. literal_kind verbal. instructional_role null. related_refs empty.\n\nAdd abstentions for missing formulas etc none.\n\nProvide empty excluded.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794666346,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c3da0d4bb9",
+  "usage": {
+    "completion_tokens": 1214,
+    "prompt_tokens": 2711,
+    "total_tokens": 3925,
+    "completion_time": 2.535060363,
+    "completion_tokens_details": {
+      "reasoning_tokens": 323
+    },
+    "prompt_time": 0.1218809,
+    "prompt_tokens_details": null,
+    "queue_time": 0.168417537,
+    "total_time": 2.656941263
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7d76b28ebkrdfv4fcnxeaxm",
+    "debug": null,
+    "seed": 809703077,
+    "usage": null
+  }
+}

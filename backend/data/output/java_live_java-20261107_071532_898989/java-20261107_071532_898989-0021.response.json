@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-fc44bb48-9f46-4a86-a3c1-23b1dd557838",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"class\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"class is a container for related methods\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"package\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"package is used to group related classes\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"command line application\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"application that we can run from the command line and does not have a graphical user interface\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"base package for a Java project is the domain name of your company in reverse\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [\n    {\n      \"procedure_name\": {\n        \"text\": \"Create a new Java project in IntelliJ IDEA\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\"]\n      },\n      \"steps\": [\n        {\n          \"text\": \"Open IntelliJ IDEA on the home screen\",\n          \"refs\": [\"Q0000\"]\n        },\n        {\n          \"text\": \"Select Java on the left side and ensure project SDK is set (not blank)\",\n          \"refs\": [\"Q0000\"]\n        },\n        {\n          \"text\": \"Click Next, select \\\"Create project from template\\\", choose \\\"Command Line Application\\\"\",\n          \"refs\": [\"Q0001\"]\n        },\n        {\n          \"text\": \"Click Next, give the project a name (e.g., HelloWorld)\",\n          \"refs\": [\"Q0002\"]\n        },\n        {\n          \"text\": \"Set the base package (e.g., com.codewithmarsh) for the project\",\n          \"refs\": [\"Q0003\", \"Q0004\"]\n        }\n      ],\n      \"prerequisites\": null,\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"Steps to create a new Java project in IntelliJ IDEA\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\"]\n      }\n    }\n  ],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays except extracted items. From excerpts, educational content about Java project setup. We can extract facts, definitions, explanations maybe.\n\nIdentify definitions: \"class is a container for related methods\", \"package is used to group related classes\". Also \"command line application ... does not have a GUI\". Extract definitions.\n\nCreate definitions entries.\n\nAlso facts: \"base package for a Java project is the domain name of your company in reverse\". That's a fact.\n\nAlso maybe procedure: steps to create project? Could be procedure but excerpt describes steps: open IntelliJ, select java, ensure SDK, click next, select template, etc. Could be procedure.\n\nWe'll include one procedure with name \"Create a new Java project in IntelliJ IDEA\". Steps as values with refs.\n\nNow construct JSON.\n\nNeed refs arrays.\n\nLet's assign:\n\nDefinition 1: term \"class\" text \"class is a container for related methods\". refs Q0003 (contains phrase). Also Q0000 mentions anatomy but not definition. Use Q0003.\n\nDefinition 2: term \"package\" text \"package is used to group related classes\". refs Q0003.\n\nDefinition 3: term \"command line application\" text \"application that we can run from the command line and does not have a graphical user interface\". refs Q0001.\n\nFact: \"base package for a Java project is the domain name of your company in reverse\". refs Q0004.\n\nProcedure: name \"Create a new Java project in IntelliJ IDEA\". steps: list maybe 1-5. We'll create separate value items each with text and refs.\n\nSteps:\n\n1. Open IntelliJ IDEA on the home screen. refs Q0000.\n2. Select Java on the left side and ensure project SDK is set (not blank). refs Q0000.\n3. Click Next, select \"Create project from template\", choose \"Command Line Application\". refs Q0001.\n4. Click Next, give the project a name (e.g., HelloWorld). refs Q0002.\n5. Set base package (e.g., com.codewithmarsh) optionally. refs Q0003 and Q0004.\n\nWe'll need each step as a value object.\n\nNow build JSON with empty arrays for others.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794035959,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8655ddce88",
+  "usage": {
+    "completion_tokens": 1084,
+    "prompt_tokens": 3030,
+    "total_tokens": 4114,
+    "completion_time": 2.268019775,
+    "completion_tokens_details": {
+      "reasoning_tokens": 459
+    },
+    "prompt_time": 0.142251133,
+    "prompt_tokens_details": null,
+    "queue_time": 0.375642137,
+    "total_time": 2.410270908
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6te0fa2enas7pk4kcve9szm",
+    "debug": null,
+    "seed": 972711314,
+    "usage": null
+  }
+}

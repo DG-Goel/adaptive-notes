@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-1b58c738-1278-4cd8-8b55-e8153adbf86b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Domestic vs Foreign Bond Return Comparison\",\n      \"source_segment_ids\": [\"CON_0001\", \"CON_0002\", \"FCT_0001\", \"FCT_0002\", \"FCT_0003\", \"FCT_0004\", \"FCT_0049\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0001\", \"CON_0002\", \"FCT_0001\", \"FCT_0002\", \"FCT_0003\", \"FCT_0004\", \"FCT_0049\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\"note_id\": \"CON_0001\", \"exact_quote\": \"the idea that an economy can trade goods and financial assets with foreign economies, requiring comparison of relative prices and returns\"},\n            {\"note_id\": \"CON_0002\", \"exact_quote\": \"the relative price of domestic goods versus foreign goods, expressed in a common currency\"},\n            {\"note_id\": \"FCT_0002\", \"exact_quote\": \"UK bond offers a 10 percent interest rate. US bond offers a 5 percent interest rate.\"},\n            {\"note_id\": \"FCT_0003\", \"exact_quote\": \"If I go the UK bond route, I get 10% in return in the bond, minus 5% in the capital loss due to the appreciation of the dollar.\"},\n            {\"note_id\": \"FCT_0004\", \"exact_quote\": \"So net I get 5% as well.\"},\n            {\"note_id\": \"FCT_0049\", \"exact_quote\": \"So I divide this by the expected exchange rate it next year, and then I get that's my return in dollars of having gone the UK bond route.\"}\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Return Comparison of Domestic (US) vs Foreign (UK) Bonds\",\n            \"headers\": [\"Asset\", \"Nominal Interest Rate\", \"Currency Effect\", \"Net Return (approx.)\"],\n            \"rows\": [\n              [\"US Bond (Domestic)\", \"5 %\", \"None (base currency)\", \"5 %\"],\n              [\"UK Bond (Foreign)\", \"10 %\", \"–5 % (dollar appreciation)\", \"5 %\"]\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Uncovered Interest Parity (UIP) Flowchart\",\n      \"source_segment_ids\": [\"CON_0009\", \"CON_0010\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0009\", \"CON_0010\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\"note_id\": \"CON_0009\", \"exact_quote\": \"That's called, and it's a very important concept in international finance, the uncovered interest parity condition.\"},\n            {\"note_id\": \"CON_0010\", \"exact_quote\": \"In equilibrium, the domestic and foreign interest rates adjusted for expected currency appreciation/depreciation are equal.\"}\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Uncovered Interest Parity Relationship\",\n            \"direction\": \"top-down\",\n            \"nodes\": [\n              {\"id\": \"n1\", \"label\": \"Domestic interest rate (i_d)\"},\n              {\"id\": \"n2\", \"label\": \"Foreign interest rate (i_f)\"},\n              {\"id\": \"n3\", \"label\": \"Expected exchange rate change (E[e_{t+1}]/e_t)\"},\n              {\"id\": \"n4\", \"label\": \"UIP condition: i_d = i_f + expected depreciation\"}\n            ],\n            \"edges\": [\n              {\"from\": \"n1\", \"to\": \"n4\", \"label\": \"input\"},\n              {\"from\": \"n2\", \"to\": \"n4\", \"label\": \"input\"},\n              {\"from\": \"n3\", \"to\": \"n4\", \"label\": \"adjusts\"}\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visuals where appropriate. Identify comparisons: maybe table of domestic vs foreign bond returns. Also flowchart for uncovered interest parity. Provide units.\n\nCreate unit for comparison table: use CON_0001, CON_0002, FCT_0001, FCT_0002, FCT_0003, FCT_0004, FCT_0049. Provide source ids.\n\nCreate flowchart for interest parity: CON_0009, CON_0010.\n\nReturn JSON with units list.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794657361,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5a93aea882",
+  "usage": {
+    "completion_tokens": 1027,
+    "prompt_tokens": 2790,
+    "total_tokens": 3817,
+    "completion_time": 2.143202627,
+    "completion_tokens_details": {
+      "reasoning_tokens": 106
+    },
+    "prompt_time": 0.138900829,
+    "prompt_tokens_details": null,
+    "queue_time": 0.156483631,
+    "total_time": 2.2821034559999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cym4yce2mrgfyq9gve2e2p",
+    "debug": null,
+    "seed": 557695978,
+    "usage": null
+  }
+}

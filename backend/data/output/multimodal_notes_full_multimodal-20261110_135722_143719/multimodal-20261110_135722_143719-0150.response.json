@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-052773fa-b738-4150-8a14-d732c2d47300",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Casting the result of Math.random() * 100 to int without parentheses causes the fractional part to be lost, resulting in zero.\",\n        \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"Casting the result of Math.random() * 100 to int without parentheses causes the fractional part to be lost, resulting in zero.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Wrapping the entire expression (Math.random() * 100) in parentheses before casting yields an integer between 0 and 100.\",\n        \"refs\": [\"Q0005\", \"Q0006\"],\n        \"claims\": [\n          {\n            \"text\": \"Wrapping the entire expression (Math.random() * 100) in parentheses before casting yields an integer between 0 and 100.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"corrected_approach\",\n            \"refs\": [\"Q0005\", \"Q0006\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"NumberFormat is an abstract class in java.text and cannot be instantiated directly with the new operator.\",\n        \"refs\": [\"Q0018\", \"Q0019\", \"Q0020\"],\n        \"claims\": [\n          {\n            \"text\": \"NumberFormat is an abstract class in java.text and cannot be instantiated directly with the new operator.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"identified_mistake\",\n            \"refs\": [\"Q0018\", \"Q0019\", \"Q0020\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"To obtain a NumberFormat instance, use the static factory method getCurrencyInstance(), which returns a NumberFormat object.\",\n        \"refs\": [\"Q0024\", \"Q0025\", \"Q0026\", \"Q0027\"],\n        \"claims\": [\n          {\n            \"text\": \"To obtain a NumberFormat instance, use the static factory method getCurrencyInstance(), which returns a NumberFormat object.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0024\", \"Q0025\", \"Q0026\", \"Q0027\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"NumberFormat can format numbers as currency, adding a dollar sign and commas for thousands.\",\n        \"refs\": [\"Q0007\", \"Q0008\"],\n        \"claims\": [\n          {\n            \"text\": \"NumberFormat can format numbers as currency, adding a dollar sign and commas for thousands.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0007\", \"Q0008\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"NumberFormat can format a decimal like 0.1 as a percentage, displaying it as 10%.\",\n        \"refs\": [\"Q0009\", \"Q0010\"],\n        \"claims\": [\n          {\n            \"text\": \"NumberFormat can format a decimal like 0.1 as a percentage, displaying it as 10%.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0009\", \"Q0010\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output facts from primary teaching. Identify factual statements. Extract claims.\n\nFrom excerpts: facts about casting causing zero, need parentheses, number formatting, NumberFormat abstract, use getCurrencyInstance factory method.\n\nCreate items with fact_text and fact_type value containing claims.\n\nWe'll list each fact.\n\nLet's produce items.\n\nAbstentions none? All info present.\n\nExcluded none.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794320259,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_87b3c396db",
+  "usage": {
+    "completion_tokens": 1085,
+    "prompt_tokens": 3690,
+    "total_tokens": 4775,
+    "completion_time": 2.912957449,
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_time": 0.162908824,
+    "prompt_tokens_details": {
+      "cached_tokens": 1536
+    },
+    "queue_time": 0.29424321,
+    "total_time": 3.075866273
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72x4kfmeabafdrsm5f3yg4c",
+    "debug": null,
+    "seed": 1521897763,
+    "usage": null
+  }
+}

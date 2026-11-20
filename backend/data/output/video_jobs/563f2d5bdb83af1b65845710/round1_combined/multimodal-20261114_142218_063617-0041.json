@@ -1,0 +1,823 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-14T14:23:38.654226+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00025"
+      ],
+      "document_id": "DOC001",
+      "content": "Treating the expected exchange rate as a parameter that can be moved around without endogenizing it.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00025",
+              "quote": "What if I change the expected exchange rate?",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 45,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00025",
+              "quote": "What if I change the expected exchange rate?",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 45,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00025",
+              "quote": "I'm treating it as a parameter.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 99,
+              "end_char": 130,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00025",
+              "quote": "When I fix it, I just don't want to endogenize it.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 132,
+              "end_char": 182,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00025",
+              "quote": "I don't want to make it another endogenous variable.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 184,
+              "end_char": 236,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "expected exchange rate",
+              "claims": [
+                {
+                  "text": "expected exchange rate",
+                  "refs": [
+                    "Q0000"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00025",
+                      "quote": "What if I change the expected exchange rate?"
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Treating the expected exchange rate as a parameter that can be moved around without endogenizing it.",
+              "claims": [
+                {
+                  "text": "Treating the expected exchange rate as a parameter that can be moved around without endogenizing it.",
+                  "refs": [
+                    "Q0000",
+                    "Q0002",
+                    "Q0003",
+                    "Q0004"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00025",
+                      "quote": "What if I change the expected exchange rate?"
+                    },
+                    {
+                      "source_id": "G00025",
+                      "quote": "I'm treating it as a parameter."
+                    },
+                    {
+                      "source_id": "G00025",
+                      "quote": "When I fix it, I just don't want to endogenize it."
+                    },
+                    {
+                      "source_id": "G00025",
+                      "quote": "I don't want to make it another endogenous variable."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00025"
+              ],
+              "reason": "No explicit definition of the term \"expected exchange rate\" is provided in the primary excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00025"
+              ],
+              "reason": "No formula text is available in the primary excerpts; OCR candidates are unverified.",
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "expected exchange rate",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [
+                        "if"
+                      ],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "What if I change the expected exchange rate?"
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00025",
+                        "quote": "What if I change the expected exchange rate?",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 45,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "expected exchange rate",
+                "preview_text": "expected exchange rate",
+                "withheld": false
+              },
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Treating the expected exchange rate as a parameter that can be moved around without endogenizing it.",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Important source qualification may have been lost"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [
+                        "if"
+                      ],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "What if I change the expected exchange rate?",
+                      "I'm treating it as a parameter.",
+                      "When I fix it, I just don't want to endogenize it.",
+                      "I don't want to make it another endogenous variable."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00025",
+                        "quote": "What if I change the expected exchange rate?",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 45,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00025",
+                        "quote": "I'm treating it as a parameter.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 99,
+                        "end_char": 130,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00025",
+                        "quote": "When I fix it, I just don't want to endogenize it.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 132,
+                        "end_char": 182,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00025",
+                        "quote": "I don't want to make it another endogenous variable.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 184,
+                        "end_char": 236,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Treating the expected exchange rate as a parameter that can be moved around without endogenizing it.",
+                "preview_text": "",
+                "withheld": true
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00025"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "expected exchange rate",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [
+    {
+      "knowledge_id": "EXP_0002",
+      "knowledge_type": "explanation",
+      "source_unit_ids": [
+        "G00025"
+      ],
+      "document_id": "DOC001",
+      "content": "Expectations are very powerful in financial assets in general.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00025",
+              "quote": "Expectations are very powerful in financial assets in general.",
+              "fields": [
+                "/topic"
+              ],
+              "match_count": 1,
+              "start_char": 697,
+              "end_char": 759,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00025",
+              "quote": "Expectations are very powerful in financial assets in general.",
+              "fields": [
+                "/explanation_text"
+              ],
+              "match_count": 1,
+              "start_char": 697,
+              "end_char": 759,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00025",
+              "quote": "Expectations are very powerful in financial assets in general.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 697,
+              "end_char": 759,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/topic",
+              "text": "Power of expectations in financial assets",
+              "claims": [
+                {
+                  "text": "Power of expectations in financial assets",
+                  "refs": [
+                    "Q0013"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00025",
+                      "quote": "Expectations are very powerful in financial assets in general."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/explanation_text",
+              "text": "Expectations are very powerful in financial assets in general.",
+              "claims": [
+                {
+                  "text": "Expectations are very powerful in financial assets in general.",
+                  "refs": [
+                    "Q0013"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00025",
+                      "quote": "Expectations are very powerful in financial assets in general."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Expectations are very powerful in financial assets in general.",
+              "claims": [
+                {
+                  "text": "Expectations are very powerful in financial assets in general.",
+                  "refs": [
+                    "Q0013"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00025",
+                      "quote": "Expectations are very powerful in financial assets in general."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00025"
+              ],
+              "reason": "No explicit definition of the term \"expected exchange rate\" is provided in the primary excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00025"
+              ],
+              "reason": "No formula text is available in the primary excerpts; OCR candidates are unverified.",
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Expectations are very powerful in financial assets in general.",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Expectations are very powerful in financial assets in general."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00025",
+                        "quote": "Expectations are very powerful in financial assets in general.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 697,
+                        "end_char": 759,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Expectations are very powerful in financial assets in general.",
+                "preview_text": "Expectations are very powerful in financial assets in general.",
+                "withheld": false
+              },
+              {
+                "path": "/explanation_text",
+                "claims": [
+                  {
+                    "text": "Expectations are very powerful in financial assets in general.",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Expectations are very powerful in financial assets in general."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00025",
+                        "quote": "Expectations are very powerful in financial assets in general.",
+                        "fields": [
+                          "/explanation_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 697,
+                        "end_char": 759,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Expectations are very powerful in financial assets in general.",
+                "preview_text": "Expectations are very powerful in financial assets in general.",
+                "withheld": false
+              },
+              {
+                "path": "/topic",
+                "claims": [
+                  {
+                    "text": "Power of expectations in financial assets",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Expectations are very powerful in financial assets in general."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00025",
+                        "quote": "Expectations are very powerful in financial assets in general.",
+                        "fields": [
+                          "/topic"
+                        ],
+                        "match_count": 1,
+                        "start_char": 697,
+                        "end_char": 759,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Power of expectations in financial assets",
+                "preview_text": "Power of expectations in financial assets",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00025"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "topic": "Power of expectations in financial assets",
+      "explanation_text": "Expectations are very powerful in financial assets in general.",
+      "explanation_type": null
+    }
+  ],
+  "examples": [],
+  "facts": [
+    {
+      "knowledge_id": "FCT_0003",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00025"
+      ],
+      "document_id": "DOC001",
+      "content": "When the expected exchange rate is moved up, the current exchange rate immediately rises.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00025",
+              "quote": "And now I move the spectral exchange rate up,\n then the current exchange immediately jumps.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 506,
+              "end_char": 597,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00025",
+              "quote": "And now I move the spectral exchange rate up,\n then the current exchange immediately jumps.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 506,
+              "end_char": 597,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "When the expected exchange rate is moved up, the current exchange rate immediately rises.",
+              "claims": [
+                {
+                  "text": "When the expected exchange rate is moved up, the current exchange rate immediately rises.",
+                  "refs": [
+                    "Q0010"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00025",
+                      "quote": "And now I move the spectral exchange rate up,\n then the current exchange immediately jumps."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "When the expected exchange rate is moved up, the current exchange rate immediately rises.",
+              "claims": [
+                {
+                  "text": "When the expected exchange rate is moved up, the current exchange rate immediately rises.",
+                  "refs": [
+                    "Q0010"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00025",
+                      "quote": "And now I move the spectral exchange rate up,\n then the current exchange immediately jumps."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00025"
+              ],
+              "reason": "No explicit definition of the term \"expected exchange rate\" is provided in the primary excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00025"
+              ],
+              "reason": "No formula text is available in the primary excerpts; OCR candidates are unverified.",
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "When the expected exchange rate is moved up, the current exchange rate immediately rises.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And now I move the spectral exchange rate up,\n then the current exchange immediately jumps."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00025",
+                        "quote": "And now I move the spectral exchange rate up,\n then the current exchange immediately jumps.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 506,
+                        "end_char": 597,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "When the expected exchange rate is moved up, the current exchange rate immediately rises.",
+                "preview_text": "When the expected exchange rate is moved up, the current exchange rate immediately rises.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "When the expected exchange rate is moved up, the current exchange rate immediately rises.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And now I move the spectral exchange rate up,\n then the current exchange immediately jumps."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00025",
+                        "quote": "And now I move the spectral exchange rate up,\n then the current exchange immediately jumps.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 506,
+                        "end_char": 597,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "When the expected exchange rate is moved up, the current exchange rate immediately rises.",
+                "preview_text": "When the expected exchange rate is moved up, the current exchange rate immediately rises.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00025"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "When the expected exchange rate is moved up, the current exchange rate immediately rises.",
+      "fact_type": null
+    }
+  ],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 3,
+  "source_units_processed": 1,
+  "extraction_metadata": null
+}

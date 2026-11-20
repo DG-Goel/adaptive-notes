@@ -1,0 +1,266 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-15T17:31:43.723258+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00017"
+      ],
+      "document_id": "DOC001",
+      "content": "Exports decrease when the real exchange rate appreciates, making U.S. goods more expensive relative to foreign goods; a real exchange depreciation makes U.S. goods cheaper and increases demand.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00017",
+              "quote": "decreasing on the real exchange rate.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 555,
+              "end_char": 592,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00017",
+              "quote": "So why do you think that exports, US exports,\n are decreasing on the real exchange rate, epsilon?",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 671,
+              "end_char": 768,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00017",
+              "quote": "goods become more expensive relative to foreign goods.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 797,
+              "end_char": 851,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00017",
+              "quote": "That's what a real exchange depreciation is, and therefore there is less demand for\n U.S.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 853,
+              "end_char": 942,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "real exchange rate",
+              "claims": [
+                {
+                  "text": "real exchange rate",
+                  "refs": [
+                    "Q0000"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00017",
+                      "quote": "decreasing on the real exchange rate."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Exports decrease when the real exchange rate appreciates, making U.S. goods more expensive relative to foreign goods; a real exchange depreciation makes U.S. goods cheaper and increases demand.",
+              "claims": [
+                {
+                  "text": "Exports decrease when the real exchange rate appreciates, making U.S. goods more expensive relative to foreign goods; a real exchange depreciation makes U.S. goods cheaper and increases demand.",
+                  "refs": [
+                    "Q0003",
+                    "Q0005",
+                    "Q0006"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00017",
+                      "quote": "So why do you think that exports, US exports,\n are decreasing on the real exchange rate, epsilon?"
+                    },
+                    {
+                      "source_id": "G00017",
+                      "quote": "goods become more expensive relative to foreign goods."
+                    },
+                    {
+                      "source_id": "G00017",
+                      "quote": "That's what a real exchange depreciation is, and therefore there is less demand for\n U.S."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Exports decrease when the real exchange rate appreciates, making U.S. goods more expensive relative to foreign goods; a real exchange depreciation makes U.S. goods cheaper and increases demand.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So why do you think that exports, US exports,\n are decreasing on the real exchange rate, epsilon?",
+                      "goods become more expensive relative to foreign goods.",
+                      "That's what a real exchange depreciation is, and therefore there is less demand for\n U.S."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00017",
+                        "quote": "So why do you think that exports, US exports,\n are decreasing on the real exchange rate, epsilon?",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 671,
+                        "end_char": 768,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00017",
+                        "quote": "goods become more expensive relative to foreign goods.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 797,
+                        "end_char": 851,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00017",
+                        "quote": "That's what a real exchange depreciation is, and therefore there is less demand for\n U.S.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 853,
+                        "end_char": 942,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Exports decrease when the real exchange rate appreciates, making U.S. goods more expensive relative to foreign goods; a real exchange depreciation makes U.S. goods cheaper and increases demand.",
+                "preview_text": "Exports decrease when the real exchange rate appreciates, making U.S. goods more expensive relative to foreign goods; a real exchange depreciation makes U.S. goods cheaper and increases demand.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "real exchange rate",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "decreasing on the real exchange rate."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00017",
+                        "quote": "decreasing on the real exchange rate.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 555,
+                        "end_char": 592,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "real exchange rate",
+                "preview_text": "real exchange rate",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00017"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "real exchange rate",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 1,
+  "source_units_processed": 1,
+  "extraction_metadata": null
+}

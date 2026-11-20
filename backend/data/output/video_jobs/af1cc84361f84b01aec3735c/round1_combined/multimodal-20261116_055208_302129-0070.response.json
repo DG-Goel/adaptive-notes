@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-64008eb6-dd29-4c0c-8b65-f13bcd53967a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"I1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"exchange rate appreciation\",\n      \"refs\": [\"Q0012\", \"Q0015\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the domestic interest rate is higher than the international interest rate, the domestic currency becomes more expensive (the exchange rate appreciates).\",\n      \"refs\": [\"Q0011\", \"Q0015\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit term definition provided in the excerpts.\",\n      \"source_ids\": [\"G00017\", \"G00018\"]\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No detailed explanation of the mechanism beyond the brief statements.\",\n      \"source_ids\": [\"G00017\", \"G00018\"]\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No concrete example illustrating the concept.\",\n      \"source_ids\": [\"G00017\", \"G00018\"]\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No standalone factual statements isolated from the teaching narrative.\",\n      \"source_ids\": [\"G00017\", \"G00018\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Exact uncovered interest parity formula not provided in the excerpts.\",\n      \"source_ids\": [\"G00017\", \"G00018\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No step‑by‑step procedure described.\",\n      \"source_ids\": [\"G00017\", \"G00018\"]\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit relational statement linking variables beyond the concept.\",\n      \"source_ids\": [\"G00017\", \"G00018\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what happens to the exchange rate when the domestic interest rate rises above the international rate?\",\n      \"answer\": \"The exchange rate appreciates (the domestic currency becomes more expensive).\",\n      \"distractors\": [\n        \"The exchange rate depreciates (the domestic currency becomes cheaper).\",\n        \"The exchange rate remains unchanged.\",\n        \"The exchange rate becomes unpredictable.\"\n      ],\n      \"explanation\": \"The speaker states that increasing the domestic interest rate leads to an appreciation of the exchange rate, meaning the domestic currency becomes more expensive.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"exchange rate appreciation\",\n      \"refs\": [\"Q0011\", \"Q0015\"]\n    },\n    {\n      \"question\": \"If domestic and international interest rates are equal, what does the speaker say about the expected exchange rate change?\",\n      \"answer\": \"There is no expected capital gain or loss; the exchange rate stays the same.\",\n      \"distractors\": [\n        \"The exchange rate will sharply appreciate.\",\n        \"The exchange rate will sharply depreciate.\",\n        \"The exchange rate will fluctuate randomly.\"\n      ],\n      \"explanation\": \"The speaker notes that when interest rates are equal, the expected exchange rate next year equals the current rate, so no capital gain or loss is expected.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"interest parity baseline\",\n      \"refs\": [\"Q0012\"]\n    },\n    {\n      \"question\": \"Which principle does the speaker reference when linking interest rates to exchange rate movements?\",\n      \"answer\": \"Uncovered interest parity.\",\n      \"distractors\": [\n        \"Purchasing power parity.\",\n        \"Law of one price.\",\n        \"Fisher effect.\"\n      ],\n      \"explanation\": \"The speaker mentions using the equation and logic behind uncovered interest parity to explain the exchange rate change.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"uncovered interest parity\",\n      \"refs\": [\"Q0020\"]\n    },\n    {\n      \"question\": \"What term does the speaker use to describe the rise in the exchange rate caused by a higher domestic interest rate?\",\n      \"answer\": \"Appreciation.\",\n      \"distractors\": [\n        \"Depreciation.\",\n        \"Stagnation.\",\n        \"Volatility.\"\n      ],\n      \"explanation\": \"The speaker explicitly calls the increase in the exchange rate an \\\"appreciation\\\".\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"exchange rate terminology\",\n      \"refs\": [\"Q0012\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows etc. The excerpts are vague, no concrete definitions. Likely abstentions for many fields. We can maybe extract a concept: \"exchange rate appreciation\". Provide concept_name and content. Use primary excerpts.\n\nCreate one item e.g., item \"I1\". category concepts, fields concept_name and content. Text from Q0012 etc. Provide availability SOURCE_SUPPORTED, basis explicit.\n\nRows: concept_name \"exchange rate appreciation\" refs Q0012? Actually Q0012 says appreciation. Use Q0012. content \"When domestic interest rate rises relative to international rate, the exchange rate appreciates (domestic currency becomes more expensive).\" Combine from Q0011,Q0015.\n\nProvide abstentions for other categories.\n\nQuiz: create maybe 2 questions.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794808595,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_49bfac06f1",
+  "usage": {
+    "completion_tokens": 1316,
+    "prompt_tokens": 2919,
+    "total_tokens": 4235,
+    "completion_time": 2.758970308,
+    "completion_tokens_details": {
+      "reasoning_tokens": 159
+    },
+    "prompt_time": 0.118522414,
+    "prompt_tokens_details": null,
+    "queue_time": 0.289871132,
+    "total_time": 2.877492722
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hevec0ezwbqx2gpw6vv7sy",
+    "debug": null,
+    "seed": 2013453323,
+    "usage": null
+  }
+}

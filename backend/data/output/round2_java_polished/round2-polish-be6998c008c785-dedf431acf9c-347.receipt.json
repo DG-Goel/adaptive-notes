@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-6976b4ab-80ce-4e1e-8d17-bdf49268abb1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"markdown\": \"# Fundamentals of Java Variables, Types, and Control Flow\\n\\n## 1. Variables and Constants\\n- **Primitive types** store simple values (e.g., `int`, `boolean`).\\n- **Reference types** hold references to complex objects (e.g., arrays, classes).\\n- Both primitives and references can be declared as **variables** or **constants**.\\n\\n## 2. Type Casting\\n- **Implicit casting** – automatic conversion when no data loss is possible.\\n- **Explicit casting** – manual conversion using syntax like `(int) value` when a potential loss of information exists.\\n\\n## 3. Basic Data Structures\\n- Work with **numbers**, **strings**, and **arrays**.\\n- Read input from the terminal using classes such as `Scanner`.\\n\\n## 4. Control‑Flow Statements\\nControl flow determines the order in which statements are executed.\\n\\n### 4.1 Types of Control‑Flow Statements\\n1. **Conditional statements** – make decisions (`if`, `else if`, `else`, `switch`).\\n2. **Loops** – repeat code (`for`, `while`, `do‑while`).\\n3. **Error handling** – manage exceptional conditions (e.g., `try`/`catch`).\\n\\n### 4.2 Conditional Logic\\n- Use **comparison operators** to compare primitive values.\\n- Use **logical operators** (`&&`, `||`, `!`) to combine boolean expressions.\\n\\n## 5. Comparison Operators\\n| Operator | Meaning | Example |\\n|----------|---------|---------|\\n| `==` | Equality | `x == y` returns `true` when `x` and `y` are equal |\\n| `!=` | Inequality | `x != y` returns `false` when `x` and `y` are equal |\\n| `>` | Greater than |\\n| `>=` | Greater than or equal |\\n| `<` | Less than |\\n| `<=` | Less than or equal |\\n\\n- A **boolean expression** evaluates to `true` or `false`.\\n- An **expression** is any piece of code that produces a value.\\n\\n## 6. Logical Operators\\n- `&&` (**logical AND**) – true only if **both** operands are true.\\n- `||` (**logical OR**) – true if **any** operand is true.\\n- `!` (**logical NOT**) – inverts a boolean value.\\n- Java evaluates boolean expressions **left‑to‑right** and uses **short‑circuit evaluation**: if the first operand of `&&` is `false`, the second is not evaluated.\\n\\n### Example\\n```java\\nint temperature = 22;\\nboolean comfortable = temperature > 20 && temperature < 30; // true\\n```\\n- The expression `temperature > 20 && temperature < 30` is true because both conditions hold.\\n\\n## 7. Practical Example: Input Validation\\nWhen a user enters an invalid value, the program can repeatedly prompt until a valid input is received:\\n```java\\nScanner sc = new Scanner(System.in);\\nint value;\\ndo {\\n    System.out.print(\\\"Enter a positive number: \\\");\\n    while (!sc.hasNextInt()) {\\n        System.out.print(\\\"Invalid input. Try again: \\\");\\n        sc.next();\\n    }\\n    value = sc.nextInt();\\n} while (value <= 0);\\n```\\n- This loop uses a **conditional statement** (`if`/`while`) and **logical operators** to enforce the rule.\\n\\n---\\n*All concepts are presented in the order they appeared in the original notes, with key terms bolded and technical terms formatted as `inline code`.*\"\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output JSON with field markdown. Provide polished notes.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794583581,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_69334c0be3",
+  "usage": {
+    "completion_tokens": 834,
+    "prompt_tokens": 743,
+    "total_tokens": 1577,
+    "completion_time": 1.767960559,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14
+    },
+    "prompt_time": 0.03394399,
+    "prompt_tokens_details": null,
+    "queue_time": 0.159014684,
+    "total_time": 1.801904549
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ar8jmbefms9xm2h7pz11sn",
+    "debug": null,
+    "seed": 1830413203,
+    "usage": null
+  }
+}

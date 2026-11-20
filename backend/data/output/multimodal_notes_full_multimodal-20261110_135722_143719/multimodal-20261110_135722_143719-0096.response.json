@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-5c8f6412-e121-4934-a7e6-450fe71b60e0",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"To include a double quote character inside a Java string literal, you must prefix the double quote with a backslash (\\\\\\\") so that the compiler does not treat it as the end of the string.\",\n        \"refs\": [\"Q0004\", \"Q0006\", \"Q0007\", \"Q0010\"],\n        \"claims\": [\n          {\n            \"text\": \"Double quotes inside a Java string must be escaped with a backslash.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0004\", \"Q0006\", \"Q0007\", \"Q0010\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The backslash character itself is a special escape character in Java strings; to represent a literal backslash you must write two backslashes (\\\\\\\\) in the source code.\",\n        \"refs\": [\"Q0013\", \"Q0014\", \"Q0017\", \"Q0023\", \"Q0025\"],\n        \"claims\": [\n          {\n            \"text\": \"A literal backslash in a Java string is written as \\\\\\\\.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0013\", \"Q0014\", \"Q0017\", \"Q0023\", \"Q0025\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The escape sequence \\\\n inserts a newline character into a Java string, causing the output to continue on the next line.\",\n        \"refs\": [\"Q0026\", \"Q0027\", \"Q0029\"],\n        \"claims\": [\n          {\n            \"text\": \"The \\\\n escape sequence adds a new line in a Java string.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0026\", \"Q0027\", \"Q0029\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The escape sequence \\\\t inserts a tab character into a Java string, creating horizontal spacing between characters.\",\n        \"refs\": [\"Q0030\", \"Q0031\"],\n        \"claims\": [\n          {\n            \"text\": \"The \\\\t escape sequence adds a tab in a Java string.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0030\", \"Q0031\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce facts from primary teaching. Extract statements about escape characters. Create items with fact_text, claims. Provide abstentions for missing code literals (none). Probably no excluded. Let's craft one fact: double quotes need escaping with backslash. Another: backslash itself needs escaping. Another: newline \\n adds new line. Another: tab \\t adds tab. Provide refs.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794319719,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 792,
+    "prompt_tokens": 3164,
+    "total_tokens": 3956,
+    "completion_time": 2.196286205,
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_time": 0.446577245,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "queue_time": 0.321622106,
+    "total_time": 2.64286345
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72wm45se4rsmn8w3rq32hn5",
+    "debug": null,
+    "seed": 1036913958,
+    "usage": null
+  }
+}

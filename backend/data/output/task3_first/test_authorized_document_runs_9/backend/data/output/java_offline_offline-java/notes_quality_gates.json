@@ -1,0 +1,187 @@
+{
+  "status": "UNVERIFIED_PREVIEW",
+  "gates": {
+    "extraction_completion": {
+      "outcome": "PASS",
+      "required": [
+        "offline-java-0001",
+        "offline-java-0004"
+      ],
+      "completed": [
+        "offline-java-0001",
+        "offline-java-0004"
+      ]
+    },
+    "structural_validity": {
+      "outcome": "PASS",
+      "missing_items": []
+    },
+    "semantic_faithfulness": {
+      "outcome": "NEEDS_REVIEW",
+      "mechanical_provenance": {
+        "valid": true,
+        "items_checked": 1,
+        "errors": []
+      },
+      "semantic_entailment_verified": false
+    },
+    "educational_completeness": {
+      "outcome": "NEEDS_REVIEW",
+      "source_units_without_primary_knowledge": [
+        "T0001",
+        "T0002"
+      ],
+      "topic_coverage": "NOT_EVALUATED"
+    },
+    "notes_usability": {
+      "outcome": "NEEDS_REVIEW",
+      "fallbacks": [],
+      "render_warnings": []
+    }
+  },
+  "source_coverage": {
+    "T0001": [],
+    "T0002": []
+  },
+  "before": 2,
+  "after": 1,
+  "consolidation": {
+    "decisions": [
+      {
+        "action": "retain",
+        "original": "CON_0001",
+        "target": "CON_0001"
+      },
+      {
+        "action": "exact_duplicate",
+        "original": "CON_0002",
+        "target": "CON_0001"
+      }
+    ],
+    "original_ids": {
+      "CON_0001": [
+        "CON_0001",
+        "CON_0002"
+      ]
+    },
+    "id_normalization": [
+      {
+        "artifact_id": "consolidation",
+        "category": "concepts",
+        "item_index": 0,
+        "old_id": "CON_0001",
+        "new_id": "CON_0001",
+        "content_fingerprint": "04c68b5e745696b0691f9c224c9aa59c18ab40695102ebd96dc1c1ce8e30fb64",
+        "reason": "preserved"
+      },
+      {
+        "artifact_id": "consolidation",
+        "category": "concepts",
+        "item_index": 1,
+        "old_id": "CON_0002",
+        "new_id": "CON_0002",
+        "content_fingerprint": "a321e2d0d22206afdf304b59312c6a10502e3934ef4578a51a3ba27d688fedf0",
+        "reason": "preserved"
+      }
+    ],
+    "review_pairs": []
+  },
+  "representation_distribution": {
+    "standard_text": 1
+  },
+  "knowledge_quality": {
+    "supported": null,
+    "partially_supported": null,
+    "unsupported": null,
+    "contradicted": null,
+    "inconclusive": 1
+  },
+  "examples_preserved": 0,
+  "original_knowledge": [
+    {
+      "id": "CON_0001",
+      "sources": [
+        "T0001",
+        "T0002"
+      ],
+      "fields": {
+        "content": "A value is an expression.",
+        "concept_name": "expression",
+        "aliases": []
+      },
+      "metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0001",
+              "quote": "A value is an expression.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 20,
+              "start_char": null,
+              "end_char": null,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0001",
+              "quote": "A value is an expression.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 20,
+              "start_char": null,
+              "end_char": null,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "consolidated_metadata": [
+          {
+            "source_grounding": {
+              "validation_scope": "exact quotation, chunk membership and field coverage only",
+              "mechanically_valid": true,
+              "semantic_entailment_verified": false,
+              "evidence": [
+                {
+                  "source_id": "T0002",
+                  "quote": "A value is an expression.",
+                  "fields": [
+                    "/concept_name"
+                  ],
+                  "match_count": 20,
+                  "start_char": null,
+                  "end_char": null,
+                  "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                },
+                {
+                  "source_id": "T0002",
+                  "quote": "A value is an expression.",
+                  "fields": [
+                    "/content"
+                  ],
+                  "match_count": 20,
+                  "start_char": null,
+                  "end_char": null,
+                  "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                }
+              ],
+              "validation_errors": []
+            }
+          }
+        ],
+        "primary_source_ids": [],
+        "context_source_ids": []
+      },
+      "original_ids": [
+        "CON_0001",
+        "CON_0002"
+      ]
+    }
+  ],
+  "manual_review_required": true
+}

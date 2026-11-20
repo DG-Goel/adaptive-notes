@@ -1,0 +1,799 @@
+[
+  {
+    "title": "AI/ML Hierarchy",
+    "source_segment_ids": [
+      "CON_0001",
+      "CON_0002",
+      "CON_0011",
+      "CON_0012",
+      "CON_0003"
+    ],
+    "mode": "visual_only",
+    "remaining_text": null,
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0001",
+          "CON_0002",
+          "CON_0011",
+          "CON_0012",
+          "CON_0003"
+        ],
+        "needs_review": false,
+        "missing_information": null,
+        "evidence": [
+          {
+            "note_id": "CON_0001",
+            "exact_quote": "Artificial intelligence is an overarching field in computer science where we train computers to perform tasks which humans are generally good at."
+          },
+          {
+            "note_id": "CON_0002",
+            "exact_quote": "Machine learning is an important subdomain within artificial intelligence and has two main branches."
+          },
+          {
+            "note_id": "CON_0011",
+            "exact_quote": "statistical ML is a subset of machine learning focusing on probabilistic models"
+          },
+          {
+            "note_id": "CON_0012",
+            "exact_quote": "deep learning is a subfield of machine learning based on neural network architectures"
+          },
+          {
+            "note_id": "CON_0003",
+            "exact_quote": "Statistical machine learning includes algorithms such as linear regression, decision tree, k-means, used for tasks like classification and regression."
+          }
+        ],
+        "payload": {
+          "type": "table",
+          "title": "AI → ML → Sub‑domains",
+          "headers": [
+            "Level",
+            "Concept",
+            "Notes"
+          ],
+          "rows": [
+            [
+              "1",
+              "Artificial Intelligence",
+              "AI is the overarching field (CON_0001)"
+            ],
+            [
+              "2",
+              "Machine Learning",
+              "ML is a subdomain of AI (CON_0002)"
+            ],
+            [
+              "3a",
+              "Statistical ML",
+              "Subset focusing on probabilistic models (CON_0011)"
+            ],
+            [
+              "3b",
+              "Deep Learning",
+              "Based on neural network architectures (CON_0012)"
+            ],
+            [
+              "4",
+              "Algorithms",
+              "Linear regression, decision tree, k‑means (CON_0003)"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Neural‑Network Architecture Types",
+    "source_segment_ids": [
+      "CON_0005",
+      "CON_0006",
+      "CON_0007",
+      "CON_0008"
+    ],
+    "mode": "visual_only",
+    "remaining_text": null,
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0005",
+          "CON_0006",
+          "CON_0007",
+          "CON_0008"
+        ],
+        "needs_review": false,
+        "missing_information": null,
+        "evidence": [
+          {
+            "note_id": "CON_0005",
+            "exact_quote": "Neural networks are the core of deep learning; using new neural networks means you are using deep learning."
+          },
+          {
+            "note_id": "CON_0006",
+            "exact_quote": "CNN is a type of neural network architecture."
+          },
+          {
+            "note_id": "CON_0007",
+            "exact_quote": "RNN is a type of neural network architecture."
+          },
+          {
+            "note_id": "CON_0008",
+            "exact_quote": "Transformer is a neural network architecture that is the reason behind modern generative AI and agentic AI."
+          }
+        ],
+        "payload": {
+          "type": "architecture",
+          "title": "Neural‑Network Architecture Types",
+          "direction": "vertical",
+          "components": [
+            {
+              "id": "nn_core",
+              "label": "Neural Networks"
+            },
+            {
+              "id": "cnn",
+              "label": "CNN"
+            },
+            {
+              "id": "rnn",
+              "label": "RNN"
+            },
+            {
+              "id": "transformer",
+              "label": "Transformer"
+            }
+          ],
+          "connections": [
+            {
+              "from": "nn_core",
+              "to": "cnn",
+              "label": "type"
+            },
+            {
+              "from": "nn_core",
+              "to": "rnn",
+              "label": "type"
+            },
+            {
+              "from": "nn_core",
+              "to": "transformer",
+              "label": "type"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Machine‑Learning Workflow",
+    "source_segment_ids": [
+      "CON_0016",
+      "CON_0017",
+      "CON_0015"
+    ],
+    "mode": "visual_only",
+    "remaining_text": null,
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0016",
+          "CON_0017",
+          "CON_0015"
+        ],
+        "needs_review": false,
+        "missing_information": null,
+        "evidence": [
+          {
+            "note_id": "CON_0016",
+            "exact_quote": "Machine learning is a discipline in computer science where we train machines on data so that they can make predictions without explicit programming."
+          },
+          {
+            "note_id": "CON_0017",
+            "exact_quote": "Traditional software programming requires explicit programming of logic, whereas machine learning provides input and output pairs and the system derives the underlying pattern or logic."
+          },
+          {
+            "note_id": "CON_0015",
+            "exact_quote": "So in machine learning typically there are two phases the first one is training and the second one where you give computer the real task where it will give you the prediction is called inference."
+          }
+        ],
+        "payload": {
+          "type": "flowchart",
+          "title": "ML Process",
+          "direction": "top-down",
+          "nodes": [
+            {
+              "id": "data",
+              "label": "Labeled Data"
+            },
+            {
+              "id": "train",
+              "label": "Training Phase"
+            },
+            {
+              "id": "model",
+              "label": "Trained Model"
+            },
+            {
+              "id": "inference",
+              "label": "Inference Phase"
+            },
+            {
+              "id": "output",
+              "label": "Predictions"
+            }
+          ],
+          "edges": [
+            {
+              "from": "data",
+              "to": "train",
+              "label": "feeds"
+            },
+            {
+              "from": "train",
+              "to": "model",
+              "label": "produces"
+            },
+            {
+              "from": "model",
+              "to": "inference",
+              "label": "used in"
+            },
+            {
+              "from": "inference",
+              "to": "output",
+              "label": "yields"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Supervised vs Unsupervised Machine Learning",
+    "source_segment_ids": [
+      "CON_0022",
+      "CON_0023"
+    ],
+    "mode": "text_and_visual",
+    "remaining_text": "",
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0022",
+          "CON_0023"
+        ],
+        "needs_review": false,
+        "missing_information": null,
+        "evidence": [
+          {
+            "note_id": "CON_0022",
+            "exact_quote": "this category of problems is called supervised machine learning"
+          },
+          {
+            "note_id": "CON_0023",
+            "exact_quote": "this is called unsupervised machine learning"
+          }
+        ],
+        "payload": {
+          "type": "table",
+          "title": "Supervised vs Unsupervised Learning",
+          "headers": [
+            "Learning Type",
+            "Label Requirement",
+            "Typical Use‑case"
+          ],
+          "rows": [
+            [
+              "Supervised",
+              "Requires labeled data (input‑output pairs)",
+              "Spam detection, price prediction"
+            ],
+            [
+              "Unsupervised",
+              "Uses unlabeled data, discovers patterns",
+              "Customer segmentation, clustering"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Classification vs Regression",
+    "source_segment_ids": [
+      "CON_0024",
+      "CON_0020",
+      "CON_0021"
+    ],
+    "mode": "text_and_visual",
+    "remaining_text": "",
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0024",
+          "CON_0020",
+          "CON_0021"
+        ],
+        "needs_review": false,
+        "missing_information": null,
+        "evidence": [
+          {
+            "note_id": "CON_0024",
+            "exact_quote": "you have fixed class labels... this is called regression"
+          },
+          {
+            "note_id": "CON_0020",
+            "exact_quote": "two categories as an output it's called binary classification"
+          },
+          {
+            "note_id": "CON_0021",
+            "exact_quote": "this type of problem is called regression because you don't have a fixed categories"
+          }
+        ],
+        "payload": {
+          "type": "table",
+          "title": "Classification vs Regression",
+          "headers": [
+            "Aspect",
+            "Classification",
+            "Regression"
+          ],
+          "rows": [
+            [
+              "Output Type",
+              "Discrete class label (e.g., spam / non‑spam)",
+              "Continuous numeric value (e.g., house price)"
+            ],
+            [
+              "Typical Goal",
+              "Assign input to a category",
+              "Predict a numeric quantity"
+            ],
+            [
+              "Example Labels",
+              "spam, non‑spam, cat, dog",
+              "price, temperature, age"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Unsupervised Learning Process (Clustering)",
+    "source_segment_ids": [
+      "CON_0027"
+    ],
+    "mode": "text_and_visual",
+    "remaining_text": "",
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0027"
+        ],
+        "needs_review": false,
+        "missing_information": null,
+        "evidence": [
+          {
+            "note_id": "CON_0027",
+            "exact_quote": "they will put all red color toys in one bucket, blue toys into another bucket"
+          },
+          {
+            "note_id": "CON_0027",
+            "exact_quote": "this type of problem‑solving is called unsupervised learning"
+          }
+        ],
+        "payload": {
+          "type": "flowchart",
+          "title": "Clustering Workflow",
+          "direction": "top-down",
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "Raw Unlabeled Data"
+            },
+            {
+              "id": "n2",
+              "label": "Feature Extraction"
+            },
+            {
+              "id": "n3",
+              "label": "Similarity Measurement"
+            },
+            {
+              "id": "n4",
+              "label": "Cluster Assignment"
+            },
+            {
+              "id": "n5",
+              "label": "Resulting Groups (Buckets)"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": ""
+            },
+            {
+              "from": "n3",
+              "to": "n4",
+              "label": ""
+            },
+            {
+              "from": "n4",
+              "to": "n5",
+              "label": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Neural Network Hierarchical Feature Detection",
+    "source_segment_ids": [
+      "DEF_0004",
+      "EXM_0006"
+    ],
+    "mode": "text_and_visual",
+    "remaining_text": "",
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "DEF_0004",
+          "EXM_0006"
+        ],
+        "needs_review": false,
+        "missing_information": null,
+        "evidence": [
+          {
+            "note_id": "DEF_0004",
+            "exact_quote": "middle neurons will detect ... ears eyes tails"
+          },
+          {
+            "note_id": "DEF_0004",
+            "exact_quote": "second layer will do higher level pattern detection"
+          },
+          {
+            "note_id": "EXM_0006",
+            "exact_quote": "a trained neural network activates certain paths for a given input image"
+          }
+        ],
+        "payload": {
+          "type": "flowchart",
+          "title": "Neural Network Path Activation",
+          "direction": "left-to-right",
+          "nodes": [
+            {
+              "id": "i",
+              "label": "Input Image"
+            },
+            {
+              "id": "h1",
+              "label": "Layer 1 (Edge/Color Detectors)"
+            },
+            {
+              "id": "h2",
+              "label": "Layer 2 (Part Detectors: ears, eyes, tails)"
+            },
+            {
+              "id": "h3",
+              "label": "Layer 3 (Object Detectors: cat head, dog head)"
+            },
+            {
+              "id": "o",
+              "label": "Output Classification"
+            }
+          ],
+          "edges": [
+            {
+              "from": "i",
+              "to": "h1",
+              "label": ""
+            },
+            {
+              "from": "h1",
+              "to": "h2",
+              "label": ""
+            },
+            {
+              "from": "h2",
+              "to": "h3",
+              "label": ""
+            },
+            {
+              "from": "h3",
+              "to": "o",
+              "label": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Neural Network Architecture Types",
+    "source_segment_ids": [
+      "CON_0035"
+    ],
+    "mode": "visual_only",
+    "remaining_text": "",
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0035"
+        ],
+        "needs_review": false,
+        "missing_information": null,
+        "evidence": [
+          {
+            "note_id": "CON_0035",
+            "exact_quote": "So you are feeding information forward there is no loop nothing information goes from input hidden to output layer okay so this is the picture of a feed forward neural network."
+          },
+          {
+            "note_id": "CON_0035",
+            "exact_quote": "A recurrent neural network is sort of like creating a soup so you put some ingredient then you test it you get some feedback now you add more ingredients or you adjust the ingredients okay."
+          },
+          {
+            "note_id": "CON_0035",
+            "exact_quote": "And the third, the most important architecture is Transformer."
+          }
+        ],
+        "payload": {
+          "type": "table",
+          "title": "Neural Network Architecture Types",
+          "headers": [
+            "Architecture",
+            "Data Flow",
+            "Key Characteristic"
+          ],
+          "rows": [
+            [
+              "Feed‑Forward Neural Network",
+              "Input → Hidden → Output (no loops)",
+              "Static forward propagation"
+            ],
+            [
+              "Recurrent Neural Network (RNN)",
+              "Input ↔ Hidden (feedback loops)",
+              "Handles sequential/temporal data"
+            ],
+            [
+              "Transformer",
+              "Self‑attention across all positions",
+              "Parallel processing, foundation of modern LLMs"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Collaborative Feature Detection Workflow",
+    "source_segment_ids": [
+      "CON_0031"
+    ],
+    "mode": "visual_only",
+    "remaining_text": "",
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0031"
+        ],
+        "needs_review": false,
+        "missing_information": null,
+        "evidence": [
+          {
+            "note_id": "CON_0031",
+            "exact_quote": "You can make this a teamwork and give individual responsibility to each of these students such as Mike can work on detecting only eyes, Mohan can work on detecting only nose."
+          },
+          {
+            "note_id": "CON_0031",
+            "exact_quote": "So each of these students are working on detecting a specific part of Koala's body from an image."
+          },
+          {
+            "note_id": "CON_0031",
+            "exact_quote": "And then these three students can go to Serena and Serena can work on deciding if the image has koalas face or not."
+          }
+        ],
+        "payload": {
+          "type": "flowchart",
+          "title": "Collaborative Feature Detection",
+          "direction": "top-down",
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "Mike – Detect eyes"
+            },
+            {
+              "id": "n2",
+              "label": "Mohan – Detect nose"
+            },
+            {
+              "id": "n3",
+              "label": "Saqib – Detect ears"
+            },
+            {
+              "id": "n4",
+              "label": "Serena – Aggregate scores → decide face"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n4",
+              "label": "eye score (0‑1)"
+            },
+            {
+              "from": "n2",
+              "to": "n4",
+              "label": "nose score (0‑1)"
+            },
+            {
+              "from": "n3",
+              "to": "n4",
+              "label": "ear score (0‑1)"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Comparison: Tool‑augmented chatbot vs. Agentic AI system",
+    "source_segment_ids": [
+      "CON_0045",
+      "CON_0046"
+    ],
+    "mode": "visual_only",
+    "remaining_text": "",
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0045",
+          "CON_0046"
+        ],
+        "needs_review": false,
+        "missing_information": null,
+        "evidence": [
+          {
+            "note_id": "CON_0045",
+            "exact_quote": "tool augmented chatbot ... this is called tool augmented chatbot"
+          },
+          {
+            "note_id": "CON_0046",
+            "exact_quote": "So this is an agentic AI system and this chatbot is your AI agent."
+          }
+        ],
+        "payload": {
+          "type": "table",
+          "title": "Tool‑augmented chatbot vs. Agentic AI system",
+          "headers": [
+            "Aspect",
+            "Tool‑augmented chatbot",
+            "Agentic AI system"
+          ],
+          "rows": [
+            [
+              "Goal specification",
+              "Simple task execution (no autonomous planning)",
+              "User provides high‑level goal; system plans autonomously"
+            ],
+            [
+              "Tool usage",
+              "Uses a single tool per request",
+              "Access to multiple tools, knowledge, memory"
+            ],
+            [
+              "Autonomy",
+              "Low – performs single step actions",
+              "High – multi‑step reasoning and decision‑making"
+            ],
+            [
+              "Planning",
+              "None or trivial",
+              "Goal‑oriented multi‑step planning"
+            ],
+            [
+              "Typical description",
+              "Chatbot that can call an API to retrieve info",
+              "AI agent that can orchestrate workflows"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Onboarding workflow for a new intern",
+    "source_segment_ids": [
+      "EXM_0054"
+    ],
+    "mode": "visual_only",
+    "remaining_text": "",
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "EXM_0054"
+        ],
+        "needs_review": false,
+        "missing_information": null,
+        "evidence": [
+          {
+            "note_id": "EXM_0054",
+            "exact_quote": "create onboarding checklist, it will schedule welcoming meeting, it will send access request to IT department"
+          },
+          {
+            "note_id": "EXM_0054",
+            "exact_quote": "create intense profile in HR management system ... create IT helpdesk ticket to get a Wi‑Fi credentials email, Slack access"
+          },
+          {
+            "note_id": "EXM_0054",
+            "exact_quote": "order laptop and ID card"
+          },
+          {
+            "note_id": "EXM_0054",
+            "exact_quote": "onboard the new intern joining next Monday"
+          }
+        ],
+        "payload": {
+          "type": "sequence",
+          "title": "Onboarding steps for a new intern",
+          "participants": [
+            {
+              "id": "user",
+              "label": "User"
+            },
+            {
+              "id": "agent",
+              "label": "AI Agent"
+            }
+          ],
+          "events": [
+            {
+              "kind": "action",
+              "from": "user",
+              "to": "agent",
+              "text": "Request onboarding of new intern (next Monday)"
+            },
+            {
+              "kind": "action",
+              "from": "agent",
+              "to": "system",
+              "text": "Create onboarding checklist"
+            },
+            {
+              "kind": "action",
+              "from": "agent",
+              "to": "calendar",
+              "text": "Schedule welcoming meeting"
+            },
+            {
+              "kind": "action",
+              "from": "agent",
+              "to": "HRMS",
+              "text": "Create intern profile in HR management system"
+            },
+            {
+              "kind": "action",
+              "from": "agent",
+              "to": "IT helpdesk",
+              "text": "Send access request (Wi‑Fi, email, Slack)"
+            },
+            {
+              "kind": "action",
+              "from": "agent",
+              "to": "procurement",
+              "text": "Order laptop and ID card"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

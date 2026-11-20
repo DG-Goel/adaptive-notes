@@ -1,0 +1,423 @@
+{
+  "document_id": "JAVA",
+  "source_filename": "java.txt",
+  "extraction_timestamp": "2026-11-07T15:34:02.352111+00:00",
+  "concepts": [],
+  "definitions": [],
+  "explanations": [
+    {
+      "knowledge_id": "EXP_0001",
+      "knowledge_type": "explanation",
+      "source_unit_ids": [
+        "T0027"
+      ],
+      "document_id": "JAVA",
+      "content": "When a method returns a long but the variable is declared as an int, implicit casting fails; explicit casting must be used if the programmer knows the value fits into the smaller type.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0027",
+              "quote": "method returns a long but here we have declared an integer this is one of those cases where implicit casting cannot happen because we have a value that is represented in 8 bytes of memory and you want to store that in a variable that has only 4 bytes of memory so implicit casting doesn't work but we can use explicit casting because we know the result of this expression is a number between 0 to 100 so we can definitely store it in an integer so let's add int here now let's run this again there",
+              "fields": [
+                "/topic"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 998,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0027",
+              "quote": "method returns a long but here we have declared an integer this is one of those cases where implicit casting cannot happen because we have a value that is represented in 8 bytes of memory and you want to store that in a variable that has only 4 bytes of memory so implicit casting doesn't work but we can use explicit casting because we know the result of this expression is a number between 0 to 100 so we can definitely store it in an integer so let's add int here now let's run this again there",
+              "fields": [
+                "/explanation_text"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 998,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0027",
+              "quote": "method returns a long but here we have declared an integer this is one of those cases where implicit casting cannot happen because we have a value that is represented in 8 bytes of memory and you want to store that in a variable that has only 4 bytes of memory so implicit casting doesn't work but we can use explicit casting because we know the result of this expression is a number between 0 to 100 so we can definitely store it in an integer so let's add int here now let's run this again there",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 998,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0027"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "topic": "Implicit casting cannot convert a long value to an int because the long occupies 8 bytes while the int occupies 4 bytes.",
+      "explanation_text": "When a method returns a long but the variable is declared as an int, implicit casting fails; explicit casting must be used if the programmer knows the value fits into the smaller type.",
+      "explanation_type": null
+    },
+    {
+      "knowledge_id": "EXP_0002",
+      "knowledge_type": "explanation",
+      "source_unit_ids": [
+        "T0027"
+      ],
+      "document_id": "JAVA",
+      "content": "Math.random() returns a value between 0 (inclusive) and 1 (exclusive); casting that double to int truncates the fractional part, producing 0.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0027",
+              "quote": "you go now what if we don't use the round method here let's see what happens so I'm gonna remove the call to the round method and simply I apply this casting over here let's see what we get now every time we run this program we get 0 do you know why because here we're applying this casting to the result of this method call not this entire expression as you saw earlier every time we call the random method it generates a number between 0 to one so when we cast that number to an integer we'll lose",
+              "fields": [
+                "/topic"
+              ],
+              "match_count": 1,
+              "start_char": 999,
+              "end_char": 1498,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0027",
+              "quote": "you go now what if we don't use the round method here let's see what happens so I'm gonna remove the call to the round method and simply I apply this casting over here let's see what we get now every time we run this program we get 0 do you know why because here we're applying this casting to the result of this method call not this entire expression as you saw earlier every time we call the random method it generates a number between 0 to one so when we cast that number to an integer we'll lose",
+              "fields": [
+                "/explanation_text"
+              ],
+              "match_count": 1,
+              "start_char": 999,
+              "end_char": 1498,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0027",
+              "quote": "you go now what if we don't use the round method here let's see what happens so I'm gonna remove the call to the round method and simply I apply this casting over here let's see what we get now every time we run this program we get 0 do you know why because here we're applying this casting to the result of this method call not this entire expression as you saw earlier every time we call the random method it generates a number between 0 to one so when we cast that number to an integer we'll lose",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 999,
+              "end_char": 1498,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0027"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "topic": "Casting a double result of Math.random() directly to int yields zero.",
+      "explanation_text": "Math.random() returns a value between 0 (inclusive) and 1 (exclusive); casting that double to int truncates the fractional part, producing 0.",
+      "explanation_type": null
+    },
+    {
+      "knowledge_id": "EXP_0003",
+      "knowledge_type": "explanation",
+      "source_unit_ids": [
+        "T0027"
+      ],
+      "document_id": "JAVA",
+      "content": "Wrap the expression (Math.random() * 100) in parentheses and then cast the result to int; otherwise only the fractional part is cast, resulting in zero.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0027",
+              "quote": "the fraction we always get zero and zero times 100 is zero to solve this problem we need to wrap this entire expression in parenthesis so we add parentheses around this and now let me run this we get an integer between 0 and 100 quite often when we worked with numbers we need to format them as currency values for example we might have a number like this imagine this is the price of a product to display this to the user you want to add a dollar sign here and separate every three digits with a",
+              "fields": [
+                "/topic"
+              ],
+              "match_count": 1,
+              "start_char": 1499,
+              "end_char": 1995,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0027",
+              "quote": "the fraction we always get zero and zero times 100 is zero to solve this problem we need to wrap this entire expression in parenthesis so we add parentheses around this and now let me run this we get an integer between 0 and 100 quite often when we worked with numbers we need to format them as currency values for example we might have a number like this imagine this is the price of a product to display this to the user you want to add a dollar sign here and separate every three digits with a",
+              "fields": [
+                "/explanation_text"
+              ],
+              "match_count": 1,
+              "start_char": 1499,
+              "end_char": 1995,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0027",
+              "quote": "the fraction we always get zero and zero times 100 is zero to solve this problem we need to wrap this entire expression in parenthesis so we add parentheses around this and now let me run this we get an integer between 0 and 100 quite often when we worked with numbers we need to format them as currency values for example we might have a number like this imagine this is the price of a product to display this to the user you want to add a dollar sign here and separate every three digits with a",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1499,
+              "end_char": 1995,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0027"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "topic": "To obtain an integer between 0 and 100 from Math.random(), the entire expression must be multiplied before casting.",
+      "explanation_text": "Wrap the expression (Math.random() * 100) in parentheses and then cast the result to int; otherwise only the fractional part is cast, resulting in zero.",
+      "explanation_type": null
+    },
+    {
+      "knowledge_id": "EXP_0004",
+      "knowledge_type": "explanation",
+      "source_unit_ids": [
+        "T0027"
+      ],
+      "document_id": "JAVA",
+      "content": "Java provides the NumberFormat class (in java.text) to format numbers with currency symbols, grouping separators, or as percentages.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0027",
+              "quote": "comma or if you might have a number like 0.1 and we want to represent this as a percentage value so instead of 0.1 you want to display 10% so in this tutorial I'm gonna show you how to format numbers in Java we have this class number format that is defined in Java the text package in this package we have a lot of classes for handling text dates numbers and so on so let's press ENTER here it's important on the top beautiful now I want to declare a variable so let's give this variable a name",
+              "fields": [
+                "/topic"
+              ],
+              "match_count": 1,
+              "start_char": 1996,
+              "end_char": 2490,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0027",
+              "quote": "comma or if you might have a number like 0.1 and we want to represent this as a percentage value so instead of 0.1 you want to display 10% so in this tutorial I'm gonna show you how to format numbers in Java we have this class number format that is defined in Java the text package in this package we have a lot of classes for handling text dates numbers and so on so let's press ENTER here it's important on the top beautiful now I want to declare a variable so let's give this variable a name",
+              "fields": [
+                "/explanation_text"
+              ],
+              "match_count": 1,
+              "start_char": 1996,
+              "end_char": 2490,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0027",
+              "quote": "comma or if you might have a number like 0.1 and we want to represent this as a percentage value so instead of 0.1 you want to display 10% so in this tutorial I'm gonna show you how to format numbers in Java we have this class number format that is defined in Java the text package in this package we have a lot of classes for handling text dates numbers and so on so let's press ENTER here it's important on the top beautiful now I want to declare a variable so let's give this variable a name",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1996,
+              "end_char": 2490,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0027"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "topic": "Formatting numbers as currency or percentages in Java.",
+      "explanation_text": "Java provides the NumberFormat class (in java.text) to format numbers with currency symbols, grouping separators, or as percentages.",
+      "explanation_type": null
+    }
+  ],
+  "examples": [],
+  "facts": [
+    {
+      "knowledge_id": "FCT_0005",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "T0027"
+      ],
+      "document_id": "JAVA",
+      "content": "Math.round returns a long value.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0027",
+              "quote": "different number between 0 to 100 now if we don't want these digits after the decimal point we can either round this number or cast it to an integer let me show you so we can call math that round and pass the result of this expression so I'm gonna cut this add parenthesis to call the round method and then paste that expression now let's run this code so every time we get a double we still have the fraction here so we can change the type to an INT now we have a compilation error because the round",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 0,
+              "end_char": 500,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0027",
+              "quote": "different number between 0 to 100 now if we don't want these digits after the decimal point we can either round this number or cast it to an integer let me show you so we can call math that round and pass the result of this expression so I'm gonna cut this add parenthesis to call the round method and then paste that expression now let's run this code so every time we get a double we still have the fraction here so we can change the type to an INT now we have a compilation error because the round",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 0,
+              "end_char": 500,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0027"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Math.round returns a long value.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0006",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "T0027"
+      ],
+      "document_id": "JAVA",
+      "content": "Casting a long to an int requires explicit casting.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0027",
+              "quote": "method returns a long but here we have declared an integer this is one of those cases where implicit casting cannot happen because we have a value that is represented in 8 bytes of memory and you want to store that in a variable that has only 4 bytes of memory so implicit casting doesn't work but we can use explicit casting because we know the result of this expression is a number between 0 to 100 so we can definitely store it in an integer so let's add int here now let's run this again there",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 998,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0027",
+              "quote": "method returns a long but here we have declared an integer this is one of those cases where implicit casting cannot happen because we have a value that is represented in 8 bytes of memory and you want to store that in a variable that has only 4 bytes of memory so implicit casting doesn't work but we can use explicit casting because we know the result of this expression is a number between 0 to 100 so we can definitely store it in an integer so let's add int here now let's run this again there",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 998,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0027"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Casting a long to an int requires explicit casting.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0007",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "T0027"
+      ],
+      "document_id": "JAVA",
+      "content": "Math.random() generates a double between 0 (inclusive) and 1 (exclusive).",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0027",
+              "quote": "you go now what if we don't use the round method here let's see what happens so I'm gonna remove the call to the round method and simply I apply this casting over here let's see what we get now every time we run this program we get 0 do you know why because here we're applying this casting to the result of this method call not this entire expression as you saw earlier every time we call the random method it generates a number between 0 to one so when we cast that number to an integer we'll lose",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 999,
+              "end_char": 1498,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0027",
+              "quote": "you go now what if we don't use the round method here let's see what happens so I'm gonna remove the call to the round method and simply I apply this casting over here let's see what we get now every time we run this program we get 0 do you know why because here we're applying this casting to the result of this method call not this entire expression as you saw earlier every time we call the random method it generates a number between 0 to one so when we cast that number to an integer we'll lose",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 999,
+              "end_char": 1498,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0027"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Math.random() generates a double between 0 (inclusive) and 1 (exclusive).",
+      "fact_type": null
+    }
+  ],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 7,
+  "source_units_processed": 1,
+  "extraction_metadata": null
+}

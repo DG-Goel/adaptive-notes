@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-4cc4bf19-37b6-4c69-b26c-eddb6385279b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"abstentions\":[],\"excluded\":[],\"rows\":[{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"concepts\",\"element\":0,\"field\":\"concept_name\",\"instructional_role\":null,\"item\":\"variable\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0017\"],\"related_refs\":[],\"text\":\"variable\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"definitions\",\"element\":0,\"field\":\"term\",\"instructional_role\":null,\"item\":\"variable\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0017\"],\"related_refs\":[],\"text\":\"variable\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"definitions\",\"element\":0,\"field\":\"definition_text\",\"instructional_role\":null,\"item\":\"variable\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0018\"],\"related_refs\":[],\"text\":\"We use to temporarily store data in computer's memory.\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"facts\",\"element\":0,\"field\":\"fact_text\",\"instructional_role\":null,\"item\":\"variable_declaration\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0021\"],\"related_refs\":[],\"text\":\"int age = 30;\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"facts\",\"element\":0,\"field\":\"fact_text\",\"instructional_role\":null,\"item\":\"variable_type\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0022\"],\"related_refs\":[],\"text\":\"int or integer is the type of this variable, can only store whole numbers.\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"facts\",\"element\":0,\"field\":\"fact_text\",\"instructional_role\":null,\"item\":\"assignment_operator\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0025\"],\"related_refs\":[],\"text\":\"The equal sign (=) is called the assignment operator.\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"facts\",\"element\":0,\"field\":\"fact_text\",\"instructional_role\":null,\"item\":\"initialization\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0026\"],\"related_refs\":[],\"text\":\"Initializing a variable gives it an initial value.\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"facts\",\"element\":0,\"field\":\"fact_text\",\"instructional_role\":null,\"item\":\"variable_usage\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0027\"],\"related_refs\":[],\"text\":\"Variables must be initialized before they are read.\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"facts\",\"element\":0,\"field\":\"fact_text\",\"instructional_role\":null,\"item\":\"variable_update\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0034\"],\"related_refs\":[],\"text\":\"Changing a variable's value updates the stored value.\"},{\"availability\":\"PARTIALLY_SUPPORTED\",\"basis\":\"direct_entailment\",\"category\":\"relationships\",\"element\":0,\"field\":\"content\",\"instructional_role\":null,\"item\":\"variable_memory_relationship\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0018\",\"Q0028\"],\"related_refs\":[],\"text\":\"A variable stores data in computer memory.\"}]}\n",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows for concepts, definitions, etc based on excerpts. Likely variables concept. Extract facts: variable definition, type, assignment, initialization. Create items e.g., item \"variable\". Provide rows.\n\nWe'll output rows with required fields. Use availability SOURCE_SUPPORTED? excerpts are primary but ASR speech, exact code unavailable. So maybe PARTIALLY_SUPPORTED. Use basis explicit. literal_kind verbal. instructional_role null.\n\nCreate rows:\n\n1 concept_name \"variable\" from Q0017. category concepts, field concept_name, element0, part value, text \"variable\". refs Q0017.\n\n2 definition term \"variable\", definition_text from Q0018 \"We use to temporarily store data in computer's memory.\" (missing word but keep). category definitions, element0, part value.\n\n3 fact fact_text \"int age = 30;\" from Q0021. but code not exact? It's verbal. Use fact_type \"example\". category facts.\n\n4 fact fact_text \"int or integer is the type of this variable, can only store whole numbers.\" from Q0022.\n\n5 fact fact_text \"assignment operator is =\" from Q0025.\n\n6 fact fact_text \"initialization gives variable an initial value.\" from Q0026.\n\n7 fact fact_text \"variables must be initialized before reading.\" from Q0027.\n\n8 fact fact_text \"changing variable value updates stored value.\" from Q0034.\n\nAlso maybe relationships: subject variable, object memory, description \"stores data in memory\". from Q0018 and Q0028.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636228,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a7bb72c24",
+  "usage": {
+    "completion_tokens": 1422,
+    "prompt_tokens": 3106,
+    "total_tokens": 4528,
+    "completion_time": 2.993071305,
+    "completion_tokens_details": {
+      "reasoning_tokens": 315
+    },
+    "prompt_time": 0.133427861,
+    "prompt_tokens_details": null,
+    "queue_time": 0.168796366,
+    "total_time": 3.126499166
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7caf6frebkaj2yqd17wa385",
+    "debug": null,
+    "seed": 1819675219,
+    "usage": null
+  }
+}

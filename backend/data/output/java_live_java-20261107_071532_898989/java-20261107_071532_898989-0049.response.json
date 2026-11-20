@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-a3a0ab44-2fb3-437b-aef3-ccdeb11a75e4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Java was developed by James Gosling in 1995 at Sun Microsystems.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Sun Microsystems was later acquired by Oracle in 2010.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java was originally called Oak after an oak tree that stood outside Gosling's office.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java was renamed to Green and finally to Java, inspired by Java coffee.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java Standard Edition is the core Java platform used in this course.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java Enterprise Edition is built on top of Java Standard Edition and provides additional libraries for building fault tolerant distributed multi-tiered software.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java Micro Edition is a subset of Java Standard Edition designed for mobile devices.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java Card is used in smart cards.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The latest version of Java is Java Standard Edition 12, released in March 2019.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java has close to 9 million developers worldwide.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"About 3 billion mobile phones run Java.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"120 million TV sets and Blu‑ray players run Java.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The average salary of a Java developer in the US is just over $100,000 per year.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays except extracted items. From excerpts we have facts about Java, definitions? We can extract facts: development year, creator, etc. Also editions description maybe facts. We'll create facts entries.\n\nEach fact_text must include text and refs. Use appropriate refs covering whole claim. For example: \"Java was developed by James Gosling in 1995 at Sun Microsystems.\" refs Q0002. Another: \"Sun Microsystems was later acquired by Oracle in 2010.\" same ref. Another: \"Java was originally called Oak after an oak tree that stood outside Gosling's office.\" same. Another: \"Java was renamed to Green and finally to Java, inspired by Java coffee.\" same. Another: \"Java Standard Edition is the core Java platform used in this course.\" ref Q0003. Another: \"Java Enterprise Edition is built on top of Java Standard Edition and provides additional libraries for building fault tolerant distributed multi-tiered software.\" ref Q0003. Another: \"Java Micro Edition is a subset of Java Standard Edition designed for mobile devices.\" ref Q0003 and Q0004 maybe. Another: \"Java Card is used in smart cards.\" ref Q0003. Another: \"The latest version of Java is Java Standard Edition 12, released in March 2019.\" ref Q0004. Another: \"Java has close to 9 million developers worldwide.\" ref Q0004. Another: \"About 3 billion mobile phones run Java.\" ref Q0004. Another: \"120 million TV sets and Blu‑ray players run Java.\" ref Q0004. Another: \"Average salary of a Java developer in the US is just over $100,000 per year.\" ref Q0004.\n\nAlso maybe procedure? No.\n\nWe'll output facts array with these entries. No concepts, definitions, etc. excluded empty.\n\nProvide JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036021,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_60e4b492db",
+  "usage": {
+    "completion_tokens": 1069,
+    "prompt_tokens": 3048,
+    "total_tokens": 4117,
+    "completion_time": 2.254285349,
+    "completion_tokens_details": {
+      "reasoning_tokens": 380
+    },
+    "prompt_time": 0.135873574,
+    "prompt_tokens_details": null,
+    "queue_time": 0.270830308,
+    "total_time": 2.390158923
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6te2bjce7ctwsxd1360nzq1",
+    "debug": null,
+    "seed": 918899034,
+    "usage": null
+  }
+}

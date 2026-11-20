@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-b81bd817-1692-4a0e-9c49-c7c99991bad6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"markdown\": \"# Switch Statements vs. If Statements\\n\\n## Overview\\n- **Switch statements** select a code block to execute based on the value of an expression, similar to an `if` chain but often more readable.\\n- **If statements** can also be used for role‑checking or other conditional logic, but a switch can make the same logic look cleaner.\\n\\n## Key Components of a Switch\\n- **`case` labels**: match specific values (e.g., strings or integer literals).\\n- **`default` clause**: runs when none of the `case` labels match.\\n- **`break` statement**: ends the current case; not required after the final case because execution exits the block automatically.\\n\\n## Type Compatibility\\n- The type of the **switch variable** must match the type of its `case` labels. A mismatch (e.g., a `string` variable with integer `case` labels) causes a **compilation error**.\\n\\n## Example: Role‑Checking Logic\\n```java\\nswitch (userRole) {\\n    case \\\"admin\\\":\\n        // grant admin features\\n        break;\\n    case \\\"editor\\\":\\n        // grant editor features\\n        break;\\n    default:\\n        // regular user features\\n}\\n```\\n*The same logic could be written with `if‑else`, but the switch version is more concise.*\\n\\n# FizzBuzz Logic Using Conditional Statements\\n\\n## Rules\\n1. If a number is divisible by **both 3 and 5**, print `fizzbuzz` (most specific condition).\\n2. Else if divisible by **5**, print `fizz`.\\n3. Else if divisible by **3**, print `buzz`.\\n4. Otherwise, print the number itself.\\n\\n## Implementation Tips\\n- Place the most specific condition (**divisible by 3 and 5**) at the top.\\n- Follow with the more generic conditions (**divisible by 5**, then **divisible by 3**).\\n- Ensure that once a condition is true, subsequent `else` clauses are ignored.\\n\\n## Sample Code\\n```java\\nif (n % 15 == 0) {\\n    System.out.println(\\\"fizzbuzz\\\");\\n} else if (n % 5 == 0) {\\n    System.out.println(\\\"fizz\\\");\\n} else if (n % 3 == 0) {\\n    System.out.println(\\\"buzz\\\");\\n} else {\\n    System.out.println(n);\\n}\\n```\\n- Note: `10` is divisible by `5`, so the output is `fizz`.\\n- A number divisible by `3` results in `buzz`.\\n\\n---\\n\\n*These notes provide a clear, textbook‑style explanation of switch statements, type requirements, and a classic conditional example (FizzBuzz).*\"\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output JSON with field markdown. Create polished notes.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794583587,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_fe269835c7",
+  "usage": {
+    "completion_tokens": 640,
+    "prompt_tokens": 533,
+    "total_tokens": 1173,
+    "completion_time": 1.3394294549999999,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14
+    },
+    "prompt_time": 0.110427256,
+    "prompt_tokens_details": null,
+    "queue_time": 0.315795871,
+    "total_time": 1.449856711
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ar8s2zek1bbeabgm6jakw9",
+    "debug": null,
+    "seed": 50348946,
+    "usage": null
+  }
+}

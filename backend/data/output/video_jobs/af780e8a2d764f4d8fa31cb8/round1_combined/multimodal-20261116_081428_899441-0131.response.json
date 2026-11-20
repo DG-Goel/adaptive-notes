@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-5b693da6-0123-44aa-83aa-9be17fd54264",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the exchange rate moves up, the domestic interest rate has to go up.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"There is a positive relationship between the exchange rate and the domestic interest rate.\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If the domestic interest rate equals the international interest rate, the exchange rate must equal the expected exchange rate.\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what happens to the domestic interest rate when the exchange rate moves up?\",\n      \"answer\": \"It has to go up\",\n      \"distractors\": [\n        \"It stays the same\",\n        \"It goes down\",\n        \"It becomes unpredictable\"\n      ],\n      \"explanation\": \"The speaker states that as they move the exchange rate up, then the domestic interest rate has to go up (Q0000).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Interest rate response to exchange rate\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"If the domestic interest rate equals the international interest rate, what must the exchange rate equal?\",\n      \"answer\": \"The expected exchange rate\",\n      \"distractors\": [\n        \"The current market exchange rate\",\n        \"Zero\",\n        \"The foreign interest rate\"\n      ],\n      \"explanation\": \"The speaker explains that when the domestic interest rate equals the international rate, the exchange rate has to be equal to the expected exchange rate (Q0006).\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"Interest parity condition\",\n      \"refs\": [\"Q0006\"]\n    },\n    {\n      \"question\": \"What type of relationship does the speaker describe between the exchange rate and the domestic interest rate?\",\n      \"answer\": \"Positive relationship\",\n      \"distractors\": [\n        \"Negative relationship\",\n        \"No relationship\",\n        \"Inverse relationship\"\n      ],\n      \"explanation\": \"The speaker mentions having a positive relationship between the exchange rate and the domestic interest rate (Q0002).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Exchange rate and interest rate relationship\",\n      \"refs\": [\"Q0002\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? The excerpts talk about relationship between exchange rate and domestic interest rate via interest parity. So we can create facts or explanations.\n\nWe need required fields. Probably a concept: \"interest parity condition\". But not explicitly defined. We have statements: \"as they move the exchange rate up, then the domestic interest rate has to go up.\" That's a relationship. Could be a fact: \"There is a positive relationship between exchange rate and domestic interest rate.\" Provide fact row.\n\nAlso \"when the domestic interest rate, if i is equal to international interest rate, then the exchange rate has to be equal to the expected exchange rate.\" That's a fact.\n\nCreate rows under facts category.\n\nEach row needs text, refs, basis explicit, availability SOURCE_SUPPORTED? The source is speech ASR, but note limitation: exact code/formula unavailable unless verified. But the statements are textual, so SOURCE_SUPPORTED.\n\nProvide item label e.g., \"item1\". Provide element 0, part value.\n\nAdd abstentions none.\n\nQuiz: need up to four questions. We can make 2-3 based on these facts.\n\nCreate question: According to the speaker, what happens to domestic interest rate when exchange rate moves up? Answer: It has to go up. Distractors.\n\nSecond: If domestic interest rate equals international rate, what must exchange rate equal? Answer: Expected exchange rate.\n\nThird: What relationship is described between exchange rate and domestic interest rate? Answer: Positive relationship.\n\nProvide refs primary Q0000, Q0002, Q0006 etc.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794817585,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_19b184c447",
+  "usage": {
+    "completion_tokens": 1075,
+    "prompt_tokens": 2446,
+    "total_tokens": 3521,
+    "completion_time": 2.234397536,
+    "completion_tokens_details": {
+      "reasoning_tokens": 321
+    },
+    "prompt_time": 0.097688767,
+    "prompt_tokens_details": null,
+    "queue_time": 0.373951058,
+    "total_time": 2.332086303
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hqdsdaetw9r3qm1y4k8bs1",
+    "debug": null,
+    "seed": 904063023,
+    "usage": null
+  }
+}

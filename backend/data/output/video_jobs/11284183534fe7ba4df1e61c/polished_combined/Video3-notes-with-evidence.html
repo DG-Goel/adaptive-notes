@@ -1,0 +1,1232 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<title>Video3-notes-with-evidence</title><style>
+@page {margin:17mm} body {font:11pt/1.48 system-ui;color:#172438;max-width:980px;margin:auto}
+h1,h2,h3 {color:#17447d;break-after:avoid} h2 {background:#edf5fa;padding:.4em}
+img {max-width:100%;max-height:340px;object-fit:contain} table {border-collapse:collapse;width:100%}
+th,td {border:1px solid #b7c5d6;padding:.45em} th {background:#edf5fa}
+img,table,li {break-inside:avoid} pre {white-space:pre-wrap}
+.reference {border-top:1px solid #b7c5d6;margin-top:1em} blockquote {color:#40546b}
+</style><main><h1>Study notes</h1>
+<h2>Artificial intelligence</h2>
+<h1>Artificial Intelligence Overview</h1>
+<p>Artificial intelligence (<strong>AI</strong>) is a broad field of computer science that focuses on training computers to perform tasks that humans typically excel at.</p>
+<h2>Machine Learning</h2>
+<p>Machine learning (<strong>ML</strong>) is a key subdomain of AI and consists of two main branches:</p>
+<ol>
+<li><strong>Statistical Machine Learning</strong> – Includes classic algorithms such as:
+<ul>
+<li><code>linear regression</code></li>
+<li><code>decision tree</code></li>
+<li><code>k-means</code>
+These methods are used for <strong>classification</strong> and <strong>regression</strong> tasks.</li>
+</ul>
+</li>
+<li><strong>Deep Learning</strong> – Centers on <strong>neural networks</strong>. Whenever a new neural network architecture is employed, it falls under deep learning.</li>
+</ol>
+<h3>Neural Network Architectures</h3>
+<ul>
+<li><strong>Convolutional Neural Network (CNN)</strong> – A type of neural network designed for processing grid‑like data, especially images.</li>
+<li><strong>Recurrent Neural Network (RNN)</strong> – Suited for sequential data such as time series or language.</li>
+<li><strong>Transformer</strong> – A modern neural network architecture that powers contemporary generative AI and agentic AI systems.</li>
+</ul>
+<hr />
+<p><em>All concepts are presented in the order of the original notes, with key terms bolded and technical terms formatted as <code>inline code</code> for clarity.</em></p>
+<h2>regular expression</h2>
+<h2>Overview of Key Concepts</h2>
+<ul>
+<li><strong>Regular expression</strong>: A fundamental concept in computer science used to define search patterns for strings.</li>
+<li><strong>Rule‑based system</strong>: A system that operates on explicit, hand‑crafted rules rather than on machine‑learning models.</li>
+<li><strong>Statistical machine learning</strong>: A subset of machine learning that emphasizes <strong>probabilistic models</strong> to infer patterns from data.</li>
+<li><strong>Deep learning</strong>: A subfield of machine learning that builds <strong>neural network architectures</strong> to automatically learn hierarchical representations.</li>
+</ul>
+<h2>spam classification</h2>
+<h1>Spam Classification</h1>
+<p><strong>Spam classification</strong> is the process of distinguishing unwanted email messages (spam) from legitimate ones.</p>
+<ul>
+<li>A <strong>human</strong> or <strong>computer program</strong> is trained on thousands of <strong>labeled</strong> spam and non‑spam emails.</li>
+<li>The training data enables the model to <strong>learn patterns</strong> that differentiate spam from legitimate messages.</li>
+</ul>
+<p>This foundational approach underlies most modern email filtering systems.</p>
+<h2>inference phase</h2>
+<h2>Inference Phase</h2>
+<p>The <strong>inference phase</strong> is the stage where a trained model is applied to new, unseen data to generate predictions or outputs. During this phase, the model utilizes the patterns and knowledge it acquired during training to infer results without further updating its parameters.</p>
+<ul>
+<li><strong>Purpose</strong>: Deploy the model for real‑world tasks such as classification, regression, translation, or recommendation.</li>
+<li><strong>Key Steps</strong>:
+<ol>
+<li><strong>Load</strong> the trained model and its weights.</li>
+<li><strong>Preprocess</strong> incoming data to match the format used during training (e.g., scaling, tokenization).</li>
+<li><strong>Run</strong> the model on the preprocessed data using <code>model.predict()</code> or an equivalent inference call.</li>
+<li><strong>Post‑process</strong> the raw outputs into a usable form (e.g., converting logits to class labels, applying thresholds).</li>
+</ol>
+</li>
+<li><strong>Considerations</strong>:
+<ul>
+<li><strong>Latency</strong>: Optimize for speed, especially in real‑time applications.</li>
+<li><strong>Batching</strong>: Process multiple inputs together when possible to improve throughput.</li>
+<li><strong>Resource Usage</strong>: Choose appropriate hardware (CPU, GPU, TPU) based on model size and performance requirements.</li>
+</ul>
+</li>
+</ul>
+<p>By carefully managing these aspects, the inference phase ensures that the model delivers accurate and efficient predictions in production environments.</p>
+<h2>machine learning</h2>
+<h2>Introduction to Machine Learning</h2>
+<p>Machine learning is a <strong>discipline within computer science</strong> that focuses on training computers using data so they can make predictions without being explicitly programmed.</p>
+<h3>Traditional Programming vs. Machine Learning</h3>
+<ul>
+<li><strong>Traditional software</strong>: Developers write explicit logic to handle every possible case.</li>
+<li><strong>Machine learning</strong>: Developers provide <em>input‑output pairs</em> (training data) and the system discovers the underlying patterns or logic automatically.</li>
+</ul>
+<h3>Core Tasks</h3>
+<ol>
+<li><strong>Classification</strong> – assigning items to discrete categories.</li>
+<li><strong>Regression</strong> – predicting a <strong>continuous numeric value</strong> from input features.</li>
+</ol>
+<p>These tasks form the foundation of most machine‑learning applications.</p>
+<h2>classification</h2>
+<h1>Machine Learning Fundamentals</h1>
+<h2>1. Classification</h2>
+<p><strong>Classification</strong> is a supervised learning task where the goal is to assign input instances to one of several predefined categories. Typical examples include spam detection, image recognition, and sentiment analysis.</p>
+<h2>2. Regression</h2>
+<p><strong>Regression</strong> involves predicting a continuous numeric value based on input features. Common applications are house‑price estimation, stock‑price forecasting, and temperature prediction.</p>
+<h2>3. Labeled Data</h2>
+<p>Supervised algorithms such as classification and regression require <strong>labeled data</strong>—datasets where each example is paired with its correct output (a class label or a numeric target). The quality and quantity of these labels directly affect model performance.</p>
+<h2>unsupervised learning</h2>
+<h1>Unsupervised Learning</h1>
+<p><strong>Unsupervised learning</strong> is a type of machine learning where the algorithm receives <strong>unlabeled data</strong> and must discover patterns or structures on its own, without explicit guidance.</p>
+<h2>Clustering</h2>
+<p>Clustering is a core technique in unsupervised learning. It groups similar data points together based on their features.</p>
+<h3>Outlier Detection</h3>
+<p>Identifying data points that do <strong>not</strong> belong to any cluster is known as <em>outlier detection</em>. Algorithms such as <code>DBSCAN</code> are commonly used for this purpose because they can detect clusters of arbitrary shape and label points that lie outside these clusters as outliers.</p>
+<h2>Common Programming Language</h2>
+<p>The programming language most frequently used for AI and machine learning tasks is <strong>Python</strong>. Its extensive libraries (e.g., <code>scikit-learn</code>, <code>TensorFlow</code>, <code>PyTorch</code>) make it ideal for implementing unsupervised learning algorithms.</p>
+<h2>structured data</h2>
+<h1>Structured Data</h1>
+<p><strong>Structured data</strong> refers to information that is organized in a predefined format, making it easily searchable and analyzable. It typically follows a consistent schema, such as tables in a relational database or objects in JSON.</p>
+<ul>
+<li><strong>Key characteristics</strong>:
+<ul>
+<li>Fixed fields and data types</li>
+<li>Predictable organization</li>
+<li>Efficient querying and indexing</li>
+</ul>
+</li>
+</ul>
+<p><em>Example</em>: A table of customer records with columns for <code>id</code>, <code>name</code>, <code>email</code>, and <code>signup_date</code>.</p>
+<h2>Specialized student detectors for facial features</h2>
+<h2>how neural networks improve through training</h2>
+<h2>neural network</h2>
+<h1>Neural Network</h1>
+<p>A <strong>neural network</strong> is a computational model inspired by the structure and function of the human brain. It consists of interconnected layers of <strong>neurons</strong> that process data by applying weighted connections and activation functions.</p>
+<h2>Core Components</h2>
+<ul>
+<li><strong>Input Layer</strong>: Receives raw data.</li>
+<li><strong>Hidden Layers</strong>: Perform feature extraction and transformation.</li>
+<li><strong>Output Layer</strong>: Produces the final prediction or classification.</li>
+</ul>
+<h2>How It Works</h2>
+<ol>
+<li><strong>Data Input</strong> – Raw data is fed into the input layer.</li>
+<li><strong>Weighted Sum</strong> – Each neuron computes a weighted sum of its inputs.</li>
+<li><strong>Activation</strong> – An <code>activation function</code> (e.g., ReLU, sigmoid) introduces non‑linearity.</li>
+<li><strong>Propagation</strong> – The result is passed to the next layer.</li>
+<li><strong>Training</strong> – The network adjusts weights via <strong>backpropagation</strong> to minimize error.</li>
+</ol>
+<h2>Key Concepts</h2>
+<ul>
+<li><strong>Weights</strong>: Parameters that scale input signals.</li>
+<li><strong>Bias</strong>: An additional parameter that shifts the activation function.</li>
+<li><strong>Learning Rate</strong>: Controls the step size during weight updates.</li>
+<li><strong>Epoch</strong>: One full pass through the training dataset.</li>
+</ul>
+<h2>Common Architectures</h2>
+<ul>
+<li><strong>Feedforward Neural Network</strong> – Information moves in one direction.</li>
+<li><strong>Convolutional Neural Network (CNN)</strong> – Specialized for image data.</li>
+<li><strong>Recurrent Neural Network (RNN)</strong> – Handles sequential data.</li>
+</ul>
+<p>Understanding these fundamentals provides a solid foundation for exploring more advanced deep‑learning techniques.</p>
+<h2>deep learning</h2>
+<h1>Deep Learning Overview</h1>
+<p><strong>Deep learning</strong> is a <em>machine learning</em> technique that employs <strong>neural networks</strong> to learn from large datasets. It requires substantial training samples and mimics the human brain's ability to recognize patterns and make decisions. While powerful, deep learning <strong>does not get everything right all the time</strong>.</p>
+<h3>deep learning</h3>
+<h2>Deep Learning</h2>
+<p><strong>Deep learning</strong> is a machine learning technique that employs <em>neural networks</em> to learn from large datasets. It requires substantial training samples and mimics the human brain's ability to recognize patterns and make decisions.</p>
+<h2>criteria for choosing statistical machine learning versus deep learning</h2>
+<h1>Types of Neural Network Architectures</h1>
+<p>Neural networks come in various architectures, each suited to different kinds of data and tasks. Below is an overview of the most common types.</p>
+<h2>1. Feedforward Neural Networks (FNN)</h2>
+<ul>
+<li><strong>Structure</strong>: Layers of neurons arranged in a single direction—from input to output.</li>
+<li><strong>Use Cases</strong>: Simple classification and regression problems.</li>
+<li><strong>Key Point</strong>: No cycles; information flows only forward.</li>
+</ul>
+<h2>2. Convolutional Neural Networks (<code>CNN</code>)</h2>
+<ul>
+<li><strong>Structure</strong>: Convolutional layers, pooling layers, and fully‑connected layers.</li>
+<li><strong>Use Cases</strong>: Image recognition, video analysis, and any grid‑like data.</li>
+<li><strong>Key Concepts</strong>:
+<ul>
+<li><strong>Convolution</strong> extracts local features.</li>
+<li><strong>Pooling</strong> reduces spatial dimensions while retaining important information.</li>
+</ul>
+</li>
+</ul>
+<h2>3. Recurrent Neural Networks (<code>RNN</code>)</h2>
+<ul>
+<li><strong>Structure</strong>: Connections that form directed cycles, allowing information to persist.</li>
+<li><strong>Use Cases</strong>: Sequential data such as text, speech, and time series.</li>
+<li><strong>Variants</strong>:
+<ol>
+<li><strong>Long Short‑Term Memory (<code>LSTM</code>)</strong> – mitigates vanishing gradients.</li>
+<li><strong>Gated Recurrent Unit (<code>GRU</code>)</strong> – a simpler alternative to <code>LSTM</code>.</li>
+</ol>
+</li>
+</ul>
+<h2>4. Autoencoders</h2>
+<ul>
+<li><strong>Structure</strong>: Encoder network compresses input to a latent representation; decoder reconstructs the original input.</li>
+<li><strong>Use Cases</strong>: Dimensionality reduction, denoising, and unsupervised feature learning.</li>
+<li><strong>Key Concept</strong>: The bottleneck forces the model to learn compact, informative features.</li>
+</ul>
+<h2>5. Generative Adversarial Networks (<code>GAN</code>)</h2>
+<ul>
+<li><strong>Structure</strong>: Two networks—<strong>generator</strong> and <strong>discriminator</strong>—trained in opposition.</li>
+<li><strong>Use Cases</strong>: Image synthesis, data augmentation, and style transfer.</li>
+<li><strong>Key Idea</strong>: The generator creates realistic data while the discriminator learns to distinguish real from fake.</li>
+</ul>
+<h2>6. Transformer Networks</h2>
+<ul>
+<li><strong>Structure</strong>: Stacks of <strong>self‑attention</strong> layers and feedforward sub‑layers.</li>
+<li><strong>Use Cases</strong>: Natural language processing, translation, and any task requiring long‑range dependencies.</li>
+<li><strong>Key Concepts</strong>:
+<ul>
+<li><strong>Self‑attention</strong> allows each token to weigh the relevance of every other token.</li>
+<li><strong>Positional encoding</strong> injects sequence order information.</li>
+</ul>
+</li>
+</ul>
+<h2>7. Graph Neural Networks (<code>GNN</code>)</h2>
+<ul>
+<li><strong>Structure</strong>: Nodes represent entities; edges capture relationships. Message‑passing updates node embeddings.</li>
+<li><strong>Use Cases</strong>: Social network analysis, molecular property prediction, and recommendation systems.</li>
+<li><strong>Key Concept</strong>: Exploits the inherent structure of graph‑structured data.</li>
+</ul>
+<hr />
+<p>Each architecture can be adapted or combined with others to tackle complex problems. Selecting the right type depends on the data modality, task requirements, and computational resources.</p>
+<h2>types of neural network architectures</h2>
+<h2>Deep Learning Frameworks</h2>
+<ul>
+<li><strong>PyTorch</strong> – Developed by Meta. Currently the more popular framework for research and production.</li>
+<li><strong>TensorFlow</strong> – Developed by Google. Widely used in industry and for large‑scale deployments.</li>
+</ul>
+<h2>Transformer Architecture</h2>
+<p>The <strong>Transformer</strong> architecture is the foundational model for modern generative AI systems, including <strong>GPT‑4</strong>. It enables efficient handling of sequential data through self‑attention mechanisms, making it the backbone of state‑of‑the‑art language models.</p>
+<h2>generative AI</h2>
+<h2>Generative AI</h2>
+<p><strong>Generative AI</strong> is a category of artificial intelligence whose primary objective is to <strong>create new content</strong>. This content can include:</p>
+<ul>
+<li>Text</li>
+<li>Audio</li>
+<li>Video</li>
+<li>Images</li>
+<li>Any other form of media</li>
+</ul>
+<p>The hallmark of generative AI systems is their ability to produce original outputs that resemble human-created material, enabling applications ranging from creative writing to synthetic media production.</p>
+<h2>traditional AI</h2>
+<h1>Traditional AI</h1>
+<p><strong>Traditional AI</strong> refers to the early approaches in artificial intelligence that rely on <strong>explicit rules</strong>, symbolic reasoning, and handcrafted knowledge bases. These systems use <code>if‑then</code> logic and predefined algorithms to solve problems, contrasting with modern machine‑learning techniques that learn patterns from data.</p>
+<h2>large language model (LLM)</h2>
+<h2>Generative Language Models</h2>
+<ul>
+<li><strong>Definition</strong>: A type of generative AI that employs massive neural networks trained on extensive text corpora to <strong>predict the next word or sequence of words</strong>.</li>
+<li><strong>Analogy</strong>: Often likened to a <em>parrot</em> that mimics conversations, using statistical probability and randomness to select words. This illustrates how language models operate without genuine comprehension.</li>
+<li><strong>Mechanism</strong>: The system relies on <strong>statistical probability</strong> and <strong>randomness</strong> to forecast the next token, <strong>without understanding the underlying meaning</strong>.</li>
+</ul>
+<h2>Large Language Model (LLM)</h2>
+<ul>
+<li>Large Language Model (LLM)</li>
+<li>LLMs use reinforcement learning with human feedback (RLHF) to improve responses and reduce toxic language.</li>
+</ul>
+<h3>RLHF</h3>
+<ul>
+<li>Reinforcement Learning with Human Feedback, an approach where humans provide feedback to guide the LLM's learning and reduce undesirable outputs.</li>
+</ul>
+<h2>Reinforcement Learning with Human Feedback (RLHF)</h2>
+<ul>
+<li>RAG combines LLMs with external data sources via APIs, allowing the model to retrieve relevant documents (e.g., HR policies) and use them to answer queries or perform actions.</li>
+</ul>
+<h2>tool augmented chatbot</h2>
+<ul>
+<li>tool augmented chatbot</li>
+</ul>
+<h2>agentic AI system</h2>
+<ul>
+<li>agentic AI system</li>
+<li>The characteristic of an agentic AI where a user provides a goal (e.g., onboard a new intern) and the system creates a plan to achieve it.</li>
+</ul>
+<h3>AI agent</h3>
+<ul>
+<li>An entity that can perceive its environment and act upon it, often by using tools, knowledge, and reasoning.</li>
+</ul>
+<h2>low‑code tools</h2>
+<ul>
+<li>Tools like n8n, Zapier, and other drag‑and‑drop platforms enable building agentic AI systems without writing code.</li>
+</ul>
+<h2>AI agent</h2>
+<ul>
+<li>An AI agent has access to tools, knowledge, memory, and an LLM, enabling it to perform autonomous tasks.</li>
+<li>Agentic AI systems combine AI agents with higher autonomy, planning, and multi‑step execution to achieve goals without detailed instructions.</li>
+<li>Generative AI creates new content in response to prompts, such as answering questions with text.</li>
+</ul>
+<h2>Source-linked notes</h2>
+<blockquote>
+<p>UNVERIFIED PREVIEW — semantic and educational review required.</p>
+</blockquote>
+<h1>Study notes: multimodal transcript</h1>
+<p><em>Generated from assembled notes</em></p>
+<hr />
+<h2>Artificial intelligence</h2>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>Artificial intelligence is an overarching field in computer science where we train computers to perform tasks which humans are generally good at.</p>
+<p><em>[Knowledge ID: CON_0001 | Sources: G00001 | Video: 00:00:13.38–00:00:32.22]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>Machine learning is an important subdomain within artificial intelligence and has two main branches.</p>
+<p><em>[Knowledge ID: CON_0002 | Sources: G00001 | Video: 00:00:32.22–00:00:48.40]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>Statistical machine learning includes algorithms such as linear regression, decision tree, k-means, used for tasks like classification and regression.</p>
+<p><em>[Knowledge ID: CON_0003 | Sources: G00001 | Video: 00:00:42.94–00:01:00.84]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>Deep learning is mainly about neural networks; using new neural networks constitutes deep learning.</p>
+<p><em>[Knowledge ID: CON_0004 | Sources: G00001 | Video: 00:01:06.18–00:01:19.48]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>Neural networks are the core of deep learning; using new neural networks means you are using deep learning.</p>
+<p><em>[Knowledge ID: CON_0005 | Sources: G00001 | Video: 00:01:10.62–00:01:19.48]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>CNN is a type of neural network architecture.</p>
+<p><em>[Knowledge ID: CON_0006 | Sources: G00001 | Video: 00:01:15.36–00:01:45.18]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>RNN is a type of neural network architecture.</p>
+<p><em>[Knowledge ID: CON_0007 | Sources: G00001 | Video: 00:01:15.36–00:01:45.18]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>Transformer is a neural network architecture that is the reason behind modern generative AI and agentic AI.</p>
+<p><em>[Knowledge ID: CON_0008 | Sources: G00001 | Video: 00:01:15.36–00:01:45.18]</em></p>
+<h2>regular expression</h2>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>regular expression is a general concept in computer science</p>
+<p><em>[Knowledge ID: CON_0009 | Sources: G00002 | Video: 00:01:45.18–00:02:20.78]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>a system that uses explicit rules rather than machine‑learning models</p>
+<p><em>[Knowledge ID: CON_0010 | Sources: G00002 | Video: 00:02:15.74–00:02:46.64]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>statistical ML is a subset of machine learning focusing on probabilistic models</p>
+<p><em>[Knowledge ID: CON_0011 | Sources: G00002 | Video: 00:02:57.92–00:03:04.56]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>deep learning is a subfield of machine learning based on neural network architectures</p>
+<p><em>[Knowledge ID: CON_0012 | Sources: G00002 | Video: 00:02:40.68–00:02:52.64]</em></p>
+<h2>spam classification</h2>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.
+Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>Available source excerpt: Well when you look at any email you will find some patterns such as limited offer, the email
+might be coming from a weird looking ID and so on.</p>
+<p>Available source excerpt: You will have all these patterns in your brain that if email has terms
+such as urgency, lucrative offer, if email is coming from suspicious email id then that is spam
+otherwise it is non-spam.</p>
+<p>spam classification</p>
+<p><em>[Knowledge ID: CON_0013 | Sources: G00003 | Video: 00:03:12.16–00:03:22.32, 00:03:59.50–00:04:20.46]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>A human or computer program is trained on thousands of labeled spam and non‑spam emails to learn patterns.</p>
+<p><em>[Knowledge ID: CON_0014 | Sources: G00003 | Video: 00:03:32.94–00:04:05.28, 00:04:12.88–00:04:20.46, 00:04:20.98–00:04:40.94]</em></p>
+<h2>inference phase</h2>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.
+Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>Available source excerpt: So in machine learning
+typically there are two phases the first one is training and the second one
+where you give computer the real task where it will give you the prediction is
+called inference.</p>
+<p>Available source excerpt: So if you compare this with a traditional software program if
+you have done coding you would give your input and your equation to your
+program your program is essentially your equation right like you write all the
+code and code is some kind of logic such as y is equal to x squared and then you
+give input and computer program will give output in machine learning what
+happens is you give input output see there are three things right input</p>
+<p>inference phase</p>
+<p><em>[Knowledge ID: CON_0015 | Sources: G00004 | Video: 00:05:22.86–00:06:09.80]</em></p>
+<h2>machine learning</h2>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>Machine learning is a discipline in computer science where we train machines on data so that they can make predictions without explicit programming.</p>
+<p><em>[Knowledge ID: CON_0016 | Sources: G00005 | Video: 00:07:20.52–00:07:35.02]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>Traditional software programming requires explicit programming of logic, whereas machine learning provides input and output pairs and the system derives the underlying pattern or logic.</p>
+<p><em>[Knowledge ID: CON_0017 | Sources: G00005 | Video: 00:06:09.80–00:06:19.16, 00:06:42.58–00:06:47.72, 00:07:12.42–00:07:24.72, 00:07:30.06–00:07:46.04]</em></p>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>classification</p>
+<p>Available source excerpt: So when you are classifying email as spam or non-spam or let's say
+you are giving an image and you are asking it to classify as cat and dog or
+let's say you have a damaged car you're saying okay whether it's damaged or
+non-damaged this is classification because you have input and you are
+mapping it to one of the categories and you don't need to necessarily have two
+output categories you can have multiple categories for example in google news
+you will see that there is a news article and</p>
+<p>Available source excerpt: it will classify it as
+business sports technology health and so on okay
+so you can have multiple categories or you can have two categories if you have</p>
+<p><em>[Knowledge ID: CON_0018 | Sources: G00005 | Video: 00:07:52.98–00:08:19.06, 00:08:19.53–00:08:30.66]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>Regression is a type of machine‑learning task that predicts a continuous numeric value from input data.</p>
+<p><em>[Knowledge ID: CON_0019 | Sources: G00005 | Video: 00:07:40.30–00:07:58.36]</em></p>
+<h2>classification</h2>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>classification</p>
+<p>Available source excerpt: two categories as an output it's called binary classification
+for multiple it's called multi-class classification
+okay so that is classification now let's talk about regression
+So I live here in US and we use this real estate website Zillow.</p>
+<p>Available source excerpt: you have fixed class labels okay let's say two categories or four categories
+spam non-spam etc whereas here it's a number so this is called regression okay
+so classification and regression are two major category of problems that we
+solve using machine learning and here I have listed a few of these problems okay
+Now, whenever you have training data, which is input-output pairs, if you think mathematically,
+then this input is called x, and this output is called y.</p>
+<p><em>[Knowledge ID: CON_0020 | Sources: G00006, G00007 | Video: 00:08:30.66–00:08:33.54, 00:08:34.09–00:08:47.04, 00:10:03.78–00:10:37.90, 00:10:38.28–00:10:46.00]</em></p>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>regression</p>
+<p>Available source excerpt: this home should be 925 K okay so this
+type of problem is called regression because you don't have a fixed categories where you are
+mapping your input okay you your output basically can be any number the price can be 925 k 923 k
+921.45 k the the possibilities are so wide in case of classification you have discrete possibilities</p>
+<p>Available source excerpt: you have fixed class labels okay let's say two categories or four categories
+spam non-spam etc whereas here it's a number so this is called regression okay
+so classification and regression are two major category of problems that we
+solve using machine learning and here I have listed a few of these problems okay
+Now, whenever you have training data, which is input-output pairs, if you think mathematically,
+then this input is called x, and this output is called y.</p>
+<p><em>[Knowledge ID: CON_0021 | Sources: G00006, G00007 | Video: 00:09:34.24–00:10:37.90, 00:10:38.28–00:10:46.00]</em></p>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>Available source excerpt: So whenever
+you have these kind of labels is also called labeled data okay this category
+of problems is called supervised machine learning there is another category called
+unsupervised machine learning see in supervised machine learning you have to
+prepare all this data you have to go through all your past emails tag them as
+input output so there is a labeling afford here but what if you have huge
+amount of data and you don't want to label it and you just want to do
+something good out of</p>
+<p>Available source excerpt: you have fixed class labels okay let's say two categories or four categories
+spam non-spam etc whereas here it's a number so this is called regression okay
+so classification and regression are two major category of problems that we
+solve using machine learning and here I have listed a few of these problems okay
+Now, whenever you have training data, which is input-output pairs, if you think mathematically,
+then this input is called x, and this output is called y.</p>
+<p><em>[Knowledge ID: CON_0022 | Sources: G00007 | Video: 00:10:03.78–00:10:37.90, 00:10:38.28–00:10:46.00, 00:10:46.12–00:11:32.06]</em></p>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>Available source excerpt: So whenever
+you have these kind of labels is also called labeled data okay this category
+of problems is called supervised machine learning there is another category called
+unsupervised machine learning see in supervised machine learning you have to
+prepare all this data you have to go through all your past emails tag them as
+input output so there is a labeling afford here but what if you have huge
+amount of data and you don't want to label it and you just want to do
+something good out of</p>
+<p><em>[Knowledge ID: CON_0023 | Sources: G00007 | Video: 00:10:46.12–00:11:32.06]</em></p>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>Available source excerpt: you have fixed class labels okay let's say two categories or four categories
+spam non-spam etc whereas here it's a number so this is called regression okay
+so classification and regression are two major category of problems that we
+solve using machine learning and here I have listed a few of these problems okay
+Now, whenever you have training data, which is input-output pairs, if you think mathematically,
+then this input is called x, and this output is called y.</p>
+<p>Available source excerpt: So this is x and y pair, right?</p>
+<p>Available source excerpt: So this is x, this is y.</p>
+<p>Available source excerpt: Here again, this entire thing is x, and this is y.</p>
+<p><em>[Knowledge ID: CON_0024 | Sources: G00007 | Video: 00:10:03.78–00:10:37.90, 00:10:38.28–00:10:46.00, 00:10:46.12–00:10:56.28]</em></p>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>labeled data</p>
+<p>Available source excerpt: So whenever
+you have these kind of labels is also called labeled data okay this category
+of problems is called supervised machine learning there is another category called
+unsupervised machine learning see in supervised machine learning you have to
+prepare all this data you have to go through all your past emails tag them as
+input output so there is a labeling afford here but what if you have huge
+amount of data and you don't want to label it and you just want to do
+something good out of</p>
+<p><em>[Knowledge ID: CON_0025 | Sources: G00007 | Video: 00:10:46.12–00:11:32.06]</em></p>
+<h2>unsupervised learning</h2>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>A type of machine learning where the algorithm is given unlabeled data and must identify patterns or structures without explicit guidance.</p>
+<p><em>[Knowledge ID: CON_0026 | Sources: G00008, G00009 | Video: 00:11:41.64–00:13:42.20 (passage), 00:14:59.39–00:15:22.33]</em></p>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>clustering</p>
+<p>Available source excerpt: They will put all red color toys in one
+bucket, blue toys into another bucket or they might put all cars in one bucket
+and trucks in one bucket or all bigger toys in one bucket smaller toys in one
+bucket okay so this type of problem-solving is called unsupervised
+learning because you are not supervising your kid you are not saying hey do this
+and that they are just using their brain they are noticing some patterns and they
+categorize them as per that patterns unsupervised machine learning</p>
+<p>Available source excerpt: that comes under unsupervised machine learning where you notice patterns for example in legal
+documents you will have certain type of words or certain format okay.</p>
+<p><em>[Knowledge ID: CON_0027 | Sources: G00008, G00009 | Video: 00:12:32.74–00:13:13.82, 00:13:42.20–00:13:55.78]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>Identifying data points that do not belong to any cluster, often using algorithms like DBSCAN.</p>
+<p><em>[Knowledge ID: CON_0028 | Sources: G00009 | Video: 00:14:03.56–00:15:05.89]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>The programming language commonly used for AI and machine learning tasks.</p>
+<p><em>[Knowledge ID: CON_0029 | Sources: G00009 | Video: 00:15:22.33–00:15:29.85]</em></p>
+<h2>structured data</h2>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>structured data</p>
+<p>Available source excerpt: The first use case is a structured data.</p>
+<p>Available source excerpt: columns that you see they are called features okay
+vendor, amount, location and if you are using statistical machine learning
+algorithms such as decision tree or xgboost and so on they perform well on</p>
+<p><em>[Knowledge ID: CON_0030 | Sources: G00010 | Video: 00:16:12.33–00:16:20.79, 00:16:54.95–00:17:13.23]</em></p>
+<h2>Specialized student detectors for facial features</h2>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>Available source excerpt: You can make this a teamwork and
+give individual responsibility to each of these students such as Mike can work on detecting only eyes,
+Mohan can work on detecting only nose.</p>
+<p>Available source excerpt: So each of these students are working on detecting a specific part of
+Koala's body from an image.</p>
+<p>Available source excerpt: So Mike has become now expert Koala eye detector similarly Mohan is an expert Koala
+nose detector.</p>
+<p>Available source excerpt: You can extend this collaboration further and make Shakib an
+ear detection expert.</p>
+<p>Available source excerpt: And then these three students can go to Serena and
+Serena can work on deciding if the image has koalas face or not.</p>
+<p>Available source excerpt: The way they give their decision is by using a score of 0 to 1, where 0 means this is definitely
+not coalesce eyes, 0.5 means yeah it looks like coalesce eyes, I'm not sure maybe 50-50,
+1 means it is definitely coalesce eyes.</p>
+<p>Available source excerpt: When you give them an image of a lion Mike will say the decision is 0.03 because
+the eyes they are like round eyeballs but they don't look like Koala's eyes so 0.03.</p>
+<p>Available source excerpt: Similarly for nose he can just give some score and if the score is more than 0.5 we'll say yeah
+those are Koala's eyes or nose.</p>
+<p>Available source excerpt: So once Mike
+Mohan and Saqib says that this image has koalas eyes nose and ears, Serena can
+use their work to figure out if the image has koalas face or not.</p>
+<p><em>[Knowledge ID: CON_0031 | Sources: G00012, G00013 | Video: 00:19:24.29–00:19:34.01, 00:19:34.81–00:19:37.19, 00:19:37.95–00:19:41.99, 00:19:42.53–00:19:57.81, 00:19:58.37–00:20:01.05, 00:20:19.93–00:20:44.07, 00:20:45.19–00:21:25.49]</em></p>
+<h2>how neural networks improve through training</h2>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>Available source excerpt: The supervisor will
+tell you if the answer is correct or not and the error feedback is passed on to rest of the group
+and the group keeps on adjusting their weights or adjusting their brains in a way that
+they can finally come up with the right answer.</p>
+<p>Available source excerpt: Initially it will make a lot of error but as the time goes it will keep
+on improving.</p>
+<p>Available source excerpt: Now how it improves the weights for that it uses are derivative and some mathematics.</p>
+<p><em>[Knowledge ID: EXP_0005 | Sources: G00014 | Video: 00:25:50.65–00:26:11.61, 00:26:12.37–00:26:18.11, 00:26:26.13–00:26:41.37]</em></p>
+<h2>neural network</h2>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>neural network</p>
+<p>Available source excerpt: I'm just showing you one specific example here and let's say you are using this
+neural network for cat and dog detection then it might happen that these middle neurons will
+detect whether it's cats ears eyes tails dog ear eyes tails etc and then the
+second layer will do higher level pattern detection which is if in the
+image you have cats ears and eyes that means you have cats head and so on.</p>
+<p><em>[Knowledge ID: CON_0033 | Sources: G00015 | Video: 00:26:57.73–00:27:28.71]</em></p>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>Available source excerpt: I'm just showing you one specific example here and let's say you are using this
+neural network for cat and dog detection then it might happen that these middle neurons will
+detect whether it's cats ears eyes tails dog ear eyes tails etc and then the
+second layer will do higher level pattern detection which is if in the
+image you have cats ears and eyes that means you have cats head and so on.</p>
+<p>neural network</p>
+<p><em>[Knowledge ID: DEF_0004 | Sources: G00015 | Video: 00:26:57.73–00:27:28.71]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<blockquote>
+<p><strong>Example: neural network path activation</strong></p>
+<p>just as Google Maps activates specific routes from Delhi to Bangalore, a trained neural network activates certain paths for a given input image.</p>
+</blockquote>
+<p><em>[Knowledge ID: EXM_0006 | Sources: G00015, G00016 | Video: 00:27:50.33–00:28:02.79, 00:28:07.03–00:28:13.21, 00:28:13.87–00:28:19.29]</em></p>
+<h2>deep learning</h2>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>deep learning is a machine learning technique that uses neural networks to learn from large amounts of data; it requires large training samples and mimics the human brain's ability to recognize patterns and make decisions, though it does not get everything right all the time.</p>
+<p><em>[Knowledge ID: CON_0032 | Sources: G00016 | Video: 00:28:19.77–00:28:34.39, 00:28:35.01–00:28:36.57, 00:28:37.03–00:28:47.97, 00:28:48.55–00:28:53.95]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<h3>deep learning</h3>
+<p>a machine learning technique that uses neural networks to learn from large amounts of data; it requires large training samples and mimics the human brain's ability to recognize patterns and make decisions.</p>
+<p><em>[Knowledge ID: DEF_0003 | Sources: G00016 | Video: 00:28:19.77–00:28:34.39, 00:28:35.01–00:28:36.57, 00:28:37.03–00:28:47.97, 00:28:48.55–00:28:53.95]</em></p>
+<h2>criteria for choosing statistical machine learning versus deep learning</h2>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>Available source excerpt: and now you want to figure out, should I use statistical ML or deep
+learning?</p>
+<p>Available source excerpt: You have to look at bunch of parameters.</p>
+<p>Available source excerpt: Number one, features.</p>
+<p>Available source excerpt: If you
+have simple features, let's say structure data, tables, use statistical machine
+learning.</p>
+<p>Available source excerpt: But if you have complex features, images, videos and so on, use
+deep learning.</p>
+<p>Available source excerpt: Having said that this doesn't mean that you can't use deep
+learning for structured data.</p>
+<p>Available source excerpt: I have seen problem statements where you have huge
+amount of structured data and people still use deep learning.</p>
+<p>Available source excerpt: So you have to
+use these loose guidelines and then you have to experiment to see what approach
+gives you the best performance.</p>
+<p>Available source excerpt: The second criteria is of course we talked
+about it like structure versus unstructured data and you notice
+unstructured data you get videos, audio, text, images and so on.</p>
+<p>Available source excerpt: Then comes data
+volume.</p>
+<p>Available source excerpt: If you have a huge number of training samples usually deep learning
+will perform better.</p>
+<p>Available source excerpt: Okay so these are the criterias that you use to choose
+between statistical ML versus deep learning.</p>
+<p><em>[Knowledge ID: CON_0034 | Sources: G00017 | Video: 00:29:43.47–00:30:51.97]</em></p>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>types of neural network architectures</p>
+<p>Available source excerpt: So you are feeding information forward
+there is no loop nothing information goes from input hidden to output layer
+okay so this is the picture of a feed forward neural network.</p>
+<p>Available source excerpt: A recurrent
+neural network is sort of like creating a soup so you put some ingredient then
+you test it you get some feedback now you add more ingredients or you adjust
+the ingredients okay.</p>
+<p>Available source excerpt: So here although I am showing you this one picture this is a time dimension.</p>
+<p>Available source excerpt: So the neural
+network is only one but this a1 output you feed it back okay.</p>
+<p>Available source excerpt: And the third, the most important architecture is Transformer.</p>
+<p>Available source excerpt: I'm not going to go over Transformer architecture here because it requires a detailed discussion
+much more in-depth, but this is the reason behind all the modern day gen AI and agent
+KI application.</p>
+<p>Available source excerpt: So when you're using chat GPT to write a poem about samosa you know it writes
+this nice poem and this kind of creativity is possible because of the underlying model
+it can be GPT 4 0 0 1 mini whatever so that model is powered by transformer architecture
+and GPT stands for generative pre-trained transformer UC there's a transformer so
+transformer is a generic architecture and GPT is an architecture which is
+derived based on transformer or it is an approach that is derived based on</p>
+<p>Available source excerpt: transformer.</p>
+<p><em>[Knowledge ID: CON_0035 | Sources: G00017, G00018, G00019 | Video: 00:29:39.21–00:31:20.97 (passage), 00:31:20.97–00:31:55.75, 00:31:56.07–00:32:07.61, 00:32:22.11–00:32:26.47, 00:32:27.89–00:32:55.21, 00:32:55.65–00:33:27.33]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<blockquote>
+<p><strong>Example: using deep learning for structured data when data volume is huge</strong></p>
+<p>I have seen problem statements where you have huge amount of structured data and people still use deep learning.</p>
+</blockquote>
+<p><em>[Knowledge ID: EXM_0004 | Sources: G00017 | Video: 00:30:03.73–00:30:12.43]</em></p>
+<h2>types of neural network architectures</h2>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>Two main frameworks: PyTorch (by Meta) and TensorFlow (by Google). PyTorch is noted as more popular currently.</p>
+<p><em>[Knowledge ID: CON_0036 | Sources: G00019 | Video: 00:33:27.33–00:33:39.15, 00:34:03.57–00:34:09.13]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>Transformer architecture underlies modern generative AI models such as GPT‑4.</p>
+<p><em>[Knowledge ID: FCT_0005 | Sources: G00019 | Video: 00:32:42.25–00:32:55.21, 00:32:55.65–00:33:27.33]</em></p>
+<h2>generative AI</h2>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>a category of AI where the objective is to generate new content such as text, audio, video, anything</p>
+<p><em>[Knowledge ID: CON_0037 | Sources: G00020 | Video: 00:35:12.69–00:35:30.51]</em></p>
+<h2>traditional AI</h2>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>traditional AI</p>
+<p>Available source excerpt: So all these problems where you are not essentially generating a new text but you are doing let's
+say classification or you are doing regression those are considered to be traditional AI
+and in today's world even in the era of gen AI we still use traditional AI because it is
+lightweight and for certain type of issues using traditional AI makes total sense.</p>
+<p>Available source excerpt: if I have to summarize the differences between these two then the purpose of traditional AI
+was to analyze predict classify or make decisions whereas generative AI means you are generating
+new content all together okay so these are the task sample tasks which we already discussed then the
+type of output in traditional AI is usually yes no labels you know numbers if you are doing
+health price prediction, etc.</p>
+<p><em>[Knowledge ID: CON_0038 | Sources: G00021 | Video: 00:37:25.53–00:37:37.77, 00:37:38.13–00:38:08.23, 00:38:08.91–00:38:16.75, 00:38:40.67–00:38:44.01]</em></p>
+<h2>large language model (LLM)</h2>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>a type of generative AI that uses massive neural networks trained on large text corpora to predict the next word or set of words</p>
+<p><em>[Knowledge ID: CON_0039 | Sources: G00022, G00023 | Video: 00:39:14.63–00:39:35.22, 00:40:58.73–00:41:04.89]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>a parrot that mimics conversations by using statistical probability and randomness to predict words, illustrating how language models operate</p>
+<p><em>[Knowledge ID: CON_0041 | Sources: G00022, G00023 | Video: 00:40:07.37–00:40:18.81, 00:40:19.33–00:40:30.47, 00:40:31.39–00:40:35.69, 00:40:36.13–00:40:46.87]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>a system that predicts the next word or set of words based on statistical probability and randomness, without understanding meaning</p>
+<p><em>[Knowledge ID: CON_0040 | Sources: G00023 | Video: 00:40:47.27–00:40:50.01, 00:40:50.49–00:40:54.65, 00:40:55.39–00:40:58.31, 00:40:58.73–00:41:04.89]</em></p>
+<h2>Large Language Model (LLM)</h2>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.
+Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>Available source excerpt: Like our powerful Parrot Buddy, large language models are trained on a huge volume of data
+such as Wikipedia articles, Google news articles, online books, and so on.</p>
+<p>Available source excerpt: If you look inside the LLM, you will find a neural network containing trillions of parameters
+that can capture more complex patterns and nuances in a language.</p>
+<p>Large Language Model (LLM)</p>
+<p><em>[Knowledge ID: CON_0042 | Sources: G00024 | Video: 00:42:03.15–00:42:23.95]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>LLMs use reinforcement learning with human feedback (RLHF) to improve responses and reduce toxic language.</p>
+<p><em>[Knowledge ID: CON_0043 | Sources: G00024, G00025 | Video: 00:42:37.49–00:42:49.01, 00:43:22.97–00:43:45.71]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<h3>RLHF</h3>
+<p>Reinforcement Learning with Human Feedback, an approach where humans provide feedback to guide the LLM's learning and reduce undesirable outputs.</p>
+<p><em>[Knowledge ID: DEF_0053 | Sources: G00024, G00025 | Video: 00:42:37.49–00:42:49.01, 00:43:28.25–00:43:45.71]</em></p>
+<h2>Reinforcement Learning with Human Feedback (RLHF)</h2>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>RAG combines LLMs with external data sources via APIs, allowing the model to retrieve relevant documents (e.g., HR policies) and use them to answer queries or perform actions.</p>
+<p><em>[Knowledge ID: CON_0044 | Sources: G00025, G00026 | Video: 00:45:06.24–00:45:27.91, 00:46:32.99–00:47:12.79]</em></p>
+<h2>tool augmented chatbot</h2>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>tool augmented chatbot</p>
+<p>Available source excerpt: LLM which is like a human brain and you are giving it a tool like a screw
+driver or a phone these are all the tools so you can make all these tools
+available to LLM and build this chatbot this is called tool augmented chatbot
+see if you increase complexity to this you can call it an AI agent but I'm not
+calling it an agent yet because this doesn't have autonomy it is performing a
+very simple task okay so we call it tool augmented chatbot so the two use cases
+that we looked at.</p>
+<p><em>[Knowledge ID: CON_0045 | Sources: G00027 | Video: 00:47:12.79–00:47:46.23]</em></p>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>Available source excerpt: And see, it will create onboarding checklist,
+it will schedule welcoming meeting,
+it will send access request to IT department and so on.</p>
+<p>Available source excerpt: So if you think about this chat board,
+what it is doing is it is taking the question
+which is on board the new intern joining
+to it and it is using this tool to send a welcome meeting then you want to create
+intense profile in HR management system so let's say this is your HRMS right
+HR management system and the this this will create intense profile in that
+system then it will create a IT helpdesk ticket to get a Wi-Fi credentials
+email, Slack access.</p>
+<p>Available source excerpt: The next step can be to order laptop and ID card.</p>
+<p>Available source excerpt: Let's say new intern is joining,
+you'll say onboard the new intern joining next Monday.</p>
+<p><em>[Knowledge ID: EXM_0054 | Sources: G00027, G00028 | Video: 00:48:23.15–00:48:25.81, 00:48:26.21–00:48:27.89, 00:48:28.73–00:48:33.43, 00:48:34.05–00:48:36.51, 00:48:36.79–00:48:38.99, 00:49:03.07–00:50:02.75]</em></p>
+<h2>agentic AI system</h2>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>Available source excerpt: So this is an agentic AI system and this chatbot is your AI agent.</p>
+<p>Available source excerpt: So previously you were asking a simple question how many leaves do I have left
+it will say seven okay what is a polysemon C cleave it will say XYZ so it
+is simple Q&amp;A reactive you're asking question it is giving answer very very
+basic chat board but here it is agentic where you're saying onboard the new
+intern you're not giving detailed instructions on how to onboard a new
+in turn and then so this one the first thing is goal okay so you gave it a goal
+and you gave it access to the tools</p>
+<p>Available source excerpt: okay so these are all the tools and
+knowledge and memory all these tools and it will do multi-step reasoning goal
+oriented planning and it will do autonomous decision-making so it is
+actually performing the actions if you have simple Q&amp;A chat board it is
+answering a question.</p>
+<p>agentic AI system</p>
+<p><em>[Knowledge ID: CON_0046 | Sources: G00029 | Video: 00:50:17.13–00:50:24.69, 00:50:29.99–00:51:29.47]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>The characteristic of an agentic AI where a user provides a goal (e.g., onboard a new intern) and the system creates a plan to achieve it.</p>
+<p><em>[Knowledge ID: CON_0047 | Sources: G00029 | Video: 00:50:24.69–00:51:10.41]</em></p>
+<blockquote>
+<p>Unavailable or unresolved source information: PARTIALLY_SUPPORTED. Original candidates remain in the audit.</p>
+</blockquote>
+<p>Available source excerpt: okay so these are all the tools and
+knowledge and memory all these tools and it will do multi-step reasoning goal
+oriented planning and it will do autonomous decision-making so it is
+actually performing the actions if you have simple Q&amp;A chat board it is
+answering a question.</p>
+<p><em>[Knowledge ID: CON_0048 | Sources: G00029 | Video: 00:51:04.09–00:51:29.47]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<h3>AI agent</h3>
+<p>An entity that can perceive its environment and act upon it, often by using tools, knowledge, and reasoning.</p>
+<p><em>[Knowledge ID: DEF_0005 | Sources: G00029 | Video: 00:51:29.47–00:51:56.33, 00:51:59.71–00:52:24.81]</em></p>
+<h2>low‑code tools</h2>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>Tools like n8n, Zapier, and other drag‑and‑drop platforms enable building agentic AI systems without writing code.</p>
+<p><em>[Knowledge ID: CON_0052 | Sources: G00030, G00031 | Video: 00:53:39.73–00:53:54.13, 00:55:10.41–00:55:21.29]</em></p>
+<h2>AI agent</h2>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>An AI agent has access to tools, knowledge, memory, and an LLM, enabling it to perform autonomous tasks.</p>
+<p><em>[Knowledge ID: CON_0049 | Sources: G00032 | Video: 00:56:08.17–00:56:26.75]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>Agentic AI systems combine AI agents with higher autonomy, planning, and multi‑step execution to achieve goals without detailed instructions.</p>
+<p><em>[Knowledge ID: CON_0050 | Sources: G00032, G00033 | Video: 00:57:56.21–00:57:59.27, 00:58:18.51–00:58:30.17, 01:00:29.03–01:00:36.91]</em></p>
+<blockquote>
+<p>Paraphrase candidate: semantic support remains unresolved; this is not a verified factual claim.</p>
+</blockquote>
+<p>Generative AI creates new content in response to prompts, such as answering questions with text.</p>
+<p><em>[Knowledge ID: CON_0051 | Sources: G00032, G00033 | Video: 00:58:23.93–00:58:42.89, 01:00:06.21–01:00:17.13]</em></p>
+<hr />
+<p><em>Render complete: 61 items from 23 sections</em></p>
+<h3>Additional details: CON_0006</h3>
+<p><strong>Concept name:</strong>
+Convolutional neural network (CNN)
+Sources: G00001</p>
+<h3>Additional details: CON_0007</h3>
+<p><strong>Concept name:</strong>
+Recurrent neural network (RNN)
+Sources: G00001</p>
+<h3>Additional details: CON_0010</h3>
+<p><strong>Concept name:</strong>
+rule-based system
+Sources: G00002</p>
+<h3>Additional details: CON_0014</h3>
+<p><strong>Concept name:</strong>
+training phase
+Sources: G00003</p>
+<h3>Additional details: CON_0017</h3>
+<p><strong>Concept name:</strong>
+traditional software program vs machine learning
+Sources: G00005</p>
+<h3>Additional details: CON_0028</h3>
+<p><strong>Concept name:</strong>
+outlier detection
+Sources: G00009</p>
+<h3>Additional details: CON_0029</h3>
+<p><strong>Concept name:</strong>
+Python
+Sources: G00009</p>
+<h3>Additional details: CON_0036</h3>
+<p><strong>Concept name:</strong>
+deep learning frameworks
+Sources: G00019</p>
+<h3>Additional details: CON_0040</h3>
+<p><strong>Concept name:</strong>
+stochastic parrot
+Sources: G00023</p>
+<h3>Additional details: CON_0041</h3>
+<p><strong>Concept name:</strong>
+Buddy (stochastic parrot example)
+Sources: G00022, G00023</p>
+<h3>Additional details: CON_0044</h3>
+<p><strong>Concept name:</strong>
+Retrieval Augmented Generation (RAG)
+Sources: G00025, G00026</p>
+<h3>Additional details: CON_0047</h3>
+<p><strong>Concept name:</strong>
+goal‑oriented planning
+Sources: G00029</p>
+<p>Source information not completed:</p>
+<ul>
+<li>formulas: SOURCE_MISSING (sources: G00014, G00015, G00016).</li>
+<li>procedures: SOURCE_MISSING (sources: G00014, G00015, G00016).</li>
+</ul>
+<h2>Source evidence and video timestamps</h2><section class="reference"><h3>CON_0001</h3><p>00:00:13.38–00:00:32.22</p><ul><li><strong>G00001</strong> · Artificial intelligence is this overarching field in
+ computer science where we train computers to perform tasks which we the humans are
+ generally good at.</li></ul></section><section class="reference"><h3>CON_0002</h3><p>00:00:32.22–00:00:48.40</p><ul><li><strong>G00001</strong> · Machine learning is an important subdomain
+ within artificial intelligence and in machine learning there are two main
+ branches.</li></ul></section><section class="reference"><h3>CON_0003</h3><p>00:00:42.94–00:01:00.84</p><ul><li><strong>G00001</strong> · Statistical machine learning and deep learning.</li><li><strong>G00001</strong> · In statistical ML you
+ will see all this statistical algorithms such as linear regression, decision tree,
+ k-means etc that you use for tasks such as classification, regression etc.</li></ul></section><section class="reference"><h3>CON_0004</h3><p>00:01:06.18–00:01:19.48</p><ul><li><strong>G00001</strong> · When you talk about deep
+ learning, deep learning is mainly about neural networks okay.</li><li><strong>G00001</strong> · Whenever you are
+ using new neural networks you are using deep learning.</li></ul></section><section class="reference"><h3>CON_0005</h3><p>00:01:10.62–00:01:19.48</p><ul><li><strong>G00001</strong> · When you talk about deep
+ learning, deep learning is mainly about neural networks okay.</li><li><strong>G00001</strong> · Whenever you are
+ using new neural networks you are using deep learning.</li></ul></section><section class="reference"><h3>CON_0006</h3><p>00:01:15.36–00:01:45.18</p><ul><li><strong>G00001</strong> · Within neural networks
+ there are different architectures such as CNN convolutional neural network, RNN
+ recurrent neural network transformer very important architecture folks because
+ transformer is the reason behind modern-day generative AI and agentic AI
+ boom and when you say gen AI okay or agentic AI that is nothing but an
+ application of AI okay it is an application or a use case of AI which</li></ul></section><section class="reference"><h3>CON_0007</h3><p>00:01:15.36–00:01:45.18</p><ul><li><strong>G00001</strong> · Within neural networks
+ there are different architectures such as CNN convolutional neural network, RNN
+ recurrent neural network transformer very important architecture folks because
+ transformer is the reason behind modern-day generative AI and agentic AI
+ boom and when you say gen AI okay or agentic AI that is nothing but an
+ application of AI okay it is an application or a use case of AI which</li></ul></section><section class="reference"><h3>CON_0008</h3><p>00:01:15.36–00:01:45.18</p><ul><li><strong>G00001</strong> · Within neural networks
+ there are different architectures such as CNN convolutional neural network, RNN
+ recurrent neural network transformer very important architecture folks because
+ transformer is the reason behind modern-day generative AI and agentic AI
+ boom and when you say gen AI okay or agentic AI that is nothing but an
+ application of AI okay it is an application or a use case of AI which</li></ul></section><section class="reference"><h3>CON_0009</h3><p>00:01:45.18–00:02:20.78</p><ul><li><strong>G00002</strong> · mainly uses this transformer architecture now you might be wondering
+ what comes outside ML which is part of AI but not machine learning well there
+ are couple of things for example regular expression you might build a system
+ which you can call AI based system which is as good as humans or similar to
+ human level performance but it might just use regular expression which has
+ nothing to do with machine learning regular expression is a general concept
+ in computer science then you might have a</li></ul></section><section class="reference"><h3>CON_0010</h3><p>00:02:15.74–00:02:46.64</p><ul><li><strong>G00002</strong> · rule-based system okay robotics I mean
+ in robotics you will deploy a model which is machine learning train but
+ there are other components of robotics where you don&#x27;t have to use machine
+ learning so all of these things help in building this AI system but all of
+ these components are not part of machine learning okay so I hope this
+ diagram helps you clarify certain concepts.</li></ul></section><section class="reference"><h3>CON_0011</h3><p>00:02:57.92–00:03:04.56</p><ul><li><strong>G00002</strong> · Let&#x27;s discuss statistical ML a bit more in detail.</li></ul></section><section class="reference"><h3>CON_0012</h3><p>00:02:40.68–00:02:52.64</p><ul><li><strong>G00002</strong> · Many times when I talk to people they think
+ statistical ML and deep learning is same.</li></ul></section><section class="reference"><h3>CON_0013</h3><p>00:03:12.16–00:03:22.32, 00:03:59.50–00:04:20.46</p><ul><li><strong>G00003</strong> · Have you ever wondered how Google classifies emails as spam and non-spam?</li><li><strong>G00003</strong> · Well when you look at any email you will find some patterns such as limited offer, the email
+ might be coming from a weird looking ID and so on.</li><li><strong>G00003</strong> · You will have all these patterns in your brain that if email has terms
+ such as urgency, lucrative offer, if email is coming from suspicious email id then that is spam
+ otherwise it is non-spam.</li></ul></section><section class="reference"><h3>CON_0014</h3><p>00:03:32.94–00:04:05.28, 00:04:12.88–00:04:20.46, 00:04:20.98–00:04:40.94</p><ul><li><strong>G00003</strong> · so they have hired this person called a
+ spam detector whose job is to classify email as spam and non-spam so what they
+ will do is they will go through some 10,000 past spam emails and 10,000 no
+ spam emails okay they will train this person on all this data and when you
+ look at all this spam and non-spam emails as a human you will try to
+ collect patterns okay.</li><li><strong>G00003</strong> · So the way we can train this human on spam and non-spam emails
+ in exactly the same way you can train a computer program as well.</li><li><strong>G00003</strong> · In computer science there are
+ methodologies which are available using which you can train a computer program okay so that&#x27;s
+ called a training part you give it spam emails no spam emails you know thousands of them and now</li></ul></section><section class="reference"><h3>CON_0015</h3><p>00:05:22.86–00:06:09.80</p><ul><li><strong>G00004</strong> · So in machine learning
+ typically there are two phases the first one is training and the second one
+ where you give computer the real task where it will give you the prediction is
+ called inference.</li><li><strong>G00004</strong> · So if you compare this with a traditional software program if
+ you have done coding you would give your input and your equation to your
+ program your program is essentially your equation right like you write all the
+ code and code is some kind of logic such as y is equal to x squared and then you
+ give input and computer program will give output in machine learning what
+ happens is you give input output see there are three things right input</li></ul></section><section class="reference"><h3>CON_0016</h3><p>00:07:20.52–00:07:35.02</p><ul><li><strong>G00005</strong> · So just to go over the definition machine learning is a
+ discipline in computer science where we train machines on data so that they can
+ make predictions without explicit programming.</li></ul></section><section class="reference"><h3>CON_0017</h3><p>00:06:09.80–00:06:19.16, 00:06:42.58–00:06:47.72, 00:07:12.42–00:07:24.72, 00:07:30.06–00:07:46.04</p><ul><li><strong>G00005</strong> · output and equation so here in traditional software program you gave
+ input and equation and it gave you output in machine learning program you
+ give input output and it will derive
+ terms traditional software program takes
+ an important distinction between traditional software programming and
+ machine learning.</li><li><strong>G00005</strong> · Folks this is very important
+ you don&#x27;t do explicit programming you just give input output and it will come
+ up with the logic or the pattern that it is noticing.</li></ul></section><section class="reference"><h3>CON_0018</h3><p>00:07:52.98–00:08:19.06, 00:08:19.53–00:08:30.66</p><ul><li><strong>G00005</strong> · In machine learning
+ there are two main major categories of tasks that we perform classification and
+ regression.</li><li><strong>G00005</strong> · So when you are classifying email as spam or non-spam or let&#x27;s say
+ you are giving an image and you are asking it to classify as cat and dog or
+ let&#x27;s say you have a damaged car you&#x27;re saying okay whether it&#x27;s damaged or
+ non-damaged this is classification because you have input and you are
+ mapping it to one of the categories and you don&#x27;t need to necessarily have two
+ output categories you can have multiple categories for example in google news
+ you will see that there is a news article and</li><li><strong>G00005</strong> · it will classify it as
+ business sports technology health and so on okay
+ so you can have multiple categories or you can have two categories if you have</li></ul></section><section class="reference"><h3>CON_0019</h3><p>00:07:40.30–00:07:58.36</p><ul><li><strong>G00005</strong> · In machine learning
+ there are two main major categories of tasks that we perform classification and
+ regression.</li></ul></section><section class="reference"><h3>CON_0020</h3><p>00:08:30.66–00:08:33.54, 00:08:34.09–00:08:47.04, 00:10:03.78–00:10:37.90, 00:10:38.28–00:10:46.00</p><ul><li><strong>G00006</strong> · two categories as an output it&#x27;s called binary classification
+ for multiple it&#x27;s called multi-class classification
+ okay so that is classification now let&#x27;s talk about regression
+ So I live here in US and we use this real estate website Zillow.</li><li><strong>G00007</strong> · you have fixed class labels okay let&#x27;s say two categories or four categories
+ spam non-spam etc whereas here it&#x27;s a number so this is called regression okay
+ so classification and regression are two major category of problems that we
+ solve using machine learning and here I have listed a few of these problems okay
+ Now, whenever you have training data, which is input-output pairs, if you think mathematically,
+ then this input is called x, and this output is called y.</li></ul></section><section class="reference"><h3>CON_0021</h3><p>00:09:34.24–00:10:37.90, 00:10:38.28–00:10:46.00</p><ul><li><strong>G00006</strong> · this home should be 925 K okay so this
+ type of problem is called regression because you don&#x27;t have a fixed categories where you are
+ mapping your input okay you your output basically can be any number the price can be 925 k 923 k
+ 921.45 k the the possibilities are so wide in case of classification you have discrete possibilities</li><li><strong>G00007</strong> · you have fixed class labels okay let&#x27;s say two categories or four categories
+ spam non-spam etc whereas here it&#x27;s a number so this is called regression okay
+ so classification and regression are two major category of problems that we
+ solve using machine learning and here I have listed a few of these problems okay
+ Now, whenever you have training data, which is input-output pairs, if you think mathematically,
+ then this input is called x, and this output is called y.</li></ul></section><section class="reference"><h3>CON_0022</h3><p>00:10:03.78–00:10:37.90, 00:10:38.28–00:10:46.00, 00:10:46.12–00:11:32.06</p><ul><li><strong>G00007</strong> · So whenever
+ you have these kind of labels is also called labeled data okay this category
+ of problems is called supervised machine learning there is another category called
+ unsupervised machine learning see in supervised machine learning you have to
+ prepare all this data you have to go through all your past emails tag them as
+ input output so there is a labeling afford here but what if you have huge
+ amount of data and you don&#x27;t want to label it and you just want to do
+ something good out of</li><li><strong>G00007</strong> · you have fixed class labels okay let&#x27;s say two categories or four categories
+ spam non-spam etc whereas here it&#x27;s a number so this is called regression okay
+ so classification and regression are two major category of problems that we
+ solve using machine learning and here I have listed a few of these problems okay
+ Now, whenever you have training data, which is input-output pairs, if you think mathematically,
+ then this input is called x, and this output is called y.</li></ul></section><section class="reference"><h3>CON_0023</h3><p>00:10:46.12–00:11:32.06</p><ul><li><strong>G00007</strong> · So whenever
+ you have these kind of labels is also called labeled data okay this category
+ of problems is called supervised machine learning there is another category called
+ unsupervised machine learning see in supervised machine learning you have to
+ prepare all this data you have to go through all your past emails tag them as
+ input output so there is a labeling afford here but what if you have huge
+ amount of data and you don&#x27;t want to label it and you just want to do
+ something good out of</li></ul></section><section class="reference"><h3>CON_0024</h3><p>00:10:03.78–00:10:37.90, 00:10:38.28–00:10:46.00, 00:10:46.12–00:10:56.28</p><ul><li><strong>G00007</strong> · you have fixed class labels okay let&#x27;s say two categories or four categories
+ spam non-spam etc whereas here it&#x27;s a number so this is called regression okay
+ so classification and regression are two major category of problems that we
+ solve using machine learning and here I have listed a few of these problems okay
+ Now, whenever you have training data, which is input-output pairs, if you think mathematically,
+ then this input is called x, and this output is called y.</li><li><strong>G00007</strong> · So this is x and y pair, right?</li><li><strong>G00007</strong> · So this is x, this is y.</li><li><strong>G00007</strong> · Here again, this entire thing is x, and this is y.</li></ul></section><section class="reference"><h3>CON_0025</h3><p>00:10:46.12–00:11:32.06</p><ul><li><strong>G00007</strong> · So whenever
+ you have these kind of labels is also called labeled data okay this category
+ of problems is called supervised machine learning there is another category called
+ unsupervised machine learning see in supervised machine learning you have to
+ prepare all this data you have to go through all your past emails tag them as
+ input output so there is a labeling afford here but what if you have huge
+ amount of data and you don&#x27;t want to label it and you just want to do
+ something good out of</li></ul></section><section class="reference"><h3>CON_0026</h3><p>00:11:41.64–00:13:42.20 (passage), 00:14:59.39–00:15:22.33</p><ul><li><strong>G00008</strong> · They will put all red color toys in one
+ bucket, blue toys into another bucket or they might put all cars in one bucket
+ and trucks in one bucket or all bigger toys in one bucket smaller toys in one
+ bucket okay so this type of problem-solving is called unsupervised
+ learning because you are not supervising your kid you are not saying hey do this
+ and that they are just using their brain they are noticing some patterns and they
+ categorize them as per that patterns unsupervised machine learning</li><li><strong>G00009</strong> · So just to go over the definition of unsupervised
+ learning we provide an unlabeled data set to an ML program and it learns to identify patterns and
+ structures in data without any explicit guidance.</li></ul></section><section class="reference"><h3>CON_0027</h3><p>00:12:32.74–00:13:13.82, 00:13:42.20–00:13:55.78</p><ul><li><strong>G00008</strong> · They will put all red color toys in one
+ bucket, blue toys into another bucket or they might put all cars in one bucket
+ and trucks in one bucket or all bigger toys in one bucket smaller toys in one
+ bucket okay so this type of problem-solving is called unsupervised
+ learning because you are not supervising your kid you are not saying hey do this
+ and that they are just using their brain they are noticing some patterns and they
+ categorize them as per that patterns unsupervised machine learning</li><li><strong>G00009</strong> · that comes under unsupervised machine learning where you notice patterns for example in legal
+ documents you will have certain type of words or certain format okay.</li><li><strong>G00009</strong> · So that is called clustering.</li><li><strong>G00009</strong> · So unsupervised
+ learning can also be used for outlier detection and at that time we used an algorithm called
+ DB scan there is another algorithm called K means okay so DB scan K means hierarchical
+ clustering all these are unsupervised machine learning algorithms whereas random forest xg boost
+ decision tree linear regression that there&#x27;s an entire list I&#x27;m just showing few of them
+ these are supervised machine learning algorithms and I have classified them into
+ a regression and</li></ul></section><section class="reference"><h3>CON_0028</h3><p>00:14:03.56–00:15:05.89</p><ul><li><strong>G00009</strong> · So we had
+ all these earning estimates we will first cluster them and many times we will notice all these data
+ points c which do not belong to any cluster and we will mark them as outliers.</li><li><strong>G00009</strong> · So unsupervised
+ learning can also be used for outlier detection and at that time we used an algorithm called
+ DB scan there is another algorithm called K means okay so DB scan K means hierarchical
+ clustering all these are unsupervised machine learning algorithms whereas random forest xg boost
+ decision tree linear regression that there&#x27;s an entire list I&#x27;m just showing few of them
+ these are supervised machine learning algorithms and I have classified them into
+ a regression and</li></ul></section><section class="reference"><h3>CON_0029</h3><p>00:15:22.33–00:15:29.85</p><ul><li><strong>G00009</strong> · If we talk about tooling we of course have Python
+ right.</li><li><strong>G00009</strong> · Python is the programming language of AI.</li></ul></section><section class="reference"><h3>CON_0030</h3><p>00:16:12.33–00:16:20.79, 00:16:54.95–00:17:13.23</p><ul><li><strong>G00010</strong> · The first use case is a structured data.</li><li><strong>G00010</strong> · The
+ mean by that is here you have defined rows and columns you have a structure in
+ your data that Tondulmal, Samosa is a vendor, 120k is the amount and so on but
+ when it comes to image it is just bunch of pixels there is no formatting to it
+ same thing with text and video okay there are no like rows and columns it&#x27;s
+ not in a tabular format with very well defined structure so when you give
+ unstructured data to machine learning model for the training it will have
+ problems because here these</li><li><strong>G00010</strong> · columns that you see they are called features okay
+ vendor, amount, location and if you are using statistical machine learning
+ algorithms such as decision tree or xgboost and so on they perform well on</li></ul></section><section class="reference"><h3>CON_0031</h3><p>00:19:24.29–00:19:34.01, 00:19:34.81–00:19:37.19, 00:19:37.95–00:19:41.99, 00:19:42.53–00:19:57.81, 00:19:58.37–00:20:01.05, 00:20:19.93–00:20:44.07, 00:20:45.19–00:21:25.49</p><ul><li><strong>G00012</strong> · You can make this a teamwork and
+ give individual responsibility to each of these students such as Mike can work on detecting only eyes,
+ Mohan can work on detecting only nose.</li><li><strong>G00012</strong> · So each of these students are working on detecting a specific part of
+ Koala&#x27;s body from an image.</li><li><strong>G00012</strong> · So Mike has become now expert Koala eye detector similarly Mohan is an expert Koala
+ nose detector.</li><li><strong>G00013</strong> · You can extend this collaboration further and make Shakib an
+ ear detection expert.</li><li><strong>G00013</strong> · And then these three students can go to Serena and
+ Serena can work on deciding if the image has koalas face or not.</li><li><strong>G00012</strong> · The way they give their decision is by using a score of 0 to 1, where 0 means this is definitely
+ not coalesce eyes, 0.5 means yeah it looks like coalesce eyes, I&#x27;m not sure maybe 50-50,
+ 1 means it is definitely coalesce eyes.</li><li><strong>G00012</strong> · When you give them an image of a lion Mike will say the decision is 0.03 because
+ the eyes they are like round eyeballs but they don&#x27;t look like Koala&#x27;s eyes so 0.03.</li><li><strong>G00013</strong> · Similarly for nose he can just give some score and if the score is more than 0.5 we&#x27;ll say yeah
+ those are Koala&#x27;s eyes or nose.</li><li><strong>G00013</strong> · So once Mike
+ Mohan and Saqib says that this image has koalas eyes nose and ears, Serena can
+ use their work to figure out if the image has koalas face or not.</li></ul></section><section class="reference"><h3>EXP_0005</h3><p>00:25:50.65–00:26:11.61, 00:26:12.37–00:26:18.11, 00:26:26.13–00:26:41.37</p><ul><li><strong>G00014</strong> · The supervisor will
+ tell you if the answer is correct or not and the error feedback is passed on to rest of the group
+ and the group keeps on adjusting their weights or adjusting their brains in a way that
+ they can finally come up with the right answer.</li><li><strong>G00014</strong> · Initially it will make a lot of error but as the time goes it will keep
+ on improving.</li><li><strong>G00014</strong> · Now how it improves the weights for that it uses are derivative and some mathematics.</li></ul></section><section class="reference"><h3>CON_0033</h3><p>00:26:57.73–00:27:28.71</p><ul><li><strong>G00015</strong> · I&#x27;m just showing you one specific example here and let&#x27;s say you are using this
+ neural network for cat and dog detection then it might happen that these middle neurons will
+ detect whether it&#x27;s cats ears eyes tails dog ear eyes tails etc and then the
+ second layer will do higher level pattern detection which is if in the
+ image you have cats ears and eyes that means you have cats head and so on.</li></ul></section><section class="reference"><h3>DEF_0004</h3><p>00:26:57.73–00:27:28.71</p><ul><li><strong>G00015</strong> · I&#x27;m just showing you one specific example here and let&#x27;s say you are using this
+ neural network for cat and dog detection then it might happen that these middle neurons will
+ detect whether it&#x27;s cats ears eyes tails dog ear eyes tails etc and then the
+ second layer will do higher level pattern detection which is if in the
+ image you have cats ears and eyes that means you have cats head and so on.</li></ul></section><section class="reference"><h3>EXM_0006</h3><p>00:27:50.33–00:28:02.79, 00:28:07.03–00:28:13.21, 00:28:13.87–00:28:19.29</p><ul><li><strong>G00015</strong> · You want to travel from Delhi
+ to Bangalore and you have all this map but you will
+ take a specific route.</li><li><strong>G00016</strong> · When you in a Google map, when you say Delhi to Bangalore or you say New York to
+ Washington DC, it will activate certain paths or routes.</li></ul></section><section class="reference"><h3>CON_0032</h3><p>00:28:19.77–00:28:34.39, 00:28:35.01–00:28:36.57, 00:28:37.03–00:28:47.97, 00:28:48.55–00:28:53.95</p><ul><li><strong>G00016</strong> · This green arrow will lead to a decision that it&#x27;s a cat or it&#x27;s a dog
+ So the definition of deep learning is that it&#x27;s a machine learning technique that uses neural networks to learn from
+ large amounts of data
+ Usually in deep learning you need large amount of training samples, okay
+ So it learns from large amount of data mimicking the human brain&#x27;s ability to recognize patterns and
+ make decisions and
+ See it won&#x27;t get everything right all the time.</li></ul></section><section class="reference"><h3>DEF_0003</h3><p>00:28:19.77–00:28:34.39, 00:28:35.01–00:28:36.57, 00:28:37.03–00:28:47.97, 00:28:48.55–00:28:53.95</p><ul><li><strong>G00016</strong> · This green arrow will lead to a decision that it&#x27;s a cat or it&#x27;s a dog
+ So the definition of deep learning is that it&#x27;s a machine learning technique that uses neural networks to learn from
+ large amounts of data
+ Usually in deep learning you need large amount of training samples, okay
+ So it learns from large amount of data mimicking the human brain&#x27;s ability to recognize patterns and
+ make decisions and
+ See it won&#x27;t get everything right all the time.</li></ul></section><section class="reference"><h3>CON_0034</h3><p>00:29:43.47–00:30:51.97</p><ul><li><strong>G00017</strong> · and now you want to figure out, should I use statistical ML or deep
+ learning?</li><li><strong>G00017</strong> · You have to look at bunch of parameters.</li><li><strong>G00017</strong> · Number one, features.</li><li><strong>G00017</strong> · If you
+ have simple features, let&#x27;s say structure data, tables, use statistical machine
+ learning.</li><li><strong>G00017</strong> · But if you have complex features, images, videos and so on, use
+ deep learning.</li><li><strong>G00017</strong> · Having said that this doesn&#x27;t mean that you can&#x27;t use deep
+ learning for structured data.</li><li><strong>G00017</strong> · I have seen problem statements where you have huge
+ amount of structured data and people still use deep learning.</li><li><strong>G00017</strong> · So you have to
+ use these loose guidelines and then you have to experiment to see what approach
+ gives you the best performance.</li><li><strong>G00017</strong> · The second criteria is of course we talked
+ about it like structure versus unstructured data and you notice
+ unstructured data you get videos, audio, text, images and so on.</li><li><strong>G00017</strong> · Then comes data
+ volume.</li><li><strong>G00017</strong> · If you have a huge number of training samples usually deep learning
+ will perform better.</li><li><strong>G00017</strong> · Okay so these are the criterias that you use to choose
+ between statistical ML versus deep learning.</li></ul></section><section class="reference"><h3>CON_0035</h3><p>00:29:39.21–00:31:20.97 (passage), 00:31:20.97–00:31:55.75, 00:31:56.07–00:32:07.61, 00:32:22.11–00:32:26.47, 00:32:27.89–00:32:55.21, 00:32:55.65–00:33:27.33</p><ul><li><strong>G00017</strong> · Now let&#x27;s discuss different
+ types of neural network architectures.</li><li><strong>G00018</strong> · So you are feeding information forward
+ there is no loop nothing information goes from input hidden to output layer
+ okay so this is the picture of a feed forward neural network.</li><li><strong>G00018</strong> · A recurrent
+ neural network is sort of like creating a soup so you put some ingredient then
+ you test it you get some feedback now you add more ingredients or you adjust
+ the ingredients okay.</li><li><strong>G00018</strong> · So here although I am showing you this one picture this is a time dimension.</li><li><strong>G00018</strong> · So the neural
+ network is only one but this a1 output you feed it back okay.</li><li><strong>G00019</strong> · And the third, the most important architecture is Transformer.</li><li><strong>G00019</strong> · I&#x27;m not going to go over Transformer architecture here because it requires a detailed discussion
+ much more in-depth, but this is the reason behind all the modern day gen AI and agent
+ KI application.</li><li><strong>G00019</strong> · So when you&#x27;re using chat GPT to write a poem about samosa you know it writes
+ this nice poem and this kind of creativity is possible because of the underlying model
+ it can be GPT 4 0 0 1 mini whatever so that model is powered by transformer architecture
+ and GPT stands for generative pre-trained transformer UC there&#x27;s a transformer so
+ transformer is a generic architecture and GPT is an architecture which is
+ derived based on transformer or it is an approach that is derived based on</li><li><strong>G00019</strong> · transformer.</li><li><strong>G00019</strong> · So this diagram summarizes different architectures.</li></ul></section><section class="reference"><h3>EXM_0004</h3><p>00:30:03.73–00:30:12.43</p><ul><li><strong>G00017</strong> · If you have a huge number of training samples usually deep learning
+ will perform better.</li><li><strong>G00017</strong> · Okay so these are the criterias that you use to choose
+ between statistical ML versus deep learning.</li><li><strong>G00017</strong> · I have seen problem statements where you have huge
+ amount of structured data and people still use deep learning.</li></ul></section><section class="reference"><h3>CON_0036</h3><p>00:33:27.33–00:33:39.15, 00:34:03.57–00:34:09.13</p><ul><li><strong>G00019</strong> · Now let&#x27;s look
+ at the tooling for deep learning.</li><li><strong>G00019</strong> · So for the framework there are two main
+ frameworks PyTorch by meta, TensorFlow by Google.</li><li><strong>G00019</strong> · PyTorch is by the way more
+ popular nowadays.</li><li><strong>G00019</strong> · TensorFlow gives you
+ which you can have it locally on your
+ allow for samosa.</li></ul></section><section class="reference"><h3>FCT_0005</h3><p>00:32:42.25–00:32:55.21, 00:32:55.65–00:33:27.33</p><ul><li><strong>G00019</strong> · So when you&#x27;re using chat GPT to write a poem about samosa you know it writes
+ this nice poem and this kind of creativity is possible because of the underlying model
+ it can be GPT 4 0 0 1 mini whatever so that model is powered by transformer architecture
+ and GPT stands for generative pre-trained transformer UC there&#x27;s a transformer so
+ transformer is a generic architecture and GPT is an architecture which is
+ derived based on transformer or it is an approach that is derived based on</li><li><strong>G00019</strong> · transformer.</li></ul></section><section class="reference"><h3>CON_0037</h3><p>00:35:12.69–00:35:30.51</p><ul><li><strong>G00020</strong> · To summarize generative AI
+ is a category of AI where the objective is to generate new content.</li><li><strong>G00020</strong> · New content can be
+ text, audio, video, anything.</li></ul></section><section class="reference"><h3>CON_0038</h3><p>00:37:25.53–00:37:37.77, 00:37:38.13–00:38:08.23, 00:38:08.91–00:38:16.75, 00:38:40.67–00:38:44.01</p><ul><li><strong>G00021</strong> · So all these problems where you are not essentially generating a new text but you are doing let&#x27;s
+ say classification or you are doing regression those are considered to be traditional AI
+ and in today&#x27;s world even in the era of gen AI we still use traditional AI because it is
+ lightweight and for certain type of issues using traditional AI makes total sense.</li><li><strong>G00021</strong> · if I have to summarize the differences between these two then the purpose of traditional AI
+ was to analyze predict classify or make decisions whereas generative AI means you are generating
+ new content all together okay so these are the task sample tasks which we already discussed then the
+ type of output in traditional AI is usually yes no labels you know numbers if you are doing
+ health price prediction, etc.</li></ul></section><section class="reference"><h3>CON_0039</h3><p>00:39:14.63–00:39:35.22, 00:40:58.73–00:41:04.89</p><ul><li><strong>G00022</strong> · Modern
+ day generative AI revolution has become possible because of large language
+ models also known as LLMs.</li><li><strong>G00022</strong> · Chat GPT is powered by LLM called GPT.</li><li><strong>G00023</strong> · They are computer programs that use a technology called neural networks to predict the next
+ set of words for a sentence.</li></ul></section><section class="reference"><h3>CON_0041</h3><p>00:40:07.37–00:40:18.81, 00:40:19.33–00:40:30.47, 00:40:31.39–00:40:35.69, 00:40:36.13–00:40:46.87</p><ul><li><strong>G00022</strong> · Peter Pandey has a curious parrot called Buddy.</li><li><strong>G00022</strong> · Buddy has a great mimicking ability and a sharp
+ memory.</li><li><strong>G00022</strong> · Buddy listens to all the conversations in Peter&#x27;s home and can mimic them very accurately.</li><li><strong>G00022</strong> · Now when he hears feeling hungry I would like to have some
+ for this case the probability of him saying biryani cherries or food is much higher than
+ the words such as bicycle or book.</li><li><strong>G00023</strong> · Buddy doesn&#x27;t understand the meaning of biryani or food or cherries the way humans do.</li><li><strong>G00023</strong> · All he is doing is using statistical probability along with some randomness to predict the
+ next word or set of words purely based on the past conversations he has listened to.</li></ul></section><section class="reference"><h3>CON_0040</h3><p>00:40:47.27–00:40:50.01, 00:40:50.49–00:40:54.65, 00:40:55.39–00:40:58.31, 00:40:58.73–00:41:04.89</p><ul><li><strong>G00023</strong> · We can call Buddy a Stochastic Parrot.</li><li><strong>G00023</strong> · Stochastic means a system that is characterized by randomness or probability.</li><li><strong>G00023</strong> · A language model is somewhat like a stochastic parrot.</li><li><strong>G00023</strong> · They are computer programs that use a technology called neural networks to predict the next
+ set of words for a sentence.</li></ul></section><section class="reference"><h3>CON_0042</h3><p>00:42:03.15–00:42:23.95</p><ul><li><strong>G00024</strong> · Like our powerful Parrot Buddy, large language models are trained on a huge volume of data
+ such as Wikipedia articles, Google news articles, online books, and so on.</li><li><strong>G00024</strong> · If you look inside the LLM, you will find a neural network containing trillions of parameters
+ that can capture more complex patterns and nuances in a language.</li></ul></section><section class="reference"><h3>CON_0043</h3><p>00:42:37.49–00:42:49.01, 00:43:22.97–00:43:45.71</p><ul><li><strong>G00024</strong> · On top of statistical predictions, LLM uses another approach called reinforcement learning
+ with human feedback, RLHF.</li><li><strong>G00025</strong> · While training chat GPT, OpenAI used a similar approach of human
+ intervention, RLHF.</li><li><strong>G00025</strong> · OpenAI used a huge workforce of humans to make chat GPT
+ less toxic.</li><li><strong>G00025</strong> · After this training, Buddy doesn&#x27;t use any
+ toxic language.</li></ul></section><section class="reference"><h3>DEF_0053</h3><p>00:42:37.49–00:42:49.01, 00:43:28.25–00:43:45.71</p><ul><li><strong>G00024</strong> · On top of statistical predictions, LLM uses another approach called reinforcement learning
+ with human feedback, RLHF.</li><li><strong>G00025</strong> · While training chat GPT, OpenAI used a similar approach of human
+ intervention, RLHF.</li><li><strong>G00025</strong> · OpenAI used a huge workforce of humans to make chat GPT
+ less toxic.</li></ul></section><section class="reference"><h3>CON_0044</h3><p>00:45:06.24–00:45:27.91, 00:46:32.99–00:47:12.79</p><ul><li><strong>G00025</strong> · You can
+ use something called retrieval augmented generation and you can build a custom
+ chatbot for atlix where you can use any LLM like Claude or GPT let&#x27;s say and</li><li><strong>G00026</strong> · Let&#x27;s say your HR management system has some kind of APIs and you hook these
+ APIs to LLM.</li><li><strong>G00026</strong> · You make these APIs available as tools to your LLM and then LLM can specifically
+ look into your query so when you&#x27;re logging as an employee let&#x27;s say Mohan
+ Sharma is your name it knows that it needs to go into that database and look
+ for Mohan Sharma when I ask this question how many leaves do I have left
+ and then when I say apply for two-day lives it has that context it knows that
+ this is Mohan&#x27;s login and I need to apply for leave for Mohan and it will
+ use this API which has been made</li></ul></section><section class="reference"><h3>CON_0045</h3><p>00:47:12.79–00:47:46.23</p><ul><li><strong>G00027</strong> · LLM which is like a human brain and you are giving it a tool like a screw
+ driver or a phone these are all the tools so you can make all these tools
+ available to LLM and build this chatbot this is called tool augmented chatbot
+ see if you increase complexity to this you can call it an AI agent but I&#x27;m not
+ calling it an agent yet because this doesn&#x27;t have autonomy it is performing a
+ very simple task okay so we call it tool augmented chatbot so the two use cases
+ that we looked at.</li></ul></section><section class="reference"><h3>EXM_0054</h3><p>00:48:23.15–00:48:25.81, 00:48:26.21–00:48:27.89, 00:48:28.73–00:48:33.43, 00:48:34.05–00:48:36.51, 00:48:36.79–00:48:38.99, 00:49:03.07–00:50:02.75</p><ul><li><strong>G00027</strong> · Let&#x27;s say new intern is joining,
+ you&#x27;ll say onboard the new intern joining next Monday.</li><li><strong>G00027</strong> · And see, it will create onboarding checklist,
+ it will schedule welcoming meeting,
+ it will send access request to IT department and so on.</li><li><strong>G00028</strong> · So if you think about this chat board,
+ what it is doing is it is taking the question
+ which is on board the new intern joining
+ to it and it is using this tool to send a welcome meeting then you want to create
+ intense profile in HR management system so let&#x27;s say this is your HRMS right
+ HR management system and the this this will create intense profile in that
+ system then it will create a IT helpdesk ticket to get a Wi-Fi credentials
+ email, Slack access.</li><li><strong>G00028</strong> · The next step can be to order laptop and ID card.</li></ul></section><section class="reference"><h3>CON_0046</h3><p>00:50:17.13–00:50:24.69, 00:50:29.99–00:51:29.47</p><ul><li><strong>G00029</strong> · So this is an agentic AI system and this chatbot is your AI agent.</li><li><strong>G00029</strong> · So previously you were asking a simple question how many leaves do I have left
+ it will say seven okay what is a polysemon C cleave it will say XYZ so it
+ is simple Q&amp;A reactive you&#x27;re asking question it is giving answer very very
+ basic chat board but here it is agentic where you&#x27;re saying onboard the new
+ intern you&#x27;re not giving detailed instructions on how to onboard a new
+ in turn and then so this one the first thing is goal okay so you gave it a goal
+ and you gave it access to the tools</li><li><strong>G00029</strong> · okay so these are all the tools and
+ knowledge and memory all these tools and it will do multi-step reasoning goal
+ oriented planning and it will do autonomous decision-making so it is
+ actually performing the actions if you have simple Q&amp;A chat board it is
+ answering a question.</li></ul></section><section class="reference"><h3>CON_0047</h3><p>00:50:24.69–00:51:10.41</p><ul><li><strong>G00029</strong> · The first one is goal-oriented planning.</li><li><strong>G00029</strong> · So previously you were asking a simple question how many leaves do I have left
+ it will say seven okay what is a polysemon C cleave it will say XYZ so it
+ is simple Q&amp;A reactive you&#x27;re asking question it is giving answer very very
+ basic chat board but here it is agentic where you&#x27;re saying onboard the new
+ intern you&#x27;re not giving detailed instructions on how to onboard a new
+ in turn and then so this one the first thing is goal okay so you gave it a goal
+ and you gave it access to the tools</li></ul></section><section class="reference"><h3>CON_0048</h3><p>00:51:04.09–00:51:29.47</p><ul><li><strong>G00029</strong> · okay so these are all the tools and
+ knowledge and memory all these tools and it will do multi-step reasoning goal
+ oriented planning and it will do autonomous decision-making so it is
+ actually performing the actions if you have simple Q&amp;A chat board it is
+ answering a question.</li></ul></section><section class="reference"><h3>DEF_0005</h3><p>00:51:29.47–00:51:56.33, 00:51:59.71–00:52:24.81</p><ul><li><strong>G00029</strong> · So
+ AI agent and agentic AI is kind of it&#x27;s the same thing basically.</li><li><strong>G00029</strong> · Agent is something that can perceive environment</li></ul></section><section class="reference"><h3>CON_0052</h3><p>00:53:39.73–00:53:54.13, 00:55:10.41–00:55:21.29</p><ul><li><strong>G00030</strong> · You can also build agentic AI system using
+ low code or no code tools such as n8n.</li><li><strong>G00031</strong> · There are other low code tools
+ such as Zapier and so on.</li></ul></section><section class="reference"><h3>CON_0049</h3><p>00:56:08.17–00:56:26.75</p><ul><li><strong>G00032</strong> · To summarize
+ AI agent has access to tools knowledge memory LLM is obviously an integral
+ component of it and it can perform autonomous task okay.</li></ul></section><section class="reference"><h3>CON_0050</h3><p>00:57:56.21–00:57:59.27, 00:58:18.51–00:58:30.17, 01:00:29.03–01:00:36.91</p><ul><li><strong>G00032</strong> · So that is your
+ autonomously when you give your goal to it then you&#x27;re building this
+ agentic AI system.</li><li><strong>G00033</strong> · Agentic AI can have one or more agents.</li></ul></section><section class="reference"><h3>CON_0051</h3><p>00:58:23.93–00:58:42.89, 01:00:06.21–01:00:17.13</p><ul><li><strong>G00032</strong> · So the purpose for generative AI is just to create new content right whatever
+ interaction you are doing with chat GPT asking a question it is generating answer that is generative
+ AI.</li><li><strong>G00033</strong> · When you use chat GPT for simple
+ Q&amp;A that is generative AI.</li></ul></section></main></html>

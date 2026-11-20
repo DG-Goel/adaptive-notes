@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-58dfb24f-1314-4912-a201-8d791427330f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Effect of Higher Epsilon on Domestic Goods and Consumer Behavior\",\n      \"source_segment_ids\": [\"FCT_0068\", \"FCT_0069\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"type\": \"table\",\n          \"title\": \"Effect of Higher Epsilon\",\n          \"headers\": [\"Item\", \"Result\"],\n          \"rows\": [\n            [\"If epsilon goes up, domestic goods become more expensive.\", \"Domestic goods become more expensive.\"],\n            [\"Consumers will buy more abroad when domestic goods become more expensive.\", \"Consumers buy more abroad.\"]\n          ],\n          \"source_segment_ids\": [\"FCT_0068\", \"FCT_0069\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0068\",\n              \"quote\": \"If epsilon goes up, domestic goods become more expensive.\"\n            },\n            {\n              \"note_id\": \"FCT_0069\",\n              \"quote\": \"Consumers will buy more abroad when domestic goods become more expensive.\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"title\": \"Impact of Flatter Demand Curve on Multiplier\",\n      \"source_segment_ids\": [\"FCT_0070\", \"FCT_0074\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"type\": \"table\",\n          \"title\": \"Flatter Slope and Multiplier\",\n          \"headers\": [\"Item\", \"Effect\"],\n          \"rows\": [\n            [\"The demand curve becomes flatter after adjusting for imports.\", \"Flatter demand curve.\"],\n            [\"A flatter slope will mean a lower multiplier.\", \"Lower multiplier.\"]\n          ],\n          \"source_segment_ids\": [\"FCT_0070\", \"FCT_0074\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0070\",\n              \"quote\": \"The demand curve becomes flatter after adjusting for imports.\"\n            },\n            {\n              \"note_id\": \"FCT_0074\",\n              \"quote\": \"A flatter slope will mean a lower multiplier.\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visual units. Look for comparisons etc. Possible table: compare when epsilon up -> domestic goods expensive vs consumers buy abroad. Also import function vs export etc. We have statements with evidence quotes. Use each note as source. Create table with Item and Effect. Use notes FCT_0068, FCT_0069. Provide payload.\n\nAlso maybe table comparing slope flatter vs multiplier lower: FCT_0070, FCT_0074.\n\nCreate two table units.\n\nProvide JSON units array.\n\nEach unit includes title, source_segment_ids (list), mode \"visual_only\", remaining_text null, visuals array with one visual each.\n\nInclude evidence entries per row.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794767156,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 648,
+    "prompt_tokens": 2586,
+    "total_tokens": 3234,
+    "completion_time": 1.339990024,
+    "completion_tokens_details": {
+      "reasoning_tokens": 141
+    },
+    "prompt_time": 0.120925874,
+    "prompt_tokens_details": null,
+    "queue_time": 0.318071892,
+    "total_time": 1.460915898
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g7avt8e8yrbajckzex07ex",
+    "debug": null,
+    "seed": 1428565393,
+    "usage": null
+  }
+}

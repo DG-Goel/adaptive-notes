@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-a0574d34-2518-4cdf-994e-40babcfb83fb",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"fact1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"That's the logic.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"It happens somewhat slowly.\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Traders immediately will go to the US dollar bond because they see that they have a higher return.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact4\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"That advantage disappears once the currency appreciates enough.\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact5\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The condition makes the expected return the same.\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What does the speaker refer to when saying \\\"That's the logic\\\"?\",\n      \"answer\": \"It refers to the reasoning behind the described financial condition.\",\n      \"explanation\": \"The excerpt Q0000 states \\\"That's the logic,\\\" indicating the speaker is summarizing the reasoning presented.\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0000\"],\n      \"topic\": \"logic summary\"\n    },\n    {\n      \"question\": \"According to the source, how do traders react when they see a higher return on US dollar bonds?\",\n      \"answer\": \"They immediately move to US dollar bonds.\",\n      \"explanation\": \"Excerpt Q0003 says traders will go to the US dollar bond because they see a higher return.\",\n      \"bloom_level\": \"Understand\",\n      \"refs\": [\"Q0003\"],\n      \"topic\": \"trader behavior\"\n    },\n    {\n      \"question\": \"What happens to the advantage of moving to US dollar bonds once the currency appreciates enough?\",\n      \"answer\": \"The advantage disappears.\",\n      \"explanation\": \"Excerpt Q0005 states that once the currency appreciates enough, the advantage disappears.\",\n      \"bloom_level\": \"Apply\",\n      \"refs\": [\"Q0005\"],\n      \"topic\": \"currency appreciation effect\"\n    },\n    {\n      \"question\": \"What condition is described as making the expected return the same?\",\n      \"answer\": \"A condition that equalizes expected returns.\",\n      \"explanation\": \"Excerpt Q0007 explicitly says \\\"It's making the expected return the same,\\\" indicating a condition that equalizes returns.\",\n      \"bloom_level\": \"Analyze\",\n      \"refs\": [\"Q0007\"],\n      \"topic\": \"expected return parity\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract concepts etc. The excerpts are vague. Likely can only make facts? We have statements about logic, slow happening, traders go to US dollar bond, condition making expected return same. We can create rows for facts. Provide abstentions for missing required fields. Quiz need 4 questions supported. Use facts.\n\nCreate item maybe \"concepts\" with concept_name \"expected return parity\" etc but not directly stated. Might be unsupported. Safer: facts.\n\nCreate rows: each fact_text from excerpts.\n\nCategory facts, field fact_text, element0, part value. availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, related_refs [].\n\nAdd rows for each excerpt.\n\nAbstentions: none needed.\n\nQuiz: 4 questions about these facts.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794729663,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5082008e34",
+  "usage": {
+    "completion_tokens": 1081,
+    "prompt_tokens": 2456,
+    "total_tokens": 3537,
+    "completion_time": 2.293695094,
+    "completion_tokens_details": {
+      "reasoning_tokens": 162
+    },
+    "prompt_time": 0.113579286,
+    "prompt_tokens_details": null,
+    "queue_time": 0.283629562,
+    "total_time": 2.40727438
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f3jmg3edwsef2beawrbh2d",
+    "debug": null,
+    "seed": 639990874,
+    "usage": null
+  }
+}

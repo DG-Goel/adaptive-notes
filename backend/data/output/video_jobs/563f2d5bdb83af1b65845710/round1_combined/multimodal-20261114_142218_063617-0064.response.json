@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-1d8d9036-ec56-4d7a-a349-0dad051ba3bf",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Interest rate increase effect in open economy\",\n      \"refs\": [\"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"An increase in the interest rate is contractionary for two reasons: it reduces investment and it appreciates the exchange rate, which lowers net exports.\",\n      \"refs\": [\"Q0009\", \"Q0015\", \"Q0016\", \"Q0017\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc based on excerpts. The content describes monetary policy in open economy: two channels: investment effect and exchange rate effect. So we can create concept: \"Interest rate increase effect in open economy\". Provide concept_name and content. Use primary excerpts. Provide rows.\n\nWe'll create item \"item1\". category concepts, fields concept_name and content. Use excerpts Q0008 etc.\n\nRow for concept_name: text \"Interest rate increase effect in open economy\". refs Q0008? maybe Q0008 mentions contractionary for two reasons. Use that. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\nRow for content: combine explanation: \"An increase in the interest rate is contractionary for two reasons: it reduces investment and it appreciates the exchange rate, which lowers net exports.\" Use multiple excerpts: Q0009, Q0015, Q0016, Q0017. Need one row per claim? content field is single text. Use combined. refs list all. basis explicit. availability SOURCE_SUPPORTED. literal_kind verbal. instructional_role null. related_refs [].\n\nAlso maybe concept for \"Exchange rate appreciation effect\". Could add separate concept. But at least one concept required.\n\nNo other categories needed.\n\nProvide abstentions empty and excluded empty.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794666282,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5a93aea882",
+  "usage": {
+    "completion_tokens": 540,
+    "prompt_tokens": 3273,
+    "total_tokens": 3813,
+    "completion_time": 1.129762004,
+    "completion_tokens_details": {
+      "reasoning_tokens": 269
+    },
+    "prompt_time": 0.165233478,
+    "prompt_tokens_details": null,
+    "queue_time": 0.159476181,
+    "total_time": 1.294995482
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7d74dqze8kvd7ekz3qt4h5d",
+    "debug": null,
+    "seed": 150633455,
+    "usage": null
+  }
+}

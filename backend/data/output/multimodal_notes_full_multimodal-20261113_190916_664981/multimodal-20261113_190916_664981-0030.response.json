@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-01b1c8ce-722b-4b7d-8369-a0e6d02cd5bc",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"concept_name\": {\n        \"text\": \"Neural network as a collection of specialized detectors (students) for image features\",\n        \"refs\": [\"Q0005\", \"Q0006\", \"Q0009\", \"Q0012\", \"Q0013\"],\n        \"claims\": [\n          {\n            \"text\": \"Each student (e.g., Mike, Mohan, Saqib) is assigned to detect a specific part of an animal's body (eyes, nose, ears) from an image.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0005\", \"Q0006\", \"Q0009\", \"Q0012\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"The detectors output a confidence score between 0 and 1 indicating how likely the feature is present.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0007\", \"Q0010\", \"Q0011\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"content\": {\n        \"text\": \"Combining individual feature scores to decide if the whole face is present\",\n        \"refs\": [\"Q0014\", \"Q0015\", \"Q0016\", \"Q0017\", \"Q0018\"],\n        \"claims\": [\n          {\n            \"text\": \"Serena (the final classifier) uses the scores from the feature detectors to determine whether the image contains the animal's face.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"continuation\",\n            \"refs\": [\"Q0014\", \"Q0015\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"Weight can be assigned to different features (e.g., more weight to face) when aggregating scores.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0017\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"aliases\": null\n    },\n    {\n      \"concept_name\": {\n        \"text\": \"Training detectors by supervised learning\",\n        \"refs\": [\"Q0008\", \"Q0019\", \"Q0020\", \"Q0021\"],\n        \"claims\": [\n          {\n            \"text\": \"Students (detectors) are trained on labeled examples to recognize their assigned feature.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0008\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"Before training, detectors make random guesses; after training they produce meaningful confidence scores.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"continuation\",\n            \"refs\": [\"Q0019\", \"Q0020\", \"Q0021\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"content\": {\n        \"text\": \"Supervision provides correct answers to guide learning\",\n        \"refs\": [\"Q0022\", \"Q0023\"],\n        \"claims\": [\n          {\n            \"text\": \"A supervisor knows the correct answer and can provide feedback to the final classifier after it makes a decision.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0022\", \"Q0023\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"aliases\": null\n    },\n    {\n      \"concept_name\": {\n        \"text\": \"Limitations of static pixel‑based rules for object detection\",\n        \"refs\": [\"Q0003\", \"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"Static algorithms that check fixed pixel colors or positions fail because features can appear at different locations and scales.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"identified_mistake\",\n            \"refs\": [\"Q0003\", \"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"content\": {\n        \"text\": \"Neural networks learn spatially invariant representations to overcome this limitation\",\n        \"refs\": [\"Q0002\"],\n        \"claims\": [\n          {\n            \"text\": \"The brain (and neural networks) can recognize patterns in parallel and irrespective of exact position, enabling robust object detection.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0002\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"aliases\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output concepts extracted. Identify teaching points: neural network as students detecting parts, scores 0-1, combining for face detection. Create items with concept_name and content. Provide claims with explicit basis. Use refs Q00x. Let's craft few concepts: \"Neural network composed of specialized detectors\" etc. Provide abstentions none. Excluded none.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794597572,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "usage": {
+    "completion_tokens": 1239,
+    "prompt_tokens": 3654,
+    "total_tokens": 4893,
+    "completion_time": 3.383766851,
+    "completion_tokens_details": {
+      "reasoning_tokens": 75
+    },
+    "prompt_time": 0.98080841,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "queue_time": 0.166185594,
+    "total_time": 4.364575261
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b5kf9deyarrq3fj4n6bmt5",
+    "debug": null,
+    "seed": 552180092,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-2e98cf0c-8b92-40c0-b259-ca1914bd3fb6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Interest Rate Differential and Expected Exchange Rate\",\n      \"source_segment_ids\": [\"CON_0032\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"type\": \"table\",\n          \"source_segment_ids\": [\"CON_0032\"],\n          \"needs_review\": false,\n          \"missing_information\": false,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0032\",\n              \"quote\": \"If the domestic interest rate is above the international interest rate, the exchange rate today must be above the expected exchange rate, giving an expected depreciation that compensates for the higher domestic bond yield.\"\n            },\n            {\n              \"note_id\": \"CON_0032\",\n              \"quote\": \"Conversely, if the domestic bond is paying a lower interest rate, then the exchange rate today is very depreciated because you have to expect it to appreciate in order to compensate for the interest rate differential.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Domestic vs. Foreign Interest Rate Effects\",\n            \"headers\": [\"Domestic Interest vs. Foreign\", \"Spot Exchange Rate vs. Expected\", \"Implication\"],\n            \"rows\": [\n              [\n                \"Domestic > Foreign\",\n                \"Spot > Expected\",\n                \"Expected depreciation of domestic currency\"\n              ],\n              [\n                \"Domestic = Foreign\",\n                \"Spot = Expected\",\n                \"No expected currency movement\"\n              ],\n              [\n                \"Domestic < Foreign\",\n                \"Spot < Expected\",\n                \"Expected appreciation of domestic currency\"\n              ]\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce units with visuals. Look for tables or flowcharts. Content includes UIP condition, interest rate parity relationships. Could make table comparing scenarios: domestic interest > foreign etc. Use evidence quotes. Provide one table visual.\n\nWe must include source_segment_ids (note ids). Use primary notes IDs. Provide evidence with note_id and exact quote.\n\nPick table: rows for cases: domestic interest > foreign, domestic interest = foreign, domestic interest < foreign. Need quotes containing those statements. In CON_0032 we have excerpts describing both cases. Use that.\n\nCreate unit with title \"Interest Rate Differential and Exchange Rate Expectations\". mode text_and_visual? Since we provide visual plus remaining text? We can set mode \"text_and_visual\". remaining_text maybe empty.\n\nProvide visual payload type table.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794758680,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5a93aea882",
+  "usage": {
+    "completion_tokens": 525,
+    "prompt_tokens": 3537,
+    "total_tokens": 4062,
+    "completion_time": 1.084378994,
+    "completion_tokens_details": {
+      "reasoning_tokens": 163
+    },
+    "prompt_time": 0.174510235,
+    "prompt_tokens_details": null,
+    "queue_time": 0.158808414,
+    "total_time": 1.258889229
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7fz8682ejdrxnw4ex5nn43k",
+    "debug": null,
+    "seed": 1647227716,
+    "usage": null
+  }
+}

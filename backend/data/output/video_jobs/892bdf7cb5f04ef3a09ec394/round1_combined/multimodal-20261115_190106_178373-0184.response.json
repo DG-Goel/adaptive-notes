@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-87f0cf1f-9db8-41bd-8f6e-502cf7904d74",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Depreciating the exchange rate\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"moves the net export function up\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Expansionary effect of currency depreciation\",\n      \"refs\": [\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"depreciation is expansionary because it shifts expenditures of residents and foreigners toward domestic goods\",\n      \"refs\": [\"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Trade‑balance‑focused policy with currency depreciation\",\n      \"refs\": [\"Q0004\", \"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"to fix the trade balance after depreciation you must set a target and adjust policy accordingly\",\n      \"refs\": [\"Q0005\", \"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what happens to the net export function when the exchange rate is depreciated?\",\n      \"answer\": \"It moves up.\",\n      \"distractors\": [\n        \"It moves down.\",\n        \"It stays unchanged.\",\n        \"It becomes more volatile.\"\n      ],\n      \"explanation\": \"The primary excerpt states that depreciating the exchange rate moves the net export function up (Q0000).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Effect of exchange‑rate depreciation on net exports\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"Why does the speaker describe currency depreciation as expansionary?\",\n      \"answer\": \"Because it shifts expenditures of residents and foreigners toward domestic goods.\",\n      \"distractors\": [\n        \"Because it reduces domestic production costs.\",\n        \"Because it lowers interest rates automatically.\",\n        \"Because it increases foreign investment directly.\"\n      ],\n      \"explanation\": \"The speaker says depreciation is expansionary because it relocates expenditure of residents and foreigners toward domestic goods (Q0012).\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"Expansionary impact of depreciation\",\n      \"refs\": [\"Q0012\"]\n    },\n    {\n      \"question\": \"If a country wants to improve its trade deficit without increasing output, what additional policy does the speaker suggest?\",\n      \"answer\": \"Reduce government expenditure.\",\n      \"distractors\": [\n        \"Increase tariffs on imports.\",\n        \"Raise interest rates.\",\n        \"Implement quantitative easing.\"\n      ],\n      \"explanation\": \"The speaker mentions a typical package: depreciate the currency and also reduce government expenditure (Q0009).\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"Policy mix for trade‑balance improvement\",\n      \"refs\": [\"Q0009\"]\n    },\n    {\n      \"question\": \"What does the speaker imply is necessary after deciding to depreciate the currency to fix the trade balance?\",\n      \"answer\": \"Set a target for the trade balance and adjust policy accordingly.\",\n      \"distractors\": [\n        \"Increase export subsidies immediately.\",\n        \"Raise the exchange rate back quickly.\",\n        \"Leave the trade balance to self‑correct without further action.\"\n      ],\n      \"explanation\": \"The speaker says you have to set that (a target) after depreciation if you only want to fix the trade balance (Q0005, Q0006).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Steps after currency depreciation\",\n      \"refs\": [\"Q0005\", \"Q0006\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. The excerpts talk about depreciation, net export, expansionary effect, trade balance. We can create concepts: \"depreciate exchange rate moves net export function up\". So concept_name and content. Also maybe fact. We'll create rows for concepts. Use item label e.g., \"item1\". Provide rows.\n\nQuiz: need 4 questions about teaching. We can ask: What is effect of depreciating exchange rate on net exports? etc.\n\nCreate rows: concept content and name.\n\nRow1: item \"item1\", category concepts, field concept_name, element0, part value, text \"Depreciating the exchange rate\", refs [\"Q0000\"], basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\nRow2: same item, field content, text \"moves the net export function up\", refs [\"Q0000\"], etc.\n\nAlso maybe concept about expansionary effect: concept_name \"Expansionary effect of currency depreciation\", content \"depreciation is expansionary because it shifts expenditures toward domestic goods\", refs Q0011 etc.\n\nAdd rows.\n\nQuiz 4 questions.\n\nProvide JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794769680,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_86dc843b12",
+  "usage": {
+    "completion_tokens": 1462,
+    "prompt_tokens": 2495,
+    "total_tokens": 3957,
+    "completion_time": 3.088861258,
+    "completion_tokens_details": {
+      "reasoning_tokens": 236
+    },
+    "prompt_time": 0.109913458,
+    "prompt_tokens_details": null,
+    "queue_time": 0.166521911,
+    "total_time": 3.198774716
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g9qtzfe8kvfw0akmhkhen9",
+    "debug": null,
+    "seed": 513702872,
+    "usage": null
+  }
+}

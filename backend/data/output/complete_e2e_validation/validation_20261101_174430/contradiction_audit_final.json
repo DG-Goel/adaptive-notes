@@ -1,0 +1,131 @@
+{
+  "timestamp": "20261101_175000",
+  "total_contradictions": 10,
+  "classification_summary": {
+    "REQUIRES_MANUAL_REVIEW": 9,
+    "GENUINE_ERROR": 1
+  },
+  "contradictions": [
+    {
+      "knowledge_id": "CON_0167",
+      "claim_text": "Array elements are accessed with an index that starts at 0.",
+      "source_unit_ids": [
+        "T0019"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['0'] but source has ['1', '2', '10', '3']",
+      "classification": "REQUIRES_MANUAL_REVIEW",
+      "evidence": "Needs detailed inspection of claim vs source.",
+      "recommendation": "Review source text and determine if claim is supported.",
+      "source_text_snippet": "[T0019]: that we cover in this tutorial in this tutorial we're going to talk about arrays in Java we use arrays to store a list of items like a list of numbers or a list of people or a list of messages let me show you so here we have an integer variable you want to convert this to an integer array so right after int we add square brackets now we have a compilation error because we're storing a single number in this array so to fix this we need to remove one because arrays are reference types we ..."
+    },
+    {
+      "knowledge_id": "CON_0205",
+      "claim_text": "Manual conversion of a value to a different type using a cast syntax, e.g., (double) 5.",
+      "source_unit_ids": [
+        "T0024"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['5'] but source has ['1', '2', '3', '4', '3.1']",
+      "classification": "REQUIRES_MANUAL_REVIEW",
+      "evidence": "Needs detailed inspection of claim vs source.",
+      "recommendation": "Review source text and determine if claim is supported.",
+      "source_text_snippet": "[T0024]: be aware of the order of these operations parentheses always have the highest priority then we have multiplication and division and finally we have addition and subtraction in this tutorial we're going to talk about casting and type conversion so I'm gonna declare a short variable call X and set it to 1 and then I'm gonna declare an integer called Y and set it to X plus 2 in this example we're adding a short to an integer what do you think the result is gonna be well let's take a look s..."
+    },
+    {
+      "knowledge_id": "DEF_0239",
+      "claim_text": "Method that returns a double value uniformly distributed between 0.0 (inclusive) and 1.0 (exclusive).",
+      "source_unit_ids": [
+        "T0026"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['0.0', '1.0'] but source has ['3.1', '1.1', '2', '1', '0', '100']",
+      "classification": "REQUIRES_MANUAL_REVIEW",
+      "evidence": "Needs detailed inspection of claim vs source.",
+      "recommendation": "Review source text and determine if claim is supported.",
+      "source_text_snippet": "[T0026]: Java reports errors to our programs we're going to talk about exceptions in detail in the future so if the user enters one point one we cannot use this method instead we should use float or double let's say double because that's easier double parse double so we parse this number as a double add two to it and then store the result in a double and then we will get 3.1 beautiful next we're gonna look at the math class for performing mathematical operations in this tutorial we're going to l..."
+    },
+    {
+      "knowledge_id": "EXM_0215",
+      "claim_text": "double result = (double)5 / 2; // result is 2.5",
+      "source_unit_ids": [
+        "T0024"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['5', '2.5'] but source has ['1', '2', '3', '4', '3.1']",
+      "classification": "REQUIRES_MANUAL_REVIEW",
+      "evidence": "Needs detailed inspection of claim vs source.",
+      "recommendation": "Review source text and determine if claim is supported.",
+      "source_text_snippet": "[T0024]: be aware of the order of these operations parentheses always have the highest priority then we have multiplication and division and finally we have addition and subtraction in this tutorial we're going to talk about casting and type conversion so I'm gonna declare a short variable call X and set it to 1 and then I'm gonna declare an integer called Y and set it to X plus 2 in this example we're adding a short to an integer what do you think the result is gonna be well let's take a look s..."
+    },
+    {
+      "knowledge_id": "EXM_0273",
+      "claim_text": "Calling next() twice on input \"Marsh Hamid\" returns \"Marsh\" then \"Hamid\".",
+      "source_unit_ids": [
+        "T0030"
+      ],
+      "verifier_reason": "Entity mismatch: claimed entities ['Marsh Hamid'] not found in source",
+      "classification": "REQUIRES_MANUAL_REVIEW",
+      "evidence": "Needs detailed inspection of claim vs source.",
+      "recommendation": "Review source text and determine if claim is supported.",
+      "source_text_snippet": "[T0030]: byte for reading a byte we have next line for reading a line we have next boolean for ending a boolean and so on so let's call the next byte method and see what we get this returns a byte value so we can store it in a byte variable let's say someone's age and then we print it on a terminal saying you are plus h so here we're concatenating a string with a byte and in this scenario we're gonna have implicit casting or implicit type conversion so Java will automatically convert this byte v..."
+    },
+    {
+      "knowledge_id": "EXM_0380",
+      "claim_text": "Input 5 → fizz; Input 10 → fizz; Input 3 → buzz; Input 15 → fizzbuzz; Input 2 → 2",
+      "source_unit_ids": [
+        "T0041",
+        "T0042"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['10', '2'] but source has ['3', '5', '0', '15', '12', '14']",
+      "classification": "REQUIRES_MANUAL_REVIEW",
+      "evidence": "Needs detailed inspection of claim vs source.",
+      "recommendation": "Review source text and determine if claim is supported.",
+      "source_text_snippet": "[T0041]: one so as you can see with sweet statements we can execute different code depending on the value of an expression all right now it's time for an exercise this exercise I'm gonna give you is a popular interview question so I want you to write a program that behaves like this here we should enter a number if this number is divisible by five we get this so if you run the program again and enter ten once again we get fit now if this number is divisible by 3 we get buzz if this number is div..."
+    },
+    {
+      "knowledge_id": "EXM_0403",
+      "claim_text": "Printing \"hello world\" inside a for loop with I from 0 to 4 results in five lines of output.",
+      "source_unit_ids": [
+        "T0043"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['4'] but source has ['0']",
+      "classification": "REQUIRES_MANUAL_REVIEW",
+      "evidence": "Needs detailed inspection of claim vs source.",
+      "recommendation": "Review source text and determine if claim is supported.",
+      "source_text_snippet": "[T0043]: code like this this looks very ugly that's where we use loops in Java we have a few different types of loops the first one that I'm going to talk about in this tutorial is for loops so let's see how we can use a for loop here I'm going to delete all this code you start by typing the for keyword followed by parentheses and inside these parentheses we need to do three things first we need to declare a loop or counter variable so let's declare a variable called I and initialize it to 0 qui..."
+    },
+    {
+      "knowledge_id": "EXM_0431",
+      "claim_text": "An infinite while‑true loop asks for the principal; if the entered value is between 1,000 and 1,000,000, break exits the loop.",
+      "source_unit_ids": [
+        "T0048"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['000'] but source has ['1,000', '1', '0', '30', '3.9', '1000']",
+      "classification": "REQUIRES_MANUAL_REVIEW",
+      "evidence": "Needs detailed inspection of claim vs source.",
+      "recommendation": "Review source text and determine if claim is supported.",
+      "source_text_snippet": "[T0048]: than zero we're going to decrement I the second limitation of the for each loop is that here we don't have access to the index of each item all we have is this loop variable which holds the value of each item in this array in contrast in our for loops we can access both the index and the actual item so I represents the index of each item and fruits of I returns the item at the given index so if you need the index then you'll have to use the for loop otherwise it's much easier to use the..."
+    },
+    {
+      "knowledge_id": "FCT_0313",
+      "claim_text": "A byte can store values up to 127, sufficient for a period of 30 years.",
+      "source_unit_ids": [
+        "T0033"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['127'] but source has ['30']",
+      "classification": "GENUINE_ERROR",
+      "evidence": "Claim mentions \"127\" which is not in source (Java specification hallucination).",
+      "recommendation": "Remove or revise FCT_0313 to match source text only.",
+      "source_text_snippet": "[T0033]: because the maximum number we want to support is 30 so one byte is sufficient to store the number 30 or anything smaller now based on the number of years we calculate the number of payments note the camel notation here I've capitalized the first letter of every word except the first word so we get the Earth's and x months in here again the code is very self-explanatory once we collect all this data then we calculate the mortgage so we get a principal multiplied by this expression and th..."
+    },
+    {
+      "knowledge_id": "PRC_0253",
+      "claim_text": "Call Math.random() to obtain a double in [0,1). Multiply the result by 100. Cast the final expression to int.",
+      "source_unit_ids": [
+        "T0027"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['0,1'] but source has ['0', '100', '8', '4', '0.1', '10']",
+      "classification": "REQUIRES_MANUAL_REVIEW",
+      "evidence": "Needs detailed inspection of claim vs source.",
+      "recommendation": "Review source text and determine if claim is supported.",
+      "source_text_snippet": "[T0027]: different number between 0 to 100 now if we don't want these digits after the decimal point we can either round this number or cast it to an integer let me show you so we can call math that round and pass the result of this expression so I'm gonna cut this add parenthesis to call the round method and then paste that expression now let's run this code so every time we get a double we still have the fraction here so we can change the type to an INT now we have a compilation error because ..."
+    }
+  ]
+}

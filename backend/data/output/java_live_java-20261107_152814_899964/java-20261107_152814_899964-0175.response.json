@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-72601832-0e90-4a3c-a036-c8fca91464b4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"excluded\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"Implicit casting cannot convert a long value to an int because the long occupies 8 bytes while the int occupies 4 bytes.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"When a method returns a long but the variable is declared as an int, implicit casting fails; explicit casting must be used if the programmer knows the value fits into the smaller type.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"Casting a double result of Math.random() directly to int yields zero.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Math.random() returns a value between 0 (inclusive) and 1 (exclusive); casting that double to int truncates the fractional part, producing 0.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"To obtain an integer between 0 and 100 from Math.random(), the entire expression must be multiplied before casting.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Wrap the expression (Math.random() * 100) in parentheses and then cast the result to int; otherwise only the fractional part is cast, resulting in zero.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"Formatting numbers as currency or percentages in Java.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Java provides the NumberFormat class (in java.text) to format numbers with currency symbols, grouping separators, or as percentages.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Math.round returns a long value.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Casting a long to an int requires explicit casting.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Math.random() generates a double between 0 (inclusive) and 1 (exclusive).\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays except extracted items. From excerpts, we can extract facts, explanations, procedures maybe. Content about rounding, casting, formatting numbers. We can create facts: \"Method Math.round returns a long.\" etc. Need cite refs. Let's produce facts.\n\nAlso explanation: about implicit vs explicit casting. Provide explanation_text with refs Q0001.\n\nProcedure: formatting numbers using NumberFormat? Not enough detail. Might skip.\n\nWe'll output facts and explanations. No definitions. No formulas. No concepts. Excluded empty.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065642,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 742,
+    "prompt_tokens": 3044,
+    "total_tokens": 3786,
+    "completion_time": 1.551393285,
+    "completion_tokens_details": {
+      "reasoning_tokens": 113
+    },
+    "prompt_time": 0.18415126,
+    "prompt_tokens_details": null,
+    "queue_time": 0.32894886,
+    "total_time": 1.735544545
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6vaab38e0rs1qxcdzyvbgr8",
+    "debug": null,
+    "seed": 1684527083,
+    "usage": null
+  }
+}

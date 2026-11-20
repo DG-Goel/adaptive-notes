@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-48dd709d-e86e-41c9-97d2-e3d2d0803080",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Java was developed by James Gosling in 1995 at Sun Microsystems which was later acquired by Oracle in 2010.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"It was originally called oke after an oak tree that stood outside Gosling's office later it was renamed to green and was finally renamed to Java inspired by Java coffee that's why its logo looks like this.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"We have four editions of Java for building different kinds of applications.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java standard edition is the core Java platform which is what we're using in this course it contains all of the libraries that every Java developer must learn.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java Enterprise Edition is used for building very large-scale and distributed systems it is built on top of java standard edition and provides additional libraries for building fault tolerant distributed multi-tiered software.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java micro Edition is a subset of Java standard edition designed for mobile devices so it has libraries specific to mobile devices.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java card is used in smart cards.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The latest version of Java is Java standard edition 12 which was released just a few months ago in March 2019.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java has close to 9 million developers worldwide.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Currently about 3 billion mobile phones run Java as well as 120 million TV sets and every blu-ray player according to indeed.com.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The average salary of a Java developer is just over $100,000 per year in the US.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays except extracted items. From excerpts we have facts about Java. Extract facts. Each fact_text must be exact quote? Must copy text. So create facts entries for each distinct fact. Probably combine sentences. We'll create separate fact for each statement.\n\nFact1: \"Java was developed by James Gosling in 1995 at Sun Microsystems which was later acquired by Oracle in 2010.\" refs Q0002.\n\nFact2: \"It was originally called oke after an oak tree that stood outside Gosling's office later it was renamed to green and was finally renamed to Java inspired by Java coffee that's why its logo looks like this.\" refs Q0002.\n\nFact3: \"We have four editions of Java for building different kinds of applications.\" refs Q0002.\n\nFact4: \"Java standard edition is the core Java platform which is what we're using in this course it contains all of the libraries that every Java developer must learn.\" refs Q0003.\n\nFact5: \"Java Enterprise Edition is used for building very large-scale and distributed systems it is built on top of java standard edition and provides additional libraries for building fault tolerant distributed multi-tiered software.\" refs Q0003.\n\nFact6: \"Java micro Edition is a subset of Java standard edition designed for mobile devices so it has libraries specific to mobile devices.\" refs Q0003.\n\nFact7: \"Java card is used in smart cards.\" refs Q0003.\n\nFact8: \"The latest version of Java is Java standard edition 12 which was released just a few months ago in March 2019.\" refs Q0004.\n\nFact9: \"Java has close to 9 million developers worldwide.\" refs Q0004.\n\nFact10: \"Currently about 3 billion mobile phones run Java as well as 120 million TV sets and every blu-ray player according to indeed.com.\" refs Q0004.\n\nFact11: \"The average salary of a Java developer is just over $100,000 per year in the US.\" refs Q0004.\n\nAlso maybe fact about course structure not needed.\n\nWe'll output facts array with these. No other categories. excluded empty.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065384,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5a93aea882",
+  "usage": {
+    "completion_tokens": 1124,
+    "prompt_tokens": 3048,
+    "total_tokens": 4172,
+    "completion_time": 2.341218177,
+    "completion_tokens_details": {
+      "reasoning_tokens": 435
+    },
+    "prompt_time": 0.133584263,
+    "prompt_tokens_details": null,
+    "queue_time": 0.166518002,
+    "total_time": 2.47480244
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6va2edxe6bb7zk0wahtkykz",
+    "debug": null,
+    "seed": 1337611642,
+    "usage": null
+  }
+}

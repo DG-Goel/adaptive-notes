@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-45d6e74c-e014-4fb9-9395-c33b1137b2a1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"spam detector\",\n        \"refs\": [\"Q0003\"],\n        \"claims\": [\n          {\n            \"text\": \"a person called a spam detector whose job is to classify email as spam and non-spam\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0003\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"You will have all these patterns in your brain that if email has terms such as urgency, lucrative offer, if email is coming from suspicious email id then that is spam otherwise it is non-spam.\",\n        \"refs\": [\"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"spam is identified by patterns such as urgency, lucrative offer, or a suspicious email ID\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"training (in machine learning)\",\n        \"refs\": [\"Q0006\"],\n        \"claims\": [\n          {\n            \"text\": \"the part where you give a computer program thousands of spam and non‑spam emails so it can learn patterns\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0006\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"In computer science there are methodologies which are available using which you can train a computer program; that is called a training part where you give it spam emails and non‑spam emails.\",\n        \"refs\": [\"Q0006\"],\n        \"claims\": [\n          {\n            \"text\": \"training is the process of providing a computer program with labeled examples (spam and non‑spam emails) so it can learn to classify future emails\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0006\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"inference (in machine learning)\",\n        \"refs\": [\"Q0010\"],\n        \"claims\": [\n          {\n            \"text\": \"the phase where you give the computer a new input and it provides a prediction\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0010\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"the second phase where you give the computer the real task and it gives you the prediction, called inference.\",\n        \"refs\": [\"Q0010\"],\n        \"claims\": [\n          {\n            \"text\": \"inference is the stage after training where the model makes predictions on new inputs\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0010\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract definitions. Look for any definition statements. The excerpts talk about spam classification, training, etc. Definitions maybe: \"spam detector\" definition? \"training part\"? Identify primary teaching definitions. Likely definitions: definition of spam classification patterns, definition of training a computer program, definition of inference. We'll extract those as items.\n\nCreate items with term and definition_text. Need claims with text, refs, basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role prerequisite? maybe explanation. We'll include.\n\nIf uncertain, maybe abstain for missing. We'll include three definitions.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794595659,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_64b2f1c926",
+  "usage": {
+    "completion_tokens": 948,
+    "prompt_tokens": 3083,
+    "total_tokens": 4031,
+    "completion_time": 2.032987224,
+    "completion_tokens_details": {
+      "reasoning_tokens": 120
+    },
+    "prompt_time": 0.214328274,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "queue_time": 0.3214075,
+    "total_time": 2.247315498
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b3s4q9e2fr54c0fdsqht6r",
+    "debug": null,
+    "seed": 1403591230,
+    "usage": null
+  }
+}

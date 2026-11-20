@@ -1,0 +1,75 @@
+{
+  "operations": [
+    {
+      "id": "multimodal-20261110_085740_952649-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "slot": 1,
+      "request_hash": "6069cd46d38678bf6063b7370a7ed7c06cb30c14e5b97147a26c534650618447",
+      "state": "failed",
+      "created": 1794301099.5559003,
+      "completed": 1794301108.1108987,
+      "validation": "failed"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "multimodal-20261110_085740_952649-0000",
+      "number": 1,
+      "created": 1794301099.5559003,
+      "dispatched": 1794301107.8512828,
+      "completed": 1794301108.1047196,
+      "input_reserved": 3644,
+      "output_reserved": 3000,
+      "input_actual": null,
+      "output_actual": null,
+      "reasoning": null,
+      "charged": 6644,
+      "http_status": 400,
+      "finish": null,
+      "duration": 0.25,
+      "category": "permanent_request"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 818,
+      "request_id": "multimodal-20261110_085740_952649-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794301099.558903,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"7cd83b2aca537f217a657d43082fd9794a3e13487c29dd84bb5b8b6bdc539c26\", \"estimated_input\": 3644, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 819,
+      "request_id": "multimodal-20261110_085740_952649-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794301107.8512828,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 820,
+      "request_id": "multimodal-20261110_085740_952649-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794301108.1047196,
+      "event": "provider_error",
+      "details": "{\"category\": \"permanent_request\", \"error_code\": null, \"message\": \"Groq API call failed: Error code: 400 - {'error': {'message': \\\"invalid JSON schema for response_format: 'canonical_evidence_first_12a_v1': /$defs/value/anyOf: anyOf disambiguation failed: anyOf: key-set-exclusion: required key 'text' from one variant appears in another's properties (variant 0 vs 1) [keyset_required_overlap]\\\", 'type': 'invalid_request_error', 'param': 'response_format', 'schema_path': '/$defs/value/anyOf', 'schema_path_segments': ['$', '$defs', 'value', 'anyOf'], 'schema_kind': 'anyOf', 'schema_code': 'keyset_required_overlap'}}\", \"retry_after\": null, \"retry_after_header\": null, \"retryable\": false, \"status_code\": 400}"
+    },
+    {
+      "sequence": 821,
+      "request_id": "multimodal-20261110_085740_952649-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794301108.1118999,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"failed\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"not_passed\"}"
+    },
+    {
+      "sequence": 822,
+      "request_id": "multimodal-20261110_085740_952649-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794301108.1179,
+      "event": "operation_error",
+      "details": "{\"message\": \"Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \\\"invalid JSON schema for response_format: 'canonical_evidence_first_12a_v1': /$defs/value/anyOf: anyOf disambiguation failed: anyOf: key-set-exclusion: required key 'text' from one variant appears in another's properties (variant 0 vs 1) [keyset_required_overlap]\\\", 'type': 'invalid_request_error', 'param': 'response_format', 'schema_path': '/$defs/value/anyOf', 'schema_path_segments': ['$', '$defs', 'value', 'anyOf'], 'schema_kind': 'anyOf', 'schema_code': 'keyset_required_overlap'}}\", \"type\": \"GroqProviderError\"}"
+    }
+  ]
+}

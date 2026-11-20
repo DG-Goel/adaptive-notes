@@ -1,0 +1,244 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0302",
+        "FCT_0303",
+        "FCT_0304",
+        "FCT_0305"
+      ],
+      "reason": "Source note is unresolved"
+    },
+    {
+      "note_ids": [
+        "FCT_0311",
+        "FCT_0316",
+        "FCT_0317",
+        "FCT_0318",
+        "FCT_0320",
+        "FCT_0324",
+        "FCT_0325",
+        "FCT_0326"
+      ],
+      "reason": "Unsupported visual label or value"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Input Validation Flow",
+      "source_segment_ids": [
+        "FCT_0302",
+        "FCT_0303",
+        "FCT_0304",
+        "FCT_0305"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0302",
+            "FCT_0303",
+            "FCT_0304",
+            "FCT_0305"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0302",
+              "exact_quote": "The first problem is input validation."
+            },
+            {
+              "note_id": "FCT_0303",
+              "exact_quote": "If a non‑numeric value is entered, the program crashes."
+            },
+            {
+              "note_id": "FCT_0304",
+              "exact_quote": "as another example, if we enter a negative value here, our program is not going to behave properly."
+            },
+            {
+              "note_id": "FCT_0305",
+              "exact_quote": "Conditional statements can be used to rescue the program from these input issues."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Input Validation Flow",
+            "direction": "top-down",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "Start"
+              },
+              {
+                "id": "n2",
+                "label": "Read input"
+              },
+              {
+                "id": "n3",
+                "label": "Is numeric?"
+              },
+              {
+                "id": "n4",
+                "label": "Is non‑negative?"
+              },
+              {
+                "id": "n5",
+                "label": "Proceed"
+              },
+              {
+                "id": "n6",
+                "label": "Show error & repeat"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": ""
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": ""
+              },
+              {
+                "from": "n3",
+                "to": "n4",
+                "label": "yes"
+              },
+              {
+                "from": "n3",
+                "to": "n6",
+                "label": "no"
+              },
+              {
+                "from": "n4",
+                "to": "n5",
+                "label": "yes"
+              },
+              {
+                "from": "n4",
+                "to": "n6",
+                "label": "no"
+              },
+              {
+                "from": "n6",
+                "to": "n2",
+                "label": "retry"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Comparison Operators Table",
+      "source_segment_ids": [
+        "FCT_0311",
+        "FCT_0316",
+        "FCT_0317",
+        "FCT_0318",
+        "FCT_0320",
+        "FCT_0324",
+        "FCT_0325",
+        "FCT_0326"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0311",
+            "FCT_0316",
+            "FCT_0317",
+            "FCT_0318",
+            "FCT_0320",
+            "FCT_0324",
+            "FCT_0325",
+            "FCT_0326"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0311",
+              "exact_quote": "Comparison operators are used for comparing values."
+            },
+            {
+              "note_id": "FCT_0316",
+              "exact_quote": "The section begins with a discussion of comparison operators."
+            },
+            {
+              "note_id": "FCT_0317",
+              "exact_quote": "Comparison operators are used to compare primitive values."
+            },
+            {
+              "note_id": "FCT_0318",
+              "exact_quote": "Equality can be tested by checking whether two variables, such as x and y, are equal."
+            },
+            {
+              "note_id": "FCT_0320",
+              "exact_quote": "The equality operator (==) compares two values and returns true when they are equal."
+            },
+            {
+              "note_id": "FCT_0324",
+              "exact_quote": "The inequality operator ( != ) returns false when the two operands are equal."
+            },
+            {
+              "note_id": "FCT_0325",
+              "exact_quote": "The expression x is not equal to y returns false when x and y have the same value."
+            },
+            {
+              "note_id": "FCT_0326",
+              "exact_quote": "Java provides the comparison operators: greater than (>), greater than or equal to (>=), less than (<), and less than or equal to (<=)."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Java Comparison Operators",
+            "headers": [
+              "Operator",
+              "Name",
+              "Result when true"
+            ],
+            "rows": [
+              [
+                "==",
+                "Equality",
+                "true if operands are equal"
+              ],
+              [
+                "!=",
+                "Inequality",
+                "true if operands are not equal"
+              ],
+              [
+                ">",
+                "Greater than",
+                "true if left > right"
+              ],
+              [
+                ">=",
+                "Greater than or equal",
+                "true if left ≥ right"
+              ],
+              [
+                "<",
+                "Less than",
+                "true if left < right"
+              ],
+              [
+                "<=",
+                "Less than or equal",
+                "true if left ≤ right"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

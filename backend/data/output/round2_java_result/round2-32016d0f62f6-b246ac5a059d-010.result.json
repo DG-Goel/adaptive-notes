@@ -1,0 +1,294 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0339",
+        "FCT_0342",
+        "FCT_0340"
+      ],
+      "reason": "Invalid diagram direction"
+    },
+    {
+      "note_ids": [
+        "FCT_0332",
+        "FCT_0333",
+        "FCT_0334"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    },
+    {
+      "note_ids": [
+        "FCT_0365",
+        "FCT_0368",
+        "FCT_0369",
+        "FCT_0370"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "If‑else‑if Chain Structure",
+      "source_segment_ids": [
+        "FCT_0339",
+        "FCT_0342",
+        "FCT_0340"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0339",
+            "FCT_0342",
+            "FCT_0340"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0339",
+              "exact_quote": "An if‑else‑if chain can have three clauses: the initial if, one or more else if, and an optional else."
+            },
+            {
+              "note_id": "FCT_0342",
+              "exact_quote": "If the first condition of an if‑else chain is false, the program proceeds to evaluate the next else if condition."
+            },
+            {
+              "note_id": "FCT_0340",
+              "exact_quote": "When removing unnecessary braces, align else if and else clauses at the same indentation level as the if clause for better readability."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "If‑else‑if Chain",
+            "direction": "top-down",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "if (condition1)"
+              },
+              {
+                "id": "n2",
+                "label": "else if (condition2)"
+              },
+              {
+                "id": "n3",
+                "label": "else"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": "false"
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": "false"
+              },
+              {
+                "from": "n1",
+                "to": "end1",
+                "label": "true"
+              },
+              {
+                "from": "n2",
+                "to": "end2",
+                "label": "true"
+              },
+              {
+                "from": "n3",
+                "to": "end3",
+                "label": "true"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Logical AND Truth Table",
+      "source_segment_ids": [
+        "FCT_0332",
+        "FCT_0333",
+        "FCT_0334"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0332",
+            "FCT_0333",
+            "FCT_0334"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0332",
+              "exact_quote": "The && operator represents the logical AND operator in Java."
+            },
+            {
+              "note_id": "FCT_0333",
+              "exact_quote": "If both conditions are true, the result of the boolean expression is true; otherwise it is false."
+            },
+            {
+              "note_id": "FCT_0334",
+              "exact_quote": "Java evaluates a boolean expression from left to right and uses short‑circuit evaluation: if the first condition is false, the second condition is not evaluated."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "&& Operator Truth Table",
+            "headers": [
+              "Condition A",
+              "Condition B",
+              "Result (A && B)"
+            ],
+            "rows": [
+              [
+                "true",
+                "true",
+                "true"
+              ],
+              [
+                "true",
+                "false",
+                "false"
+              ],
+              [
+                "false",
+                "true",
+                "false"
+              ],
+              [
+                "false",
+                "false",
+                "false"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Switch Statement Flow with Break",
+      "source_segment_ids": [
+        "FCT_0365",
+        "FCT_0368",
+        "FCT_0369",
+        "FCT_0370"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0365",
+            "FCT_0368",
+            "FCT_0369",
+            "FCT_0370"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0365",
+              "exact_quote": "Switch statements execute different parts of code depending on the value of an expression, kind of similar to if statements."
+            },
+            {
+              "note_id": "FCT_0368",
+              "exact_quote": "If we didn't use this break statement here, Java will continue executing these other lines here."
+            },
+            {
+              "note_id": "FCT_0369",
+              "exact_quote": "A default clause in a switch statement executes when none of the previous case clauses match."
+            },
+            {
+              "note_id": "FCT_0370",
+              "exact_quote": "A break statement is not required after the last case in a switch block because execution automatically exits the block."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Switch Statement Execution",
+            "direction": "top-down",
+            "nodes": [
+              {
+                "id": "s",
+                "label": "switch (role)"
+              },
+              {
+                "id": "c1",
+                "label": "case \"admin\""
+              },
+              {
+                "id": "c2",
+                "label": "case \"user\""
+              },
+              {
+                "id": "def",
+                "label": "default"
+              },
+              {
+                "id": "end",
+                "label": "end of switch"
+              }
+            ],
+            "edges": [
+              {
+                "from": "s",
+                "to": "c1",
+                "label": "role == \"admin\""
+              },
+              {
+                "from": "s",
+                "to": "c2",
+                "label": "role == \"user\""
+              },
+              {
+                "from": "s",
+                "to": "def",
+                "label": "no match"
+              },
+              {
+                "from": "c1",
+                "to": "c1b",
+                "label": "execute"
+              },
+              {
+                "from": "c1b",
+                "to": "end",
+                "label": "break"
+              },
+              {
+                "from": "c2",
+                "to": "c2b",
+                "label": "execute"
+              },
+              {
+                "from": "c2b",
+                "to": "end",
+                "label": "break (optional)"
+              },
+              {
+                "from": "def",
+                "to": "defb",
+                "label": "execute"
+              },
+              {
+                "from": "defb",
+                "to": "end",
+                "label": "auto‑exit"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

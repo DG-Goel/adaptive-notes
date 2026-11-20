@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-3f4defdd-5c6c-433c-9f3b-f7ff4904a414",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"Rounding and casting numbers in Java\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Calling Math.round on a double returns a long value; to store it in an int you must explicitly cast because implicit casting cannot reduce the size from 8 bytes to 4 bytes.\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"Effect of casting before rounding\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Casting the result of Math.random() directly to int truncates the fractional part, yielding zero; the cast must be applied after multiplying by 100 and rounding the entire expression.\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"Formatting numbers as currency or percentages in Java\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Java's NumberFormat class (in java.text) provides methods to format numbers with locale‑specific symbols such as dollar signs, commas for thousands, and percent signs.\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Math.round returns a long value.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Implicit casting from long to int is not allowed because it would lose data; explicit casting is required.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Casting a double value between 0 and 1 directly to int yields 0.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [\n    {\n      \"procedure_name\": {\n        \"text\": \"Round a random double to an integer between 0 and 100\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0003\"]\n      },\n      \"steps\": [\n        {\n          \"text\": \"Call Math.random() to obtain a double in [0,1).\",\n          \"refs\": [\"Q0000\"]\n        },\n        {\n          \"text\": \"Multiply the result by 100.\",\n          \"refs\": [\"Q0000\"]\n        },\n        {\n          \"text\": \"Wrap the multiplication in parentheses and pass it to Math.round().\",\n          \"refs\": [\"Q0003\"]\n        },\n        {\n          \"text\": \"Cast the long returned by Math.round() to int.\",\n          \"refs\": [\"Q0001\"]\n        }\n      ],\n      \"prerequisites\": null,\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"This procedure yields an integer between 0 and 100 inclusive.\",\n        \"refs\": [\"Q0003\"]\n      }\n    },\n    {\n      \"procedure_name\": {\n        \"text\": \"Format a number as currency using NumberFormat\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"steps\": [\n        {\n          \"text\": \"Import java.text.NumberFormat.\",\n          \"refs\": [\"Q0004\"]\n        },\n        {\n          \"text\": \"Obtain a NumberFormat instance for currency with NumberFormat.getCurrencyInstance().\",\n          \"refs\": [\"Q0004\"]\n        },\n        {\n          \"text\": \"Call format(number) on the NumberFormat instance to produce a locale‑specific currency string.\",\n          \"refs\": [\"Q0004\"]\n        }\n      ],\n      \"prerequisites\": null,\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"The resulting string includes a dollar sign and appropriate grouping separators.\",\n        \"refs\": [\"Q0004\"]\n      }\n    }\n  ],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts, we have facts, explanations, procedures maybe. Identify teaching: rounding, casting, parentheses, NumberFormat usage. Extract facts: casting int may cause error, need explicit cast. Procedure: how to round and cast. Provide explanations. Use refs.\n\nLet's create facts: \"Method Math.round returns a long.\" from Q0000? It mentions round returns long. Q0001 mentions method returns long but declared int. So fact.\n\nAlso fact: casting double to int without parentheses yields zero. From Q0002.\n\nProcedure: format numbers in Java using NumberFormat. From Q0004/Q0005.\n\nWe'll output arrays.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191539,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_7a4ab09ae4",
+  "usage": {
+    "completion_tokens": 1084,
+    "prompt_tokens": 3151,
+    "total_tokens": 4235,
+    "completion_time": 2.276090413,
+    "completion_tokens_details": {
+      "reasoning_tokens": 138
+    },
+    "prompt_time": 0.154743183,
+    "prompt_tokens_details": null,
+    "queue_time": 0.057999231,
+    "total_time": 2.430833596
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z2ccz8e47sj302e6737x1a",
+    "debug": null,
+    "seed": 600679248,
+    "usage": null
+  }
+}

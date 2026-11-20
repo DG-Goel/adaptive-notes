@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-cf846fee-2615-4ca6-818d-2f6623cd796a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"interest rate differential\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Compensate for the interest rate differential with an expected depreciation of the currency that's paying a higher interest rate.\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When fixing the expected exchange rate, the model requires appreciating the currency today so it can depreciate in the future.\",\n      \"refs\": [\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What must be compensated for when a bond pays a higher interest rate than another?\",\n      \"answer\": \"Expected depreciation of the currency paying the higher interest rate\",\n      \"distractors\": [\n        \"Higher coupon payments on the bond\",\n        \"Immediate appreciation of the currency\",\n        \"Lower credit risk of the issuer\"\n      ],\n      \"explanation\": \"The speaker explains that the interest rate differential should be offset by an expected depreciation of the currency that pays the higher interest rate (Q0009).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"interest rate differential\",\n      \"refs\": [\"Q0009\"]\n    },\n    {\n      \"question\": \"According to the model, how can the expected exchange rate be fixed?\",\n      \"answer\": \"By appreciating the currency today so it can depreciate in the future\",\n      \"distractors\": [\n        \"By holding the currency constant over time\",\n        \"By expecting the currency to appreciate continuously\",\n        \"By ignoring currency movements altogether\"\n      ],\n      \"explanation\": \"The speaker states that fixing the expected exchange rate requires appreciating the currency today, allowing it to depreciate later (Q0010).\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"expected exchange rate fixing\",\n      \"refs\": [\"Q0010\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. The excerpts are mostly discussion, no concrete concepts? Might extract concept: \"interest rate differential\" etc. But no explicit definitions. Likely abstentions for many fields. We can create a concept item with concept_name \"interest rate differential\" and content from Q0009. Provide rows.\n\nLet's create one item id \"item1\". category concepts, fields concept_name and content. Text from Q0009: \"compensate ... for the interest rate differential with an expected depreciation of the currency that's paying a higher interest rate.\" Provide availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, related_refs empty.\n\nAlso maybe fact: \"higher interest rate bond requires offset by expected depreciation\". Use Q0009 as fact_text.\n\nCreate rows for fact.\n\nQuiz: create maybe 2 questions.\n\nQuestion 1: What must be compensated for when a bond pays higher interest than another? Answer: Expected depreciation of the currency paying higher interest. Distractors.\n\nProvide refs Q0009.\n\nQuestion 2: According to the speaker, how can the expected exchange rate be fixed in the model? Answer: By appreciating the currency today so it can depreciate in the future. Use Q0010.\n\nProvide rows accordingly.\n\nNow construct JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794808995,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_86dc843b12",
+  "usage": {
+    "completion_tokens": 911,
+    "prompt_tokens": 2452,
+    "total_tokens": 3363,
+    "completion_time": 2.075873353,
+    "completion_tokens_details": {
+      "reasoning_tokens": 257
+    },
+    "prompt_time": 0.061326664,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "queue_time": 0.163228784,
+    "total_time": 2.137200017
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hf7nd9erat37ymvjpje31r",
+    "debug": null,
+    "seed": 1741147901,
+    "usage": null
+  }
+}

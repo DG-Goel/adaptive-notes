@@ -1,0 +1,1115 @@
+{
+  "document_id": "JAVA",
+  "source_filename": "java.txt",
+  "extraction_timestamp": "2026-11-09T02:30:02.631371+00:00",
+  "concepts": [],
+  "definitions": [
+    {
+      "knowledge_id": "DEF_0001",
+      "knowledge_type": "definition",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "a string value written directly in the source code, e.g., \"hello world\", which the Java compiler treats as an instance of the String class",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "printed the hello world message on a terminal this hello word that we have here is a string or more accurately it's a string literal that means a string value now let's extract this from here and store it in a string variable so cut just before this line we type string now look this string class is defined in Java that Lang package what is interesting is that we don't have an import statement to import this package or import this class because this package is automatically imported so we can use",
+              "fields": [
+                "/term"
+              ],
+              "match_count": 1,
+              "start_char": 0,
+              "end_char": 500,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "printed the hello world message on a terminal this hello word that we have here is a string or more accurately it's a string literal that means a string value now let's extract this from here and store it in a string variable so cut just before this line we type string now look this string class is defined in Java that Lang package what is interesting is that we don't have an import statement to import this package or import this class because this package is automatically imported so we can use",
+              "fields": [
+                "/definition_text"
+              ],
+              "match_count": 1,
+              "start_char": 0,
+              "end_char": 500,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "printed the hello world message on a terminal this hello word that we have here is a string or more accurately it's a string literal that means a string value now let's extract this from here and store it in a string variable so cut just before this line we type string now look this string class is defined in Java that Lang package what is interesting is that we don't have an import statement to import this package or import this class because this package is automatically imported so we can use",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 0,
+              "end_char": 500,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "term": "string literal",
+      "definition_text": "a string value written directly in the source code, e.g., \"hello world\", which the Java compiler treats as an instance of the String class",
+      "context": null
+    },
+    {
+      "knowledge_id": "DEF_0002",
+      "knowledge_type": "definition",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "a type whose variables hold references to objects rather than the actual primitive data values; in Java, classes such as String are reference types",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/term"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/definition_text"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "term": "reference type",
+      "definition_text": "a type whose variables hold references to objects rather than the actual primitive data values; in Java, classes such as String are reference types",
+      "context": null
+    }
+  ],
+  "explanations": [
+    {
+      "knowledge_id": "EXP_0003",
+      "knowledge_type": "explanation",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "String literals are a shorthand that the compiler translates into a String object, so explicitly calling the String constructor adds no benefit and can be omitted",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/topic"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/explanation_text"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "topic": "Why \"new String\" is redundant",
+      "explanation_text": "String literals are a shorthand that the compiler translates into a String object, so explicitly calling the String constructor adds no benefit and can be omitted",
+      "explanation_type": null
+    },
+    {
+      "knowledge_id": "EXP_0004",
+      "knowledge_type": "explanation",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "Because String is a class, its instance methods (e.g., endsWith, startsWith, length) are invoked using the dot (.) syntax on a String variable",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "one using the plus operator so here we can combine this with another string with two exclamation marks and here's the result now because string is a class it has members that we can access using the dot operator so we can type message dot and these are all the methods or functions do find in the string class for example we have this method here ends with and with this we can check to see if our string ends with a character or sequence of characters for example here we can pass their string to",
+              "fields": [
+                "/topic"
+              ],
+              "match_count": 1,
+              "start_char": 1500,
+              "end_char": 1997,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "one using the plus operator so here we can combine this with another string with two exclamation marks and here's the result now because string is a class it has members that we can access using the dot operator so we can type message dot and these are all the methods or functions do find in the string class for example we have this method here ends with and with this we can check to see if our string ends with a character or sequence of characters for example here we can pass their string to",
+              "fields": [
+                "/explanation_text"
+              ],
+              "match_count": 1,
+              "start_char": 1500,
+              "end_char": 1997,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "one using the plus operator so here we can combine this with another string with two exclamation marks and here's the result now because string is a class it has members that we can access using the dot operator so we can type message dot and these are all the methods or functions do find in the string class for example we have this method here ends with and with this we can check to see if our string ends with a character or sequence of characters for example here we can pass their string to",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1500,
+              "end_char": 1997,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "topic": "String methods accessed via dot operator",
+      "explanation_text": "Because String is a class, its instance methods (e.g., endsWith, startsWith, length) are invoked using the dot (.) syntax on a String variable",
+      "explanation_type": null
+    }
+  ],
+  "examples": [
+    {
+      "knowledge_id": "EXM_0005",
+      "knowledge_type": "example",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "String message = \"hello world\"; // using a string literal instead of new String",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/example_text"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/exemplifies"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "exemplifies": "initializing a String variable without the new operator",
+      "example_text": "String message = \"hello world\"; // using a string literal instead of new String",
+      "example_type": null
+    },
+    {
+      "knowledge_id": "EXM_0006",
+      "knowledge_type": "example",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "String combined = message + \"!!\"; // concatenation with + operator",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "on the surface this looks like a primitive type because we are not using the new operator but this is just a shorthand to initialize a string variable strings are reference types in Java but because we use them often there is a short way to create them so now let's pass message to the print line method and run our program you get the exact same result as before beautiful now let's look at a few interesting things that you can do with strings we can concatenate or joining a string with another",
+              "fields": [
+                "/example_text"
+              ],
+              "match_count": 1,
+              "start_char": 1002,
+              "end_char": 1499,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "on the surface this looks like a primitive type because we are not using the new operator but this is just a shorthand to initialize a string variable strings are reference types in Java but because we use them often there is a short way to create them so now let's pass message to the print line method and run our program you get the exact same result as before beautiful now let's look at a few interesting things that you can do with strings we can concatenate or joining a string with another",
+              "fields": [
+                "/exemplifies"
+              ],
+              "match_count": 1,
+              "start_char": 1002,
+              "end_char": 1499,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "on the surface this looks like a primitive type because we are not using the new operator but this is just a shorthand to initialize a string variable strings are reference types in Java but because we use them often there is a short way to create them so now let's pass message to the print line method and run our program you get the exact same result as before beautiful now let's look at a few interesting things that you can do with strings we can concatenate or joining a string with another",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1002,
+              "end_char": 1499,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "exemplifies": "concatenating strings using the plus operator",
+      "example_text": "String combined = message + \"!!\"; // concatenation with + operator",
+      "example_type": null
+    },
+    {
+      "knowledge_id": "EXM_0007",
+      "knowledge_type": "example",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "boolean ends = message.endsWith(\"!!\"); // returns true",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "one using the plus operator so here we can combine this with another string with two exclamation marks and here's the result now because string is a class it has members that we can access using the dot operator so we can type message dot and these are all the methods or functions do find in the string class for example we have this method here ends with and with this we can check to see if our string ends with a character or sequence of characters for example here we can pass their string to",
+              "fields": [
+                "/example_text"
+              ],
+              "match_count": 1,
+              "start_char": 1500,
+              "end_char": 1997,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "see if our message ends with two exclamation marks now instead of printing the message let's print this expression here so let's run the program we get true so this method that we have called here returns a boolean value which can be true or false we also have another method starts with let's take a look now in this case we get false because our message doesn't start with two exclamation marks another useful method is length so we can call that to get the length of a string which is the number",
+              "fields": [
+                "/example_text"
+              ],
+              "match_count": 1,
+              "start_char": 1998,
+              "end_char": 2496,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "one using the plus operator so here we can combine this with another string with two exclamation marks and here's the result now because string is a class it has members that we can access using the dot operator so we can type message dot and these are all the methods or functions do find in the string class for example we have this method here ends with and with this we can check to see if our string ends with a character or sequence of characters for example here we can pass their string to",
+              "fields": [
+                "/exemplifies"
+              ],
+              "match_count": 1,
+              "start_char": 1500,
+              "end_char": 1997,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "see if our message ends with two exclamation marks now instead of printing the message let's print this expression here so let's run the program we get true so this method that we have called here returns a boolean value which can be true or false we also have another method starts with let's take a look now in this case we get false because our message doesn't start with two exclamation marks another useful method is length so we can call that to get the length of a string which is the number",
+              "fields": [
+                "/exemplifies"
+              ],
+              "match_count": 1,
+              "start_char": 1998,
+              "end_char": 2496,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "one using the plus operator so here we can combine this with another string with two exclamation marks and here's the result now because string is a class it has members that we can access using the dot operator so we can type message dot and these are all the methods or functions do find in the string class for example we have this method here ends with and with this we can check to see if our string ends with a character or sequence of characters for example here we can pass their string to",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1500,
+              "end_char": 1997,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "see if our message ends with two exclamation marks now instead of printing the message let's print this expression here so let's run the program we get true so this method that we have called here returns a boolean value which can be true or false we also have another method starts with let's take a look now in this case we get false because our message doesn't start with two exclamation marks another useful method is length so we can call that to get the length of a string which is the number",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1998,
+              "end_char": 2496,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "exemplifies": "checking if a string ends with a given suffix",
+      "example_text": "boolean ends = message.endsWith(\"!!\"); // returns true",
+      "example_type": null
+    },
+    {
+      "knowledge_id": "EXM_0008",
+      "knowledge_type": "example",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "int len = message.length(); // returns 13 for \"hello world!!\"",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "of characters so message dot length take a look so in this string we have 13 characters and this is useful in situations where you want to check the length of the input",
+              "fields": [
+                "/example_text"
+              ],
+              "match_count": 1,
+              "start_char": 2497,
+              "end_char": 2665,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "of characters so message dot length take a look so in this string we have 13 characters and this is useful in situations where you want to check the length of the input",
+              "fields": [
+                "/exemplifies"
+              ],
+              "match_count": 1,
+              "start_char": 2497,
+              "end_char": 2665,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "of characters so message dot length take a look so in this string we have 13 characters and this is useful in situations where you want to check the length of the input",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 2497,
+              "end_char": 2665,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "exemplifies": "retrieving the length of a string",
+      "example_text": "int len = message.length(); // returns 13 for \"hello world!!\"",
+      "example_type": null
+    }
+  ],
+  "facts": [
+    {
+      "knowledge_id": "FCT_0009",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "The String class is defined in the java.lang package, which is automatically imported by the Java compiler",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "printed the hello world message on a terminal this hello word that we have here is a string or more accurately it's a string literal that means a string value now let's extract this from here and store it in a string variable so cut just before this line we type string now look this string class is defined in Java that Lang package what is interesting is that we don't have an import statement to import this package or import this class because this package is automatically imported so we can use",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 0,
+              "end_char": 500,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "printed the hello world message on a terminal this hello word that we have here is a string or more accurately it's a string literal that means a string value now let's extract this from here and store it in a string variable so cut just before this line we type string now look this string class is defined in Java that Lang package what is interesting is that we don't have an import statement to import this package or import this class because this package is automatically imported so we can use",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 0,
+              "end_char": 500,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "The String class is defined in the java.lang package, which is automatically imported by the Java compiler",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0010",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "String variables can be instantiated without the new operator by assigning a string literal",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "String variables can be instantiated without the new operator by assigning a string literal",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0011",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "Using \"new String\" is redundant because the same result is achieved with a string literal",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Using \"new String\" is redundant because the same result is achieved with a string literal",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0012",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "The plus (+) operator concatenates two strings",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "on the surface this looks like a primitive type because we are not using the new operator but this is just a shorthand to initialize a string variable strings are reference types in Java but because we use them often there is a short way to create them so now let's pass message to the print line method and run our program you get the exact same result as before beautiful now let's look at a few interesting things that you can do with strings we can concatenate or joining a string with another",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 1002,
+              "end_char": 1499,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "on the surface this looks like a primitive type because we are not using the new operator but this is just a shorthand to initialize a string variable strings are reference types in Java but because we use them often there is a short way to create them so now let's pass message to the print line method and run our program you get the exact same result as before beautiful now let's look at a few interesting things that you can do with strings we can concatenate or joining a string with another",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1002,
+              "end_char": 1499,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "The plus (+) operator concatenates two strings",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0013",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "The method endsWith returns a boolean indicating whether a string ends with the specified suffix",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "one using the plus operator so here we can combine this with another string with two exclamation marks and here's the result now because string is a class it has members that we can access using the dot operator so we can type message dot and these are all the methods or functions do find in the string class for example we have this method here ends with and with this we can check to see if our string ends with a character or sequence of characters for example here we can pass their string to",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 1500,
+              "end_char": 1997,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "see if our message ends with two exclamation marks now instead of printing the message let's print this expression here so let's run the program we get true so this method that we have called here returns a boolean value which can be true or false we also have another method starts with let's take a look now in this case we get false because our message doesn't start with two exclamation marks another useful method is length so we can call that to get the length of a string which is the number",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 1998,
+              "end_char": 2496,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "one using the plus operator so here we can combine this with another string with two exclamation marks and here's the result now because string is a class it has members that we can access using the dot operator so we can type message dot and these are all the methods or functions do find in the string class for example we have this method here ends with and with this we can check to see if our string ends with a character or sequence of characters for example here we can pass their string to",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1500,
+              "end_char": 1997,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "see if our message ends with two exclamation marks now instead of printing the message let's print this expression here so let's run the program we get true so this method that we have called here returns a boolean value which can be true or false we also have another method starts with let's take a look now in this case we get false because our message doesn't start with two exclamation marks another useful method is length so we can call that to get the length of a string which is the number",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1998,
+              "end_char": 2496,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "The method endsWith returns a boolean indicating whether a string ends with the specified suffix",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0014",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "The method startsWith returns a boolean indicating whether a string starts with the specified prefix",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "see if our message ends with two exclamation marks now instead of printing the message let's print this expression here so let's run the program we get true so this method that we have called here returns a boolean value which can be true or false we also have another method starts with let's take a look now in this case we get false because our message doesn't start with two exclamation marks another useful method is length so we can call that to get the length of a string which is the number",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 1998,
+              "end_char": 2496,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "see if our message ends with two exclamation marks now instead of printing the message let's print this expression here so let's run the program we get true so this method that we have called here returns a boolean value which can be true or false we also have another method starts with let's take a look now in this case we get false because our message doesn't start with two exclamation marks another useful method is length so we can call that to get the length of a string which is the number",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1998,
+              "end_char": 2496,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "The method startsWith returns a boolean indicating whether a string starts with the specified prefix",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0015",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "The method length returns the number of characters in the string",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "see if our message ends with two exclamation marks now instead of printing the message let's print this expression here so let's run the program we get true so this method that we have called here returns a boolean value which can be true or false we also have another method starts with let's take a look now in this case we get false because our message doesn't start with two exclamation marks another useful method is length so we can call that to get the length of a string which is the number",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 1998,
+              "end_char": 2496,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "of characters so message dot length take a look so in this string we have 13 characters and this is useful in situations where you want to check the length of the input",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 2497,
+              "end_char": 2665,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "see if our message ends with two exclamation marks now instead of printing the message let's print this expression here so let's run the program we get true so this method that we have called here returns a boolean value which can be true or false we also have another method starts with let's take a look now in this case we get false because our message doesn't start with two exclamation marks another useful method is length so we can call that to get the length of a string which is the number",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1998,
+              "end_char": 2496,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "of characters so message dot length take a look so in this string we have 13 characters and this is useful in situations where you want to check the length of the input",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 2497,
+              "end_char": 2665,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "The method length returns the number of characters in the string",
+      "fact_type": null
+    }
+  ],
+  "formulas": [],
+  "procedures": [
+    {
+      "knowledge_id": "PRC_0016",
+      "knowledge_type": "procedure",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "String message = \"hello world\";",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/procedure_name"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/steps/0"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/steps/1"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "any classes that are defined in this package now let's declare a variable called message and because this is a reference type we should instantiate this variable using the new operator so Neal string and here in parenthesis we type our message hello world however here we have this little warning take a look new string is redundant because in Java there is a shorter way to initialize string variables let me show you so instead of using the new operator we simply set this to our string literal now",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 501,
+              "end_char": 1001,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "procedure_name": "Declare and initialize a String variable",
+      "steps": [
+        "Choose a variable name, e.g., message",
+        "Assign a string literal to the variable, e.g., message = \"hello world\";"
+      ],
+      "prerequisites": null,
+      "outcomes": null
+    },
+    {
+      "knowledge_id": "PRC_0017",
+      "knowledge_type": "procedure",
+      "source_unit_ids": [
+        "T0016"
+      ],
+      "document_id": "JAVA",
+      "content": "String combined = message + \"!!\";",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0016",
+              "quote": "on the surface this looks like a primitive type because we are not using the new operator but this is just a shorthand to initialize a string variable strings are reference types in Java but because we use them often there is a short way to create them so now let's pass message to the print line method and run our program you get the exact same result as before beautiful now let's look at a few interesting things that you can do with strings we can concatenate or joining a string with another",
+              "fields": [
+                "/procedure_name"
+              ],
+              "match_count": 1,
+              "start_char": 1002,
+              "end_char": 1499,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "on the surface this looks like a primitive type because we are not using the new operator but this is just a shorthand to initialize a string variable strings are reference types in Java but because we use them often there is a short way to create them so now let's pass message to the print line method and run our program you get the exact same result as before beautiful now let's look at a few interesting things that you can do with strings we can concatenate or joining a string with another",
+              "fields": [
+                "/steps/0"
+              ],
+              "match_count": 1,
+              "start_char": 1002,
+              "end_char": 1499,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "on the surface this looks like a primitive type because we are not using the new operator but this is just a shorthand to initialize a string variable strings are reference types in Java but because we use them often there is a short way to create them so now let's pass message to the print line method and run our program you get the exact same result as before beautiful now let's look at a few interesting things that you can do with strings we can concatenate or joining a string with another",
+              "fields": [
+                "/steps/1"
+              ],
+              "match_count": 1,
+              "start_char": 1002,
+              "end_char": 1499,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0016",
+              "quote": "on the surface this looks like a primitive type because we are not using the new operator but this is just a shorthand to initialize a string variable strings are reference types in Java but because we use them often there is a short way to create them so now let's pass message to the print line method and run our program you get the exact same result as before beautiful now let's look at a few interesting things that you can do with strings we can concatenate or joining a string with another",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1002,
+              "end_char": 1499,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0016"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "procedure_name": "Concatenate strings using + operator",
+      "steps": [
+        "Take an existing String variable, e.g., message",
+        "Use the + operator with another string literal or variable, e.g., message + \"!!\""
+      ],
+      "prerequisites": null,
+      "outcomes": null
+    }
+  ],
+  "relationships": [],
+  "total_items": 17,
+  "source_units_processed": 1,
+  "extraction_metadata": null
+}

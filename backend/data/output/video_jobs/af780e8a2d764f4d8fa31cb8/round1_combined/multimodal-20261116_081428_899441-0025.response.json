@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-4f74dec1-144f-4419-b899-2ff0f90a4fc7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"net_exports_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"net exports\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"net_exports_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Net exports is an extra term in the goods‑market equilibrium, representing the difference between exports and imports, and it is a function of three things.\",\n      \"refs\": [\"Q0009\", \"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"domestic_demand_explanation\",\n      \"category\": \"explanations\",\n      \"field\": \"explanation_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Domestic demand for goods differs from total demand because part of residents’ demand is satisfied by imports, while part of domestic producers’ demand comes from foreign buyers (exports).\",\n      \"refs\": [\"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"equilibrium_goods_market\",\n      \"category\": \"explanations\",\n      \"field\": \"explanation_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The equilibrium condition in the goods market equates output to total demand, which includes domestic demand and net exports.\",\n      \"refs\": [\"Q0005\", \"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What does the term \\\"net exports\\\" represent in the goods‑market equilibrium?\",\n      \"answer\": \"The difference between a country’s exports and imports.\",\n      \"distractors\": [\n        \"The total amount of goods produced domestically\",\n        \"The sum of consumption and investment\",\n        \"The level of government spending\"\n      ],\n      \"explanation\": \"The excerpts state that net exports is an extra term in the equilibrium, representing the difference between exports and imports.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"net exports definition\",\n      \"refs\": [\"Q0009\"]\n    },\n    {\n      \"question\": \"According to the lecture, why is domestic demand not identical to total demand for goods?\",\n      \"answer\": \"Because part of residents’ demand is satisfied by imports and part of domestic producers’ demand comes from exports.\",\n      \"distractors\": [\n        \"Because domestic demand includes only government purchases\",\n        \"Because total demand excludes consumption\",\n        \"Because domestic demand equals total output\"\n      ],\n      \"explanation\": \"The speaker explains that residents demand some goods from abroad and domestic producers sell some goods abroad, creating a distinction.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"domestic vs total demand\",\n      \"refs\": [\"Q0008\"]\n    },\n    {\n      \"question\": \"In the goods‑market equilibrium equation, which components are summed to determine output?\",\n      \"answer\": \"Domestic demand plus net exports.\",\n      \"distractors\": [\n        \"Investment plus government spending\",\n        \"Exports minus imports only\",\n        \"Consumption plus imports\"\n      ],\n      \"explanation\": \"The lecture notes that output is determined by demand, which includes domestic demand and the net exports term.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"equilibrium components\",\n      \"refs\": [\"Q0005\", \"Q0009\"]\n    },\n    {\n      \"question\": \"How many factors determine the net exports term according to the speaker?\",\n      \"answer\": \"Three\",\n      \"distractors\": [\n        \"One\",\n        \"Two\",\n        \"Four\"\n      ],\n      \"explanation\": \"The speaker explicitly says that net exports is a function of three things.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"net exports determinants\",\n      \"refs\": [\"Q0010\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. The excerpts talk about equilibrium, net exports. We can extract facts. Create rows for concepts maybe \"net exports\". Provide content rows. Let's make item \"net_exports\". category concepts with concept_name and content. Use excerpts Q0009, Q0010. Also maybe explanation of domestic demand vs net exports. Use explanations.\n\nCreate rows:\n\nitem \"net_exports_concept\"\nfield concept_name element0 part value text \"net exports\"\nrefs Q0009\nbasis explicit availability SOURCE_SUPPORTED literal_kind verbal instructional_role null related_refs []\n\ncontent row element0 part value text from Q0009+Q0010: \"Net exports is an extra term in the goods market equilibrium, representing the difference between exports and imports, and is a function of three things.\" combine. Use refs Q0009,Q0010.\n\nAlso explanation row: item \"net_exports_explanation\" category explanations field explanation_text etc. Use Q0008.\n\nProceed.\n\nQuiz: need 4 questions. Can ask: What does net exports represent? etc.\n\nCreate 4 questions with refs.\n\nNow output JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794817383,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c868cf1eaa",
+  "usage": {
+    "completion_tokens": 1254,
+    "prompt_tokens": 2436,
+    "total_tokens": 3690,
+    "completion_time": 2.62871179,
+    "completion_tokens_details": {
+      "reasoning_tokens": 223
+    },
+    "prompt_time": 0.115364279,
+    "prompt_tokens_details": null,
+    "queue_time": 0.377623516,
+    "total_time": 2.744076069
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hq7mbpek79jhm8wmmx3y5x",
+    "debug": null,
+    "seed": 818885261,
+    "usage": null
+  }
+}

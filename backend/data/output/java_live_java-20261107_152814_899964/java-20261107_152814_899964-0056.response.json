@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-2221ab97-2894-4f10-9366-30e8c35eaa1d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"object-oriented programming\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a style of programming used in most if not all Java applications\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"control flow statements\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"statements that are used to build algorithms, including various types of conditional statements and loops\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"The course is a four-part Java series, each part about three to four hours long.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The first part teaches the fundamentals of programming with Java.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The type system in Java includes primitives, strings, booleans, and arrays.\",\n        \"refs\": [\"Q0000\", \"Q0005\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"By the end of the first part, you will build a mortgage calculator.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The second part covers control flow statements, conditional statements, loops, and adds data validation to the mortgage calculator.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Clean coding techniques are taught to make code clean and maintainable.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The course teaches how to find and fix errors in Java programs and how to package them for deployment.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The third part covers core Java API useful classes in the standard Java library.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The fourth part covers advanced Java features such as streams, threads, and database programming.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"A final project involves building a mortgage calculator on your own using the learned material.\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract educational items: facts, definitions, etc. From excerpts about Java course. Identify facts like \"mortgage calculator project\", \"type system includes primitives, strings, booleans, arrays\". Create schema.\n\nLet's produce facts.\n\nFact1: The course is a four-part Java series, each part 3-4 hours. Cite Q0000.\n\nFact2: First part teaches fundamentals of programming with Java. Q0000.\n\nFact3: Next sections cover type system: primitives, strings, booleans, arrays. Q0000 and Q0005.\n\nFact4: By end of first part, you will build a mortgage calculator. Q0000.\n\nFact5: Second part covers control flow statements, conditional statements, loops, data validation for mortgage calculator. Q0001.\n\nFact6: Clean coding techniques are taught. Q0002.\n\nFact7: Error finding and fixing, packaging for deployment taught. Q0002.\n\nFact8: Second part also covers object-oriented programming. Q0003.\n\nFact9: Third part covers core Java API useful classes. Q0003.\n\nFact10: Fourth part covers advanced features: streams, threads, database programming. Q0004.\n\nAlso definitions? maybe define \"object-oriented programming\" as a style of programming used in most Java applications. Use Q0003.\n\nDefinition term: object-oriented programming. definition text from Q0003.\n\nAlso definition term: control flow statements. from Q0001.\n\nProceed.\n\nCreate JSON with arrays.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065387,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 1020,
+    "prompt_tokens": 3029,
+    "total_tokens": 4049,
+    "completion_time": 2.124469922,
+    "completion_tokens_details": {
+      "reasoning_tokens": 304
+    },
+    "prompt_time": 0.126543926,
+    "prompt_tokens_details": null,
+    "queue_time": 0.328881276,
+    "total_time": 2.251013848
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6va2hvhe4hs0vfwe8vmnf9e",
+    "debug": null,
+    "seed": 1001896040,
+    "usage": null
+  }
+}

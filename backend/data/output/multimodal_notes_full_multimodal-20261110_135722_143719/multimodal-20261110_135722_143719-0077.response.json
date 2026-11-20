@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-bda75d3f-6df0-4400-b544-a01b093f701e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"In Java, a string literal is a string value.\",\n        \"refs\": [\"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"In Java, a string literal is a string value.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The String class is defined in the java.lang package, which is automatically imported.\",\n        \"refs\": [\"Q0006\"],\n        \"claims\": [\n          {\n            \"text\": \"The String class is defined in the java.lang package, which is automatically imported.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0006\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Reference types are copied by reference, whereas primitive types are copied by value.\",\n        \"refs\": [\"Q0002\"],\n        \"claims\": [\n          {\n            \"text\": \"Reference types are copied by reference, whereas primitive types are copied by value.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0002\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"When declaring a String variable, you can instantiate it using the new operator.\",\n        \"refs\": [\"Q0008\", \"Q0009\"],\n        \"claims\": [\n          {\n            \"text\": \"When declaring a String variable, you can instantiate it using the new operator.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0008\", \"Q0009\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Using new String(...) to create a String is redundant because a shorter literal initialization exists.\",\n        \"refs\": [\"Q0012\", \"Q0013\", \"Q0015\"],\n        \"claims\": [\n          {\n            \"text\": \"Using new String(...) to create a String is redundant because a shorter literal initialization exists.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"identified_mistake\",\n            \"refs\": [\"Q0012\", \"Q0013\", \"Q0015\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"A String can be initialized directly with a string literal without using the new operator.\",\n        \"refs\": [\"Q0015\"],\n        \"claims\": [\n          {\n            \"text\": \"A String can be initialized directly with a string literal without using the new operator.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0015\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Strings are reference types in Java.\",\n        \"refs\": [\"Q0017\"],\n        \"claims\": [\n          {\n            \"text\": \"Strings are reference types in Java.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0017\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"String variables can be concatenated using the plus (+) operator.\",\n        \"refs\": [\"Q0022\"],\n        \"claims\": [\n          {\n            \"text\": \"String variables can be concatenated using the plus (+) operator.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0022\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Because String is a class, its members can be accessed using the dot (.) operator.\",\n        \"refs\": [\"Q0024\"],\n        \"claims\": [\n          {\n            \"text\": \"Because String is a class, its members can be accessed using the dot (.) operator.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0024\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce facts from primary teaching. Extract statements like string literal definition, import auto, reference vs primitive, new operator redundant, shorter init, concatenation, dot operator. Create items with claims. Provide refs. Availability SOURCE_SUPPORTED? Since ASR speech, exact code unavailable but statements are explicit. Use SOURCE_SUPPORTED? Probably SOURCE_SUPPORTED as explicit. Provide fact_text text combine? Each fact separate. Provide abstentions none. Excluded none.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794319657,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c800245357",
+  "usage": {
+    "completion_tokens": 1311,
+    "prompt_tokens": 2984,
+    "total_tokens": 4295,
+    "completion_time": 2.76843007,
+    "completion_tokens_details": {
+      "reasoning_tokens": 90
+    },
+    "prompt_time": 0.208759677,
+    "prompt_tokens_details": null,
+    "queue_time": 0.2929924,
+    "total_time": 2.977189747
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72wj7mhe6zty81t2y4rnjc3",
+    "debug": null,
+    "seed": 2130442839,
+    "usage": null
+  }
+}

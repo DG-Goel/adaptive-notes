@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-fda16a09-dc22-4ace-a6a5-14c05ae5b868",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"markdown\":\"# Uncovered Interest Parity (UIP) Condition\\n\\n**Definition**: The *uncovered interest parity* condition states that the difference between the nominal interest rates of two countries equals the expected change in the exchange rate between their currencies.\\n\\n```text\\ni_{domestic} - i_{foreign} = E[\\\\Delta s]\\n```\\n- `i_{domestic}` – nominal interest rate on a domestic‑currency asset.\\n- `i_{foreign}` – nominal interest rate on a foreign‑currency asset.\\n- `E[\\\\Delta s]` – expected percentage change in the spot exchange rate (foreign currency per unit of domestic currency).\\n\\n## Intuition\\n1. **Arbitrage Argument**: An investor should be indifferent between:\\n   - Investing in a domestic asset and earning `i_{domestic}`.\\n   - Converting domestic currency to foreign currency, investing abroad to earn `i_{foreign}`, and later converting back at the expected future exchange rate.\\n2. If the expected exchange‑rate movement does not offset the interest‑rate differential, arbitrage opportunities would arise, forcing markets toward UIP.\\n\\n## Key Implications\\n- **Expectations Matter**: UIP links **interest‑rate differentials** to **expected exchange‑rate movements**, not to actual future rates.\\n- **Risk Neutrality**: The condition assumes investors are risk‑neutral and do not require a risk premium for holding foreign assets.\\n- **Short‑Run vs. Long‑Run**: Empirically, UIP often fails in the short run due to risk premia, transaction costs, and market frictions, but it provides a useful benchmark for long‑run analysis.\\n\\n## Example\\nSuppose the U.S. interest rate is 4 % and the Eurozone rate is 2 %. If investors expect the euro to **depreciate** against the dollar by 2 % over the next year, then:\\n\\n```\\ni_{US} - i_{EU} = 4% - 2% = 2%\\nE[Δs] = 2% (expected depreciation of euro)\\n```\\nThe equality holds, indicating no arbitrage opportunity under UIP.\\n\\n---\\n*Note: The UIP condition is a cornerstone of international finance theory, underpinning models of exchange‑rate dynamics and capital flows.*\"}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output JSON with field markdown. Include the polished notes. The note is just \"uncovered interest parity condition\". Need to expand into textbook-quality markdown. Provide heading, definition, formula, explanation. No new facts? We can include known info but not new facts beyond typical. It's okay. Provide markdown string. Ensure JSON valid, compact.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794767181,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_0708ac49a5",
+  "usage": {
+    "completion_tokens": 580,
+    "prompt_tokens": 256,
+    "total_tokens": 836,
+    "completion_time": 1.2344898,
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_time": 0.011630261,
+    "prompt_tokens_details": null,
+    "queue_time": 0.246584297,
+    "total_time": 1.246120061
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g7bm4ae5vsffm8rh8hm7xw",
+    "debug": null,
+    "seed": 244659199,
+    "usage": null
+  }
+}

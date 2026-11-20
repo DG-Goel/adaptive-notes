@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-3082e61a-71b5-4a65-a490-84db8506bacb",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"ML_Choice_Guidelines\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"features\",\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"ML_Choice_Guidelines\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Number one, features.\",\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"ML_Choice_Guidelines\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"structured data\",\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"ML_Choice_Guidelines\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"If you have simple features, let's say structure data, tables, use statistical machine learning.\",\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"ML_Choice_Guidelines\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"unstructured data\",\n      \"refs\": [\"Q0008\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"ML_Choice_Guidelines\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"The second criteria is of course we talked about it like structure versus unstructured data and you notice unstructured data you get videos, audio, text, images and so on.\",\n      \"refs\": [\"Q0008\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"ML_Choice_Guidelines\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 3,\n      \"part\": \"value\",\n      \"text\": \"data volume\",\n      \"refs\": [\"Q0009\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"ML_Choice_Guidelines\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 3,\n      \"part\": \"value\",\n      \"text\": \"Then comes data volume.\",\n      \"refs\": [\"Q0009\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"ML_Choice_Guidelines\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 4,\n      \"part\": \"value\",\n      \"text\": \"statistical machine learning\",\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"ML_Choice_Guidelines\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 5,\n      \"part\": \"value\",\n      \"text\": \"deep learning\",\n      \"refs\": [\"Q0004\", \"Q0010\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc. From excerpts: guidelines for choosing statistical ML vs deep learning. Could be concepts: \"features\", \"structured data\", \"unstructured data\", \"data volume\". Provide rows.\n\nWe'll create items maybe \"ML_Choice_Guidelines\". Use item id same for all rows.\n\nProvide rows: concept_name, content? For concepts category fields: content, concept_name, aliases. We'll extract concept_name from quotes.\n\nRow1: concept_name \"features\" refs Q0002 basis explicit availability SOURCE_SUPPORTED literal_kind verbal part value text \"features\". category concepts field concept_name element0.\n\nAlso content maybe description: \"Number one, features.\" but that's same. Use content field.\n\nRow for \"structured data\": from Q0003 \"simple features, let's say structure data, tables\". concept_name \"structured data\". content maybe.\n\nRow for \"unstructured data\": Q0008.\n\nRow for \"data volume\": Q0009.\n\nAlso maybe \"deep learning\" and \"statistical machine learning\" as concepts.\n\nAdd rows for definitions? Could define term \"statistical machine learning\". But no explicit definition. Skip.\n\nThus produce rows list and abstentions empty, excluded empty.\n\nProvide item id \"ML_Choice_Guidelines\". Provide related_refs maybe none.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794602557,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_854fa9be4c",
+  "usage": {
+    "completion_tokens": 1365,
+    "prompt_tokens": 2121,
+    "total_tokens": 3486,
+    "completion_time": 2.870591379,
+    "completion_tokens_details": {
+      "reasoning_tokens": 264
+    },
+    "prompt_time": 0.093700451,
+    "prompt_tokens_details": null,
+    "queue_time": 0.292122927,
+    "total_time": 2.96429183
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7babmwfe5hbqh255rhnqprc",
+    "debug": null,
+    "seed": 1489462402,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-d4c129a4-67d9-41a5-be7d-17c1785f74f4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"Scanner class\",\n        \"refs\": [\"Q0003\"],\n        \"claims\": [\n          {\n            \"text\": \"In java we have this scanner class that is defined in java.util package.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"related_refs\": [],\n            \"refs\": [\"Q0003\"]\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"In java we have this scanner class that is defined in java.util package.\",\n        \"refs\": [\"Q0003\"],\n        \"claims\": [\n          {\n            \"text\": \"In java we have this scanner class that is defined in java.util package.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"related_refs\": [],\n            \"refs\": [\"Q0003\"]\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"field\",\n        \"refs\": [\"Q0010\"],\n        \"claims\": [\n          {\n            \"text\": \"A field, as I told you before, is like a variable that we in the class.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"related_refs\": [],\n            \"refs\": [\"Q0010\"]\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"A field, as I told you before, is like a variable that we in the class.\",\n        \"refs\": [\"Q0010\"],\n        \"claims\": [\n          {\n            \"text\": \"A field, as I told you before, is like a variable that we in the class.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"related_refs\": [],\n            \"refs\": [\"Q0010\"]\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need definitions extraction. Look for definition teaching. Excerpts include definition of scanner class, field definition. Identify definitions: Q0003 defines scanner class; Q0010 defines field; maybe Q0011 defines system.out usage. Provide items with term and definition_text. Use primary excerpts. So two definitions: term \"Scanner class\" definition \"In java we have this scanner class that is defined in java.util package.\" term \"field\" definition \"A field, as I told you before, is like a variable that we in the class.\" (text truncated but that's what given). Provide claims with explicit basis, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role prerequisite? Probably definition role. Use null for related_refs. Provide refs list containing the excerpt ref. Context can be null. Provide abstentions empty, excluded empty.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326337,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8ea50c0161",
+  "usage": {
+    "completion_tokens": 684,
+    "prompt_tokens": 2784,
+    "total_tokens": 3468,
+    "completion_time": 1.42230188,
+    "completion_tokens_details": {
+      "reasoning_tokens": 167
+    },
+    "prompt_time": 0.177964995,
+    "prompt_tokens_details": null,
+    "queue_time": 0.326297977,
+    "total_time": 1.600266875
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m732y3wqedbbdnextksjgbkf",
+    "debug": null,
+    "seed": 1610515034,
+    "usage": null
+  }
+}

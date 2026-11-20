@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-db15efca-98b7-4c8d-8cf8-0ad7aaa3c740",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"code editor\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"Java IDE\",\n      \"refs\": [\"Q0005\", \"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Popular Java IDEs are NetBeans, Eclipse, and IntelliJ.\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"examples\",\n      \"field\": \"example_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Download IntelliJ Community Edition from the official website.\",\n      \"refs\": [\"Q0011\", \"Q0014\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"correct_demonstration\",\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows for educational content. Extract concepts: code editors, Java IDEs. definitions none. facts: list of editors. We'll create rows.\n\nItem id maybe \"item1\". Use primary excerpts.\n\nCreate rows:\n\n1 concept_name \"code editor\" from Q0004. availability SOURCE_SUPPORTED? but ASR speech => source limitation says unavailable exact code/formula but text is okay. So SOURCE_SUPPORTED? It's spoken text, okay. basis explicit. literal_kind verbal. instructional_role null. related_refs [].\n\n2 concept_name \"Java IDEs\" from Q0005- Q0006. combine? separate rows.\n\n3 fact_text \"Popular Java IDEs are NetBeans, Eclipse, and IntelliJ.\" refs Q0006. basis explicit. availability SOURCE_SUPPORTED. literal_kind verbal.\n\n4 example maybe exemplifies \"IntelliJ download steps\" but no detailed steps.\n\nWe'll output rows accordingly and abstentions for unavailable code/formula none.\n\nNo excluded.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794316876,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_6b677c2caf",
+  "usage": {
+    "completion_tokens": 650,
+    "prompt_tokens": 2621,
+    "total_tokens": 3271,
+    "completion_time": 1.374871615,
+    "completion_tokens_details": {
+      "reasoning_tokens": 198
+    },
+    "prompt_time": 0.150807522,
+    "prompt_tokens_details": null,
+    "queue_time": 0.253706576,
+    "total_time": 1.525679137
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72sxcx3entban4zmnkgx8bt",
+    "debug": null,
+    "seed": 1416788964,
+    "usage": null
+  }
+}

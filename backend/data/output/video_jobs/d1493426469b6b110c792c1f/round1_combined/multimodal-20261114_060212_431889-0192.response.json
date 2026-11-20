@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-dc6bdeec-ddec-4713-b8bb-a3f804cbd443",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"boolean_operators\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"OR operator\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"boolean_operators\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Java will not evaluate the rest of this expression, it simply returns true.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"boolean_operators\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"AND operator\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"boolean_operators\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"So we need to combine the result of this expression with this boolean value using the and operator.\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"boolean_operators\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"NOT operator\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"boolean_operators\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"Now we want to make sure they don't have criminal record, and this is where we use the not operator.\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc based on excerpts. The excerpts discuss boolean operators: OR, NOT, AND. Likely concepts: \"or operator\", \"and operator\", \"not operator\". Provide rows.\n\nWe'll create items e.g., item \"boolean_operators\". For each concept, fields: concept_name, content? category concepts fields: content, concept_name, aliases. Use excerpts as primary.\n\nCreate rows:\n\nItem \"boolean_operators\", category concepts, field concept_name element0 part value text \"OR operator\". refs Q0000? Q0000 mentions short-circuit? Actually Q0000: \"Java will not evaluate the rest of this expression, it simply returns true.\" That's about OR short-circuit. Use that.\n\nSimilarly NOT operator from Q0009.\n\nAND operator from Q0007.\n\nProvide availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, related_refs empty.\n\nAlso maybe definitions: term \"OR operator\", definition_text from Q0000+Q0001.\n\nBut keep simple.\n\nWe'll output rows for three concepts.\n\nNo abstentions, no excluded.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636663,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_93703442d9",
+  "usage": {
+    "completion_tokens": 890,
+    "prompt_tokens": 3541,
+    "total_tokens": 4431,
+    "completion_time": 1.862685103,
+    "completion_tokens_details": {
+      "reasoning_tokens": 224
+    },
+    "prompt_time": 0.259022877,
+    "prompt_tokens_details": null,
+    "queue_time": 0.382437017,
+    "total_time": 2.12170798
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cawgf7ew3spqjk17zr5rsc",
+    "debug": null,
+    "seed": 188875612,
+    "usage": null
+  }
+}

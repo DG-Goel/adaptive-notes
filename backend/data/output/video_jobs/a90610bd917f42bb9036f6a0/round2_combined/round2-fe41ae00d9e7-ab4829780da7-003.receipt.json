@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-5b0ced5f-3113-427d-a2fe-1923b642953f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Exchange Rate Concepts\",\n      \"source_segment_ids\": [\"FCT_0073\", \"CON_0020\", \"CON_0021\", \"FCT_0072\", \"FCT_0074\", \"CON_0026\", \"FCT_0075\", \"FCT_0076\", \"FCT_0077\", \"FCT_0078\", \"FCT_0079\", \"CON_0032\", \"CON_0029\", \"CON_0030\", \"CON_0031\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0073\", \"CON_0020\", \"CON_0021\", \"FCT_0072\", \"FCT_0074\", \"CON_0026\", \"FCT_0075\", \"FCT_0076\", \"FCT_0077\", \"FCT_0078\", \"FCT_0079\", \"CON_0032\", \"CON_0029\", \"CON_0030\", \"CON_0031\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\"note_id\": \"FCT_0073\", \"quote\": \"people's expectations about future exchange rates move exchanges a lot\"},\n            {\"note_id\": \"CON_0020\", \"quote\": \"we're going to assume for now that the expected exchange rate for t plus 1 is fixed\"},\n            {\"note_id\": \"CON_0021\", \"quote\": \"we all have a common spectral exchange rate, and it's fixed\"},\n            {\"note_id\": \"FCT_0072\", \"quote\": \"the simplification of assuming a fixed expected exchange rate is completely unrealistic\"},\n            {\"note_id\": \"FCT_0074\", \"quote\": \"An increase in the domestic interest rate, other things equal, appreciates the exchange rate.\"},\n            {\"note_id\": \"CON_0026\", \"quote\": \"Increasing the interest rate causes the exchange rate to appreciate.\"},\n            {\"note_id\": \"FCT_0075\", \"quote\": \"If the domestic interest rate is increased while the foreign rate stays the same, the exchange rate will appreciate.\"},\n            {\"note_id\": \"FCT_0076\", \"quote\": \"When domestic and foreign interest rates are equal, there is no expected capital gain or loss from holding the currency.\"},\n            {\"note_id\": \"FCT_0077\", \"quote\": \"the exchange rate is depreciating\"},\n            {\"note_id\": \"FCT_0078\", \"quote\": \"the dollar is depreciating\"},\n            {\"note_id\": \"FCT_0079\", \"quote\": \"the exchange rate will fall\"},\n            {\"note_id\": \"CON_0032\", \"quote\": \"When the exchange rate falls, the domestic currency is said to be depreciating.\"},\n            {\"note_id\": \"CON_0029\", \"quote\": \"When one bond pays a higher interest than another, the higher return must be offset by an expected depreciation of the currency of the higher‑interest bond.\"},\n            {\"note_id\": \"CON_0030\", \"quote\": \"The anticipated loss in value of a currency that is expected to depreciate, used to offset a higher interest rate on a bond denominated in that currency.\"},\n            {\"note_id\": \"CON_0031\", \"quote\": \"when I fix the expected exchange rate, the only way I can do that is by appreciating the currency today so I can expect it to depreciate in the future.\"}\n          ],\n          \"payload\": {\n            \"type\": \"concept_tree\",\n            \"title\": \"Exchange Rate Concepts\",\n            \"nodes\": [\n              {\"id\": \"n0\", \"label\": \"Exchange Rate\"},\n              {\"id\": \"n1\", \"label\": \"Expected Exchange Rate (t+1) – Fixed\", \"parent\": \"n0\"},\n              {\"id\": \"n2\", \"label\": \"Fixed Expectation Unrealistic\", \"parent\": \"n1\"},\n              {\"id\": \"n3\", \"label\": \"Interest Rate Effect\", \"parent\": \"n0\"},\n              {\"id\": \"n4\", \"label\": \"Higher Domestic Rate → Appreciation\", \"parent\": \"n3\"},\n              {\"id\": \"n5\", \"label\": \"Equal Domestic & Foreign Rates → No Gain/Loss\", \"parent\": \"n3\"},\n              {\"id\": \"n6\", \"label\": \"Depreciation\", \"parent\": \"n0\"},\n              {\"id\": \"n7\", \"label\": \"Exchange Rate Falls\", \"parent\": \"n6\"},\n              {\"id\": \"n8\", \"label\": \"Interest Rate Differential\", \"parent\": \"n0\"},\n              {\"id\": \"n9\", \"label\": \"Higher Bond Rate → Expected Currency Depreciation\", \"parent\": \"n8\"},\n              {\"id\": \"n10\", \"label\": \"Expected Depreciation Offsets Higher Rate\", \"parent\": \"n8\"}\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visuals. Identify relationships: expected exchange rate fixed, interest rate effect, appreciation, depreciation. Could make concept tree: topics hierarchy: exchange rate concepts -> appreciation, depreciation, fixed expectation. Also maybe flowchart of interest rate increase -> appreciation. Provide units.\n\nWe'll output JSON with units. Use visual_only where covers all notes? Probably multiple units.\n\nCreate concept_tree titled \"Exchange Rate Concepts\". Nodes: root \"Exchange Rate\". Children: \"Expected Exchange Rate (t+1) – Fixed\" (from CON_0020, CON_0021, FCT_0072, FCT_0073). \"Interest Rate Effect\" with sub: \"Higher Domestic Rate → Appreciation\" (FCT_0074, CON_0026, FCT_0075). \"Equal Rates → No Gain/Loss\" (FCT_0076). \"Depreciation\" (FCT_0077, FCT_0078, FCT_0079, CON_0032). \"Interest Rate Differential\" (CON_0029, CON_0030, CON_0031). Provide evidence quotes.\n\nWe'll need source_segment_ids: note IDs. Provide evidence array with note_id and exact quote.\n\nConstruct payload concept_tree nodes list.\n\nReturn one unit with visual_only.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794813802,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f73454f048",
+  "usage": {
+    "completion_tokens": 1359,
+    "prompt_tokens": 2906,
+    "total_tokens": 4265,
+    "completion_time": 2.84221935,
+    "completion_tokens_details": {
+      "reasoning_tokens": 267
+    },
+    "prompt_time": 0.157829305,
+    "prompt_tokens_details": null,
+    "queue_time": 0.280967671,
+    "total_time": 3.000048655
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hkta9veacagny8hg2e1d1t",
+    "debug": null,
+    "seed": 1290379549,
+    "usage": null
+  }
+}

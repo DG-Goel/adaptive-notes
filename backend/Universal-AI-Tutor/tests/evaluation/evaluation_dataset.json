@@ -1,0 +1,569 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created_date": "2026-11-11",
+    "description": "Comprehensive evaluation dataset for RAG system retrieval quality testing",
+    "num_questions": 55,
+    "categories": ["factual", "conceptual", "procedural", "comparative", "applicative"],
+    "difficulty_levels": ["easy", "medium", "hard"],
+    "documents": [
+      "math_calculus.md",
+      "physics_mechanics.md",
+      "programming_python.md",
+      "theory_algorithms.md",
+      "history_wwii.txt"
+    ]
+  },
+  "questions": [
+    {
+      "id": "Q001",
+      "question": "What is the power rule for derivatives?",
+      "category": "factual",
+      "difficulty": "easy",
+      "document": "math_calculus.md",
+      "expected_answer": "For any function f(x) = x^n where n is a constant, the derivative is d/dx(x^n) = nx^(n-1)",
+      "relevant_sections": ["Derivatives", "Power Rule"],
+      "keywords": ["power rule", "derivative", "x^n"]
+    },
+    {
+      "id": "Q002",
+      "question": "State Newton's Second Law of Motion.",
+      "category": "factual",
+      "difficulty": "easy",
+      "document": "physics_mechanics.md",
+      "expected_answer": "The acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass: F = ma",
+      "relevant_sections": ["Newton's Laws of Motion", "Second Law (F = ma)"],
+      "keywords": ["Newton", "second law", "F = ma", "force", "mass", "acceleration"]
+    },
+    {
+      "id": "Q003",
+      "question": "What are the basic numeric data types in Python?",
+      "category": "factual",
+      "difficulty": "easy",
+      "document": "programming_python.md",
+      "expected_answer": "Python has three numeric types: int (integers), float (decimal numbers), and complex (complex numbers)",
+      "relevant_sections": ["Data Types and Variables", "Basic Data Types", "Numeric Types"],
+      "keywords": ["numeric", "int", "float", "complex", "data types"]
+    },
+    {
+      "id": "Q004",
+      "question": "What is the time complexity of binary search?",
+      "category": "factual",
+      "difficulty": "easy",
+      "document": "theory_algorithms.md",
+      "expected_answer": "Binary search has a time complexity of O(log n)",
+      "relevant_sections": ["Searching Algorithms", "Binary Search"],
+      "keywords": ["binary search", "time complexity", "O(log n)"]
+    },
+    {
+      "id": "Q005",
+      "question": "When did World War II begin?",
+      "category": "factual",
+      "difficulty": "easy",
+      "document": "history_wwii.txt",
+      "expected_answer": "World War II began on September 1, 1939, when Germany invaded Poland",
+      "relevant_sections": ["Major Events Timeline", "1939 - War Begins"],
+      "keywords": ["World War II", "1939", "September", "Poland", "Germany"]
+    },
+    {
+      "id": "Q006",
+      "question": "Explain the product rule for derivatives.",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "document": "math_calculus.md",
+      "expected_answer": "For two differentiable functions u(x) and v(x), the derivative of their product is: d/dx[u(x)·v(x)] = u'(x)·v(x) + u(x)·v'(x)",
+      "relevant_sections": ["Derivatives", "Product Rule"],
+      "keywords": ["product rule", "derivative", "u(x)", "v(x)"]
+    },
+    {
+      "id": "Q007",
+      "question": "What is the Fundamental Theorem of Calculus?",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "document": "math_calculus.md",
+      "expected_answer": "The Fundamental Theorem of Calculus states that the definite integral from a to b equals F(b) - F(a), where F'(x) = f(x)",
+      "relevant_sections": ["Integration", "Fundamental Theorem of Calculus"],
+      "keywords": ["fundamental theorem", "calculus", "definite integral", "F(b) - F(a)"]
+    },
+    {
+      "id": "Q008",
+      "question": "How do you find the area under a curve?",
+      "category": "procedural",
+      "difficulty": "medium",
+      "document": "math_calculus.md",
+      "expected_answer": "The area between a curve y = f(x) and the x-axis from x = a to x = b is calculated using the definite integral: A = ∫[a to b] f(x) dx",
+      "relevant_sections": ["Applications", "Area Under a Curve"],
+      "keywords": ["area", "curve", "integral", "definite integral"]
+    },
+    {
+      "id": "Q009",
+      "question": "What is the integral of e^x?",
+      "category": "factual",
+      "difficulty": "easy",
+      "document": "math_calculus.md",
+      "expected_answer": "The integral of e^x is e^x + C, where C is the constant of integration",
+      "relevant_sections": ["Integration", "Common Integrals"],
+      "keywords": ["integral", "e^x", "constant of integration"]
+    },
+    {
+      "id": "Q010",
+      "question": "Explain Newton's Third Law with an example.",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "document": "physics_mechanics.md",
+      "expected_answer": "Newton's Third Law states that for every action, there is an equal and opposite reaction. If object A exerts a force on object B, then object B exerts an equal and opposite force on object A",
+      "relevant_sections": ["Newton's Laws of Motion", "Third Law (Action-Reaction)"],
+      "keywords": ["Newton", "third law", "action", "reaction", "equal", "opposite"]
+    },
+    {
+      "id": "Q011",
+      "question": "What are the three equations of motion for constant acceleration?",
+      "category": "factual",
+      "difficulty": "medium",
+      "document": "physics_mechanics.md",
+      "expected_answer": "The three equations are: (1) v = v_0 + at, (2) x = x_0 + v_0*t + (1/2)*a*t^2, (3) v^2 = v_0^2 + 2a(x - x_0)",
+      "relevant_sections": ["Kinematics", "Equations of Motion (Constant Acceleration)"],
+      "keywords": ["kinematics", "equations of motion", "constant acceleration"]
+    },
+    {
+      "id": "Q012",
+      "question": "What is kinetic energy?",
+      "category": "factual",
+      "difficulty": "easy",
+      "document": "physics_mechanics.md",
+      "expected_answer": "Kinetic energy is the energy of motion, calculated as KE = (1/2)mv^2, where m is mass and v is velocity",
+      "relevant_sections": ["Energy and Work", "Kinetic Energy"],
+      "keywords": ["kinetic energy", "energy of motion", "KE", "mv^2"]
+    },
+    {
+      "id": "Q013",
+      "question": "State the conservation of mechanical energy principle.",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "document": "physics_mechanics.md",
+      "expected_answer": "In the absence of non-conservative forces like friction, the total mechanical energy is conserved: KE_initial + PE_initial = KE_final + PE_final",
+      "relevant_sections": ["Energy and Work", "Conservation of Mechanical Energy"],
+      "keywords": ["conservation", "mechanical energy", "kinetic", "potential"]
+    },
+    {
+      "id": "Q014",
+      "question": "What is centripetal acceleration?",
+      "category": "factual",
+      "difficulty": "medium",
+      "document": "physics_mechanics.md",
+      "expected_answer": "For an object moving in a circle of radius r at speed v, centripetal acceleration is a_c = v^2/r",
+      "relevant_sections": ["Circular Motion", "Centripetal Acceleration"],
+      "keywords": ["centripetal", "acceleration", "circular motion", "v^2/r"]
+    },
+    {
+      "id": "Q015",
+      "question": "What is Hooke's Law?",
+      "category": "factual",
+      "difficulty": "easy",
+      "document": "physics_mechanics.md",
+      "expected_answer": "Hooke's Law states that for a mass on a spring, the force is F = -kx, where k is the spring constant and x is displacement",
+      "relevant_sections": ["Simple Harmonic Motion"],
+      "keywords": ["Hooke's Law", "spring", "F = -kx", "spring constant"]
+    },
+    {
+      "id": "Q016",
+      "question": "How do you create a list in Python?",
+      "category": "procedural",
+      "difficulty": "easy",
+      "document": "programming_python.md",
+      "expected_answer": "A list can be created using square brackets: my_list = [1, 2, 3, 4, 5]",
+      "relevant_sections": ["Data Structures", "Lists"],
+      "keywords": ["list", "create", "square brackets"]
+    },
+    {
+      "id": "Q017",
+      "question": "What is a list comprehension in Python?",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "document": "programming_python.md",
+      "expected_answer": "A list comprehension is a concise way to create lists, for example: squares = [x**2 for x in range(10)]",
+      "relevant_sections": ["Data Structures", "Lists"],
+      "keywords": ["list comprehension", "squares", "x**2"]
+    },
+    {
+      "id": "Q018",
+      "question": "Explain the difference between lists and tuples in Python.",
+      "category": "comparative",
+      "difficulty": "medium",
+      "document": "programming_python.md",
+      "expected_answer": "Lists are mutable (can be changed) and use square brackets [1, 2, 3], while tuples are immutable (cannot be changed) and use parentheses (1, 2, 3)",
+      "relevant_sections": ["Data Types and Variables", "Sequence Types"],
+      "keywords": ["list", "tuple", "mutable", "immutable"]
+    },
+    {
+      "id": "Q019",
+      "question": "What is a lambda function in Python?",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "document": "programming_python.md",
+      "expected_answer": "A lambda function is an anonymous function defined using lambda syntax, for example: square = lambda x: x**2",
+      "relevant_sections": ["Functions", "Lambda Functions"],
+      "keywords": ["lambda", "anonymous function", "lambda x"]
+    },
+    {
+      "id": "Q020",
+      "question": "How do you handle exceptions in Python?",
+      "category": "procedural",
+      "difficulty": "medium",
+      "document": "programming_python.md",
+      "expected_answer": "Use try-except blocks: try: # code that might raise exception, except ExceptionType as e: # handle exception, optionally with else and finally clauses",
+      "relevant_sections": ["Exception Handling"],
+      "keywords": ["exception", "try", "except", "error handling"]
+    },
+    {
+      "id": "Q021",
+      "question": "What is a dictionary in Python and how do you create one?",
+      "category": "factual",
+      "difficulty": "easy",
+      "document": "programming_python.md",
+      "expected_answer": "A dictionary is a mapping type with key-value pairs. Create one using curly braces: person = {'name': 'Alice', 'age': 30}",
+      "relevant_sections": ["Data Structures", "Dictionaries"],
+      "keywords": ["dictionary", "key-value", "curly braces"]
+    },
+    {
+      "id": "Q022",
+      "question": "Explain the purpose of the __init__ method in Python classes.",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "document": "programming_python.md",
+      "expected_answer": "__init__ is the constructor method that initializes instance variables when an object is created",
+      "relevant_sections": ["Object-Oriented Programming", "Classes"],
+      "keywords": ["__init__", "constructor", "instance variables"]
+    },
+    {
+      "id": "Q023",
+      "question": "What is the difference between a class method and a static method?",
+      "category": "comparative",
+      "difficulty": "hard",
+      "document": "programming_python.md",
+      "expected_answer": "A class method (decorated with @classmethod) receives the class as first parameter and can access class variables, while a static method (decorated with @staticmethod) doesn't receive class or instance and is just a regular function inside the class",
+      "relevant_sections": ["Object-Oriented Programming", "Classes"],
+      "keywords": ["class method", "static method", "@classmethod", "@staticmethod"]
+    },
+    {
+      "id": "Q024",
+      "question": "What does O(1) time complexity mean?",
+      "category": "conceptual",
+      "difficulty": "easy",
+      "document": "theory_algorithms.md",
+      "expected_answer": "O(1) means constant time - the runtime doesn't depend on input size. Examples include array access and hash table lookup",
+      "relevant_sections": ["Big O Notation", "Time Complexity", "O(1) - Constant Time"],
+      "keywords": ["O(1)", "constant time", "time complexity"]
+    },
+    {
+      "id": "Q025",
+      "question": "Compare the time complexity of bubble sort and merge sort.",
+      "category": "comparative",
+      "difficulty": "medium",
+      "document": "theory_algorithms.md",
+      "expected_answer": "Bubble sort has O(n²) average and worst case time complexity, while merge sort has O(n log n) time complexity in all cases, making merge sort more efficient for large datasets",
+      "relevant_sections": ["Sorting Algorithms", "Bubble Sort", "Merge Sort"],
+      "keywords": ["bubble sort", "merge sort", "time complexity", "O(n²)", "O(n log n)"]
+    },
+    {
+      "id": "Q026",
+      "question": "What is a stable sorting algorithm?",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "document": "theory_algorithms.md",
+      "expected_answer": "A stable sorting algorithm maintains the relative order of equal elements. For example, merge sort and insertion sort are stable",
+      "relevant_sections": ["Sorting Algorithms"],
+      "keywords": ["stable", "sorting", "relative order"]
+    },
+    {
+      "id": "Q027",
+      "question": "Explain how binary search works.",
+      "category": "procedural",
+      "difficulty": "medium",
+      "document": "theory_algorithms.md",
+      "expected_answer": "Binary search works on sorted arrays by: 1) comparing target with middle element, 2) if equal, found, 3) if target smaller, search left half, 4) if target larger, search right half, 5) repeat until found or search space empty",
+      "relevant_sections": ["Searching Algorithms", "Binary Search"],
+      "keywords": ["binary search", "algorithm", "sorted array", "middle element"]
+    },
+    {
+      "id": "Q028",
+      "question": "What is the difference between a stack and a queue?",
+      "category": "comparative",
+      "difficulty": "easy",
+      "document": "theory_algorithms.md",
+      "expected_answer": "A stack follows LIFO (Last In, First Out) principle, while a queue follows FIFO (First In, First Out) principle",
+      "relevant_sections": ["Data Structures", "Stacks", "Queues"],
+      "keywords": ["stack", "queue", "LIFO", "FIFO"]
+    },
+    {
+      "id": "Q029",
+      "question": "What are the time complexities for hash table operations?",
+      "category": "factual",
+      "difficulty": "medium",
+      "document": "theory_algorithms.md",
+      "expected_answer": "Hash table operations (insert, delete, search) have O(1) average time complexity",
+      "relevant_sections": ["Data Structures", "Hash Tables"],
+      "keywords": ["hash table", "time complexity", "O(1)", "insert", "delete", "search"]
+    },
+    {
+      "id": "Q030",
+      "question": "What is a Binary Search Tree (BST)?",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "document": "theory_algorithms.md",
+      "expected_answer": "A Binary Search Tree is a binary tree where the left subtree contains smaller values and the right subtree contains larger values",
+      "relevant_sections": ["Data Structures", "Trees", "Binary Search Tree (BST)"],
+      "keywords": ["BST", "binary search tree", "left subtree", "right subtree"]
+    },
+    {
+      "id": "Q031",
+      "question": "Explain dynamic programming.",
+      "category": "conceptual",
+      "difficulty": "hard",
+      "document": "theory_algorithms.md",
+      "expected_answer": "Dynamic programming breaks a problem into overlapping subproblems and stores results to avoid recomputation. It requires optimal substructure and overlapping subproblems",
+      "relevant_sections": ["Algorithm Design Paradigms", "Dynamic Programming"],
+      "keywords": ["dynamic programming", "overlapping subproblems", "optimal substructure"]
+    },
+    {
+      "id": "Q032",
+      "question": "What is Dijkstra's algorithm used for?",
+      "category": "factual",
+      "difficulty": "medium",
+      "document": "theory_algorithms.md",
+      "expected_answer": "Dijkstra's algorithm finds the single-source shortest path in graphs with non-negative edge weights. Time complexity is O((V + E) log V) with a priority queue",
+      "relevant_sections": ["Graph Algorithms", "Shortest Path", "Dijkstra's Algorithm"],
+      "keywords": ["Dijkstra", "shortest path", "non-negative weights"]
+    },
+    {
+      "id": "Q033",
+      "question": "What is the difference between BFS and DFS?",
+      "category": "comparative",
+      "difficulty": "medium",
+      "document": "theory_algorithms.md",
+      "expected_answer": "Depth-First Search (DFS) uses a stack and explores deep before wide, while Breadth-First Search (BFS) uses a queue and explores level by level",
+      "relevant_sections": ["Data Structures", "Graphs", "Traversal Algorithms"],
+      "keywords": ["BFS", "DFS", "breadth-first", "depth-first", "stack", "queue"]
+    },
+    {
+      "id": "Q034",
+      "question": "What was the Treaty of Versailles and how did it contribute to WWII?",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "document": "history_wwii.txt",
+      "expected_answer": "The Treaty of Versailles (1919) imposed harsh penalties on Germany after WWI, creating economic hardship and resentment through territorial losses and military restrictions, which contributed to conditions leading to WWII",
+      "relevant_sections": ["Causes of World War II", "Treaty of Versailles (1919)"],
+      "keywords": ["Treaty of Versailles", "Germany", "penalties", "WWI"]
+    },
+    {
+      "id": "Q035",
+      "question": "What was Operation Barbarossa?",
+      "category": "factual",
+      "difficulty": "medium",
+      "document": "history_wwii.txt",
+      "expected_answer": "Operation Barbarossa was Germany's invasion of the Soviet Union on June 22, 1941",
+      "relevant_sections": ["Major Events Timeline", "1941 - Global War"],
+      "keywords": ["Operation Barbarossa", "Germany", "Soviet Union", "1941"]
+    },
+    {
+      "id": "Q036",
+      "question": "When was D-Day and what happened?",
+      "category": "factual",
+      "difficulty": "easy",
+      "document": "history_wwii.txt",
+      "expected_answer": "D-Day was June 6, 1944, when Allied forces invaded Normandy, France",
+      "relevant_sections": ["Major Events Timeline", "1944 - Liberation Begins"],
+      "keywords": ["D-Day", "June 6", "1944", "Normandy", "invasion"]
+    },
+    {
+      "id": "Q037",
+      "question": "What was the Battle of Stalingrad and why was it significant?",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "document": "history_wwii.txt",
+      "expected_answer": "The Battle of Stalingrad (August 1942-February 1943) was a Soviet victory that marked a turning point on the Eastern Front, with German forces eventually surrendering",
+      "relevant_sections": ["Major Events Timeline", "1942 - Turning Point"],
+      "keywords": ["Stalingrad", "turning point", "Soviet victory", "Eastern Front"]
+    },
+    {
+      "id": "Q038",
+      "question": "What happened on August 6 and August 9, 1945?",
+      "category": "factual",
+      "difficulty": "easy",
+      "document": "history_wwii.txt",
+      "expected_answer": "Atomic bombs were dropped on Hiroshima (August 6) and Nagasaki (August 9), 1945",
+      "relevant_sections": ["Major Events Timeline", "1945 - End of the War"],
+      "keywords": ["atomic bomb", "Hiroshima", "Nagasaki", "August 1945"]
+    },
+    {
+      "id": "Q039",
+      "question": "What was the Holocaust?",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "document": "history_wwii.txt",
+      "expected_answer": "The Holocaust was the systematic genocide of European Jews by Nazi Germany, resulting in approximately 6 million Jewish deaths, along with Roma, disabled people, political opponents, homosexuals, and Soviet POWs",
+      "relevant_sections": ["The Holocaust"],
+      "keywords": ["Holocaust", "genocide", "Jews", "Nazi Germany", "6 million"]
+    },
+    {
+      "id": "Q040",
+      "question": "What were the main consequences of World War II?",
+      "category": "conceptual",
+      "difficulty": "hard",
+      "document": "history_wwii.txt",
+      "expected_answer": "Major consequences included: 70-85 million deaths, establishment of the United Nations, division of Germany, beginning of the Cold War, decolonization, technological advances (nuclear weapons, computers), Marshall Plan, and the Nuremberg Trials establishing crimes against humanity",
+      "relevant_sections": ["Consequences and Legacy"],
+      "keywords": ["consequences", "United Nations", "Cold War", "nuclear weapons", "Marshall Plan"]
+    },
+    {
+      "id": "Q041",
+      "question": "If f(x) = x³, what is f'(x)?",
+      "category": "applicative",
+      "difficulty": "easy",
+      "document": "math_calculus.md",
+      "expected_answer": "Using the power rule, f'(x) = 3x²",
+      "relevant_sections": ["Derivatives", "Power Rule"],
+      "keywords": ["power rule", "derivative", "x³", "3x²"]
+    },
+    {
+      "id": "Q042",
+      "question": "What is the integral of sin(x)?",
+      "category": "factual",
+      "difficulty": "easy",
+      "document": "math_calculus.md",
+      "expected_answer": "The integral of sin(x) is -cos(x) + C",
+      "relevant_sections": ["Integration", "Common Integrals"],
+      "keywords": ["integral", "sin(x)", "-cos(x)"]
+    },
+    {
+      "id": "Q043",
+      "question": "How do you find maximum and minimum values using calculus?",
+      "category": "procedural",
+      "difficulty": "hard",
+      "document": "math_calculus.md",
+      "expected_answer": "To find extrema: 1) Find critical points by setting f'(x) = 0, 2) Use the second derivative test: if f''(x) > 0, it's a minimum; if f''(x) < 0, it's a maximum, 3) Check endpoints of the interval",
+      "relevant_sections": ["Applications", "Finding Maximum and Minimum"],
+      "keywords": ["maximum", "minimum", "critical points", "second derivative test"]
+    },
+    {
+      "id": "Q044",
+      "question": "What is the chain rule used for?",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "document": "math_calculus.md",
+      "expected_answer": "The chain rule is used for differentiating composite functions: d/dx[f(g(x))] = f'(g(x)) · g'(x)",
+      "relevant_sections": ["Derivatives", "Chain Rule"],
+      "keywords": ["chain rule", "composite functions", "f(g(x))"]
+    },
+    {
+      "id": "Q045",
+      "question": "What is the formula for gravitational potential energy?",
+      "category": "factual",
+      "difficulty": "easy",
+      "document": "physics_mechanics.md",
+      "expected_answer": "Gravitational potential energy is PE = mgh, where m is mass, g is gravitational acceleration, and h is height",
+      "relevant_sections": ["Energy and Work", "Potential Energy"],
+      "keywords": ["potential energy", "PE", "mgh", "gravitational"]
+    },
+    {
+      "id": "Q046",
+      "question": "What is the period of oscillation for a mass on a spring?",
+      "category": "factual",
+      "difficulty": "medium",
+      "document": "physics_mechanics.md",
+      "expected_answer": "The period of oscillation is T = 2π√(m/k), where m is mass and k is the spring constant",
+      "relevant_sections": ["Simple Harmonic Motion"],
+      "keywords": ["period", "oscillation", "spring", "T = 2π√(m/k)"]
+    },
+    {
+      "id": "Q047",
+      "question": "Explain the impulse-momentum theorem.",
+      "category": "conceptual",
+      "difficulty": "hard",
+      "document": "physics_mechanics.md",
+      "expected_answer": "The impulse-momentum theorem states that the change in momentum equals impulse: Δp = F_avg · Δt",
+      "relevant_sections": ["Momentum", "Impulse-Momentum Theorem"],
+      "keywords": ["impulse", "momentum", "theorem", "Δp", "F_avg"]
+    },
+    {
+      "id": "Q048",
+      "question": "How do you swap two variable values in Python?",
+      "category": "procedural",
+      "difficulty": "easy",
+      "document": "programming_python.md",
+      "expected_answer": "Use tuple unpacking: x, y = y, x",
+      "relevant_sections": ["Data Types and Variables", "Variable Assignment"],
+      "keywords": ["swap", "variables", "x, y = y, x"]
+    },
+    {
+      "id": "Q049",
+      "question": "What is the difference between append() and insert() for lists?",
+      "category": "comparative",
+      "difficulty": "easy",
+      "document": "programming_python.md",
+      "expected_answer": "append() adds an element to the end of a list, while insert() adds an element at a specific position",
+      "relevant_sections": ["Data Structures", "Lists"],
+      "keywords": ["append", "insert", "list", "position"]
+    },
+    {
+      "id": "Q050",
+      "question": "What is PEP 8?",
+      "category": "factual",
+      "difficulty": "easy",
+      "document": "programming_python.md",
+      "expected_answer": "PEP 8 is Python's style guide that includes conventions like using 4 spaces for indentation, snake_case for variables and functions, PascalCase for classes, and maximum line length of 79 characters",
+      "relevant_sections": ["Best Practices", "PEP 8 Style Guide"],
+      "keywords": ["PEP 8", "style guide", "snake_case", "indentation"]
+    },
+    {
+      "id": "Q051",
+      "question": "What is the space complexity of merge sort?",
+      "category": "factual",
+      "difficulty": "medium",
+      "document": "theory_algorithms.md",
+      "expected_answer": "Merge sort has O(n) space complexity",
+      "relevant_sections": ["Sorting Algorithms", "Merge Sort"],
+      "keywords": ["merge sort", "space complexity", "O(n)"]
+    },
+    {
+      "id": "Q052",
+      "question": "What is the difference between P and NP complexity classes?",
+      "category": "comparative",
+      "difficulty": "hard",
+      "document": "theory_algorithms.md",
+      "expected_answer": "P consists of problems solvable in polynomial time, while NP consists of problems verifiable in polynomial time - if a solution is given, it can be verified quickly",
+      "relevant_sections": ["Complexity Classes", "P (Polynomial Time)", "NP (Nondeterministic Polynomial Time)"],
+      "keywords": ["P", "NP", "polynomial time", "verifiable"]
+    },
+    {
+      "id": "Q053",
+      "question": "What is a greedy algorithm?",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "document": "theory_algorithms.md",
+      "expected_answer": "A greedy algorithm makes locally optimal choices at each step, hoping for a global optimum. It works when there is greedy choice property and optimal substructure",
+      "relevant_sections": ["Algorithm Design Paradigms", "Greedy Algorithms"],
+      "keywords": ["greedy algorithm", "locally optimal", "global optimum"]
+    },
+    {
+      "id": "Q054",
+      "question": "When did the United States enter World War II?",
+      "category": "factual",
+      "difficulty": "easy",
+      "document": "history_wwii.txt",
+      "expected_answer": "The United States entered World War II on December 8, 1941, declaring war on Japan after the Pearl Harbor attack on December 7",
+      "relevant_sections": ["Major Events Timeline", "1941 - Global War"],
+      "keywords": ["United States", "Pearl Harbor", "December 1941", "Japan"]
+    },
+    {
+      "id": "Q055",
+      "question": "What were the Nuremberg Trials?",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "document": "history_wwii.txt",
+      "expected_answer": "The Nuremberg Trials (1945-1946) were legal proceedings that prosecuted Nazi war criminals and established the concept of 'crimes against humanity'",
+      "relevant_sections": ["Consequences and Legacy", "Legal and Moral Framework"],
+      "keywords": ["Nuremberg Trials", "1945-1946", "crimes against humanity", "Nazi"]
+    }
+  ]
+}

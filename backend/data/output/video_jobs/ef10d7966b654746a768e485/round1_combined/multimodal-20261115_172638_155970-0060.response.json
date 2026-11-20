@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-81f3ddef-df85-4260-8d72-3622a1f03299",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"demand for domestic goods\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Domestic demand for goods equals the closed‑economy demand minus the portion satisfied by imported inputs, and it also includes foreign demand for domestically produced goods.\",\n      \"refs\": [\"Q0002\", \"Q0006\", \"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What does the term \\\"demand for domestic goods\\\" refer to according to the speaker?\",\n      \"answer\": \"Demand by US residents for goods produced domestically, excluding the portion satisfied by imported inputs.\",\n      \"distractors\": [\n        \"Total world demand for all goods regardless of origin.\",\n        \"Only the demand for imported goods in the US market.\",\n        \"The amount of goods the US government plans to produce.\"\n      ],\n      \"explanation\": \"The speaker explains that domestic demand is the closed‑economy demand minus the part satisfied by input (imports), which defines demand for domestically produced goods.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Demand for domestic goods\",\n      \"refs\": [\"Q0002\"]\n    },\n    {\n      \"question\": \"Why does the speaker say the demand will not be determined at equilibrium output domestically?\",\n      \"answer\": \"Because it is not the demand for domestic production.\",\n      \"distractors\": [\n        \"Because equilibrium output is always fixed by government policy.\",\n        \"Because foreign exchange rates make the calculation impossible.\",\n        \"Because the data on domestic demand is unavailable.\"\n      ],\n      \"explanation\": \"The excerpt states, \\\"That's not the demand for domestic production and therefore will not be determined at equilibrium output domestically.\\\"\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Equilibrium output\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"How does foreign demand affect the concept of domestic demand in the speaker’s explanation?\",\n      \"answer\": \"It adds a new component of demand for domestically produced goods that was not present before.\",\n      \"distractors\": [\n        \"It reduces the overall domestic demand by substituting imports.\",\n        \"It has no impact on domestic demand calculations.\",\n        \"It only influences the price of exported goods, not domestic demand.\"\n      ],\n      \"explanation\": \"The speaker notes, \\\"we also have a component of demand for domestically produced goods that we didn't have before, which is what foreigners demand for the US.\\\"\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"Foreign demand component\",\n      \"refs\": [\"Q0009\"]\n    },\n    {\n      \"question\": \"Why does the speaker divide the demand by exchange rates when adjusting for inputs?\",\n      \"answer\": \"Because inputs may be priced in foreign currency and need to be converted into dollars.\",\n      \"distractors\": [\n        \"Because exchange rates determine the final selling price of domestic goods.\",\n        \"Because dividing by exchange rates eliminates the effect of tariffs.\",\n        \"Because it simplifies the calculation by removing currency considerations.\"\n      ],\n      \"explanation\": \"The excerpt explains, \\\"So minus input, and divided by the exchanger, because inputs may be priced in euros, say, and I had to convert them into dollars.\\\"\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"Currency conversion for inputs\",\n      \"refs\": [\"Q0003\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts: \"demand for domestic goods\". Provide concept_name and content. Use excerpts. Let's create item \"item1\". Rows: concept_name, content. Also maybe definition? but not explicit definition. Use concept.\n\nRows:\nitem=item1, category=concepts, field=concept_name, element0, part=value, text=\"demand for domestic goods\", refs Q0001, basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\ncontent: combine explanation from Q0002, Q0006, Q0009 maybe. Provide text: \"Domestic demand for goods equals the closed‑economy demand minus the portion satisfied by imported inputs, and includes foreign demand for domestically produced goods.\" Use refs Q0002,Q0006,Q0009. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal.\n\nNow quiz: need 4 questions about teaching. Create based on excerpts.\n\nQ1: What does \"demand for domestic goods\" refer to? Answer: demand by US residents for goods produced domestically, excluding imported inputs. Distractors.\n\nProvide refs Q0002.\n\nBloom: Understand.\n\nQ2: According to the speaker, why is the demand not determined at equilibrium output domestically? Answer: because it is not the demand for domestic production. Distractors.\n\nRefs Q0000.\n\nQ3: How is foreign demand for US goods treated in the concept? Answer: it adds a component of demand for domestically produced goods that was not present before. Distractors. Ref Q0009.\n\nQ4: Why is the demand divided by exchange rates? Answer: because inputs may be priced in foreign currency and need conversion. Ref Q0003.\n\nProvide explanations.\n\nNow construct JSON. No abstentions or excluded. rows list.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794763767,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_02b0d31eca",
+  "usage": {
+    "completion_tokens": 1276,
+    "prompt_tokens": 2447,
+    "total_tokens": 3723,
+    "completion_time": 2.701150579,
+    "completion_tokens_details": {
+      "reasoning_tokens": 368
+    },
+    "prompt_time": 0.125381444,
+    "prompt_tokens_details": null,
+    "queue_time": 0.326483997,
+    "total_time": 2.826532023
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g43cbkeccs92g8r8j1wqz5",
+    "debug": null,
+    "seed": 1358596572,
+    "usage": null
+  }
+}

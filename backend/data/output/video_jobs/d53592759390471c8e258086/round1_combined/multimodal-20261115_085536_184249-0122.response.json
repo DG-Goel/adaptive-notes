@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-276b37bf-83ac-464f-9d4b-cd24a5cffb8c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Uncovered interest parity\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If the domestic interest rate is above the international interest rate, the exchange rate today must be above the expected exchange rate, implying an expected depreciation that compensates for the higher domestic interest rate.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"Conversely, if the domestic bond pays a lower interest rate, the exchange rate today is very depreciated because an appreciation is expected to offset the interest rate differential.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Higher domestic interest rates relative to foreign rates imply an expected depreciation of the domestic currency.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Lower domestic interest rates relative to foreign rates imply an expected appreciation of the domestic currency.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Exact equation for exchange rate not provided in the primary excerpts.\",\n      \"source_ids\": [\"G00031\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the excerpt, what happens to the exchange rate today when the domestic interest rate is higher than the international interest rate?\",\n      \"answer\": \"It must be above the expected exchange rate, indicating an expected depreciation of the domestic currency.\",\n      \"explanation\": \"The excerpt states that a higher domestic rate requires the current exchange rate to be above the expected rate so that the expected depreciation compensates for the higher interest.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Uncovered interest parity – effect of higher domestic rates\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"What is the expected movement of the domestic currency when the domestic bond pays a lower interest rate than the foreign bond?\",\n      \"answer\": \"The domestic currency is expected to appreciate.\",\n      \"explanation\": \"The excerpt explains that a lower domestic rate means the exchange rate today is very depreciated because an appreciation is needed to offset the interest differential.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Uncovered interest parity – effect of lower domestic rates\",\n      \"refs\": [\"Q0001\"]\n    },\n    {\n      \"question\": \"Identify the economic principle described in the excerpts that links interest rate differentials to expected exchange rate movements.\",\n      \"answer\": \"Uncovered interest parity.\",\n      \"explanation\": \"Both excerpts discuss how differences between domestic and international interest rates determine expected depreciation or appreciation, which is the core of uncovered interest parity.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Concept name\",\n      \"refs\": [\"Q0000\", \"Q0001\"]\n    },\n    {\n      \"question\": \"If a country’s domestic interest rate rises relative to the world interest rate, what adjustment must occur in the expected exchange rate to keep investors indifferent?\",\n      \"answer\": \"The expected exchange rate must be lower (i.e., the domestic currency is expected to depreciate).\",\n      \"explanation\": \"Higher domestic rates create a higher return on domestic bonds; to keep investors indifferent, the currency must be expected to lose value, offsetting the rate advantage.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"Implication of interest rate changes\",\n      \"refs\": [\"Q0000\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows etc. The excerpts discuss uncovered interest parity: domestic interest > foreign => exchange rate today above expected, etc. So concepts: interest rate parity, expected depreciation. Create rows for concepts maybe. Provide facts. Provide abstentions for missing formulas. Provide quiz 4 questions.\n\nLet's craft rows:\n\nItem \"concept1\": concept_name \"Uncovered interest parity\". content from Q0000 and Q0001. Provide two rows? One for concept_name, one for content.\n\nRows:\n\n- category concepts, field concept_name, element0, part value, text \"Uncovered interest parity\", refs Q0000, basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\n- content row: text from Q0000+Q0001 combined? maybe separate rows. Use Q0000 for content about domestic > foreign leads to exchange rate today above expected. Provide text.\n\nAlso facts: fact about domestic interest higher leads to expected depreciation.\n\nFormulas: not available -> abstention.\n\nProceed.\n\nQuiz 4 Qs about statements.\n\nNow produce JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794733151,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e1a78f200e",
+  "usage": {
+    "completion_tokens": 1370,
+    "prompt_tokens": 2744,
+    "total_tokens": 4114,
+    "completion_time": 2.873209255,
+    "completion_tokens_details": {
+      "reasoning_tokens": 223
+    },
+    "prompt_time": 0.132546006,
+    "prompt_tokens_details": null,
+    "queue_time": 0.374924797,
+    "total_time": 3.005755261
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f6x2bxexqta9zbc0m6kajz",
+    "debug": null,
+    "seed": 482737885,
+    "usage": null
+  }
+}

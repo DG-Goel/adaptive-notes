@@ -1,0 +1,962 @@
+{
+  "issues": [],
+  "ocr_state_differences": [
+    {
+      "event_id": "c9822554bb992c50",
+      "from_timestamp": 2768.9328333333333,
+      "to_timestamp": 2771.9358333333334,
+      "difference": "--- \n+++ \n@@ -3,11 +3,11 @@\n \n public class Main {\n \n-public static void main(String[] args) {\n-    String message = \"Hello World\" + \"!!\";\n-    message.endsWith(\"!!\")\n-    System.out.println(message);\n-}\n+    public static void main(String[] args) {\n+        String message = \"Hello World\" + \"!!\";\n+\n+        System.out.println(message);\n+    }\n }\n \n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "c9822554bb992c50",
+      "from_timestamp": 2771.9358333333334,
+      "to_timestamp": 2773.5708,
+      "difference": "--- \n+++ \n@@ -6,7 +6,7 @@\n     public static void main(String[] args) {\n         String message = \"Hello World\" + \"!!\";\n \n-        System.out.println(message);\n+        System.out.println(|);\n     }\n }\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "c9822554bb992c50",
+      "from_timestamp": 2773.5708,
+      "to_timestamp": 2774.938833333333,
+      "difference": "--- \n+++ \n@@ -6,7 +6,7 @@\n     public static void main(String[] args) {\n         String message = \"Hello World\" + \"!!\";\n \n-        System.out.println(|);\n+        System.out.println(message.endsWith(\"!!\"));\n     }\n }\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "c9822554bb992c50",
+      "from_timestamp": 2774.938833333333,
+      "to_timestamp": 2777.9418333333333,
+      "difference": "--- \n+++ \n@@ -1,13 +1,18 @@\n HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+\n Main.java\n \n-public class Main {\n+String message = \"Hello world\" + \"!!\";\n \n-    public static void main(String[] args) {\n-        String message = \"Hello World\" + \"!!\";\n+System.out.println(message.endsWith(\"!!\"));\n \n-        System.out.println(message.endsWith(\"!!\"));\n-    }\n }\n \n Main > main()\n+\n+Run:\n+\n+/Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n+true\n+\n+Process finished with exit code 0",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "c9822554bb992c50",
+      "from_timestamp": 2777.9418333333333,
+      "to_timestamp": 2778.0753,
+      "difference": "--- \n+++ \n@@ -5,8 +5,6 @@\n String message = \"Hello world\" + \"!!\";\n \n System.out.println(message.endsWith(\"!!\"));\n-\n-}\n \n Main > main()\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "365ba0502d15f7ff",
+      "from_timestamp": 5745.272866666666,
+      "to_timestamp": 5748.275866666667,
+      "difference": "--- \n+++ \n@@ -1,8 +1,8 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+\n+Main.java\n \n ```java\n-int principal = scanner.nextInt();\n-\n System.out.print(\"Annual Interest Rate: \");\n float annualInterest = scanner.nextFloat();\n float monthlyInterest = annualInterest / PERCENT / MO\n@@ -14,6 +14,9 @@\n double mortgage = principal\n     * (monthlyInterest * Math.pow(1 + monthly\n     / (Math.pow(1 + monthlyInterest, numberOf\n+\n+String mortgageFormatted = NumberFormat.getCurrencyIn\n+System.out.println(\"Mortgage: \" + mortgageFormatted);\n ```\n \n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "365ba0502d15f7ff",
+      "from_timestamp": 5748.275866666667,
+      "to_timestamp": 5751.2788666666665,
+      "difference": "--- \n+++ \n@@ -1,6 +1,4 @@\n HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n-\n-Main.java\n \n ```java\n System.out.print(\"Annual Interest Rate: \");",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "365ba0502d15f7ff",
+      "from_timestamp": 5751.2788666666665,
+      "to_timestamp": 5754.014933333333,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n ```java\n System.out.print(\"Annual Interest Rate: \");\n@@ -11,12 +11,10 @@\n \n double mortgage = principal\n     * (monthlyInterest * Math.pow(1 + monthly\n-    / (Math.pow(1 + monthlyInterest, numberOf\n+    * (Math.pow(1 + monthlyInterest, numberOf\n \n String mortgageFormatted = NumberFormat.getCurrencyIn\n System.out.println(\"Mortgage: \" + mortgageFormatted);\n ```\n \n Main > main()\n-\n-Run: Main",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "365ba0502d15f7ff",
+      "from_timestamp": 5754.014933333333,
+      "to_timestamp": 5754.281866666666,
+      "difference": "--- \n+++ \n@@ -11,10 +11,12 @@\n \n double mortgage = principal\n     * (monthlyInterest * Math.pow(1 + monthly\n-    * (Math.pow(1 + monthlyInterest, numberOf\n+    / (Math.pow(1 + monthlyInterest, numberOf\n \n String mortgageFormatted = NumberFormat.getCurrencyIn\n System.out.println(\"Mortgage: \" + mortgageFormatted);\n ```\n \n Main > main()\n+\n+Run: Main",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "365ba0502d15f7ff",
+      "from_timestamp": 5754.281866666666,
+      "to_timestamp": 5757.284866666667,
+      "difference": "--- \n+++ \n@@ -1,22 +1,19 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+```java\n+print(\"Annual Interest Rate: \");\n+Interest = scanner.nextFloat();\n+yInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;\n \n-```java\n-System.out.print(\"Annual Interest Rate: \");\n-float annualInterest = scanner.nextFloat();\n-float monthlyInterest = annualInterest / PERCENT / MO\n+print(\"Period (Years): \");\n+= scanner.nextByte();\n+Payments = years * MONTHS_IN_YEAR;\n \n-System.out.print(\"Period (Years): \");\n-byte years = scanner.nextByte();\n-int numberOfPayments = years * MONTHS_IN_YEAR;\n+age = principal\n+* (monthlyInterest * Math.pow(1 + monthlyInterest, numberOfPa\n+/ (Math.pow(1 + monthlyInterest, numberOfPayments) - 1));\n \n-double mortgage = principal\n-    * (monthlyInterest * Math.pow(1 + monthly\n-    / (Math.pow(1 + monthlyInterest, numberOf\n-\n-String mortgageFormatted = NumberFormat.getCurrencyIn\n-System.out.println(\"Mortgage: \" + mortgageFormatted);\n-```\n+ageFormatted = NumberFormat.getCurrencyInstance().format(mort\n+println(\"Mortgage: \" + mortgageFormatted);\n \n Main > main()\n-\n-Run: Main\n+Run:\n+```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "f63c8a75239d54ad",
+      "from_timestamp": 2691.2552333333333,
+      "to_timestamp": 2692.8234666666667,
+      "difference": "--- \n+++ \n@@ -1,14 +1,12 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n kage com.codewithmosh;\n \n lic class Main {\n \n public static void main(String[] args) {\n-    String message = new String( original: \"Hello World\"\n+    String message = new String( original: \"Hello World\n     System.out.println();\n }\n \n-'new String' is redundant more... (*F1)\n-\n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "f63c8a75239d54ad",
+      "from_timestamp": 2692.8234666666667,
+      "to_timestamp": 2694.2582333333335,
+      "difference": "--- \n+++ \n@@ -1,12 +1,15 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+\n Main.java\n-kage com.codewithmosh;\n \n-lic class Main {\n+```java\n+com.codewithmosh;\n \n-public static void main(String[] args) {\n-    String message = new String( original: \"Hello World\n-    System.out.println();\n-}\n+class Main {\n+\n+lic static void main(String[] args) {\n+String message = new String( original: \"Hello World\")\n+System.out.println();\n+```\n \n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "f63c8a75239d54ad",
+      "from_timestamp": 2694.2582333333335,
+      "to_timestamp": 2697.261233333333,
+      "difference": "--- \n+++ \n@@ -3,13 +3,15 @@\n Main.java\n \n ```java\n-com.codewithmosh;\n+package com.codewithmosh;\n \n-class Main {\n+public class Main {\n \n-lic static void main(String[] args) {\n-String message = new String( original: \"Hello World\")\n-System.out.println();\n+    public static void main(String[] args) {\n+        String message = \"Hello World\";\n+        System.out.println();\n+    }\n+}\n ```\n \n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "fc60a2d3ed1a6bc0",
+      "from_timestamp": 3872.835633333333,
+      "to_timestamp": 3875.738533333333,
+      "difference": "--- \n+++ \n@@ -3,10 +3,9 @@\n \n public class Main {\n \n-    public static void main(String[] args) {\n-        int result = (double)10 / (double)3;\n-        System.out.println(result);\n-    }\n+public static void main(String[] args) {\n+    int result = (double)10 / (double)3;\n+    System.out.println(result);\n }\n \n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "c1419d780e0c81a4",
+      "from_timestamp": 3875.2380333333335,
+      "to_timestamp": 3878.2410333333332,
+      "difference": "--- \n+++ \n@@ -1,6 +1,6 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n \n+```java\n public class Main {\n \n     public static void main(String[] args) {\n@@ -8,5 +8,4 @@\n         System.out.println(result);\n     }\n }\n-\n-Main > main()\n+```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "c1419d780e0c81a4",
+      "from_timestamp": 3878.2410333333332,
+      "to_timestamp": 3879.7425333333335,
+      "difference": "--- \n+++ \n@@ -1,6 +1,6 @@\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n \n-```java\n public class Main {\n \n     public static void main(String[] args) {\n@@ -8,4 +8,5 @@\n         System.out.println(result);\n     }\n }\n-```\n+\n+Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "c1419d780e0c81a4",
+      "from_timestamp": 3881.2440333333334,
+      "to_timestamp": 3884.1469333333334,
+      "difference": "--- \n+++ \n@@ -1,10 +1,10 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n \n public class Main {\n \n     public static void main(String[] args) {\n-        int result = (double)10 / (double)3;\n+        double result = (double)10 / (double)3;\n         System.out.println(result);\n     }\n }",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "0dc557b607135c4c",
+      "from_timestamp": 4048.0106333333333,
+      "to_timestamp": 4051.0136333333335,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n \n public class Main {",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "0dc557b607135c4c",
+      "from_timestamp": 4051.0136333333335,
+      "to_timestamp": 4052.6152333333334,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n \n public class Main {",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "0dc557b607135c4c",
+      "from_timestamp": 4052.6152333333334,
+      "to_timestamp": 4054.016633333333,
+      "difference": "--- \n+++ \n@@ -3,10 +3,10 @@\n \n public class Main {\n \n-public static void main(String[] args) {\n-    int x = 10 + 3 * 2;\n-    System.out.println(x);\n-}\n+    public static void main(String[] args) {\n+        int x = 10 + 3 * 2;\n+        System.out.println(x);\n+    }\n }\n \n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "0dc557b607135c4c",
+      "from_timestamp": 4054.016633333333,
+      "to_timestamp": 4057.0196333333333,
+      "difference": "--- \n+++ \n@@ -1,12 +1,8 @@\n HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n-\n public class Main {\n-\n-    public static void main(String[] args) {\n-        int x = 10 + 3 * 2;\n-        System.out.println(x);\n-    }\n-}\n-\n+public static void main(String[] args) {\n+int x = 10 + 3 * 2;\n Main > main()\n+Run: Main\n+/Library/Java/JavaVirtualMachines/jdk-12.0.1.jd",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "0dc557b607135c4c",
+      "from_timestamp": 4057.0196333333333,
+      "to_timestamp": 4057.1531,
+      "difference": "--- \n+++ \n@@ -4,5 +4,6 @@\n public static void main(String[] args) {\n int x = 10 + 3 * 2;\n Main > main()\n-Run: Main\n+Run:\n+Main\n /Library/Java/JavaVirtualMachines/jdk-12.0.1.jd",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "c33c84b996f1aa44",
+      "from_timestamp": 4084.2134666666666,
+      "to_timestamp": 4087.2164666666667,
+      "difference": "--- \n+++ \n@@ -3,10 +3,10 @@\n \n public class Main {\n \n-    public static void main(String[] args) {\n-        int x = 10 + 3 * 2;\n-        System.out.println(x);\n-    }\n+public static void main(String[] args) {\n+    int x = 10 + 3 * 2;\n+    System.out.println(x);\n+}\n }\n \n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "c33c84b996f1aa44",
+      "from_timestamp": 4087.2164666666667,
+      "to_timestamp": 4088.4844,
+      "difference": "--- \n+++ \n@@ -3,10 +3,10 @@\n \n public class Main {\n \n-public static void main(String[] args) {\n-    int x = 10 + 3 * 2;\n-    System.out.println(x);\n-}\n+    public static void main(String[] args) {\n+        int x = 10 + 3 * 2;\n+        System.out.println(x);\n+    }\n }\n \n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "c33c84b996f1aa44",
+      "from_timestamp": 4088.4844,
+      "to_timestamp": 4090.2194666666664,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n \n public class Main {",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "c33c84b996f1aa44",
+      "from_timestamp": 4090.2194666666664,
+      "to_timestamp": 4092.6552333333334,
+      "difference": "--- \n+++ \n@@ -1,10 +1,11 @@\n HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+\n Main.java\n \n public class Main {\n \n     public static void main(String[] args) {\n-        int x = 10 + 3 * 2;\n+        int x = 10 + 3; /* 2;\n         System.out.println(x);\n     }\n }",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9c7d43c4b6a25f49",
+      "from_timestamp": 4091.3205666666668,
+      "to_timestamp": 4092.4884,
+      "difference": "--- \n+++ \n@@ -1,12 +1,15 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+\n Main.java\n \n+```java\n public class Main {\n \n     public static void main(String[] args) {\n-        int x = 10 + 3 * 2;\n+        int x = 10 + 3; /* 2;\n         System.out.println(x);\n     }\n }\n+```\n \n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9c7d43c4b6a25f49",
+      "from_timestamp": 4092.4884,
+      "to_timestamp": 4094.3235666666665,
+      "difference": "--- \n+++ \n@@ -6,7 +6,7 @@\n public class Main {\n \n     public static void main(String[] args) {\n-        int x = 10 + 3; /* 2;\n+        int x = (10 + 3) * 2;\n         System.out.println(x);\n     }\n }",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9c7d43c4b6a25f49",
+      "from_timestamp": 4094.3235666666665,
+      "to_timestamp": 4096.5925,
+      "difference": "--- \n+++ \n@@ -1,15 +1,12 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n-\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n \n-```java\n public class Main {\n \n-    public static void main(String[] args) {\n-        int x = (10 + 3) * 2;\n-        System.out.println(x);\n-    }\n+public static void main(String[] args) {\n+    int x = (10 + 3) * 2;\n+    System.out.println(x);\n }\n-```\n+}\n \n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "6775ea29e8b29758",
+      "from_timestamp": 4092.9889,
+      "to_timestamp": 4095.9919,
+      "difference": "--- \n+++ \n@@ -1,13 +1,12 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n-\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n \n public class Main {\n \n-    public static void main(String[] args) {\n-        int x = 10 + 3) * 2;\n-        System.out.println(x);\n-    }\n+public static void main(String[] args) {\n+    int x = (10 + 3) * 2;\n+    System.out.println(x);\n+}\n }\n \n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "6775ea29e8b29758",
+      "from_timestamp": 4095.9919,
+      "to_timestamp": 4097.093,
+      "difference": "--- \n+++ \n@@ -3,10 +3,10 @@\n \n public class Main {\n \n-public static void main(String[] args) {\n-    int x = (10 + 3) * 2;\n-    System.out.println(x);\n-}\n+    public static void main(String[] args) {\n+        int x = (10 + 3) * 2;\n+        System.out.println(x);\n+    }\n }\n \n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "6775ea29e8b29758",
+      "from_timestamp": 4097.093,
+      "to_timestamp": 4098.961533333333,
+      "difference": "--- \n+++ \n@@ -3,10 +3,10 @@\n \n public class Main {\n \n-    public static void main(String[] args) {\n-        int x = (10 + 3) * 2;\n-        System.out.println(x);\n-    }\n+public static void main(String[] args) {\n+    int x = (10 + 3) * 2;\n+    System.out.println(x);\n+}\n }\n \n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "0cf26839fe96188e",
+      "from_timestamp": 4154.617133333333,
+      "to_timestamp": 4157.620133333333,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n ▶ public class Main {\n ▶ public static void main(String[] args) {\n@@ -7,5 +7,4 @@\n     System.out.println(y);\n   }\n }\n-\n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "0cf26839fe96188e",
+      "from_timestamp": 4157.620133333333,
+      "to_timestamp": 4159.088266666667,
+      "difference": "--- \n+++ \n@@ -1,10 +1,9 @@\n HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n-▶ public class Main {\n-▶ public static void main(String[] args) {\n+public class Main {\n+public static void main(String[] args) {\n     short x = 1;\n     int y = x + 2;\n     System.out.println(y);\n-  }\n }\n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "0cf26839fe96188e",
+      "from_timestamp": 4160.6231333333335,
+      "to_timestamp": 4163.4593,
+      "difference": "--- \n+++ \n@@ -1,9 +1,14 @@\n HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n+```java\n public class Main {\n-public static void main(String[] args) {\n-    short x = 1;\n-    int y = x + 2;\n-    System.out.println(y);\n+\n+    public static void main(String[] args) {\n+        short x = 1;\n+        int y = x + 2;\n+        System.out.println(y);\n+    }\n }\n+```\n+\n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "466e290b83aae754",
+      "from_timestamp": 4655.584266666667,
+      "to_timestamp": 4658.587266666666,
+      "difference": "--- \n+++ \n@@ -13,7 +13,7 @@\n \n Run:\n \n-/Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n+/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk\n 0.9791314866304923\n \n Process finished with exit code 0",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "466e290b83aae754",
+      "from_timestamp": 4658.587266666666,
+      "to_timestamp": 4661.590266666667,
+      "difference": "--- \n+++ \n@@ -1,10 +1,10 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n \n ```java\n public static void main(String[] args) {\n-    double result = Math.random();\n+    double result = Math.random() * 100;\n     System.out.println(result);\n }\n ```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "466e290b83aae754",
+      "from_timestamp": 4661.723733333333,
+      "to_timestamp": 4664.593266666667,
+      "difference": "--- \n+++ \n@@ -14,6 +14,6 @@\n Run:\n \n /Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk\n-0.9791314866304923\n+64.02155627479124\n \n Process finished with exit code 0",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "466e290b83aae754",
+      "from_timestamp": 4664.593266666667,
+      "to_timestamp": 4667.5629,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n \n@@ -14,6 +14,6 @@\n Run:\n \n /Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk\n-64.02155627479124\n+21.886236196856302\n \n Process finished with exit code 0",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "2fcc86d94347029f",
+      "from_timestamp": 4678.7073666666665,
+      "to_timestamp": 4681.710366666666,
+      "difference": "--- \n+++ \n@@ -1,21 +1,18 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n \n ```java\n public static void main(String[] args) {\n-    double result = Math.round(Math.random() * 10)\n-    System.out.println(\"round(float a)\n-    round(double a)\n-    ^ and ^ will move caret down and up in the editor >\n-}\n+    double result = Math.round Math.random() * 100;\n+    System.out.println(result);\n ```\n+\n+Main > main()\n \n Run:\n \n-```text\n /Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk\n 21.886236196856302\n \n Process finished with exit code 0\n-```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "2fcc86d94347029f",
+      "from_timestamp": 4681.710366666666,
+      "to_timestamp": 4683.245233333333,
+      "difference": "--- \n+++ \n@@ -4,15 +4,18 @@\n \n ```java\n public static void main(String[] args) {\n-    double result = Math.round Math.random() * 100;\n+    double result = Math.round();\n     System.out.println(result);\n+}\n+}\n+Main > main()\n ```\n-\n-Main > main()\n \n Run:\n \n+```text\n /Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk\n 21.886236196856302\n \n Process finished with exit code 0\n+```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "2fcc86d94347029f",
+      "from_timestamp": 4683.245233333333,
+      "to_timestamp": 4684.713366666667,
+      "difference": "--- \n+++ \n@@ -4,16 +4,14 @@\n \n ```java\n public static void main(String[] args) {\n-    double result = Math.round();\n+    double result = Math.round() ;\n     System.out.println(result);\n }\n }\n Main > main()\n-```\n+Run:\n+Main\n \n-Run:\n-\n-```text\n /Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk\n 21.886236196856302\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "2fcc86d94347029f",
+      "from_timestamp": 4684.713366666667,
+      "to_timestamp": 4687.649633333333,
+      "difference": "--- \n+++ \n@@ -1,19 +1,19 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n \n ```java\n public static void main(String[] args) {\n-    double result = Math.round() ;\n+    double result = Math.round(Math.random() * 100);\n     System.out.println(result);\n }\n-}\n-Main > main()\n+```\n+\n+Main main()\n+\n Run:\n-Main\n \n /Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk\n 21.886236196856302\n \n Process finished with exit code 0\n-```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "0f3786d562b0b351",
+      "from_timestamp": 4719.147766666667,
+      "to_timestamp": 4722.150766666667,
+      "difference": "--- \n+++ \n@@ -3,17 +3,16 @@\n Main.java\n \n ```java\n-public static void main(String[] args) {\n-    int result = Math.round(Math.random() * 100);\n+lic static void main(String[] args) {\n+    int result = () Math.round(Math.random() * 100);\n     System.out.println(result);\n-}\n ```\n \n Main > main()\n \n Run:\n \n-/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk\n+/Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n 99.0\n \n Process finished with exit code 0",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "0f3786d562b0b351",
+      "from_timestamp": 4722.150766666667,
+      "to_timestamp": 4723.585533333333,
+      "difference": "--- \n+++ \n@@ -4,7 +4,7 @@\n \n ```java\n lic static void main(String[] args) {\n-    int result = () Math.round(Math.random() * 100);\n+    int result = () Math.round(Math.random() * 100) ;\n     System.out.println(result);\n ```\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "0f3786d562b0b351",
+      "from_timestamp": 4723.585533333333,
+      "to_timestamp": 4725.1204,
+      "difference": "--- \n+++ \n@@ -4,7 +4,7 @@\n \n ```java\n lic static void main(String[] args) {\n-    int result = () Math.round(Math.random() * 100) ;\n+    int result = () Math.round(Math.random() * 100);\n     System.out.println(result);\n ```\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "0f3786d562b0b351",
+      "from_timestamp": 4725.1204,
+      "to_timestamp": 4727.956566666667,
+      "difference": "--- \n+++ \n@@ -1,10 +1,10 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n \n ```java\n lic static void main(String[] args) {\n-    int result = () Math.round(Math.random() * 100);\n+    int result = (int) Math.round(Math.random() * 100);\n     System.out.println(result);\n ```\n \n@@ -12,7 +12,7 @@\n \n Run:\n \n-/Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n+/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk\n 99.0\n \n Process finished with exit code 0",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "e31c41a6a0bdf78e",
+      "from_timestamp": 5124.7863333333335,
+      "to_timestamp": 5126.254466666666,
+      "difference": "--- \n+++ \n@@ -8,7 +8,7 @@\n public class Main {\n \n     public static void main(String[] args) {\n-        NumberFormat.getPercentInstance().format(Number: 0.1);\n+        NumberFormat.getPercentInstance().format( number: 0.1);\n         String result = percent.format(0.1);\n         System.out.println(result);\n     }",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "e31c41a6a0bdf78e",
+      "from_timestamp": 5126.254466666666,
+      "to_timestamp": 5127.789333333333,
+      "difference": "--- \n+++ \n@@ -8,7 +8,6 @@\n public class Main {\n \n     public static void main(String[] args) {\n-        NumberFormat.getPercentInstance().format( number: 0.1);\n         String result = percent.format(0.1);\n         System.out.println(result);\n     }",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "e31c41a6a0bdf78e",
+      "from_timestamp": 5127.789333333333,
+      "to_timestamp": 5130.6255,
+      "difference": "--- \n+++ \n@@ -8,6 +8,7 @@\n public class Main {\n \n     public static void main(String[] args) {\n+\n         String result = percent.format(0.1);\n         System.out.println(result);\n     }",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "636ba350e5c56b6b",
+      "from_timestamp": 5431.259166666667,
+      "to_timestamp": 5434.262166666666,
+      "difference": "--- \n+++ \n@@ -1,8 +1,7 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n \n-```java\n public class Main {\n \n     public static void main(String[] args) {\n@@ -12,6 +11,5 @@\n         System.out.println(\"You are \" + name);\n     }\n }\n-```\n \n Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "636ba350e5c56b6b",
+      "from_timestamp": 5434.262166666666,
+      "to_timestamp": 5437.265166666667,
+      "difference": "--- \n+++ \n@@ -1,15 +1,11 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n-\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n-\n-public class Main {\n-\n-    public static void main(String[] args) {\n-        Scanner scanner = new Scanner(System.in);\n-        System.out.print(\"Name: \");\n-        String name = scanner.nextLine().trim();\n-        System.out.println(\"You are \" + name);\n-    }\n+Scanner scanner = new Scanner(System.in);\n+System.out.print(\"Name: \");\n+String name = scanner.nextLine().trim();\n+System.out.println(\"You are \" + name);\n }\n-\n Main > main()\n+Run:\n+Main\n+/Library/Java/JavaVirtualMachines/jdk-12.0.1.jd",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "636ba350e5c56b6b",
+      "from_timestamp": 5437.265166666667,
+      "to_timestamp": 5440.268166666667,
+      "difference": "--- \n+++ \n@@ -1,11 +1,18 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+\n Main.java\n+\n+```java\n Scanner scanner = new Scanner(System.in);\n System.out.print(\"Name: \");\n String name = scanner.nextLine().trim();\n System.out.println(\"You are \" + name);\n }\n+```\n+\n Main > main()\n+\n Run:\n-Main\n+\n /Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n+Name: Mosh Hamedani |",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "636ba350e5c56b6b",
+      "from_timestamp": 5440.268166666667,
+      "to_timestamp": 5443.271166666666,
+      "difference": "--- \n+++ \n@@ -14,5 +14,9 @@\n \n Run:\n \n-/Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n-Name: Mosh Hamedani |\n+/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdI\n+Name: Mosh Hamedani\n+You are Mosh Hamedani\n+\n+Process finished with exit code 0\n+```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "636ba350e5c56b6b",
+      "from_timestamp": 5443.271166666666,
+      "to_timestamp": 5446.2408,
+      "difference": "--- \n+++ \n@@ -1,22 +1,4 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+Project: Mortgage Calculator\n \n-Main.java\n-\n-```java\n-Scanner scanner = new Scanner(System.in);\n-System.out.print(\"Name: \");\n-String name = scanner.nextLine().trim();\n-System.out.println(\"You are \" + name);\n-}\n-```\n-\n-Main > main()\n-\n-Run:\n-\n-/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdI\n-Name: Mosh Hamedani\n-You are Mosh Hamedani\n-\n-Process finished with exit code 0\n-```\n+Mosh Hamedani\n+codewithmosh.com",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "636ba350e5c56b6b",
+      "from_timestamp": 5446.574466666667,
+      "to_timestamp": 5449.2438,
+      "difference": "--- \n+++ \n@@ -1,4 +1,5 @@\n-Project: Mortgage Calculator\n-\n-Mosh Hamedani\n-codewithmosh.com\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+Main.java\n+Run: Main\n+/Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n+Principal: |",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "636ba350e5c56b6b",
+      "from_timestamp": 5449.2438,
+      "to_timestamp": 5452.2468,
+      "difference": "--- \n+++ \n@@ -2,4 +2,4 @@\n Main.java\n Run: Main\n /Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n-Principal: |\n+Principal:",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "92091d2df7bde149",
+      "from_timestamp": 5508.970133333333,
+      "to_timestamp": 5511.973133333333,
+      "difference": "--- \n+++ \n@@ -1,21 +1,10 @@\n-How to Calculate Mortgage Pa\n-https://www.wikihow.com/Calculate-Mortgage-Payments\n-wikiHow to do anything...\n-EDIT\n-HELP US\n-EXPLORE\n-LOG IN\n-MESSAGES\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+Main.java\n+Run: Main\n+/Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n+Principal: 100000\n+Annual Interest Rate: 3.92\n+Period (Years): 30\n+Mortgage: $472.81\n \n-Method 2\n-Calculating Mortgage Payments with an Equation\n-• P is your principal.\n-• r is your monthly interest rate, calculated by dividing your annual interest rate by 12.\n-• n is your number of payments (the number of months you will be paying the loan)\n-[6]\n-\n-M =?\n-P =$100,000\n-r =0.005\n-n =180\n-M = P $\\frac{r(1+r)^{n}}{(1+r)^{n}-1}$\n+Process finished with exit code 0",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "92091d2df7bde149",
+      "from_timestamp": 5511.973133333333,
+      "to_timestamp": 5512.974133333333,
+      "difference": "--- \n+++ \n@@ -1,6 +1,9 @@\n HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+\n Main.java\n+\n Run: Main\n+\n /Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n Principal: 100000\n Annual Interest Rate: 3.92",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "ae987e952f3044f6",
+      "from_timestamp": 5512.373533333333,
+      "to_timestamp": 5518.379533333334,
+      "difference": "--- \n+++ \n@@ -1,9 +1,6 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n-\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n-\n Run: Main\n-\n /Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n Principal: 100000\n Annual Interest Rate: 3.92",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "ae987e952f3044f6",
+      "from_timestamp": 5524.385533333333,
+      "to_timestamp": 5530.391533333333,
+      "difference": "--- \n+++ \n@@ -8,3 +8,5 @@\n Mortgage: $472.81\n \n Process finished with exit code 0\n+\n+0.0392",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "ae987e952f3044f6",
+      "from_timestamp": 5530.391533333333,
+      "to_timestamp": 5533.6614666666665,
+      "difference": "--- \n+++ \n@@ -8,5 +8,3 @@\n Mortgage: $472.81\n \n Process finished with exit code 0\n-\n-0.0392",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "ae987e952f3044f6",
+      "from_timestamp": 5533.6614666666665,
+      "to_timestamp": 5536.364166666666,
+      "difference": "--- \n+++ \n@@ -1,10 +1,19 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n-Main.java\n-Run: Main\n-/Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n-Principal: 100000\n-Annual Interest Rate: 3.92\n-Period (Years): 30\n-Mortgage: $472.81\n-\n-Process finished with exit code 0\n+How to Calculate Mortgage Payments\n+https://www.wikihow.com/Calculate-Mortgage-Payments\n+wikiHow to do anything...\n+EDIT\n+HELP US\n+EXPLORE\n+LOG IN\n+MESSAGES\n+Method 2\n+Calculating Mortgage Payments with an Equation\n+• P is your principal.\n+• r is your monthly interest rate, calculated by dividing your annual interest rate by 12.\n+• n is your number of payments (the number of months you will be paying the loan)\n+[6]\n+M =?\n+P =$100,000\n+r =0.005\n+n =180\n+M = P $\\frac{r(1+r)^{n}}{(1+r)^{n}-1}$",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "ae987e952f3044f6",
+      "from_timestamp": 5536.364166666666,
+      "to_timestamp": 5539.367166666667,
+      "difference": "--- \n+++ \n@@ -6,14 +6,19 @@\n EXPLORE\n LOG IN\n MESSAGES\n+\n Method 2\n Calculating Mortgage Payments with an Equation\n • P is your principal.\n • r is your monthly interest rate, calculated by dividing your annual interest rate by 12.\n • n is your number of payments (the number of months you will be paying the loan)\n [6]\n+\n M =?\n P =$100,000\n r =0.005\n n =180\n M = P $\\frac{r(1+r)^{n}}{(1+r)^{n}-1}$\n+\n+Discover how you'll save with our\n+Peloton",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "ae987e952f3044f6",
+      "from_timestamp": 5539.367166666667,
+      "to_timestamp": 5545.373166666666,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-How to Calculate Mortgage Payments\n+How to Calculate Mortgage Pa\n https://www.wikihow.com/Calculate-Mortgage-Payments\n wikiHow to do anything...\n EDIT\n@@ -20,5 +20,4 @@\n n =180\n M = P $\\frac{r(1+r)^{n}}{(1+r)^{n}-1}$\n \n-Discover how you'll save with our\n-Peloton\n+https://www.wikihow.com/Calculate-Mortgage-Payments/#/image:Calculate-Mortgage-Payments-Step-6-Version-3.jpg",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "ae987e952f3044f6",
+      "from_timestamp": 5545.373166666666,
+      "to_timestamp": 5548.376166666667,
+      "difference": "--- \n+++ \n@@ -6,18 +6,16 @@\n EXPLORE\n LOG IN\n MESSAGES\n-\n-Method 2\n+Method\n+2\n Calculating Mortgage Payments with an Equation\n • P is your principal.\n-• r is your monthly interest rate, calculated by dividing your annual interest rate by 12.\n+• r is your monthly interest rate, calculated by dividing your annual interest rate by\n+12.\n • n is your number of payments (the number of months you will be paying the loan)\n [6]\n-\n M =?\n P =$100,000\n r =0.005\n n =180\n M = P $\\frac{r(1+r)^{n}}{(1+r)^{n}-1}$\n-\n-https://www.wikihow.com/Calculate-Mortgage-Payments/#/image:Calculate-Mortgage-Payments-Step-6-Version-3.jpg",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "ae987e952f3044f6",
+      "from_timestamp": 5548.376166666667,
+      "to_timestamp": 5551.379166666667,
+      "difference": "--- \n+++ \n@@ -1,21 +1,12 @@\n-How to Calculate Mortgage Pa\n-https://www.wikihow.com/Calculate-Mortgage-Payments\n-wikiHow to do anything...\n-EDIT\n-HELP US\n-EXPLORE\n-LOG IN\n-MESSAGES\n-Method\n-2\n-Calculating Mortgage Payments with an Equation\n-• P is your principal.\n-• r is your monthly interest rate, calculated by dividing your annual interest rate by\n-12.\n-• n is your number of payments (the number of months you will be paying the loan)\n-[6]\n-M =?\n-P =$100,000\n-r =0.005\n-n =180\n-M = P $\\frac{r(1+r)^{n}}{(1+r)^{n}-1}$\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+Main.java\n+\n+Run: Main\n+\n+/Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n+Principal: 100000\n+Annual Interest Rate: 3.92\n+Period (Years): 30\n+Mortgage: $472.81\n+\n+Process finished with exit code 0",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "ae987e952f3044f6",
+      "from_timestamp": 5551.379166666667,
+      "to_timestamp": 5554.815933333333,
+      "difference": "--- \n+++ \n@@ -1,12 +1,25 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n-Main.java\n+How to Calculate Mortgage Payments\n+https://www.wikihow.com/Calculate-Mortgage-Payments\n+wikiHow to do anything...\n+EDIT\n+HELP US\n+EXPLORE\n+LOG IN\n+MESSAGES\n \n-Run: Main\n+Method 2\n+Calculating Mortgage Payments with an Equation\n+• P is your principal.\n+• r is your monthly interest rate, calculated by dividing your annual interest rate by 12.\n+• n is your number of payments (the number of months you will be paying the loan)\n+[6]\n \n-/Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n-Principal: 100000\n-Annual Interest Rate: 3.92\n-Period (Years): 30\n-Mortgage: $472.81\n+M =?\n+P =$100,000\n+r =0.005\n+n =180\n+M = P $\\frac{r(1+r)^{n}}{(1+r)^{n}-1}$\n \n-Process finished with exit code 0\n+Advertisement\n+Discover how you'll save with our\n+Peloton",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "bcaf4f1fa2f84718",
+      "from_timestamp": 5777.6719,
+      "to_timestamp": 5780.641533333333,
+      "difference": "--- \n+++ \n@@ -1,9 +1,9 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n \n ```java\n-public monthlyInterest = annualInterest / PERCENT / MONTHS_IN\n+float monthlyInterest = annualInterest / PERCENT / MONTHS_IN\n \n System.out.print(\"Period (Years): \");\n byte years = scanner.nextByte();",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "bcaf4f1fa2f84718",
+      "from_timestamp": 5780.641533333333,
+      "to_timestamp": 5782.1764,
+      "difference": "--- \n+++ \n@@ -1,9 +1,7 @@\n HelloWorld [~/IdeaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n \n-Main.java\n-\n ```java\n-float monthlyInterest = annualInterest / PERCENT / MONTHS_IN\n+float monthlyInterest = annualInterest / PERCENT / MONTHS_IN;\n \n System.out.print(\"Period (Years): \");\n byte years = scanner.nextByte();",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "bcaf4f1fa2f84718",
+      "from_timestamp": 5783.644533333333,
+      "to_timestamp": 5786.614166666666,
+      "difference": "--- \n+++ \n@@ -1,7 +1,7 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n ```java\n-float monthlyInterest = annualInterest / PERCENT / MONTHS_IN;\n+float monthlyInterest = annualInterest / PERCENT / MONTHS_IN\n \n System.out.print(\"Period (Years): \");\n byte years = scanner.nextByte();",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "5191c49e9f692050",
+      "from_timestamp": 6019.246566666667,
+      "to_timestamp": 6022.249566666666,
+      "difference": "--- \n+++ \n@@ -1,7 +1,16 @@\n HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n-Run: Main\n-/Library/Java/JavaVirtualMachines/jdk-12.0.1\n-true\n-Process finished with exit code 0\n-Terminal 4: Run 6: TODO Event Log\n+package com.codewithmosh;\n+\n+public class Main {\n+\n+    public static void main(String[] args) {\n+        int x = 1;\n+        int y = 1;\n+        System.out.println(x == y);\n+    }\n+}\n+\n+Main > main()\n+\n+Terminal ▶ Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "5191c49e9f692050",
+      "from_timestamp": 6022.249566666666,
+      "to_timestamp": 6023.8178,
+      "difference": "--- \n+++ \n@@ -11,6 +11,14 @@\n     }\n }\n \n-Main > main()\n-\n-Terminal ▶ Run 6: TODO Event Log\n+1: Project\n+2: Favorites\n+3: Structure\n+4: Terminal\n+5: Run\n+6: TODO\n+Event Log\n+m\n+Maven\n+Ant Build\n+Documentation",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "32ecd2524f9d80ad",
+      "from_timestamp": 6059.5868666666665,
+      "to_timestamp": 6062.589866666666,
+      "difference": "--- \n+++ \n@@ -7,7 +7,7 @@\n     public static void main(String[] args) {\n         int x = 1;\n         int y = 1;\n-        System.out.println(x < y);\n+        System.out.println(x <= y);\n     }\n }\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "32ecd2524f9d80ad",
+      "from_timestamp": 6062.589866666666,
+      "to_timestamp": 6064.191466666667,
+      "difference": "--- \n+++ \n@@ -6,7 +6,7 @@\n \n     public static void main(String[] args) {\n         int x = 1;\n-        int y = 1;\n+        int y = 2;\n         System.out.println(x <= y);\n     }\n }",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "32ecd2524f9d80ad",
+      "from_timestamp": 6065.592866666667,
+      "to_timestamp": 6068.595866666667,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n package com.codewithmosh;\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "32ecd2524f9d80ad",
+      "from_timestamp": 6068.595866666667,
+      "to_timestamp": 6068.695966666667,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n package com.codewithmosh;\n \n@@ -11,6 +11,13 @@\n     }\n }\n \n+1: Project\n+2: Favorites\n+3: Structure\n+4: Maven\n+5: Ant Build\n+6: Documentation\n+\n Main > main()\n \n Terminal 0: Messages 4: Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "d12ca4eaf1870a18",
+      "from_timestamp": 6100.461033333333,
+      "to_timestamp": 6103.430666666667,
+      "difference": "--- \n+++ \n@@ -8,9 +8,8 @@\n \n     public static void main(String[] args) {\n         int temperature = 22;\n-        boolean isWarm = |\n+        boolean isWarm =\n     }\n-}\n \n Main > main()\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "d12ca4eaf1870a18",
+      "from_timestamp": 6103.430666666667,
+      "to_timestamp": 6105.032266666667,
+      "difference": "--- \n+++ \n@@ -1,7 +1,5 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n-\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n-\n package com.codewithmosh;\n \n public class Main {\n@@ -10,6 +8,7 @@\n         int temperature = 22;\n         boolean isWarm =\n     }\n+}\n \n Main > main()\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "d12ca4eaf1870a18",
+      "from_timestamp": 6105.032266666667,
+      "to_timestamp": 6106.433666666667,
+      "difference": "--- \n+++ \n@@ -6,7 +6,7 @@\n \n     public static void main(String[] args) {\n         int temperature = 22;\n-        boolean isWarm =\n+        boolean isWarm = temperature\n     }\n }\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "d12ca4eaf1870a18",
+      "from_timestamp": 6106.433666666667,
+      "to_timestamp": 6109.4366666666665,
+      "difference": "--- \n+++ \n@@ -6,7 +6,7 @@\n \n     public static void main(String[] args) {\n         int temperature = 22;\n-        boolean isWarm = temperature\n+        boolean isWarm = temperature > 20\n     }\n }\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "a3086a516d95d86a",
+      "from_timestamp": 6145.4393,
+      "to_timestamp": 6148.4423,
+      "difference": "--- \n+++ \n@@ -1,7 +1,17 @@\n HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+\n Main.java\n-Run: Main\n-/Library/Java/JavaVirtualMachines/jdk-12.0.1\n-false\n-Process finished with exit code 0\n+\n+kage com.codewithmosh;\n+\n+lic class Main {\n+\n+public static void main(String[] args) {\n+    int temperature = 12;\n+    boolean isWarm = temperature > 20 && temperat\n+    System.out.println(isWarm);\n+}\n+\n+Main > main()\n+\n Terminal 0: Messages 4: Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "a3086a516d95d86a",
+      "from_timestamp": 6149.576766666667,
+      "to_timestamp": 6151.4453,
+      "difference": "--- \n+++ \n@@ -1,7 +1,5 @@\n HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n-\n Main.java\n-\n kage com.codewithmosh;\n \n lic class Main {",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "a3086a516d95d86a",
+      "from_timestamp": 6151.4453,
+      "to_timestamp": 6153.6141333333335,
+      "difference": "--- \n+++ \n@@ -1,15 +1,11 @@\n HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n kage com.codewithmosh;\n-\n lic class Main {\n-\n public static void main(String[] args) {\n     int temperature = 12;\n     boolean isWarm = temperature > 20 && temperat\n     System.out.println(isWarm);\n }\n-\n Main > main()\n-\n Terminal 0: Messages 4: Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "e9ef7f75d3f541a5",
+      "from_timestamp": 6237.231,
+      "to_timestamp": 6240.200633333333,
+      "difference": "--- \n+++ \n@@ -6,5 +6,6 @@\n an hasHighIncome = true;\n an hasGoodCredit = true;\n an isEligible = hasHighIncome || hasGoodCredit;\n+}\n Main > main()\n Terminal 0: Messages 4: Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "2636316347b6e761",
+      "from_timestamp": 6244.871966666667,
+      "to_timestamp": 6247.8416,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n odewithmosh;\n Main {\n@@ -6,6 +6,5 @@\n an hasHighIncome = true;\n an hasGoodCredit = true;\n an isEligible = hasHighIncome || hasGoodCredit;\n-}\n Main > main()\n Terminal 0: Messages 4: Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "2636316347b6e761",
+      "from_timestamp": 6249.3431,
+      "to_timestamp": 6250.8446,
+      "difference": "--- \n+++ \n@@ -6,5 +6,6 @@\n an hasHighIncome = true;\n an hasGoodCredit = true;\n an isEligible = hasHighIncome || hasGoodCredit;\n+}\n Main > main()\n Terminal 0: Messages 4: Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "2636316347b6e761",
+      "from_timestamp": 6250.8446,
+      "to_timestamp": 6253.7475,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n odewithmosh;\n Main {\n@@ -6,6 +6,5 @@\n an hasHighIncome = true;\n an hasGoodCredit = true;\n an isEligible = hasHighIncome || hasGoodCredit;\n-}\n Main > main()\n Terminal 0: Messages 4: Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "a7ef478e7476ad04",
+      "from_timestamp": 6253.113533333333,
+      "to_timestamp": 6256.116533333333,
+      "difference": "--- \n+++ \n@@ -3,7 +3,7 @@\n odewithmosh;\n Main {\n static void main(String[] args) {\n-an hasHighIncome = true;\n+an hasHighIncome = false;\n an hasGoodCredit = true;\n an isEligible = hasHighIncome || hasGoodCredit;\n }",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "a7ef478e7476ad04",
+      "from_timestamp": 6256.8506,
+      "to_timestamp": 6259.1195333333335,
+      "difference": "--- \n+++ \n@@ -6,6 +6,5 @@\n an hasHighIncome = false;\n an hasGoodCredit = true;\n an isEligible = hasHighIncome || hasGoodCredit;\n-}\n Main > main()\n Terminal 0: Messages 4: Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "a7ef478e7476ad04",
+      "from_timestamp": 6259.1195333333335,
+      "to_timestamp": 6260.4542,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n odewithmosh;\n Main {\n@@ -6,5 +6,6 @@\n an hasHighIncome = false;\n an hasGoodCredit = true;\n an isEligible = hasHighIncome || hasGoodCredit;\n+}\n Main > main()\n Terminal 0: Messages 4: Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "16bcb7ed410242ad",
+      "from_timestamp": 6303.030066666666,
+      "to_timestamp": 6304.3981,
+      "difference": "--- \n+++ \n@@ -1,11 +1,17 @@\n HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+\n Main.java\n+\n dewithmosh;\n+\n ain {\n+\n tic void main(String[] args) {\n n hasHighIncome = false;\n n hasGoodCredit = true;\n n hasCriminalRecord = false;\n n isEligible = hasHighIncome || hasGoodCredit;\n+\n Main > main()\n+\n Terminal 0: Messages 4: Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "16bcb7ed410242ad",
+      "from_timestamp": 6304.3981,
+      "to_timestamp": 6306.033066666667,
+      "difference": "--- \n+++ \n@@ -1,17 +1,11 @@\n HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n-\n Main.java\n-\n dewithmosh;\n-\n ain {\n-\n tic void main(String[] args) {\n n hasHighIncome = false;\n n hasGoodCredit = true;\n n hasCriminalRecord = false;\n-n isEligible = hasHighIncome || hasGoodCredit;\n-\n+Variable 'hasCriminalRecord' is never used\n Main > main()\n-\n Terminal 0: Messages 4: Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "16bcb7ed410242ad",
+      "from_timestamp": 6306.033066666667,
+      "to_timestamp": 6308.7024,
+      "difference": "--- \n+++ \n@@ -6,6 +6,6 @@\n n hasHighIncome = false;\n n hasGoodCredit = true;\n n hasCriminalRecord = false;\n-Variable 'hasCriminalRecord' is never used\n+n isEligible = (hasHighIncome || hasGoodCredit);\n Main > main()\n Terminal 0: Messages 4: Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9cf6e7f155016ab0",
+      "from_timestamp": 6306.8005,
+      "to_timestamp": 6308.5022,
+      "difference": "--- \n+++ \n@@ -10,7 +10,7 @@\n n hasHighIncome = false;\n n hasGoodCredit = true;\n n hasCriminalRecord = false;\n-n isEligible = hasHighIncome || hasGoodCredit;\n+n isEligible = (hasHighIncome || hasGoodCredit);\n \n Main > main()\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9cf6e7f155016ab0",
+      "from_timestamp": 6308.5022,
+      "to_timestamp": 6309.8035,
+      "difference": "--- \n+++ \n@@ -1,17 +1,11 @@\n HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n-\n Main.java\n-\n dewithmosh;\n-\n ain {\n-\n tic void main(String[] args) {\n n hasHighIncome = false;\n n hasGoodCredit = true;\n n hasCriminalRecord = false;\n n isEligible = (hasHighIncome || hasGoodCredit);\n-\n Main > main()\n-\n Terminal 0: Messages 4: Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9cf6e7f155016ab0",
+      "from_timestamp": 6309.8035,
+      "to_timestamp": 6312.8065,
+      "difference": "--- \n+++ \n@@ -1,11 +1,17 @@\n HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+\n Main.java\n-dewithmosh;\n-ain {\n-tic void main(String[] args) {\n-n hasHighIncome = false;\n-n hasGoodCredit = true;\n-n hasCriminalRecord = false;\n-n isEligible = (hasHighIncome || hasGoodCredit);\n+\n+ithmosh;\n+\n+{\n+\n+void main(String[] args) {\n+asHighIncome = false;\n+asGoodCredit = true;\n+asCriminalRecord = false;\n+sEligible = (hasHighIncome || hasGoodCredit) &&\n+\n Main > main()\n+\n Terminal 0: Messages 4: Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9cf6e7f155016ab0",
+      "from_timestamp": 6312.8065,
+      "to_timestamp": 6313.073433333333,
+      "difference": "--- \n+++ \n@@ -1,17 +1,12 @@\n HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n-\n Main.java\n-\n ithmosh;\n-\n {\n-\n void main(String[] args) {\n asHighIncome = false;\n asGoodCredit = true;\n asCriminalRecord = false;\n-sEligible = (hasHighIncome || hasGoodCredit) &&\n-\n+sEligible = (hasHighIncome || hasGoodCredit) && ;\n+}\n Main > main()\n-\n Terminal 0: Messages 4: Run 6: TODO Event Log",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "5f475b0c91d4bc76",
+      "from_timestamp": 6573.6671,
+      "to_timestamp": 6576.6701,
+      "difference": "--- \n+++ \n@@ -1,5 +1,4 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n-\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n conditions.txt\n \n@@ -13,7 +12,9 @@\n         System.out.println(\"Beautiful day\");\n     else\n         System.out.println(\"Cold day\");\n+\n+    }\n }\n ```\n \n-Main > main()\n+Main main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "5f475b0c91d4bc76",
+      "from_timestamp": 6576.6701,
+      "to_timestamp": 6578.238333333334,
+      "difference": "--- \n+++ \n@@ -1,4 +1,5 @@\n HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+\n Main.java\n conditions.txt\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "5f475b0c91d4bc76",
+      "from_timestamp": 6578.238333333334,
+      "to_timestamp": 6579.6731,
+      "difference": "--- \n+++ \n@@ -9,7 +9,7 @@\n     if (temp > 30) {\n         System.out.println(\"It's a hot day\");\n         System.out.println(\"Drink water\");\n-    } else if (temp > 20 && temp <= 30)\n+    } else if (temp > 20 &&\n         System.out.println(\"Beautiful day\");\n     else\n         System.out.println(\"Cold day\");",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "5f475b0c91d4bc76",
+      "from_timestamp": 6579.6731,
+      "to_timestamp": 6582.642733333333,
+      "difference": "--- \n+++ \n@@ -9,13 +9,12 @@\n     if (temp > 30) {\n         System.out.println(\"It's a hot day\");\n         System.out.println(\"Drink water\");\n-    } else if (temp > 20 &&\n+    } else if (temp > 20)\n         System.out.println(\"Beautiful day\");\n     else\n         System.out.println(\"Cold day\");\n-\n-    }\n+}\n }\n ```\n \n-Main main()\n+Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "4babcd766b86c31c",
+      "from_timestamp": 6767.127033333333,
+      "to_timestamp": 6770.130033333333,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n \n@@ -12,8 +12,6 @@\n         boolean hasHighIncome = false;\n         if (income > 100_000)\n             hasHighIncome = true;\n-        else\n-            hasHighIncome = false;\n     }\n }\n ```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "4babcd766b86c31c",
+      "from_timestamp": 6770.130033333333,
+      "to_timestamp": 6771.765,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n \n@@ -12,6 +12,7 @@\n         boolean hasHighIncome = false;\n         if (income > 100_000)\n             hasHighIncome = true;\n+\n     }\n }\n ```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "4babcd766b86c31c",
+      "from_timestamp": 6771.765,
+      "to_timestamp": 6773.1330333333335,
+      "difference": "--- \n+++ \n@@ -12,7 +12,6 @@\n         boolean hasHighIncome = false;\n         if (income > 100_000)\n             hasHighIncome = true;\n-\n     }\n }\n ```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "4babcd766b86c31c",
+      "from_timestamp": 6773.1330333333335,
+      "to_timestamp": 6776.102666666667,
+      "difference": "--- \n+++ \n@@ -12,6 +12,7 @@\n         boolean hasHighIncome = false;\n         if (income > 100_000)\n             hasHighIncome = true;\n+\n     }\n }\n ```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "ea38333e913bf0b7",
+      "from_timestamp": 6804.2975,
+      "to_timestamp": 6807.3005,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "ea38333e913bf0b7",
+      "from_timestamp": 6810.3035,
+      "to_timestamp": 6813.3065,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "32e7976eb55a037e",
+      "from_timestamp": 6924.3507666666665,
+      "to_timestamp": 6927.353766666667,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "32e7976eb55a037e",
+      "from_timestamp": 6930.356766666667,
+      "to_timestamp": 6933.293033333333,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "d68a22a444d41b8e",
+      "from_timestamp": 7197.0899,
+      "to_timestamp": 7200.0929,
+      "difference": "--- \n+++ \n@@ -6,7 +6,7 @@\n class Main {\n \n public static void main(String[] args) {\n-    int role = \"admin\";\n+    int role = 1;\n \n     switch (role) {\n         case 1:\n@@ -16,7 +16,6 @@\n         case 2:\n             System.out.println(\"You're a moderator\")\n             break;\n-\n     }\n }\n ```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "d7337106c5156978",
+      "from_timestamp": 7218.077533333333,
+      "to_timestamp": 7219.545666666667,
+      "difference": "--- \n+++ \n@@ -1,8 +1,7 @@\n HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n Main.java\n-Run:\n-Main\n+Run: Main\n /Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n-Number: |\n+Number:\n GET THE FULL COURSE\n SEE DESCRIPTION",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "d7337106c5156978",
+      "from_timestamp": 7219.545666666667,
+      "to_timestamp": 7221.080533333334,
+      "difference": "--- \n+++ \n@@ -2,6 +2,6 @@\n Main.java\n Run: Main\n /Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n-Number:\n+Number: |\n GET THE FULL COURSE\n SEE DESCRIPTION",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "d7337106c5156978",
+      "from_timestamp": 7221.080533333334,
+      "to_timestamp": 7223.9167,
+      "difference": "--- \n+++ \n@@ -2,6 +2,4 @@\n Main.java\n Run: Main\n /Library/Java/JavaVirtualMachines/jdk-12.0.1.jd\n-Number: |\n-GET THE FULL COURSE\n-SEE DESCRIPTION\n+Number: 5",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "1fc0eb235209619a",
+      "from_timestamp": 7299.3921,
+      "to_timestamp": 7302.3951,
+      "difference": "--- \n+++ \n@@ -12,8 +12,11 @@\n         System.out.print(\"Number: \");\n         int number = scanner.nextInt();\n \n-    }\n-}\n-```\n+        if (nu)\n+        {\n+            number int\n+            null\n+            ^↓ and ^↑ will move caret down and up in the editor >>\n \n Main > main()\n+```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "1fc0eb235209619a",
+      "from_timestamp": 7302.3951,
+      "to_timestamp": 7303.9967,
+      "difference": "--- \n+++ \n@@ -12,11 +12,11 @@\n         System.out.print(\"Number: \");\n         int number = scanner.nextInt();\n \n-        if (nu)\n+        if (number != 0)\n         {\n-            number int\n-            null\n-            ^↓ and ^↑ will move caret down and up in the editor >>\n+        }\n+    }\n+}\n+```\n \n Main > main()\n-```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "1fc0eb235209619a",
+      "from_timestamp": 7303.9967,
+      "to_timestamp": 7305.3981,
+      "difference": "--- \n+++ \n@@ -12,7 +12,7 @@\n         System.out.print(\"Number: \");\n         int number = scanner.nextInt();\n \n-        if (number != 0)\n+        if (number %)\n         {\n         }\n     }",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "1fc0eb235209619a",
+      "from_timestamp": 7305.3981,
+      "to_timestamp": 7308.4011,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n \n@@ -12,7 +12,7 @@\n         System.out.print(\"Number: \");\n         int number = scanner.nextInt();\n \n-        if (number %)\n+        if (number % 4)\n         {\n         }\n     }",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "0bc018dc14dc3e7c",
+      "from_timestamp": 7449.508733333333,
+      "to_timestamp": 7452.511733333334,
+      "difference": "--- \n+++ \n@@ -17,4 +17,4 @@\n }\n ```\n \n-Main > main()\n+Main main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "0bc018dc14dc3e7c",
+      "from_timestamp": 7452.511733333334,
+      "to_timestamp": 7453.879766666667,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "0bc018dc14dc3e7c",
+      "from_timestamp": 7455.514733333333,
+      "to_timestamp": 7458.117333333334,
+      "difference": "--- \n+++ \n@@ -6,7 +6,7 @@\n System.out.print(\"Number: \");\n int number = scanner.nextInt();\n \n-if (number % 5 == 0 && number % 3 == 0)\n+if (number % 5 == 0) && number % 3 == 0)\n     System.out.println(\"FizzBuzz\");\n else if (number % 5 == 0)\n     System.out.println(\"Fizz\");",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9b5e455f76a4b215",
+      "from_timestamp": 7468.2608,
+      "to_timestamp": 7469.8624,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9b5e455f76a4b215",
+      "from_timestamp": 7471.2638,
+      "to_timestamp": 7474.2668,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "d144f50ec26f1d30",
+      "from_timestamp": 8436.761666666667,
+      "to_timestamp": 8439.764666666666,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n \n@@ -14,8 +14,6 @@\n             System.out.println(fruits[i]);\n \n         for (String fruit : fruits)\n-        {\n-        }\n     }\n }\n ```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "d144f50ec26f1d30",
+      "from_timestamp": 8439.764666666666,
+      "to_timestamp": 8441.399633333333,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "d144f50ec26f1d30",
+      "from_timestamp": 8441.399633333333,
+      "to_timestamp": 8442.767666666667,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n \n@@ -14,8 +14,5 @@\n             System.out.println(fruits[i]);\n \n         for (String fruit : fruits)\n-    }\n-}\n+        {\n ```\n-\n-Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "d144f50ec26f1d30",
+      "from_timestamp": 8442.767666666667,
+      "to_timestamp": 8445.770666666667,
+      "difference": "--- \n+++ \n@@ -1,4 +1,4 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n \n Main.java\n \n@@ -14,5 +14,10 @@\n             System.out.println(fruits[i]);\n \n         for (String fruit : fruits)\n-        {\n+            s|\n+    }\n+    short\n+    super\n+    switch\n+    synchronized\n ```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "d144f50ec26f1d30",
+      "from_timestamp": 8445.770666666667,
+      "to_timestamp": 8445.970866666667,
+      "difference": "--- \n+++ \n@@ -14,10 +14,14 @@\n             System.out.println(fruits[i]);\n \n         for (String fruit : fruits)\n-            s|\n+            so|\n     }\n-    short\n-    super\n-    switch\n-    synchronized\n+}\n ```\n+\n+```java\n+sout    Prints a string to System.out\n+suf    Prints a formatted string to Syste...\n+soutm   Prints current class and method n...\n+soutp   Prints method parameter names and...\n+```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9971eba4ba05e630",
+      "from_timestamp": 8672.7641,
+      "to_timestamp": 8675.7671,
+      "difference": "--- \n+++ \n@@ -1,18 +1,17 @@\n ```java\n-public static void main(String[] args) {\n-    final byte MONTHS_IN_YEAR = 12;\n-    final byte PERCENT = 100;\n+tatic void main(String[] args) {\n+    l byte MONTHS_IN_YEAR = 12;\n+    l byte PERCENT = 100;\n \n-    Scanner scanner = new Scanner(System.in);\n+    ner scanner = new Scanner(System.in);\n \n-    while (true) {\n+    e (true) {\n         System.out.print(\"Principal: \");\n         int principal = scanner.nextInt();\n         if (principal >= 1000 && principal <= 1_000_000)\n             break;\n-        System.out.println(\"Enter a value between 1000 |\")\n-    }\n+        System.out.println(\"Enter a value between 1000 and 1000000\");\n \n-    System.out.print(\"Annual Interest Rate: \");\n-}\n+        em.out.print(\"Annual Interest Rate: \");\n+        Main > main()\n ```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9971eba4ba05e630",
+      "from_timestamp": 8675.7671,
+      "to_timestamp": 8677.435433333334,
+      "difference": "--- \n+++ \n@@ -1,17 +1,24 @@\n+HelloWorld [~/ideaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n+\n+Main.java\n+\n ```java\n-tatic void main(String[] args) {\n-    l byte MONTHS_IN_YEAR = 12;\n-    l byte PERCENT = 100;\n+public static void main(String[] args) {\n+    final byte MONTHS_IN_YEAR = 12;\n+    final byte PERCENT = 100;\n \n-    ner scanner = new Scanner(System.in);\n+    Scanner scanner = new Scanner(System.in);\n \n-    e (true) {\n+    while (true) {\n         System.out.print(\"Principal: \");\n         int principal = scanner.nextInt();\n         if (principal >= 1000 && principal <= 1_000_000)\n             break;\n-        System.out.println(\"Enter a value between 1000 and 1000000\");\n+        System.out.println(\"Enter a value between 1000 and\n+    }\n \n-        em.out.print(\"Annual Interest Rate: \");\n-        Main > main()\n+    System.out.print(\"Annual Interest Rate: \");\n+}\n ```\n+\n+Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9971eba4ba05e630",
+      "from_timestamp": 8677.435433333334,
+      "to_timestamp": 8678.7701,
+      "difference": "--- \n+++ \n@@ -1,7 +1,3 @@\n-HelloWorld [~/ideaProjects/HelloWorld] - ...src/com/codewithmosh/Main.java [HelloWorld]\n-\n-Main.java\n-\n ```java\n public static void main(String[] args) {\n     final byte MONTHS_IN_YEAR = 12;\n@@ -20,5 +16,3 @@\n     System.out.print(\"Annual Interest Rate: \");\n }\n ```\n-\n-Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9971eba4ba05e630",
+      "from_timestamp": 8678.7701,
+      "to_timestamp": 8681.7731,
+      "difference": "--- \n+++ \n@@ -1,3 +1,7 @@\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+\n+Main.java\n+\n ```java\n public static void main(String[] args) {\n     final byte MONTHS_IN_YEAR = 12;\n@@ -5,14 +9,13 @@\n \n     Scanner scanner = new Scanner(System.in);\n \n-    while (true) {\n-        System.out.print(\"Principal: \");\n-        int principal = scanner.nextInt();\n-        if (principal >= 1000 && principal <= 1_000_000)\n-            break;\n-        System.out.println(\"Enter a value between 1000 and\n-    }\n+    System.out.print(\"Period (Years): \");\n+    byte years = scanner.nextByte();\n+    int numberOfPayments = years * MONTHS_IN_YEAR;\n \n-    System.out.print(\"Annual Interest Rate: \");\n-}\n+    double mortgage = principal  Cannot resolve symbol 'pr\n+        * (monthlyInterest * Math.pow(1 + monthlyI\n+        / (Math.pow(1 + monthlyInterest, numberOfP\n+\n+    String mortgageFormatted = NumberFormat.getCurrency\n ```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9ab9874fed29b258",
+      "from_timestamp": 8775.0663,
+      "to_timestamp": 8778.0693,
+      "difference": "--- \n+++ \n@@ -1,21 +1,22 @@\n-HelloWorld [~/IdeaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+HelloWorld [~/ideaProjects/HelloWorld] - .../src/com/codewithmosh/Main.java [HelloWorld]\n+\n+Main.java\n \n ```java\n-break;\n-System.out.println(\"Enter a value between 1000 and 10\n-}\n-\n while (true) {\n     System.out.print(\"Annual Interest Rate: \");\n     float annualInterest = scanner.nextFloat();\n-    if (annualInterest >= 1 && annualInterest <= 30)\n+    if (annualInterest >= 1 && annualInterest <= 30) {\n         break;\n+    }\n     float monthlyInterest = annualInterest / PERCENT / MO\n }\n \n System.out.print(\"Period (Years): \");\n byte years = scanner.nextByte();\n int numberOfPayments = years * MONTHS_IN_YEAR;\n+\n+double mortgage = principal\n+    * (monthlyInterest * Math.pow(1 + monthlyInterest\n+        / (Math.pow(1 + monthlyInterest * numberOfPayments\n ```\n-\n-Main > main()",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9ab9874fed29b258",
+      "from_timestamp": 8778.0693,
+      "to_timestamp": 8779.3706,
+      "difference": "--- \n+++ \n@@ -6,9 +6,8 @@\n while (true) {\n     System.out.print(\"Annual Interest Rate: \");\n     float annualInterest = scanner.nextFloat();\n-    if (annualInterest >= 1 && annualInterest <= 30) {\n+    if (annualInterest >= 1 && annualInterest <= 30)\n         break;\n-    }\n     float monthlyInterest = annualInterest / PERCENT / MO\n }\n \n@@ -18,5 +17,5 @@\n \n double mortgage = principal\n     * (monthlyInterest * Math.pow(1 + monthlyInterest\n-        / (Math.pow(1 + monthlyInterest * numberOfPayments\n+    / (Math.pow(1 + monthlyInterest, numberOfPayments\n ```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9ab9874fed29b258",
+      "from_timestamp": 8779.3706,
+      "to_timestamp": 8781.0723,
+      "difference": "--- \n+++ \n@@ -6,8 +6,9 @@\n while (true) {\n     System.out.print(\"Annual Interest Rate: \");\n     float annualInterest = scanner.nextFloat();\n-    if (annualInterest >= 1 && annualInterest <= 30)\n+    if (annualInterest >= 1 && annualInterest <= 30) {\n         break;\n+    }\n     float monthlyInterest = annualInterest / PERCENT / MO\n }\n ",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    },
+    {
+      "event_id": "9ab9874fed29b258",
+      "from_timestamp": 8781.0723,
+      "to_timestamp": 8783.541433333334,
+      "difference": "--- \n+++ \n@@ -3,20 +3,19 @@\n Main.java\n \n ```java\n-while (true) {\n-    System.out.print(\"Annual Interest Rate: \");\n-    float annualInterest = scanner.nextFloat();\n-    if (annualInterest >= 1 && annualInterest <= 30) {\n-        break;\n-    }\n-    float monthlyInterest = annualInterest / PERCENT / MO\n-}\n+{\n+ut.print(\"Annual Interest Rate: \");\n+nualInterest = scanner.nextFloat();\n+alInterest >= 1 && annualInterest <= 30) {\n+k;\n \n-System.out.print(\"Period (Years): \");\n-byte years = scanner.nextByte();\n-int numberOfPayments = years * MONTHS_IN_YEAR;\n+monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;\n \n-double mortgage = principal\n-    * (monthlyInterest * Math.pow(1 + monthlyInterest\n-    / (Math.pow(1 + monthlyInterest, numberOfPayments\n+rint(\"Period (Years): \");\n+scanner.nextByte();\n+Payments = years * MONTHS_IN_YEAR;\n+\n+age = principal\n+monthlyInterest * Math.now(1 + monthlyInterest * numberOfPaymen\n+Main > main()\n ```",
+      "limitation": "Differences may be OCR instability as well as actual visual edits. Verify the two source frames."
+    }
+  ],
+  "original_sources_unchanged": true,
+  "model_digest": "6e5935a916fc8d6878a67c60c2b99648f54e10b4a4af4cbbfb2c308953000e5f",
+  "all_observed_model_sizes_equal_vram": true,
+  "placement_interpretation": "Equal loaded size/VRAM is Ollama evidence of full GPU placement, not a claim about all CPU preprocessing.",
+  "model_output_limitations": "OCR snippets are candidates; code fences, missing characters and descriptions are not independently verified."
+}

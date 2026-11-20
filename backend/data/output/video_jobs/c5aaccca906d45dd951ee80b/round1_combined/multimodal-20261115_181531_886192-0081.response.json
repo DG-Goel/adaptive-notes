@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-983c746f-1fc5-463d-9118-45ff6d0e367c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Imports are an increasing function of domestic output.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Imports are an increasing function of the real exchange rate.\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If epsilon goes up, domestic goods become more expensive.\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Consumers will buy more abroad when domestic goods become more expensive.\",\n      \"refs\": [\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item5\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Consumption and investment are increasing functions of output.\",\n      \"refs\": [\"Q0021\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What happens to imports when domestic output rises?\",\n      \"answer\": \"They increase.\",\n      \"distractors\": [\n        \"They decrease.\",\n        \"They stay the same.\",\n        \"They become unpredictable.\"\n      ],\n      \"explanation\": \"The lecture states that imports are an increasing function of domestic output (Q0003).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Imports and domestic output\",\n      \"refs\": [\"Q0003\"]\n    },\n    {\n      \"question\": \"How does a rise in the real exchange rate affect imports?\",\n      \"answer\": \"Imports increase.\",\n      \"distractors\": [\n        \"Imports decrease.\",\n        \"Imports stay unchanged.\",\n        \"Exports increase.\"\n      ],\n      \"explanation\": \"The speaker says imports are an increasing function of the real exchange rate (Q0005).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Real exchange rate impact\",\n      \"refs\": [\"Q0005\"]\n    },\n    {\n      \"question\": \"What does a higher epsilon imply about the price of domestic goods?\",\n      \"answer\": \"They become more expensive.\",\n      \"distractors\": [\n        \"They become cheaper.\",\n        \"Their price stays the same.\",\n        \"Their quality improves.\"\n      ],\n      \"explanation\": \"The lecture notes that if epsilon goes up, domestic goods become more expensive (Q0009).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Epsilon and domestic prices\",\n      \"refs\": [\"Q0009\"]\n    },\n    {\n      \"question\": \"According to the lecture, how are consumption and investment related to output?\",\n      \"answer\": \"They are increasing functions of output.\",\n      \"distractors\": [\n        \"They are decreasing functions of output.\",\n        \"They are unrelated to output.\",\n        \"They remain constant regardless of output.\"\n      ],\n      \"explanation\": \"The speaker states that consumption and investment increase as output increases (Q0021).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Consumption, investment, and output\",\n      \"refs\": [\"Q0021\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows. Identify concepts? Probably relationship: imports increasing function of domestic output, real exchange rate, epsilon. Create facts. We'll make rows for facts.\n\nRows: each fact_text.\n\nItem label e.g., \"item1\". Provide availability SOURCE_SUPPORTED? But ASR speech evidence says exact code unavailable but statements are supported. So availability SOURCE_SUPPORTED.\n\nCreate rows for facts: \"Imports are an increasing function of domestic output.\" refs Q0003. basis explicit. literal_kind verbal. instructional_role null.\n\nSimilarly \"Imports are an increasing function of the real exchange rate.\" Q0005.\n\n\"An increase in epsilon makes domestic goods more expensive.\" Q0009.\n\n\"Consumers will buy more abroad when domestic goods become more expensive.\" Q0011.\n\n\"Consumption and investment are increasing functions of output.\" Q0021.\n\nAdd concepts? maybe concept_name \"imports\" content? but need both fields. Could abstain.\n\nWe'll produce rows for facts only.\n\nQuiz: need 4 questions.\n\nQ1: What happens to imports when domestic output rises? Answer: They increase. Distractors: decrease, stay same, become unpredictable.\n\nQ2: How does a rise in the real exchange rate affect imports? Answer: Imports increase. Distractors: Imports decrease, no change, exports increase.\n\nQ3: What does a higher epsilon imply about domestic goods price? Answer: They become more expensive. Distractors: cheaper, price unchanged, quality improves.\n\nQ4: According to the lecture, consumption and investment relate to output how? Answer: They are increasing functions of output. Distractors: decreasing functions, unrelated, constant.\n\nProvide refs primary excerpt first.\n\nNow construct JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794766680,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_bb691ea66b",
+  "usage": {
+    "completion_tokens": 1347,
+    "prompt_tokens": 2965,
+    "total_tokens": 4312,
+    "completion_time": 2.836186906,
+    "completion_tokens_details": {
+      "reasoning_tokens": 339
+    },
+    "prompt_time": 0.401677471,
+    "prompt_tokens_details": null,
+    "queue_time": 0.467565616,
+    "total_time": 3.237864377
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g6w8w3et1r3dtnj0erbzs1",
+    "debug": null,
+    "seed": 1264805208,
+    "usage": null
+  }
+}

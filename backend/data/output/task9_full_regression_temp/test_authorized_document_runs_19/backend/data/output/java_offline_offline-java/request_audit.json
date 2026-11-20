@@ -1,0 +1,75 @@
+{
+  "operations": [
+    {
+      "id": "offline-java-0000",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "eef56eae4ffde20695b1277b37b2dc1b9de9fc3e560b4e83894dd174ce598af6",
+      "state": "failed",
+      "created": 1794220772.3409023,
+      "completed": 1794220772.3409023,
+      "validation": "failed"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "offline-java-0000",
+      "number": 1,
+      "created": 1794220772.3409023,
+      "dispatched": 1794220772.3409023,
+      "completed": 1794220772.3409023,
+      "input_reserved": 3315,
+      "output_reserved": 3000,
+      "input_actual": null,
+      "output_actual": null,
+      "reasoning": null,
+      "charged": 6315,
+      "http_status": 400,
+      "finish": null,
+      "duration": 0.0,
+      "category": "permanent_request"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794220772.3409023,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"ea3947233386d57c2358226295259795518eeaa731988b8a1bbf5fd9e26d7525\", \"estimated_input\": 3315, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 2,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794220772.3409023,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 3,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794220772.3409023,
+      "event": "provider_error",
+      "details": "{\"category\": \"permanent_request\", \"error_code\": \"json_validate_failed\", \"message\": \"Groq API call failed: Error code: 400 - {'error': {'message': 'invalid schema', 'code': 'json_validate_failed'}}\", \"retry_after\": null, \"retry_after_header\": null, \"retryable\": false, \"status_code\": 400}"
+    },
+    {
+      "sequence": 4,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794220772.3409023,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"failed\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"not_passed\"}"
+    },
+    {
+      "sequence": 5,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794220772.3409023,
+      "event": "operation_error",
+      "details": "{\"message\": \"Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': 'invalid schema', 'code': 'json_validate_failed'}}\", \"type\": \"GroqProviderError\"}"
+    }
+  ]
+}

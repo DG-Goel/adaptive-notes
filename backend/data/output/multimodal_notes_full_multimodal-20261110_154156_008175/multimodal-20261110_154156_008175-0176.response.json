@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-35ed16bd-0a92-4119-916b-1a802b4f861b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"abstract class\",\n        \"refs\": [\"Q0019\", \"Q0018\", \"Q0020\", \"Q0021\", \"Q0022\"],\n        \"claims\": [\n          {\n            \"text\": \"An abstract class is a class that cannot be instantiated directly; it is defined as abstract and must be subclassed or used via a factory method.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0019\", \"Q0018\", \"Q0020\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"Because an abstract class cannot be instantiated with the new operator, you must obtain an instance through other means such as a factory method.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0019\", \"Q0021\", \"Q0022\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"In Java, an abstract class is a class declared with the abstract keyword, meaning it cannot be instantiated directly. It serves as a base for other classes and may contain abstract methods that subclasses must implement.\",\n        \"refs\": [\"Q0019\", \"Q0018\", \"Q0020\"],\n        \"claims\": [\n          {\n            \"text\": \"An abstract class is declared with the abstract keyword and cannot be instantiated directly.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0019\", \"Q0018\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"Abstract classes can contain abstract methods that must be implemented by concrete subclasses.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0019\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"factory method\",\n        \"refs\": [\"Q0027\", \"Q0028\", \"Q0025\", \"Q0026\"],\n        \"claims\": [\n          {\n            \"text\": \"A factory method is a static method that creates and returns an instance of a class, often used when the class cannot be instantiated directly.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"alternative_valid_approach\",\n            \"refs\": [\"Q0027\", \"Q0025\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"Factory methods act like factories, creating new objects without using the new operator on abstract classes.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0028\", \"Q0026\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"A factory method is a method (often static) that returns an instance of a class, providing a way to obtain objects when direct instantiation is not possible or desirable.\",\n        \"refs\": [\"Q0027\", \"Q0028\"],\n        \"claims\": [\n          {\n            \"text\": \"Factory methods provide a way to obtain instances of classes that cannot be instantiated directly.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"alternative_valid_approach\",\n            \"refs\": [\"Q0027\", \"Q0028\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need definitions extraction. Look for definition teaching. Probably definition of \"abstract class\". Extract term and definition_text. From excerpts: Q0019 defines abstract classes. Q0018 says cannot instantiate. So term \"abstract class\" definition. Also maybe \"factory method\". Q0027 defines. Provide items.\n\nCreate item with term text and definition_text. Include claims with explicit basis. Use refs.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326288,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a7bb72c24",
+  "usage": {
+    "completion_tokens": 996,
+    "prompt_tokens": 4025,
+    "total_tokens": 5021,
+    "completion_time": 2.106405575,
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_time": 0.371349358,
+    "prompt_tokens_details": null,
+    "queue_time": 0.279829789,
+    "total_time": 2.477754933
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m732wkvqey5aj32gk2h4v4wb",
+    "debug": null,
+    "seed": 1390669542,
+    "usage": null
+  }
+}

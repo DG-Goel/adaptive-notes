@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-0faba557-bb13-4241-b03e-1c00d8d757a2",
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Scanner Input Methods\",\n      \"source_segment_ids\": [\"FCT_0255\", \"FCT_0256\", \"FCT_0257\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0255\", \"FCT_0256\", \"FCT_0257\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0255\",\n              \"exact_quote\": \"There are methods nextByte, nextLine, nextBoolean for reading a byte, a line, and a boolean respectively.\"\n            },\n            {\n              \"note_id\": \"FCT_0256\",\n              \"exact_quote\": \"Calling the nextByte method returns a byte value that can be stored in a byte variable.\"\n            },\n            {\n              \"note_id\": \"FCT_0257\",\n              \"exact_quote\": \"Concatenating a string with a byte causes implicit casting of the byte to a string.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Scanner Input Methods\",\n            \"headers\": [\"Method\", \"Returns\", \"Typical Use\"],\n            \"rows\": [\n              [\"nextByte\", \"byte\", \"Read a single byte value\"],\n              [\"nextLine\", \"String\", \"Read an entire line of input\"],\n              [\"nextBoolean\", \"boolean\", \"Read a true/false value\"]\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Mortgage Calculator Program Flow\",\n      \"source_segment_ids\": [\"FCT_0276\", \"FCT_0277\", \"FCT_0278\", \"FCT_0279\", \"FCT_0280\", \"FCT_0013\", \"FCT_0014\", \"FCT_0281\", \"FCT_0282\", \"FCT_0286\", \"FCT_0285\", \"FCT_0284\", \"FCT_0288\", \"FCT_0289\", \"FCT_0291\", \"FCT_0293\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0276\", \"FCT_0277\", \"FCT_0278\", \"FCT_0279\", \"FCT_0280\", \"FCT_0013\", \"FCT_0014\", \"FCT_0281\", \"FCT_0282\", \"FCT_0286\", \"FCT_0285\", \"FCT_0284\", \"FCT_0288\", \"FCT_0289\", \"FCT_0291\", \"FCT_0293\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\"note_id\": \"FCT_0276\", \"exact_quote\": \"When the program runs, it asks a few questions.\"},\n            {\"note_id\": \"FCT_0277\", \"exact_quote\": \"The first question asks for the principal, or the amount of loan.\"},\n            {\"note_id\": \"FCT_0278\", \"exact_quote\": \"Example principal value: $100,000.\"},\n            {\"note_id\": \"FCT_0279\", \"exact_quote\": \"The second question asks for the annual interest rate.\"},\n            {\"note_id\": \"FCT_0280\", \"exact_quote\": \"Example interest rate: 3.92%.\"},\n            {\"note_id\": \"FCT_0013\", \"exact_quote\": \"The third question asks for the period in years.\"},\n            {\"note_id\": \"FCT_0014\", \"exact_quote\": \"Example period: 30 years.\"},\n            {\"note_id\": \"FCT_0281\", \"exact_quote\": \"We need to multiply this number by 12 (months in a year) to calculate the number of payments.\"},\n            {\"note_id\": \"FCT_0282\", \"exact_quote\": \"To raise a number to the power of n, use the pow method of the Math class.\"},\n            {\"note_id\": \"FCT_0286\", \"exact_quote\": \"Monthly interest is calculated by taking the annual interest, dividing it by percent, and then dividing by months in a year.\"},\n            {\"note_id\": \"FCT_0285\", \"exact_quote\": \"Declaring these constants avoids magic numbers in the code.\"},\n            {\"note_id\": \"FCT_0284\", \"exact_quote\": \"Two final variables (constants) are declared: monthsInYear set to 12 and percent set to 100.\"},\n            {\"note_id\": \"FCT_0288\", \"exact_quote\": \"The number 12 represents the number of months in a year.\"},\n            {\"note_id\": \"FCT_0289\", \"exact_quote\": \"Use int for the principal amount because it can store values up to about 2 billion.\"},\n            {\"note_id\": \"FCT_0291\", \"exact_quote\": \"Read the annual interest rate as a float; float is sufficient because the interest rate is a small number.\"},\n            {\"note_id\": \"FCT_0293\", \"exact_quote\": \"Use meaningful variable names; avoid magic names like \\\"MI\\\" for monthly interest.\"}\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Mortgage Calculator Steps\",\n            \"direction\": \"top-down\",\n            \"nodes\": [\n              {\"id\": \"n1\", \"label\": \"Start\"},\n              {\"id\": \"n2\", \"label\": \"Prompt for principal\"},\n              {\"id\": \"n3\", \"label\": \"Read principal (int)\"},\n              {\"id\": \"n4\", \"label\": \"Prompt for annual interest\"},\n              {\"id\": \"n5\", \"label\": \"Read interest (float)\"},\n              {\"id\": \"n6\", \"label\": \"Prompt for period (years)\"},\n              {\"id\": \"n7\", \"label\": \"Read period (byte)\"},\n              {\"id\": \"n8\", \"label\": \"Calculate monthly interest\"},\n              {\"id\": \"n9\", \"label\": \"Calculate number of payments (years * 12)\"},\n              {\"id\": \"n10\", \"label\": \"Compute mortgage using formula\"},\n              {\"id\": \"n11\", \"label\": \"Format result as currency\"},\n              {\"id\": \"n12\", \"label\": \"Display monthly payment\"},\n              {\"id\": \"n13\", \"label\": \"End\"}\n            ],\n            \"edges\": [\n              {\"from\": \"n1\", \"to\": \"n2\"},\n              {\"from\": \"n2\", \"to\": \"n3\"},\n              {\"from\": \"n3\", \"to\": \"n4\"},\n              {\"from\": \"n4\", \"to\": \"n5\"},\n              {\"from\": \"n5\", \"to\": \"n6\"},\n              {\"from\": \"n6\", \"to\": \"n7\"},\n              {\"from\": \"n7\", \"to\": \"n8\"},\n              {\"from\": \"n8\", \"to\": \"n9\"},\n              {\"from\": \"n9\", \"to\": \"n10\"},\n              {\"from\": \"n10\", \"to\": \"n11\"},\n              {\"from\": \"n11\", \"to\": \"n12\"},\n              {\"from\": \"n12\", \"to\": \"n13\"}\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Input Data Structure\",\n      \"source_segment_ids\": [\"FCT_0277\", \"FCT_0279\", \"FCT_0013\", \"FCT_0289\", \"FCT_0291\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0277\", \"FCT_0279\", \"FCT_0013\", \"FCT_0289\", \"FCT_0291\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\"note_id\": \"FCT_0277\", \"exact_quote\": \"The first question asks for the principal, or the amount of loan.\"},\n            {\"note_id\": \"FCT_0289\", \"exact_quote\": \"Use int for the principal amount because it can store values up to about 2 billion.\"},\n            {\"note_id\": \"FCT_0279\", \"exact_quote\": \"The second question asks for the annual interest rate.\"},\n            {\"note_id\": \"FCT_0291\", \"exact_quote\": \"Read the annual interest rate as a float; float is sufficient because the interest rate is a small number.\"},\n            {\"note_id\": \"FCT_0013\", \"exact_quote\": \"The third question asks for the period in years.\"}]}]}]}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visual units where appropriate. Likely a table of scanner methods, a flowchart of mortgage calculation steps, maybe data structure of inputs. Provide JSON units list. Probably include table for next methods, flowchart for program flow, data_structure for inputs. Ensure evidence references note ids and quotes. Use source wording. Let's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794579833,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_fe269835c7",
+  "usage": {
+    "completion_tokens": 2000,
+    "prompt_tokens": 3168,
+    "total_tokens": 5168,
+    "completion_time": 4.16916235,
+    "completion_tokens_details": {
+      "reasoning_tokens": 70
+    },
+    "prompt_time": 0.145286002,
+    "prompt_tokens_details": null,
+    "queue_time": 0.313274904,
+    "total_time": 4.314448352
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7amp3pcenja1vvhdszjh9v3",
+    "debug": null,
+    "seed": 1663917836,
+    "usage": null
+  }
+}

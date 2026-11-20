@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-809f66d5-66ea-4868-85dd-89c2dcd545d2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Effect of Real Exchange Rate Changes on Relative Goods Prices\",\n      \"source_segment_ids\": [\"CON_0004\", \"CON_0005\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"type\": \"table\",\n          \"source_segment_ids\": [\"CON_0004\", \"CON_0005\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0004\",\n              \"quote\": \"when the real exchange rate goes up, domestic goods become more expensive relative to international goods\"\n            },\n            {\n              \"note_id\": \"CON_0005\",\n              \"quote\": \"when the real exchange rate goes down, domestic goods become cheaper relative to foreign goods\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Real Exchange Rate Impact\",\n            \"headers\": [\"Real Exchange Rate Change\", \"Effect on Domestic Goods Price\"],\n            \"rows\": [\n              [\n                \"goes up\",\n                \"domestic goods become more expensive relative to international goods\"\n              ],\n              [\n                \"goes down\",\n                \"domestic goods become cheaper relative to foreign goods\"\n              ]\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visual units. Identify comparisons: relative prices, real exchange rate up/down, bond returns with exchange rate. Could make table comparing when real exchange rate up vs down. Also table comparing domestic vs foreign bond returns with exchange rate effect. Use source quotes.\n\nWe have notes IDs with texts. Use exact quotes. For table rows need one exact evidence quote containing all cells. Might be tricky. Could use separate rows each with quote that includes both items? Probably each row can have quote that mentions both compared items. Eg CON_0004 mentions \"when the real exchange rate goes up, domestic goods become more expensive relative to international goods\". That's a comparison up. CON_0005 similar down. Could make table with Item: Real exchange rate up/down, Effect: domestic goods more expensive/cheaper. Need one quote per row containing both cells. For up row, quote from CON_0004 includes both. For down row, CON_0005.\n\nSecond table: bond returns. Need quote that includes both domestic and foreign bond returns and exchange effect. CON_0013 mentions rates 10% and 5% but not exchange. CON_0011 \"you get if you invest in the dollar bond\". Not enough. Maybe use CON_0015? Not. Might be insufficient evidence for full comparison. So maybe only one table.\n\nThus produce one unit with two-row table.\n\nProvide payload.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794769951,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_02b0d31eca",
+  "usage": {
+    "completion_tokens": 587,
+    "prompt_tokens": 3008,
+    "total_tokens": 3595,
+    "completion_time": 1.226090747,
+    "completion_tokens_details": {
+      "reasoning_tokens": 290
+    },
+    "prompt_time": 0.210699603,
+    "prompt_tokens_details": null,
+    "queue_time": 0.363577781,
+    "total_time": 1.4367903499999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ga04pteyn8rhxrttmcw88x",
+    "debug": null,
+    "seed": 1848134647,
+    "usage": null
+  }
+}

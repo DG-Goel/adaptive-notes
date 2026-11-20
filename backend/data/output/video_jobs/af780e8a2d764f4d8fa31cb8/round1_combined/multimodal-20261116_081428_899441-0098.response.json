@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-cd97631f-2f8b-4097-a679-c3637abbc444",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"I001\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"expected appreciation of the dollar\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I001\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The only way I can do that is by having an expected appreciation of the dollar.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I002\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"symmetry of the mechanism\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I002\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"So it's the same mechanism, the same logic, it's symmetric.\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I003\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"quick adjustment of exchange rates\",\n      \"refs\": [\"Q0011\", \"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I003\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"It happens very quickly. So this equation shows you what happens after all that mess has already clear, which happens in milliseconds now.\",\n      \"refs\": [\"Q0011\", \"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what is the only way to equalize expected returns between domestic and foreign bonds?\",\n      \"answer\": \"Having an expected appreciation of the dollar\",\n      \"distractors\": [\n        \"Increasing the domestic interest rate\",\n        \"Depreciating the foreign currency today\",\n        \"Holding the exchange rate constant\"\n      ],\n      \"explanation\": \"The speaker states, “The only way I can do that is by having an expected appreciation of the dollar.” (Q0003)\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"expected appreciation\",\n      \"refs\": [\"Q0003\"]\n    },\n    {\n      \"question\": \"What does the speaker say occurs when the foreign interest rate is higher than the domestic rate?\",\n      \"answer\": \"People buy foreign bonds, creating demand for foreign currency\",\n      \"distractors\": [\n        \"The domestic bond price rises\",\n        \"The domestic interest rate automatically increases\",\n        \"The exchange rate immediately appreciates\"\n      ],\n      \"explanation\": \"The speaker explains that a higher foreign interest rate leads to “lots of People go and buy foreign bonds, and that produces demand for euros…”. (Q0008)\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"interest rate differential effect\",\n      \"refs\": [\"Q0008\"]\n    },\n    {\n      \"question\": \"How does the speaker describe the speed of the exchange‑rate adjustment process?\",\n      \"answer\": \"It happens very quickly, in milliseconds\",\n      \"distractors\": [\n        \"It takes several days to settle\",\n        \"It occurs only after market close\",\n        \"It requires manual intervention\"\n      ],\n      \"explanation\": \"The speaker notes, “It happens very quickly.” and later mentions the outcome “happens in milliseconds now.” (Q0011, Q0012)\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"adjustment speed\",\n      \"refs\": [\"Q0011\", \"Q0012\"]\n    },\n    {\n      \"question\": \"What does the speaker claim about the relationship between the domestic and foreign mechanisms?\",\n      \"answer\": \"They are symmetric, using the same logic\",\n      \"distractors\": [\n        \"They operate independently\",\n        \"The foreign mechanism dominates the domestic one\",\n        \"The domestic mechanism is more complex\"\n      ],\n      \"explanation\": \"The speaker says, “So it's the same mechanism, the same logic, it's symmetric.” (Q0005)\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"symmetry of mechanisms\",\n      \"refs\": [\"Q0005\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows etc. The excerpts talk about interest rates, expected returns, dollar appreciation, symmetry. We can create concepts: \"expected appreciation of the dollar\". Provide rows.\n\nCreate item e.g., item \"I001\". Provide concept_name and content.\n\nRows: concept_name text \"expected appreciation of the dollar\" refs Q0003 basis explicit availability SOURCE_SUPPORTED literal_kind verbal instructional_role null related_refs [] element0 part value.\n\ncontent row: text from Q0003 and Q0004 maybe combine? Use primary excerpt Q0003: \"The only way I can do that is by having an expected appreciation of the dollar.\" content.\n\nAlso concept about symmetry: \"same mechanism, same logic, it's symmetric.\" etc.\n\nWe need required fields for concepts: concept_name and content. Provide two concepts.\n\nAlso maybe definitions? Not present.\n\nProceed.\n\nQuiz: need 4 questions. Use excerpts.\n\nQ1: What does the speaker say is the only way to equalize expected returns? Answer: having an expected appreciation of the dollar. Distractors.\n\nQ2: According to the speaker, what happens when the foreign interest rate is higher than domestic? Answer: demand for foreign bonds increases. Distractors.\n\nQ3: How does the speaker describe the speed of the adjustment? Answer: it happens very quickly / in milliseconds. Use Q0011 and Q0012.\n\nQ4: What does the speaker claim about the mechanism between domestic and foreign bonds? Answer: it is symmetric. Use Q0005.\n\nProvide refs.\n\nNow construct rows.\n\nWe need abstentions none, excluded none.\n\nProvide JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794817100,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f73454f048",
+  "usage": {
+    "completion_tokens": 1563,
+    "prompt_tokens": 2605,
+    "total_tokens": 4168,
+    "completion_time": 3.287111021,
+    "completion_tokens_details": {
+      "reasoning_tokens": 325
+    },
+    "prompt_time": 0.162718277,
+    "prompt_tokens_details": null,
+    "queue_time": 0.325343398,
+    "total_time": 3.449829298
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hpyyqteads7eq46bf4ekh9",
+    "debug": null,
+    "seed": 2104200662,
+    "usage": null
+  }
+}

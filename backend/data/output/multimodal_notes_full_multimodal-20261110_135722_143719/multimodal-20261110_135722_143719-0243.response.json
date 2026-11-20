@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-c9714458-d60a-41ac-8695-8209fe428618",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Loops allow repeating statements without duplicating code.\",\n        \"refs\": [\"Q0013\"],\n        \"claims\": [\n          {\n            \"text\": \"Loops allow repeating statements without duplicating code.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0013\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"A for loop in Java consists of three parts: an initialization statement, a boolean condition, and an increment statement.\",\n        \"refs\": [\"Q0016\", \"Q0017\", \"Q0019\", \"Q0020\", \"Q0021\"],\n        \"claims\": [\n          {\n            \"text\": \"A for loop in Java consists of three parts: an initialization statement, a boolean condition, and an increment statement.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0016\", \"Q0017\", \"Q0019\", \"Q0020\", \"Q0021\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Using loops reduces code nesting and improves readability compared to repeated if‑else statements.\",\n        \"refs\": [\"Q0005\", \"Q0006\", \"Q0007\"],\n        \"claims\": [\n          {\n            \"text\": \"Using loops reduces code nesting and improves readability compared to repeated if‑else statements.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0005\", \"Q0006\", \"Q0007\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract facts. The excerpts are opinions about loops vs repetition. Facts: loops can repeat statements, for loops have init; condition; increment. So create items.\n\nProvide claims with explicit basis. literal_kind verbal. instructional_role explanation_of_mistake? Actually teaching about loops. Use correct_demonstration? Probably explanation_of_mistake not. Use explanation_of_mistake? No. Use explanation_of_mistake? Not. Use correct_demonstration? It's describing loops usage. So instructional_role null.\n\nCreate one fact: \"Loops allow repeating statements without duplicating code.\" source Q0013 etc. Provide refs list.\n\nSecond fact: \"A for loop in Java consists of three parts: initialization, boolean condition, and increment.\" sources Q0016,Q0017,Q0019,Q0020,Q0021.\n\nThird fact: \"Using loops reduces code nesting and improves readability compared to repeated if-else statements.\" sources Q0005,Q0006,Q0007.\n\nProvide abstentions none. Excluded none.\n\nReturn schema.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794324738,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_854fa9be4c",
+  "usage": {
+    "completion_tokens": 696,
+    "prompt_tokens": 2868,
+    "total_tokens": 3564,
+    "completion_time": 1.469997486,
+    "completion_tokens_details": {
+      "reasoning_tokens": 212
+    },
+    "prompt_time": 0.141359673,
+    "prompt_tokens_details": null,
+    "queue_time": 0.293411083,
+    "total_time": 1.611357159
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m731da6ee2jvm1899yzw12dy",
+    "debug": null,
+    "seed": 1431548686,
+    "usage": null
+  }
+}

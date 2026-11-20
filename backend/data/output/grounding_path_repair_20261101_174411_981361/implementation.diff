@@ -1,0 +1,155 @@
+--- before/app/extraction/prompts.py
++++ after/app/extraction/prompts.py
+@@ -12,8 +12,9 @@
+ - Omit unsupported optional fields entirely. Do not fill them with placeholders, null or empty strings. Empty category arrays [] are different from omitted optional fields.
+ - Every populated substantive field needs exact supporting excerpts, including names, content, aliases, classifications, formula keys/descriptions/conditions, procedure steps/prerequisites/outcomes and relationship subjects/objects.
+ - Each source_evidence entry has source_id, quote and fields. Quotes must be exact source substrings; IDs must match actual chunk markers, preserving prefixes.
+-- fields lists only JSON Pointer paths to populated substantive fields. Cover all such fields; never reference omitted fields, empty containers, source IDs or generated metadata. Array indexes start at 0. Escape ~ as ~0 and / as ~1 in keys. Populated dictionary keys require evidence even when values are empty.
+-- Mechanical quotation matching is not semantic entailment verification. An excerpt must actually support its associated claim; no matching-word shortcut.
++- fields lists only JSON Pointer paths to populated substantive fields. Cover all such fields; never reference omitted fields, empty containers, source IDs or generated metadata. Array indexes start at 0. List individual paths for every populated alias, step, prerequisite and nested array element, e.g. /steps/0, /steps/1, /steps/2; a parent collection path such as /steps never substitutes for its elements. Escape ~ as ~0 and / as ~1 in keys (RFC 6901), e.g. key a/b~ becomes /variables/a~1b~0. Populated dictionary keys require evidence even when values are empty; nested keys and their substantive descendants each need paths.
++- Mechanical quotation matching is not semantic entailment verification. An excerpt must actually support its associated claim; no matching-word shortcut. Match the whole claim, not just its subject; use additional exact excerpts for separately stated details or omit those details. Do not add textbook definitions, operator symbols or lifecycle qualifications not stated in the source.
++- Before returning, check explicit teaching facts: demonstrated initial/final values, error and repair, alternatives and naming corrections. Preserve each once, integrating related details into an existing item rather than duplicating them across categories. Do not fill gaps or force a category to improve coverage.
+ 
+ CONTRASTS
+ Mention-only: "We have a decrement operator" does not explain its effect or syntax; omit that explanation.
+@@ -21,6 +22,10 @@
+ Literal code: if source contains "int result = 10 + 3;", retain that exact snippet only; add no comment, cast, output or declaration.
+ Alternatives: preserve "in this example, float or double", not "one operand must be cast to double".
+ Truncated: "apply this as a prefix and then..." supplies no remaining outcome or steps.
++Scope: "here the division of two whole numbers is a whole number" supports that result, not an added "truncates fractional part" explanation.
++Association: exact quote "modulus which is the remainder of a division" supports the remainder description, not an unstated % symbol.
++Arrays: three steps require /steps/0, /steps/1, /steps/2, not /steps; two prerequisites require /prerequisites/0 and /prerequisites/1; two aliases require /aliases/0 and /aliases/1. Omitted arrays have no paths.
++Coverage: if stated, keep x starting at 1 and printing 2 in one example; keep an integer declaration/double-result error with its declaration repair; retain float-or-double alternatives and the pi-to-PI correction. Never infer them from a partial passage.
+ """
+ EXTRACTION_SYSTEM_PROMPT = SOURCE_GROUNDING_RULES
+ 
+--- before/tests/test_extraction_grounding.py
++++ after/tests/test_extraction_grounding.py
+@@ -453,3 +453,127 @@
+     assert result.extraction_metadata["retry_attempts"] == 0
+     assert result.extraction_metadata["split_chunks"] == []
+     assert result.extraction_metadata["failed_roots"] == 1
++
++
++# Real validator regressions: parent collection evidence never covers children.
++def procedure_with_arrays():
++    return {"procedure_name": "Process", "content": "Read, transform, save.",
++            "steps": ["Read", "Transform", "Save"],
++            "prerequisites": ["Input", "Permission"], "source_unit_ids": ["T0022"]}
++
++
++def test_three_steps_and_multiple_prerequisites_require_individual_paths():
++    raw = procedure_with_arrays()
++    paths = ["/procedure_name", "/content", "/steps/0", "/steps/1", "/steps/2",
++             "/prerequisites/0", "/prerequisites/1"]
++    raw["source_evidence"] = evidence(fields=paths)
++    item = parse(raw, category="procedures")
++    assert KnowledgeExtractor._substantive_fields(item) == set(paths)
++    assert item.extraction_metadata["source_grounding"]["mechanically_valid"]
++    assert item.extraction_metadata["source_grounding"]["semantic_entailment_verified"] is False
++
++
++@pytest.mark.parametrize("missing", ["/steps/0", "/steps/1", "/steps/2",
++                                     "/prerequisites/0", "/prerequisites/1"])
++def test_one_missing_array_element_is_rejected(missing):
++    raw = procedure_with_arrays()
++    paths = ["/procedure_name", "/content", "/steps/0", "/steps/1", "/steps/2",
++             "/prerequisites/0", "/prerequisites/1"]
++    raw["source_evidence"] = evidence(fields=[p for p in paths if p != missing])
++    with pytest.raises(ValueError, match=missing):
++        parse(raw, category="procedures")
++
++
++@pytest.mark.parametrize("parent", ["/steps", "/prerequisites"])
++def test_parent_collection_path_cannot_replace_element_paths(parent):
++    raw = procedure_with_arrays()
++    paths = ["/procedure_name", "/content", "/steps/0", "/steps/1", "/steps/2",
++             "/prerequisites/0", "/prerequisites/1"]
++    raw["source_evidence"] = evidence(fields=[p for p in paths if not p.startswith(parent + "/")] + [parent])
++    with pytest.raises(ValueError, match="invalid substantive field paths"):
++        parse(raw, category="procedures")
++
++
++def test_multiple_aliases_each_need_evidence_and_parent_is_invalid():
++    raw = concept()
++    raw["aliases"] = ["value", "term"]
++    paths = ["/concept_name", "/content", "/aliases/0", "/aliases/1"]
++    raw["source_evidence"] = evidence(fields=paths)
++    assert parse(raw).extraction_metadata["source_grounding"]["mechanically_valid"]
++    raw["source_evidence"] = evidence(fields=paths[:-1])
++    with pytest.raises(ValueError, match="/aliases/1"):
++        parse(raw)
++    raw["source_evidence"] = evidence(fields=["/concept_name", "/content", "/aliases"])
++    with pytest.raises(ValueError, match="invalid substantive field paths"):
++        parse(raw)
++
++
++@pytest.mark.parametrize("path", ["/aliases/0", "/context", "/prerequisites/0"])
++def test_evidence_for_omitted_optional_field_is_rejected(path):
++    raw = concept()
++    raw.pop("aliases")
++    raw["source_evidence"] = evidence(fields=["/concept_name", "/content", path])
++    with pytest.raises(ValueError, match="invalid substantive field paths"):
++        parse(raw)
++
++
++def test_rfc6901_formula_dictionary_key_evidence_is_exact():
++    raw = {"formula_text": "a/b~", "content": "a/b~", "variables": {"a/b~": "value"},
++           "source_unit_ids": ["T0022"]}
++    raw["source_evidence"] = evidence(fields=["/formula_text", "/content", "/variables/a~1b~0"])
++    assert parse(raw, category="formulas").extraction_metadata["source_grounding"]["mechanically_valid"]
++    raw["source_evidence"] = evidence(fields=["/formula_text", "/content", "/variables/a/b~"])
++    with pytest.raises(ValueError, match="invalid substantive field paths"):
++        parse(raw, category="formulas")
++
++
++def test_nested_dictionary_and_array_paths_are_validated_without_schema_changes():
++    raw = concept()
++    extractor, chunk, _ = setup(raw)
++    item = extractor._create_concept(raw, chunk, "JAVA")
++    # The current Formula dictionary is flat; simulate a future nested field only here.
++    payload = {"content": "x", "nested": {"a/b~": {"c/~": ["one", "two"]}}}
++    paths = ["/content", "/nested/a~1b~0", "/nested/a~1b~0/c~1~0",
++             "/nested/a~1b~0/c~1~0/0", "/nested/a~1b~0/c~1~0/1"]
++    raw["source_evidence"] = evidence(fields=paths)
++    with patch.object(type(item), "model_dump", return_value=payload):
++        extractor._attach_source_evidence(item, raw, chunk)
++        assert item.extraction_metadata["source_grounding"]["mechanically_valid"]
++        raw["source_evidence"] = evidence(fields=paths[:-1])
++        with pytest.raises(ValueError, match="/nested/a~1b~0/c~1~0/1"):
++            extractor._attach_source_evidence(item, raw, chunk)
++
++
++def test_saved_smoke_procedure_parent_mismatch_and_path_only_repair():
++    from pathlib import Path
++    from app.extraction.chunker import ContentChunker
++    from app.models.source import SourceDocument
++    directory = Path(__file__).resolve().parents[1] / "data/output/groq_compact_smoke_20261101_173556_937901"
++    source = SourceDocument.model_validate_json((directory / "source_units.json").read_text(encoding="utf-8"))
++    raw = json.loads((directory / "parsed_response.json").read_text(encoding="utf-8"))["procedures"][0]
++    extractor = KnowledgeExtractor(MockLLMProvider(), strict_evidence=True, verbose=False)
++    extractor.valid_source_ids = {"T0022"}
++    extractor._evidence_sources = {"T0022": source.source_units[0].text}
++    chunk = ContentChunker().chunk(source.source_units, source.document_id)[0]
++    with pytest.raises(ValueError, match="invalid substantive field paths"):
++        extractor._parse_response(json.dumps({"procedures": [raw]}), chunk, "JAVA")
++    raw["source_evidence"][0]["fields"] = ["/procedure_name", "/content", "/steps/0", "/steps/1", "/steps/2"]
++    item = extractor._parse_response(json.dumps({"procedures": [raw]}), chunk, "JAVA")[0]
++    assert item.extraction_metadata["source_grounding"]["mechanically_valid"]
++    # The reconstructed casting example still exists: fixing paths proves no entailment.
++    assert "(double) numerator" in item.steps[0]
++    assert item.extraction_metadata["source_grounding"]["semantic_entailment_verified"] is False
++
++
++def test_prompt_explicit_array_contract_and_quality_contrasts():
++    required = ["individual paths for every populated alias, step, prerequisite",
++                "a parent collection path such as /steps never substitutes",
++                "RFC 6901", "/variables/a~1b~0", "/steps/2", "/prerequisites/1",
++                "/aliases/1", "Omitted arrays have no paths", "Match the whole claim",
++                "not an unstated % symbol", "not an added", "truncates fractional part",
++                "Preserve each once", "rather than duplicating", "x starting at 1 and printing 2",
++                "declaration repair", "float-or-double alternatives", "pi-to-PI correction"]
++    assert all(phrase in EXTRACTION_SYSTEM_PROMPT for phrase in required)
++    user = build_extraction_prompt("[T0022] Complete source.", "test")
++    assert "AUTHORITATIVE SOURCE-GROUNDING CONTRACT" not in user
++    assert user.count('"source_evidence"') == 1

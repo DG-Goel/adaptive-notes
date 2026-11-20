@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-7c45f129-6c27-497e-8ae6-590b59d3d98e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"excluded\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"NumberFormat is an abstract class and cannot be instantiated with the new operator.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"A factory method (e.g., getCurrencyInstance) creates and returns an instance of NumberFormat.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The returned NumberFormat object can be stored in a variable of type NumberFormat.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"NumberFormat.format is an overloaded method that can accept long, double, etc., and returns a formatted string.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"When formatting as currency, the result includes a dollar sign, commas as thousand separators, and two decimal digits.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"NumberFormat.getPercentInstance returns a NumberFormat instance specialized for formatting percentages.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts: facts about abstract class cannot instantiate, factory method creates instance, method overload, formatting etc. We'll create facts and explanations maybe. Use primary excerpts. No context. Provide empty arrays for others.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065649,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c868cf1eaa",
+  "usage": {
+    "completion_tokens": 429,
+    "prompt_tokens": 3027,
+    "total_tokens": 3456,
+    "completion_time": 0.905344377,
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_time": 0.135134062,
+    "prompt_tokens_details": null,
+    "queue_time": 0.376956549,
+    "total_time": 1.040478439
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6vaajvde8kv4j6zxvw8sanb",
+    "debug": null,
+    "seed": 1709572349,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-10448555-970f-4ffb-99ce-15cd24e824f0",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"The trim method removes leading and trailing whitespace from a string.\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The nextLine method returns the line of input entered by the user as a string.\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [\n    {\n      \"formula_text\": {\n        \"text\": \"Monthly interest rate = (annual interest rate ÷ 100) ÷ 12\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"variables\": [\n        {\n          \"symbol\": {\n            \"text\": \"r\",\n            \"refs\": [\"Q0004\"]\n          },\n          \"description\": {\n            \"text\": \"monthly interest rate\",\n            \"refs\": [\"Q0004\"]\n          }\n        },\n        {\n          \"symbol\": {\n            \"text\": \"annual interest rate\",\n            \"refs\": [\"Q0004\"]\n          },\n          \"description\": {\n            \"text\": \"interest rate expressed as a percent per year\",\n            \"refs\": [\"Q0004\"]\n          }\n        }\n      ],\n      \"conditions\": null,\n      \"derivation\": null\n    },\n    {\n      \"formula_text\": {\n        \"text\": \"Mortgage payment calculation uses principal P, monthly interest rate r, and number of payments n.\",\n        \"refs\": [\"Q0003\", \"Q0004\", \"Q0005\"]\n      },\n      \"variables\": [\n        {\n          \"symbol\": {\n            \"text\": \"P\",\n            \"refs\": [\"Q0003\"]\n          },\n          \"description\": {\n            \"text\": \"principal or amount of loan\",\n            \"refs\": [\"Q0003\"]\n          }\n        },\n        {\n          \"symbol\": {\n            \"text\": \"r\",\n            \"refs\": [\"Q0004\"]\n          },\n          \"description\": {\n            \"text\": \"monthly interest rate\",\n            \"refs\": [\"Q0004\"]\n          }\n        },\n        {\n          \"symbol\": {\n            \"text\": \"n\",\n            \"refs\": [\"Q0005\"]\n          },\n          \"description\": {\n            \"text\": \"total number of monthly payments\",\n            \"refs\": [\"Q0005\"]\n          }\n        }\n      ],\n      \"conditions\": null,\n      \"derivation\": null\n    }\n  ],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts: teaching about trim method, nextLine method, mortgage formula. So facts, formulas, procedures maybe.\n\nExtract facts: trim method removes whitespace before/after. Next line method returns string from input. Provide.\n\nFormulas: mortgage payment formula: M = P * r * (1+r)^n / ((1+r)^n -1) maybe but text only gives parts. We have description: mortgage equals P multiplied by R (monthly interest rate) ... need full formula? Not fully given. We can capture partial formula as given.\n\nWe'll create facts and formulas.\n\nAlso procedure: building mortgage calculator steps? Not detailed.\n\nWe'll include facts:\n\n- The trim method removes leading and trailing whitespace from a string. refs Q0000,Q0001.\n\n- The nextLine method returns the line of input entered by the user as a string. refs Q0000,Q0001.\n\nFormulas:\n\n- Monthly interest rate = (annual interest rate ÷ 100) ÷ 12. refs Q0004.\n\n- Mortgage payment calculation uses principal P, monthly interest rate r, and number of payments n. (partial). refs Q0003,Q0004,Q0005.\n\nVariables: P principal, r monthly interest rate, n number of payments.\n\nWe'll output JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036295,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_64b2f1c926",
+  "usage": {
+    "completion_tokens": 853,
+    "prompt_tokens": 3035,
+    "total_tokens": 3888,
+    "completion_time": 1.7810831870000001,
+    "completion_tokens_details": {
+      "reasoning_tokens": 267
+    },
+    "prompt_time": 0.157171761,
+    "prompt_tokens_details": null,
+    "queue_time": 0.337837126,
+    "total_time": 1.938254948
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6teaq9de8mva7xg9eqm65wa",
+    "debug": null,
+    "seed": 1135767365,
+    "usage": null
+  }
+}

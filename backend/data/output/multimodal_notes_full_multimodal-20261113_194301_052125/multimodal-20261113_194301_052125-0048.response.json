@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-d9b69a09-301d-4e44-b532-71cb7591dc4c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00014\"],\n      \"reason\": \"The provided primary excerpts contain no explicit procedural teaching to extract.\"\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract procedures. The excerpts are about a group learning, not clear procedures. Likely no supported teaching of procedures. So items empty, abstention for missing procedures? We must abstain for missing part of actual teaching point. There's no procedure teaching, so abstain? Provide abstention with availability SOURCE_MISSING? Use primary_source_ids. Reason: \"No procedural teaching present\".",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794599113,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_27194a498a",
+  "usage": {
+    "completion_tokens": 160,
+    "prompt_tokens": 2570,
+    "total_tokens": 2730,
+    "completion_time": 0.335975736,
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_time": 0.113434288,
+    "prompt_tokens_details": null,
+    "queue_time": 0.159503929,
+    "total_time": 0.449410024
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b72m4we52bzsjn7e3qjc5y",
+    "debug": null,
+    "seed": 229320276,
+    "usage": null
+  }
+}

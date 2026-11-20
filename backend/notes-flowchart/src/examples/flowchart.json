@@ -1,0 +1,43 @@
+
+{
+  "type": "flowchart",
+  "title": "Complex Web Application Troubleshooting Tree",
+  "direction": "DOWN",
+  "nodes": [
+    {"id": "n1", "kind": "start", "label": "Application Troubleshooting"},
+    {"id": "n2", "kind": "action", "label": "Reproduce the Problem"},
+    {"id": "n3", "kind": "decision", "label": "Does the Page Load?"},
+    {"id": "n4", "kind": "decision", "label": "Is the UI Visually Broken?"},
+    {"id": "n5", "kind": "decision", "label": "Does the Server Respond Directly?"},
+    {"id": "n6", "kind": "decision", "label": "Are Stylesheets Loading?"},
+    {"id": "n7", "kind": "decision", "label": "Are User Interactions Failing?"},
+    {"id": "n8", "kind": "decision", "label": "Is the HTTP Status 5xx?"},
+    {"id": "n9", "kind": "decision", "label": "Is the Server Process Running?"},
+    {"id": "n10", "kind": "action", "label": "Inspect CSS Layout and Specificity"},
+    {"id": "n11", "kind": "success", "label": "Fix Stylesheet Asset Paths"},
+    {"id": "n12", "kind": "action", "label": "Inspect API Requests"},
+    {"id": "n13", "kind": "action", "label": "Recheck Reproduction Steps"},
+    {"id": "n14", "kind": "error", "label": "Inspect Backend Errors and Logs"},
+    {"id": "n15", "kind": "action", "label": "Inspect Routes and HTTP 4xx Responses"},
+    {"id": "n16", "kind": "action", "label": "Check Firewall and Port Binding"},
+    {"id": "n17", "kind": "success", "label": "Start Server and Verify Port"}
+  ],
+  "edges": [
+    {"from": "n1", "to": "n2"},
+    {"from": "n2", "to": "n3"},
+    {"from": "n3", "to": "n4", "label": "Yes"},
+    {"from": "n3", "to": "n5", "label": "No"},
+    {"from": "n4", "to": "n6", "label": "Yes"},
+    {"from": "n4", "to": "n7", "label": "No"},
+    {"from": "n5", "to": "n8", "label": "Yes"},
+    {"from": "n5", "to": "n9", "label": "No"},
+    {"from": "n6", "to": "n10", "label": "Yes"},
+    {"from": "n6", "to": "n11", "label": "No"},
+    {"from": "n7", "to": "n12", "label": "Yes"},
+    {"from": "n7", "to": "n13", "label": "No"},
+    {"from": "n8", "to": "n14", "label": "Yes"},
+    {"from": "n8", "to": "n15", "label": "No"},
+    {"from": "n9", "to": "n16", "label": "Yes"},
+    {"from": "n9", "to": "n17", "label": "No"}
+  ]
+}

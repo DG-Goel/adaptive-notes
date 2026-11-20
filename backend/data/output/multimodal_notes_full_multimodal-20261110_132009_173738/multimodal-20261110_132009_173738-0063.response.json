@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-68e7832d-ec1a-40c9-afcf-c81f4ab1515e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"command line application\",\n      \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"an application that can run from the command line and does not have a graphical user interface\",\n      \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"definitions\",\n      \"field\": \"term\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"command line application\",\n      \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"definitions\",\n      \"field\": \"definition_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"an application that can run from the command line and does not have a graphical user interface\",\n      \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"aliases\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"CLI application\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"procedures\",\n      \"field\": \"procedure_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"create project from template\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"procedures\",\n      \"field\": \"steps\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"click next, select create project from template\",\n      \"refs\": [\"Q0000\", \"Q0012\", \"Q0020\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"procedures\",\n      \"field\": \"prerequisites\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"have IDE open and project wizard available\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"the base package is set to com.codewithmosh\",\n      \"refs\": [\"Q0016\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_type\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"default package name\",\n      \"refs\": [\"Q0016\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output rows. The excerpts talk about creating project from template, command line app, no GUI, etc. Likely concepts: \"command line application\". definitions maybe term. We'll create rows.\n\nItem id maybe \"item1\". Provide rows for concept_name, content etc.\n\nWe have primary excerpts Q0000-Q0018. Use them.\n\nCreate concept: command line application.\n\nRow1: category concepts, field concept_name, element0, part value, text \"command line application\", refs [Q0001,Q0002,Q0003,Q0004,Q0005], basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [] , item \"item1\".\n\nRow2: concepts content: description \"an application that can run from the command line and does not have a graphical user interface\". refs Q0001,Q0002,Q0003,Q0004, basis explicit, etc.\n\nAlso maybe definition term \"command line application\". definition_text same as above.\n\nRow for definition term.\n\nLet's produce rows.\n\nAbstentions none.\n\nExcluded none.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794316959,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4200b3f836",
+  "usage": {
+    "completion_tokens": 1354,
+    "prompt_tokens": 2621,
+    "total_tokens": 3975,
+    "completion_time": 2.84661703,
+    "completion_tokens_details": {
+      "reasoning_tokens": 219
+    },
+    "prompt_time": 0.132759894,
+    "prompt_tokens_details": null,
+    "queue_time": 0.321072982,
+    "total_time": 2.979376924
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72szx06emct00g189jyhgsn",
+    "debug": null,
+    "seed": 1932110283,
+    "usage": null
+  }
+}

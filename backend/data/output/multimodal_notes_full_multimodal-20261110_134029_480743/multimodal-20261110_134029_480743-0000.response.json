@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-30071944-6fd7-4789-8bda-3f46851553ee",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"Hi, my name is Mosh, and I'm going to be your instructor in this Java course.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"In this course, you're going to learn everything you need to get started programming in Java.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"We'll start off by installing all the necessary tools to build Java applications.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"Then you're going to learn about the basics of Java.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"You'll learn how Java code gets executed.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"You'll learn how to build simple algorithms.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"And throughout this course, I'm going to share with you lots of tips and shortcuts from\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0006\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\n        \"C1\",\n        \"C2\",\n        \"C3\",\n        \"C4\",\n        \"C5\",\n        \"C6\",\n        \"C7\"\n      ],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"course_overview\"]\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Likely facts about course content. Create claims: each excerpt as fact. Provide claims list with IDs C1..C6. Availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null. refs to excerpt IDs. No related_refs. Then categories: facts with fact_text list of claim IDs in order. Others empty. Abstentions none. Provide structure.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318093,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a7bb72c24",
+  "usage": {
+    "completion_tokens": 788,
+    "prompt_tokens": 2959,
+    "total_tokens": 3747,
+    "completion_time": 1.662810175,
+    "completion_tokens_details": {
+      "reasoning_tokens": 88
+    },
+    "prompt_time": 0.146941518,
+    "prompt_tokens_details": null,
+    "queue_time": 0.233573438,
+    "total_time": 1.809751693
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72v2h10ejd82fzpqh6h7dt8",
+    "debug": null,
+    "seed": 253766910,
+    "usage": null
+  }
+}

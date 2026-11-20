@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-c06717b7-4692-44d9-b45f-049af301e720",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"Command line applications do not have a graphical user interface.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"Building an application with a graphical user interface is very complicated.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"A GUI (graphical user interface) is a type of application such as a mobile app or desktop app.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\", \"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"Command line applications are less exciting than GUI applications.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"For now we will build command line applications because GUI development is very complicated.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\"Command line applications do not have a graphical user interface.\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"statement\"]\n      }\n    },\n    {\n      \"fact_text\": [\"Building an application with a graphical user interface is very complicated.\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"statement\"]\n      }\n    },\n    {\n      \"fact_text\": [\"A GUI (graphical user interface) is a type of application such as a mobile app or desktop app.\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"definition\"]\n      }\n    },\n    {\n      \"fact_text\": [\"Command line applications are less exciting than GUI applications.\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"opinion\"]\n      }\n    },\n    {\n      \"fact_text\": [\"For now we will build command line applications because GUI development is very complicated.\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"explanation\"]\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00141\", \"S00142\", \"S00143\", \"S00144\", \"S00140\"],\n      \"reason\": \"No explicit concept definitions were provided in the excerpts.\"\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00141\", \"S00142\", \"S00143\", \"S00144\", \"S00140\"],\n      \"reason\": \"No explicit term definitions were provided.\"\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00141\", \"S00142\", \"S00143\", \"S00144\", \"S00140\"],\n      \"reason\": \"No explanatory passages beyond simple statements were present.\"\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00141\", \"S00142\", \"S00143\", \"S00144\", \"S00140\"],\n      \"reason\": \"No concrete examples were given.\"\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00141\", \"S00142\", \"S00143\", \"S00144\", \"S00140\"],\n      \"reason\": \"No formulas were present.\"\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00141\", \"S00142\", \"S00143\", \"S00144\", \"S00140\"],\n      \"reason\": \"No procedural steps were described.\"\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00141\", \"S00142\", \"S00143\", \"S00144\", \"S00140\"],\n      \"reason\": \"No explicit relational statements beyond simple comparisons were provided.\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims etc. From excerpts we have statements about GUI vs command line. Likely claims: command line apps have no GUI; GUI apps are more exciting; building GUI is complicated; etc. We must only include explicit statements. Provide claims with basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role maybe explanation_of_mistake? Probably none. Use ids C1 etc. Then categories: facts maybe. Provide facts with fact_text from claims. No definitions etc. Provide abstentions for missing categories. Let's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317996,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e1a78f200e",
+  "usage": {
+    "completion_tokens": 1276,
+    "prompt_tokens": 3007,
+    "total_tokens": 4283,
+    "completion_time": 2.686274197,
+    "completion_tokens_details": {
+      "reasoning_tokens": 115
+    },
+    "prompt_time": 0.187410445,
+    "prompt_tokens_details": null,
+    "queue_time": 0.375790073,
+    "total_time": 2.8736846419999997
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72tzgweepc8tdbqx8se0mkw",
+    "debug": null,
+    "seed": 704880123,
+    "usage": null
+  }
+}

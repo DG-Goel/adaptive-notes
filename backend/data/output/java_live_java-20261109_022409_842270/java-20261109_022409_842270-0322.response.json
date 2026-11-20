@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-9170e477-d88e-4f34-a6d0-09193c32a892",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Using a while‑true loop without a break statement creates an infinite loop that never terminates and can dangerously consume memory.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"A Java for‑each loop iterates over all elements of an array or collection without needing an explicit index or boolean condition.\",\n        \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"A Java for‑each loop can only iterate forward; it cannot iterate from the end of an array to the beginning.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [\n    {\n      \"procedure_name\": {\n        \"text\": \"Print each element of a string array using a for‑each loop\",\n        \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\"]\n      },\n      \"prerequisites\": null,\n      \"steps\": [\n        {\n          \"text\": \"Declare and initialise a string array, e.g. `String[] fruits = {\\\"Apple\\\", \\\"mango\\\", \\\"orange\\\"};`\",\n          \"refs\": [\"Q0001\"]\n        },\n        {\n          \"text\": \"Write a for‑each statement: `for (String fruit : fruits) {`\",\n          \"refs\": [\"Q0002\", \"Q0003\"]\n        },\n        {\n          \"text\": \"Inside the loop body, print the current element, e.g. `System.out.println(fruit);`\",\n          \"refs\": [\"Q0003\"]\n        },\n        {\n          \"text\": \"Close the loop with a closing brace `}`.\",\n          \"refs\": [\"Q0003\"]\n        }\n      ],\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"The for‑each loop iterates over the array, assigning each element in turn to the variable `fruit`, and prints each element, producing the same output as an equivalent indexed for loop.\",\n        \"refs\": [\"Q0003\"]\n      }\n    },\n    {\n      \"procedure_name\": {\n        \"text\": \"Prevent an infinite while‑true loop by adding a break statement\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"prerequisites\": null,\n      \"steps\": [\n        {\n          \"text\": \"Start a loop with `while (true) {`.\",\n          \"refs\": [\"Q0000\"]\n        },\n        {\n          \"text\": \"Include a conditional `if` inside the loop that, when satisfied, executes `break;` to exit the loop.\",\n          \"refs\": [\"Q0000\"]\n        },\n        {\n          \"text\": \"Place the remaining loop logic after the conditional, ensuring the break can be reached.\",\n          \"refs\": [\"Q0000\"]\n        },\n        {\n          \"text\": \"Close the loop with a closing brace `}`.\",\n          \"refs\": [\"Q0000\"]\n        }\n      ],\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"With a break statement, the while‑true loop will terminate when the break condition is met, avoiding an infinite loop and uncontrolled memory use.\",\n        \"refs\": [\"Q0000\"]\n      }\n    }\n  ],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. Identify facts, explanations, procedures, definitions, examples. From excerpts: teaching about while true needing break (fact/explanation). For-each loop usage (procedure). Limitations (fact). Let's create facts.\n\nFact1: Using while true without break leads to infinite loop that never terminates, dangerous memory consumption. Cite Q0000.\n\nFact2: For-each loop iterates over arrays/collections in Java, easier than for/while. Cite Q0001- Q0003.\n\nFact3: For-each loop limitation: forward only, cannot iterate backwards. Cite Q0004.\n\nProcedures: Procedure for using for-each loop to print array items. Steps: declare string array fruits = {\"Apple\",\"mango\",\"orange\"}; then for (String fruit : fruits) { System.out.println(fruit); } Cite Q0001- Q0003.\n\nAlso maybe procedure for while true with break: ensure break statement inside loop. Cite Q0000.\n\nWe'll output facts, procedures, explanations maybe. Use schema.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191805,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_7a4ab09ae4",
+  "usage": {
+    "completion_tokens": 1007,
+    "prompt_tokens": 3112,
+    "total_tokens": 4119,
+    "completion_time": 2.11350796,
+    "completion_tokens_details": {
+      "reasoning_tokens": 222
+    },
+    "prompt_time": 0.040071702,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "queue_time": 0.057595588,
+    "total_time": 2.153579662
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z2mgthe33teaajrtpr7eca",
+    "debug": null,
+    "seed": 561687442,
+    "usage": null
+  }
+}

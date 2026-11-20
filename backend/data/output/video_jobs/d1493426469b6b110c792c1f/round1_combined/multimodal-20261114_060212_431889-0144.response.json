@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-6621a2cf-b881-494f-a347-4b6836fc43da",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"NumberFormat class provides methods for formatting numbers as currency or percent.\",\n      \"refs\": [\"Q0000\", \"Q0010\", \"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Method chaining allows calling multiple methods in a single expression.\",\n      \"refs\": [\"Q0025\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Refactoring rename updates all references to a variable automatically in IntelliJ.\",\n      \"refs\": [\"Q0016\", \"Q0017\", \"Q0018\", \"Q0022\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Formatting a number as currency adds a dollar sign, commas every three digits, and two decimal places.\",\n      \"refs\": [\"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item5\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Formatting 0.1 as a percent yields \\\"10%\\\".\",\n      \"refs\": [\"Q0023\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item6\",\n      \"category\": \"examples\",\n      \"field\": \"example_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"NumberFormat.getPercentInstance().format(0.1) returns \\\"10%\\\".\",\n      \"refs\": [\"Q0023\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item7\",\n      \"category\": \"examples\",\n      \"field\": \"example_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"NumberFormat.getCurrencyInstance().format(1234.56) returns \\\"$1,234.56\\\".\",\n      \"refs\": [\"Q0007\", \"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item8\",\n      \"category\": \"procedures\",\n      \"field\": \"procedure_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Rename variable using IntelliJ Refactor Rename\",\n      \"refs\": [\"Q0016\", \"Q0017\", \"Q0018\", \"Q0022\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item8\",\n      \"category\": \"procedures\",\n      \"field\": \"steps\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Right‑click the variable → Refactor → Rename → type new name → press Enter.\",\n      \"refs\": [\"Q0016\", \"Q0017\", \"Q0018\", \"Q0022\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item9\",\n      \"category\": \"relationships\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Method chaining combines getPercentInstance() and format() in one expression.\",\n      \"refs\": [\"Q0025\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"correct_demonstration\",\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Exact code/formula unavailable due to ASR speech evidence.\",\n      \"source_ids\": [\"G00070\", \"G00071\", \"G00072\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc based on excerpts. Likely concepts: NumberFormat, getCurrencyInstance, getPercentInstance, method chaining, refactoring rename. Create rows. Use primary excerpts. Provide availability SOURCE_SUPPORTED? Since ASR speech, exact code unavailable but statements are supported. Use explicit basis. literal_kind verbal. instructional_role explanation_of_mistake? No. Use explanation_type maybe. We'll produce rows for concepts content. For each concept, field content? category concepts field content. text from excerpt. Provide refs. item id maybe \"item1\". Provide element 0 part value. literal_kind verbal. instructional_role null. basis explicit. availability SOURCE_SUPPORTED.\n\nAlso definitions: term NumberFormat, definition_text from Q0000? Q0000 is \"variable of type number format, called currency\". Not definition. Might skip.\n\nExamples: example of method chaining from Q0025.\n\nFacts: formatting currency yields \"$1,234.56\". From Q0008.\n\nFormulas none.\n\nProcedures: rename refactor steps from Q0016- Q0022.\n\nRelationships: method chaining relationship.\n\nWe'll output rows accordingly. Also abstentions for unavailable code/formula. Provide one abstention for formulas category source_missing.\n\nExcluded none.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636292,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "usage": {
+    "completion_tokens": 1503,
+    "prompt_tokens": 4072,
+    "total_tokens": 5575,
+    "completion_time": 3.153685649,
+    "completion_tokens_details": {
+      "reasoning_tokens": 256
+    },
+    "prompt_time": 0.188995562,
+    "prompt_tokens_details": null,
+    "queue_time": 0.160663617,
+    "total_time": 3.342681211
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cah586er9tfmgdjjc1yax4",
+    "debug": null,
+    "seed": 1617133177,
+    "usage": null
+  }
+}

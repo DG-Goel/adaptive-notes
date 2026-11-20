@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-f651e7ad-95de-4f15-85c1-b97a56249274",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"markdown\": \"## Short‑Circuit Evaluation in Java\\n\\n- **Behavior**: In a logical expression using the `&&` operator, Java evaluates operands from left to right. If the left‑hand side is `false`, the overall result is already determined, so Java **does not evaluate the rest of the expression** and immediately returns `false`. Conversely, with the `||` operator, if the left‑hand side is `true`, Java skips evaluating the remaining operands and returns `true`.\\n\\n**Example**:\\n```java\\nboolean result = (a > 0) && computeHeavyOperation();\\n```\\nIf `a > 0` is `false`, `computeHeavyOperation()` is never called.\\n\\nThis short‑circuit mechanism improves performance and prevents side effects from unnecessary evaluations.\"\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output JSON with field markdown. Include the polished notes. The note: \"Java will not evaluate the rest of this expression, it simply returns true.\" Probably explain short-circuit. Provide heading. Let's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794583582,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_02b0d31eca",
+  "usage": {
+    "completion_tokens": 228,
+    "prompt_tokens": 266,
+    "total_tokens": 494,
+    "completion_time": 0.478401019,
+    "completion_tokens_details": {
+      "reasoning_tokens": 46
+    },
+    "prompt_time": 0.011498253,
+    "prompt_tokens_details": null,
+    "queue_time": 0.316070223,
+    "total_time": 0.489899272
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ar8n4heg9a56rz38zjxg8c",
+    "debug": null,
+    "seed": 810176896,
+    "usage": null
+  }
+}

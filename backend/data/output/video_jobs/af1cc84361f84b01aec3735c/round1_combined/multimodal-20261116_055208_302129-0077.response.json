@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-2ff9c874-28fd-469f-987e-49509c633e3c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit concept name and content provided in the excerpts.\",\n      \"source_ids\": [\"G00019\", \"G00020\"]\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No term and definition text are present.\",\n      \"source_ids\": [\"G00019\", \"G00020\"]\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No clear explanatory topic and text are given.\",\n      \"source_ids\": [\"G00019\", \"G00020\"]\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No exemplifies and example text are provided.\",\n      \"source_ids\": [\"G00019\", \"G00020\"]\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No factual statements with supporting evidence are present.\",\n      \"source_ids\": [\"G00019\", \"G00020\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No formula text is available; ASR speech evidence noted as unavailable.\",\n      \"source_ids\": [\"G00019\", \"G00020\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No procedural content, name, or steps are described.\",\n      \"source_ids\": [\"G00019\", \"G00020\"]\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No relationship type, subject, or object are identified.\",\n      \"source_ids\": [\"G00019\", \"G00020\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what assumption is made about arbitrage in the discussed equation?\",\n      \"answer\": \"Arbitrage happens instantaneously.\",\n      \"distractors\": [\n        \"Arbitrage occurs over several months.\",\n        \"Arbitrage is ignored in the model.\",\n        \"Arbitrage depends on government policy.\"\n      ],\n      \"explanation\": \"The excerpt Q0005 states that the equation assumes arbitrage happens instantaneously.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Arbitrage assumption\",\n      \"refs\": [\"Q0005\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. The excerpts are mostly vague, no concrete concepts. Likely abstentions for many fields. We can maybe extract concept: \"exchange rate\" etc. But no definitions. So likely no rows, only abstentions for each category? We must supply at least one row per required field of each item, else abstention. Probably produce abstentions for all categories.\n\nQuiz: need primary evidence. Could ask: What does speaker say about arbitrage? Answer: happens instantaneously. Distractors plausible.\n\nCreate one question.\n\nLet's output rows empty, abstentions for each category with reason SOURCE_MISSING. Provide quiz one question.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794808598,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "usage": {
+    "completion_tokens": 706,
+    "prompt_tokens": 2855,
+    "total_tokens": 3561,
+    "completion_time": 1.477493064,
+    "completion_tokens_details": {
+      "reasoning_tokens": 131
+    },
+    "prompt_time": 0.120424485,
+    "prompt_tokens_details": null,
+    "queue_time": 0.163140667,
+    "total_time": 1.597917549
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hevjc2eg8836drzctvfqat",
+    "debug": null,
+    "seed": 796254206,
+    "usage": null
+  }
+}

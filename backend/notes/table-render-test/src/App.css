@@ -1,0 +1,253 @@
+
+/* ====================================
+   ADAPTIVE NOTES — PREMIUM TABLE UI
+   ==================================== */
+
+   * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background: #f1f5f9;
+    color: #0f172a;
+    font-family: Inter, Arial, sans-serif;
+  }
+  
+  /* Main Layout */
+  
+  .app {
+    max-width: 1500px;
+    margin: auto;
+    padding: 36px 28px;
+  }
+  
+  header h1 {
+    margin: 0 0 10px;
+    font-size: 30px;
+    font-weight: 750;
+    color: #1e3a8a;
+  }
+  
+  header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+  }
+  
+  .workspace {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px;
+    margin-top: 32px;
+  }
+  
+  /* Panels */
+  
+  .panel {
+    min-width: 0;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px;
+    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.045);
+  }
+  
+  .panel h2 {
+    margin: 0 0 22px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+  }
+  
+  /* JSON Input */
+  
+  textarea {
+    display: block;
+    width: 100%;
+    min-height: 520px;
+    padding: 20px;
+    resize: vertical;
+    border: 1px solid #cbd5e1;
+    border-radius: 14px;
+    background: #fdfefe;
+    color: #1e293b;
+    font-family: Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.9;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  }
+  
+  /* Markdown Preview */
+  
+  .preview {
+    min-width: 0;
+    line-height: 1.7;
+  }
+  
+  .preview h1 {
+    margin: 0 0 20px;
+    color: #1d4ed8;
+    font-size: 24px;
+    font-weight: 750;
+  }
+  
+  /* Scrollable Table Container */
+  
+  .preview .table-scroll {
+    width: 100%;
+    max-height: none;
+    overflow-x: auto;
+    margin: 20px 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+  }
+  
+  /* Modern Table */
+  
+  .preview .modern-table {
+    width: 100%;
+    min-width: 620px;
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: auto;
+    font-size: 14px;
+  }
+  
+  /* Common Cell Styles */
+  
+  .preview .modern-table th,
+  .preview .modern-table td {
+    min-width: 190px;
+    padding: 16px 20px;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 1.65;
+  
+    /* Prevent awkward word splitting */
+    word-break: normal;
+    overflow-wrap: normal;
+    white-space: normal;
+    hyphens: none;
+  }
+  
+  /* Premium Gradient Header */
+  
+  .preview .modern-table thead th {
+    background: linear-gradient(
+      135deg,
+      #1e40af 0%,
+      #2563eb 55%,
+      #3b82f6 100%
+    );
+    color: #ffffff;
+    font-weight: 650;
+    letter-spacing: 0.2px;
+    border-bottom: 2px solid #1d4ed8;
+  }
+  
+  /* Body Cells */
+  
+  .preview .modern-table tbody td {
+    color: #334155;
+    border-bottom: 1px solid #e7edf5;
+  }
+  
+  /* First Column Highlight */
+  
+  .preview .modern-table tbody td:first-child {
+    color: #1d4ed8;
+    font-weight: 650;
+  }
+  
+  /* Alternating Row Colors */
+  
+  .preview .modern-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+  }
+  
+  .preview .modern-table tbody tr:nth-child(odd) {
+    background: #ffffff;
+  }
+  
+  /* Row Hover */
+  
+  .preview .modern-table tbody tr {
+    transition: background-color 0.18s ease;
+  }
+  
+  .preview .modern-table tbody tr:hover {
+    background: #eaf2ff;
+  }
+  
+  /* Last Row */
+  
+  .preview .modern-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Code Inside Table Cells */
+  
+  .preview .modern-table code {
+    padding: 3px 7px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    border-radius: 6px;
+    font-family: Consolas, monospace;
+    font-size: 12px;
+  }
+  
+  /* Horizontal Scrollbar */
+  
+  .preview .table-scroll::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .preview .table-scroll::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  
+  .preview .table-scroll::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 10px;
+  }
+  
+  .preview .table-scroll::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+  }
+  
+  /* Responsive Layout */
+  
+  @media (max-width: 900px) {
+    .workspace {
+      grid-template-columns: 1fr;
+    }
+  
+    .app {
+      padding: 20px 14px;
+    }
+  
+    .panel {
+      padding: 18px;
+    }
+  
+    header h1 {
+      font-size: 24px;
+    }
+  
+    .preview .modern-table th,
+    .preview .modern-table td {
+      padding: 12px 14px;
+    }
+  }
+  

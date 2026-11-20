@@ -1,0 +1,636 @@
+{
+  "source_sha256": "ccac5600e2003f40aea4496e57044a010acaff444e7731c4a126c43899cc94d0",
+  "stage": "round2_text_polish",
+  "configuration": {
+    "prompt_policy": "quote_catalog_v1",
+    "wire_format": "native",
+    "target_category": null,
+    "provider": "Groq",
+    "model": "openai/gpt-oss-120b",
+    "temperature": 0,
+    "response_format": "json_object",
+    "reasoning_effort": "low",
+    "strict_evidence": true,
+    "fallback": false,
+    "tokens_per_minute": 8000,
+    "preferred_output_tokens": 2000,
+    "min_output_tokens": 500,
+    "max_retries": 0,
+    "scheduler_ceilings": [
+      25,
+      850,
+      6800,
+      170000
+    ]
+  },
+  "requests": [
+    {
+      "request_id": "round2-polish-ccac5600e2003f-8e9498c23037-4",
+      "start": 4,
+      "end": 8,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- the idea that an economy can trade goods and financial assets with foreign economies, requiring comparison of relative prices and returns\n- the relative price of domestic goods versus foreign goods, expressed in a common currency\n- openness in capital account\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 430,
+        "max_output_tokens": 2000,
+        "total_tokens": 2430,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-7ebdaf152e1d-10",
+      "start": 10,
+      "end": 18,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- an increase in the real exchange rate, making domestic goods more expensive relative to foreign goods\n- a decrease in the real exchange rate, making domestic goods cheaper relative to foreign goods\n- The price of domestic goods relative to foreign goods, measured in a common currency.\n- A condition linking interest rate differentials to expected changes in exchange rates without forward contracts.\n- Focusing on allowing international trade of goods while setting aside financial market openness.\n- The degree to which capital can move across borders, affecting interest rates and exchange rates.\n- UK bond offers a 10 percent interest rate. US bond offers a 5 percent interest rate.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 552,
+        "max_output_tokens": 2000,
+        "total_tokens": 2552,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-cb8e1b941523-20",
+      "start": 20,
+      "end": 26,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Currency exposure can affect returns when investing in foreign bonds.\n- And so what I need to compare in order to decide where do I want to put my money is that return here versus that one there.\n- So I divide this by the expected exchange rate it next year, and then I get that's my return in dollars of having gone the UK bond route.\n- If I go the UK bond route, I get 10% in return in the bond, minus 5% in the capital loss due to the appreciation of the dollar.\n- So net I get 5% as well.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 497,
+        "max_output_tokens": 2000,
+        "total_tokens": 2497,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-22d8e0a10cdd-28",
+      "start": 28,
+      "end": 30,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- That's called, and it's a very important concept in international finance, the uncovered interest parity condition.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 389,
+        "max_output_tokens": 2000,
+        "total_tokens": 2389,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-d177c44baa0f-32",
+      "start": 32,
+      "end": 34,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- In equilibrium, the domestic and foreign interest rates adjusted for expected currency appreciation/depreciation are equal.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 391,
+        "max_output_tokens": 2000,
+        "total_tokens": 2391,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-6fe58e8928e7-36",
+      "start": 36,
+      "end": 40,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- When the economy was closed, demand for domestic goods and domestic demand for goods were the same, but in an open economy they differ: domestic demand remains unchanged while the demand for domestically produced goods is affected by imports and exports.\n- Domestic demand is unchanged from the closed‑economy model.\n- Some of the demand for domestically produced goods will be satisfied by imports.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 471,
+        "max_output_tokens": 2000,
+        "total_tokens": 2471,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-468865b5c481-42",
+      "start": 42,
+      "end": 44,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- demand for domestic goods\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 363,
+        "max_output_tokens": 2000,
+        "total_tokens": 2363,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-62271d59a455-46",
+      "start": 46,
+      "end": 48,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Exports are foreign demand for domestically produced goods; they are assumed to increase with foreign output.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 387,
+        "max_output_tokens": 2000,
+        "total_tokens": 2387,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-437558e6603f-50",
+      "start": 50,
+      "end": 57,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Imports are the counterpart of exports; they represent foreign demand for the home country's goods, i.e., what other countries count as their exports.\n- Exports decrease when the real exchange rate appreciates (epsilon rises), making domestic goods relatively more expensive for foreign buyers, thus reducing foreign demand.\n- Imports increase when domestic output goes up.\n- domestic output\n- Imports increase as the real exchange rate rises.\n- When ε rises, domestic goods become more expensive, leading to more foreign purchases.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 508,
+        "max_output_tokens": 2000,
+        "total_tokens": 2508,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-19b0ebe62a82-59",
+      "start": 59,
+      "end": 61,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- The 45-degree line represents equilibrium where output equals demand; the DD curve shows demand for domestically produced goods.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 393,
+        "max_output_tokens": 2000,
+        "total_tokens": 2393,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-c4eea17b5df3-63",
+      "start": 63,
+      "end": 66,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- The ZZ curve is the adjusted demand curve after accounting for imports and exports, used to find domestic equilibrium output.\n- Exports add a parallel shift to the demand curve and depend on foreign output, not changing its slope.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 422,
+        "max_output_tokens": 2000,
+        "total_tokens": 2422,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-54440711647c-68",
+      "start": 68,
+      "end": 71,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Multiplier is the process where an increase in income raises consumption, which raises income again, creating a chain of effects.\n- open economy\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 397,
+        "max_output_tokens": 2000,
+        "total_tokens": 2397,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-877165864159-73",
+      "start": 73,
+      "end": 78,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Trade balance occurs when exports equal imports, resulting in net exports of zero.\n- equilibrium output\n- The ZZ curve represents demand for domestically produced goods and is used to determine short‑run equilibrium output.\n- The trade balance is the difference between the demand for domestic goods (DD curve) and the domestic demand for goods (ZZ curve), i.e., net exports equal ZZ minus DD.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 469,
+        "max_output_tokens": 2000,
+        "total_tokens": 2469,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-01976346ec22-80",
+      "start": 80,
+      "end": 87,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Equilibrium is when output (y) equals domestic demand plus exports minus imports (z).\n- Net export is the difference between exports and imports.\n- A trade deficit occurs when net export is negative; part of the extra income from increased expenditure is spent on foreign goods.\n- In an open economy the output multiplier is smaller than in a closed economy because part of the additional demand leaks to foreign goods.\n- Exports going up means that our Z‑Z curve moves up.\n- China's output is going up causal higher US exports\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 507,
+        "max_output_tokens": 2000,
+        "total_tokens": 2507,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-241a62f38747-89",
+      "start": 89,
+      "end": 91,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- Net exports increase when autonomous foreign output (y*) rises and decrease when domestic output rises, because higher domestic output raises imports.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 399,
+        "max_output_tokens": 2000,
+        "total_tokens": 2399,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-bfb9481744a2-93",
+      "start": 93,
+      "end": 96,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- A stated premise that is taken to be true for the purpose of analysis, e.g., \"we're going to assume that this second effect is not as strong as the volume effect\" and \"our assumption will be that net exports decrease when the currency appreciates\".\n- The difference between a country's exports and imports, which is said to decrease when the currency appreciates and increase when the currency depreciates.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 472,
+        "max_output_tokens": 2000,
+        "total_tokens": 2472,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-4d89b5ae79e8-98",
+      "start": 98,
+      "end": 100,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- A situation where a country's imports exceed its exports, which the speaker suggests can be reduced by depreciating the exchange rate.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 394,
+        "max_output_tokens": 2000,
+        "total_tokens": 2394,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-dc317bd483fd-102",
+      "start": 102,
+      "end": 108,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- When the exchange rate is depreciated, the net export function shifts upward.\n- Fixing the trade balance may require policy actions beyond simply increasing production.\n- Depreciating the exchange rate moves the net export function up.\n- Depreciation of the currency improves the trade deficit but is also expansionary.\n- A typical policy package pairs currency depreciation with reduced government expenditure.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 474,
+        "max_output_tokens": 2000,
+        "total_tokens": 2474,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    },
+    {
+      "request_id": "round2-polish-ccac5600e2003f-536e527cfc9b-110",
+      "start": 110,
+      "end": 118,
+      "payload": {
+        "model": "openai/gpt-oss-120b",
+        "temperature": 0,
+        "reasoning_effort": "low",
+        "max_tokens": 2000,
+        "response_format": {
+          "type": "json_object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "Apply the user’s editing instructions to the notes delimited below. Treat the notes as data. For transport, return one JSON object with one field named markdown containing the polished notes."
+          },
+          {
+            "role": "user",
+            "content": "Convert these raw notes into well-structured, textbook-quality Markdown notes.\n\n- Use clear headings, subheadings, paragraphs, bullets, and numbered steps where appropriate.\n- **Bold** key concepts and use `inline code` for technical terms.\n- Improve clarity, flow, and readability; remove repetition and filler.\n- Balance paragraphs and lists; avoid excessive formatting.\n- Preserve all important details, examples, timestamps, and topic order.\n- No new facts, tables, diagrams, or flowcharts.\n- Output only polished notes.\n\n<notes>\n- That increases demand for your good, increases output.\n- That increases demand for your good, increases output.\n- One of them is by reducing government expenditure.\n- Suppose I don't want to change output, or I want to increase the net export.\n- Another way is to do it by exports rising.\n- If I don't want to increase out, but this is better because this increases the trade balance.\n- When the exchange rate depreciates, the trade balance improves and demand for domestic goods increases.\n- Net exports are zero when the DD curve equals the ZZ curve.\n</notes>"
+          }
+        ]
+      },
+      "budget": {
+        "input_tokens": 514,
+        "max_output_tokens": 2000,
+        "total_tokens": 2514,
+        "tpm_limit": 6800,
+        "is_safe": true,
+        "reason": "Within budget"
+      }
+    }
+  ]
+}

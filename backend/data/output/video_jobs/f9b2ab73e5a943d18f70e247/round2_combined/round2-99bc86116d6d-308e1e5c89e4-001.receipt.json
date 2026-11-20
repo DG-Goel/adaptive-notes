@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-625aa298-2957-4340-8aa5-3447ac64dc7f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Effects of Interest Rate and Exchange Rate Changes\",\n      \"source_segment_ids\": [\"FCT_0004\",\"CON_0044\",\"CON_0045\",\"CON_0046\",\"CON_0047\",\"CON_0025\",\"CON_0026\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"type\": \"table\",\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0004\",\n              \"exact_quote\": \"Rising US interest rates led to an appreciation of the dollar.\"\n            },\n            {\n              \"note_id\": \"CON_0044\",\n              \"exact_quote\": \"When the domestic interest rate is increased relative to the rest of the world, the exchange rate must appreciate.\"\n            },\n            {\n              \"note_id\": \"CON_0045\",\n              \"exact_quote\": \"An expansionary domestic monetary policy leads to a contraction in output and an appreciation of the currency.\"\n            },\n            {\n              \"note_id\": \"CON_0046\",\n              \"exact_quote\": \"If the domestic interest rate changes while the rest of the world does not, the differential must be compensated.\"\n            },\n            {\n              \"note_id\": \"CON_0047\",\n              \"exact_quote\": \"Compensation for a higher interest rate differential comes through an expected capital loss on the currency.\"\n            },\n            {\n              \"note_id\": \"CON_0025\",\n              \"exact_quote\": \"The price of foreign currency in terms of domestic currency; it moves up (appreciates) when the domestic interest rate rises relative to the foreign interest rate.\"\n            },\n            {\n              \"note_id\": \"CON_0026\",\n              \"exact_quote\": \"The return on a bond or loan; when the domestic interest rate is higher than the foreign rate, the domestic currency tends to appreciate.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Interest Rate Changes and Their Exchange‑Rate/Output Effects\",\n            \"headers\": [\"Condition\", \"Result\"],\n            \"rows\": [\n              [\"Rising US interest rates\", \"appreciation of the dollar\"],\n              [\"Domestic interest rate ↑ vs rest of world\", \"exchange rate must appreciate\"],\n              [\"Expansionary domestic monetary policy\", \"contraction in output and currency appreciation\"],\n              [\"Domestic interest rate changes alone\", \"differential must be compensated\"],\n              [\"Higher interest rate differential\", \"expected capital loss on the currency\"],\n              [\"Domestic interest rate ↑ relative to foreign\", \"foreign currency price moves up (appreciates)\"],\n              [\"Domestic interest rate > foreign rate\", \"domestic currency tends to appreciate\"]\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce units for visual candidates only. Look for any visual-worthy comparisons etc. From data, many statements about interest rates, exchange rate appreciation, net exports etc. Could make a table comparing concepts: domestic interest rate ↑ -> exchange rate appreciation, etc. Also maybe flowchart of policy interest rate effect on exchange rate and output. Use supported quotes: need exact quotes containing both endpoints and relationship. Check excerpts: e.g., \"Rising US interest rates led to an appreciation of the dollar.\" That's a quote. Use that for table row.\n\nAlso \"When the quoted exchange rate goes up, it indicates an appreciation of the local currency (e.g., the dollar);\" that's a quote.\n\nWe can create table: Item, Effect. Rows with evidence.\n\nWe need source_segment_ids: IDs of notes used. Use note IDs like FCT_0004 etc.\n\nCreate one unit with table visual.\n\nProvide remaining_text empty? mode text_and_visual? Since we have visual, mode text_and_visual maybe but we only output visual units; omitted notes remain prose automatically.\n\nReturn JSON with units list.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794758678,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_ca5edfaab2",
+  "usage": {
+    "completion_tokens": 826,
+    "prompt_tokens": 3265,
+    "total_tokens": 4091,
+    "completion_time": 1.716365017,
+    "completion_tokens_details": {
+      "reasoning_tokens": 225
+    },
+    "prompt_time": 0.142856262,
+    "prompt_tokens_details": null,
+    "queue_time": 0.370320911,
+    "total_time": 1.859221279
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7fz83b8eb2v6rvpve8waj6s",
+    "debug": null,
+    "seed": 1934137055,
+    "usage": null
+  }
+}

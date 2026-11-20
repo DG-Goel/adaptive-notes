@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-17826509-faf9-49a5-87b8-0a0437a10989",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [\n    {\n      \"example_text\": {\n        \"text\": \"while loop that continues until the user inputs \\\"quit\\\"\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"example_type\": null,\n      \"exemplifies\": {\n        \"text\": \"using a while loop for an unknown number of repetitions based on user input\",\n        \"refs\": [\"Q0003\"]\n      }\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Initializing I to zero and using the less‑than operator in a for loop prints the numbers 0 1 2 3 4\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Initializing I to five and decrementing it in a for loop prints the numbers 5 4 3 2 1\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"While loops are functionally similar to for loops but have different syntax\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"For loops are preferable when the number of iterations is known ahead of time; while loops are preferable when the number of iterations is unknown\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In Java, using == or != to compare strings compares object references, not their textual values\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts: facts about for loops, while loops, when to use. Extract facts, definitions maybe. Let's create facts.\n\nFact1: Initializing I to zero and using less than operator prints numbers 0-4. Cite Q0000.\n\nFact2: Initializing I to five and decrementing prints numbers 5-1. Cite Q0000.\n\nFact3: While loops similar to for loops in functionality but differ in syntax. Cite Q0001.\n\nFact4: For loops better when number of iterations known; while loops better when unknown. Cite Q0002 and Q0003.\n\nFact5: To check string equality, cannot use ==, must use .equals; inequality operator can be used? Actually says cannot use comparison operators between reference types because they compare address, so use inequality operator? It's confusing. We'll capture fact: In Java, comparing strings with == compares references, not values. Cite Q0004.\n\nWe also have example of while loop reading until quit. Could be example. Provide example_text.\n\nExample: while loop that continues until user inputs \"quit\". Cite Q0003 and Q0004.\n\nNow produce JSON with arrays. No concepts, definitions, formulas, procedures, relationships. Excluded empty.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036482,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_19b184c447",
+  "usage": {
+    "completion_tokens": 707,
+    "prompt_tokens": 3024,
+    "total_tokens": 3731,
+    "completion_time": 1.646508361,
+    "completion_tokens_details": {
+      "reasoning_tokens": 262
+    },
+    "prompt_time": 0.034733815,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "queue_time": 0.375129956,
+    "total_time": 1.681242176
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6tegeemetc86epgg1e9r8nj",
+    "debug": null,
+    "seed": 1546193974,
+    "usage": null
+  }
+}

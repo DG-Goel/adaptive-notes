@@ -1,0 +1,2268 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-10T14:07:22.273748+00:00",
+  "concepts": [],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [
+    {
+      "knowledge_id": "FCT_0001",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00028"
+      ],
+      "document_id": "DOC001",
+      "content": "Java treats integer literals without a suffix as int, so a numeric literal that exceeds the int range must be suffixed with an L (or l) to be interpreted as long.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00028",
+              "quote": "The reason we're\n getting this error is that by default, java sees these numbers as integers\n so even though we have defined the type of this variable as long, java compiler\n sees this value as an integer, and he thinks this value is too large for\n an integer.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 115,
+              "end_char": 375,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00028",
+              "quote": "To solve this problem, we need to add an l as\n a suffix to this number.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 376,
+              "end_char": 447,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00028",
+              "quote": "The reason we're\n getting this error is that by default, java sees these numbers as integers\n so even though we have defined the type of this variable as long, java compiler\n sees this value as an integer, and he thinks this value is too large for\n an integer.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 115,
+              "end_char": 375,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00028",
+              "quote": "To solve this problem, we need to add an l as\n a suffix to this number.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 376,
+              "end_char": 447,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "Java treats integer literals without a suffix as int, so a numeric literal that exceeds the int range must be suffixed with an L (or l) to be interpreted as long.",
+              "claims": [
+                {
+                  "text": "Java treats integer literals without a suffix as int, so a numeric literal that exceeds the int range must be suffixed with an L (or l) to be interpreted as long.",
+                  "refs": [
+                    "Q0002",
+                    "Q0003"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00028",
+                      "quote": "The reason we're\n getting this error is that by default, java sees these numbers as integers\n so even though we have defined the type of this variable as long, java compiler\n sees this value as an integer, and he thinks this value is too large for\n an integer."
+                    },
+                    {
+                      "source_id": "G00028",
+                      "quote": "To solve this problem, we need to add an l as\n a suffix to this number."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Java treats integer literals without a suffix as int, so a numeric literal that exceeds the int range must be suffixed with an L (or l) to be interpreted as long.",
+              "claims": [
+                {
+                  "text": "Java treats integer literals without a suffix as int, so a numeric literal that exceeds the int range must be suffixed with an L (or l) to be interpreted as long.",
+                  "refs": [
+                    "Q0002",
+                    "Q0003"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00028",
+                      "quote": "The reason we're\n getting this error is that by default, java sees these numbers as integers\n so even though we have defined the type of this variable as long, java compiler\n sees this value as an integer, and he thinks this value is too large for\n an integer."
+                    },
+                    {
+                      "source_id": "G00028",
+                      "quote": "To solve this problem, we need to add an l as\n a suffix to this number."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Java treats integer literals without a suffix as int, so a numeric literal that exceeds the int range must be suffixed with an L (or l) to be interpreted as long.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "The reason we're\n getting this error is that by default, java sees these numbers as integers\n so even though we have defined the type of this variable as long, java compiler\n sees this value as an integer, and he thinks this value is too large for\n an integer.",
+                      "To solve this problem, we need to add an l as\n a suffix to this number."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00028",
+                        "quote": "The reason we're\n getting this error is that by default, java sees these numbers as integers\n so even though we have defined the type of this variable as long, java compiler\n sees this value as an integer, and he thinks this value is too large for\n an integer.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 115,
+                        "end_char": 375,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00028",
+                        "quote": "To solve this problem, we need to add an l as\n a suffix to this number.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 376,
+                        "end_char": 447,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Java treats integer literals without a suffix as int, so a numeric literal that exceeds the int range must be suffixed with an L (or l) to be interpreted as long.",
+                "preview_text": "Java treats integer literals without a suffix as int, so a numeric literal that exceeds the int range must be suffixed with an L (or l) to be interpreted as long.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "Java treats integer literals without a suffix as int, so a numeric literal that exceeds the int range must be suffixed with an L (or l) to be interpreted as long.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "The reason we're\n getting this error is that by default, java sees these numbers as integers\n so even though we have defined the type of this variable as long, java compiler\n sees this value as an integer, and he thinks this value is too large for\n an integer.",
+                      "To solve this problem, we need to add an l as\n a suffix to this number."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00028",
+                        "quote": "The reason we're\n getting this error is that by default, java sees these numbers as integers\n so even though we have defined the type of this variable as long, java compiler\n sees this value as an integer, and he thinks this value is too large for\n an integer.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 115,
+                        "end_char": 375,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00028",
+                        "quote": "To solve this problem, we need to add an l as\n a suffix to this number.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 376,
+                        "end_char": 447,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Java treats integer literals without a suffix as int, so a numeric literal that exceeds the int range must be suffixed with an L (or l) to be interpreted as long.",
+                "preview_text": "Java treats integer literals without a suffix as int, so a numeric literal that exceeds the int range must be suffixed with an L (or l) to be interpreted as long.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00028"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Java treats integer literals without a suffix as int, so a numeric literal that exceeds the int range must be suffixed with an L (or l) to be interpreted as long.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0002",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00028"
+      ],
+      "document_id": "DOC001",
+      "content": "Both uppercase L and lowercase l can be used as the long suffix, but uppercase L is preferred because lowercase l can be confused with the digit 1.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00028",
+              "quote": "We can use an uppercase or a lowercase l.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 448,
+              "end_char": 489,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00028",
+              "quote": "But as you can see, a lowercase l kind of looks like a one, so\n it's better to use a capital L.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 491,
+              "end_char": 586,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00028",
+              "quote": "We can use an uppercase or a lowercase l.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 448,
+              "end_char": 489,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00028",
+              "quote": "But as you can see, a lowercase l kind of looks like a one, so\n it's better to use a capital L.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 491,
+              "end_char": 586,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "Both uppercase L and lowercase l can be used as the long suffix, but uppercase L is preferred because lowercase l can be confused with the digit 1.",
+              "claims": [
+                {
+                  "text": "Both uppercase L and lowercase l can be used as the long suffix, but uppercase L is preferred because lowercase l can be confused with the digit 1.",
+                  "refs": [
+                    "Q0004",
+                    "Q0005"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "explanation_of_mistake",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00028",
+                      "quote": "We can use an uppercase or a lowercase l."
+                    },
+                    {
+                      "source_id": "G00028",
+                      "quote": "But as you can see, a lowercase l kind of looks like a one, so\n it's better to use a capital L."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Both uppercase L and lowercase l can be used as the long suffix, but uppercase L is preferred because lowercase l can be confused with the digit 1.",
+              "claims": [
+                {
+                  "text": "Both uppercase L and lowercase l can be used as the long suffix, but uppercase L is preferred because lowercase l can be confused with the digit 1.",
+                  "refs": [
+                    "Q0004",
+                    "Q0005"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "explanation_of_mistake",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00028",
+                      "quote": "We can use an uppercase or a lowercase l."
+                    },
+                    {
+                      "source_id": "G00028",
+                      "quote": "But as you can see, a lowercase l kind of looks like a one, so\n it's better to use a capital L."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Both uppercase L and lowercase l can be used as the long suffix, but uppercase L is preferred because lowercase l can be confused with the digit 1.",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Claim introduces a number absent from its evidence"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "explanation_of_mistake",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [
+                        "1"
+                      ],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "We can use an uppercase or a lowercase l.",
+                      "But as you can see, a lowercase l kind of looks like a one, so\n it's better to use a capital L."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00028",
+                        "quote": "We can use an uppercase or a lowercase l.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 448,
+                        "end_char": 489,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00028",
+                        "quote": "But as you can see, a lowercase l kind of looks like a one, so\n it's better to use a capital L.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 491,
+                        "end_char": 586,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Both uppercase L and lowercase l can be used as the long suffix, but uppercase L is preferred because lowercase l can be confused with the digit 1.",
+                "preview_text": "",
+                "withheld": true
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "Both uppercase L and lowercase l can be used as the long suffix, but uppercase L is preferred because lowercase l can be confused with the digit 1.",
+                    "availability": "PARTIALLY_SUPPORTED",
+                    "eligible_for_preview": false,
+                    "reasons": [
+                      "Claim introduces a number absent from its evidence"
+                    ],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "explanation_of_mistake",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [
+                        "1"
+                      ],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "We can use an uppercase or a lowercase l.",
+                      "But as you can see, a lowercase l kind of looks like a one, so\n it's better to use a capital L."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00028",
+                        "quote": "We can use an uppercase or a lowercase l.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 448,
+                        "end_char": 489,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00028",
+                        "quote": "But as you can see, a lowercase l kind of looks like a one, so\n it's better to use a capital L.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 491,
+                        "end_char": 586,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Both uppercase L and lowercase l can be used as the long suffix, but uppercase L is preferred because lowercase l can be confused with the digit 1.",
+                "preview_text": "",
+                "withheld": true
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00028"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Both uppercase L and lowercase l can be used as the long suffix, but uppercase L is preferred because lowercase l can be confused with the digit 1.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0003",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00029"
+      ],
+      "document_id": "DOC001",
+      "content": "Java treats decimal literals as double by default; assigning a decimal literal to a float variable without a suffix causes a compilation error.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00029",
+              "quote": "The reason we are seeing this error is that by default, Java sees\n these numbers with a decimal point as double, so even though\n we set the type of this variable to float, Java sees this number as a double.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 56,
+              "end_char": 262,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00029",
+              "quote": "Incompatible types, required float, but found double.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 54,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00029",
+              "quote": "The reason we are seeing this error is that by default, Java sees\n these numbers with a decimal point as double, so even though\n we set the type of this variable to float, Java sees this number as a double.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 56,
+              "end_char": 262,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00029",
+              "quote": "Incompatible types, required float, but found double.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 54,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "Java treats decimal literals as double by default; assigning a decimal literal to a float variable without a suffix causes a compilation error.",
+              "claims": [
+                {
+                  "text": "Java treats decimal literals as double by default; assigning a decimal literal to a float variable without a suffix causes a compilation error.",
+                  "refs": [
+                    "Q0010",
+                    "Q0009"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00029",
+                      "quote": "The reason we are seeing this error is that by default, Java sees\n these numbers with a decimal point as double, so even though\n we set the type of this variable to float, Java sees this number as a double."
+                    },
+                    {
+                      "source_id": "G00029",
+                      "quote": "Incompatible types, required float, but found double."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Java treats decimal literals as double by default; assigning a decimal literal to a float variable without a suffix causes a compilation error.",
+              "claims": [
+                {
+                  "text": "Java treats decimal literals as double by default; assigning a decimal literal to a float variable without a suffix causes a compilation error.",
+                  "refs": [
+                    "Q0010",
+                    "Q0009"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00029",
+                      "quote": "The reason we are seeing this error is that by default, Java sees\n these numbers with a decimal point as double, so even though\n we set the type of this variable to float, Java sees this number as a double."
+                    },
+                    {
+                      "source_id": "G00029",
+                      "quote": "Incompatible types, required float, but found double."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Java treats decimal literals as double by default; assigning a decimal literal to a float variable without a suffix causes a compilation error.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "The reason we are seeing this error is that by default, Java sees\n these numbers with a decimal point as double, so even though\n we set the type of this variable to float, Java sees this number as a double.",
+                      "Incompatible types, required float, but found double."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00029",
+                        "quote": "The reason we are seeing this error is that by default, Java sees\n these numbers with a decimal point as double, so even though\n we set the type of this variable to float, Java sees this number as a double.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 56,
+                        "end_char": 262,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00029",
+                        "quote": "Incompatible types, required float, but found double.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 54,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Java treats decimal literals as double by default; assigning a decimal literal to a float variable without a suffix causes a compilation error.",
+                "preview_text": "Java treats decimal literals as double by default; assigning a decimal literal to a float variable without a suffix causes a compilation error.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "Java treats decimal literals as double by default; assigning a decimal literal to a float variable without a suffix causes a compilation error.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "The reason we are seeing this error is that by default, Java sees\n these numbers with a decimal point as double, so even though\n we set the type of this variable to float, Java sees this number as a double.",
+                      "Incompatible types, required float, but found double."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00029",
+                        "quote": "The reason we are seeing this error is that by default, Java sees\n these numbers with a decimal point as double, so even though\n we set the type of this variable to float, Java sees this number as a double.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 56,
+                        "end_char": 262,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00029",
+                        "quote": "Incompatible types, required float, but found double.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 54,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Java treats decimal literals as double by default; assigning a decimal literal to a float variable without a suffix causes a compilation error.",
+                "preview_text": "Java treats decimal literals as double by default; assigning a decimal literal to a float variable without a suffix causes a compilation error.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00029"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Java treats decimal literals as double by default; assigning a decimal literal to a float variable without a suffix causes a compilation error.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0004",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00029"
+      ],
+      "document_id": "DOC001",
+      "content": "To represent a float literal, append an f (or F) suffix to the numeric value.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00029",
+              "quote": "So, just like how we added a suffix to this number\n to represent it as a long, we need to add a suffix here to represent this\n number as a float, and that suffix is f.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 264,
+              "end_char": 431,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00029",
+              "quote": "Once again, we can\n use an uppercase or lowercase f.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 432,
+              "end_char": 484,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00029",
+              "quote": "So, just like how we added a suffix to this number\n to represent it as a long, we need to add a suffix here to represent this\n number as a float, and that suffix is f.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 264,
+              "end_char": 431,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00029",
+              "quote": "Once again, we can\n use an uppercase or lowercase f.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 432,
+              "end_char": 484,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "To represent a float literal, append an f (or F) suffix to the numeric value.",
+              "claims": [
+                {
+                  "text": "To represent a float literal, append an f (or F) suffix to the numeric value.",
+                  "refs": [
+                    "Q0011",
+                    "Q0012"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "correct_demonstration",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00029",
+                      "quote": "So, just like how we added a suffix to this number\n to represent it as a long, we need to add a suffix here to represent this\n number as a float, and that suffix is f."
+                    },
+                    {
+                      "source_id": "G00029",
+                      "quote": "Once again, we can\n use an uppercase or lowercase f."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "To represent a float literal, append an f (or F) suffix to the numeric value.",
+              "claims": [
+                {
+                  "text": "To represent a float literal, append an f (or F) suffix to the numeric value.",
+                  "refs": [
+                    "Q0011",
+                    "Q0012"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "correct_demonstration",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00029",
+                      "quote": "So, just like how we added a suffix to this number\n to represent it as a long, we need to add a suffix here to represent this\n number as a float, and that suffix is f."
+                    },
+                    {
+                      "source_id": "G00029",
+                      "quote": "Once again, we can\n use an uppercase or lowercase f."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "To represent a float literal, append an f (or F) suffix to the numeric value.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "correct_demonstration",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So, just like how we added a suffix to this number\n to represent it as a long, we need to add a suffix here to represent this\n number as a float, and that suffix is f.",
+                      "Once again, we can\n use an uppercase or lowercase f."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00029",
+                        "quote": "So, just like how we added a suffix to this number\n to represent it as a long, we need to add a suffix here to represent this\n number as a float, and that suffix is f.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 264,
+                        "end_char": 431,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00029",
+                        "quote": "Once again, we can\n use an uppercase or lowercase f.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 432,
+                        "end_char": 484,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "To represent a float literal, append an f (or F) suffix to the numeric value.",
+                "preview_text": "To represent a float literal, append an f (or F) suffix to the numeric value.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "To represent a float literal, append an f (or F) suffix to the numeric value.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "correct_demonstration",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So, just like how we added a suffix to this number\n to represent it as a long, we need to add a suffix here to represent this\n number as a float, and that suffix is f.",
+                      "Once again, we can\n use an uppercase or lowercase f."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00029",
+                        "quote": "So, just like how we added a suffix to this number\n to represent it as a long, we need to add a suffix here to represent this\n number as a float, and that suffix is f.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 264,
+                        "end_char": 431,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00029",
+                        "quote": "Once again, we can\n use an uppercase or lowercase f.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 432,
+                        "end_char": 484,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "To represent a float literal, append an f (or F) suffix to the numeric value.",
+                "preview_text": "To represent a float literal, append an f (or F) suffix to the numeric value.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00029"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "To represent a float literal, append an f (or F) suffix to the numeric value.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0005",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00029"
+      ],
+      "document_id": "DOC001",
+      "content": "A char literal must be enclosed in single quotes, while a string literal uses double quotes.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00029",
+              "quote": "Note that we should always surround single characters with single\n quotes and multiple characters or strings with double quotes.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 601,
+              "end_char": 729,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00029",
+              "quote": "Note that we should always surround single characters with single\n quotes and multiple characters or strings with double quotes.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 601,
+              "end_char": 729,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "A char literal must be enclosed in single quotes, while a string literal uses double quotes.",
+              "claims": [
+                {
+                  "text": "A char literal must be enclosed in single quotes, while a string literal uses double quotes.",
+                  "refs": [
+                    "Q0014"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00029",
+                      "quote": "Note that we should always surround single characters with single\n quotes and multiple characters or strings with double quotes."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "A char literal must be enclosed in single quotes, while a string literal uses double quotes.",
+              "claims": [
+                {
+                  "text": "A char literal must be enclosed in single quotes, while a string literal uses double quotes.",
+                  "refs": [
+                    "Q0014"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00029",
+                      "quote": "Note that we should always surround single characters with single\n quotes and multiple characters or strings with double quotes."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "A char literal must be enclosed in single quotes, while a string literal uses double quotes.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Note that we should always surround single characters with single\n quotes and multiple characters or strings with double quotes."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00029",
+                        "quote": "Note that we should always surround single characters with single\n quotes and multiple characters or strings with double quotes.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 601,
+                        "end_char": 729,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "A char literal must be enclosed in single quotes, while a string literal uses double quotes.",
+                "preview_text": "A char literal must be enclosed in single quotes, while a string literal uses double quotes.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "A char literal must be enclosed in single quotes, while a string literal uses double quotes.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Note that we should always surround single characters with single\n quotes and multiple characters or strings with double quotes."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00029",
+                        "quote": "Note that we should always surround single characters with single\n quotes and multiple characters or strings with double quotes.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 601,
+                        "end_char": 729,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "A char literal must be enclosed in single quotes, while a string literal uses double quotes.",
+                "preview_text": "A char literal must be enclosed in single quotes, while a string literal uses double quotes.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00029"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "A char literal must be enclosed in single quotes, while a string literal uses double quotes.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0006",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00029",
+        "G00030"
+      ],
+      "document_id": "DOC001",
+      "content": "A boolean variable can hold only the values true or false.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00029",
+              "quote": "We set this to true or false.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 960,
+              "end_char": 989,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00030",
+              "quote": "These are the boolean values.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 30,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00029",
+              "quote": "We set this to true or false.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 960,
+              "end_char": 989,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00030",
+              "quote": "These are the boolean values.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 30,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "A boolean variable can hold only the values true or false.",
+              "claims": [
+                {
+                  "text": "A boolean variable can hold only the values true or false.",
+                  "refs": [
+                    "Q0019",
+                    "Q0020"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00029",
+                      "quote": "We set this to true or false."
+                    },
+                    {
+                      "source_id": "G00030",
+                      "quote": "These are the boolean values."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "A boolean variable can hold only the values true or false.",
+              "claims": [
+                {
+                  "text": "A boolean variable can hold only the values true or false.",
+                  "refs": [
+                    "Q0019",
+                    "Q0020"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00029",
+                      "quote": "We set this to true or false."
+                    },
+                    {
+                      "source_id": "G00030",
+                      "quote": "These are the boolean values."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "A boolean variable can hold only the values true or false.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "We set this to true or false.",
+                      "These are the boolean values."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00029",
+                        "quote": "We set this to true or false.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 960,
+                        "end_char": 989,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00030",
+                        "quote": "These are the boolean values.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 30,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "A boolean variable can hold only the values true or false.",
+                "preview_text": "A boolean variable can hold only the values true or false.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "A boolean variable can hold only the values true or false.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "We set this to true or false.",
+                      "These are the boolean values."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00029",
+                        "quote": "We set this to true or false.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 960,
+                        "end_char": 989,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00030",
+                        "quote": "These are the boolean values.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 30,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "A boolean variable can hold only the values true or false.",
+                "preview_text": "A boolean variable can hold only the values true or false.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00029",
+          "G00030"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "A boolean variable can hold only the values true or false.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0007",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00030"
+      ],
+      "document_id": "DOC001",
+      "content": "Java reserved keywords (e.g., public, static, void, class, package) cannot be used as identifiers for variables, classes, or methods.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00030",
+              "quote": "Now note that all these words\n coded in orange are reserved keywords in java, just\n like public, static void, class, package, these are all\n reserved keywords.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 31,
+              "end_char": 190,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00030",
+              "quote": "So we cannot use these reserved keywords, the name are\n variables, classes, and methods.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 191,
+              "end_char": 279,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00030",
+              "quote": "Now note that all these words\n coded in orange are reserved keywords in java, just\n like public, static void, class, package, these are all\n reserved keywords.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 31,
+              "end_char": 190,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00030",
+              "quote": "So we cannot use these reserved keywords, the name are\n variables, classes, and methods.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 191,
+              "end_char": 279,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "Java reserved keywords (e.g., public, static, void, class, package) cannot be used as identifiers for variables, classes, or methods.",
+              "claims": [
+                {
+                  "text": "Java reserved keywords (e.g., public, static, void, class, package) cannot be used as identifiers for variables, classes, or methods.",
+                  "refs": [
+                    "Q0021",
+                    "Q0022"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00030",
+                      "quote": "Now note that all these words\n coded in orange are reserved keywords in java, just\n like public, static void, class, package, these are all\n reserved keywords."
+                    },
+                    {
+                      "source_id": "G00030",
+                      "quote": "So we cannot use these reserved keywords, the name are\n variables, classes, and methods."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Java reserved keywords (e.g., public, static, void, class, package) cannot be used as identifiers for variables, classes, or methods.",
+              "claims": [
+                {
+                  "text": "Java reserved keywords (e.g., public, static, void, class, package) cannot be used as identifiers for variables, classes, or methods.",
+                  "refs": [
+                    "Q0021",
+                    "Q0022"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00030",
+                      "quote": "Now note that all these words\n coded in orange are reserved keywords in java, just\n like public, static void, class, package, these are all\n reserved keywords."
+                    },
+                    {
+                      "source_id": "G00030",
+                      "quote": "So we cannot use these reserved keywords, the name are\n variables, classes, and methods."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Java reserved keywords (e.g., public, static, void, class, package) cannot be used as identifiers for variables, classes, or methods.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Now note that all these words\n coded in orange are reserved keywords in java, just\n like public, static void, class, package, these are all\n reserved keywords.",
+                      "So we cannot use these reserved keywords, the name are\n variables, classes, and methods."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00030",
+                        "quote": "Now note that all these words\n coded in orange are reserved keywords in java, just\n like public, static void, class, package, these are all\n reserved keywords.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 31,
+                        "end_char": 190,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00030",
+                        "quote": "So we cannot use these reserved keywords, the name are\n variables, classes, and methods.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 191,
+                        "end_char": 279,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Java reserved keywords (e.g., public, static, void, class, package) cannot be used as identifiers for variables, classes, or methods.",
+                "preview_text": "Java reserved keywords (e.g., public, static, void, class, package) cannot be used as identifiers for variables, classes, or methods.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "Java reserved keywords (e.g., public, static, void, class, package) cannot be used as identifiers for variables, classes, or methods.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Now note that all these words\n coded in orange are reserved keywords in java, just\n like public, static void, class, package, these are all\n reserved keywords.",
+                      "So we cannot use these reserved keywords, the name are\n variables, classes, and methods."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00030",
+                        "quote": "Now note that all these words\n coded in orange are reserved keywords in java, just\n like public, static void, class, package, these are all\n reserved keywords.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 31,
+                        "end_char": 190,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00030",
+                        "quote": "So we cannot use these reserved keywords, the name are\n variables, classes, and methods.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 191,
+                        "end_char": 279,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Java reserved keywords (e.g., public, static, void, class, package) cannot be used as identifiers for variables, classes, or methods.",
+                "preview_text": "Java reserved keywords (e.g., public, static, void, class, package) cannot be used as identifiers for variables, classes, or methods.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00030"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Java reserved keywords (e.g., public, static, void, class, package) cannot be used as identifiers for variables, classes, or methods.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0008",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00030"
+      ],
+      "document_id": "DOC001",
+      "content": "Java has eight primitive types (byte, short, int, long, float, double, char, boolean) used for simple values; all other types are reference types.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00030",
+              "quote": "Now in\n java we have 8 primitive types that you have seen before, all the other\n types are reference types.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 547,
+              "end_char": 654,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00030",
+              "quote": "In the last tutorial, you learned\n that we use primitive types to store simple values like numbers,\n boolean values, or single characters.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 280,
+              "end_char": 418,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00030",
+              "quote": "In contrast,\n we use reference types to store complex objects, like data objects,\n or mail messages, these are complex objects.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 419,
+              "end_char": 546,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00030",
+              "quote": "Now in\n java we have 8 primitive types that you have seen before, all the other\n types are reference types.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 547,
+              "end_char": 654,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00030",
+              "quote": "In the last tutorial, you learned\n that we use primitive types to store simple values like numbers,\n boolean values, or single characters.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 280,
+              "end_char": 418,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00030",
+              "quote": "In contrast,\n we use reference types to store complex objects, like data objects,\n or mail messages, these are complex objects.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 419,
+              "end_char": 546,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "Java has eight primitive types (byte, short, int, long, float, double, char, boolean) used for simple values; all other types are reference types.",
+              "claims": [
+                {
+                  "text": "Java has eight primitive types (byte, short, int, long, float, double, char, boolean) used for simple values; all other types are reference types.",
+                  "refs": [
+                    "Q0025",
+                    "Q0023",
+                    "Q0024"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00030",
+                      "quote": "Now in\n java we have 8 primitive types that you have seen before, all the other\n types are reference types."
+                    },
+                    {
+                      "source_id": "G00030",
+                      "quote": "In the last tutorial, you learned\n that we use primitive types to store simple values like numbers,\n boolean values, or single characters."
+                    },
+                    {
+                      "source_id": "G00030",
+                      "quote": "In contrast,\n we use reference types to store complex objects, like data objects,\n or mail messages, these are complex objects."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Java has eight primitive types (byte, short, int, long, float, double, char, boolean) used for simple values; all other types are reference types.",
+              "claims": [
+                {
+                  "text": "Java has eight primitive types (byte, short, int, long, float, double, char, boolean) used for simple values; all other types are reference types.",
+                  "refs": [
+                    "Q0025",
+                    "Q0023",
+                    "Q0024"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "prerequisite",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00030",
+                      "quote": "Now in\n java we have 8 primitive types that you have seen before, all the other\n types are reference types."
+                    },
+                    {
+                      "source_id": "G00030",
+                      "quote": "In the last tutorial, you learned\n that we use primitive types to store simple values like numbers,\n boolean values, or single characters."
+                    },
+                    {
+                      "source_id": "G00030",
+                      "quote": "In contrast,\n we use reference types to store complex objects, like data objects,\n or mail messages, these are complex objects."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Java has eight primitive types (byte, short, int, long, float, double, char, boolean) used for simple values; all other types are reference types.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Now in\n java we have 8 primitive types that you have seen before, all the other\n types are reference types.",
+                      "In the last tutorial, you learned\n that we use primitive types to store simple values like numbers,\n boolean values, or single characters.",
+                      "In contrast,\n we use reference types to store complex objects, like data objects,\n or mail messages, these are complex objects."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00030",
+                        "quote": "Now in\n java we have 8 primitive types that you have seen before, all the other\n types are reference types.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 547,
+                        "end_char": 654,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00030",
+                        "quote": "In the last tutorial, you learned\n that we use primitive types to store simple values like numbers,\n boolean values, or single characters.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 280,
+                        "end_char": 418,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00030",
+                        "quote": "In contrast,\n we use reference types to store complex objects, like data objects,\n or mail messages, these are complex objects.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 419,
+                        "end_char": 546,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Java has eight primitive types (byte, short, int, long, float, double, char, boolean) used for simple values; all other types are reference types.",
+                "preview_text": "Java has eight primitive types (byte, short, int, long, float, double, char, boolean) used for simple values; all other types are reference types.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "Java has eight primitive types (byte, short, int, long, float, double, char, boolean) used for simple values; all other types are reference types.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "prerequisite",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Now in\n java we have 8 primitive types that you have seen before, all the other\n types are reference types.",
+                      "In the last tutorial, you learned\n that we use primitive types to store simple values like numbers,\n boolean values, or single characters.",
+                      "In contrast,\n we use reference types to store complex objects, like data objects,\n or mail messages, these are complex objects."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00030",
+                        "quote": "Now in\n java we have 8 primitive types that you have seen before, all the other\n types are reference types.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 547,
+                        "end_char": 654,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00030",
+                        "quote": "In the last tutorial, you learned\n that we use primitive types to store simple values like numbers,\n boolean values, or single characters.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 280,
+                        "end_char": 418,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00030",
+                        "quote": "In contrast,\n we use reference types to store complex objects, like data objects,\n or mail messages, these are complex objects.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 419,
+                        "end_char": 546,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Java has eight primitive types (byte, short, int, long, float, double, char, boolean) used for simple values; all other types are reference types.",
+                "preview_text": "Java has eight primitive types (byte, short, int, long, float, double, char, boolean) used for simple values; all other types are reference types.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00030"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Java has eight primitive types (byte, short, int, long, float, double, char, boolean) used for simple values; all other types are reference types.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0009",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00030"
+      ],
+      "document_id": "DOC001",
+      "content": "Declaring and initializing a primitive variable (e.g., byte h = 30;) differs syntactically from creating an instance of a reference type.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00030",
+              "quote": "So, here in this program, first I'm going to declare a primitive type,\n let's say byte h equals 30.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 684,
+              "end_char": 783,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00030",
+              "quote": "Now, declaring and initializing a reference type is slightly\n different from a primitive type.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 785,
+              "end_char": 879,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00030",
+              "quote": "So, here in this program, first I'm going to declare a primitive type,\n let's say byte h equals 30.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 684,
+              "end_char": 783,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00030",
+              "quote": "Now, declaring and initializing a reference type is slightly\n different from a primitive type.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 785,
+              "end_char": 879,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "Declaring and initializing a primitive variable (e.g., byte h = 30;) differs syntactically from creating an instance of a reference type.",
+              "claims": [
+                {
+                  "text": "Declaring and initializing a primitive variable (e.g., byte h = 30;) differs syntactically from creating an instance of a reference type.",
+                  "refs": [
+                    "Q0027",
+                    "Q0028"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "continuation",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00030",
+                      "quote": "So, here in this program, first I'm going to declare a primitive type,\n let's say byte h equals 30."
+                    },
+                    {
+                      "source_id": "G00030",
+                      "quote": "Now, declaring and initializing a reference type is slightly\n different from a primitive type."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Declaring and initializing a primitive variable (e.g., byte h = 30;) differs syntactically from creating an instance of a reference type.",
+              "claims": [
+                {
+                  "text": "Declaring and initializing a primitive variable (e.g., byte h = 30;) differs syntactically from creating an instance of a reference type.",
+                  "refs": [
+                    "Q0027",
+                    "Q0028"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "continuation",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00030",
+                      "quote": "So, here in this program, first I'm going to declare a primitive type,\n let's say byte h equals 30."
+                    },
+                    {
+                      "source_id": "G00030",
+                      "quote": "Now, declaring and initializing a reference type is slightly\n different from a primitive type."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Declaring and initializing a primitive variable (e.g., byte h = 30;) differs syntactically from creating an instance of a reference type.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "continuation",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So, here in this program, first I'm going to declare a primitive type,\n let's say byte h equals 30.",
+                      "Now, declaring and initializing a reference type is slightly\n different from a primitive type."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00030",
+                        "quote": "So, here in this program, first I'm going to declare a primitive type,\n let's say byte h equals 30.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 684,
+                        "end_char": 783,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00030",
+                        "quote": "Now, declaring and initializing a reference type is slightly\n different from a primitive type.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 785,
+                        "end_char": 879,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Declaring and initializing a primitive variable (e.g., byte h = 30;) differs syntactically from creating an instance of a reference type.",
+                "preview_text": "Declaring and initializing a primitive variable (e.g., byte h = 30;) differs syntactically from creating an instance of a reference type.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "Declaring and initializing a primitive variable (e.g., byte h = 30;) differs syntactically from creating an instance of a reference type.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "continuation",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So, here in this program, first I'm going to declare a primitive type,\n let's say byte h equals 30.",
+                      "Now, declaring and initializing a reference type is slightly\n different from a primitive type."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00030",
+                        "quote": "So, here in this program, first I'm going to declare a primitive type,\n let's say byte h equals 30.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 684,
+                        "end_char": 783,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00030",
+                        "quote": "Now, declaring and initializing a reference type is slightly\n different from a primitive type.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 785,
+                        "end_char": 879,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Declaring and initializing a primitive variable (e.g., byte h = 30;) differs syntactically from creating an instance of a reference type.",
+                "preview_text": "Declaring and initializing a primitive variable (e.g., byte h = 30;) differs syntactically from creating an instance of a reference type.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00030"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Declaring and initializing a primitive variable (e.g., byte h = 30;) differs syntactically from creating an instance of a reference type.",
+      "fact_type": null
+    }
+  ],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 9,
+  "source_units_processed": 3,
+  "extraction_metadata": null
+}

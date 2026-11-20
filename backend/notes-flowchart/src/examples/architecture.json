@@ -1,0 +1,101 @@
+
+{
+  "type": "architecture",
+  "title": "Modern Web Application Architecture",
+  "direction": "RIGHT",
+  "components": [
+    {
+      "id": "frontend",
+      "kind": "client",
+      "label": "Web Frontend",
+      "description": "React application"
+    },
+    {
+      "id": "gateway",
+      "kind": "network",
+      "label": "API Gateway",
+      "description": "Routes requests"
+    },
+    {
+      "id": "auth",
+      "kind": "service",
+      "label": "Auth Service",
+      "description": "User authentication"
+    },
+    {
+      "id": "backend",
+      "kind": "service",
+      "label": "Backend API",
+      "description": "Business logic"
+    },
+    {
+      "id": "database",
+      "kind": "database",
+      "label": "PostgreSQL",
+      "description": "Persistent data"
+    },
+    {
+      "id": "cache",
+      "kind": "memory",
+      "label": "Redis Cache",
+      "description": "Fast temporary data"
+    },
+    {
+      "id": "storage",
+      "kind": "storage",
+      "label": "Object Storage",
+      "description": "File uploads"
+    },
+    {
+      "id": "monitoring",
+      "kind": "cloud",
+      "label": "Monitoring",
+      "description": "Logs and metrics"
+    }
+  ],
+  "connections": [
+    {
+      "from": "frontend",
+      "to": "gateway",
+      "label": "HTTPS"
+    },
+    {
+      "from": "gateway",
+      "to": "auth",
+      "label": "Authenticate"
+    },
+    {
+      "from": "gateway",
+      "to": "backend",
+      "label": "API requests"
+    },
+    {
+      "from": "auth",
+      "to": "database",
+      "label": "User lookup"
+    },
+    {
+      "from": "backend",
+      "to": "database",
+      "label": "SQL",
+      "bidirectional": true
+    },
+    {
+      "from": "backend",
+      "to": "cache",
+      "label": "Cache",
+      "bidirectional": true
+    },
+    {
+      "from": "backend",
+      "to": "storage",
+      "label": "Files",
+      "bidirectional": true
+    },
+    {
+      "from": "backend",
+      "to": "monitoring",
+      "label": "Telemetry"
+    }
+  ]
+}

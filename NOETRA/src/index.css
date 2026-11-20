@@ -1,0 +1,286 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core palette */
+    --background: 37 22% 95%; /* #F7F4EF warm ivory */
+    --foreground: 37 4% 14%; /* #252422 primary text */
+
+    --card: 0 0% 100%; /* #FFFFFF card surfaces */
+    --card-foreground: 37 4% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 37 4% 14%;
+
+    --primary: 37 4% 14%; /* primary text as primary */
+    --primary-foreground: 37 22% 95%;
+
+    --secondary: 35 22% 91%; /* #EEE9E2 muted background */
+    --secondary-foreground: 37 4% 14%;
+
+    --muted: 35 22% 91%; /* #EEE9E2 */
+    --muted-foreground: 33 5% 48%; /* #817C75 secondary text */
+
+    --accent: 22 81% 46%; /* #D65A16 burnt orange */
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 21 84% 39%; /* #B94A10 */
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 16% 84%; /* #DED8D0 */
+    --input: 35 16% 84%;
+    --ring: 22 81% 46%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar: 0 0% 14%; /* #252525 charcoal */
+    --sidebar-foreground: 37 22% 95%;
+    --sidebar-accent: 0 0% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+
+    /* Fonts */
+    --font-dm-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-instrument-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+  }
+
+  .dark {
+    --background: 0 0% 14%;
+    --foreground: 37 22% 95%;
+    --card: 0 0% 16%;
+    --card-foreground: 37 22% 95%;
+    --popover: 0 0% 16%;
+    --popover-foreground: 37 22% 95%;
+    --primary: 37 22% 95%;
+    --primary-foreground: 0 0% 14%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 37 22% 95%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 33 5% 60%;
+    --accent: 22 81% 50%;
+    --accent-foreground: 0 0% 100%;
+    --border: 0 0% 24%;
+    --input: 0 0% 24%;
+    --ring: 22 81% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background-color: hsl(var(--accent) / 0.2);
+    color: hsl(var(--foreground));
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+    background-clip: padding-box;
+  }
+}
+
+@layer components {
+  /*
+   * Notes: syntax-highlighting tokens.
+   *
+   * highlight.js emits `hljs-*` classes (from our curated core build and from
+   * rehype-highlight in Markdown blocks). Colours are defined here, on the
+   * NOETRA palette, instead of importing a third-party theme so the code
+   * surfaces stay consistent with the rest of the product.
+   */
+  .note-code .hljs-comment,
+  .note-code .hljs-quote {
+    color: #968e84;
+    font-style: italic;
+  }
+  .note-code .hljs-keyword,
+  .note-code .hljs-selector-tag,
+  .note-code .hljs-literal,
+  .note-code .hljs-name,
+  .note-code .hljs-section,
+  .note-code .hljs-doctag {
+    color: #ee8a44;
+  }
+  .note-code .hljs-string,
+  .note-code .hljs-regexp,
+  .note-code .hljs-addition,
+  .note-code .hljs-attribute,
+  .note-code .hljs-meta .hljs-string {
+    color: #d9c07a;
+  }
+  .note-code .hljs-number,
+  .note-code .hljs-symbol,
+  .note-code .hljs-bullet,
+  .note-code .hljs-variable,
+  .note-code .hljs-template-variable {
+    color: #e2a869;
+  }
+  .note-code .hljs-title,
+  .note-code .hljs-title.function_,
+  .note-code .hljs-built_in,
+  .note-code .hljs-type,
+  .note-code .hljs-class .hljs-title,
+  .note-code .hljs-selector-class,
+  .note-code .hljs-selector-id {
+    color: #eddcc4;
+  }
+  .note-code .hljs-attr,
+  .note-code .hljs-property,
+  .note-code .hljs-params,
+  .note-code .hljs-selector-attr,
+  .note-code .hljs-selector-pseudo {
+    color: #d3c5b4;
+  }
+  .note-code .hljs-meta,
+  .note-code .hljs-punctuation,
+  .note-code .hljs-operator {
+    color: #a8a29a;
+  }
+  .note-code .hljs-deletion {
+    color: #e08a80;
+  }
+  .note-code .hljs-emphasis {
+    font-style: italic;
+  }
+  .note-code .hljs-strong {
+    font-weight: 600;
+  }
+
+  /* Wide equations scroll instead of forcing the page to overflow. */
+  .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.15rem 0;
+  }
+
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/60 shadow-glass;
+  }
+
+  .glass-dark {
+    @apply bg-sidebar/80 backdrop-blur-xl border border-white/10;
+  }
+
+  .premium-card {
+    @apply bg-card text-card-foreground rounded-xl border border-border shadow-soft;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+/*
+ * Print styling for the Notes Studio.
+ *
+ * Printing should produce the notes themselves — not the surrounding
+ * application chrome — so the toolbar, outline, context panel, and any
+ * interactive-only affordances are removed and the document runs full width.
+ */
+@media print {
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  .print-region {
+    display: block !important;
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .print-region a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .print-region section {
+    break-inside: avoid;
+  }
+}
+
+@layer utilities {
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    );
+    animation: shimmer 2s infinite;
+  }
+}
+.handwritten-notes {
+  padding: clamp(1.25rem, 4vw, 3rem);
+  border: 1px solid #e6d6bd;
+  border-radius: 1rem;
+  background: #fffaf0;
+  color: #253853;
+  font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  font-size: 1.125rem;
+  line-height: 1.85;
+}
+
+.handwritten-notes :is(h1, h2, h3, h4) {
+  font-family: inherit;
+  color: #873d24;
+}
+
+.handwritten-notes :is(p, li, blockquote) {
+  color: inherit;
+  font-size: 1em;
+  line-height: inherit;
+}

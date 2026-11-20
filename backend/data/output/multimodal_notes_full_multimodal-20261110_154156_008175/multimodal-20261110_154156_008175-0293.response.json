@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-d4d2cc60-9dfc-43b1-bb9f-8ae742d42bf1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"while loop\",\n        \"refs\": [\"Q0031\"],\n        \"claims\": [\n          {\n            \"text\": \"With while loops, we check the condition first.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0031\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"If the condition is false the first time, this loop will never get executed.\",\n        \"refs\": [\"Q0032\"],\n        \"claims\": [\n          {\n            \"text\": \"If the condition is false the first time, this loop will never get executed.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0032\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"do-while loop\",\n        \"refs\": [\"Q0033\"],\n        \"claims\": [\n          {\n            \"text\": \"In contrast with do while loops, we check the condition last.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0033\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"Do‑while loops always get executed at least once.\",\n        \"refs\": [\"Q0034\"],\n        \"claims\": [\n          {\n            \"text\": \"Do‑while loops always get executed at least once.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0034\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"String equality comparison\",\n        \"refs\": [\"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"Instead we need to use the equals method of string objects.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"The equals method compares the value of two string objects rather than their addresses.\",\n        \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\"],\n        \"claims\": [\n          {\n            \"text\": \"Because these operators will compare the address of our string objects, not their value.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0001\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"So if you have two strings, quit and quit, but stored in different memory locations, they have different addresses.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0002\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"So we cannot use the inequality operator to compare their value.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"identified_mistake\",\n            \"refs\": [\"Q0003\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"Reference type\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"Input is a string, which is a reference type, and we cannot use comparison operators between reference types.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"Reference types store memory addresses rather than the actual data values.\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"Input is a string, which is a reference type, and we cannot use comparison operators between reference types.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need definitions extraction. Look for definition teaching. Probably definitions of while loop, do-while loop, string comparison etc. Identify primary excerpts that define terms.\n\nExtract items with term and definition_text.\n\nLet's pick term \"while loop\": defined in Q0020? \"while loops are useful...\" not definition. Q0031: \"With while loops, we check the condition first.\" That's definition. Also Q0032: condition false first time loop never executed. So definition.\n\nTerm \"do-while loop\": Q0033, Q0034 define.\n\nTerm \"string equality\": Q0004 \"instead we need to use the equals method of string objects.\" definition of equals method.\n\nTerm \"reference type\": Q0000 mentions string is reference type, cannot use comparison operators. Might be definition.\n\nCreate items.\n\nProvide claims with text from excerpt, basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role prerequisite? maybe explanation. Use null for related_refs.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326691,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_ca5edfaab2",
+  "usage": {
+    "completion_tokens": 1337,
+    "prompt_tokens": 3772,
+    "total_tokens": 5109,
+    "completion_time": 2.814898324,
+    "completion_tokens_details": {
+      "reasoning_tokens": 198
+    },
+    "prompt_time": 0.292638385,
+    "prompt_tokens_details": null,
+    "queue_time": 0.388576741,
+    "total_time": 3.107536709
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7338whfeq58sdsvsa8y7c3f",
+    "debug": null,
+    "seed": 136964751,
+    "usage": null
+  }
+}

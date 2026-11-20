@@ -1,0 +1,174 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0062",
+        "CON_0014",
+        "CON_0015",
+        "FCT_0064",
+        "FCT_0065"
+      ],
+      "reason": "Unsupported visual label or value"
+    },
+    {
+      "note_ids": [
+        "CON_0013",
+        "FCT_0069",
+        "CON_0017",
+        "FCT_0068"
+      ],
+      "reason": "Invalid or context-owned visual span"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Determinants of Net Exports",
+      "source_segment_ids": [
+        "FCT_0062",
+        "CON_0014",
+        "CON_0015",
+        "FCT_0064",
+        "FCT_0065"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0062",
+            "CON_0014",
+            "CON_0015",
+            "FCT_0064",
+            "FCT_0065"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0062",
+              "exact_quote": "Net exports decrease when domestic income rises because imports increase."
+            },
+            {
+              "note_id": "CON_0014",
+              "exact_quote": "Net exports increase when the income of the rest of the world rises because foreign demand for domestically produced goods goes up."
+            },
+            {
+              "note_id": "CON_0015",
+              "exact_quote": "When the real exchange rate rises, domestic goods become more expensive relative to foreign goods, causing exports to decline and imports to increase."
+            },
+            {
+              "note_id": "FCT_0064",
+              "exact_quote": "Net exports rise when foreign income rises."
+            },
+            {
+              "note_id": "FCT_0065",
+              "exact_quote": "A higher real exchange rate reduces net exports."
+            }
+          ],
+          "payload": {
+            "type": "concept_tree",
+            "title": "Determinants of Net Exports",
+            "nodes": [
+              {
+                "id": "n0",
+                "label": "Net Exports"
+              },
+              {
+                "id": "n1",
+                "label": "Domestic Income",
+                "description": "Increase → imports increase → net exports decrease",
+                "parent": "n0"
+              },
+              {
+                "id": "n2",
+                "label": "Foreign Income",
+                "description": "Increase → foreign demand ↑ → net exports increase",
+                "parent": "n0"
+              },
+              {
+                "id": "n3",
+                "label": "Real Exchange Rate",
+                "description": "Increase → domestic goods more expensive → exports ↓, imports ↑ → net exports ↓",
+                "parent": "n0"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Exchange Rate as Endogenous Variable",
+      "source_segment_ids": [
+        "CON_0013",
+        "FCT_0069",
+        "CON_0017",
+        "FCT_0068"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0013",
+            "FCT_0069",
+            "CON_0017",
+            "FCT_0068"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0013",
+              "exact_quote": "In the short run the IS‑LM framework can be applied with nominal prices fixed, extending it to an open economy by adding the exchange rate as a variable."
+            },
+            {
+              "note_id": "FCT_0069",
+              "exact_quote": "Before adding the exchange rate, the model has two endogenous variables: output and the interest rate."
+            },
+            {
+              "note_id": "CON_0017",
+              "exact_quote": "The exchange rate is treated as an endogenous variable in the model."
+            },
+            {
+              "note_id": "FCT_0068",
+              "exact_quote": "If consumer confidence goes up, then aggregate demand goes up."
+            }
+          ],
+          "payload": {
+            "type": "concept_tree",
+            "title": "Exchange Rate as Endogenous Variable",
+            "nodes": [
+              {
+                "id": "e0",
+                "label": "Model Variables"
+              },
+              {
+                "id": "e1",
+                "label": "Output",
+                "parent": "e0"
+              },
+              {
+                "id": "e2",
+                "label": "Interest Rate",
+                "parent": "e0"
+              },
+              {
+                "id": "e3",
+                "label": "Exchange Rate",
+                "description": "Added as endogenous variable",
+                "parent": "e0"
+              },
+              {
+                "id": "e4",
+                "label": "Consumer Confidence",
+                "description": "↑ → Aggregate Demand ↑",
+                "parent": "e3"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

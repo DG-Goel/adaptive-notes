@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-2e0c1f05-b053-4968-9666-842a5edbc6e4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"array\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"definition_text\": {\n        \"text\": \"An array is a reference type in Java used to store a list of items such as numbers, people, or messages.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"index\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"The index of an array element starts at zero; the first element is accessed with index 0.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"ArrayIndexOutOfBoundsException\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"An exception thrown when an invalid index (e.g., 10 for an array of length 5) is used to access an array.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"Arrays.toString\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"A static method in java.util.Arrays that returns a string representation of the actual items in an array.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"To declare an array of integers, place square brackets after the type name (e.g., int[]).\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Arrays are reference types; they must be instantiated with the new operator.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"When creating an array, the size (length) is specified in square brackets after the new operator.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Variable names should reflect that they hold a list of items (e.g., numbers instead of number).\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Array elements are accessed using the variable name followed by the index in square brackets (e.g., numbers[0]).\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Printing an array directly yields a string based on the object's memory address, not its contents.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The java.util.Arrays class provides overloaded toString methods for different primitive array types.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract facts, definitions, etc. From excerpts about Java arrays. Identify facts: arrays store list of items, reference types, need new operator, specify size, index starts at 0, out-of-bounds causes exception, printing array gives memory address string, use Arrays.toString method. Also method overloaded. Create facts entries. No definitions? Could define array as reference type. Use definitions schema. Provide term and definition_text. Provide refs covering. Let's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036159,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 854,
+    "prompt_tokens": 3030,
+    "total_tokens": 3884,
+    "completion_time": 1.780112766,
+    "completion_tokens_details": {
+      "reasoning_tokens": 97
+    },
+    "prompt_time": 0.149054407,
+    "prompt_tokens_details": null,
+    "queue_time": 0.330883994,
+    "total_time": 1.929167173
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6te6k24ebz8nkm8bbrmt5kx",
+    "debug": null,
+    "seed": 899589313,
+    "usage": null
+  }
+}

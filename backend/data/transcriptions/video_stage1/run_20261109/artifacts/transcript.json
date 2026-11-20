@@ -1,0 +1,54 @@
+{
+  "status": "failed_partial",
+  "input": {
+    "path": "C:\\Projects\\adaptive-notes\\backend\\video.mp4",
+    "filename": "video.mp4",
+    "size_bytes": 195583400,
+    "mtime_ns": 1794240809708766000
+  },
+  "model": "small.en",
+  "device": "cuda",
+  "compute_type": "int8_float16",
+  "configuration": {
+    "model": "small.en",
+    "device": "cuda",
+    "compute_type": "int8_float16",
+    "beam_size": 3,
+    "cpu_threads": 4,
+    "min_silence_duration_ms": 2000,
+    "speech_pad_ms": 400,
+    "allow_download": false
+  },
+  "vad": {
+    "min_silence_duration_ms": 2000,
+    "speech_pad_ms": 400
+  },
+  "language": "en",
+  "task": "transcribe",
+  "word_timestamps": true,
+  "condition_on_previous_text": false,
+  "batched": false,
+  "packages": {
+    "faster-whisper": "1.2.1",
+    "ctranslate2": "4.8.5",
+    "av": "19.0.2",
+    "onnxruntime": "1.31.1"
+  },
+  "model_path": "small.en",
+  "limitations": [
+    "Word alignment is approximate, not frame accurate.",
+    "ASR may misrecognize speech; no accuracy percentage established.",
+    "PyAV decodes audio into memory; memory grows with recording duration."
+  ],
+  "warnings": [],
+  "segments": [],
+  "error": "TypeError: open() got an unexpected keyword argument 'metadata_errors'",
+  "processing_duration": 1.7774647999976878,
+  "real_time_factor": null,
+  "metrics": {
+    "segment_count": 0,
+    "word_count": 0,
+    "aligned_word_count": 0,
+    "word_timestamp_coverage": null
+  }
+}

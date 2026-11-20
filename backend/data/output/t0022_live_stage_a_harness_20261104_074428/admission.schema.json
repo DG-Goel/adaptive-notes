@@ -1,0 +1,200 @@
+{
+  "$defs": {
+    "Window": {
+      "additionalProperties": false,
+      "properties": {
+        "scope": {
+          "enum": [
+            "organization",
+            "project"
+          ],
+          "title": "Scope",
+          "type": "string"
+        },
+        "metric": {
+          "enum": [
+            "RPM",
+            "RPD",
+            "TPM",
+            "TPD",
+            "ITPM",
+            "OTPM"
+          ],
+          "title": "Metric",
+          "type": "string"
+        },
+        "limit": {
+          "exclusiveMinimum": 0,
+          "title": "Limit",
+          "type": "integer"
+        },
+        "used": {
+          "minimum": 0,
+          "title": "Used",
+          "type": "integer"
+        },
+        "outstanding": {
+          "minimum": 0,
+          "title": "Outstanding",
+          "type": "integer"
+        },
+        "evidence": {
+          "minLength": 1,
+          "title": "Evidence",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope",
+        "metric",
+        "limit",
+        "used",
+        "outstanding",
+        "evidence"
+      ],
+      "title": "Window",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "const": "PASS",
+      "title": "Decision",
+      "type": "string"
+    },
+    "stage": {
+      "const": "A",
+      "title": "Stage",
+      "type": "string"
+    },
+    "provider": {
+      "const": "Groq",
+      "title": "Provider",
+      "type": "string"
+    },
+    "model": {
+      "const": "openai/gpt-oss-120b",
+      "title": "Model",
+      "type": "string"
+    },
+    "source_id": {
+      "const": "T0022",
+      "title": "Source Id",
+      "type": "string"
+    },
+    "run_id": {
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}$",
+      "title": "Run Id",
+      "type": "string"
+    },
+    "organization": {
+      "minLength": 1,
+      "title": "Organization",
+      "type": "string"
+    },
+    "project": {
+      "minLength": 1,
+      "title": "Project",
+      "type": "string"
+    },
+    "operator": {
+      "minLength": 1,
+      "title": "Operator",
+      "type": "string"
+    },
+    "authorization": {
+      "minLength": 1,
+      "title": "Authorization",
+      "type": "string"
+    },
+    "credential_id": {
+      "minLength": 1,
+      "title": "Credential Id",
+      "type": "string"
+    },
+    "credential_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Credential Sha256",
+      "type": "string"
+    },
+    "request_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Request Sha256",
+      "type": "string"
+    },
+    "data_as_of": {
+      "title": "Data As Of",
+      "type": "number"
+    },
+    "verified_at": {
+      "title": "Verified At",
+      "type": "number"
+    },
+    "control_until": {
+      "title": "Control Until",
+      "type": "number"
+    },
+    "traffic": {
+      "enum": [
+        "controlled",
+        "accounted"
+      ],
+      "title": "Traffic",
+      "type": "string"
+    },
+    "coordination_evidence": {
+      "minLength": 1,
+      "title": "Coordination Evidence",
+      "type": "string"
+    },
+    "authoritative_limits": {
+      "const": true,
+      "title": "Authoritative Limits",
+      "type": "boolean"
+    },
+    "complete_limit_inventory": {
+      "const": true,
+      "title": "Complete Limit Inventory",
+      "type": "boolean"
+    },
+    "complete_usage_inventory": {
+      "const": true,
+      "title": "Complete Usage Inventory",
+      "type": "boolean"
+    },
+    "windows": {
+      "items": {
+        "$ref": "#/$defs/Window"
+      },
+      "title": "Windows",
+      "type": "array"
+    }
+  },
+  "required": [
+    "decision",
+    "stage",
+    "provider",
+    "model",
+    "source_id",
+    "run_id",
+    "organization",
+    "project",
+    "operator",
+    "authorization",
+    "credential_id",
+    "credential_sha256",
+    "request_sha256",
+    "data_as_of",
+    "verified_at",
+    "control_until",
+    "traffic",
+    "coordination_evidence",
+    "authoritative_limits",
+    "complete_limit_inventory",
+    "complete_usage_inventory",
+    "windows"
+  ],
+  "title": "Admission",
+  "type": "object"
+}

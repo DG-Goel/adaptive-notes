@@ -1,0 +1,72 @@
+{
+  "old_status": "Partial text-only run: 48/50 chunks",
+  "old_total_items": 458,
+  "old_fact_items": 219,
+  "new_status": "Partial multimodal facts pass only, quota HOLD",
+  "new_fact_items": 364,
+  "examples": [
+    {
+      "term": "development kit",
+      "old": {
+        "knowledge_id": "DEF_0001",
+        "text": "JDK stands for Java Development Kit, a software development environment for building Java applications that includes a compiler, a Java Runtime Environment, and other tools.",
+        "source_ids": [
+          "T0001"
+        ]
+      },
+      "new_partial_facts": {
+        "knowledge_id": "FCT_0005",
+        "text": "JDK stands for Java Development Kit and is a software development environment for building Java applications.",
+        "source_ids": [
+          "G00003"
+        ]
+      }
+    },
+    {
+      "term": "virtual machine",
+      "old": {
+        "knowledge_id": "PRC_0008",
+        "text": "Invokes the Java Virtual Machine to run the compiled bytecode.",
+        "source_ids": [
+          "T0007"
+        ]
+      },
+      "new_partial_facts": {
+        "knowledge_id": "FCT_0070",
+        "text": "The Java Runtime Environment includes the Java Virtual Machine (JVM), which translates Java bytecode to native code for the underlying operating system.",
+        "source_ids": [
+          "G00017"
+        ]
+      }
+    },
+    {
+      "term": "backslash",
+      "old": {
+        "knowledge_id": "EXP_0087",
+        "text": "In Java, certain characters like double quotes, backslashes, newlines, and tabs cannot be placed directly inside string literals because the compiler interprets them specially. To include them, you must prefix the character with a backslash (\\) which tells the compiler to treat the following character as a literal part of the string.",
+        "source_ids": [
+          "T0018"
+        ]
+      },
+      "new_partial_facts": null
+    },
+    {
+      "term": "mortgage",
+      "old": {
+        "knowledge_id": "FCT_0203",
+        "text": "Subsequent sections cover the Java type system, including primitives, strings, booleans, and arrays, and culminate in building a mortgage calculator.",
+        "source_ids": [
+          "T0009"
+        ]
+      },
+      "new_partial_facts": {
+        "knowledge_id": "FCT_0275",
+        "text": "Students are asked to use what they have learned in this section to build a mortgage calculator.",
+        "source_ids": [
+          "G00077"
+        ]
+      }
+    }
+  ],
+  "limitation": "Different source coverage and extraction granularity. Counts do not measure improvement; no independent semantic accuracy, completeness or readability score."
+}

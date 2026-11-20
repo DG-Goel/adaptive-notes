@@ -1,0 +1,182 @@
+{
+  "overall_outcome": "FAIL",
+  "release": "NO-GO",
+  "requested_provider": "Groq",
+  "requested_model": "openai/gpt-oss-120b",
+  "returned_model": "openai/gpt-oss-120b",
+  "provider_requests": 1,
+  "retries": 0,
+  "credential_rotation": false,
+  "fallback": false,
+  "recovery_jobs": 0,
+  "generation": {
+    "http_status": 200,
+    "json_valid": true,
+    "finish_reason": "length",
+    "truncation_indicated": true,
+    "usage": {
+      "queue_time": 0.211421062,
+      "prompt_tokens": 2035,
+      "prompt_time": 0.110241212,
+      "completion_tokens": 3944,
+      "completion_time": 8.252770868,
+      "total_tokens": 5979,
+      "total_time": 8.36301208,
+      "completion_tokens_details": {
+        "reasoning_tokens": 2648
+      }
+    },
+    "computed_output_allowance": 3944,
+    "reasoning_tokens": 2648,
+    "note": "Valid JSON does not establish generation completeness; provider length guard rejected before parser."
+  },
+  "returned_items": 14,
+  "pipeline_accepted_items": 0,
+  "raw_contract": {
+    "pipeline_stage": "Not reached because truncation guard rejected first",
+    "offline_unmodified_response_pass": true,
+    "items_valid": 14,
+    "all_eight_category_arrays_present": true,
+    "common_and_required_subtype_fields_present": true
+  },
+  "provenance": {
+    "all_item_references_T0022": true,
+    "all_evidence_source_ids_T0022": true,
+    "scheduling_ids_used_as_provenance": false
+  },
+  "mechanical_evidence": {
+    "offline_pass_count": 13,
+    "offline_fail_count": 1,
+    "all_populated_paths_declared": true,
+    "invalid_quotation_item": "/procedures/0",
+    "invalid_quotation": "The model joined noncontiguous source passages with ... inside one purported exact quotation. No such substring exists in the original source.",
+    "step_paths": "/steps/0 supplied correctly",
+    "semantic_entailment_verified": false
+  },
+  "manual_semantics": {
+    "item_counts": {
+      "Partially supported": 6,
+      "Supported": 8,
+      "Unsupported": 0,
+      "Contradicted": 0,
+      "Inconclusive": 0
+    },
+    "field_counts": {
+      "Supported": 28,
+      "Partially supported": 8,
+      "Unsupported": 1
+    },
+    "detail_file": "manual_item_review.json",
+    "classification_basis": "All substantive fields reviewed against complete source; partially supported item may contain an unsupported field. No wholly unsupported items does not mean no unsupported additions.",
+    "critical_unsupported_claim": "/concepts/3/content: decrement decreases by one and supports prefix/postfix; source mentions decrement without explaining that behavior."
+  },
+  "source_coverage": [
+    {
+      "fact": "Increment demonstration 1 to 2",
+      "status": "Present in raw /examples/1; zero pipeline acceptance",
+      "assessment": "Both explicitly stated values and increment action retained as prose."
+    },
+    {
+      "fact": "Final-variable pi assignment compilation error",
+      "status": "Partially represented",
+      "assessment": "/concepts/1 states a general assignment prohibition with an unsupported initialization qualification. The local pi compilation-error occurrence remains only in evidence, not a clear source-scoped extracted error account."
+    },
+    {
+      "fact": "Separate integer-declaration/double-expression error and declaration repair",
+      "status": "Present in raw /procedures/0; invalid evidence",
+      "assessment": "Name/step/content convey the type mismatch and declaration change to double; supporting quote is artificially joined using ... and fails exact matching. This does not repair final pi assignment."
+    },
+    {
+      "fact": "Float or double alternatives",
+      "status": "Present but scope weakened in /facts/1",
+      "assessment": "Both alternatives are explicit. Here/these numbers/division-example qualification is omitted, producing an overbroad standalone conversion recipe."
+    },
+    {
+      "fact": "Specific pi to PI naming correction",
+      "status": "Missing from claim fields",
+      "assessment": "Uppercase convention is stated in /concepts/0, and pi-to-PI appears in its quotation, but no explicit correction claim is extracted. PI is no longer falsely classified as an alias."
+    }
+  ],
+  "consolidation": {
+    "improvements": [
+      "Five one-name arithmetic operator concepts consolidated into one arithmetic-operator definition.",
+      "Required content and canonical IDs restored.",
+      "No false PI alias or circular constant definition in this response."
+    ],
+    "remaining_problems": [
+      "Constant/final-variable proposition duplicated between /concepts/0 and /relationships/0.",
+      "Universal equivalence and lifecycle qualification exceed the local pi evidence.",
+      "Unsupported decrement explanation added despite mention-only constraint.",
+      "Increment concept quotation omits prefix/postfix portion, although full source states it for increment."
+    ],
+    "reconstructed_code_or_formulas": "No invented casting syntax, Java statements or formulas found in final JSON. The int X example is source-grounded prose.",
+    "fabricated_source_text": "One invalid stitched quotation containing ...; other excerpt strings match T0022 exactly."
+  },
+  "comparison": [
+    {
+      "test": "Earlier strict JSON failure",
+      "directory": "groq_strict_smoke_20261101_224317_936110",
+      "http_status": [
+        400
+      ],
+      "returned_items": 0,
+      "pipeline_accepted_items": 0,
+      "finish_reason": null,
+      "usage": null
+    },
+    {
+      "test": "Compacted prompt",
+      "directory": "groq_compact_smoke_20261101_173556_937901",
+      "http_status": [
+        200
+      ],
+      "returned_items": 15,
+      "pipeline_accepted_items": 0,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 1572,
+        "completion_tokens": 3611,
+        "total_tokens": 5183
+      }
+    },
+    {
+      "test": "Previous repaired prompt",
+      "directory": "groq_repaired_t0022_smoke_20261101_175834_117672",
+      "http_status": [
+        200
+      ],
+      "returned_items": 21,
+      "pipeline_accepted_items": 0,
+      "finish_reason": "length",
+      "usage": {
+        "prompt_tokens": 1919,
+        "completion_tokens": 4000,
+        "total_tokens": 5919
+      }
+    },
+    {
+      "test": "Current strict raw-contract prompt",
+      "directory": "groq_strict_t0022_20261103_8daaab0610db4f2f",
+      "http_status": [
+        200
+      ],
+      "returned_items": 14,
+      "pipeline_accepted_items": 0,
+      "finish_reason": "length",
+      "usage": {
+        "queue_time": 0.211421062,
+        "prompt_tokens": 2035,
+        "prompt_time": 0.110241212,
+        "completion_tokens": 3944,
+        "completion_time": 8.252770868,
+        "total_tokens": 5979,
+        "total_time": 8.36301208,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2648
+        }
+      }
+    }
+  ],
+  "comparison_conclusion": "Structural provenance/common-field compliance improved over previous test, but output still truncates, one quotation is invalid, and unsupported additions persist. Overall quality remains failed.",
+  "next_step": "Wait for review. Any further work should be separately authorized offline analysis of recurring output exhaustion, mention-only leakage, stitched quotations and incomplete scoped coverage; no automatic retry or allowance/threshold change."
+}

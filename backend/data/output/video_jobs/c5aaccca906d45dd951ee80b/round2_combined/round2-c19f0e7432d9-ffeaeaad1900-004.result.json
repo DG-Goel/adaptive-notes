@@ -1,0 +1,217 @@
+{
+  "visuals": [
+    {
+      "id": "visual-e5ebc940fb79353bbae5",
+      "payload": {
+        "type": "table",
+        "title": "Country Trade Balance Comparison",
+        "headers": [
+          "Item",
+          "Description"
+        ],
+        "rows": [
+          [
+            "United States",
+            "The United States had huge trade deficits."
+          ],
+          [
+            "China",
+            "China had massive amounts of exports in the late 1990s and 2000s."
+          ]
+        ]
+      },
+      "evidence": [
+        {
+          "note_id": "FCT_0087",
+          "quote": "The United States had huge trade deficits."
+        },
+        {
+          "note_id": "FCT_0006",
+          "quote": "China had massive amounts of exports in the late 1990s and 2000s."
+        }
+      ],
+      "source_segment_ids": [
+        "FCT_0087",
+        "FCT_0006"
+      ],
+      "spans": [
+        {
+          "source_id": "G00038",
+          "segment_id": 773,
+          "start": 2589.9,
+          "end": 2594.34,
+          "resolution": "speech_segment"
+        },
+        {
+          "source_id": "G00038",
+          "segment_id": 774,
+          "start": 2594.96,
+          "end": 2596.74,
+          "resolution": "speech_segment"
+        },
+        {
+          "source_id": "G00038",
+          "segment_id": 775,
+          "start": 2598.0,
+          "end": 2601.34,
+          "resolution": "speech_segment"
+        }
+      ],
+      "needs_timestamp_alignment": false,
+      "anchor_note_id": "FCT_0006",
+      "proposed_mode": "visual_only",
+      "mode": "text_and_visual",
+      "adaptation": "Rebuilt table cells from exact supporting note phrases"
+    }
+  ],
+  "issues": [
+    {
+      "note_ids": [
+        "CON_0055",
+        "CON_0063",
+        "CON_0062"
+      ],
+      "reason": "Unsupported visual label or value"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Country Trade Balance Comparison",
+      "source_segment_ids": [
+        "FCT_0087",
+        "FCT_0006"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "type": "table",
+          "source_segment_ids": [
+            "FCT_0087",
+            "FCT_0006"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0087",
+              "quote": "The United States had huge trade deficits."
+            },
+            {
+              "note_id": "FCT_0006",
+              "quote": "China had massive amounts of exports in the late 1990s and 2000s."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Country Trade Balance Comparison",
+            "headers": [
+              "Country",
+              "Trade Balance Description"
+            ],
+            "rows": [
+              [
+                "United States",
+                "huge trade deficits"
+              ],
+              [
+                "China",
+                "massive amounts of exports"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Effect of Exchange‑Rate Change on Trade Balance",
+      "source_segment_ids": [
+        "CON_0055",
+        "CON_0063",
+        "CON_0062"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "type": "flowchart",
+          "source_segment_ids": [
+            "CON_0055",
+            "CON_0063",
+            "CON_0062"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0055",
+              "quote": "when you depreciate the exchange rate, then it moves the net export function up."
+            },
+            {
+              "note_id": "CON_0063",
+              "quote": "A change in the exchange rate influences the trade balance by affecting net exports."
+            },
+            {
+              "note_id": "CON_0062",
+              "quote": "Net exports equal Z minus D, the distance between the ZZ and DD curves."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Effect of Exchange‑Rate Change on Trade Balance",
+            "direction": "DOWN",
+            "nodes": [
+              {
+                "id": "n1",
+                "kind": "start",
+                "label": "Exchange rate change"
+              },
+              {
+                "id": "n2",
+                "kind": "action",
+                "label": "depreciate the exchange rate"
+              },
+              {
+                "id": "n3",
+                "kind": "action",
+                "label": "net export function moves up"
+              },
+              {
+                "id": "n4",
+                "kind": "action",
+                "label": "net exports affect trade balance"
+              },
+              {
+                "id": "n5",
+                "kind": "success",
+                "label": "trade balance shifts"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": "exchange rate change"
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": "moves the net export function up"
+              },
+              {
+                "from": "n3",
+                "to": "n4",
+                "label": "affects net exports"
+              },
+              {
+                "from": "n4",
+                "to": "n5",
+                "label": "influences trade balance"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

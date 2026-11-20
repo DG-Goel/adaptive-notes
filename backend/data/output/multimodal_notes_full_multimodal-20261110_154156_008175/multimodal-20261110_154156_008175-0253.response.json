@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-4166163e-eec9-4dbe-9f51-c69f31846f00",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"ternary operator\",\n        \"refs\": [\"Q0004\", \"Q0005\", \"Q0006\", \"Q0007\"],\n        \"claims\": [\n          {\n            \"text\": \"The ternary operator in Java is a conditional operator that uses a question mark (?) and a colon (:) to choose between two values based on a boolean condition; if the condition is true, the first value is returned, otherwise the second value is returned.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0004\", \"Q0005\", \"Q0006\", \"Q0007\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"The ternary operator in Java is a conditional operator that uses a question mark (?) and a colon (:) to choose between two values based on a boolean condition; if the condition is true, the first value is returned, otherwise the second value is returned.\",\n        \"refs\": [\"Q0004\", \"Q0005\", \"Q0006\", \"Q0007\"],\n        \"claims\": [\n          {\n            \"text\": \"The ternary operator in Java is a conditional operator that uses a question mark (?) and a colon (:) to choose between two values based on a boolean condition; if the condition is true, the first value is returned, otherwise the second value is returned.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0004\", \"Q0005\", \"Q0006\", \"Q0007\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need definitions extraction. Look for definition of term? The excerpts talk about ternary operator. Definition likely: ternary operator is ... Provide term and definition_text. Use primary excerpts. Combine? We have multiple quotes describing. We can construct definition: \"The ternary operator in Java is a conditional operator that uses ? and : to select one of two values based on a boolean condition.\" Use explicit statements from quotes: Q0004, Q0005, Q0006, Q0007. Provide claims. We'll cite refs Q0004- Q0007. Basis explicit. Availability SOURCE_SUPPORTED. literal_kind verbal. instructional_role explanation_of_mistake? Actually it's explanation. Use null? maybe \"prerequisite\". We'll set null. Provide term \"ternary operator\". definition_text text combine. Provide claims list maybe one claim covering whole definition. Use refs list all. Provide related_refs empty. context null. Items array with one. No abstentions. No excluded.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326602,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c652c0ffaa",
+  "usage": {
+    "completion_tokens": 634,
+    "prompt_tokens": 4372,
+    "total_tokens": 5006,
+    "completion_time": 1.364542811,
+    "completion_tokens_details": {
+      "reasoning_tokens": 198
+    },
+    "prompt_time": 0.249713512,
+    "prompt_tokens_details": null,
+    "queue_time": 0.348483457,
+    "total_time": 1.614256323
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m73366k7e7tb6hbrfxq524bt",
+    "debug": null,
+    "seed": 1561443421,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-8c9c4bf2-eff8-4b85-abae-3f5169e19a58",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"have at least one function, and that function is called main.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"So main is the entry point to our programs.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"Whenever we execute a Java program, the main function gets called, and the code inside this function gets executed.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"Okay?\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"Now, these functions don't exist on their own.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"They should always belong to a class.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"So a class is a container for one or more related functions.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0006\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C8\",\n      \"text\": \"Basically we use these classes to organize our code.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0007\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C9\",\n      \"text\": \"Just like how products are organized in a supermarket.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0008\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\"C1\", \"C2\", \"C3\", \"C5\", \"C6\", \"C7\", \"C8\", \"C9\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"statement\"]\n      }\n    },\n    {\n      \"fact_text\": [\"C4\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"question\"]\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify claims: each excerpt is a statement. Create claim IDs C1 etc. Determine basis explicit, availability SOURCE_SUPPORTED? Some have ASR speech evidence note: G00006 ASR speech evidence; exact code/formula unavailable unless separately verified. But these are textual statements, okay SOURCE_SUPPORTED? Probably SOURCE_SUPPORTED. literal_kind verbal. instructional_role maybe explanation_of_mistake? No. Probably null. related_refs none.\n\nCreate claims list. Then categories: facts maybe. We'll put each claim as fact_text. facts array with claim IDs. definitions none. concepts none. explanations maybe. We'll put under facts.\n\nCreate abstentions none.\n\nConstruct schema.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318432,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_6b677c2caf",
+  "usage": {
+    "completion_tokens": 1001,
+    "prompt_tokens": 3018,
+    "total_tokens": 4019,
+    "completion_time": 2.12971245,
+    "completion_tokens_details": {
+      "reasoning_tokens": 145
+    },
+    "prompt_time": 0.14813837,
+    "prompt_tokens_details": null,
+    "queue_time": 0.268025617,
+    "total_time": 2.27785082
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72vcvefezt92hfctnngdpmd",
+    "debug": null,
+    "seed": 190708541,
+    "usage": null
+  }
+}

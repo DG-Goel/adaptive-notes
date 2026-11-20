@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-eadf257e-df97-4088-ab45-f3cd9bed8418",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Exchange Rate Depreciation\",\n      \"source_segment_ids\": [\"FCT_0077\", \"FCT_0078\", \"FCT_0079\", \"CON_0032\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0077\", \"FCT_0078\", \"FCT_0079\", \"CON_0032\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0077\",\n              \"exact_quote\": \"the exchange rate is depreciating\"\n            },\n            {\n              \"note_id\": \"FCT_0078\",\n              \"exact_quote\": \"the dollar is depreciating\"\n            },\n            {\n              \"note_id\": \"FCT_0079\",\n              \"exact_quote\": \"the exchange rate will fall\"\n            },\n            {\n              \"note_id\": \"CON_0032\",\n              \"exact_quote\": \"When the exchange rate falls, the domestic currency is said to be depreciating.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"concept_tree\",\n            \"title\": \"Exchange Rate Depreciation\",\n            \"nodes\": [\n              {\n                \"id\": \"n0\",\n                \"label\": \"Exchange Rate Depreciation\",\n                \"description\": null\n              },\n              {\n                \"id\": \"n1\",\n                \"label\": \"exchange rate is depreciating\",\n                \"parent\": \"n0\"\n              },\n              {\n                \"id\": \"n2\",\n                \"label\": \"dollar is depreciating\",\n                \"parent\": \"n0\"\n              },\n              {\n                \"id\": \"n3\",\n                \"label\": \"exchange rate will fall\",\n                \"parent\": \"n0\"\n              },\n              {\n                \"id\": \"n4\",\n                \"label\": \"exchange rate falls → domestic currency depreciates\",\n                \"parent\": \"n0\"\n              }\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Same Interest Rate Relationships\",\n      \"source_segment_ids\": [\"CON_0033\", \"CON_0035\", \"CON_0036\", \"CON_0037\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0033\", \"CON_0035\", \"CON_0036\", \"CON_0037\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0033\",\n              \"exact_quote\": \"Starting from the same interest rate and then increasing one rate makes the foreign bond have a higher interest rate than the domestic bond.\"\n            },\n            {\n              \"note_id\": \"CON_0035\",\n              \"exact_quote\": \"If the expected exchange rate is fixed, the only way to achieve an expected appreciation of the dollar is by depreciating the dollar today.\"\n            },\n            {\n              \"note_id\": \"CON_0036\",\n              \"exact_quote\": \"The mechanism linking interest rates and exchange rate movements is symmetric.\"\n            },\n            {\n              \"note_id\": \"CON_0037\",\n              \"exact_quote\": \"The adjustment of exchange rates to interest rate changes now occurs in milliseconds, performed by machines.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"concept_tree\",\n            \"title\": \"Same Interest Rate Relationships\",\n            \"nodes\": [\n              {\n                \"id\": \"n0\",\n                \"label\": \"Same Interest Rate\",\n                \"description\": null\n              },\n              {\n                \"id\": \"n1\",\n                \"label\": \"Increasing one rate → foreign bond higher interest than domestic\",\n                \"parent\": \"n0\"\n              },\n              {\n                \"id\": \"n2\",\n                \"label\": \"Fixed expected exchange rate → must depreciate dollar today to expect appreciation\",\n                \"parent\": \"n0\"\n              },\n              {\n                \"id\": \"n3\",\n                \"label\": \"Interest‑rate ↔ exchange‑rate link is symmetric\",\n                \"parent\": \"n0\"\n              },\n              {\n                \"id\": \"n4\",\n                \"label\": \"Adjustment occurs in milliseconds (machines)\",\n                \"parent\": \"n0\"\n              }\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Effect of Expected Exchange Rate Changes\",\n      \"source_segment_ids\": [\"CON_0039\", \"CON_0059\", \"FCT_0088\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0039\", \"CON_0059\", \"FCT_0088\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0039\",\n              \"exact_quote\": \"When the expected exchange rate is increased, the current exchange rate rises immediately.\"\n            },\n            {\n              \"note_id\": \"CON_0059\",\n              \"exact_quote\": \"The expected exchange rate moves to the right.\"\n            },\n            {\n              \"note_id\": \"FCT_0088\",\n              \"exact_quote\": \"Only one curve can move.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Effect of Expected Exchange Rate Changes\",\n            \"direction\": \"DOWN\",\n            \"nodes\": [\n              {\n                \"id\": \"s0\",\n                \"label\": \"Increase expected exchange rate\",\n                \"kind\": \"start\"\n              },\n              {\n                \"id\": \"a1\",\n                \"label\": \"Current exchange rate rises immediately\",\n                \"kind\": \"action\"\n              },\n              {\n                \"id\": \"a2\",\n                \"label\": \"Expected exchange rate moves right\",\n                \"kind\": \"action\"\n              },\n              {\n                \"id\": \"a3\",\n                \"label\": \"Only one curve can move\",\n                \"kind\": \"action\"\n              }\n            ],\n            \"edges\": [\n              {\n                \"from\": \"s0\",\n                \"to\": \"a1\",\n                \"label\": \"\"\n              },\n              {\n                \"from\": \"a1\",\n                \"to\": \"a2\",\n                \"label\": \"\"\n              },\n              {\n                \"from\": \"a2\",\n                \"to\": \"a3\",\n                \"label\": \"\"\n              }\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visuals. Identify hierarchies: exchange rate depreciation includes facts FCT_0077, FCT_0078, FCT_0079, CON_0032. Could make concept tree. Also same interest rate topic with several CON notes. Could make concept tree linking ideas. Also interest parity condition etc maybe table? We'll output units.\n\nCreate unit for exchange rate depreciation concept tree. source ids list. Provide evidence quotes.\n\nSimilarly unit for same interest rate concept tree.\n\nAlso maybe flowchart for expected exchange rate effect (CON_0039, CON_0059, FCT_0088). Could be flowchart: expected exchange rate increase -> current exchange rate rises immediately (CON_0039) -> moves right (CON_0059) -> only one curve can move (FCT_0088). Use direction DOWN.\n\nCreate JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794813806,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4727af4560",
+  "usage": {
+    "completion_tokens": 1574,
+    "prompt_tokens": 2905,
+    "total_tokens": 4479,
+    "completion_time": 3.293121038,
+    "completion_tokens_details": {
+      "reasoning_tokens": 176
+    },
+    "prompt_time": 0.134094404,
+    "prompt_tokens_details": null,
+    "queue_time": 0.161536022,
+    "total_time": 3.427215442
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hkte75e3hth40q23vbkenj",
+    "debug": null,
+    "seed": 1217386192,
+    "usage": null
+  }
+}

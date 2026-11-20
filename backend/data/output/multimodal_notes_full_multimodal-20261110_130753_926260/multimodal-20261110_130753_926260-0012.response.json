@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-11145bcf-a717-484a-a2fb-93aa293ef459",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"click this, and here we see this installation wizard, it's super easy,\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"S00046\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"just click continue, and install, you have to enter\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"S00047\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"your computer's password, and then,\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"S00048\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"alright, done, beautiful, so we can move this to trash.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"S00049\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"Now, the next piece of software we need is a code editor, there's\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"S00050\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"so many code editors for building Java applications, the popular ones are\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"S00051\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"NetBeans, Eclipse, and IntelliJ.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"S00052\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C8\",\n      \"text\": \"In this Java course, I'm\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"S00052\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C9\",\n      \"text\": \"the favorite editor, feel free to use that to take this course.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"S00053\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C10\",\n      \"text\": \"That's perfectly fine.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"S00053\"],\n      \"related_refs\": []\n    }\n  ],\n  \"items\": [\n    {\n      \"category\": \"facts\",\n      \"fields\": [\n        {\n          \"name\": \"fact_text\",\n          \"is_null\": false,\n          \"groups\": [[\"C1\"], [\"C2\"], [\"C3\"], [\"C4\"], [\"C5\"], [\"C6\"], [\"C7\"], [\"C8\"], [\"C9\"], [\"C10\"]],\n          \"variables\": []\n        },\n        {\n          \"name\": \"fact_type\",\n          \"is_null\": true,\n          \"groups\": [],\n          \"variables\": []\n        }\n      ]\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce compact_claim_table with claims from excerpts. These are just statements about installation steps etc. Each excerpt is a claim. Basis explicit, availability SOURCE_SUPPORTED? But ASR speech evidence says exact code/formula unavailable; but these are verbal instructions, so SOURCE_SUPPORTED? Probably SOURCE_SUPPORTED. literal_kind verbal. instructional_role maybe none (null). No related_refs.\n\nCreate claims ids C1..C10. Then items: need categories. These are instructions => procedures? Could be concepts? Probably procedures content. We'll make one item category procedures with fields: content, procedure_name, steps. But we lack full procedure. Might abstain for procedures. Simpler: put each as fact? Use facts category with fact_text.\n\nWe'll create items for facts each claim. Each field groups with claim id.\n\nImplement.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794316447,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4b2f03d631",
+  "usage": {
+    "completion_tokens": 1077,
+    "prompt_tokens": 2201,
+    "total_tokens": 3278,
+    "completion_time": 2.293873057,
+    "completion_tokens_details": {
+      "reasoning_tokens": 165
+    },
+    "prompt_time": 0.11709021,
+    "prompt_tokens_details": null,
+    "queue_time": 0.495598593,
+    "total_time": 2.410963267
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72sg8hrer3ajnq8k9x3j644",
+    "debug": null,
+    "seed": 1448032593,
+    "usage": null
+  }
+}

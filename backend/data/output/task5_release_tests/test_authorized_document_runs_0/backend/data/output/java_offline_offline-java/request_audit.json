@@ -1,0 +1,83 @@
+{
+  "operations": [
+    {
+      "id": "offline-java-0000",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "90c0c2f48ca3a176e79c654546f95fa9606b05bf8d472b7788a4695cefea091c",
+      "state": "success",
+      "created": 1794069839.52706,
+      "completed": 1794069839.52706,
+      "validation": "passed_mechanical_only"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "offline-java-0000",
+      "number": 1,
+      "created": 1794069839.52706,
+      "dispatched": 1794069839.52706,
+      "completed": 1794069839.52706,
+      "input_reserved": 2773,
+      "output_reserved": 4000,
+      "input_actual": 100,
+      "output_actual": 200,
+      "reasoning": 40,
+      "charged": 300,
+      "http_status": 200,
+      "finish": "stop",
+      "duration": 0.4849999999996726,
+      "category": "response"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794069839.52706,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"490659b2cf836b9998daf70a507a725c02d220249813463ec5a9fc6c0891efb3\", \"estimated_input\": 2773, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 4000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 2,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794069839.52706,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 3,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794069839.52706,
+      "event": "response_saved",
+      "details": "{\"sha256\": \"a07ebad0f852ee2e56b055e4e664dcb9108e240e1e3a699143491431c457876a\"}"
+    },
+    {
+      "sequence": 4,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794069839.52706,
+      "event": "quote_resolution",
+      "details": "{\"resolutions\": []}"
+    },
+    {
+      "sequence": 5,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794069839.52706,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"success\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"passed_mechanical_only\"}"
+    },
+    {
+      "sequence": 6,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794069839.52706,
+      "event": "successful_checkpoint_recovery",
+      "details": "{\"items\": 2, \"redispatched\": false, \"response_sha256\": \"a07ebad0f852ee2e56b055e4e664dcb9108e240e1e3a699143491431c457876a\"}"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+"""Source-only extraction prompts. JSON object mode; schemas are validated locally."""
+import json
+
+SOURCE_GROUNDING_RULES = """You extract educational knowledge from the supplied source only. Return one valid JSON object, no prose or fences.
+
+AUTHORITATIVE SOURCE-GROUNDING CONTRACT
+- No invented information or external Java knowledge. Mentioning an operator does not support explaining decrement or any other unstated behavior.
+- Distinguish spoken explanation from literal code. Never reconstruct code or formulas, declarations, comments, casts, outputs, aliases, or relationships.
+- Do not compute results unless explicitly stated. Preserve conditions, alternatives and scope, including "in this example" and "float or double"; never turn a demonstration into a universal rule or required prerequisite.
+- Preserve uncertainty and transcription ambiguity; never complete a missing sentence. Omission is preferable to unsupported inference.
+- Empty categories are normal. Populate only supported categories; the item limit is a ceiling, not a target.
+- Omit unsupported optional fields entirely. Do not fill them with placeholders, null or empty strings. Empty category arrays [] are different from omitted optional fields.
+- Every populated substantive field needs exact supporting excerpts, including names, content, aliases, classifications, formula keys/descriptions/conditions, procedure steps/prerequisites/outcomes and relationship subjects/objects.
+- Each source_evidence entry has source_id, quote and fields. Quotes must be exact source substrings; IDs must match actual chunk markers, preserving prefixes.
+- fields lists only JSON Pointer paths to populated substantive fields. Cover all such fields; never reference omitted fields, empty containers, source IDs or generated metadata. Array indexes start at 0. Escape ~ as ~0 and / as ~1 in keys. Populated dictionary keys require evidence even when values are empty.
+- Mechanical quotation matching is not semantic entailment verification. An excerpt must actually support its associated claim; no matching-word shortcut.
+
+CONTRASTS
+Mention-only: "We have a decrement operator" does not explain its effect or syntax; omit that explanation.
+Spoken arithmetic: "ten plus three gives thirteen" stays prose; do not invent "int result = 10 + 3; // result is 13". Without the stated result, do not calculate it.
+Literal code: if source contains "int result = 10 + 3;", retain that exact snippet only; add no comment, cast, output or declaration.
+Alternatives: preserve "in this example, float or double", not "one operand must be cast to double".
+Truncated: "apply this as a prefix and then..." supplies no remaining outcome or steps.
+"""
+EXTRACTION_SYSTEM_PROMPT = SOURCE_GROUNDING_RULES
+
+CATEGORY_FIELDS = {
+    "concepts": {
+        "required": [
+            "concept_name"
+        ],
+        "optional": [
+            "aliases"
+        ]
+    },
+    "definitions": {
+        "required": [
+            "term",
+            "definition_text"
+        ],
+        "optional": [
+            "context"
+        ]
+    },
+    "explanations": {
+        "required": [
+            "topic",
+            "explanation_text"
+        ],
+        "optional": [
+            "explanation_type"
+        ]
+    },
+    "examples": {
+        "required": [
+            "exemplifies",
+            "example_text"
+        ],
+        "optional": [
+            "example_type"
+        ]
+    },
+    "facts": {
+        "required": [
+            "fact_text"
+        ],
+        "optional": [
+            "fact_type"
+        ]
+    },
+    "formulas": {
+        "required": [
+            "formula_text"
+        ],
+        "optional": [
+            "variables",
+            "conditions",
+            "derivation"
+        ]
+    },
+    "procedures": {
+        "required": [
+            "procedure_name",
+            "steps"
+        ],
+        "optional": [
+            "prerequisites",
+            "outcomes"
+        ]
+    },
+    "relationships": {
+        "required": [
+            "relationship_type",
+            "subject",
+            "object"
+        ],
+        "optional": [
+            "description"
+        ]
+    }
+}
+
+RESPONSE_SKELETON = {category: [] for category in CATEGORY_FIELDS}
+EVIDENCE_EXAMPLE = {
+    "concept_name": "expression",
+    "content": "A piece of code that produces a value.",
+    "source_unit_ids": [
+        "EXAMPLE_ONLY"
+    ],
+    "source_evidence": [
+        {
+            "source_id": "EXAMPLE_ONLY",
+            "quote": "An expression is a piece of code that produces a value.",
+            "fields": [
+                "/concept_name",
+                "/content"
+            ]
+        }
+    ]
+}
+
+
+def build_extraction_prompt(chunk_text: str, chunk_id: str, max_items_hint: int = 50) -> str:
+    """Keep source intact; category contracts are not an API JSON Schema."""
+    contracts = "\n".join(
+        f"- {category}: required {', '.join(fields['required'])}; "
+        f"optional {', '.join(fields['optional'])}."
+        for category, fields in CATEGORY_FIELDS.items()
+    )
+    return f"""Extract up to ~{max_items_hint} supported items, at most 200 words per item.
+CHUNK ID: {chunk_id}
+Apply the system grounding contract. Do not fill categories to meet a quota.
+
+CATEGORY/FIELD CONTRACTS
+All populated items require content (string), source_unit_ids (nonempty string array)
+and source_evidence (nonempty array of source_id/quote/fields objects).
+{contracts}
+Text/name/classification fields are strings; aliases, steps and prerequisites are
+string arrays; variables maps source-stated symbols to source-stated descriptions.
+For definitions, explanations, examples, facts and formulas, content repeats the
+corresponding main text. Procedure content summarizes only the supplied steps.
+Omit unsupported optional fields and their evidence paths. Do not send knowledge_id,
+document_id or verification flags; the application supplies metadata.
+
+RESPONSE SKELETON (empty arrays are valid; replace only supported categories)
+{json.dumps(RESPONSE_SKELETON, ensure_ascii=False, separators=(',', ':'))}
+
+ONE EVIDENCE EXAMPLE (instruction only; never extract or cite this example)
+Example source [EXAMPLE_ONLY]: An expression is a piece of code that produces a value.
+{json.dumps(EVIDENCE_EXAMPLE, ensure_ascii=False, separators=(',', ':'))}
+This example omits aliases and therefore has no /aliases/0 path.
+Use actual source IDs and exact excerpts from the content below.
+
+BEGIN SOURCE
+{chunk_text}
+END SOURCE
+Return only the JSON object."""
+    
+
+def build_validation_prompt(knowledge_json: str, source_text: str) -> str:
+    """
+    Build prompt to validate extracted knowledge against source.
+    
+    Args:
+        knowledge_json: Extracted knowledge in JSON format
+        source_text: Original source text
+        
+    Returns:
+        Validation prompt
+    """
+    
+    return f"""Validate that the following extracted knowledge is accurately represented from the source text.
+
+EXTRACTED KNOWLEDGE:
+{knowledge_json}
+
+SOURCE TEXT:
+{source_text}
+
+For each knowledge item, check:
+1. Is it actually present in the source?
+2. Is the wording accurate (not oversimplified or distorted)?
+3. Are important qualifications or context preserved?
+4. Are the source_unit_ids correct?
+
+Respond with JSON:
+{{
+  "valid": true/false,
+  "issues": [
+    {{
+      "knowledge_id": "...",
+      "issue": "description of problem",
+      "severity": "critical|warning|minor"
+    }}
+  ]
+}}"""

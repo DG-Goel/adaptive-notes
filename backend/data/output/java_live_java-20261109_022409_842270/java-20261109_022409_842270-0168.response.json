@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-396201c9-a052-44ba-8948-18e91677d9d7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [\n    {\n      \"concept_name\": {\n        \"text\": \"implicit casting\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"aliases\": null,\n      \"content\": {\n        \"text\": \"implicit casting happens whenever you're not gonna lose data; there is no chance for data loss\",\n        \"refs\": [\"Q0000\"]\n      }\n    },\n    {\n      \"concept_name\": {\n        \"text\": \"explicit casting\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"aliases\": null,\n      \"content\": {\n        \"text\": \"explicit casting converts a value to a specified type, e.g., (int) X, and can only happen between compatible numeric types\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      }\n    },\n    {\n      \"concept_name\": {\n        \"text\": \"wrapper class\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"aliases\": null,\n      \"content\": {\n        \"text\": \"a reference type that provides methods to work with primitive types, e.g., java.lang.Integer for int\",\n        \"refs\": [\"Q0002\"]\n      }\n    },\n    {\n      \"concept_name\": {\n        \"text\": \"parseInt method\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"aliases\": null,\n      \"content\": {\n        \"text\": \"Integer.parseInt(String) takes a string and returns an int\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      }\n    },\n    {\n      \"concept_name\": {\n        \"text\": \"parseShort method\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"aliases\": null,\n      \"content\": {\n        \"text\": \"Short.parseShort(String) takes a string and returns a short\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      }\n    },\n    {\n      \"concept_name\": {\n        \"text\": \"parseFloat method\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"aliases\": null,\n      \"content\": {\n        \"text\": \"Float.parseFloat(String) takes a string and returns a float\",\n        \"refs\": [\"Q0003\"]\n      }\n    }\n  ],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"implicit casting\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"definition_text\": {\n        \"text\": \"conversion that occurs automatically when assigning a value of a smaller or compatible numeric type to a larger type, provided no data loss will occur\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"explicit casting\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"manual conversion of a value to a specified type using parentheses, e.g., (int) X, allowed only between compatible numeric types\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"wrapper class\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a reference type that encapsulates a primitive type and provides utility methods such as parsing from strings\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"parseInt\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a static method of the Integer wrapper class that converts a numeric string to an int\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"explicit casting can only happen between compatible numeric types; you cannot cast a string to a number directly\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"User input from UI components is typically received as strings, requiring conversion to numeric types for arithmetic\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"example_text\": {\n        \"text\": \"(int) X converts X to an integer, yielding 1 when X is 1.1; adding 2 results in Y = 3\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"example_type\": null,\n      \"exemplifies\": {\n        \"text\": \"explicit casting\",\n        \"refs\": [\"Q0001\"]\n      }\n    },\n    {\n      \"example_text\": {\n        \"text\": \"Integer.parseInt(\\\"1\\\") returns the int 1, which can then be added to other numbers\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"example_type\": null,\n      \"exemplifies\": {\n        \"text\": \"parseInt method\",\n        \"refs\": [\"Q0003\"]\n      }\n    }\n  ],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"why parsing strings to numbers is needed\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Frameworks for building user interfaces receive input as strings; converting these strings to numeric representations allows arithmetic operations\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract facts, definitions, etc. From excerpts about casting, parsing. Identify concepts: implicit casting, explicit casting, wrapper classes, parseInt, parseShort, parseFloat. Create facts: implicit casting occurs when no data loss. explicit casting converts type. Cannot cast incompatible types like string to int. Use wrapper class Integer.parseInt to convert string to int. etc. Provide refs. No context. Build JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191486,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4200b3f836",
+  "usage": {
+    "completion_tokens": 1332,
+    "prompt_tokens": 3136,
+    "total_tokens": 4468,
+    "completion_time": 2.8149622,
+    "completion_tokens_details": {
+      "reasoning_tokens": 86
+    },
+    "prompt_time": 0.137279016,
+    "prompt_tokens_details": null,
+    "queue_time": 0.326855862,
+    "total_time": 2.952241216
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z2arg1eey822txx0xh0e8q",
+    "debug": null,
+    "seed": 54498135,
+    "usage": null
+  }
+}

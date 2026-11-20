@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-9692604f-4416-460d-81c4-a7f1cfbb81f2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"It's main.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"So this is how we define a class in java.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"We start with a class keyword, then we give our class a proper\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"descriptive name, and then we add a pair of curly braces.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"Now the functions that we define in between these curly braces belong to\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"that contains the main function.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"Can you guess the name of that class?\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0006\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C8\",\n      \"text\": \"this class, and more accurately we refer to them as methods.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0007\"],\n      \"related_refs\": []\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify statements: define class in Java, class keyword, descriptive name, curly braces, methods. Create claims.\n\nAssign IDs C1 etc.\n\nClaims texts from excerpts.\n\nC1: \"It's main.\" (maybe about main function) from Q0000.\n\nC2: \"So this is how we define a class in java.\" from Q0001.\n\nC3: \"We start with a class keyword, then we give our class a proper\" (incomplete) from Q0002.\n\nC4: \"descriptive name, and then we add a pair of curly braces.\" from Q0003.\n\nC5: \"Now the functions that we define in between these curly braces belong to\" from Q0004.\n\nC6: \"that contains the main function.\" from Q0005.\n\nC7: \"Can you guess the name of that class?\" from Q0006.\n\nC8: \"this class, and more accurately we refer to them as methods.\" from Q0007.\n\nWe need categories: facts, explanations maybe. Use facts for definitions.\n\nWe'll put each claim with availability SOURCE_SUPPORTED? Since primary source present. Basis explicit. literal_kind verbal. instructional_role maybe explanation_of_mistake? No. Probably none -> null.\n\nProvide claims array.\n\nOther sections empty arrays.\n\nAbstentions none.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317806,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_02b0d31eca",
+  "usage": {
+    "completion_tokens": 960,
+    "prompt_tokens": 3026,
+    "total_tokens": 3986,
+    "completion_time": 2.027473743,
+    "completion_tokens_details": {
+      "reasoning_tokens": 281
+    },
+    "prompt_time": 0.190271049,
+    "prompt_tokens_details": null,
+    "queue_time": 0.328417609,
+    "total_time": 2.217744792
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72tsrd4e7tvcxjzzw07a8cm",
+    "debug": null,
+    "seed": 682476878,
+    "usage": null
+  }
+}

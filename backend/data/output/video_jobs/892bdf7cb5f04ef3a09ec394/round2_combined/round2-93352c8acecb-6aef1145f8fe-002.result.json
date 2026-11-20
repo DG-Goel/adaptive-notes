@@ -1,0 +1,128 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "CON_0017"
+      ],
+      "reason": "Source note is unresolved"
+    },
+    {
+      "note_ids": [
+        "CON_0017"
+      ],
+      "reason": "Source note is unresolved"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Comparison of US and UK Bond Returns with Expected Currency Movements",
+      "source_segment_ids": [
+        "CON_0017"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0017"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0017",
+              "quote": "And then I say, well, I'm going to get 10% in pounds directly, and if I go the US way, I'm going to get 5%, but I'm going to get also 5% in the currency appreciation."
+            },
+            {
+              "note_id": "CON_0017",
+              "quote": "If I do it in dollars, I say I'm going to get 5% either way, in best interacting dollars, or the UK pound, because in the UK bond, in the UK bond, I'm going to get 10%, and then lose 5% because of the currency."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "US vs UK Bond Returns",
+            "headers": [
+              "Investment",
+              "Nominal Return",
+              "Currency Effect",
+              "Net Return"
+            ],
+            "rows": [
+              [
+                "US Bond (dollar)",
+                "5%",
+                "+5% appreciation",
+                "10%"
+              ],
+              [
+                "UK Bond (pound)",
+                "10%",
+                "-5% depreciation",
+                "5%"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Equilibrium Condition for Interest Parity",
+      "source_segment_ids": [
+        "CON_0017"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0017"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0017",
+              "quote": "In equilibrium, the two are going to be the same once you adjust for the expected appreciation of depreciation of the currency."
+            },
+            {
+              "note_id": "CON_0017",
+              "quote": "And the only way that's going to be in equilibrium is that if we all suspect the dollar to appreciate by 5%."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Interest Parity Equilibrium",
+            "direction": "DOWN",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "Expect dollar appreciation 5%"
+              },
+              {
+                "id": "n2",
+                "label": "Adjust returns for currency"
+              },
+              {
+                "id": "n3",
+                "label": "US and UK returns equal"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": "leads to"
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": "results in"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

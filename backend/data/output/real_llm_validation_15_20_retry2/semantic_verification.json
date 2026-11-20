@@ -1,0 +1,2512 @@
+{
+  "verification_timestamp": "2026-10-26T19:42:35.383856",
+  "document_id": "test_doc",
+  "source_filename": "test.pdf",
+  "total_claims_verified": 50,
+  "claims_supported": 41,
+  "claims_unsupported": 3,
+  "claims_contradicted": 4,
+  "claims_inconclusive": 2,
+  "claims_insufficient_evidence": 0,
+  "claim_verifications": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "claim_text": "Hotel in Havana where a huge wave embedded a car in its side and caused extensive damage.",
+      "source_unit_ids": [
+        "S0012"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.74,
+        "reason": "Moderate keyword overlap (60.0%) with source text, no contradictions",
+        "evidence_snippets": [
+          "S0012: One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Hotel",
+          "Havana"
+        ],
+        "source_entities": [
+          "One",
+          "Havana Riviera Hotel",
+          "It"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Hotel",
+            "status": "not_found_in_source"
+          },
+          {
+            "claimed": "Havana",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0012: One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along"
+      ],
+      "source_full_text": "One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along  the  seawall  or  parked  on  the pavement, and embedded one of them in the side of the hotel. It was like an explosion of dynamite that sowed panic on all  twenty  floors  of  the  building  and  turned  the  great entrance window to dust. The many tourists in the lobby were  thrown  into  the  air  along  with  the  furniture,  and some were cut by the hailstorm of glass. The wave must have been immense, because it leaped over the wide twoway street between the seawall and the hotel and still had enough force to shatter the window.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "CON_0002",
+      "knowledge_type": "concept",
+      "claim_text": "The new Portuguese ambassador to Cuba; his housekeeper was the woman found dead in the car.",
+      "source_unit_ids": [
+        "S0013"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.9142857142857143,
+        "reason": "Strong keyword overlap (71.4%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Portuguese",
+          "Cuba"
+        ],
+        "source_entities": [
+          "Cuban",
+          "During",
+          "But",
+          "Her",
+          "She",
+          "Portuguese",
+          "Havana"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Cuba",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+      ],
+      "source_full_text": "The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything  returned  to  normal.  During  the  morning nobody worried about the car encrusted in the wall,  for people assumed it was one of those that had been parked on  the  pavement.  But  when  the  crane  lifted  it  out  of  its setting,  the  body  of  a  woman  was  found  secured  behind the  steering  wheel  by  a  seat  belt.  The  blow  had  been  so brutal  that  not  a  single  one  of  her  bones  was  left  whole. Her face was destroyed, her boots had been ripped apart, and her clothes were in shreds. She wore a gold ring shaped like  a  serpent,  with  emerald  eyes.  The  police  established that  she  was  the  housekeeper  for  the  new  Portuguese ambassador and his wife. She had come to Havana with them two weeks before and had left that morning for the market, driving a new car. Her name meant nothing to me when I read it in the newspaper, but I was intrigued by the snake  ring  and  its  emerald  eyes.  I  could  not  find  out, however, on which finger she wore it.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "CON_0003",
+      "knowledge_type": "concept",
+      "claim_text": "Nickname given by Latin American students in Vienna to a Colombian-born dream interpreter who worked for a Viennese family.",
+      "source_unit_ids": [
+        "S0016",
+        "S0020",
+        "S0022",
+        "S0024",
+        "S0027",
+        "S0028",
+        "S0029"
+      ],
+      "verification_status": {
+        "status": "CONTRADICTED",
+        "confidence": 0.8,
+        "reason": "Entity mismatch: claimed entities ['Nickname', 'Colombian'] not found in source",
+        "evidence_snippets": [
+          "S0016: This was a crucial piece of information, because I feared she was an unforgettable woman whose real name I never knew, and who wore a similar ring on her right forefinger which,  in  those  days,  was",
+          "S0020: paradise of black marketeering and international espionage. I  could  not  have  imagined  a  more  suitable  spot  for  my fugitive  compatriot,  who  still  ate  in  the  students'  tavern on the co"
+        ],
+        "has_numeric_match": null,
+        "has_entity_match": false,
+        "has_keyword_match": null
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Nickname",
+          "Latin American",
+          "Vienna",
+          "Colombian",
+          "Viennese"
+        ],
+        "source_entities": [
+          "Vienna",
+          "Latin  American",
+          "Rome",
+          "Egyptian",
+          "She",
+          "Spanish",
+          "Austrian",
+          "But",
+          "Colombia",
+          "Austria",
+          "And",
+          "Germanic",
+          "Latin American",
+          "Frau Frieda",
+          "Quindio",
+          "Caldas",
+          "When",
+          "Her",
+          "But  Frau  Frieda",
+          "Sunday",
+          "Their",
+          "Viennese",
+          "Then",
+          "Romantic",
+          "They",
+          "Frau  Frieda",
+          "Only",
+          "One",
+          "You"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Nickname",
+            "status": "not_found_in_source"
+          },
+          {
+            "claimed": "Colombian",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0016: This was a crucial piece of information, because I feared she was an unforgettable woman whose real name I never knew, and who wore a similar ring on her right forefinger which,  in  those  days,  was",
+        "S0020: paradise of black marketeering and international espionage. I  could  not  have  imagined  a  more  suitable  spot  for  my fugitive  compatriot,  who  still  ate  in  the  students'  tavern on the co",
+        "S0022: In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she insti",
+        "S0024: Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warni",
+        "S0027: She did  her  job  well,  and  for  a  long  time,  above  all during the war years, when reality was more sinister than nightmares. Only she could decide at breakfast what each should do that day, an",
+        "S0028: I stayed in Vienna for more than a month, sharing the straitened  circumstances  of  the  other  students  while  I waited  for  money  that  never  arrived.  Frau  Frieda's unexpected  and  generous ",
+        "S0029: 'I  only came to tell you that I dreamed about you last night,' she said. 'You must leave right away and not come back to Vienna for five years.'"
+      ],
+      "source_full_text": "This was a crucial piece of information, because I feared she was an unforgettable woman whose real name I never knew, and who wore a similar ring on her right forefinger which,  in  those  days,  was  even  more  unusual  than  it  is now.  I  had  met  her  thirty-four  years  earlier  in  Vienna, eating sausage with boiled potatoes and drinking draft beer in  a  tavern  frequented  by  Latin  American  students.  I  had come from Rome that morning, and I still remember my immediate response to her splendid soprano's bosom, the languid foxtails on her coat collar, and that Egyptian ring in the shape of a serpent. She spoke an elementary Spanish in  a  metallic  accent  without  pausing  for  breath,  and  I thought  she  was  the  only  Austrian  at  the  long  wooden table.  But  no,  she  had  been  born  in  Colombia  and  had come to  Austria  between  the  wars,  when  she  was  little more than a  child,  to  study  music  and  voice.  She  was about thirty, and did not carry her years well, for she had never  been  pretty  and  had  begun  to  age  before  her  time. But  she  was  a  charming  human  being.  And  one  of  the most awe-inspiring. paradise of black marketeering and international espionage. I  could  not  have  imagined  a  more  suitable  spot  for  my fugitive  compatriot,  who  still  ate  in  the  students'  tavern on the corner only out of loyalty to her origins, since she had  more  than  enough  money  to  buy  meals  for  all  her table  companions.  She  never  told  her  real  name,  and  we always knew her by the Germanic tongue twister that we Latin American students in Vienna invented for her: Frau Frieda. I had just been introduced to her when I committed the happy impertinence of asking how she had come to be in a world so distant and different from the windy cliffs of Quindio, and she answered with a devastating: In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she instituted  the  fine  custom  in  her  family  of  telling  dreams before  breakfast,  the  time  when  their  oracular  qualities are  preserved  in  their  purest  form.  When  she  was  seven she dreamed that one of her brothers was carried off by a flood.  Her  mother,  out  of  sheer  religious  superstition, forbade  the  boy  to  swim  in  the  ravine,  which  was  his favourite  pastime.  But  Frau  Frieda  already  had  her  own system of prophecy. Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warning  with  an  iron  hand.  But  in  her  first careless moment the boy choked on a piece of caramel that he was eating in secret, and there was no way to save him. Frau Frieda did not think she could earn a living with her  talent  until  life  caught  her  by  the  throat  during  the cruel  Viennese  winters.  Then  she  looked  for  work  at  the first  house  where  she  would  have  liked  to  live,  and  when she was asked what she could do, she told only the truth: 'I  dream.' A brief explanation to the lady of the house was all  she  needed,  and  she  was  hired  at  a  salary  that  just covered her minor expenses, but she had a nice room and three meals a day-breakfast in particular, when the family sat  down  to  learn  the  immediate  future  of  each  of  its members: the father,  a  refined  financier;  the  mother,  a joyful  woman passionate about Romantic chamber music; and two children, eleven and nine years old. They were all religious  and  therefore  inclined  to  archaic  superstitions, and  they  were  delighted  to  take  in  Frau  Frieda,  whose only  obligation  was  to  decipher  the  family's  daily  fate through her dreams. She did  her  job  well,  and  for  a  long  time,  above  all during the war years, when reality was more sinister than nightmares. Only she could decide at breakfast what each should do that day, and how it should be done, until her predictions  became  the  sole  authority  in  the  house.  Her control over the family was absolute: even the faintest sigh was breathed by her order. The master of the house died at about the time I was in Vienna, and had the elegance to leave  her  a  part  of  his  estate  on  the  condition  that  she continue  dreaming  for  the  family  until  her  dreams  came to an end. I stayed in Vienna for more than a month, sharing the straitened  circumstances  of  the  other  students  while  I waited  for  money  that  never  arrived.  Frau  Frieda's unexpected  and  generous  visits  to  the  tavern  were  like fiestas in our poverty-stricken regime. One night, in a beery euphoria, she whispered in my ear with a conviction that permitted no delay. 'I  only came to tell you that I dreamed about you last night,' she said. 'You must leave right away and not come back to Vienna for five years.'",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "CON_0004",
+      "knowledge_type": "concept",
+      "claim_text": "The practice of deciphering daily fate through dreams, performed each breakfast by Frau Frieda.",
+      "source_unit_ids": [
+        "S0022",
+        "S0024"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.9454545454545454,
+        "reason": "Strong keyword overlap (81.8%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0022: In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she insti",
+          "S0024: Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warni"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Frau Frieda"
+        ],
+        "source_entities": [
+          "She",
+          "Caldas",
+          "When",
+          "Her",
+          "But  Frau  Frieda",
+          "Sunday",
+          "Their",
+          "But",
+          "Frau Frieda",
+          "Viennese",
+          "Then",
+          "Romantic",
+          "They",
+          "Frau  Frieda"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0022: In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she insti",
+        "S0024: Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warni"
+      ],
+      "source_full_text": "In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she instituted  the  fine  custom  in  her  family  of  telling  dreams before  breakfast,  the  time  when  their  oracular  qualities are  preserved  in  their  purest  form.  When  she  was  seven she dreamed that one of her brothers was carried off by a flood.  Her  mother,  out  of  sheer  religious  superstition, forbade  the  boy  to  swim  in  the  ravine,  which  was  his favourite  pastime.  But  Frau  Frieda  already  had  her  own system of prophecy. Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warning  with  an  iron  hand.  But  in  her  first careless moment the boy choked on a piece of caramel that he was eating in secret, and there was no way to save him. Frau Frieda did not think she could earn a living with her  talent  until  life  caught  her  by  the  throat  during  the cruel  Viennese  winters.  Then  she  looked  for  work  at  the first  house  where  she  would  have  liked  to  live,  and  when she was asked what she could do, she told only the truth: 'I  dream.' A brief explanation to the lady of the house was all  she  needed,  and  she  was  hired  at  a  salary  that  just covered her minor expenses, but she had a nice room and three meals a day-breakfast in particular, when the family sat  down  to  learn  the  immediate  future  of  each  of  its members: the father,  a  refined  financier;  the  mother,  a joyful  woman passionate about Romantic chamber music; and two children, eleven and nine years old. They were all religious  and  therefore  inclined  to  archaic  superstitions, and  they  were  delighted  to  take  in  Frau  Frieda,  whose only  obligation  was  to  decipher  the  family's  daily  fate through her dreams.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "CON_0005",
+      "knowledge_type": "concept",
+      "claim_text": "Qualities of dreams that are preserved in their purest form when told before breakfast.",
+      "source_unit_ids": [
+        "S0022"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (90.9%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0022: In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she insti"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Qualities"
+        ],
+        "source_entities": [
+          "She",
+          "Caldas",
+          "When",
+          "Her",
+          "But  Frau  Frieda"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Qualities",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0022: In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she insti"
+      ],
+      "source_full_text": "In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she instituted  the  fine  custom  in  her  family  of  telling  dreams before  breakfast,  the  time  when  their  oracular  qualities are  preserved  in  their  purest  form.  When  she  was  seven she dreamed that one of her brothers was carried off by a flood.  Her  mother,  out  of  sheer  religious  superstition, forbade  the  boy  to  swim  in  the  ravine,  which  was  his favourite  pastime.  But  Frau  Frieda  already  had  her  own system of prophecy.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "CON_0006",
+      "knowledge_type": "concept",
+      "claim_text": "One of the activities that made post‑war Vienna a \"paradise\" according to the narrator.",
+      "source_unit_ids": [
+        "S0017"
+      ],
+      "verification_status": {
+        "status": "UNSUPPORTED",
+        "confidence": 0.7,
+        "reason": "Low keyword overlap (12.5%), claim contains many terms not in source: made, paradise, according, that, activities",
+        "evidence_snippets": [
+          "S0017: Vienna  was  still  an  old  imperial  city,  whose geographical position between the two irreconcilable worlds left  behind  by  the  Second World War had turned it into a"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": false
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "One",
+          "Vienna"
+        ],
+        "source_entities": [
+          "Vienna",
+          "Second World War"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "One",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0017: Vienna  was  still  an  old  imperial  city,  whose geographical position between the two irreconcilable worlds left  behind  by  the  Second World War had turned it into a"
+      ],
+      "source_full_text": "Vienna  was  still  an  old  imperial  city,  whose geographical position between the two irreconcilable worlds left  behind  by  the  Second World War had turned it into a",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "CON_0007",
+      "knowledge_type": "concept",
+      "claim_text": "Another activity prevalent in post‑war Vienna, mentioned alongside black marketeering.",
+      "source_unit_ids": [
+        "S0017"
+      ],
+      "verification_status": {
+        "status": "UNSUPPORTED",
+        "confidence": 0.7,
+        "reason": "Low keyword overlap (11.1%), claim contains many terms not in source: another, prevalent, alongside, black, marketeering",
+        "evidence_snippets": [
+          "S0017: Vienna  was  still  an  old  imperial  city,  whose geographical position between the two irreconcilable worlds left  behind  by  the  Second World War had turned it into a"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": false
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Vienna"
+        ],
+        "source_entities": [
+          "Vienna",
+          "Second World War"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0017: Vienna  was  still  an  old  imperial  city,  whose geographical position between the two irreconcilable worlds left  behind  by  the  Second World War had turned it into a"
+      ],
+      "source_full_text": "Vienna  was  still  an  old  imperial  city,  whose geographical position between the two irreconcilable worlds left  behind  by  the  Second World War had turned it into a",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "CON_0008",
+      "knowledge_type": "concept",
+      "claim_text": "A gold ring shaped like a serpent with emerald eyes worn by the dead housekeeper.",
+      "source_unit_ids": [
+        "S0013"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.9454545454545454,
+        "reason": "Strong keyword overlap (81.8%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [],
+        "source_entities": [
+          "Cuban",
+          "During",
+          "But",
+          "Her",
+          "She",
+          "Portuguese",
+          "Havana"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+      ],
+      "source_full_text": "The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything  returned  to  normal.  During  the  morning nobody worried about the car encrusted in the wall,  for people assumed it was one of those that had been parked on  the  pavement.  But  when  the  crane  lifted  it  out  of  its setting,  the  body  of  a  woman  was  found  secured  behind the  steering  wheel  by  a  seat  belt.  The  blow  had  been  so brutal  that  not  a  single  one  of  her  bones  was  left  whole. Her face was destroyed, her boots had been ripped apart, and her clothes were in shreds. She wore a gold ring shaped like  a  serpent,  with  emerald  eyes.  The  police  established that  she  was  the  housekeeper  for  the  new  Portuguese ambassador and his wife. She had come to Havana with them two weeks before and had left that morning for the market, driving a new car. Her name meant nothing to me when I read it in the newspaper, but I was intrigued by the snake  ring  and  its  emerald  eyes.  I  could  not  find  out, however, on which finger she wore it.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "CON_0009",
+      "knowledge_type": "concept",
+      "claim_text": "Historical event referenced as the period after which Vienna became a hub of black marketeering and espionage.",
+      "source_unit_ids": [
+        "S0017"
+      ],
+      "verification_status": {
+        "status": "UNSUPPORTED",
+        "confidence": 0.7,
+        "reason": "Low keyword overlap (9.1%), claim contains many terms not in source: event, period, after, black, espionage",
+        "evidence_snippets": [
+          "S0017: Vienna  was  still  an  old  imperial  city,  whose geographical position between the two irreconcilable worlds left  behind  by  the  Second World War had turned it into a"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": false
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Historical",
+          "Vienna"
+        ],
+        "source_entities": [
+          "Vienna",
+          "Second World War"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Historical",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0017: Vienna  was  still  an  old  imperial  city,  whose geographical position between the two irreconcilable worlds left  behind  by  the  Second World War had turned it into a"
+      ],
+      "source_full_text": "Vienna  was  still  an  old  imperial  city,  whose geographical position between the two irreconcilable worlds left  behind  by  the  Second World War had turned it into a",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "CON_0033",
+      "knowledge_type": "concept",
+      "claim_text": "A metaphorical description of a person who is gluttonous, refined, always presides at the table, and displays extravagant eating habits.",
+      "source_unit_ids": [
+        "S0037"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.7,
+        "reason": "Moderate keyword overlap (50.0%) with source text, no contradictions",
+        "evidence_snippets": [
+          "S0037: I have never known anyone closer to the idea one has of  a  Renaissance  pope:  He  was  gluttonous  and  refined. Even  against  his  will,  he  always  presided  at  the  table. Matilde,  his  wife,"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [],
+        "source_entities": [
+          "Renaissance",
+          "He",
+          "Even",
+          "Matilde",
+          "Carvalleiras",
+          "Galicia",
+          "Cantabria",
+          "Alicante",
+          "Costa Brava",
+          "French",
+          "Chile"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0037: I have never known anyone closer to the idea one has of  a  Renaissance  pope:  He  was  gluttonous  and  refined. Even  against  his  will,  he  always  presided  at  the  table. Matilde,  his  wife,"
+      ],
+      "source_full_text": "I have never known anyone closer to the idea one has of  a  Renaissance  pope:  He  was  gluttonous  and  refined. Even  against  his  will,  he  always  presided  at  the  table. Matilde,  his  wife,  would  put  a  bib  around  his  neck  that belonged in a barbershop rather than a dining room, but it was the only way to keep him from taking a bath in sauce. That  day  at  Carvalleiras  was  typical.  He  ate  three  whole lobsters, dissecting them with a surgeon's skill, and at the same time devoured everyone else's  plate  with  his  eyes and tasted a little from each with a delight that made the desire to eat contagious: clams from Galicia, mussels from Cantabria, prawns from Alicante, sea cucumbers from the Costa Brava. In the meantime, like the French, he spoke of  nothing  but  other  culinary  delicacies,  in  particular  the prehistoric shellfish of Chile, which he carried in his heart. All at once he stopped eating, tuned his lobster's antennae, and said to me in a very quiet voice:",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "CON_0034",
+      "knowledge_type": "concept",
+      "claim_text": "Dreams that are believed to predict future events.",
+      "source_unit_ids": [
+        "S0042"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.7,
+        "reason": "Moderate keyword overlap (50.0%) with source text, no contradictions",
+        "evidence_snippets": [
+          "S0042: She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Dreams"
+        ],
+        "source_entities": [
+          "She",
+          "Naples",
+          "Neruda",
+          "We",
+          "He"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Dreams",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0042: She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to"
+      ],
+      "source_full_text": "She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to talk about her dreams in order to astound the poet. He paid no attention, for from the very beginning he  had  announced  that  he  did  not  believe  in  prophetic dreams.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "CON_0035",
+      "knowledge_type": "concept",
+      "claim_text": "A house described as a fake castle on a hill in Oporto, Portugal, with a view across the ocean to the Americas.",
+      "source_unit_ids": [
+        "S0044"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (91.7%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0044: After  lunch,  during  the  inevitable  stroll  along  the Ramblas, I lagged behind with Frau Frieda so that we could renew our memories with no other ears listening. She told me she had sold her prop"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Oporto",
+          "Portugal",
+          "Americas"
+        ],
+        "source_entities": [
+          "After",
+          "Ramblas",
+          "Frau Frieda",
+          "She",
+          "Austria",
+          "Oporto",
+          "Portugal",
+          "Americas",
+          "Although",
+          "Vienna",
+          "And"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0044: After  lunch,  during  the  inevitable  stroll  along  the Ramblas, I lagged behind with Frau Frieda so that we could renew our memories with no other ears listening. She told me she had sold her prop"
+      ],
+      "source_full_text": "After  lunch,  during  the  inevitable  stroll  along  the Ramblas, I lagged behind with Frau Frieda so that we could renew our memories with no other ears listening. She told me she had sold her properties in Austria and retired to Oporto,  in  Portugal,  where  she  lived  in  a  house  that  she described as a fake castle on a hill, from which one could see all the way across the ocean to the Americas. Although she  did  not  say  so,  her  conversation  made  it  clear  that, dream by dream, she had taken over the entire fortune of her ineffable patrons in Vienna. That did not surprise me, however, because I had always thought her dreams were no more than a stratagem for surviving. And I told her so.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "DEF_0010",
+      "knowledge_type": "definition",
+      "claim_text": "Qualities that are preserved in their purest form when dreams are told before breakfast.",
+      "source_unit_ids": [
+        "S0022"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (90.9%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0022: In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she insti"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Qualities"
+        ],
+        "source_entities": [
+          "She",
+          "Caldas",
+          "When",
+          "Her",
+          "But  Frau  Frieda"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Qualities",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0022: In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she insti"
+      ],
+      "source_full_text": "In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she instituted  the  fine  custom  in  her  family  of  telling  dreams before  breakfast,  the  time  when  their  oracular  qualities are  preserved  in  their  purest  form.  When  she  was  seven she dreamed that one of her brothers was carried off by a flood.  Her  mother,  out  of  sheer  religious  superstition, forbade  the  boy  to  swim  in  the  ravine,  which  was  his favourite  pastime.  But  Frau  Frieda  already  had  her  own system of prophecy.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "EXP_0011",
+      "knowledge_type": "explanation",
+      "claim_text": "The wave must have been immense, because it leaped over the wide two‑way street between the seawall and the hotel and still had enough force to shatter the window.",
+      "source_unit_ids": [
+        "S0012"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (100.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0012: One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [],
+        "source_entities": [
+          "One",
+          "Havana Riviera Hotel",
+          "It"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0012: One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along"
+      ],
+      "source_full_text": "One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along  the  seawall  or  parked  on  the pavement, and embedded one of them in the side of the hotel. It was like an explosion of dynamite that sowed panic on all  twenty  floors  of  the  building  and  turned  the  great entrance window to dust. The many tourists in the lobby were  thrown  into  the  air  along  with  the  furniture,  and some were cut by the hailstorm of glass. The wave must have been immense, because it leaped over the wide twoway street between the seawall and the hotel and still had enough force to shatter the window.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "EXP_0012",
+      "knowledge_type": "explanation",
+      "claim_text": "What that dream means, she said, isn't that he's going to drown, but that he shouldn't eat sweets.",
+      "source_unit_ids": [
+        "S0023"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.75,
+        "reason": "Short quote paraphrase: 100.0% stem overlap, source <30 words",
+        "evidence_snippets": [
+          "S0023: 'What  that  dream  means,'  she  said,  'isn't  that  he's going to drown, but that he shouldn't eat sweets.'"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "What"
+        ],
+        "source_entities": [
+          "What"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0023: 'What  that  dream  means,'  she  said,  'isn't  that  he's going to drown, but that he shouldn't eat sweets.'"
+      ],
+      "source_full_text": "'What  that  dream  means,'  she  said,  'isn't  that  he's going to drown, but that he shouldn't eat sweets.'",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "EXP_0013",
+      "knowledge_type": "explanation",
+      "claim_text": "She was hired to decipher the family's daily fate through her dreams, deciding at breakfast what each member should do that day and how it should be done.",
+      "source_unit_ids": [
+        "S0024"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.94,
+        "reason": "Strong keyword overlap (80.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0024: Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warni"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "She"
+        ],
+        "source_entities": [
+          "Her",
+          "Sunday",
+          "Their",
+          "But",
+          "Frau Frieda",
+          "Viennese",
+          "Then",
+          "Romantic",
+          "They",
+          "Frau  Frieda"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "She",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0024: Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warni"
+      ],
+      "source_full_text": "Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warning  with  an  iron  hand.  But  in  her  first careless moment the boy choked on a piece of caramel that he was eating in secret, and there was no way to save him. Frau Frieda did not think she could earn a living with her  talent  until  life  caught  her  by  the  throat  during  the cruel  Viennese  winters.  Then  she  looked  for  work  at  the first  house  where  she  would  have  liked  to  live,  and  when she was asked what she could do, she told only the truth: 'I  dream.' A brief explanation to the lady of the house was all  she  needed,  and  she  was  hired  at  a  salary  that  just covered her minor expenses, but she had a nice room and three meals a day-breakfast in particular, when the family sat  down  to  learn  the  immediate  future  of  each  of  its members: the father,  a  refined  financier;  the  mother,  a joyful  woman passionate about Romantic chamber music; and two children, eleven and nine years old. They were all religious  and  therefore  inclined  to  archaic  superstitions, and  they  were  delighted  to  take  in  Frau  Frieda,  whose only  obligation  was  to  decipher  the  family's  daily  fate through her dreams.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "EXP_0036",
+      "knowledge_type": "explanation",
+      "claim_text": "He paid no attention to Frau Frieda's dreams because he had announced from the very beginning that he did not believe in prophetic dreams.",
+      "source_unit_ids": [
+        "S0042"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.9307692307692308,
+        "reason": "Strong keyword overlap (76.9%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0042: She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "He",
+          "Frau Frieda"
+        ],
+        "source_entities": [
+          "She",
+          "Naples",
+          "Neruda",
+          "We",
+          "He"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Frau Frieda",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0042: She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to"
+      ],
+      "source_full_text": "She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to talk about her dreams in order to astound the poet. He paid no attention, for from the very beginning he  had  announced  that  he  did  not  believe  in  prophetic dreams.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "EXP_0037",
+      "knowledge_type": "explanation",
+      "claim_text": "He saw the world as an immense wind-up toy with which life invented itself.",
+      "source_unit_ids": [
+        "S0036"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (100.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0036: Before the disaster in Havana, I had seen Frau Frieda in Barcelona in so unexpected and fortuitous a way that it seemed a mystery to me. It happened on the day Pablo Neruda stepped on Spanish soil for"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "He"
+        ],
+        "source_entities": [
+          "Before",
+          "Havana",
+          "Frau Frieda",
+          "Barcelona",
+          "It",
+          "Pablo Neruda",
+          "Spanish",
+          "Civil  War",
+          "Valparaiso",
+          "He",
+          "Porter",
+          "Rangoon"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0036: Before the disaster in Havana, I had seen Frau Frieda in Barcelona in so unexpected and fortuitous a way that it seemed a mystery to me. It happened on the day Pablo Neruda stepped on Spanish soil for"
+      ],
+      "source_full_text": "Before the disaster in Havana, I had seen Frau Frieda in Barcelona in so unexpected and fortuitous a way that it seemed a mystery to me. It happened on the day Pablo Neruda stepped on Spanish soil for the first time since the Civil  War,  on  a  stopover  during  a  long  sea  voyage  to Valparaiso. He spent a morning with us hunting big game in  the  second-hand  bookstores,  and  at  Porter  he  bought an old, dried-out volume with a torn binding for which he paid  what  would  have  been  his  salary  for  two  months  at the  consulate  in  Rangoon.  He  moved  through  the  crowd like  an  invalid  elephant,  with  a  child's  curiosity  in  the inner workings of each thing he saw, for the world appeared to him as an immense wind-up toy with which life invented itself.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "EXM_0014",
+      "knowledge_type": "example",
+      "claim_text": "A huge wave picked up several cars, embedded one in the side of the Havana Riviera Hotel, and shattered the great entrance window.",
+      "source_unit_ids": [
+        "S0012"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (100.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0012: One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Havana Riviera Hotel"
+        ],
+        "source_entities": [
+          "One",
+          "Havana Riviera Hotel",
+          "It"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0012: One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along"
+      ],
+      "source_full_text": "One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along  the  seawall  or  parked  on  the pavement, and embedded one of them in the side of the hotel. It was like an explosion of dynamite that sowed panic on all  twenty  floors  of  the  building  and  turned  the  great entrance window to dust. The many tourists in the lobby were  thrown  into  the  air  along  with  the  furniture,  and some were cut by the hailstorm of glass. The wave must have been immense, because it leaped over the wide twoway street between the seawall and the hotel and still had enough force to shatter the window.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "EXM_0015",
+      "knowledge_type": "example",
+      "claim_text": "Frau Frieda told the narrator that she dreamed about him and that he must leave Vienna and not return for five years; he obeyed and never returned.",
+      "source_unit_ids": [
+        "S0029",
+        "S0030"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.7666666666666666,
+        "reason": "Moderate keyword overlap (66.7%) with source text, no contradictions",
+        "evidence_snippets": [
+          "S0029: 'I  only came to tell you that I dreamed about you last night,' she said. 'You must leave right away and not come back to Vienna for five years.'",
+          "S0030: Her conviction was so real that I boarded the last train to Rome that same night. As for me, I was so influenced by what  she  said  that  from  then  on  I  considered  myself  a survivor  of  some  "
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Frau Frieda",
+          "Vienna"
+        ],
+        "source_entities": [
+          "You",
+          "Vienna",
+          "Her",
+          "Rome",
+          "As"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Frau Frieda",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0029: 'I  only came to tell you that I dreamed about you last night,' she said. 'You must leave right away and not come back to Vienna for five years.'",
+        "S0030: Her conviction was so real that I boarded the last train to Rome that same night. As for me, I was so influenced by what  she  said  that  from  then  on  I  considered  myself  a survivor  of  some  "
+      ],
+      "source_full_text": "'I  only came to tell you that I dreamed about you last night,' she said. 'You must leave right away and not come back to Vienna for five years.' Her conviction was so real that I boarded the last train to Rome that same night. As for me, I was so influenced by what  she  said  that  from  then  on  I  considered  myself  a survivor  of  some  catastrophe  I  never  experienced.  I  still have not returned to Vienna.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "EXM_0038",
+      "knowledge_type": "example",
+      "claim_text": "He ate three whole lobsters, dissecting them with a surgeon's skill, devoured everyone else's plate with his eyes, and tasted clams from Galicia, mussels from Cantabria, prawns from Alicante, sea cucumbers from the Costa Brava.",
+      "source_unit_ids": [
+        "S0037"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (100.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0037: I have never known anyone closer to the idea one has of  a  Renaissance  pope:  He  was  gluttonous  and  refined. Even  against  his  will,  he  always  presided  at  the  table. Matilde,  his  wife,"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "He",
+          "Galicia",
+          "Cantabria",
+          "Alicante",
+          "Costa Brava"
+        ],
+        "source_entities": [
+          "Renaissance",
+          "He",
+          "Even",
+          "Matilde",
+          "Carvalleiras",
+          "Galicia",
+          "Cantabria",
+          "Alicante",
+          "Costa Brava",
+          "French",
+          "Chile"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0037: I have never known anyone closer to the idea one has of  a  Renaissance  pope:  He  was  gluttonous  and  refined. Even  against  his  will,  he  always  presided  at  the  table. Matilde,  his  wife,"
+      ],
+      "source_full_text": "I have never known anyone closer to the idea one has of  a  Renaissance  pope:  He  was  gluttonous  and  refined. Even  against  his  will,  he  always  presided  at  the  table. Matilde,  his  wife,  would  put  a  bib  around  his  neck  that belonged in a barbershop rather than a dining room, but it was the only way to keep him from taking a bath in sauce. That  day  at  Carvalleiras  was  typical.  He  ate  three  whole lobsters, dissecting them with a surgeon's skill, and at the same time devoured everyone else's  plate  with  his  eyes and tasted a little from each with a delight that made the desire to eat contagious: clams from Galicia, mussels from Cantabria, prawns from Alicante, sea cucumbers from the Costa Brava. In the meantime, like the French, he spoke of  nothing  but  other  culinary  delicacies,  in  particular  the prehistoric shellfish of Chile, which he carried in his heart. All at once he stopped eating, tuned his lobster's antennae, and said to me in a very quiet voice:",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "EXM_0039",
+      "knowledge_type": "example",
+      "claim_text": "Frau Frieda was encouraged to talk about her dreams to astound the poet, but he paid no attention.",
+      "source_unit_ids": [
+        "S0042"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.94,
+        "reason": "Strong keyword overlap (80.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0042: She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Frau Frieda"
+        ],
+        "source_entities": [
+          "She",
+          "Naples",
+          "Neruda",
+          "We",
+          "He"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Frau Frieda",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0042: She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to"
+      ],
+      "source_full_text": "She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to talk about her dreams in order to astound the poet. He paid no attention, for from the very beginning he  had  announced  that  he  did  not  believe  in  prophetic dreams.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0016",
+      "knowledge_type": "fact",
+      "claim_text": "One morning at nine o'clock a huge wave picked up several cars and embedded one of them in the side of the Havana Riviera Hotel.",
+      "source_unit_ids": [
+        "S0012"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (100.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0012: One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "One",
+          "Havana Riviera Hotel"
+        ],
+        "source_entities": [
+          "One",
+          "Havana Riviera Hotel",
+          "It"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0012: One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along"
+      ],
+      "source_full_text": "One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along  the  seawall  or  parked  on  the pavement, and embedded one of them in the side of the hotel. It was like an explosion of dynamite that sowed panic on all  twenty  floors  of  the  building  and  turned  the  great entrance window to dust. The many tourists in the lobby were  thrown  into  the  air  along  with  the  furniture,  and some were cut by the hailstorm of glass. The wave must have been immense, because it leaped over the wide twoway street between the seawall and the hotel and still had enough force to shatter the window.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0017",
+      "knowledge_type": "fact",
+      "claim_text": "The wave leaped over the wide two‑way street between the seawall and the hotel and still had enough force to shatter the entrance window.",
+      "source_unit_ids": [
+        "S0012"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (100.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0012: One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [],
+        "source_entities": [
+          "One",
+          "Havana Riviera Hotel",
+          "It"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0012: One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along"
+      ],
+      "source_full_text": "One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along  the  seawall  or  parked  on  the pavement, and embedded one of them in the side of the hotel. It was like an explosion of dynamite that sowed panic on all  twenty  floors  of  the  building  and  turned  the  great entrance window to dust. The many tourists in the lobby were  thrown  into  the  air  along  with  the  furniture,  and some were cut by the hailstorm of glass. The wave must have been immense, because it leaped over the wide twoway street between the seawall and the hotel and still had enough force to shatter the window.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0018",
+      "knowledge_type": "fact",
+      "claim_text": "Cuban volunteers and the fire department cleared the debris in less than six hours, sealed off the gate to the sea and installed another gate.",
+      "source_unit_ids": [
+        "S0013"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (92.3%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Cuban"
+        ],
+        "source_entities": [
+          "Cuban",
+          "During",
+          "But",
+          "Her",
+          "She",
+          "Portuguese",
+          "Havana"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+      ],
+      "source_full_text": "The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything  returned  to  normal.  During  the  morning nobody worried about the car encrusted in the wall,  for people assumed it was one of those that had been parked on  the  pavement.  But  when  the  crane  lifted  it  out  of  its setting,  the  body  of  a  woman  was  found  secured  behind the  steering  wheel  by  a  seat  belt.  The  blow  had  been  so brutal  that  not  a  single  one  of  her  bones  was  left  whole. Her face was destroyed, her boots had been ripped apart, and her clothes were in shreds. She wore a gold ring shaped like  a  serpent,  with  emerald  eyes.  The  police  established that  she  was  the  housekeeper  for  the  new  Portuguese ambassador and his wife. She had come to Havana with them two weeks before and had left that morning for the market, driving a new car. Her name meant nothing to me when I read it in the newspaper, but I was intrigued by the snake  ring  and  its  emerald  eyes.  I  could  not  find  out, however, on which finger she wore it.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0019",
+      "knowledge_type": "fact",
+      "claim_text": "The woman found in the car was the housekeeper for the new Portuguese ambassador and his wife.",
+      "source_unit_ids": [
+        "S0013"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (100.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Portuguese"
+        ],
+        "source_entities": [
+          "Cuban",
+          "During",
+          "But",
+          "Her",
+          "She",
+          "Portuguese",
+          "Havana"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+      ],
+      "source_full_text": "The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything  returned  to  normal.  During  the  morning nobody worried about the car encrusted in the wall,  for people assumed it was one of those that had been parked on  the  pavement.  But  when  the  crane  lifted  it  out  of  its setting,  the  body  of  a  woman  was  found  secured  behind the  steering  wheel  by  a  seat  belt.  The  blow  had  been  so brutal  that  not  a  single  one  of  her  bones  was  left  whole. Her face was destroyed, her boots had been ripped apart, and her clothes were in shreds. She wore a gold ring shaped like  a  serpent,  with  emerald  eyes.  The  police  established that  she  was  the  housekeeper  for  the  new  Portuguese ambassador and his wife. She had come to Havana with them two weeks before and had left that morning for the market, driving a new car. Her name meant nothing to me when I read it in the newspaper, but I was intrigued by the snake  ring  and  its  emerald  eyes.  I  could  not  find  out, however, on which finger she wore it.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0020",
+      "knowledge_type": "fact",
+      "claim_text": "She wore a gold ring shaped like a serpent with emerald eyes.",
+      "source_unit_ids": [
+        "S0013"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (100.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "She"
+        ],
+        "source_entities": [
+          "Cuban",
+          "During",
+          "But",
+          "Her",
+          "She",
+          "Portuguese",
+          "Havana"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+      ],
+      "source_full_text": "The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything  returned  to  normal.  During  the  morning nobody worried about the car encrusted in the wall,  for people assumed it was one of those that had been parked on  the  pavement.  But  when  the  crane  lifted  it  out  of  its setting,  the  body  of  a  woman  was  found  secured  behind the  steering  wheel  by  a  seat  belt.  The  blow  had  been  so brutal  that  not  a  single  one  of  her  bones  was  left  whole. Her face was destroyed, her boots had been ripped apart, and her clothes were in shreds. She wore a gold ring shaped like  a  serpent,  with  emerald  eyes.  The  police  established that  she  was  the  housekeeper  for  the  new  Portuguese ambassador and his wife. She had come to Havana with them two weeks before and had left that morning for the market, driving a new car. Her name meant nothing to me when I read it in the newspaper, but I was intrigued by the snake  ring  and  its  emerald  eyes.  I  could  not  find  out, however, on which finger she wore it.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0021",
+      "knowledge_type": "fact",
+      "claim_text": "Frau Frieda was the third of eleven children born to a prosperous shopkeeper in old Caldas.",
+      "source_unit_ids": [
+        "S0022"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (100.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0022: In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she insti"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Frau Frieda",
+          "Caldas"
+        ],
+        "source_entities": [
+          "She",
+          "Caldas",
+          "When",
+          "Her",
+          "But  Frau  Frieda"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Frau Frieda",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0022: In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she insti"
+      ],
+      "source_full_text": "In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she instituted  the  fine  custom  in  her  family  of  telling  dreams before  breakfast,  the  time  when  their  oracular  qualities are  preserved  in  their  purest  form.  When  she  was  seven she dreamed that one of her brothers was carried off by a flood.  Her  mother,  out  of  sheer  religious  superstition, forbade  the  boy  to  swim  in  the  ravine,  which  was  his favourite  pastime.  But  Frau  Frieda  already  had  her  own system of prophecy.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0022",
+      "knowledge_type": "fact",
+      "claim_text": "When she was seven she dreamed that one of her brothers was carried off by a flood.",
+      "source_unit_ids": [
+        "S0022"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (100.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0022: In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she insti"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "When"
+        ],
+        "source_entities": [
+          "She",
+          "Caldas",
+          "When",
+          "Her",
+          "But  Frau  Frieda"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0022: In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she insti"
+      ],
+      "source_full_text": "In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she instituted  the  fine  custom  in  her  family  of  telling  dreams before  breakfast,  the  time  when  their  oracular  qualities are  preserved  in  their  purest  form.  When  she  was  seven she dreamed that one of her brothers was carried off by a flood.  Her  mother,  out  of  sheer  religious  superstition, forbade  the  boy  to  swim  in  the  ravine,  which  was  his favourite  pastime.  But  Frau  Frieda  already  had  her  own system of prophecy.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0023",
+      "knowledge_type": "fact",
+      "claim_text": "Her brother choked on a piece of caramel he was eating in secret and died.",
+      "source_unit_ids": [
+        "S0024"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.9142857142857143,
+        "reason": "Strong keyword overlap (71.4%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0024: Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warni"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Her"
+        ],
+        "source_entities": [
+          "Her",
+          "Sunday",
+          "Their",
+          "But",
+          "Frau Frieda",
+          "Viennese",
+          "Then",
+          "Romantic",
+          "They",
+          "Frau  Frieda"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0024: Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warni"
+      ],
+      "source_full_text": "Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warning  with  an  iron  hand.  But  in  her  first careless moment the boy choked on a piece of caramel that he was eating in secret, and there was no way to save him. Frau Frieda did not think she could earn a living with her  talent  until  life  caught  her  by  the  throat  during  the cruel  Viennese  winters.  Then  she  looked  for  work  at  the first  house  where  she  would  have  liked  to  live,  and  when she was asked what she could do, she told only the truth: 'I  dream.' A brief explanation to the lady of the house was all  she  needed,  and  she  was  hired  at  a  salary  that  just covered her minor expenses, but she had a nice room and three meals a day-breakfast in particular, when the family sat  down  to  learn  the  immediate  future  of  each  of  its members: the father,  a  refined  financier;  the  mother,  a joyful  woman passionate about Romantic chamber music; and two children, eleven and nine years old. They were all religious  and  therefore  inclined  to  archaic  superstitions, and  they  were  delighted  to  take  in  Frau  Frieda,  whose only  obligation  was  to  decipher  the  family's  daily  fate through her dreams.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0024",
+      "knowledge_type": "fact",
+      "claim_text": "Vienna after the Second World War was described as a paradise of black marketeering and international espionage.",
+      "source_unit_ids": [
+        "S0017"
+      ],
+      "verification_status": {
+        "status": "INCONCLUSIVE",
+        "confidence": 0.5,
+        "reason": "Moderate keyword overlap (30.0%) but insufficient evidence for strong verdict",
+        "evidence_snippets": [
+          "S0017: Vienna  was  still  an  old  imperial  city,  whose geographical position between the two irreconcilable worlds left  behind  by  the  Second World War had turned it into a"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": false
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Vienna",
+          "Second World War"
+        ],
+        "source_entities": [
+          "Vienna",
+          "Second World War"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0017: Vienna  was  still  an  old  imperial  city,  whose geographical position between the two irreconcilable worlds left  behind  by  the  Second World War had turned it into a"
+      ],
+      "source_full_text": "Vienna  was  still  an  old  imperial  city,  whose geographical position between the two irreconcilable worlds left  behind  by  the  Second World War had turned it into a",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0025",
+      "knowledge_type": "fact",
+      "claim_text": "The master of the house left a part of his estate to Frau Frieda on the condition that she continue dreaming for the family until her dreams came to an end.",
+      "source_unit_ids": [
+        "S0027"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.9357142857142857,
+        "reason": "Strong keyword overlap (78.6%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0027: She did  her  job  well,  and  for  a  long  time,  above  all during the war years, when reality was more sinister than nightmares. Only she could decide at breakfast what each should do that day, an"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Frau Frieda"
+        ],
+        "source_entities": [
+          "She",
+          "Only",
+          "Her",
+          "Vienna"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Frau Frieda",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0027: She did  her  job  well,  and  for  a  long  time,  above  all during the war years, when reality was more sinister than nightmares. Only she could decide at breakfast what each should do that day, an"
+      ],
+      "source_full_text": "She did  her  job  well,  and  for  a  long  time,  above  all during the war years, when reality was more sinister than nightmares. Only she could decide at breakfast what each should do that day, and how it should be done, until her predictions  became  the  sole  authority  in  the  house.  Her control over the family was absolute: even the faintest sigh was breathed by her order. The master of the house died at about the time I was in Vienna, and had the elegance to leave  her  a  part  of  his  estate  on  the  condition  that  she continue  dreaming  for  the  family  until  her  dreams  came to an end.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0026",
+      "knowledge_type": "fact",
+      "claim_text": "Frau Frieda told the narrator to leave Vienna and not return for five years; he obeyed and never returned.",
+      "source_unit_ids": [
+        "S0029",
+        "S0030"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.7181818181818181,
+        "reason": "Moderate keyword overlap (54.5%) with source text, no contradictions",
+        "evidence_snippets": [
+          "S0029: 'I  only came to tell you that I dreamed about you last night,' she said. 'You must leave right away and not come back to Vienna for five years.'",
+          "S0030: Her conviction was so real that I boarded the last train to Rome that same night. As for me, I was so influenced by what  she  said  that  from  then  on  I  considered  myself  a survivor  of  some  "
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Frau Frieda",
+          "Vienna"
+        ],
+        "source_entities": [
+          "You",
+          "Vienna",
+          "Her",
+          "Rome",
+          "As"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Frau Frieda",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0029: 'I  only came to tell you that I dreamed about you last night,' she said. 'You must leave right away and not come back to Vienna for five years.'",
+        "S0030: Her conviction was so real that I boarded the last train to Rome that same night. As for me, I was so influenced by what  she  said  that  from  then  on  I  considered  myself  a survivor  of  some  "
+      ],
+      "source_full_text": "'I  only came to tell you that I dreamed about you last night,' she said. 'You must leave right away and not come back to Vienna for five years.' Her conviction was so real that I boarded the last train to Rome that same night. As for me, I was so influenced by what  she  said  that  from  then  on  I  considered  myself  a survivor  of  some  catastrophe  I  never  experienced.  I  still have not returned to Vienna.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0040",
+      "knowledge_type": "fact",
+      "claim_text": "Pablo Neruda stepped on Spanish soil for the first time since the Civil War on a stopover during a long sea voyage to Valparaiso.",
+      "source_unit_ids": [
+        "S0036"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (100.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0036: Before the disaster in Havana, I had seen Frau Frieda in Barcelona in so unexpected and fortuitous a way that it seemed a mystery to me. It happened on the day Pablo Neruda stepped on Spanish soil for"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Pablo Neruda",
+          "Spanish",
+          "Civil War",
+          "Valparaiso"
+        ],
+        "source_entities": [
+          "Before",
+          "Havana",
+          "Frau Frieda",
+          "Barcelona",
+          "It",
+          "Pablo Neruda",
+          "Spanish",
+          "Civil  War",
+          "Valparaiso",
+          "He",
+          "Porter",
+          "Rangoon"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Civil War",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0036: Before the disaster in Havana, I had seen Frau Frieda in Barcelona in so unexpected and fortuitous a way that it seemed a mystery to me. It happened on the day Pablo Neruda stepped on Spanish soil for"
+      ],
+      "source_full_text": "Before the disaster in Havana, I had seen Frau Frieda in Barcelona in so unexpected and fortuitous a way that it seemed a mystery to me. It happened on the day Pablo Neruda stepped on Spanish soil for the first time since the Civil  War,  on  a  stopover  during  a  long  sea  voyage  to Valparaiso. He spent a morning with us hunting big game in  the  second-hand  bookstores,  and  at  Porter  he  bought an old, dried-out volume with a torn binding for which he paid  what  would  have  been  his  salary  for  two  months  at the  consulate  in  Rangoon.  He  moved  through  the  crowd like  an  invalid  elephant,  with  a  child's  curiosity  in  the inner workings of each thing he saw, for the world appeared to him as an immense wind-up toy with which life invented itself.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0041",
+      "knowledge_type": "fact",
+      "claim_text": "Neruda bought an old, dried-out volume with a torn binding at Porter, paying an amount equivalent to his two months' salary at the consulate in Rangoon.",
+      "source_unit_ids": [
+        "S0036"
+      ],
+      "verification_status": {
+        "status": "CONTRADICTED",
+        "confidence": 0.8,
+        "reason": "Entity mismatch: claimed entities ['Neruda'] not found in source",
+        "evidence_snippets": [
+          "S0036: Before the disaster in Havana, I had seen Frau Frieda in Barcelona in so unexpected and fortuitous a way that it seemed a mystery to me. It happened on the day Pablo Neruda stepped on Spanish soil for"
+        ],
+        "has_numeric_match": null,
+        "has_entity_match": false,
+        "has_keyword_match": null
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Neruda",
+          "Porter",
+          "Rangoon"
+        ],
+        "source_entities": [
+          "Before",
+          "Havana",
+          "Frau Frieda",
+          "Barcelona",
+          "It",
+          "Pablo Neruda",
+          "Spanish",
+          "Civil  War",
+          "Valparaiso",
+          "He",
+          "Porter",
+          "Rangoon"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Neruda",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0036: Before the disaster in Havana, I had seen Frau Frieda in Barcelona in so unexpected and fortuitous a way that it seemed a mystery to me. It happened on the day Pablo Neruda stepped on Spanish soil for"
+      ],
+      "source_full_text": "Before the disaster in Havana, I had seen Frau Frieda in Barcelona in so unexpected and fortuitous a way that it seemed a mystery to me. It happened on the day Pablo Neruda stepped on Spanish soil for the first time since the Civil  War,  on  a  stopover  during  a  long  sea  voyage  to Valparaiso. He spent a morning with us hunting big game in  the  second-hand  bookstores,  and  at  Porter  he  bought an old, dried-out volume with a torn binding for which he paid  what  would  have  been  his  salary  for  two  months  at the  consulate  in  Rangoon.  He  moved  through  the  crowd like  an  invalid  elephant,  with  a  child's  curiosity  in  the inner workings of each thing he saw, for the world appeared to him as an immense wind-up toy with which life invented itself.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0042",
+      "knowledge_type": "fact",
+      "claim_text": "Frau Frieda traveled from Naples on the same ship as Neruda and his wife, but they had not seen each other on board.",
+      "source_unit_ids": [
+        "S0042"
+      ],
+      "verification_status": {
+        "status": "CONTRADICTED",
+        "confidence": 0.8,
+        "reason": "Entity mismatch: claimed entities ['Frau Frieda'] not found in source",
+        "evidence_snippets": [
+          "S0042: She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to"
+        ],
+        "has_numeric_match": null,
+        "has_entity_match": false,
+        "has_keyword_match": null
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Frau Frieda",
+          "Naples",
+          "Neruda"
+        ],
+        "source_entities": [
+          "She",
+          "Naples",
+          "Neruda",
+          "We",
+          "He"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Frau Frieda",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0042: She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to"
+      ],
+      "source_full_text": "She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to talk about her dreams in order to astound the poet. He paid no attention, for from the very beginning he  had  announced  that  he  did  not  believe  in  prophetic dreams.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0043",
+      "knowledge_type": "fact",
+      "claim_text": "Frau Frieda sold her properties in Austria and retired to Oporto, Portugal, living in a house described as a fake castle on a hill with a view across the ocean to the Americas.",
+      "source_unit_ids": [
+        "S0044"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (94.7%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0044: After  lunch,  during  the  inevitable  stroll  along  the Ramblas, I lagged behind with Frau Frieda so that we could renew our memories with no other ears listening. She told me she had sold her prop"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Frau Frieda",
+          "Austria",
+          "Oporto",
+          "Portugal",
+          "Americas"
+        ],
+        "source_entities": [
+          "After",
+          "Ramblas",
+          "Frau Frieda",
+          "She",
+          "Austria",
+          "Oporto",
+          "Portugal",
+          "Americas",
+          "Although",
+          "Vienna",
+          "And"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0044: After  lunch,  during  the  inevitable  stroll  along  the Ramblas, I lagged behind with Frau Frieda so that we could renew our memories with no other ears listening. She told me she had sold her prop"
+      ],
+      "source_full_text": "After  lunch,  during  the  inevitable  stroll  along  the Ramblas, I lagged behind with Frau Frieda so that we could renew our memories with no other ears listening. She told me she had sold her properties in Austria and retired to Oporto,  in  Portugal,  where  she  lived  in  a  house  that  she described as a fake castle on a hill, from which one could see all the way across the ocean to the Americas. Although she  did  not  say  so,  her  conversation  made  it  clear  that, dream by dream, she had taken over the entire fortune of her ineffable patrons in Vienna. That did not surprise me, however, because I had always thought her dreams were no more than a stratagem for surviving. And I told her so.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0044",
+      "knowledge_type": "fact",
+      "claim_text": "Thirteen years had passed since the narrator's first meeting with Frau Frieda.",
+      "source_unit_ids": [
+        "S0047"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.75,
+        "reason": "Short quote paraphrase: 50.0% stem overlap, source <30 words",
+        "evidence_snippets": [
+          "S0047: Only then did I realise that thirteen years had gone by since  our  first  meeting."
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Thirteen",
+          "Frau Frieda"
+        ],
+        "source_entities": [
+          "Only"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Thirteen",
+            "status": "not_found_in_source"
+          },
+          {
+            "claimed": "Frau Frieda",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0047: Only then did I realise that thirteen years had gone by since  our  first  meeting."
+      ],
+      "source_full_text": "Only then did I realise that thirteen years had gone by since  our  first  meeting.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0045",
+      "knowledge_type": "fact",
+      "claim_text": "Frau Frieda wore a snake ring on her index finger.",
+      "source_unit_ids": [
+        "S0041"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.75,
+        "reason": "Short quote paraphrase: 85.7% stem overlap, source <30 words",
+        "evidence_snippets": [
+          "S0041: I  glanced  over  his  shoulder,  and  it  was  true.  Three tables  away  sat  an  intrepid  woman  in  an  old-fashioned felt hat and a purple scarf, eating without haste and staring at  him.  I  re"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Frau Frieda"
+        ],
+        "source_entities": [
+          "Three",
+          "She",
+          "Frau Frieda"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0041: I  glanced  over  his  shoulder,  and  it  was  true.  Three tables  away  sat  an  intrepid  woman  in  an  old-fashioned felt hat and a purple scarf, eating without haste and staring at  him.  I  re"
+      ],
+      "source_full_text": "I  glanced  over  his  shoulder,  and  it  was  true.  Three tables  away  sat  an  intrepid  woman  in  an  old-fashioned felt hat and a purple scarf, eating without haste and staring at  him.  I  recognised  her  right  away.  She  had  grown  old and fat, but it was Frau Frieda, with the snake ring on her index  finger.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "FCT_0046",
+      "knowledge_type": "fact",
+      "claim_text": "Matilde, the wife of the 'Renaissance pope' figure, put a barbershop bib around his neck to keep him from taking a bath in sauce.",
+      "source_unit_ids": [
+        "S0037"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (92.3%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0037: I have never known anyone closer to the idea one has of  a  Renaissance  pope:  He  was  gluttonous  and  refined. Even  against  his  will,  he  always  presided  at  the  table. Matilde,  his  wife,"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Matilde",
+          "Renaissance"
+        ],
+        "source_entities": [
+          "Renaissance",
+          "He",
+          "Even",
+          "Matilde",
+          "Carvalleiras",
+          "Galicia",
+          "Cantabria",
+          "Alicante",
+          "Costa Brava",
+          "French",
+          "Chile"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0037: I have never known anyone closer to the idea one has of  a  Renaissance  pope:  He  was  gluttonous  and  refined. Even  against  his  will,  he  always  presided  at  the  table. Matilde,  his  wife,"
+      ],
+      "source_full_text": "I have never known anyone closer to the idea one has of  a  Renaissance  pope:  He  was  gluttonous  and  refined. Even  against  his  will,  he  always  presided  at  the  table. Matilde,  his  wife,  would  put  a  bib  around  his  neck  that belonged in a barbershop rather than a dining room, but it was the only way to keep him from taking a bath in sauce. That  day  at  Carvalleiras  was  typical.  He  ate  three  whole lobsters, dissecting them with a surgeon's skill, and at the same time devoured everyone else's  plate  with  his  eyes and tasted a little from each with a delight that made the desire to eat contagious: clams from Galicia, mussels from Cantabria, prawns from Alicante, sea cucumbers from the Costa Brava. In the meantime, like the French, he spoke of  nothing  but  other  culinary  delicacies,  in  particular  the prehistoric shellfish of Chile, which he carried in his heart. All at once he stopped eating, tuned his lobster's antennae, and said to me in a very quiet voice:",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "PRC_0027",
+      "knowledge_type": "procedure",
+      "claim_text": "Pick up the debris. Seal off the gate to the sea. Install a new gate.",
+      "source_unit_ids": [
+        "S0013"
+      ],
+      "verification_status": {
+        "status": "CONTRADICTED",
+        "confidence": 0.8,
+        "reason": "Entity mismatch: claimed entities ['Pick', 'Seal', 'Install'] not found in source",
+        "evidence_snippets": [
+          "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+        ],
+        "has_numeric_match": null,
+        "has_entity_match": false,
+        "has_keyword_match": null
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Pick",
+          "Seal",
+          "Install"
+        ],
+        "source_entities": [
+          "Cuban",
+          "During",
+          "But",
+          "Her",
+          "She",
+          "Portuguese",
+          "Havana"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Pick",
+            "status": "not_found_in_source"
+          },
+          {
+            "claimed": "Seal",
+            "status": "not_found_in_source"
+          },
+          {
+            "claimed": "Install",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+      ],
+      "source_full_text": "The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything  returned  to  normal.  During  the  morning nobody worried about the car encrusted in the wall,  for people assumed it was one of those that had been parked on  the  pavement.  But  when  the  crane  lifted  it  out  of  its setting,  the  body  of  a  woman  was  found  secured  behind the  steering  wheel  by  a  seat  belt.  The  blow  had  been  so brutal  that  not  a  single  one  of  her  bones  was  left  whole. Her face was destroyed, her boots had been ripped apart, and her clothes were in shreds. She wore a gold ring shaped like  a  serpent,  with  emerald  eyes.  The  police  established that  she  was  the  housekeeper  for  the  new  Portuguese ambassador and his wife. She had come to Havana with them two weeks before and had left that morning for the market, driving a new car. Her name meant nothing to me when I read it in the newspaper, but I was intrigued by the snake  ring  and  its  emerald  eyes.  I  could  not  find  out, however, on which finger she wore it.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "REL_0028",
+      "knowledge_type": "relationship",
+      "claim_text": "She interpreted the family's daily fate through her dreams.",
+      "source_unit_ids": [
+        "S0022",
+        "S0024"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (100.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0022: In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she insti",
+          "S0024: Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warni"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "She"
+        ],
+        "source_entities": [
+          "She",
+          "Caldas",
+          "When",
+          "Her",
+          "But  Frau  Frieda",
+          "Sunday",
+          "Their",
+          "But",
+          "Frau Frieda",
+          "Viennese",
+          "Then",
+          "Romantic",
+          "They",
+          "Frau  Frieda"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0022: In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she insti",
+        "S0024: Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warni"
+      ],
+      "source_full_text": "In  reality,  that  was  her  only  trade.  She  had  been  the third  of  eleven  children  born  to  a  prosperous  shopkeeper in  old  Caldas,  and  as  soon  as  she  learned  to  speak  she instituted  the  fine  custom  in  her  family  of  telling  dreams before  breakfast,  the  time  when  their  oracular  qualities are  preserved  in  their  purest  form.  When  she  was  seven she dreamed that one of her brothers was carried off by a flood.  Her  mother,  out  of  sheer  religious  superstition, forbade  the  boy  to  swim  in  the  ravine,  which  was  his favourite  pastime.  But  Frau  Frieda  already  had  her  own system of prophecy. Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warning  with  an  iron  hand.  But  in  her  first careless moment the boy choked on a piece of caramel that he was eating in secret, and there was no way to save him. Frau Frieda did not think she could earn a living with her  talent  until  life  caught  her  by  the  throat  during  the cruel  Viennese  winters.  Then  she  looked  for  work  at  the first  house  where  she  would  have  liked  to  live,  and  when she was asked what she could do, she told only the truth: 'I  dream.' A brief explanation to the lady of the house was all  she  needed,  and  she  was  hired  at  a  salary  that  just covered her minor expenses, but she had a nice room and three meals a day-breakfast in particular, when the family sat  down  to  learn  the  immediate  future  of  each  of  its members: the father,  a  refined  financier;  the  mother,  a joyful  woman passionate about Romantic chamber music; and two children, eleven and nine years old. They were all religious  and  therefore  inclined  to  archaic  superstitions, and  they  were  delighted  to  take  in  Frau  Frieda,  whose only  obligation  was  to  decipher  the  family's  daily  fate through her dreams.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "REL_0029",
+      "knowledge_type": "relationship",
+      "claim_text": "She worked for the family, living in a nice room and receiving three meals a day.",
+      "source_unit_ids": [
+        "S0024"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (87.5%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0024: Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warni"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "She"
+        ],
+        "source_entities": [
+          "Her",
+          "Sunday",
+          "Their",
+          "But",
+          "Frau Frieda",
+          "Viennese",
+          "Then",
+          "Romantic",
+          "They",
+          "Frau  Frieda"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "She",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0024: Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warni"
+      ],
+      "source_full_text": "Her interpretation seemed an infamy to a five-year-old boy  who  could  not  live  without  his  Sunday  treats.  Their mother,  convinced  of  her  daughter's  oracular  talents, enforced  the  warning  with  an  iron  hand.  But  in  her  first careless moment the boy choked on a piece of caramel that he was eating in secret, and there was no way to save him. Frau Frieda did not think she could earn a living with her  talent  until  life  caught  her  by  the  throat  during  the cruel  Viennese  winters.  Then  she  looked  for  work  at  the first  house  where  she  would  have  liked  to  live,  and  when she was asked what she could do, she told only the truth: 'I  dream.' A brief explanation to the lady of the house was all  she  needed,  and  she  was  hired  at  a  salary  that  just covered her minor expenses, but she had a nice room and three meals a day-breakfast in particular, when the family sat  down  to  learn  the  immediate  future  of  each  of  its members: the father,  a  refined  financier;  the  mother,  a joyful  woman passionate about Romantic chamber music; and two children, eleven and nine years old. They were all religious  and  therefore  inclined  to  archaic  superstitions, and  they  were  delighted  to  take  in  Frau  Frieda,  whose only  obligation  was  to  decipher  the  family's  daily  fate through her dreams.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "REL_0030",
+      "knowledge_type": "relationship",
+      "claim_text": "The gold ring shaped like a serpent had emerald eyes.",
+      "source_unit_ids": [
+        "S0013"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (100.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [],
+        "source_entities": [
+          "Cuban",
+          "During",
+          "But",
+          "Her",
+          "She",
+          "Portuguese",
+          "Havana"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+      ],
+      "source_full_text": "The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything  returned  to  normal.  During  the  morning nobody worried about the car encrusted in the wall,  for people assumed it was one of those that had been parked on  the  pavement.  But  when  the  crane  lifted  it  out  of  its setting,  the  body  of  a  woman  was  found  secured  behind the  steering  wheel  by  a  seat  belt.  The  blow  had  been  so brutal  that  not  a  single  one  of  her  bones  was  left  whole. Her face was destroyed, her boots had been ripped apart, and her clothes were in shreds. She wore a gold ring shaped like  a  serpent,  with  emerald  eyes.  The  police  established that  she  was  the  housekeeper  for  the  new  Portuguese ambassador and his wife. She had come to Havana with them two weeks before and had left that morning for the market, driving a new car. Her name meant nothing to me when I read it in the newspaper, but I was intrigued by the snake  ring  and  its  emerald  eyes.  I  could  not  find  out, however, on which finger she wore it.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "REL_0031",
+      "knowledge_type": "relationship",
+      "claim_text": "The huge wave embedded a car in the hotel wall and shattered the entrance window.",
+      "source_unit_ids": [
+        "S0012"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (87.5%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0012: One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [],
+        "source_entities": [
+          "One",
+          "Havana Riviera Hotel",
+          "It"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0012: One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along"
+      ],
+      "source_full_text": "One morning at nine o'clock, while we were having breakfast on the terrace of the Havana Riviera Hotel under a bright sun, a huge wave picked up several cars that were driving down  the  avenue  along  the  seawall  or  parked  on  the pavement, and embedded one of them in the side of the hotel. It was like an explosion of dynamite that sowed panic on all  twenty  floors  of  the  building  and  turned  the  great entrance window to dust. The many tourists in the lobby were  thrown  into  the  air  along  with  the  furniture,  and some were cut by the hailstorm of glass. The wave must have been immense, because it leaped over the wide twoway street between the seawall and the hotel and still had enough force to shatter the window.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "REL_0032",
+      "knowledge_type": "relationship",
+      "claim_text": "They cleared debris, sealed the gate, and installed a new gate within six hours.",
+      "source_unit_ids": [
+        "S0013"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.75,
+        "reason": "Moderate keyword overlap (62.5%) with source text, no contradictions",
+        "evidence_snippets": [
+          "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "They"
+        ],
+        "source_entities": [
+          "Cuban",
+          "During",
+          "But",
+          "Her",
+          "She",
+          "Portuguese",
+          "Havana"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "They",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0013: The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything"
+      ],
+      "source_full_text": "The cheerful  Cuban volunteers,  with  the  help  of  the fire department, picked up the debris in less than six hours, and sealed off  the  gate  to  the  sea  and  installed  another, and everything  returned  to  normal.  During  the  morning nobody worried about the car encrusted in the wall,  for people assumed it was one of those that had been parked on  the  pavement.  But  when  the  crane  lifted  it  out  of  its setting,  the  body  of  a  woman  was  found  secured  behind the  steering  wheel  by  a  seat  belt.  The  blow  had  been  so brutal  that  not  a  single  one  of  her  bones  was  left  whole. Her face was destroyed, her boots had been ripped apart, and her clothes were in shreds. She wore a gold ring shaped like  a  serpent,  with  emerald  eyes.  The  police  established that  she  was  the  housekeeper  for  the  new  Portuguese ambassador and his wife. She had come to Havana with them two weeks before and had left that morning for the market, driving a new car. Her name meant nothing to me when I read it in the newspaper, but I was intrigued by the snake  ring  and  its  emerald  eyes.  I  could  not  find  out, however, on which finger she wore it.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "REL_0047",
+      "knowledge_type": "relationship",
+      "claim_text": "The term is used metaphorically to describe a person with extravagant eating habits and refined tastes.",
+      "source_unit_ids": [
+        "S0037"
+      ],
+      "verification_status": {
+        "status": "INCONCLUSIVE",
+        "confidence": 0.5,
+        "reason": "Moderate keyword overlap (36.4%) but insufficient evidence for strong verdict",
+        "evidence_snippets": [
+          "S0037: I have never known anyone closer to the idea one has of  a  Renaissance  pope:  He  was  gluttonous  and  refined. Even  against  his  will,  he  always  presided  at  the  table. Matilde,  his  wife,"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [],
+        "source_entities": [
+          "Renaissance",
+          "He",
+          "Even",
+          "Matilde",
+          "Carvalleiras",
+          "Galicia",
+          "Cantabria",
+          "Alicante",
+          "Costa Brava",
+          "French",
+          "Chile"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0037: I have never known anyone closer to the idea one has of  a  Renaissance  pope:  He  was  gluttonous  and  refined. Even  against  his  will,  he  always  presided  at  the  table. Matilde,  his  wife,"
+      ],
+      "source_full_text": "I have never known anyone closer to the idea one has of  a  Renaissance  pope:  He  was  gluttonous  and  refined. Even  against  his  will,  he  always  presided  at  the  table. Matilde,  his  wife,  would  put  a  bib  around  his  neck  that belonged in a barbershop rather than a dining room, but it was the only way to keep him from taking a bath in sauce. That  day  at  Carvalleiras  was  typical.  He  ate  three  whole lobsters, dissecting them with a surgeon's skill, and at the same time devoured everyone else's  plate  with  his  eyes and tasted a little from each with a delight that made the desire to eat contagious: clams from Galicia, mussels from Cantabria, prawns from Alicante, sea cucumbers from the Costa Brava. In the meantime, like the French, he spoke of  nothing  but  other  culinary  delicacies,  in  particular  the prehistoric shellfish of Chile, which he carried in his heart. All at once he stopped eating, tuned his lobster's antennae, and said to me in a very quiet voice:",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "REL_0048",
+      "knowledge_type": "relationship",
+      "claim_text": "Her dreams were considered a stratagem for surviving.",
+      "source_unit_ids": [
+        "S0044"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.94,
+        "reason": "Strong keyword overlap (80.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0044: After  lunch,  during  the  inevitable  stroll  along  the Ramblas, I lagged behind with Frau Frieda so that we could renew our memories with no other ears listening. She told me she had sold her prop"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Her"
+        ],
+        "source_entities": [
+          "After",
+          "Ramblas",
+          "Frau Frieda",
+          "She",
+          "Austria",
+          "Oporto",
+          "Portugal",
+          "Americas",
+          "Although",
+          "Vienna",
+          "And"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Her",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0044: After  lunch,  during  the  inevitable  stroll  along  the Ramblas, I lagged behind with Frau Frieda so that we could renew our memories with no other ears listening. She told me she had sold her prop"
+      ],
+      "source_full_text": "After  lunch,  during  the  inevitable  stroll  along  the Ramblas, I lagged behind with Frau Frieda so that we could renew our memories with no other ears listening. She told me she had sold her properties in Austria and retired to Oporto,  in  Portugal,  where  she  lived  in  a  house  that  she described as a fake castle on a hill, from which one could see all the way across the ocean to the Americas. Although she  did  not  say  so,  her  conversation  made  it  clear  that, dream by dream, she had taken over the entire fortune of her ineffable patrons in Vienna. That did not surprise me, however, because I had always thought her dreams were no more than a stratagem for surviving. And I told her so.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "REL_0049",
+      "knowledge_type": "relationship",
+      "claim_text": "Neruda announced he did not believe in prophetic dreams, contrasting with Frau Frieda's discussion of them.",
+      "source_unit_ids": [
+        "S0042"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.6818181818181819,
+        "reason": "Moderate keyword overlap (45.5%) with source text, no contradictions",
+        "evidence_snippets": [
+          "S0042: She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": false,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Neruda",
+          "Frau Frieda"
+        ],
+        "source_entities": [
+          "She",
+          "Naples",
+          "Neruda",
+          "We",
+          "He"
+        ],
+        "all_matched": false,
+        "mismatches": [
+          {
+            "claimed": "Frau Frieda",
+            "status": "not_found_in_source"
+          }
+        ]
+      },
+      "source_snippets": [
+        "S0042: She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to"
+      ],
+      "source_full_text": "She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to talk about her dreams in order to astound the poet. He paid no attention, for from the very beginning he  had  announced  that  he  did  not  believe  in  prophetic dreams.",
+      "verification_method": "deterministic"
+    },
+    {
+      "knowledge_id": "REL_0050",
+      "knowledge_type": "relationship",
+      "claim_text": "Both were on the same ship traveling from Naples.",
+      "source_unit_ids": [
+        "S0042"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.9142857142857143,
+        "reason": "Strong keyword overlap (71.4%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "S0042: She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [
+          "Naples"
+        ],
+        "source_entities": [
+          "She",
+          "Naples",
+          "Neruda",
+          "We",
+          "He"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "S0042: She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to"
+      ],
+      "source_full_text": "She was travelling  from  Naples  on  the  same  ship  as Neruda and his wife, but they had not seen each other on board.  We  invited  her  to  have  coffee  at  our  table,  and  I encouraged her to talk about her dreams in order to astound the poet. He paid no attention, for from the very beginning he  had  announced  that  he  did  not  believe  in  prophetic dreams.",
+      "verification_method": "deterministic"
+    }
+  ],
+  "semantic_faithfulness_verified": false,
+  "verification_complete": true,
+  "verification_method": "deterministic",
+  "limitations": [
+    "This verification uses deterministic text matching and heuristics only.",
+    "Cannot detect paraphrasing or semantic equivalence beyond keyword matching.",
+    "May produce false negatives (marking valid claims as INCONCLUSIVE).",
+    "Returns INCONCLUSIVE when evidence is ambiguous rather than making guesses.",
+    "Numeric and entity matching is case-sensitive and exact.",
+    "Does not understand context, inference, or implicit information."
+  ]
+}

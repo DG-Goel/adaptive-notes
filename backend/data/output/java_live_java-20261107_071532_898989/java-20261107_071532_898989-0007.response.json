@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-b250626a-5e46-4266-9a0f-d5a2b3884ad9",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"function\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"the smallest building block in java programs are functions if function is a block of code that performs a task as a metaphor think of the buttons on the remote control of your TV each button performs a task functions in programming languages are exactly the same for example we can have a function for sending\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"void\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"void is a reserved keyword in Java\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"IntelliJ IDEA Community Edition is absolutely free and more than enough for this course\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"You need to accept the license agreement before downloading the software\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays except extracted items. From excerpts, educational content: facts about functions, definitions maybe. Let's extract definitions: term \"function\" and definition. Also \"void\" keyword. Also steps? Probably definitions.\n\nCreate definitions array items with term and definition_text, context maybe null.\n\nTerm: function. refs Q0002 (where first mention). definition_text from Q0002: \"the smallest building block in java programs are functions if function is a block of code that performs a task as a metaphor think of the buttons on the remote control of your TV each button performs a task functions in programming languages are exactly the same for example we can have a function for sending\". That's incomplete but we take as is.\n\nAlso term: void. definition from Q0003: \"void is a reserved keyword in Java\". Provide.\n\nAlso maybe fact: installing IntelliJ is free. Could be fact.\n\nLet's include facts: fact about IntelliJ community edition being free. From Q0001.\n\nAlso fact about needing to accept license agreement before download? maybe.\n\nWe'll include.\n\nNo concepts, examples, formulas, procedures, relationships.\n\nExcluded empty.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794035952,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 578,
+    "prompt_tokens": 3029,
+    "total_tokens": 3607,
+    "completion_time": 1.199007744,
+    "completion_tokens_details": {
+      "reasoning_tokens": 236
+    },
+    "prompt_time": 0.171403947,
+    "prompt_tokens_details": null,
+    "queue_time": 0.335509763,
+    "total_time": 1.370411691
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6te092ve03t6zm2zfenh1xq",
+    "debug": null,
+    "seed": 62232040,
+    "usage": null
+  }
+}

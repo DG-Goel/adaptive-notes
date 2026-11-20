@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-a1e83a0c-8eec-4b1a-a4ef-69d95fde80f1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"markdown\":\"# Types of Neural Network Architectures\\n\\nNeural networks come in various architectures, each suited to different kinds of data and tasks. Below is an overview of the most common types.\\n\\n## 1. Feedforward Neural Networks (FNN)\\n- **Structure**: Layers of neurons arranged in a single direction—from input to output.\\n- **Use Cases**: Simple classification and regression problems.\\n- **Key Point**: No cycles; information flows only forward.\\n\\n## 2. Convolutional Neural Networks (`CNN`)\\n- **Structure**: Convolutional layers, pooling layers, and fully‑connected layers.\\n- **Use Cases**: Image recognition, video analysis, and any grid‑like data.\\n- **Key Concepts**:\\n  - **Convolution** extracts local features.\\n  - **Pooling** reduces spatial dimensions while retaining important information.\\n\\n## 3. Recurrent Neural Networks (`RNN`)\\n- **Structure**: Connections that form directed cycles, allowing information to persist.\\n- **Use Cases**: Sequential data such as text, speech, and time series.\\n- **Variants**:\\n  1. **Long Short‑Term Memory (`LSTM`)** – mitigates vanishing gradients.\\n  2. **Gated Recurrent Unit (`GRU`)** – a simpler alternative to `LSTM`.\\n\\n## 4. Autoencoders\\n- **Structure**: Encoder network compresses input to a latent representation; decoder reconstructs the original input.\\n- **Use Cases**: Dimensionality reduction, denoising, and unsupervised feature learning.\\n- **Key Concept**: The bottleneck forces the model to learn compact, informative features.\\n\\n## 5. Generative Adversarial Networks (`GAN`)\\n- **Structure**: Two networks—**generator** and **discriminator**—trained in opposition.\\n- **Use Cases**: Image synthesis, data augmentation, and style transfer.\\n- **Key Idea**: The generator creates realistic data while the discriminator learns to distinguish real from fake.\\n\\n## 6. Transformer Networks\\n- **Structure**: Stacks of **self‑attention** layers and feedforward sub‑layers.\\n- **Use Cases**: Natural language processing, translation, and any task requiring long‑range dependencies.\\n- **Key Concepts**:\\n  - **Self‑attention** allows each token to weigh the relevance of every other token.\\n  - **Positional encoding** injects sequence order information.\\n\\n## 7. Graph Neural Networks (`GNN`)\\n- **Structure**: Nodes represent entities; edges capture relationships. Message‑passing updates node embeddings.\\n- **Use Cases**: Social network analysis, molecular property prediction, and recommendation systems.\\n- **Key Concept**: Exploits the inherent structure of graph‑structured data.\\n\\n---\\n\\nEach architecture can be adapted or combined with others to tackle complex problems. Selecting the right type depends on the data modality, task requirements, and computational resources.\"}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output JSON with field markdown. Provide polished notes.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794646586,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_ca5edfaab2",
+  "usage": {
+    "completion_tokens": 673,
+    "prompt_tokens": 257,
+    "total_tokens": 930,
+    "completion_time": 1.401840653,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14
+    },
+    "prompt_time": 0.011688976,
+    "prompt_tokens_details": null,
+    "queue_time": 0.370216881,
+    "total_time": 1.4135296290000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cmbb80e9yadard3nbv24dj",
+    "debug": null,
+    "seed": 332904075,
+    "usage": null
+  }
+}

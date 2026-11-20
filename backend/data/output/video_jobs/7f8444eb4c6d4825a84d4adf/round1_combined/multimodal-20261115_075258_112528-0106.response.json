@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-c1b5b477-2c38-4a65-be07-1135c0374edd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"fact1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If the domestic interest rate is increased, the exchange rate goes up.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"An appreciation means the dollar becomes more expensive.\",\n      \"refs\": [\"Q0002\", \"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When domestic and international interest rates are equal, the exchange rate today is at parity.\",\n      \"refs\": [\"Q0004\", \"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact4\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If interest rates are equal, the expected exchange rate next year shows no capital gain or loss.\",\n      \"refs\": [\"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00017\"],\n      \"reason\": \"No explicit concept names or definitions are provided in the excerpts.\"\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00017\"],\n      \"reason\": \"No term definitions are present.\"\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00017\"],\n      \"reason\": \"No extended explanatory passages are given.\"\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00017\"],\n      \"reason\": \"No concrete examples or numerical illustrations are included.\"\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00017\"],\n      \"reason\": \"No formula text is provided; the speaker refers to an unseen equation.\"\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00017\"],\n      \"reason\": \"No step‑by‑step procedure is described.\"\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00017\"],\n      \"reason\": \"No explicit subject‑object relationship statements are identified beyond the factual claims already captured.\"\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What happens to the exchange rate when the domestic interest rate is increased?\",\n      \"answer\": \"The exchange rate goes up (appreciates).\",\n      \"explanation\": \"The speaker states that moving the domestic interest rate up causes the exchange rate to go up.\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0001\"],\n      \"topic\": \"interest‑rate effect on exchange rate\"\n    },\n    {\n      \"question\": \"Define 'appreciation' as used in the speaker's explanation.\",\n      \"answer\": \"An appreciation means the dollar becomes more expensive.\",\n      \"explanation\": \"The speaker explicitly calls the rise in the dollar's price an appreciation.\",\n      \"bloom_level\": \"Understand\",\n      \"refs\": [\"Q0002\", \"Q0003\"],\n      \"topic\": \"appreciation definition\"\n    },\n    {\n      \"question\": \"If domestic and international interest rates are equal, what is the exchange rate today equal to?\",\n      \"answer\": \"It is at parity (no difference between domestic and foreign currency values).\",\n      \"explanation\": \"The speaker notes that when the rates are the same, the exchange rate today is equal (parity).\",\n      \"bloom_level\": \"Apply\",\n      \"refs\": [\"Q0004\", \"Q0011\"],\n      \"topic\": \"exchange‑rate parity\"\n    },\n    {\n      \"question\": \"When interest rates are equal, what does the speaker say about the expected exchange rate next year?\",\n      \"answer\": \"There is no expected capital gain or loss from the currency position.\",\n      \"explanation\": \"The speaker explains that with equal interest rates, the expected exchange rate next year shows no gain or loss.\",\n      \"bloom_level\": \"Analyze\",\n      \"refs\": [\"Q0012\"],\n      \"topic\": \"expected exchange‑rate outcome\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows etc but source lacks concrete facts. Likely abstentions for many fields. We must output quiz of 4 questions supported. We have statements about interest rates and exchange rate appreciation. Can make facts.\n\nWe need rows for some category maybe facts. Provide rows with fact_text from quotes. Use item label e.g. \"item1\". Provide availability SOURCE_SUPPORTED? The excerpts are primary but ASR speech, may be uncertain but we can treat as SOURCE_SUPPORTED? Probably SOURCE_SUPPORTED.\n\nCreate rows: facts category, fact_text from Q0001 etc.\n\nProvide three rows maybe. Need required fields for each item: facts require fact_text only. So each row is a fact item? Actually each row is atomic claim; category facts, field fact_text, element0, part value.\n\nWe can create multiple rows with same item? Each fact separate item.\n\nProvide abstentions for other categories empty.\n\nQuiz: 4 questions based on these facts.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794729530,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_854fa9be4c",
+  "usage": {
+    "completion_tokens": 1477,
+    "prompt_tokens": 2632,
+    "total_tokens": 4109,
+    "completion_time": 4.037203189,
+    "completion_tokens_details": {
+      "reasoning_tokens": 197
+    },
+    "prompt_time": 0.031739963,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "queue_time": 0.2902009,
+    "total_time": 4.068943152
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f3eh0yeaxtbwbta0hd2347",
+    "debug": null,
+    "seed": 328501463,
+    "usage": null
+  }
+}

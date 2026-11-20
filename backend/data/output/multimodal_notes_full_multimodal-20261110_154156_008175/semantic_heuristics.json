@@ -1,0 +1,66 @@
+{
+  "verification_timestamp": "2026-11-10T21:36:52.075972",
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "total_claims_verified": 1,
+  "claims_supported": 1,
+  "claims_unsupported": 0,
+  "claims_contradicted": 0,
+  "claims_inconclusive": 0,
+  "claims_insufficient_evidence": 0,
+  "claim_verifications": [
+    {
+      "knowledge_id": "DEF_0001",
+      "knowledge_type": "definition",
+      "claim_text": "Java will not evaluate the rest of this expression, it simply returns true.",
+      "source_unit_ids": [
+        "G00088"
+      ],
+      "verification_status": {
+        "status": "SUPPORTED",
+        "confidence": 0.95,
+        "reason": "Strong keyword overlap (100.0%) with source text, no contradictions detected",
+        "evidence_snippets": [
+          "G00088:  Java will not evaluate the rest of this expression, it simply returns\n true. However, if this variable was false,\n java would continue evaluating this expression\n hoping that the next boolean value o"
+        ],
+        "has_numeric_match": true,
+        "has_entity_match": true,
+        "has_keyword_match": true
+      },
+      "numeric_verification": {
+        "claimed_numbers": [],
+        "source_numbers": [],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "entity_verification": {
+        "claimed_entities": [],
+        "source_entities": [
+          "However",
+          "So",
+          "We",
+          "They",
+          "Now"
+        ],
+        "all_matched": true,
+        "mismatches": []
+      },
+      "source_snippets": [
+        "G00088:  Java will not evaluate the rest of this expression, it simply returns\n true. However, if this variable was false,\n java would continue evaluating this expression\n hoping that the next boolean value o"
+      ],
+      "source_full_text": " Java will not evaluate the rest of this expression, it simply returns\n true. However, if this variable was false,\n java would continue evaluating this expression\n hoping that the next boolean value or the next boolean expression is true\n so this is the or operator, and finally we have the not\n operator that we use to reverse a value, let me show you how that works\n so let's declare another boolean variable\n has criminal record, we set this to false\n so here's the rule we want to implement, in order for someone to be eligible\n for a loan, they should either have high income or good credit\n and they should not have any criminal records.\n So let's see how we can implement this rule. We have implemented the first part.\n They should either have high income or good credit. Now we want to make sure\n that they don't have any criminal records. So we need to combine\n the result of this expression with this boolean value using the\n and operator. So first we wrap this expression in parentheses,\n then we apply the and operator, and here we add\n has criminal record. Now we want to make sure they don't have\n criminal record, and this is where we use the not operator.",
+      "verification_method": "deterministic"
+    }
+  ],
+  "semantic_faithfulness_verified": true,
+  "verification_complete": true,
+  "verification_method": "deterministic",
+  "limitations": [
+    "This verification uses deterministic text matching and heuristics only.",
+    "Cannot detect paraphrasing or semantic equivalence beyond keyword matching.",
+    "May produce false negatives (marking valid claims as INCONCLUSIVE).",
+    "Returns INCONCLUSIVE when evidence is ambiguous rather than making guesses.",
+    "Numeric and entity matching is case-sensitive and exact.",
+    "Does not understand context, inference, or implicit information."
+  ]
+}

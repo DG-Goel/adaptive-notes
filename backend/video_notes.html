@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video notes</title>
+<style>
+body{font:16px/1.5 system-ui;margin:3rem auto;padding:0 1rem;max-width:760px;color:#182c38;background:#f4f8fa}
+article{background:white;padding:1.25rem;margin:1rem 0;border:1px solid #c7d7df;border-radius:.6rem}
+button{font:inherit;background:#145d67;color:white;border:0;border-radius:.35rem;padding:.5rem 1rem;cursor:pointer}
+a{margin-right:1rem;color:#125461}
+</style>
+<main><h1>Video notes</h1>
+<label><input id="permission" type="checkbox"> Allow this job to send transcript and notes text to Groq</label>
+<div id="videos"></div></main>
+<script type="module">
+const library = document.querySelector('#videos');
+async function json(url, options) {
+  const response = await fetch(url, options);
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.detail || 'Request failed');
+  return data;
+}
+try {
+  for (const video of await json('/api/videos')) {
+    const card = document.createElement('article');
+    const title = document.createElement('h2');
+    title.textContent = video;
+    const button = document.createElement('button');
+    button.textContent = 'Get notes';
+    const status = document.createElement('p');
+    status.setAttribute('aria-live', 'polite');
+    const links = document.createElement('div');
+    card.append(title, button, status, links);
+    library.append(card);
+    button.onclick = async () => {
+      button.disabled = true;
+      links.replaceChildren();
+      try {
+        const {job_id} = await json('/api/video-notes', {
+          method: 'POST', headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({video, allow_groq: document.querySelector('#permission').checked})
+        });
+        for (;;) {
+          const job = await json('/api/video-notes/' + job_id);
+          status.textContent = job.state === 'failed' ? job.error : job.stage + ' · ' + job.state;
+          if (['complete', 'partial'].includes(job.state)) {
+            for (const [edition, label] of [['study','Study notes'],['reference','Notes with evidence']]) {
+              const link = document.createElement('a');
+              link.href = '/api/video-notes/' + job_id + '/' + edition;
+              link.textContent = label;
+              links.append(link);
+            }
+            break;
+          }
+          if (job.state === 'failed') break;
+          await new Promise(resolve => setTimeout(resolve, 3000));
+        }
+      } catch (error) {
+        status.textContent = error.message;
+      } finally {
+        button.disabled = false;
+      }
+    };
+  }
+} catch (error) {
+  library.textContent = error.message;
+}
+</script>

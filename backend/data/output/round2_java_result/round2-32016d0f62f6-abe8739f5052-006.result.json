@@ -1,0 +1,224 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0191",
+        "FCT_0199",
+        "FCT_0200"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    },
+    {
+      "note_ids": [
+        "FCT_0206",
+        "FCT_0207",
+        "FCT_0209",
+        "FCT_0208"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    },
+    {
+      "note_ids": [
+        "FCT_0202",
+        "FCT_0203"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Java Arithmetic Operators",
+      "source_segment_ids": [
+        "FCT_0191",
+        "FCT_0199",
+        "FCT_0200"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0191",
+            "FCT_0199",
+            "FCT_0200"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0191",
+              "exact_quote": "Java provides the same arithmetic operators as mathematics: addition, subtraction, multiplication, division, and modulus (remainder)."
+            },
+            {
+              "note_id": "FCT_0199",
+              "exact_quote": "Java supports addition, subtraction, multiplication, and division as arithmetic operators."
+            },
+            {
+              "note_id": "FCT_0200",
+              "exact_quote": "Arithmetic operators work on numbers called operands."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Arithmetic Operators in Java",
+            "headers": [
+              "Operator",
+              "Symbol",
+              "Description"
+            ],
+            "rows": [
+              [
+                "Addition",
+                "+",
+                "Adds two operands"
+              ],
+              [
+                "Subtraction",
+                "-",
+                "Subtracts second operand from first"
+              ],
+              [
+                "Multiplication",
+                "*",
+                "Multiplies two operands"
+              ],
+              [
+                "Division",
+                "/",
+                "Divides first operand by second"
+              ],
+              [
+                "Modulus (remainder)",
+                "%",
+                "Remainder of integer division"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Operator Precedence in Java Expressions",
+      "source_segment_ids": [
+        "FCT_0206",
+        "FCT_0207",
+        "FCT_0209",
+        "FCT_0208"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0206",
+            "FCT_0207",
+            "FCT_0209",
+            "FCT_0208"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0206",
+              "exact_quote": "Multiplication and division have higher precedence than addition and subtraction."
+            },
+            {
+              "note_id": "FCT_0207",
+              "exact_quote": "In the expression 10 + 3 * 2, the multiplication is evaluated first (3 * 2 = 6) and then added to 10, yielding 16."
+            },
+            {
+              "note_id": "FCT_0209",
+              "exact_quote": "Parentheses always have the highest priority, then multiplication and division, and finally addition and subtraction."
+            },
+            {
+              "note_id": "FCT_0208",
+              "exact_quote": "Now if you want to change the order of these operators, you can always use parenthesis."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Operator Precedence Flow",
+            "direction": "top-down",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "Parentheses"
+              },
+              {
+                "id": "n2",
+                "label": "Multiplication / Division"
+              },
+              {
+                "id": "n3",
+                "label": "Addition / Subtraction"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": "next"
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": "next"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Postfix vs Prefix Increment Operators",
+      "source_segment_ids": [
+        "FCT_0202",
+        "FCT_0203"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0202",
+            "FCT_0203"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0202",
+              "exact_quote": "When the increment operator is used as a postfix (x++), the original value of x is used in the expression and then x is incremented."
+            },
+            {
+              "note_id": "FCT_0203",
+              "exact_quote": "When the increment operator is used as a prefix (++x), x is incremented first and the new value is used in the expression."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Increment Operator Behavior",
+            "headers": [
+              "Form",
+              "Evaluation Order",
+              "Result Used in Expression"
+            ],
+            "rows": [
+              [
+                "Postfix (x++)",
+                "Use current value, then increment",
+                "Current value"
+              ],
+              [
+                "Prefix (++x)",
+                "Increment first, then use",
+                "New incremented value"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

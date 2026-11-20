@@ -1,0 +1,105 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0276",
+        "FCT_0277",
+        "FCT_0279",
+        "FCT_0278",
+        "FCT_0280"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Mortgage calculator input flow",
+      "source_segment_ids": [
+        "FCT_0276",
+        "FCT_0277",
+        "FCT_0279",
+        "FCT_0278",
+        "FCT_0280"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0276",
+            "FCT_0277",
+            "FCT_0279",
+            "FCT_0278",
+            "FCT_0280"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0276",
+              "quote": "When the program runs, it asks a few questions."
+            },
+            {
+              "note_id": "FCT_0277",
+              "quote": "The first question asks for the principal, or the amount of loan."
+            },
+            {
+              "note_id": "FCT_0278",
+              "quote": "Example principal value: $100,000."
+            },
+            {
+              "note_id": "FCT_0279",
+              "quote": "The second question asks for the annual interest rate."
+            },
+            {
+              "note_id": "FCT_0280",
+              "quote": "Example interest rate: 3.92%."
+            }
+          ],
+          "payload": {
+            "type": "sequence",
+            "title": "Mortgage calculator input flow",
+            "direction": "DOWN",
+            "participants": [
+              {
+                "id": "p1",
+                "label": "Program"
+              },
+              {
+                "id": "p2",
+                "label": "User"
+              }
+            ],
+            "events": [
+              {
+                "kind": "message",
+                "from": "p1",
+                "to": "p2",
+                "text": "Ask for principal"
+              },
+              {
+                "kind": "message",
+                "from": "p2",
+                "to": "p1",
+                "text": "Provide $100,000"
+              },
+              {
+                "kind": "message",
+                "from": "p1",
+                "to": "p2",
+                "text": "Ask for annual interest rate"
+              },
+              {
+                "kind": "message",
+                "from": "p2",
+                "to": "p1",
+                "text": "Provide 3.92%"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

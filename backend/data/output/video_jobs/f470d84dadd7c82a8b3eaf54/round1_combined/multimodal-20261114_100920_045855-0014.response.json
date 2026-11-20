@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-ce7785a8-af77-4539-a22b-daa027531bf5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"uncovered interest parity condition\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"That's called, and it's a very important concept in international finance, the uncovered interest parity condition.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc about uncovered interest parity. Use primary excerpts. Create concept item. concept_name \"uncovered interest parity condition\". content from Q0000 etc. Provide rows.\n\nWe have enough for concept: content and concept_name. Use item \"item1\". Provide two rows.\n\nRow1: field concept_name, element0, part value, text \"uncovered interest parity condition\", refs [\"Q0000\"], basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\nRow2: field content, element0, part value, text from Q0000 maybe combine: \"That's called, and it's a very important concept in international finance, the uncovered interest parity condition.\" Use Q0000.\n\nAlso maybe include explanation? But only required fields.\n\nProvide abstentions none, excluded none.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794650969,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a7bb72c24",
+  "usage": {
+    "completion_tokens": 420,
+    "prompt_tokens": 3119,
+    "total_tokens": 3539,
+    "completion_time": 0.879498462,
+    "completion_tokens_details": {
+      "reasoning_tokens": 174
+    },
+    "prompt_time": 0.142483168,
+    "prompt_tokens_details": null,
+    "queue_time": 0.162038319,
+    "total_time": 1.02198163
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7crh3tjev4880h842rfng5r",
+    "debug": null,
+    "seed": 1020657230,
+    "usage": null
+  }
+}

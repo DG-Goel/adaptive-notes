@@ -1,0 +1,37 @@
+INFO Transcribing on cuda with int8_float16
+INFO Processing audio with duration 49:02.549
+INFO VAD filter removed 05:09.941 of audio
+INFO Saved 900 segments; device=cuda compute=int8_float16 elapsed=203.51s RTF=0.06916267823940044
+{
+  "video_duration": 2942.54875,
+  "transcript_segments": 900,
+  "raw_detections": 63,
+  "events": 50,
+  "priority_counts": {
+    "HIGH": 9,
+    "MEDIUM": 32,
+    "LOW": 9
+  },
+  "category_counts": {
+    "CODE_VISUAL_DEPENDENCY": 2,
+    "FORMULA_VISUAL_DEPENDENCY": 31,
+    "SCREEN_OUTPUT_DEPENDENCY": 1,
+    "DIAGRAM_VISUAL_DEPENDENCY": 5,
+    "TABLE_CHART_VISUAL_DEPENDENCY": 0,
+    "SLIDE_TEXT_DEPENDENCY": 0,
+    "CORRECTION_OR_REVISION": 1,
+    "AMBIGUOUS_VISUAL_REFERENCE": 9,
+    "TECHNICAL_ASR_RISK": 14
+  },
+  "unique_flagged_seconds": 452.95000000000005,
+  "coverage_percent": 15.393117955989688,
+  "merged_detection_reduction": 13,
+  "events_per_hour": 61.171458926551345,
+  "processing_seconds": 0.09605199999987235
+}
+Traceback (most recent call last):
+  File "C:\Projects\adaptive-notes\backend\video_notes_jobs.py", line 157, in process
+    run_workflow(SimpleNamespace(legacy_category_passes=False), data=data, output=path,
+  File "C:\Projects\adaptive-notes\backend\run_video3_notes.py", line 99, in run_workflow
+    raise RuntimeError(f"Round 1 incomplete. Missing chunks: {summary['missing_chunk_serials']}. See round1_errors.jsonl.")
+RuntimeError: Round 1 incomplete. Missing chunks: [22]. See round1_errors.jsonl.

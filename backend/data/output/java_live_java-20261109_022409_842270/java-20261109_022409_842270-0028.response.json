@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-277b693a-34bc-4944-8b66-c58a7cd21e85",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"package statement\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"specifies what package this class belongs to\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"main method\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a public static method with return type void that may take a parameter for passing values to the program\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"comments in Java\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"lines that start with // are comments; they are used to explain code and are not executed\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"All Java files should have the .java extension\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In Java, statements must be terminated with a semicolon\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The System class is defined in the java.lang package\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts we have facts, definitions, explanations maybe. Identify:\n\nFact: Java files should have .java extension. excerpt Q0001.\n\nFact: Statements terminated by semicolon. Q0002.\n\nDefinition: package statement specifies package class belongs to. Q0002.\n\nDefinition: main method should be static, return type void, takes String[] args. Q0003.\n\nExplanation: comments start with // and are not executed. Q0004.\n\nFact: System class is defined in java.lang package. Q0005.\n\nAlso maybe concept: project panel etc but not needed.\n\nWe'll create facts, definitions, explanations.\n\nProvide refs arrays.\n\nNow produce JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191214,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c868cf1eaa",
+  "usage": {
+    "completion_tokens": 568,
+    "prompt_tokens": 3137,
+    "total_tokens": 3705,
+    "completion_time": 1.1928315999999999,
+    "completion_tokens_details": {
+      "reasoning_tokens": 142
+    },
+    "prompt_time": 0.241903449,
+    "prompt_tokens_details": null,
+    "queue_time": 0.401527955,
+    "total_time": 1.434735049
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z22fpyetqaeyphqkvp5a55",
+    "debug": null,
+    "seed": 218406207,
+    "usage": null
+  }
+}

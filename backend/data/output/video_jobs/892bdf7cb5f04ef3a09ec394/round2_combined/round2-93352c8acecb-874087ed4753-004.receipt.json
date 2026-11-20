@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-5ae99c39-7a3c-470a-a94a-a1b41827b776",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Multiplier Chain Reaction\",\n      \"source_segment_ids\": [\"CON_0043\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0043\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0043\",\n              \"quote\": \"The multiplier arises because an increase in income raises consumption, which raises income again, creating a chain reaction.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Multiplier Chain Reaction\",\n            \"direction\": \"DOWN\",\n            \"nodes\": [\n              { \"id\": \"n1\", \"label\": \"Increase in income\", \"kind\": \"start\" },\n              { \"id\": \"n2\", \"label\": \"Raises consumption\", \"kind\": \"action\" },\n              { \"id\": \"n3\", \"label\": \"Raises income again\", \"kind\": \"action\" }\n            ],\n            \"edges\": [\n              { \"from\": \"n1\", \"to\": \"n2\", \"label\": \"raises\" },\n              { \"from\": \"n2\", \"to\": \"n3\", \"label\": \"raises\" }\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Trade Outcome Comparison\",\n      \"source_segment_ids\": [\"CON_0053\", \"CON_0054\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0053\", \"CON_0054\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0053\",\n              \"quote\": \"I would have ended up with a bigger trade deficit.\"\n            },\n            {\n              \"note_id\": \"CON_0054\",\n              \"quote\": \"I end up with a trade surplus rather than a trade deficit.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Trade Outcome Comparison\",\n            \"headers\": [\"Outcome\", \"Description\"],\n            \"rows\": [\n              [\"Trade deficit\", \"I would have ended up with a bigger trade deficit.\"],\n              [\"Trade surplus\", \"I end up with a trade surplus rather than a trade deficit.\"]\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Net Export Function Characteristics\",\n      \"source_segment_ids\": [\"CON_0047\", \"CON_0046\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0047\", \"CON_0046\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0047\",\n              \"quote\": \"The net export function is export minus import divided by the exchange rate. It is a decreasing function of domestic output.\"\n            },\n            {\n              \"note_id\": \"CON_0046\",\n              \"quote\": \"Domestic demand for goods is the same as demand for domestically produced goods. Trade balance is 0, meaning exports are exactly equal to imports. Net exports are equal to 0.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Net Export Function Characteristics\",\n            \"headers\": [\"Item\", \"Description\"],\n            \"rows\": [\n              [\"Net export function\", \"export minus import divided by the exchange rate; decreasing function of domestic output.\"],\n              [\"Trade balance (0)\", \"Exports equal imports; net exports equal 0.\"]\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visual units. Look for comparisons etc. We have notes about foreign output, ZZ curve vs DD, multiplier chain, net export function decreasing, trade deficit/surplus, etc. Could make table comparing ZZ vs DD curves, trade deficit vs surplus, multiplier in open vs closed economy. Also flowchart for multiplier chain reaction. Provide visuals.\n\nCreate units with source_segment_ids list. Use earliest note as primary. Provide payloads.\n\nLet's craft three visuals:\n\n1. Table comparing ZZ curve and DD curve (notes FCT_0007, FCT_0008). Need exact quotes: FCT_0007: \"One thing about the ZZ curve relative to DD is highlighted.\" FCT_0008: \"The most obvious difference between the two curves is asked.\" Not exact differences. Might be insufficient. Might not have concrete properties. Might be weak.\n\nBetter table: trade outcome: CON_0053 \"I would have ended up with a bigger trade deficit.\" CON_0054 \"I end up with a trade surplus rather than a trade deficit.\" Provide comparison deficit vs surplus. Use those two notes.\n\n2. Flowchart for multiplier chain: CON_0043 describes chain reaction. Provide start: increase in income -> raises consumption -> raises income again. So flowchart.\n\n3. Table for net export function: CON_0047 \"The net export function is export minus import divided by the exchange rate. It is a decreasing function of domestic output.\" Also CON_0046 about domestic demand equals demand for domestically produced goods, trade balance zero. Could table with Item, Description.\n\nWe'll produce units.\n\nNeed source_segment_ids: include note IDs used.\n\nProvide needs_review false, missing_information [].\n\nReturn JSON with units array.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794769960,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5e2577217c",
+  "usage": {
+    "completion_tokens": 1179,
+    "prompt_tokens": 2901,
+    "total_tokens": 4080,
+    "completion_time": 2.468341977,
+    "completion_tokens_details": {
+      "reasoning_tokens": 355
+    },
+    "prompt_time": 0.14251075,
+    "prompt_tokens_details": null,
+    "queue_time": 0.0528127,
+    "total_time": 2.610852727
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ga0dc2eppvm5jka4mr6cea",
+    "debug": null,
+    "seed": 457777859,
+    "usage": null
+  }
+}

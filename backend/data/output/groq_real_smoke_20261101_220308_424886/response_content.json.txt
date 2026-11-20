@@ -1,0 +1,184 @@
+{
+  "concepts": [
+    {
+      "concept_name": "final variable",
+      "aliases": ["constant"],
+      "content": "A variable declared with the final keyword that cannot be assigned a new value after initialization.",
+      "source_unit_ids": ["T0022"]
+    },
+    {
+      "concept_name": "constant naming convention",
+      "aliases": [],
+      "content": "Constants are named using all capital letters.",
+      "source_unit_ids": ["T0022"]
+    },
+    {
+      "concept_name": "arithmetic operators",
+      "aliases": [],
+      "content": "Operators for addition (+), subtraction (-), multiplication (*), division (/), and modulus (%).",
+      "source_unit_ids": ["T0022"]
+    },
+    {
+      "concept_name": "operand",
+      "aliases": [],
+      "content": "Numbers or values on which arithmetic operators act.",
+      "source_unit_ids": ["T0022"]
+    },
+    {
+      "concept_name": "increment operator",
+      "aliases": ["++"],
+      "content": "Operator that increases an integer variable by 1; can be used as prefix or postfix.",
+      "source_unit_ids": ["T0022"]
+    },
+    {
+      "concept_name": "decrement operator",
+      "aliases": ["--"],
+      "content": "Operator that decreases an integer variable by 1; can be used as prefix or postfix.",
+      "source_unit_ids": ["T0022"]
+    },
+    {
+      "concept_name": "expression",
+      "aliases": [],
+      "content": "A piece of code that produces a value.",
+      "source_unit_ids": ["T0022"]
+    }
+  ],
+  "definitions": [
+    {
+      "term": "expression",
+      "definition_text": "A piece of code that produces a value.",
+      "context": "Java programming",
+      "content": "A piece of code that produces a value.",
+      "source_unit_ids": ["T0022"]
+    },
+    {
+      "term": "final variable",
+      "definition_text": "A variable declared with the final keyword that cannot be reassigned.",
+      "context": "Java",
+      "content": "A variable declared with the final keyword that cannot be reassigned.",
+      "source_unit_ids": ["T0022"]
+    }
+  ],
+  "explanations": [
+    {
+      "topic": "integer division result",
+      "explanation_text": "In Java, dividing two whole numbers yields a whole number; fractional part is discarded.",
+      "explanation_type": "functional",
+      "content": "In Java, dividing two whole numbers yields a whole number; fractional part is discarded.",
+      "source_unit_ids": ["T0022"]
+    },
+    {
+      "topic": "casting to obtain floating-point result",
+      "explanation_text": "Casting one operand to double converts the division to floating-point, producing a decimal result.",
+      "explanation_type": "procedural",
+      "content": "Casting one operand to double converts the division to floating-point, producing a decimal result.",
+      "source_unit_ids": ["T0022"]
+    },
+    {
+      "topic": "increment operator effect",
+      "explanation_text": "Applying ++ to a variable increases its value by 1; prefix and postfix forms both result in increment.",
+      "explanation_type": "functional",
+      "content": "Applying ++ to a variable increases its value by 1; prefix and postfix forms both result in increment.",
+      "source_unit_ids": ["T0022"]
+    }
+  ],
+  "examples": [
+    {
+      "exemplifies": "addition",
+      "example_text": "int result = 10 + 3; // result is 13",
+      "example_type": "numerical",
+      "content": "int result = 10 + 3; // result is 13",
+      "source_unit_ids": ["T0022"]
+    },
+    {
+      "exemplifies": "division with casting",
+      "example_text": "double result = (double)10 / 3; // yields a floating-point number",
+      "example_type": "numerical",
+      "content": "double result = (double)10 / 3; // yields a floating-point number",
+      "source_unit_ids": ["T0022"]
+    },
+    {
+      "exemplifies": "increment operator",
+      "example_text": "int X = 1; ++X; // X becomes 2",
+      "example_type": "numerical",
+      "content": "int X = 1; ++X; // X becomes 2",
+      "source_unit_ids": ["T0022"]
+    }
+  ],
+  "facts": [
+    {
+      "fact_text": "By convention, constants are named using all capital letters.",
+      "fact_type": "historical",
+      "content": "By convention, constants are named using all capital letters.",
+      "source_unit_ids": ["T0022"]
+    },
+    {
+      "fact_text": "A compilation error occurs when assigning a value to a final variable.",
+      "fact_type": "empirical",
+      "content": "A compilation error occurs when assigning a value to a final variable.",
+      "source_unit_ids": ["T0022"]
+    }
+  ],
+  "formulas": [
+    {
+      "formula_text": "result = 10 + 3",
+      "variables": {
+        "result": "variable storing sum",
+        "10": "first addend",
+        "3": "second addend"
+      },
+      "content": "result = 10 + 3",
+      "source_unit_ids": ["T0022"]
+    },
+    {
+      "formula_text": "result = (double)10 / 3",
+      "variables": {
+        "result": "variable storing division result",
+        "10": "numerator cast to double",
+        "3": "denominator"
+      },
+      "content": "result = (double)10 / 3",
+      "source_unit_ids": ["T0022"]
+    }
+  ],
+  "procedures": [
+    {
+      "procedure_name": "Fix type mismatch after casting division",
+      "steps": [
+        "Identify compilation error due to assigning double result to int variable",
+        "Change variable type to double",
+        "Recompile and run program"
+      ],
+      "content": "Change variable type to double to match casted division result.",
+      "source_unit_ids": ["T0022"]
+    },
+    {
+      "procedure_name": "Use increment operator",
+      "steps": [
+        "Declare integer variable",
+        "Apply ++ before or after variable",
+        "Print variable to see incremented value"
+      ],
+      "content": "Apply ++ to increase integer by 1.",
+      "source_unit_ids": ["T0022"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "is_a",
+      "subject": "final variable",
+      "object": "constant",
+      "description": "A final variable is a constant that cannot be reassigned.",
+      "content": "A final variable is a constant that cannot be reassigned.",
+      "source_unit_ids": ["T0022"]
+    },
+    {
+      "relationship_type": "requires",
+      "subject": "floating-point division result",
+      "object": "casting one operand to double",
+      "description": "Casting is required to obtain a floating-point result from integer division.",
+      "content": "Casting is required to obtain a floating-point result from integer division.",
+      "source_unit_ids": ["T0022"]
+    }
+  ]
+}

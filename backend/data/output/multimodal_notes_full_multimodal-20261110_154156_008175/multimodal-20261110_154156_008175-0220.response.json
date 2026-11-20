@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-9d62e4bb-281f-43fe-9db5-95bb2c47460c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"boolean expression\",\n        \"refs\": [\"Q0001\", \"Q0009\"],\n        \"claims\": [\n          {\n            \"text\": \"A boolean expression produces a boolean value true or false.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0001\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"In the last tutorial you learned that a boolean expression produces a boolean value.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0009\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"A boolean expression produces a boolean value true or false.\",\n        \"refs\": [\"Q0001\", \"Q0009\"],\n        \"claims\": [\n          {\n            \"text\": \"A boolean expression produces a boolean value true or false.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0001\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"In the last tutorial you learned that a boolean expression produces a boolean value.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0009\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract definitions only. Look for definition teaching. The excerpts talk about boolean expression produces a value, etc. Definition of boolean expression? Likely. So create item with term and definition_text. term maybe \"boolean expression\". definition_text from Q0001 and Q0009. Combine? Provide claims.\n\nWe'll include primary excerpts Q0001 and Q0009 as definition. term claim maybe from Q0009? term text \"boolean expression\". Provide claim with explicit basis, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role prerequisite? maybe definition role not listed; use null.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326472,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "usage": {
+    "completion_tokens": 527,
+    "prompt_tokens": 3292,
+    "total_tokens": 3819,
+    "completion_time": 1.11196164,
+    "completion_tokens_details": {
+      "reasoning_tokens": 120
+    },
+    "prompt_time": 0.298749185,
+    "prompt_tokens_details": null,
+    "queue_time": 0.171352803,
+    "total_time": 1.410710825
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m733285vev78rkrax2vdhvn7",
+    "debug": null,
+    "seed": 253161977,
+    "usage": null
+  }
+}

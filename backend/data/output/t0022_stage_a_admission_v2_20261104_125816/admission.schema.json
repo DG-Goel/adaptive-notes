@@ -1,0 +1,285 @@
+{
+  "$defs": {
+    "Limit": {
+      "additionalProperties": false,
+      "properties": {
+        "scope": {
+          "enum": [
+            "organization",
+            "project"
+          ],
+          "title": "Scope",
+          "type": "string"
+        },
+        "metric": {
+          "enum": [
+            "RPM",
+            "RPD",
+            "TPM",
+            "TPD",
+            "ITPM",
+            "OTPM"
+          ],
+          "title": "Metric",
+          "type": "string"
+        },
+        "limit": {
+          "exclusiveMinimum": 0,
+          "title": "Limit",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "scope",
+        "metric",
+        "limit"
+      ],
+      "title": "Limit",
+      "type": "object"
+    },
+    "Window": {
+      "additionalProperties": false,
+      "properties": {
+        "scope": {
+          "enum": [
+            "organization",
+            "project"
+          ],
+          "title": "Scope",
+          "type": "string"
+        },
+        "metric": {
+          "enum": [
+            "RPM",
+            "RPD",
+            "TPM",
+            "TPD",
+            "ITPM",
+            "OTPM"
+          ],
+          "title": "Metric",
+          "type": "string"
+        },
+        "limit": {
+          "exclusiveMinimum": 0,
+          "title": "Limit",
+          "type": "integer"
+        },
+        "data_as_of": {
+          "title": "Data As Of",
+          "type": "number"
+        },
+        "used": {
+          "minimum": 0,
+          "title": "Used",
+          "type": "integer"
+        },
+        "outstanding": {
+          "minimum": 0,
+          "title": "Outstanding",
+          "type": "integer"
+        },
+        "evidence": {
+          "pattern": "\\S",
+          "title": "Evidence",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope",
+        "metric",
+        "limit",
+        "data_as_of",
+        "used",
+        "outstanding",
+        "evidence"
+      ],
+      "title": "Window",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "const": "PASS",
+      "title": "Decision",
+      "type": "string"
+    },
+    "stage": {
+      "const": "A",
+      "title": "Stage",
+      "type": "string"
+    },
+    "provider": {
+      "const": "Groq",
+      "title": "Provider",
+      "type": "string"
+    },
+    "model": {
+      "const": "openai/gpt-oss-120b",
+      "title": "Model",
+      "type": "string"
+    },
+    "source_id": {
+      "const": "T0022",
+      "title": "Source Id",
+      "type": "string"
+    },
+    "run_id": {
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}$",
+      "title": "Run Id",
+      "type": "string"
+    },
+    "organization": {
+      "pattern": "\\S",
+      "title": "Organization",
+      "type": "string"
+    },
+    "project": {
+      "pattern": "\\S",
+      "title": "Project",
+      "type": "string"
+    },
+    "operator": {
+      "pattern": "\\S",
+      "title": "Operator",
+      "type": "string"
+    },
+    "authorization": {
+      "pattern": "\\S",
+      "title": "Authorization",
+      "type": "string"
+    },
+    "credential_id": {
+      "pattern": "\\S",
+      "title": "Credential Id",
+      "type": "string"
+    },
+    "credential_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Credential Sha256",
+      "type": "string"
+    },
+    "request_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Request Sha256",
+      "type": "string"
+    },
+    "data_as_of": {
+      "title": "Data As Of",
+      "type": "number"
+    },
+    "verified_at": {
+      "title": "Verified At",
+      "type": "number"
+    },
+    "control_until": {
+      "title": "Control Until",
+      "type": "number"
+    },
+    "traffic": {
+      "enum": [
+        "controlled",
+        "accounted"
+      ],
+      "title": "Traffic",
+      "type": "string"
+    },
+    "coordination_evidence": {
+      "pattern": "\\S",
+      "title": "Coordination Evidence",
+      "type": "string"
+    },
+    "authoritative_limits": {
+      "const": true,
+      "title": "Authoritative Limits",
+      "type": "boolean"
+    },
+    "complete_limit_inventory": {
+      "const": true,
+      "title": "Complete Limit Inventory",
+      "type": "boolean"
+    },
+    "complete_usage_inventory": {
+      "const": true,
+      "title": "Complete Usage Inventory",
+      "type": "boolean"
+    },
+    "inventory_evidence": {
+      "pattern": "\\S",
+      "title": "Inventory Evidence",
+      "type": "string"
+    },
+    "project_limits_apply": {
+      "title": "Project Limits Apply",
+      "type": "boolean"
+    },
+    "organization_split_metrics": {
+      "items": {
+        "enum": [
+          "ITPM",
+          "OTPM"
+        ],
+        "type": "string"
+      },
+      "title": "Organization Split Metrics",
+      "type": "array"
+    },
+    "project_split_metrics": {
+      "items": {
+        "enum": [
+          "ITPM",
+          "OTPM"
+        ],
+        "type": "string"
+      },
+      "title": "Project Split Metrics",
+      "type": "array"
+    },
+    "limits": {
+      "items": {
+        "$ref": "#/$defs/Limit"
+      },
+      "title": "Limits",
+      "type": "array"
+    },
+    "windows": {
+      "items": {
+        "$ref": "#/$defs/Window"
+      },
+      "title": "Windows",
+      "type": "array"
+    }
+  },
+  "required": [
+    "decision",
+    "stage",
+    "provider",
+    "model",
+    "source_id",
+    "run_id",
+    "organization",
+    "project",
+    "operator",
+    "authorization",
+    "credential_id",
+    "credential_sha256",
+    "request_sha256",
+    "data_as_of",
+    "verified_at",
+    "control_until",
+    "traffic",
+    "coordination_evidence",
+    "authoritative_limits",
+    "complete_limit_inventory",
+    "complete_usage_inventory",
+    "inventory_evidence",
+    "project_limits_apply",
+    "organization_split_metrics",
+    "project_split_metrics",
+    "limits",
+    "windows"
+  ],
+  "title": "Admission",
+  "type": "object"
+}

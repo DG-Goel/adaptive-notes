@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-3d7570b1-128b-4ca6-ad89-96ab4ff6ab2c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"concepts\":[],\"definitions\":[],\"explanations\":[],\"examples\":[],\"facts\":[{\"content\":\"Mosh is the instructor in this Java course.\",\"source_unit_ids\":[\"T0001\"],\"source_evidence\":[{\"source_id\":\"T0001\",\"quote_id\":\"Q0001\",\"quote\":\"My name is Mosh and I'm gonna be your instructor in this Java course.\",\"fields\":[\"/content\",\"/fact_text\"]}],\"fact_text\":\"Mosh is the instructor in this Java course.\"},{\"content\":\"The course is designed for beginners.\",\"source_unit_ids\":[\"T0001\"],\"source_evidence\":[{\"source_id\":\"T0001\",\"quote_id\":\"Q0004\",\"quote\":\"I've designed this course for anyone who wants to learn Java if you're a beginner don't worry I'll make Java super simple and hold your hands through this entire course\",\"fields\":[\"/content\",\"/fact_text\"]}],\"fact_text\":\"The course is designed for beginners.\"},{\"content\":\"The course teaches the basics of Java programming.\",\"source_unit_ids\":[\"T0001\"],\"source_evidence\":[{\"source_id\":\"T0001\",\"quote_id\":\"Q0003\",\"quote\":\"you'll learn about the basics of Java you'll learn how Java code gets executed you'll learn how to build simple algorithms\",\"fields\":[\"/content\",\"/fact_text\"]}],\"fact_text\":\"The course teaches the basics of Java programming.\"},{\"content\":\"The instructor has two decades of software engineering experience.\",\"source_unit_ids\":[\"T0001\"],\"source_evidence\":[{\"source_id\":\"T0001\",\"quote_id\":\"Q0004\",\"quote\":\"my name is mosh I'm a software engineer with two decades of experience\",\"fields\":[\"/content\",\"/fact_text\"]}],\"fact_text\":\"The instructor has two decades of software engineering experience.\"}],\"formulas\":[],\"procedures\":[],\"relationships\":[]}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract educational knowledge from source. The source is a transcript intro, no technical content. Must exclude marketing. So likely no concepts, definitions, etc. Maybe we can extract concept \"Java course\" or \"programming in Java\"? But must avoid marketing. The source includes statements like \"My name is Mosh and I'm gonna be your instructor in this Java course.\" That's factual. Could be a fact: \"Mosh is the instructor of the Java course.\" Also \"The course is designed for beginners.\" That's a fact. Also \"You will write your first Java program in minutes.\" That's a claim but maybe marketing. Might be considered marketing, exclude. Also \"I have taught over 3 million people.\" marketing. Exclude.\n\nSo we can create facts items.\n\nWe need up to ~50 items, but we can just include a few.\n\nEach item must have content, source_unit_ids (nonempty string array) referencing source IDs (canonical source IDs: T0001). source_evidence array with objects containing source_id, quote, fields.\n\nWe need quote_id? The instruction says include quote_id in every source_evidence object, selecting the excerpt that supports its fields. So need fields: source_id, quote, fields, and also quote_id. The contract earlier said source_evidence entry has source_id, quote and fields. Now they add quote_id. Must include quote_id.\n\nThus each source_evidence object: {\"source_id\":\"T0001\",\"quote_id\":\"Q0001\",\"quote\":\"My name is Mosh ...\",\"fields\":[\"/content\",\"/fact_text\"]} etc.\n\nWe need to ensure JSON valid.\n\nWe need to populate categories: facts maybe.\n\nLet's extract:\n\nFact 1: \"Mosh is the instructor in this Java course.\" Quote Q0001: \"My name is Mosh and I'm gonna be your instructor in this Java course.\"\n\nFact 2: \"The course is designed for beginners.\" Quote Q0004: \"I've designed this course for anyone who wants to learn Java if you're a beginner don't worry...\"\n\nFact 3: \"The course aims to teach basics of Java programming.\" Quote Q0003: \"you'll learn about the basics of Java you'll learn how Java code gets executed you'll learn how to build simple algorithms...\"\n\nFact 4: \"The instructor has two decades of experience.\" Quote Q0004: \"my name is mosh I'm a software engineer with two decades of experience...\"\n\nWe must avoid marketing like \"over 3 million people\". Might be factual but marketing. Could include as fact? It's a claim. Might be considered marketing. Safer to exclude.\n\nNow construct JSON with facts array containing objects.\n\nEach fact object: content (string) same as fact_text? The contract: facts require COMMON + fact_text; content repeats main text. So include content same as fact_text.\n\nThus each fact item: {\"content\":\"Mosh is the instructor in this Java course.\",\"source_unit_ids\":[\"T0001\"],\"source_evidence\":[{...}],\"fact_text\":\"Mosh is the instructor in this Java course.\"}\n\nWe need fields paths: /content and /fact_text. Also maybe /source_unit_ids? Not needed.\n\nNow source_evidence fields list JSON Pointer paths to populated substantive fields. So for each fact, fields: \"/content\",\"/fact_text\". Also maybe \"/source_unit_ids\"? Not required.\n\nAdd quote_id.\n\nNow produce JSON with facts array of 4 items.\n\nMake compact JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1793984266,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_02b0d31eca",
+  "usage": {
+    "completion_tokens": 1092,
+    "prompt_tokens": 1945,
+    "total_tokens": 3037,
+    "completion_time": 2.291526204,
+    "completion_tokens_details": {
+      "reasoning_tokens": 707
+    },
+    "prompt_time": 0.087624058,
+    "prompt_tokens_details": null,
+    "queue_time": 0.318997475,
+    "total_time": 2.379150262
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6rwpxwpea1850cs4vqkdrp8",
+    "debug": null,
+    "seed": 576181120,
+    "usage": null
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "PRC_0332": {
+    "reviewer": "assistant source-comparison review",
+    "role": "deliberately_incorrect_demonstration",
+    "status": "CONTRADICTED",
+    "rationale": "Source explicitly calls the ordering wrong. For 15 the divisible-by-5 branch wins before the combined condition. Retained only as a labeled incorrect demonstration.",
+    "severity": "critical",
+    "unresolved": false,
+    "evidence": [
+      {
+        "source_id": "T0041",
+        "quote": "now this is not the right solution as I will show you in a second this program has a book but it's a very common solution that I see amongst my students so let's run this program and see what is wrong here all right here we enter five we get fizz utiful what if you enter ten ten is also divisible by"
+      }
+    ],
+    "links": [
+      {
+        "kind": "explained_by",
+        "target_id": "EXP_0094",
+        "evidence": [
+          {
+            "source_id": "T0041",
+            "quote": "if we enter 15 this first condition will evaluate to true so we get fizz these other else clauses will be ignored and that is"
+          }
+        ]
+      },
+      {
+        "kind": "corrected_by",
+        "target_id": "EXM_0131",
+        "evidence": [
+          {
+            "source_id": "T0042",
+            "quote": "in this case we want to move this condition to the top so if the number is divisible by 5 & 3 we're gonna print fizzbuzz so this is very specific otherwise if the number is only divisible by 5 we print fizz else if it's divisible by 3 we print buzz and finally if none of his conditions is true then "
+          }
+        ]
+      },
+      {
+        "kind": "alternative",
+        "target_id": "EXM_0132",
+        "evidence": [
+          {
+            "source_id": "T0042",
+            "quote": "here is another way let me show you so we're gonna get rid of this second condition here instead we're gonna add a code block over here so if the number is divisible by 5 first we check to see if the number is also divisible by 3 if that's the case we print fizzbuzz otherwise we print just fizz like"
+          }
+        ]
+      }
+    ]
+  },
+  "EXM_0131": {
+    "reviewer": "assistant source-comparison review",
+    "role": "corrected_approach",
+    "status": "SUPPORTED",
+    "rationale": "Source moves combined condition first; no whole-program compilation claim.",
+    "unresolved": false,
+    "evidence": [
+      {
+        "source_id": "T0042",
+        "quote": "in this case we want to move this condition to the top so if the number is divisible by 5 & 3 we're gonna print fizzbuzz so this is very specific otherwise if the number is only divisible by 5 we print fizz else if it's divisible by 3 we print buzz and finally if none of his conditions is true then "
+      }
+    ]
+  },
+  "FRM_0003": {
+    "reviewer": "assistant source-comparison review",
+    "formula_status": "VISUAL_CONTEXT_REQUIRED",
+    "status": "PARTIALLY_SUPPORTED",
+    "rationale": "Only a fragment was extracted. Source continues with another expression and exponent, partly referring to unavailable visuals; no full formula reconstructed.",
+    "severity": "critical",
+    "evidence": [
+      {
+        "source_id": "T0031",
+        "quote": "we need to multiply this by this expression here we need to add 1 to this interest rate and raise it to the power of n where n is the number of payments so we need to multiply this number by 12 or 12 months to"
+      },
+      {
+        "source_id": "T0032",
+        "quote": "to raise this number to the power of n you need to use the power method of the math class so this math class has this power or power method that takes two arguments or two values a and B so go ahead and spend ten to fifteen minutes on this exercise when you're done come back see my solution all righ"
+      }
+    ]
+  },
+  "EXM_0117": {
+    "reviewer": "assistant source-comparison review",
+    "code_kind": "reconstructed",
+    "status": "PARTIALLY_SUPPORTED",
+    "rationale": "Spoken casting demonstration does not supply the generated exact declaration and result comment. Show source explanation, retain generated snippet in audit.",
+    "severity": "critical",
+    "evidence": [
+      {
+        "source_id": "T0022",
+        "quote": "we prefix this number with parentheses and in parentheses we type double now we are casting or converting this number to a double similarly we should do that here and now we have a compilation error because on the left side we declared an integer but here the result of this expression is a double an"
+      }
+    ]
+  },
+  "DEF_0004": {
+    "reviewer": "assistant source-comparison review",
+    "status": "INCONCLUSIVE",
+    "rationale": "The claim that every word is lowercase is not established by its truncated/ambiguous source segment. Continuation and later camel-notation explanation require review; do not certify this rule.",
+    "severity": "major",
+    "evidence": [
+      {
+        "source_id": "T0003",
+        "quote": "camel naming convention and that means the first letter of every word should be operate"
+      },
+      {
+        "source_id": "T0004",
+        "quote": "case except the first wart so that is why we have a capital m in the name of this class alright now that you understand the anatomy of a Java program let's create a new Java project and see all these building blocks in action in this Java tutorial you're gonna learn how to write and execute your fir"
+      },
+      {
+        "source_id": "T0033",
+        "quote": "note the camel notation here I've capitalized the first letter of every word except the first word so we get the Earth's and x months in here again the code is very self-explanatory once we collect all this data then we calculate the mortgage so we get a principal multiplied by this expression and t"
+      }
+    ]
+  }
+}

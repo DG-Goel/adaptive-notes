@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-e61ba6f2-cbf0-4a3f-bff7-d68ce7941a13",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00080\"],\n      \"reason\": \"No explicit definition of any term is present in the primary excerpts.\"\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract definitions only. Look for definition teaching. The excerpts talk about magic numbers, constants, data types, etc. Definitions: e.g., definition of magic number, constant, etc. Identify primary excerpts that define terms.\n\nWe have Q0002: \"In contrast, if you had a magic number here, like divide by 12 and then 4, whatever.\" Not definition. Q0004: \"What is 12?\" Q0005 explains 12 is months. That's definition of 12? Might be definition of magic number concept: Q0006 says avoid magic numbers, use constants. So definition of magic number: implicit. We can extract claim: \"Magic numbers are literal numeric values used directly in code without explanation.\" Basis explicit? Not directly quoted. Might be inferred. Probably not explicit definition. Might be no explicit definition, so abstain.\n\nThus items empty, abstentions for missing definition. Provide abstention with availability SOURCE_MISSING? Since no definition present. source_ids primary G00080. reason \"No explicit definition of terms found\".",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326404,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_27194a498a",
+  "usage": {
+    "completion_tokens": 298,
+    "prompt_tokens": 3143,
+    "total_tokens": 3441,
+    "completion_time": 0.627256359,
+    "completion_tokens_details": {
+      "reasoning_tokens": 217
+    },
+    "prompt_time": 0.272963042,
+    "prompt_tokens_details": null,
+    "queue_time": 0.223969981,
+    "total_time": 0.900219401
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m73306haea0v1g2rz8h6wy2x",
+    "debug": null,
+    "seed": 1406647884,
+    "usage": null
+  }
+}

@@ -1,0 +1,159 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<title>Video3-study-notes</title><style>
+@page {margin:17mm} body {font:11pt/1.48 system-ui;color:#172438;max-width:980px;margin:auto}
+h1,h2,h3 {color:#17447d;break-after:avoid} h2 {background:#edf5fa;padding:.4em}
+img {max-width:100%;max-height:340px;object-fit:contain} table {border-collapse:collapse;width:100%}
+th,td {border:1px solid #b7c5d6;padding:.45em} th {background:#edf5fa}
+img,table,li {break-inside:avoid} pre {white-space:pre-wrap}
+.reference {border-top:1px solid #b7c5d6;margin-top:1em} blockquote {color:#40546b}
+</style><main><h1>Video3 study notes</h1>
+<blockquote>
+<p>Partial preview from the 69 saved Round 1 items. Extraction and visual review are incomplete.</p>
+</blockquote>
+<h1>Artificial Intelligence Overview</h1>
+<p>Artificial intelligence (<strong>AI</strong>) is a broad field in computer science that focuses on training computers to perform tasks that humans excel at, such as pattern recognition, visual perception, and voice or text processing.</p>
+<h2>Machine Learning</h2>
+<p>Machine learning (<strong>ML</strong>) is a core subdomain of AI. It is generally divided into two main branches:</p>
+<ol>
+<li><strong>Statistical Machine Learning</strong>
+<ul>
+<li>Includes algorithms like <code>linear regression</code>, <code>decision tree</code>, and <code>k-means</code>.</li>
+<li>Used for tasks such as <strong>classification</strong> and <strong>regression</strong>.</li>
+</ul>
+</li>
+<li><strong>Deep Learning</strong>
+<ul>
+<li>Centers on <strong>neural networks</strong>.</li>
+<li>Common architectures: <code>CNN</code> (Convolutional Neural Network), <code>RNN</code> (Recurrent Neural Network), and <code>Transformer</code>.</li>
+<li>The <strong>Transformer</strong> architecture underpins modern generative AI and agentic AI.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> While statistical ML and deep learning overlap in practice, they remain distinct concepts.</p>
+</blockquote>
+<h2>Machine Learning Workflow</h2>
+<p>ML typically proceeds through two phases:</p>
+<ol>
+<li><strong>Training</strong> – the model learns patterns from data.</li>
+<li><strong>Inference</strong> – the trained model makes predictions on new data.</li>
+</ol>
+<h2>Non‑ML AI Components</h2>
+<ul>
+<li><strong>Regular expressions</strong> and <strong>rule‑based systems</strong> are AI‑related tools but are not considered part of machine learning.</li>
+</ul>
+<hr />
+<p><em>All key concepts are highlighted in <strong>bold</strong>, and technical terms are shown in <code>inline code</code> for clarity.</em></p>
+<h2>machine learning</h2>
+<h1>Introduction to Machine Learning</h1>
+<p>Machine learning is a <strong>discipline in computer science</strong> that trains machines on data so they can make predictions without explicit programming.</p>
+<h2>Traditional vs. Machine‑Learning Approaches</h2>
+<ul>
+<li><strong>Traditional software</strong>: takes an input and an explicit equation, then produces an output.</li>
+<li><strong>Machine learning</strong>: receives <em>input‑output pairs</em> and derives the underlying relationship automatically.</li>
+</ul>
+<h2>Core Concepts</h2>
+<ul>
+<li><strong>No explicit programming</strong>: you provide examples, and the system discovers the logic or pattern.</li>
+<li><strong>Tasks</strong> are mainly divided into:
+<ol>
+<li><strong>Classification</strong> – assigning items to predefined categories.</li>
+<li><strong>Regression</strong> – predicting continuous values.</li>
+</ol>
+</li>
+</ul>
+<h2>Unsupervised Learning</h2>
+<ul>
+<li>Involves feeding an <strong>unlabeled data set</strong> to the algorithm, which then identifies patterns and structures without guidance.</li>
+<li><strong>Clustering</strong> is a key unsupervised technique:
+<ul>
+<li>Groups items into buckets based on similarity.</li>
+<li>Can be used for <strong>outlier detection</strong> (points that do not belong to any cluster are marked as outliers).</li>
+<li>Common algorithms: <code>DBSCAN</code>, <code>K-means</code>, and hierarchical clustering.</li>
+</ul>
+</li>
+</ul>
+<h2>Data Types</h2>
+<ul>
+<li><strong>Structured data</strong>: organized in rows and columns (e.g., spreadsheets, databases).</li>
+<li><strong>Unstructured data</strong>: lacks a tabular format, such as images, text, and video, posing additional challenges for models.</li>
+</ul>
+<h2>Features and Algorithms</h2>
+<ul>
+<li>When features like <strong>vendor</strong>, <strong>amount</strong>, and <strong>location</strong> are defined, statistical machine‑learning algorithms perform well, e.g.:
+<ul>
+<li><code>Decision Tree</code></li>
+<li><code>XGBoost</code></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>deep learning</h2>
+<h1>Overview of Machine Learning Approaches</h1>
+<h2>1. Choosing Between Statistical ML and Deep Learning</h2>
+<ul>
+<li><strong>Statistical machine learning</strong> is best for <em>simple, structured features</em> (e.g., tabular data). Common tools: <code>XGBoost</code>, <code>scikit-learn</code>.</li>
+<li><strong>Deep learning</strong> excels with <em>complex, unstructured features</em> such as <strong>images</strong>, <strong>videos</strong>, <strong>audio</strong>, and <strong>text</strong>. It can also be applied to large‑scale structured data, though this is not the default recommendation.</li>
+<li><strong>Guideline:</strong> If you have a <strong>huge number of training samples</strong>, deep learning usually outperforms statistical methods. Ultimately, experiment to determine which approach yields the best performance.</li>
+</ul>
+<h2>2. Types of Data</h2>
+<ul>
+<li><strong>Unstructured data:</strong> videos, audio, text, images.</li>
+<li><strong>Structured data:</strong> tables, relational databases.</li>
+</ul>
+<h1>Deep Learning Fundamentals</h1>
+<h2>1. Core Architectures</h2>
+<ul>
+<li><strong>Feed‑forward neural network:</strong> information flows from input → hidden → output layers without loops.</li>
+<li><strong>Recurrent neural network (RNN):</strong> includes a <strong>time axis</strong> to process sequences sequentially.</li>
+<li><strong>Transformer:</strong> the dominant architecture for modern <strong>generative AI</strong> applications.</li>
+</ul>
+<h2>2. Frameworks</h2>
+<ul>
+<li><strong>PyTorch</strong> (Meta) – currently the more popular deep‑learning library.</li>
+<li><strong>TensorFlow</strong> (Google).</li>
+</ul>
+<h1>Generative AI vs. Traditional AI</h1>
+<h2>1. Traditional AI</h2>
+<ul>
+<li>Tasks: classification, regression, prediction, decision‑making.</li>
+<li>Considered <strong>lightweight</strong>.</li>
+<li>Tooling: <code>XGBoost</code>, <code>scikit-learn</code>.</li>
+</ul>
+<h2>2. Generative AI</h2>
+<ul>
+<li>Objective: <strong>generate new content</strong> (text, audio, video, images) from prompts.</li>
+<li>Relies on <strong>large language models (LLMs)</strong> trained on massive datasets (e.g., the entire internet).</li>
+<li>Example: <strong>ChatGPT</strong>, powered by the <strong>GPT</strong> LLM.</li>
+<li>A language model predicts the next words based on statistical probability and randomness – often described as a <em>stochastic parrot</em>.</li>
+</ul>
+<h1>Agentic AI</h1>
+<h2>1. Definition</h2>
+<ul>
+<li><strong>AI agents</strong> (or <em>agentic AI</em>) perceive their environment and act autonomously.</li>
+<li>They combine an LLM with <strong>memory</strong>, <strong>knowledge bases</strong>, and <strong>external tools</strong>.</li>
+<li>A <strong>reasoning model</strong> creates a plan and executes multi‑step actions.</li>
+</ul>
+<h2>2. Capabilities</h2>
+<ul>
+<li><strong>Goal‑oriented planning:</strong> given a goal (e.g., onboarding a new intern), the system decides the sequence of actions—creating checklists, scheduling meetings, sending access requests.</li>
+<li><strong>Autonomy:</strong> can reason, plan, and act without detailed step‑by‑step instructions.</li>
+<li><strong>Integration:</strong> multiple agents, each with its own tools and memory, can collaborate.</li>
+</ul>
+<h2>3. Components of an AI Agent</h2>
+<ol>
+<li><strong>Memory store</strong> – retains context across interactions.</li>
+<li><strong>Chat model (LLM)</strong> – provides natural‑language understanding and generation.</li>
+<li><strong>Tool integrations</strong> – e.g., Jira, Slack, APIs.</li>
+</ol>
+<h2>4. Tooling &amp; Platforms</h2>
+<ul>
+<li><strong>Python libraries:</strong> Auto‑GPT, Google Agent Development Kit, OpenAI’s toolkit.</li>
+<li><strong>Low‑code/no‑code platforms:</strong> n8n, Zapier, n18 – enable building agentic systems without coding.</li>
+</ul>
+<h2>5. Comparison with Generative AI</h2>
+<ul>
+<li><strong>Generative AI:</strong> creates content (answers, images) but does <strong>not</strong> perform external actions.</li>
+<li><strong>Agentic AI:</strong> higher autonomy; performs planning, reasoning, and executes multi‑step workflows (e.g., automating onboarding, provisioning accounts, updating Slack channels).</li>
+</ul>
+</main></html>

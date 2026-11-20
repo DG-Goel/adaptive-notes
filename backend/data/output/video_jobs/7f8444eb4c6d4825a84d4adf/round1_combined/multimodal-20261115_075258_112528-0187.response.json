@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-32506229-1a86-445b-9e78-1528ad9d64e0",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No excerpt provides a clear concept name or content required for concept_name and content fields.\",\n      \"source_ids\": [\"G00029\"]\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Excerpts do not contain a term and its definition.\",\n      \"source_ids\": [\"G00029\"]\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No excerpt supplies a distinct topic with explanatory text.\",\n      \"source_ids\": [\"G00029\"]\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No excerpt provides a concrete example illustrating a concept.\",\n      \"source_ids\": [\"G00029\"]\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Excerpts lack explicit factual statements suitable for fact_text.\",\n      \"source_ids\": [\"G00029\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No complete or fragmentary formula is presented in the excerpts.\",\n      \"source_ids\": [\"G00029\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No procedural steps or named procedure are described.\",\n      \"source_ids\": [\"G00029\"]\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Excerpts mention a positive relationship but do not specify subject, object, or relationship_type in a supported format.\",\n      \"source_ids\": [\"G00029\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"FAIL: The provided source excerpts do not contain sufficient educational content to generate four distinct short‑answer questions.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"All required fields for concepts, definitions, explanations, examples, facts, formulas, procedures, and relationships are missing; therefore a valid quiz cannot be constructed.\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0000\"],\n      \"topic\": \"insufficient_source\"\n    },\n    {\n      \"question\": \"FAIL: No concept name is present in the source material.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"The excerpts contain only vague statements without a clear concept label.\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0004\"],\n      \"topic\": \"missing_concept\"\n    },\n    {\n      \"question\": \"FAIL: No definition is provided in the source excerpts.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"There is no term-definition pair to extract.\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0005\"],\n      \"topic\": \"missing_definition\"\n    },\n    {\n      \"question\": \"FAIL: No formula or mathematical expression is available in the source.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"The source notes indicate missing exact code/formula.\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0009\"],\n      \"topic\": \"missing_formula\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows etc. The excerpts are vague, no concrete concepts. Likely cannot create required fields. Must fail? Must output abstentions for missing required fields. Provide quiz? Can't without content. So fail explicitly.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794729922,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_27194a498a",
+  "usage": {
+    "completion_tokens": 797,
+    "prompt_tokens": 2643,
+    "total_tokens": 3440,
+    "completion_time": 1.660581368,
+    "completion_tokens_details": {
+      "reasoning_tokens": 47
+    },
+    "prompt_time": 0.111196963,
+    "prompt_tokens_details": null,
+    "queue_time": 0.163390098,
+    "total_time": 1.7717783310000002
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f3thkkep4bch41znqmyxfb",
+    "debug": null,
+    "seed": 25029877,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-f9326773-5b58-4273-9d94-6399295fcea4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"demand for domestic goods\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Domestic demand equals the closed‑economy demand for goods minus the portion of demand satisfied by imported inputs, adjusted for exchange‑rate conversion.\",\n      \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"exports\",\n      \"refs\": [\"Q0014\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Exports are foreign demand for domestically produced goods; they are assumed to increase with foreign output.\",\n      \"refs\": [\"Q0013\", \"Q0019\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"imports\",\n      \"refs\": [\"Q0039\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Imports are the counterpart of exports; they represent foreign demand for the home country's goods, i.e., what other countries count as their exports.\",\n      \"refs\": [\"Q0038\", \"Q0039\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept4\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"real exchange rate effect on exports\",\n      \"refs\": [\"Q0029\", \"Q0030\", \"Q0034\", \"Q0035\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept4\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Exports decrease when the real exchange rate appreciates (epsilon rises), making domestic goods relatively more expensive for foreign buyers, thus reducing foreign demand.\",\n      \"refs\": [\"Q0029\", \"Q0034\", \"Q0035\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows. Identify concepts: demand for domestic goods, exports, imports, real exchange rate effect. Provide concept items.\n\nCreate item \"concept1\" with concept_name \"demand for domestic goods\" and content from Q0001- Q0003 etc. Use primary excerpts.\n\nRows needed: concept_name and content.\n\nAlso concept \"exports\" and \"imports\". Also maybe \"real exchange rate effect on exports\".\n\nProvide rows with availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null.\n\nAdd refs list.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794651034,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8ea50c0161",
+  "usage": {
+    "completion_tokens": 1056,
+    "prompt_tokens": 3191,
+    "total_tokens": 4247,
+    "completion_time": 2.20478119,
+    "completion_tokens_details": {
+      "reasoning_tokens": 110
+    },
+    "prompt_time": 0.171148821,
+    "prompt_tokens_details": null,
+    "queue_time": 0.321647394,
+    "total_time": 2.375930011
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7crk1vpeh3bjpd3fndwx5ct",
+    "debug": null,
+    "seed": 995807464,
+    "usage": null
+  }
+}

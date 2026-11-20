@@ -1,0 +1,820 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-14T14:23:35.272689+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00018"
+      ],
+      "document_id": "DOC001",
+      "content": "An increase in the domestic interest rate leads to a higher exchange rate, meaning the domestic currency becomes more expensive.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00018",
+              "quote": "And it's very easy for you to read from here that the exchange rate will go up.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 207,
+              "end_char": 286,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00018",
+              "quote": "The\n currency will appreciate.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 287,
+              "end_char": 317,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00018",
+              "quote": "And it's very easy for you to read from here that the exchange rate will go up.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 207,
+              "end_char": 286,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00018",
+              "quote": "The\n currency will appreciate.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 287,
+              "end_char": 317,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "exchange rate appreciation",
+              "claims": [
+                {
+                  "text": "exchange rate appreciation",
+                  "refs": [
+                    "Q0015",
+                    "Q0016"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00018",
+                      "quote": "And it's very easy for you to read from here that the exchange rate will go up."
+                    },
+                    {
+                      "source_id": "G00018",
+                      "quote": "The\n currency will appreciate."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "An increase in the domestic interest rate leads to a higher exchange rate, meaning the domestic currency becomes more expensive.",
+              "claims": [
+                {
+                  "text": "An increase in the domestic interest rate leads to a higher exchange rate, meaning the domestic currency becomes more expensive.",
+                  "refs": [
+                    "Q0015",
+                    "Q0016"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00018",
+                      "quote": "And it's very easy for you to read from here that the exchange rate will go up."
+                    },
+                    {
+                      "source_id": "G00018",
+                      "quote": "The\n currency will appreciate."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00017",
+                "G00018",
+                "G00019",
+                "G00020"
+              ],
+              "reason": "No explicit term-definition pairs are present in the excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00017",
+                "G00018",
+                "G00019",
+                "G00020"
+              ],
+              "reason": "Exact equations are referenced but not provided in the excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "procedures",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00017",
+                "G00018",
+                "G00019",
+                "G00020"
+              ],
+              "reason": "No step‑by‑step procedural instructions are present.",
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "exchange rate appreciation",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And it's very easy for you to read from here that the exchange rate will go up.",
+                      "The\n currency will appreciate."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00018",
+                        "quote": "And it's very easy for you to read from here that the exchange rate will go up.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 207,
+                        "end_char": 286,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00018",
+                        "quote": "The\n currency will appreciate.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 287,
+                        "end_char": 317,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "exchange rate appreciation",
+                "preview_text": "exchange rate appreciation",
+                "withheld": false
+              },
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "An increase in the domestic interest rate leads to a higher exchange rate, meaning the domestic currency becomes more expensive.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And it's very easy for you to read from here that the exchange rate will go up.",
+                      "The\n currency will appreciate."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00018",
+                        "quote": "And it's very easy for you to read from here that the exchange rate will go up.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 207,
+                        "end_char": 286,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00018",
+                        "quote": "The\n currency will appreciate.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 287,
+                        "end_char": 317,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "An increase in the domestic interest rate leads to a higher exchange rate, meaning the domestic currency becomes more expensive.",
+                "preview_text": "An increase in the domestic interest rate leads to a higher exchange rate, meaning the domestic currency becomes more expensive.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00018"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "exchange rate appreciation",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [
+    {
+      "knowledge_id": "FCT_0002",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00018"
+      ],
+      "document_id": "DOC001",
+      "content": "When the domestic interest rate is increased, the exchange rate appreciates.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00018",
+              "quote": "And it's very easy for you to read from here that the exchange rate will go up.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 207,
+              "end_char": 286,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00018",
+              "quote": "The\n currency will appreciate.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 287,
+              "end_char": 317,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00018",
+              "quote": "And it's very easy for you to read from here that the exchange rate will go up.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 207,
+              "end_char": 286,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00018",
+              "quote": "The\n currency will appreciate.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 287,
+              "end_char": 317,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "When the domestic interest rate is increased, the exchange rate appreciates.",
+              "claims": [
+                {
+                  "text": "When the domestic interest rate is increased, the exchange rate appreciates.",
+                  "refs": [
+                    "Q0015",
+                    "Q0016"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00018",
+                      "quote": "And it's very easy for you to read from here that the exchange rate will go up."
+                    },
+                    {
+                      "source_id": "G00018",
+                      "quote": "The\n currency will appreciate."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "When the domestic interest rate is increased, the exchange rate appreciates.",
+              "claims": [
+                {
+                  "text": "When the domestic interest rate is increased, the exchange rate appreciates.",
+                  "refs": [
+                    "Q0015",
+                    "Q0016"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00018",
+                      "quote": "And it's very easy for you to read from here that the exchange rate will go up."
+                    },
+                    {
+                      "source_id": "G00018",
+                      "quote": "The\n currency will appreciate."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00017",
+                "G00018",
+                "G00019",
+                "G00020"
+              ],
+              "reason": "No explicit term-definition pairs are present in the excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00017",
+                "G00018",
+                "G00019",
+                "G00020"
+              ],
+              "reason": "Exact equations are referenced but not provided in the excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "procedures",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00017",
+                "G00018",
+                "G00019",
+                "G00020"
+              ],
+              "reason": "No step‑by‑step procedural instructions are present.",
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "When the domestic interest rate is increased, the exchange rate appreciates.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And it's very easy for you to read from here that the exchange rate will go up.",
+                      "The\n currency will appreciate."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00018",
+                        "quote": "And it's very easy for you to read from here that the exchange rate will go up.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 207,
+                        "end_char": 286,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00018",
+                        "quote": "The\n currency will appreciate.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 287,
+                        "end_char": 317,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "When the domestic interest rate is increased, the exchange rate appreciates.",
+                "preview_text": "When the domestic interest rate is increased, the exchange rate appreciates.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "When the domestic interest rate is increased, the exchange rate appreciates.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And it's very easy for you to read from here that the exchange rate will go up.",
+                      "The\n currency will appreciate."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00018",
+                        "quote": "And it's very easy for you to read from here that the exchange rate will go up.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 207,
+                        "end_char": 286,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00018",
+                        "quote": "The\n currency will appreciate.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 287,
+                        "end_char": 317,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "When the domestic interest rate is increased, the exchange rate appreciates.",
+                "preview_text": "When the domestic interest rate is increased, the exchange rate appreciates.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00018"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "When the domestic interest rate is increased, the exchange rate appreciates.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0003",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "G00020"
+      ],
+      "document_id": "DOC001",
+      "content": "If the exchange rate is kept fixed and the currency appreciates today, it is expected to depreciate in the next period.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00020",
+              "quote": "So the reason the appreciation happens here\n is because you need to expect to depreciate the dollar\n from this period to the next one.",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 610,
+              "end_char": 744,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00020",
+              "quote": "So the reason the appreciation happens here\n is because you need to expect to depreciate the dollar\n from this period to the next one.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 610,
+              "end_char": 744,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/fact_text",
+              "text": "If the exchange rate is kept fixed and the currency appreciates today, it is expected to depreciate in the next period.",
+              "claims": [
+                {
+                  "text": "If the exchange rate is kept fixed and the currency appreciates today, it is expected to depreciate in the next period.",
+                  "refs": [
+                    "Q0042"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00020",
+                      "quote": "So the reason the appreciation happens here\n is because you need to expect to depreciate the dollar\n from this period to the next one."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "If the exchange rate is kept fixed and the currency appreciates today, it is expected to depreciate in the next period.",
+              "claims": [
+                {
+                  "text": "If the exchange rate is kept fixed and the currency appreciates today, it is expected to depreciate in the next period.",
+                  "refs": [
+                    "Q0042"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00020",
+                      "quote": "So the reason the appreciation happens here\n is because you need to expect to depreciate the dollar\n from this period to the next one."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00017",
+                "G00018",
+                "G00019",
+                "G00020"
+              ],
+              "reason": "No explicit term-definition pairs are present in the excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00017",
+                "G00018",
+                "G00019",
+                "G00020"
+              ],
+              "reason": "Exact equations are referenced but not provided in the excerpts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "procedures",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00017",
+                "G00018",
+                "G00019",
+                "G00020"
+              ],
+              "reason": "No step‑by‑step procedural instructions are present.",
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "If the exchange rate is kept fixed and the currency appreciates today, it is expected to depreciate in the next period.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So the reason the appreciation happens here\n is because you need to expect to depreciate the dollar\n from this period to the next one."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00020",
+                        "quote": "So the reason the appreciation happens here\n is because you need to expect to depreciate the dollar\n from this period to the next one.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 610,
+                        "end_char": 744,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "If the exchange rate is kept fixed and the currency appreciates today, it is expected to depreciate in the next period.",
+                "preview_text": "If the exchange rate is kept fixed and the currency appreciates today, it is expected to depreciate in the next period.",
+                "withheld": false
+              },
+              {
+                "path": "/fact_text",
+                "claims": [
+                  {
+                    "text": "If the exchange rate is kept fixed and the currency appreciates today, it is expected to depreciate in the next period.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So the reason the appreciation happens here\n is because you need to expect to depreciate the dollar\n from this period to the next one."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00020",
+                        "quote": "So the reason the appreciation happens here\n is because you need to expect to depreciate the dollar\n from this period to the next one.",
+                        "fields": [
+                          "/fact_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 610,
+                        "end_char": 744,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "If the exchange rate is kept fixed and the currency appreciates today, it is expected to depreciate in the next period.",
+                "preview_text": "If the exchange rate is kept fixed and the currency appreciates today, it is expected to depreciate in the next period.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00020"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "If the exchange rate is kept fixed and the currency appreciates today, it is expected to depreciate in the next period.",
+      "fact_type": null
+    }
+  ],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 3,
+  "source_units_processed": 4,
+  "extraction_metadata": null
+}

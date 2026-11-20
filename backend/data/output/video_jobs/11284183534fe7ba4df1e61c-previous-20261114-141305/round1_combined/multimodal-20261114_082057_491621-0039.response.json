@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-d5da34b9-b542-4d14-8b8d-aa68f396671a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"gen_ai_definition\",\n      \"category\": \"definitions\",\n      \"field\": \"term\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"generative AI\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"gen_ai_definition\",\n      \"category\": \"definitions\",\n      \"field\": \"definition_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"generative AI is a category of AI where the objective is to generate new content.\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"gen_ai_definition\",\n      \"category\": \"definitions\",\n      \"field\": \"context\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"New content can be text, audio, video, anything.\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"gen_ai_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"generative AI\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"traditional_ai_fact\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Traditional AI tasks such as classification or regression are considered lightweight and are still used because they make sense for certain issues.\",\n      \"refs\": [\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"ai_difference_relationship\",\n      \"category\": \"relationships\",\n      \"field\": \"relationship_type\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"contrast\",\n      \"refs\": [\"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"ai_difference_relationship\",\n      \"category\": \"relationships\",\n      \"field\": \"subject\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"traditional AI\",\n      \"refs\": [\"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"ai_difference_relationship\",\n      \"category\": \"relationships\",\n      \"field\": \"object\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"generative AI\",\n      \"refs\": [\"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"ai_difference_relationship\",\n      \"category\": \"relationships\",\n      \"field\": \"description\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Traditional AI focuses on analysis, prediction, classification, or decision making, whereas generative AI generates new content such as text, audio, or video.\",\n      \"refs\": [\"Q0012\", \"Q0006\", \"Q0007\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit example excerpts provided for generative AI content generation.\",\n      \"source_ids\": [\"G00020\", \"G00021\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No formula excerpts present in the source.\",\n      \"source_ids\": [\"G00020\", \"G00021\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts, definitions, etc based on excerpts. Extract claims: definition of generative AI: \"generative AI is a category of AI where the objective is to generate new content.\" Also \"New content can be text, audio, video, anything.\" Also differences between traditional AI and generative AI. So create rows.\n\nWe'll produce rows:\n\nItem maybe \"gen_ai_definition\". category definitions, fields term, definition_text, context.\n\nRow term: text \"generative AI\". basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, refs Q0006, element 0, part symbol? term field uses term. part value? term is term field, part value.\n\ndefinition_text row: text from Q0006 and Q0007 combined? Probably separate rows. Use Q0006 for definition, Q0007 for examples of content.\n\nAlso concepts: concept_name \"generative AI\", aliases maybe none.\n\nfacts: fact about traditional AI being lightweight etc from Q0011.\n\nrelationships: relationship between traditional AI and generative AI: subject \"traditional AI\", object \"generative AI\", relationship_type \"contrast\", description from Q0012 etc.\n\nProceed.\n\nProvide abstentions for unavailable fields like examples etc.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794644597,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 1349,
+    "prompt_tokens": 2388,
+    "total_tokens": 3737,
+    "completion_time": 2.82499535,
+    "completion_tokens_details": {
+      "reasoning_tokens": 257
+    },
+    "prompt_time": 0.113245037,
+    "prompt_tokens_details": null,
+    "queue_time": 0.324583769,
+    "total_time": 2.938240387
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cjeksfe5st1vvag0yapvqh",
+    "debug": null,
+    "seed": 542089071,
+    "usage": null
+  }
+}

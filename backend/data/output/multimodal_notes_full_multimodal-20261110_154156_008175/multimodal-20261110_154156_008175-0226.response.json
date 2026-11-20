@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-336e36dc-fe3a-4779-b015-672d88bcb722",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"AND operator\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"will return true if both conditions are true\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"Because the AND operator will return true if both conditions are true.\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"Because the AND operator will return true if both conditions are true.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"OR operator\",\n        \"refs\": [\"Q0012\"],\n        \"claims\": [\n          {\n            \"text\": \"if at least one condition is true, the result will be true\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0012\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"So with the or operator, if at least one condition is true, the result will be true.\",\n        \"refs\": [\"Q0012\"],\n        \"claims\": [\n          {\n            \"text\": \"So with the or operator, if at least one condition is true, the result will be true.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0012\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract definitions. The excerpts contain definitions? They define OR operator etc. So create items with term and definition_text. Identify definitions: e.g., \"the OR operator\" definition: \"the or operator\" maybe defined as logical OR returns true if at least one condition true. Also \"AND operator will return true if both conditions are true.\" That's definition of AND. Provide claims.\n\nCreate two items: term \"AND operator\", definition \"will return true if both conditions are true.\" term \"OR operator\", definition \"returns true if at least one condition is true.\"\n\nUse primary excerpts Q0000 for AND, Q0012 for OR. Provide claims with explicit basis, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role explanation_of_mistake? Actually it's definition, role maybe prerequisite? Use null.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326486,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e5b4e54fbb",
+  "usage": {
+    "completion_tokens": 659,
+    "prompt_tokens": 4042,
+    "total_tokens": 4701,
+    "completion_time": 1.383878508,
+    "completion_tokens_details": {
+      "reasoning_tokens": 166
+    },
+    "prompt_time": 0.239943044,
+    "prompt_tokens_details": null,
+    "queue_time": 1.2365092930000001,
+    "total_time": 1.623821552
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7332mtaewybw0a7vkvvcr3y",
+    "debug": null,
+    "seed": 985874214,
+    "usage": null
+  }
+}

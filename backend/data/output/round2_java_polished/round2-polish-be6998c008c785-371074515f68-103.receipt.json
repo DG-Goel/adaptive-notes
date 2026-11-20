@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-c6ffb6cb-9a4e-4dc0-bccf-8317c2a387aa",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"markdown\": \"# Variables in Java\\n\\n## What Is a Variable?\\n- A **variable** temporarily stores data in the computer's memory.\\n- In Java, a variable is declared with a **type**, a **name**, and optionally an **initial value**:\\n  ```java\\n  int age = 30;\\n  ```\\n\\n## Declaration and Initialization\\n1. **Declare** the variable by specifying its type followed by its identifier.\\n2. Use the **assignment operator** (`=`) to **initialize** the variable with a value.\\n3. A variable must be **initialized before it is read**.\\n4. After initialization, you can **assign a new value** to change its contents.\\n\\n## Naming Conventions\\n- Use **camelCase**: capitalize the first letter of each word except the first (e.g., `totalScore`).\\n- Choose **meaningful, descriptive names**.\\n- Do **not** use Java **reserved keywords** (e.g., `public`, `class`, `static`).\\n- Underscores can separate groups of three digits in numeric literals for readability (e.g., `1_000_000`).\\n\\n## Declaration Style\\n- Prefer **one variable per line** for readability; declaring multiple variables on the same line is legal but discouraged.\\n\\n## Primitive Types Overview\\n| Type | Size | Range / Description |\\n|------|------|----------------------|\\n| `byte` | 1 byte | -128 to 127 |\\n| `short` | 2 bytes | – |\\n| `int` | 4 bytes | –≈ 2 billion |\\n| `long` | 8 bytes | – |\\n| `float` | 4 bytes | Single‑precision floating point |\\n| `double` | 8 bytes | Double‑precision floating point (larger than `float`) |\\n| `char` | 2 bytes | Single Unicode character |\\n| `boolean` | 1 bit (conceptually) | `true` or `false` |\\n\\n- **Whole‑number types** (`byte`, `short`, `int`, `long`) store integers without a decimal point.\\n- **Floating‑point types** (`float`, `double`) store numbers with fractions; `double` has greater precision and range.\\n- `char` holds a single character and supports international letters.\\n- `boolean` holds only `true` or `false`.\\n\\n## Literals and Suffixes\\n- Integer literals without a suffix are treated as `int`. If the value exceeds the `int` range, append `L`/`l` to make it a `long`:\\n  ```java\\n  long bigNumber = 3_000_000_000L;\\n  ```\\n- Decimal literals are `double` by default. To assign a decimal to a `float`, use the `f`/`F` suffix:\\n  ```java\\n  float pi = 3.14f;\\n  ```\\n- A **char literal** uses single quotes (`'A'`), while a **string literal** uses double quotes (`\\\"Hello\\\"`).\\n\\n## Common Errors\\n- Storing a value larger than the allowed range (e.g., `3 billion` in an `int`) triggers a compile‑time error: *\\\"integer number too large\\\"*.\\n- Assigning a decimal literal to a `float` without the `f` suffix causes a compilation error.\\n\\n## Primitive vs. Reference Types\\n- Java has **eight primitive types** (`byte`, `short`, `int`, `long`, `float`, `double`, `char`, `boolean`).\\n- All other types are **reference types** (objects). Declaring a primitive variable (e.g., `byte h = 30;`) differs syntactically from creating an instance of a reference type.\\n\"\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output JSON with field markdown. Provide polished notes.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794583557,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_19b184c447",
+  "usage": {
+    "completion_tokens": 858,
+    "prompt_tokens": 808,
+    "total_tokens": 1666,
+    "completion_time": 1.8039100129999999,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14
+    },
+    "prompt_time": 0.162326922,
+    "prompt_tokens_details": null,
+    "queue_time": 0.373598112,
+    "total_time": 1.966236935
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ar7v7jemk9jr0emxyprzjj",
+    "debug": null,
+    "seed": 2003628722,
+    "usage": null
+  }
+}

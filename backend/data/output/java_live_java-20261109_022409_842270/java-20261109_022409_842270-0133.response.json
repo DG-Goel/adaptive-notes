@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-6e82b07e-3acc-4785-a7ad-2fd372052070",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"In an integer array, elements that are not explicitly initialized are set to 0 by default.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In a boolean array, elements default to false.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In a String array, elements default to an empty string.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The newer syntax for creating and initializing an array uses curly braces with the items listed inside, eliminating the need for the new operator.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"An array’s length can be read using the .length field.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java arrays have a fixed size; once created, items cannot be added or removed.\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"To obtain a dynamically sized collection, one should use one of the collection classes instead of an array.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Arrays can be sorted using the Arrays.sort method, which is overloaded for different parameter types.\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Multi‑dimensional arrays (e.g., two‑dimensional or three‑dimensional) can be created to store matrices or cube data, useful in scientific computations.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [\n    {\n      \"procedure_name\": {\n        \"text\": \"Create and initialize an array using the concise curly‑brace syntax\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"prerequisites\": null,\n      \"steps\": [\n        {\n          \"text\": \"Remove the explicit new operator and size declaration.\",\n          \"refs\": [\"Q0001\"]\n        },\n        {\n          \"text\": \"Write the type, followed by an equals sign and opening curly brace.\",\n          \"refs\": [\"Q0001\"]\n        },\n        {\n          \"text\": \"List the desired items separated by commas inside the braces.\",\n          \"refs\": [\"Q0001\"]\n        },\n        {\n          \"text\": \"Close the brace and end the statement with a semicolon.\",\n          \"refs\": [\"Q0001\"]\n        }\n      ],\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"The array is created with the specified items and its length is automatically set to the number of items.\",\n        \"refs\": [\"Q0001\"]\n      }\n    },\n    {\n      \"procedure_name\": {\n        \"text\": \"Sort an array using Arrays.sort\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"prerequisites\": null,\n      \"steps\": [\n        {\n          \"text\": \"Import java.util.Arrays if not already imported.\",\n          \"refs\": [\"Q0003\"]\n        },\n        {\n          \"text\": \"Call Arrays.sort and pass the array variable as the argument.\",\n          \"refs\": [\"Q0003\", \"Q0004\"]\n        },\n        {\n          \"text\": \"Optionally, print the array after sorting to verify the order.\",\n          \"refs\": [\"Q0004\"]\n        }\n      ],\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"The array elements are rearranged into ascending order.\",\n        \"refs\": [\"Q0004\"]\n      }\n    }\n  ],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts we have facts about default initialization, array creation syntax, length, fixed size, sorting, multidimensional. Create facts, explanations, procedures maybe. We'll extract facts.\n\nLet's produce facts array entries.\n\nFact1: In an integer array, elements not explicitly initialized are set to 0 by default. Cite Q0000.\n\nFact2: In a boolean array, elements default to false. Cite Q0000.\n\nFact3: In a String array, elements default to empty string. Cite Q0000.\n\nFact4: Older syntax for array creation uses new operator and explicit size; newer syntax uses curly braces with items. Cite Q0001.\n\nFact5: Array length can be obtained via .length field. Cite Q0002.\n\nFact6: Java arrays have fixed size; cannot add or remove items after creation. Cite Q0002 and Q0003.\n\nFact7: To have dynamic size, use collection classes. Cite Q0003.\n\nFact8: Arrays can be sorted using Arrays.sort method; method is overloaded. Cite Q0003 and Q0004.\n\nFact9: Multi-dimensional arrays can be created (2D, 3D) for matrices, cubes. Cite Q0004.\n\nProcedures: maybe procedure for sorting array. Provide steps: call Arrays.sort(numbersArray). Cite Q0003,Q0004.\n\nAlso procedure for creating array with curly braces. Provide steps. Cite Q0001.\n\nWe'll output facts, procedures, explanations maybe. Use schema.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191417,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a655021f7d",
+  "usage": {
+    "completion_tokens": 1265,
+    "prompt_tokens": 3141,
+    "total_tokens": 4406,
+    "completion_time": 2.63755554,
+    "completion_tokens_details": {
+      "reasoning_tokens": 313
+    },
+    "prompt_time": 0.151407385,
+    "prompt_tokens_details": null,
+    "queue_time": 0.165423867,
+    "total_time": 2.788962925
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z28n9wedz95dtm4mdznvxc",
+    "debug": null,
+    "seed": 1178669544,
+    "usage": null
+  }
+}

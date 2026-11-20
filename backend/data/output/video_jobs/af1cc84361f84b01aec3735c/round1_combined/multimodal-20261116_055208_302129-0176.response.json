@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-04059084-a1f5-42a1-ad4c-ce2661e3049d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Fiscal policy that does not affect interest rates has no effect on the exchange rate.\",\n      \"refs\": [\"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When expansionary fiscal policy leads to higher interest rates, the currency tends to appreciate.\",\n      \"refs\": [\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Investors expect the central bank to raise interest rates in response to expansionary fiscal policy.\",\n      \"refs\": [\"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"UAP\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"UAP has nothing to do with government expenditure.\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item5\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Financial markets are driven by expected returns.\",\n      \"refs\": [\"Q0006\", \"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the lecture, what is the effect of fiscal policy that does not change interest rates on the exchange rate?\",\n      \"answer\": \"It has no effect on the exchange rate.\",\n      \"distractors\": [\n        \"It causes the exchange rate to appreciate.\",\n        \"It causes the exchange rate to depreciate.\",\n        \"It makes the exchange rate more volatile.\"\n      ],\n      \"explanation\": \"The speaker states that unless fiscal policy affects interest rates, there is no effect on the exchange rate (Q0008).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Fiscal policy and exchange rates\",\n      \"refs\": [\"Q0008\"]\n    },\n    {\n      \"question\": \"What tends to happen to a country's currency when it implements an expansionary fiscal package that leads investors to expect higher interest rates?\",\n      \"answer\": \"The currency tends to appreciate.\",\n      \"distractors\": [\n        \"The currency tends to depreciate.\",\n        \"The currency remains unchanged.\",\n        \"The currency becomes more volatile without a clear direction.\"\n      ],\n      \"explanation\": \"The speaker notes that in practice, expansionary fiscal packages cause the currency to appreciate because investors expect a central‑bank reaction (Q0011).\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"Fiscal expansion and currency value\",\n      \"refs\": [\"Q0011\"]\n    },\n    {\n      \"question\": \"What does the term \\\"UAP\\\" refer to in the lecture?\",\n      \"answer\": \"It is unrelated to government expenditure.\",\n      \"distractors\": [\n        \"It represents a type of fiscal multiplier.\",\n        \"It is a measure of unemployment.\",\n        \"It denotes a specific monetary policy tool.\"\n      ],\n      \"explanation\": \"The speaker explicitly says that the UAP has nothing to do with government expenditure (Q0005).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"UAP concept\",\n      \"refs\": [\"Q0005\"]\n    },\n    {\n      \"question\": \"Why do investors expect the central bank to raise interest rates after an expansionary fiscal move?\",\n      \"answer\": \"Because they anticipate the Fed will react to higher fiscal stimulus.\",\n      \"distractors\": [\n        \"Because fiscal policy directly sets interest rates.\",\n        \"Because higher government spending always lowers inflation.\",\n        \"Because the exchange rate automatically adjusts without central‑bank action.\"\n      ],\n      \"explanation\": \"The speaker explains that investors expect the Fed (or central bank) to react to expansionary fiscal policy by raising rates (Q0012).\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"Investor expectations\",\n      \"refs\": [\"Q0012\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts etc. From excerpts: talk about fiscal policy, exchange rate, UAP, government expenditure, financial markets, expected returns, interest rates, expansionary fiscal leading to currency appreciation. So we can create facts, explanations.\n\nCreate rows for facts: \"Fiscal policy that does not affect interest rates has no effect on exchange rate.\" etc.\n\nProvide rows with availability SOURCE_MISSING? Since ASR speech, exact code unavailable but statements are present. So availability SOURCE_SUPPORTED? It's spoken, so source-supported. Use basis explicit.\n\nCreate rows category facts.\n\nAlso maybe concept: \"UAP\" mentioned with nothing to do with government expenditure. concept_name UAP, content.\n\nCreate rows.\n\nQuiz: 4 questions.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794808850,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a7bb72c24",
+  "usage": {
+    "completion_tokens": 1403,
+    "prompt_tokens": 2510,
+    "total_tokens": 3913,
+    "completion_time": 3.827869224,
+    "completion_tokens_details": {
+      "reasoning_tokens": 153
+    },
+    "prompt_time": 0.366703331,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "queue_time": 0.162320897,
+    "total_time": 4.194572555
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hf35m2e9asb81qxgjcmee2",
+    "debug": null,
+    "seed": 744114023,
+    "usage": null
+  }
+}

@@ -1,0 +1,530 @@
+# Java run
+
+{
+  "classification": "Partial live execution",
+  "selected_slots": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "rotation_policy": "next_free_key",
+  "continue_validation_failures": true,
+  "live": true,
+  "source_sha256": "21a37da9bbfd684416d6bdb6f509f52a19a40d5a487613e08be033ffa636e541",
+  "total_chunks": 69,
+  "completed_chunks": 36,
+  "recovered_truncations": 29,
+  "requests_attempted": 98,
+  "http_successes": 54,
+  "http_429": 0,
+  "input_tokens": 137317,
+  "output_tokens": 60250,
+  "unknown_usage_attempts": 44,
+  "elapsed_seconds": 1324.7583229541779,
+  "errors": [
+    {
+      "request_id": "multimodal-20261115_075258_112528-0000",
+      "chunk_number": 1,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'The provided excerpts do not contain any supported educational content that can be mapped to the required schema fields (concepts, definitions, explanations, examples, facts, formulas, procedures, relationships) nor do they supply sufficient material to create four source\u2011supported short\u2011answer quiz questions. Consequently, a valid `compact_field_rows_quiz_v2` response cannot be generated without fabricating information.'}}"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0046",
+      "chunk_number": 8,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'I cannot generate the requested structured output because the provided excerpts do not contain enough supported educational content to populate the required fields or to create four source\u2011supported quiz questions.'}}"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0001",
+      "chunk_number": 1,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/1/refs' does not validate with /properties/quiz/items/properties/refs/minItems: minItems: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explicit concept name or content is provided in the excerpts.\",\\n      \"source_ids\": [\"G00001\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term and definition text are present in the excerpts.\",\\n      \"source_ids\": [\"G00001\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explanatory topic or explanation text is provided in the excerpts.\",\\n      "
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0002",
+      "chunk_number": 1,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/explanation' does not validate with /properties/quiz/items/properties/explanation/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No supported content for required fields concept_name and content.\",\\n      \"source_ids\": [\"G00001\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term and definition_text present in excerpts.\",\\n      \"source_ids\": [\"G00001\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explanatory material found.\",\\n      \"source_ids\": [\"G00001\"]\\n   "
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0074",
+      "chunk_number": 12,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/question' does not validate with /properties/quiz/items/properties/question/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explicit concept names or descriptions are provided in the primary excerpts.\",\\n      \"source_ids\": [\"G00012\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No terms and definitions are present in the excerpts.\",\\n      \"source_ids\": [\"G00012\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"Explanations lack sufficient detail to form required fiel"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0050",
+      "chunk_number": 8,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz' does not validate with /properties/quiz/type: expected array, but got string\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [\\n    {\\n      \"item\": \"net_export_concept\",\\n      \"category\": \"concepts\",\\n      \"field\": \"concept_name\",\\n      \"element\": 0,\\n      \"part\": \"value\",\\n      \"text\": \"net export function of output\",\\n      \"refs\": [\"Q0000\"],\\n      \"basis\": \"explicit\",\\n      \"availability\": \"SOURCE_SUPPORTED\",\\n      \"literal_kind\": \"verbal\",\\n      \"instructional_role\": null,\\n      \"related_refs\": []\\n    },\\n    {\\n      \"item\": \"net_export_concept\",\\n      \"category\": \"concepts\",\\n      \"field\": \"content\",\\n      \"element\": 0,\\n      \"part\": \"value\",\\n      \"text\": \"The net export function can be expressed solely as a function of outp"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0003",
+      "chunk_number": 1,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0088",
+      "chunk_number": 14,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'The provided excerpts contain only brief, disconnected statements and do not supply any complete educational content that satisfies the required schema fields (concepts, definitions, explanations, examples, facts, formulas, procedures, relationships). Consequently, no rows can be generated for any required field, and the source does not support the creation of four valid quiz questions. \\n\\n**Result:** The extraction cannot be performed as specified.'}}"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0051",
+      "chunk_number": 8,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'The provided primary excerpt does not contain any verifiable educational content that satisfies the required fields for concepts, definitions, explanations, examples, facts, formulas, procedures, or relationships, nor does it support the creation of four source\u2011supported quiz questions. Consequently, a valid `compact_field_rows_quiz_v2` response cannot be generated from the given source.'}}",
+      "recovery_status": "No smaller approved source-boundary split remains; identical retry prohibited"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0004",
+      "chunk_number": 1,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0095",
+      "chunk_number": 15,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0052",
+      "chunk_number": 8,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/answer' does not validate with /properties/quiz/items/properties/answer/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt provides a complete concept definition with required fields (concept_name and content).\",\\n      \"source_ids\": [\"G00008\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt supplies a term and its definition.\",\\n      \"source_ids\": [\"G00008\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt contains a topic and explanatory text."
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0092",
+      "chunk_number": 14,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0113",
+      "chunk_number": 18,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0134",
+      "chunk_number": 21,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0141",
+      "chunk_number": 22,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'The provided excerpts do not contain sufficient educational content to extract any required knowledge items (concepts, definitions, explanations, examples, facts, formulas, procedures, or relationships), nor do they support the creation of four distinct short\u2011answer quiz questions as mandated by the schema. Consequently, a valid `compact_field_rows_quiz_v2` response cannot be generated.'}}"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0148",
+      "chunk_number": 23,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'The provided excerpts contain only fragmented dialogue without any complete educational statements that satisfy the required fields for any knowledge item (concepts, definitions, explanations, examples, facts, formulas, procedures, relationships). Consequently no rows can be generated, and the quiz cannot be constructed from the available material.\\n\\n**Result:** The source does not support the creation of a valid note wire as specified.'}}"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0155",
+      "chunk_number": 24,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0159",
+      "chunk_number": 25,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/1/refs' does not validate with /properties/quiz/items/properties/refs/minItems: minItems: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explicit concept name or content provided in the excerpts.\",\\n      \"source_ids\": [\"G00025\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term and definition text are present.\",\\n      \"source_ids\": [\"G00025\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No clear explanatory topic and text are provided.\",\\n      \"source_ids\": [\"G00025\"]\\n    },\\n    {"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0149",
+      "chunk_number": 23,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '**Unable to generate the required note wire.** The provided excerpts contain only isolated dialogue statements and do not include any educational content that satisfies the schema\u2019s required fields (concepts, definitions, explanations, examples, facts, formulas, procedures, relationships). Consequently, it is not possible to produce valid rows or four supported quiz questions without inventing information, which violates the source\u2011only policy.'}}"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0166",
+      "chunk_number": 26,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/explanation' does not validate with /properties/quiz/items/properties/explanation/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explicit concept name or content is provided in the primary excerpts.\",\\n      \"source_ids\": [\"G00026\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term and definition text are present in the primary excerpts.\",\\n      \"source_ids\": [\"G00026\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explanatory topic or explanation text is sup"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0173",
+      "chunk_number": 27,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'The provided excerpts contain only fragmented dialogue and do not present any supported educational content that satisfies the required fields for any knowledge item (concepts, definitions, explanations, examples, facts, formulas, procedures, relationships). Consequently, no rows can be generated, and the required quiz cannot be created from the source material.\\n\\n**Result:** The task cannot be completed with the given source.'}}"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0160",
+      "chunk_number": 25,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'The provided excerpts consist only of fragmented spoken remarks that do not contain any verifiable educational content such as concepts, definitions, explanations, examples, facts, formulas, procedures, or relationships. Consequently, no supported rows can be generated, and there is insufficient material to create four source\u2011supported short\u2011answer quiz questions. \\n\\n**Result:** Unable to produce a valid `compact_field_rows_quiz_v2` output because the source does not contain the required educational content.'}}"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0150",
+      "chunk_number": 23,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/answer' does not validate with /properties/quiz/items/properties/answer/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt provides a concept name or content.\",\\n      \"source_ids\": [\"G00023\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term or definition text is present in the excerpts.\",\\n      \"source_ids\": [\"G00023\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"Excerpts do not contain explanatory material.\",\\n      \"source_ids\": [\"G00023\"]\\n    },\\n    "
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0167",
+      "chunk_number": 26,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/answer' does not validate with /properties/quiz/items/properties/answer/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explicit concept name or content provided in the excerpts.\",\\n      \"source_ids\": [\"G00026\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term and definition text are present in the excerpts.\",\\n      \"source_ids\": [\"G00026\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explanatory topic or explanation text is supplied.\",\\n      \"source_ids\":"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0145",
+      "chunk_number": 22,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/1/refs' does not validate with /properties/quiz/items/properties/refs/minItems: minItems: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explicit concept name or content provided in the excerpts.\",\\n      \"source_ids\": [\"G00022\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term or definition text present in the excerpts.\",\\n      \"source_ids\": [\"G00022\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No clear explanatory topic or explanation text is given.\",\\n      \"source_ids\": [\"G0002"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0174",
+      "chunk_number": 27,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'The provided excerpts contain only fragmented dialogue and do not present any supported concepts, definitions, explanations, examples, facts, formulas, procedures, or relationships that can be extracted into the required knowledge\u2011item fields. Consequently, no rows can be created for any category, and the required quiz cannot be generated without inventing content not present in the source.\\n\\n**Result:** The source does not contain sufficient educational material to fulfill the extraction and quiz requirements.'}}"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0161",
+      "chunk_number": 25,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0151",
+      "chunk_number": 23,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/answer' does not validate with /properties/quiz/items/properties/answer/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"source_ids\": [\"G00023\"],\\n      \"reason\": \"No excerpt provides a clearly defined concept name or content.\"\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"source_ids\": [\"G00023\"],\\n      \"reason\": \"Excerpts do not contain a term and its definition.\"\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"source_ids\": [\"G00023\"],\\n      \"reason\": \"No excerpt offers a coherent explanation of a to"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0168",
+      "chunk_number": 26,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0146",
+      "chunk_number": 22,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz' does not validate with /properties/quiz/type: expected array, but got string\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explicit concept statements in provided excerpts.\",\\n      \"source_ids\": [\"G00022\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term definitions present in the excerpts.\",\\n      \"source_ids\": [\"G00022\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explanatory content covering a specific topic is provided.\",\\n      \"source_ids\": [\"G00022\"]\\n    },\\n    {\\n      \"category\":"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0175",
+      "chunk_number": 27,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/explanation' does not validate with /properties/quiz/items/properties/explanation/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No supported excerpts provide a concept name or content.\",\\n      \"source_ids\": [\"G00027\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term or definition text is present in the excerpts.\",\\n      \"source_ids\": [\"G00027\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"Excerpts do not contain explanatory material.\",\\n      \"source_ids\": [\"G0"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0162",
+      "chunk_number": 25,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/answer' does not validate with /properties/quiz/items/properties/answer/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No supported concept name or content found in the provided excerpts.\",\\n      \"source_ids\": [\"G00025\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term and definition text present in the excerpts.\",\\n      \"source_ids\": [\"G00025\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explanatory content with a clear topic identified.\",\\n      \"source_id"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0152",
+      "chunk_number": 23,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0169",
+      "chunk_number": 26,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz' does not validate with /properties/quiz/type: expected array, but got string\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"source_ids\": [\"G00026\"],\\n      \"reason\": \"No excerpt provides a concept name or content.\"\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"source_ids\": [\"G00026\"],\\n      \"reason\": \"No excerpt defines a term.\"\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"source_ids\": [\"G00026\"],\\n      \"reason\": \"No excerpt offers an explanatory passage.\"\\n    },\\n    {\\n      \"category\": \"examples\",\\n      \"availability\": \"SOURCE_"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0147",
+      "chunk_number": 22,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0176",
+      "chunk_number": 27,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/question' does not validate with /properties/quiz/items/properties/question/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explicit concept name or content provided in the excerpts.\",\\n      \"source_ids\": [\"G00027\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term and definition text are present in the excerpts.\",\\n      \"source_ids\": [\"G00027\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"Excerpts do not contain a clear explanatory topic or explanation text.\","
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0170",
+      "chunk_number": 26,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0177",
+      "chunk_number": 27,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/answer' does not validate with /properties/quiz/items/properties/answer/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt provides a concept name or content.\",\\n      \"source_ids\": [\"G00027\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt defines a term.\",\\n      \"source_ids\": [\"G00027\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt offers an explanatory passage.\",\\n      \"source_ids\": [\"G00027\"]\\n    },\\n    {\\n      \"category\": \"examples\","
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0194",
+      "chunk_number": 30,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0208",
+      "chunk_number": 33,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/2/bloom_level' does not validate with /properties/quiz/items/properties/bloom_level/enum: value must be one of 'Remember', 'Understand', 'Apply', 'Analyze', 'Evaluate', 'Create'\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [\\n    {\\n      \"item\": \"I001\",\\n      \"category\": \"concepts\",\\n      \"field\": \"concept_name\",\\n      \"element\": 0,\\n      \"part\": \"value\",\\n      \"text\": \"interest rate effect on aggregate demand\",\\n      \"refs\": [\"Q0004\"],\\n      \"basis\": \"explicit\",\\n      \"availability\": \"SOURCE_SUPPORTED\",\\n      \"literal_kind\": \"verbal\",\\n      \"instructional_role\": null,\\n      \"related_refs\": []\\n    },\\n    {\\n      \"item\": \"I001\",\\n      \"category\": \"concepts\",\\n      \"field\": \"content\",\\n      \"element\": 0,\\n      \"part\": \"value\",\\n "
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0178",
+      "chunk_number": 27,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/question' does not validate with /properties/quiz/items/properties/question/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No supported excerpts provide concept definitions or content.\",\\n      \"source_ids\": [\"G00027\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term and definition excerpts are present.\",\\n      \"source_ids\": [\"G00027\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explanatory material is available in the excerpts.\",\\n      \"source_ids\": [\"G0002"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0212",
+      "chunk_number": 34,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/explanation' does not validate with /properties/quiz/items/properties/explanation/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt provides a named concept or its content.\",\\n      \"source_ids\": [\"G00034\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt defines a term.\",\\n      \"source_ids\": [\"G00034\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"Excerpts do not contain a clear explanatory passage.\",\\n      \"source_ids\": [\"G00034\"]\\n    },\\n    {\\n   "
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0216",
+      "chunk_number": 35,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0179",
+      "chunk_number": 27,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0223",
+      "chunk_number": 36,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/1/refs' does not validate with /properties/quiz/items/properties/refs/minItems: minItems: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explicit concept name or content provided in excerpts.\",\\n      \"source_ids\": [\"G00036\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term and definition text present.\",\\n      \"source_ids\": [\"G00036\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explanatory text with a clear topic.\",\\n      \"source_ids\": [\"G00036\"]\\n    },\\n    {\\n      \"category\""
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0224",
+      "chunk_number": 36,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0251",
+      "chunk_number": 40,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0255",
+      "chunk_number": 41,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'The provided excerpts contain only isolated questions and short answers about exchange\u2011rate movements; they do not supply any complete educational content that satisfies the required fields for any knowledge item (concept, definition, explanation, example, fact, formula, procedure, or relationship). Consequently no rows can be generated that meet the schema\u2019s mandatory requirements.\\n\\nBecause the source does not support the creation of four distinct short\u2011answer quiz items, the response must indicate that the task cannot be fulfilled rather than fabricating material.'}}"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0262",
+      "chunk_number": 42,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/bloom_level' does not validate with /properties/quiz/items/properties/bloom_level/enum: value must be one of 'Remember', 'Understand', 'Apply', 'Analyze', 'Evaluate', 'Create'\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explicit concept name or content provided in excerpts.\",\\n      \"source_ids\": [\"G00042\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term and definition text are present.\",\\n      \"source_ids\": [\"G00042\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"Excerpts do not contain a cl"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0269",
+      "chunk_number": 43,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'The provided excerpts do not contain sufficient educational content to populate any of the required schema fields (concepts, definitions, explanations, examples, facts, formulas, procedures, relationships) nor to construct four source\u2011supported short\u2011answer quiz questions. Consequently, a valid `compact_field_rows_quiz_v2` response cannot be generated without fabricating information, which is prohibited.'}}"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0276",
+      "chunk_number": 44,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/1/refs' does not validate with /properties/quiz/items/properties/refs/minItems: minItems: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt provides a complete concept definition or name.\",\\n      \"source_ids\": [\"G00044\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term and definition are present in the excerpts.\",\\n      \"source_ids\": [\"G00044\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"Explanations lack sufficient detail to extract topic and text.\",\\n      \"source_ids\": [\"G0"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0256",
+      "chunk_number": 41,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0277",
+      "chunk_number": 44,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/1/refs' does not validate with /properties/quiz/items/properties/refs/minItems: minItems: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt provides a concept name or content.\",\\n      \"source_ids\": [\"G00044\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt defines a term.\",\\n      \"source_ids\": [\"G00044\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt offers an explanation of a topic.\",\\n      \"source_ids\": [\"G00044\"]\\n    },\\n    {\\n      \"category\": \"examples\",\\n "
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0259",
+      "chunk_number": 41,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0266",
+      "chunk_number": 42,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/refs' does not validate with /properties/quiz/items/properties/refs/minItems: minItems: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt provides a defined concept name or content required for concepts.\",\\n      \"source_ids\": [\"G00042\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"Excerpts do not contain any term-definition pairs.\",\\n      \"source_ids\": [\"G00042\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt offers a coherent explanation of a topic.\",\\n      \"source_ids"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0273",
+      "chunk_number": 43,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/1/refs' does not validate with /properties/quiz/items/properties/refs/minItems: minItems: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explicit concept name or content is provided in the excerpts.\",\\n      \"source_ids\": [\"G00043\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term and definition text are present in the excerpts.\",\\n      \"source_ids\": [\"G00043\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"Excerpts contain fragmented statements without a clear explanatory topic or tex"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0278",
+      "chunk_number": 44,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/answer' does not validate with /properties/quiz/items/properties/answer/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No supported excerpt provides a concept name or content.\",\\n      \"source_ids\": [\"G00044\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term or definition is present in the excerpts.\",\\n      \"source_ids\": [\"G00044\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"Excerpts do not contain a clear explanatory topic or text.\",\\n      \"source_ids\": [\"G000"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0267",
+      "chunk_number": 42,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/topic' does not validate with /properties/quiz/items/properties/topic/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt provides sufficient information to define a concept name or content.\",\\n      \"source_ids\": [\"G00042\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No excerpt defines a term or provides definition text.\",\\n      \"source_ids\": [\"G00042\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"Excerpts are fragmented statements without a coherent explanat"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0274",
+      "chunk_number": 43,
+      "type": "SchedulerHold",
+      "error": "Operation failed validation or admission; inspect secret-free audit"
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0268",
+      "chunk_number": 42,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/answer' does not validate with /properties/quiz/items/properties/answer/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explicit concept names or content provided in the excerpts.\",\\n      \"source_ids\": [\"G00042\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No terms or definitions are present in the excerpts.\",\\n      \"source_ids\": [\"G00042\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"Excerpts contain isolated statements without a clear explanatory topic.\",\\n    "
+    },
+    {
+      "request_id": "multimodal-20261115_075258_112528-0275",
+      "chunk_number": 43,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz/0/topic' does not validate with /properties/quiz/items/properties/topic/minLength: minLength: got 0, want 1\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"rows\": [],\\n  \"abstentions\": [\\n    {\\n      \"category\": \"concepts\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explicit concept name or content provided in the excerpts.\",\\n      \"source_ids\": [\"G00043\"]\\n    },\\n    {\\n      \"category\": \"definitions\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No term and definition text are present in the excerpts.\",\\n      \"source_ids\": [\"G00043\"]\\n    },\\n    {\\n      \"category\": \"explanations\",\\n      \"availability\": \"SOURCE_MISSING\",\\n      \"reason\": \"No explanatory passage with a clear topic is available.\",\\n      \"source_ids\":"
+    }
+  ],
+  "assembly": "not_run",
+  "quality_score": null,
+  "total_actual_tokens": null,
+  "invocation_elapsed_seconds": 1326.3590000000004,
+  "elapsed_basis": "First durable claim to latest operation completion, including resume gaps and quota waits; invocation time is separate.",
+  "physical_call_seconds": 248.80700000000797,
+  "token_count_note": "Input/output sums include reported usage only; missing usage is not zero consumption.",
+  "unresolved_source_ids": [
+    "Vc6f7583c4bcaed0d4de9",
+    "V513133c1c502ca0cabd8",
+    "V22f6b7ed2b5e5a17b647",
+    "V1b2f7ba2aca47eefb44f",
+    "V055bf631971390e3a9b7",
+    "V89563a031e95940b88e3",
+    "V6df7a6983873eb89e7ac",
+    "Vc435b028209dbcdf4454",
+    "V61ab2fae55b555f96fae",
+    "V0425a3ee30fd87bded02",
+    "V86f91306bd02cd11f936",
+    "V2508ad6518251730b138",
+    "V5d0dc87f9501902f8052",
+    "V903e0b0fffa4ec6c858e",
+    "V408433afe146f1683194",
+    "V96b0dcb4f84f0b2df7b0",
+    "V57472be5ffedfd5af4c5",
+    "Vd61fd03a0ee8d7817e37",
+    "V3bc43cc34416dc535e3b",
+    "Vf677c41c824e6446b8ed",
+    "Ve96150e6d2ec67764aa8",
+    "V87c5c3a157497e7a2b7e",
+    "V70459a90131337e8fe6f",
+    "V2035b3132a4beeb963c9",
+    "Vdfcd56c7c4177adc49b8",
+    "Vb811d596dafcc2dffe43",
+    "Vcb8b0fb802728a351180",
+    "Ve756256126246a6c4a11",
+    "Ve10ff7ec4094e3042c8f",
+    "V33acf110713e70e85be6",
+    "Vdc1f1faf2f79cb871af1",
+    "V2b70ec91141b5f94f39c",
+    "V6e5850ab0c0aa034a9a1",
+    "Vadfceece89255ad9c10c",
+    "V00d33f1e68cb98e1cd93",
+    "V86e67aeaf6f623831d15",
+    "V409d125230197a2f6976",
+    "Vac4bf1d0dae970959662",
+    "V4e2638b694904534db0c",
+    "V4387f5e1b41ce9db9887",
+    "Vcf581a896addacfe9477",
+    "V8ca5494efba523da39b1",
+    "V2ef97f6c8db7f12547b9",
+    "V955222f91332b3f90c5d",
+    "V4ebc8678ca1ae758fc01",
+    "Vb92882987952d07727e9",
+    "V437714ec174a7179b485",
+    "V97b25feef09097a860bf",
+    "V6ddd2b7e6aeb8f87dcec",
+    "V8bdc7e5eca374cbca7a0",
+    "V67f71ae053cd5a4fe418",
+    "Ve3b8f249cdbe8e953e30",
+    "V1800aab51f61ae3f0036",
+    "V77d0368d8d65cf873714",
+    "Vbc4bd59d0df6fb85abd5",
+    "V437a30daa022e4c85662",
+    "V28daad6d608ad2863428",
+    "V9c707db2c482a1199a35",
+    "V0e4e02ec73dedf7cbf59",
+    "V9ea4b37bd5c469a302ee",
+    "Vaf0ab6e434e909f64f27",
+    "V576a90f0fe22f88429f3",
+    "Vf24460fb0af3f49b0e79",
+    "V8eb22d8aa9caf72698b8",
+    "Vaa2d1788b84e5b3509fe",
+    "V8b90f4b8577740bd6626",
+    "V6a6fb5980f4af71c8e19",
+    "Va8c8d7cb2025a0b6915f",
+    "Vb69bc070161d903fa596",
+    "V91cbe1c74c4cb8e86bd2",
+    "V600e5bd38f82ce76d1ce",
+    "V08fde4eda89b224e0807",
+    "V410525ffbdc8fd6c5d40",
+    "V1e04755016884325b763",
+    "V07063bb8ec2d56a37757",
+    "Vaf693b5bfce6985e3b70",
+    "V5bcb9b93e99ad29de96f",
+    "Vcf799567d0e16f760f4b",
+    "V730569531c8e69a5e654",
+    "V0a55179d9ee54655d01f",
+    "Vd4bb2e3cbf5432d25057",
+    "V4d6a7290227582e3a6bd",
+    "Vcba107cb422370f95b52",
+    "Ve9649b1d88decd89c63b",
+    "V11745ea6568ca395a0ef",
+    "Vbbaac5b8af70395eae46",
+    "Vfacceca39faf7ba0523f",
+    "Vabb0a705f8edc48f8455",
+    "Vad1f3fe90711445794fb",
+    "V4e4d6028c5202b17f1f9",
+    "Vcd5b5a395c18d435ac09",
+    "V505e1538661d9a8a9744",
+    "V627b2f220bc6297bc168",
+    "V7d8728763e72011a0cc6",
+    "Vdf169a5532bc5d75ac11",
+    "V794dc8ea264553d59e53"
+  ],
+  "ingestion_status": "success",
+  "source_representation_complete": false,
+  "missing_chunk_serials": [
+    1,
+    8,
+    14,
+    15,
+    18,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    36,
+    40,
+    41,
+    42,
+    43,
+    44
+  ]
+}
+
+Semantic checks are heuristics. Educational quality has not yet been manually reviewed. No quality score is inferred from HTTP success.

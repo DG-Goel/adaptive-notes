@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-73a8cf6f-867e-4e78-8b09-c9692f0c7490",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"fact1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The expected exchange rate moved to the right.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"It will move to the left, because net exports will decline.\",\n      \"refs\": [\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Only one curve can move.\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact4\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The curve will shift to the right.\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit concept name or definition provided in excerpts.\",\n      \"source_ids\": [\"G00042\"]\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No term definitions are present.\",\n      \"source_ids\": [\"G00042\"]\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explanatory passages identified.\",\n      \"source_ids\": [\"G00042\"]\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No illustrative examples given.\",\n      \"source_ids\": [\"G00042\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No formulas are present.\",\n      \"source_ids\": [\"G00042\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No procedural steps described.\",\n      \"source_ids\": [\"G00042\"]\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit relationships between entities are stated.\",\n      \"source_ids\": [\"G00042\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what happens to the expected exchange rate?\",\n      \"answer\": \"It moves to the right.\",\n      \"distractors\": [\n        \"It moves to the left.\",\n        \"It stays unchanged.\",\n        \"It becomes volatile.\"\n      ],\n      \"explanation\": \"The primary excerpt Q0000 states: \\\"And now the expected exchange rate moved to the right.\\\"\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Exchange rate movement\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"Why does the curve move to the left according to the discussion?\",\n      \"answer\": \"Because net exports will decline.\",\n      \"distractors\": [\n        \"Because interest rates increase.\",\n        \"Because the central bank raises rates.\",\n        \"Because inflation rises.\"\n      ],\n      \"explanation\": \"Excerpt Q0011 says: \\\"It will move to the left, because net exports will decline.\\\"\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Curve shift rationale\",\n      \"refs\": [\"Q0011\"]\n    },\n    {\n      \"question\": \"What does the speaker say about the number of curves that can move?\",\n      \"answer\": \"Only one can move.\",\n      \"distractors\": [\n        \"Both can move simultaneously.\",\n        \"Neither can move.\",\n        \"All curves must move together.\"\n      ],\n      \"explanation\": \"Excerpt Q0009 states: \\\"Only one can move.\\\"\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Curve movement limitation\",\n      \"refs\": [\"Q0009\"]\n    },\n    {\n      \"question\": \"How does the speaker describe the direction of the curve shift in response to a change?\",\n      \"answer\": \"The curve will shift to the right.\",\n      \"distractors\": [\n        \"The curve will shift to the left.\",\n        \"The curve will not shift.\",\n        \"The curve will oscillate.\"\n      ],\n      \"explanation\": \"Excerpt Q0002 says: \\\"And so that means this curve will shift to the right.\\\"\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Curve shift direction\",\n      \"refs\": [\"Q0002\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. The excerpts are vague, no clear concepts. Likely abstentions for many fields. No educational content? Might extract concept: \"expected exchange rate moves to the right\". Could be a fact. We'll create facts rows.\n\nCreate fact_text from Q0000: \"The expected exchange rate moved to the right.\" availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, related_refs [].\n\nSimilarly Q0011: \"It will move to the left, because net exports will decline.\" fact.\n\nAdd others as facts.\n\nProvide abstentions for other categories.\n\nQuiz: maybe one question about direction of curve movement. Use Q0000 and Q0011.\n\nWe need four questions but may not have enough. Provide two.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794808925,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_27194a498a",
+  "usage": {
+    "completion_tokens": 1377,
+    "prompt_tokens": 2560,
+    "total_tokens": 3937,
+    "completion_time": 2.910111952,
+    "completion_tokens_details": {
+      "reasoning_tokens": 157
+    },
+    "prompt_time": 0.146244117,
+    "prompt_tokens_details": null,
+    "queue_time": 0.165305322,
+    "total_time": 3.056356069
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hf5fyse57r9bd5jrrt52ry",
+    "debug": null,
+    "seed": 589628969,
+    "usage": null
+  }
+}

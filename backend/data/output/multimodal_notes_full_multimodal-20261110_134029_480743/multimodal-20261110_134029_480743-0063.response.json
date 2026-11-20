@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-db1a74c9-b883-4a4d-b3de-24a69385c41a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"it can become that your name or whatever, it doesn't really matter.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"Alright, now let's go forward.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"Alright, here's our first Java project.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"Now this code editor might look a little bit intimidating at first, but trust me, it's really easy, and you're going to learn about it throughout this course.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"On the left side we have the project panel where we can see all the folders and files in our project.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"For example, on the top we have the hello world project, inside this project we have the source folder where we have the source code of our project.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"Now in this folder we have another folder that is com.codewithmosh that is the name of our base package, and in this package we have this class, main.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0006\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C8\",\n      \"text\": \"So you can see this main file opened on the right side here.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0007\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C9\",\n      \"text\": \"Now look at the name of this file, it's main Java.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0008\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C10\",\n      \"text\": \"So all Java files should have the Java extension.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0009\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\n        \"C1\",\n        \"C2\",\n        \"C3\",\n        \"C4\",\n        \"C5\",\n        \"C6\",\n        \"C7\",\n        \"C8\",\n        \"C9\",\n        \"C10\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Likely no factual claims, just statements. We can create claims for each excerpt as fact_text? They are teaching notes. Use claims with availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null. refs to Q0000 etc. Then categories: facts maybe. Provide fact_text linking claim IDs.\n\nLet's create claims C1-C10 for each excerpt. Then facts array with fact_text list of claim IDs in order. fact_type null? need is_null true. Provide.\n\nNo concepts, definitions, etc.\n\nAbstentions none.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318514,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_86dc843b12",
+  "usage": {
+    "completion_tokens": 1118,
+    "prompt_tokens": 3128,
+    "total_tokens": 4246,
+    "completion_time": 3.111681951,
+    "completion_tokens_details": {
+      "reasoning_tokens": 126
+    },
+    "prompt_time": 0.074233527,
+    "prompt_tokens_details": {
+      "cached_tokens": 2560
+    },
+    "queue_time": 0.171444301,
+    "total_time": 3.185915478
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72vfb8tedwbqxjfsh8pcstx",
+    "debug": null,
+    "seed": 781240654,
+    "usage": null
+  }
+}

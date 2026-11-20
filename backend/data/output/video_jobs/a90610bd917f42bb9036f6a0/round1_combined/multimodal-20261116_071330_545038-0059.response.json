@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-64d3ff29-a322-4d4e-aed0-d285e8745b36",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"expected exchange rate for t+1\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"we're going to assume for now that the expected exchange rate for t plus 1 is fixed\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"spectral exchange rate\",\n      \"refs\": [\"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"we all have a common spectral exchange rate, and it's fixed\",\n      \"refs\": [\"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"the simplification of assuming a fixed expected exchange rate is completely unrealistic\",\n      \"refs\": [\"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"people's expectations about future exchange rates move exchanges a lot\",\n      \"refs\": [\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What assumption does the speaker make about the expected exchange rate for t+1?\",\n      \"answer\": \"It is fixed\",\n      \"distractors\": [\n        \"It is variable\",\n        \"It follows a random walk\",\n        \"It equals the current exchange rate\"\n      ],\n      \"explanation\": \"The speaker explicitly states they will assume the expected exchange rate for t+1 is fixed (Q0006).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"expected exchange rate assumption\",\n      \"refs\": [\"Q0006\"]\n    },\n    {\n      \"question\": \"How does the speaker describe the simplification of assuming a fixed expected exchange rate?\",\n      \"answer\": \"Completely unrealistic\",\n      \"distractors\": [\n        \"Perfectly accurate\",\n        \"Moderately realistic\",\n        \"Slightly unrealistic\"\n      ],\n      \"explanation\": \"The speaker calls the simplification \\\"completely unrealistic\\\" (Q0008).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"simplification realism\",\n      \"refs\": [\"Q0008\"]\n    },\n    {\n      \"question\": \"What term does the speaker use for the common fixed rate they assume?\",\n      \"answer\": \"Spectral exchange rate\",\n      \"distractors\": [\n        \"Nominal exchange rate\",\n        \"Real exchange rate\",\n        \"Equilibrium exchange rate\"\n      ],\n      \"explanation\": \"The speaker refers to a \\\"common spectral exchange rate\\\" that is fixed (Q0012).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"spectral exchange rate\",\n      \"refs\": [\"Q0012\"]\n    },\n    {\n      \"question\": \"According to the speaker, what factor moves exchanges a lot?\",\n      \"answer\": \"People's expectations about future exchange rates\",\n      \"distractors\": [\n        \"Interest rate differentials\",\n        \"Trade balances\",\n        \"Government interventions\"\n      ],\n      \"explanation\": \"The speaker states that expectations about future exchange rates are a major driver of exchange movements (Q0010).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"exchange rate drivers\",\n      \"refs\": [\"Q0010\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? There's mention of \"expected exchange rate for t+1 is fixed\". Could be a concept: fixed expected exchange rate. Also \"spectral exchange rate\". Likely facts. We'll create rows for concepts with concept_name and content.\n\nExtract primary excerpts.\n\nCreate item \"item1\". Rows:\n\nconcept_name: \"expected exchange rate for t+1\" from Q0006. content: \"we're going to assume for now that the expected exchange rate for t plus 1 is fixed.\" basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\nconcept_name: \"spectral exchange rate\" from Q0012. content: \"we all have a common spectral exchange rate, and it's fixed.\" similar.\n\nAlso maybe fact: \"Assumption simplifies mechanism but is unrealistic\" from Q0008.\n\nCreate fact row.\n\nNow quiz: need 4 questions. Use these.\n\nQ1: What assumption is made about the expected exchange rate for t+1? Answer: It is fixed. Distractors: It is variable, It follows a random walk, It equals current rate. Bloom: Understand.\n\nQ2: What term does the speaker refer to when saying \"this term is doing here, this divided\"? Hard to know. Might skip.\n\nWe have limited content. Could make question about simplification being unrealistic. Q2: The speaker describes the simplification as... Answer: completely unrealistic. Distractors: perfectly accurate, moderately realistic, slightly unrealistic.\n\nQ3: What does the speaker call the common fixed rate? Answer: spectral exchange rate. Distractors: nominal exchange rate, real exchange rate, equilibrium exchange rate.\n\nQ4: According to the speaker, what moves exchanges a lot? Answer: people's expectations about future exchange rate. Distractors: interest rate differentials, trade balances, government interventions.\n\nProvide rows and quiz. Also abstentions? No missing required fields.\n\nWe need rows for concepts (content, concept_name). Also facts maybe.\n\nCreate rows accordingly.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794813301,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5a93aea882",
+  "usage": {
+    "completion_tokens": 1556,
+    "prompt_tokens": 2503,
+    "total_tokens": 4059,
+    "completion_time": 3.426058893,
+    "completion_tokens_details": {
+      "reasoning_tokens": 412
+    },
+    "prompt_time": 0.204111564,
+    "prompt_tokens_details": null,
+    "queue_time": 0.229833635,
+    "total_time": 3.630170457
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hkb14ke88t3bky97xc7zxf",
+    "debug": null,
+    "seed": 1472007214,
+    "usage": null
+  }
+}

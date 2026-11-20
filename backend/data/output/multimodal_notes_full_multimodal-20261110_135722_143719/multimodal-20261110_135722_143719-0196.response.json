@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-a892db8a-4da2-4bea-a6a6-c3a0f3a56f14",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"A boolean variable can be declared to check if temperature is greater than 20 and less than 30.\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"A boolean variable can be declared to check if temperature is greater than 20 and less than 30.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The && operator represents the logical AND operator in Java.\",\n        \"refs\": [\"Q0002\"],\n        \"claims\": [\n          {\n            \"text\": \"The && operator represents the logical AND operator in Java.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0002\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"If both conditions are true, the result of the boolean expression is true; otherwise it is false.\",\n        \"refs\": [\"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"If both conditions are true, the result of the boolean expression is true; otherwise it is false.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java evaluates a boolean expression from left to right and uses short‑circuit evaluation: if the first condition is false, the second condition is not evaluated.\",\n        \"refs\": [\"Q0010\", \"Q0011\", \"Q0012\"],\n        \"claims\": [\n          {\n            \"text\": \"Java evaluates a boolean expression from left to right and uses short‑circuit evaluation: if the first condition is false, the second condition is not evaluated.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0010\", \"Q0011\", \"Q0012\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"When temperature is 12, the expression temperature > 20 && temperature < 30 evaluates to false.\",\n        \"refs\": [\"Q0006\", \"Q0007\"],\n        \"claims\": [\n          {\n            \"text\": \"When temperature is 12, the expression temperature > 20 && temperature < 30 evaluates to false.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0006\", \"Q0007\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output facts from primary teaching. Extract statements about boolean expression etc.\n\nCreate items with fact_text, claims. Each claim includes text, refs, basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role explanation_of_mistake? Actually teaching. Probably explanatory. Use role maybe explanation_of_mistake? Not. Could be prerequisite or explanation. Use null for instructional_role? Must be one of list or null. Use null.\n\nWe'll list facts:\n\n1. Declare boolean variable isWarm and check temperature >20 && temperature <30. (from Q0000)\n\n2. Use && operator as logical AND in Java. (Q0002)\n\n3. Both conditions must be true for expression true; otherwise false. (Q0004)\n\n4. Java evaluates expression left to short-circuit: if first false, second not evaluated. (Q0010- Q0012)\n\n5. Example: temperature 12 yields false. (Q0006- Q0007)\n\nProvide claims per fact.\n\nProvide abstentions empty, excluded empty.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794320678,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4200b3f836",
+  "usage": {
+    "completion_tokens": 974,
+    "prompt_tokens": 3385,
+    "total_tokens": 4359,
+    "completion_time": 2.052092349,
+    "completion_tokens_details": {
+      "reasoning_tokens": 216
+    },
+    "prompt_time": 0.949017029,
+    "prompt_tokens_details": null,
+    "queue_time": 0.657834494,
+    "total_time": 3.001109378
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72xhbhjeznvb32g92jmd936",
+    "debug": null,
+    "seed": 1273381890,
+    "usage": null
+  }
+}

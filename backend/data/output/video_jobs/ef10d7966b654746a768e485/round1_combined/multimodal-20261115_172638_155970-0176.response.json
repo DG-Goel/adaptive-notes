@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-da6046d3-a559-4f57-b9c0-329bc79f251d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"C001\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Currency depreciation makes domestic goods cheaper relative to foreign goods\",\n      \"refs\": [\"Q0012\", \"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C001\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Depreciating the exchange rate lowers the price of domestic goods for foreign buyers, which can increase net exports.\",\n      \"refs\": [\"Q0012\", \"Q0013\", \"Q0015\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"source_ids\": [\"G00035\"],\n      \"reason\": \"No explicit aliases provided in the excerpts.\"\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what is the primary effect of depreciating a country's currency?\",\n      \"answer\": \"It makes domestic goods cheaper for foreign buyers, increasing net exports.\",\n      \"distractors\": [\n        \"It raises the price of imported goods, reducing inflation.\",\n        \"It strengthens the domestic currency, attracting foreign investment.\",\n        \"It has no impact on trade balances.\"\n      ],\n      \"explanation\": \"The speaker states that depreciation makes domestic goods cheaper relative to the rest of the world and that this will increase net exports.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Currency depreciation and trade\",\n      \"refs\": [\"Q0012\", \"Q0013\", \"Q0015\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows but content is just discussion, no concrete concepts? We can extract concept: \"depreciate currency makes domestic goods cheaper\". Create concept item. Provide rows for concept_name and content. Use primary excerpts. Provide abstentions for missing fields. Quiz maybe 1 question. Let's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794764034,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_90620edd96",
+  "usage": {
+    "completion_tokens": 546,
+    "prompt_tokens": 2579,
+    "total_tokens": 3125,
+    "completion_time": 1.136844884,
+    "completion_tokens_details": {
+      "reasoning_tokens": 62
+    },
+    "prompt_time": 0.112274429,
+    "prompt_tokens_details": null,
+    "queue_time": 0.376258256,
+    "total_time": 1.249119313
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g4bjr5eq4by7vmqnre1xj4",
+    "debug": null,
+    "seed": 180506269,
+    "usage": null
+  }
+}

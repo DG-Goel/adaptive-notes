@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-e56f986c-3f7b-45c4-a3a8-297d229feb47",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00013\"],\n      \"reason\": \"No explicit or directly entailed procedural steps are present in the primary excerpts.\"\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract procedures. The excerpts contain no clear step-by-step procedure, just description. Likely no supported teaching of procedures. So items empty, abstain for missing procedures? We must abstain with source_ids primary. Provide reason. Excluded none.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794599111,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_96d96a151c",
+  "usage": {
+    "completion_tokens": 137,
+    "prompt_tokens": 2894,
+    "total_tokens": 3031,
+    "completion_time": 0.291763844,
+    "completion_tokens_details": {
+      "reasoning_tokens": 53
+    },
+    "prompt_time": 0.159650201,
+    "prompt_tokens_details": null,
+    "queue_time": 0.293657704,
+    "total_time": 0.451414045
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b72j45eem8pr1jrbtqy9qe",
+    "debug": null,
+    "seed": 896807253,
+    "usage": null
+  }
+}

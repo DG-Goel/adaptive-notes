@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-43ff0a68-61c8-4525-91de-9e129b3b5051",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"units\":[{\"title\":\"Switch statement execution with break\",\"source_segment_ids\":[\"FCT_0368\"],\"mode\":\"visual_only\",\"remaining_text\":\"\",\"visuals\":[{\"source_segment_ids\":[\"FCT_0368\"],\"needs_review\":false,\"missing_information\":[],\"evidence\":[{\"note_id\":\"FCT_0368\",\"quote\":\"So if the role is admin, first it will execute this line, and then it will jump to this case block, it will execute this other line, and then after it executes this break statement, it will jump out of this switch block.\"}],\"payload\":{\"type\":\"flowchart\",\"title\":\"Switch statement execution with break\",\"direction\":\"DOWN\",\"nodes\":[{\"id\":\"n1\",\"label\":\"Start\"},{\"id\":\"n2\",\"label\":\"case admin: execute line 1\"},{\"id\":\"n3\",\"label\":\"jump to case block\"},{\"id\":\"n4\",\"label\":\"execute line 2\"},{\"id\":\"n5\",\"label\":\"break statement\"},{\"id\":\"n6\",\"label\":\"Exit switch\"}],\"edges\":[{\"from\":\"n1\",\"to\":\"n2\",\"label\":\"\"},{\"from\":\"n2\",\"to\":\"n3\",\"label\":\"\"},{\"from\":\"n3\",\"to\":\"n4\",\"label\":\"\"},{\"from\":\"n4\",\"to\":\"n5\",\"label\":\"\"},{\"from\":\"n5\",\"to\":\"n6\",\"label\":\"jump out\"}]}}]}]}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visuals if supported. Look for comparisons or flow. We have switch statement flow with break. Could make flowchart of switch case execution. Use primary notes with evidence. Provide visual unit. Need source_segment_ids. Use note IDs like FCT_0368 etc. Provide evidence quotes.\n\nWe can make flowchart: title \"Switch statement execution with break\". Nodes: start, case admin, line1, jump to case, line2, break, exit. Use quotes from notes.\n\nProvide one visual. Return units list with that visual. No text-only units.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794580134,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 420,
+    "prompt_tokens": 1623,
+    "total_tokens": 2043,
+    "completion_time": 0.876047182,
+    "completion_tokens_details": {
+      "reasoning_tokens": 121
+    },
+    "prompt_time": 0.089287735,
+    "prompt_tokens_details": null,
+    "queue_time": 1.37314071,
+    "total_time": 0.965334917
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7amzc2fefdrzgxpwg7qjjf1",
+    "debug": null,
+    "seed": 1211723004,
+    "usage": null
+  }
+}

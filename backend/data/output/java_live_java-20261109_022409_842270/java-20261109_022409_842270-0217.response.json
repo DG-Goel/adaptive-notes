@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-5b10e313-2c9e-414b-b908-12eaed97bfb6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Avoid magic numbers in code; use constants or final variables to describe them.\",\n        \"refs\": [\"Q0001\", \"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Declare constants for months in a year (12) and percent (100) to avoid magic numbers.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Use meaningful and descriptive variable names; avoid short or unclear abbreviations.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Choose appropriate data types: int for principal amounts up to two billion, float for small interest rates.\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output schema with empty arrays except extracted items. The excerpts are about coding best practices: avoid magic numbers, use constants, meaningful variable names, data types. These are facts or explanations. We'll create facts.\n\nExtract facts: \"Avoid magic numbers in code; use constants or final variables.\" Cite Q0001,Q0002. Another fact: \"Use meaningful and descriptive variable names.\" Cite Q0004. Another fact: \"Choose appropriate data types: int for principal up to 2 billion, float for small interest rates.\" Cite Q0003,Q0004. Also \"Declare constants for months in year (12) and percent (100).\" Cite Q0001.\n\nWe'll put in facts array with fact_text and fact_type null. Provide refs list.\n\nNo definitions, examples, etc.\n\nAlso excluded none.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191603,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_df9620fe21",
+  "usage": {
+    "completion_tokens": 449,
+    "prompt_tokens": 3149,
+    "total_tokens": 3598,
+    "completion_time": 0.941076304,
+    "completion_tokens_details": {
+      "reasoning_tokens": 168
+    },
+    "prompt_time": 0.138758263,
+    "prompt_tokens_details": null,
+    "queue_time": 0.299621686,
+    "total_time": 1.079834567
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z2ecq3eqg8k4hqs83j6mrv",
+    "debug": null,
+    "seed": 1128517716,
+    "usage": null
+  }
+}

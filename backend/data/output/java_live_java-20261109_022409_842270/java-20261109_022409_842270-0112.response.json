@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-14008653-029f-449c-a8b8-37abef9745d0",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"parameter\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"the holes that we define in our methods\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"argument\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"the actual values that we pass to these methods\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"immutable string\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a string that cannot be changed after it is created; any method that appears to modify a string actually returns a new string object\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"exemplifies\": {\n        \"text\": \"replace method\",\n        \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\"]\n      },\n      \"example_text\": {\n        \"text\": \"replace('!', '*') changes all exclamation marks in the original string to asterisks, producing a new string while leaving the original unchanged\",\n        \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"trim method\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"example_text\": {\n        \"text\": \"trim() removes leading and trailing whitespace from a string, e.g., \\\"  hello  \\\" becomes \\\"hello\\\"\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"example_type\": null\n    }\n  ],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"indexOf method behavior\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"indexOf returns the index of the first occurrence of the given character or substring; if the character or substring is not present, it returns -1\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"string immutability in Java\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Java strings cannot be altered after creation; methods like replace, toLowerCase, toUpperCase, and trim produce new string objects rather than modifying the original\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"toLowerCase converts all characters in a string to lowercase and returns a new string\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"toUpperCase converts all characters in a string to uppercase and returns a new string\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"trim removes extra whitespace at the beginning and end of a string and returns a new string\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [\n    {\n      \"procedure_name\": {\n        \"text\": \"Using the replace method\",\n        \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\"]\n      },\n      \"steps\": [\n        {\n          \"text\": \"Identify the character or substring to replace (target)\",\n          \"refs\": [\"Q0001\"]\n        },\n        {\n          \"text\": \"Identify the replacement value\",\n          \"refs\": [\"Q0001\"]\n        },\n        {\n          \"text\": \"Call the replace method with target and replacement as arguments\",\n          \"refs\": [\"Q0002\"]\n        },\n        {\n          \"text\": \"Store or use the returned new string; the original string remains unchanged\",\n          \"refs\": [\"Q0003\"]\n        }\n      ],\n      \"prerequisites\": null,\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"replace method usage example and behavior\",\n        \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\"]\n      }\n    },\n    {\n      \"procedure_name\": {\n        \"text\": \"Trimming whitespace from user input\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"steps\": [\n        {\n          \"text\": \"Obtain the raw input string from the user\",\n          \"refs\": [\"Q0005\"]\n        },\n        {\n          \"text\": \"Call the trim() method on the string\",\n          \"refs\": [\"Q0004\"]\n        },\n        {\n          \"text\": \"Use the returned trimmed string for further processing\",\n          \"refs\": [\"Q0004\"]\n        }\n      ],\n      \"prerequisites\": null,\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"trim method usage to remove leading/trailing spaces\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      }\n    }\n  ],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts about string methods in Java: length check, indexOf, replace, parameters vs arguments, immutability, toLowerCase, toUpperCase, trim. Extract facts, definitions, examples, explanations, procedures maybe.\n\nCreate facts: e.g., indexOf returns index of first occurrence, returns -1 if not found. replace returns new string, does not modify original. Strings are immutable. trim removes leading/trailing whitespace.\n\nDefinitions: maybe define parameters vs arguments.\n\nExamples: showing replace exclamation with asterisk.\n\nProcedures: maybe steps to use trim.\n\nWe'll cite refs accordingly.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191407,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_854fa9be4c",
+  "usage": {
+    "completion_tokens": 1373,
+    "prompt_tokens": 3142,
+    "total_tokens": 4515,
+    "completion_time": 2.854130495,
+    "completion_tokens_details": {
+      "reasoning_tokens": 134
+    },
+    "prompt_time": 0.160751709,
+    "prompt_tokens_details": null,
+    "queue_time": 0.290116237,
+    "total_time": 3.014882204
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z28asveey99dwzrjt9s7rr",
+    "debug": null,
+    "seed": 1766508958,
+    "usage": null
+  }
+}

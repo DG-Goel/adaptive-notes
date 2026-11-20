@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-4bd47a44-bf1d-4604-847f-d27369fa703a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"I0000\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"assumption\",\n      \"refs\": [\"Q0000\", \"Q0002\", \"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I0000\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The speaker states that they will assume certain effects are not as strong as others, and that net exports decrease when the currency appreciates.\",\n      \"refs\": [\"Q0000\", \"Q0003\", \"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit term definitions provided in the excerpts.\",\n      \"source_ids\": [\"G00034\"]\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explanatory passages beyond stating assumptions.\",\n      \"source_ids\": [\"G00034\"]\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No concrete examples given.\",\n      \"source_ids\": [\"G00034\"]\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No factual statements beyond assumptions.\",\n      \"source_ids\": [\"G00034\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No formulas presented.\",\n      \"source_ids\": [\"G00034\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No procedural steps described.\",\n      \"source_ids\": [\"G00034\"]\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit relationships between entities described.\",\n      \"source_ids\": [\"G00034\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what will be assumed about the second effect compared to the volume effect?\",\n      \"answer\": \"It is not as strong as the volume effect.\",\n      \"distractors\": [\n        \"It is stronger than the volume effect.\",\n        \"It has the same strength as the volume effect.\",\n        \"It is unrelated to the volume effect.\"\n      ],\n      \"explanation\": \"The speaker explicitly says, \\\"Now, we're going to assume from now on that this second effect is not as strong as the volume effect.\\\" (Q0000)\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"assumption about effect strength\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"What assumption does the speaker make regarding net exports when the currency appreciates?\",\n      \"answer\": \"Net exports will decrease.\",\n      \"distractors\": [\n        \"Net exports will increase.\",\n        \"Net exports will stay the same.\",\n        \"Net exports will become unpredictable.\"\n      ],\n      \"explanation\": \"The speaker states, \\\"Our assumption will be that net exports decrease when the currency appreciates.\\\" (Q0003)\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"assumption about net exports\",\n      \"refs\": [\"Q0003\"]\n    },\n    {\n      \"question\": \"How does the speaker describe the realism of the assumption about the short run?\",\n      \"answer\": \"It is very realistic except for a very short run.\",\n      \"distractors\": [\n        \"It is unrealistic in all cases.\",\n        \"It is realistic only for the long run.\",\n        \"It is realistic for all time periods.\"\n      ],\n      \"explanation\": \"The speaker says, \\\"And that's a very realistic assumption, except for the very, very, very short run.\\\" (Q0001)\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"scope of assumption realism\",\n      \"refs\": [\"Q0001\"]\n    },\n    {\n      \"question\": \"What does the speaker say about the relative importance of the quantity effect versus the price effect?\",\n      \"answer\": \"The quantity effect is more important than the price effect.\",\n      \"distractors\": [\n        \"The price effect is more important than the quantity effect.\",\n        \"Both effects are equally important.\",\n        \"Neither effect matters.\"\n      ],\n      \"explanation\": \"The speaker notes, \\\"So the quantity's effect is more important than the price effect.\\\" (Q0006)\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"relative effect importance\",\n      \"refs\": [\"Q0006\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows. Identify concepts: assumption. So concept_name \"assumption\". content from quotes. Use primary excerpts. Create item e.g., item \"I0000\". Provide rows for concept_name and content. Also maybe facts? But limited. We'll output rows for concept. Also abstentions for missing other categories. Quiz: create 4 questions about assumptions. Use excerpts. Provide refs. Let's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794769605,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4727af4560",
+  "usage": {
+    "completion_tokens": 1208,
+    "prompt_tokens": 2499,
+    "total_tokens": 3707,
+    "completion_time": 2.5294943610000002,
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_time": 0.097226751,
+    "prompt_tokens_details": null,
+    "queue_time": 0.165105806,
+    "total_time": 2.6267211120000002
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g9njkzewga47qf64j8pgsq",
+    "debug": null,
+    "seed": 30685358,
+    "usage": null
+  }
+}

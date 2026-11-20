@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-172e2fb3-559e-4dfb-a2d8-0d77573198d3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"net export function\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The net export function shifts upward when export demand (Y*) increases, moving the net export curve up.\",\n      \"refs\": [\"Q0005\", \"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Higher domestic output can lead to a larger trade deficit.\",\n      \"refs\": [\"Q0002\", \"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the net export function shifts up, the economy can end with a trade surplus.\",\n      \"refs\": [\"Q0004\", \"Q0008\", \"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"In an export‑driven scenario, the trade balance moves opposite to a domestic‑driven scenario.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What happens to the net export curve when export demand (Y*) increases?\",\n      \"answer\": \"It shifts upward.\",\n      \"distractors\": [\n        \"It shifts downward.\",\n        \"It becomes vertical.\",\n        \"It stays unchanged.\"\n      ],\n      \"explanation\": \"The speaker says moving Y* up moves export up, causing the net export function to shift up.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"net export function shift\",\n      \"refs\": [\"Q0005\", \"Q0006\"]\n    },\n    {\n      \"question\": \"According to the excerpt, higher domestic output tends to produce which trade outcome?\",\n      \"answer\": \"A larger trade deficit.\",\n      \"distractors\": [\n        \"A larger trade surplus.\",\n        \"No change in the trade balance.\",\n        \"An unpredictable trade outcome.\"\n      ],\n      \"explanation\": \"The speaker notes that increasing domestic output leads to a bigger trade deficit (Q0002, Q0007).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"output‑trade relationship\",\n      \"refs\": [\"Q0002\", \"Q0007\"]\n    },\n    {\n      \"question\": \"When the net export function shifts up, what trade balance result is described?\",\n      \"answer\": \"A trade surplus.\",\n      \"distractors\": [\n        \"A trade deficit.\",\n        \"No change in trade balance.\",\n        \"An equal increase in imports and exports.\"\n      ],\n      \"explanation\": \"The speaker states that with the net export function moving up, the economy ends with a trade surplus (Q0004, Q0008, Q0011).\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"net export shift outcome\",\n      \"refs\": [\"Q0004\", \"Q0008\", \"Q0011\"]\n    },\n    {\n      \"question\": \"In an export‑driven scenario, how does the trade balance move compared to a domestic‑driven scenario?\",\n      \"answer\": \"It moves in the opposite direction.\",\n      \"distractors\": [\n        \"It moves in the same direction.\",\n        \"It remains neutral.\",\n        \"It becomes unpredictable.\"\n      ],\n      \"explanation\": \"The speaker notes that in an export‑driven case, the trade balance behaves opposite to a domestic‑driven case (Q0003).\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"export‑driven vs domestic‑driven trade\",\n      \"refs\": [\"Q0003\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. The excerpts talk about net export function, trade deficit/surplus. We can create concepts: \"net export function\". content. Also facts: higher output leads to trade surplus etc.\n\nCreate rows for concepts: concept_name \"net export function\", content from Q0000 and Q0006. Provide refs.\n\nAlso facts: \"Increasing domestic output can lead to trade deficit\" from Q0007? Actually says losing some because increasing domestic output goes into input leads to deficit? Use Q0002, Q0007.\n\nCreate rows.\n\nQuiz: need 4 questions. Make based on these statements.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794767073,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d577f40f11",
+  "usage": {
+    "completion_tokens": 1269,
+    "prompt_tokens": 2473,
+    "total_tokens": 3742,
+    "completion_time": 2.767820554,
+    "completion_tokens_details": {
+      "reasoning_tokens": 129
+    },
+    "prompt_time": 0.036203884,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "queue_time": 0.055680816,
+    "total_time": 2.804024438
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g7894xek3sqhf14wprnj0n",
+    "debug": null,
+    "seed": 1211968640,
+    "usage": null
+  }
+}

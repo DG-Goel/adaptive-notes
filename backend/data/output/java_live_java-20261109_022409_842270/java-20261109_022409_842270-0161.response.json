@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-f0eea62c-5332-422a-8aa9-9fe59a8c519d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"implicit casting\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"implicit casting that means automatic casting or automatic conversion\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"example_type\": null,\n      \"example_text\": {\n        \"text\": \"declare a short variable X set to 1 and an integer Y set to X plus 2; printing Y yields 3\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"exemplifies\": {\n        \"text\": \"implicit casting of short to int in arithmetic expression\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      }\n    },\n    {\n      \"example_type\": null,\n      \"example_text\": {\n        \"text\": \"assigning a double literal 1.1 to an int variable causes a compilation error; changing the variable type to double allows the assignment and results in 3.1 when adding 2\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"exemplifies\": {\n        \"text\": \"need for explicit type matching when assigning floating‑point to integer\",\n        \"refs\": [\"Q0004\"]\n      }\n    }\n  ],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"how Java performs implicit casting in arithmetic\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"explanation_type\": null,\n      \"explanation_text\": {\n        \"text\": \"Java looks at the short value, allocates an anonymous integer variable, copies the short value into it, then adds the two integers; this automatic conversion is implicit casting\",\n        \"refs\": [\"Q0002\"]\n      }\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"Parentheses have the highest priority, then multiplication and division, then addition and subtraction.\",\n        \"refs\": [\"Q0000\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"A short variable occupies 2 bytes.\",\n        \"refs\": [\"Q0001\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"An integer variable occupies 4 bytes.\",\n        \"refs\": [\"Q0001\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"Implicit casting automatically converts a value to a larger data type.\",\n        \"refs\": [\"Q0003\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"Byte can be automatically converted to short, short to int, int to long.\",\n        \"refs\": [\"Q0003\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"Assigning a double literal to an int variable causes a compilation error; the variable must be of type double.\",\n        \"refs\": [\"Q0004\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"When an integer is used with a double, the integer is automatically cast to double.\",\n        \"refs\": [\"Q0005\"]\n      }\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output JSON with schema. Extract facts, definitions, examples, explanations, formulas, procedures, relationships, concepts. From excerpts: teaching about order of operations, casting, implicit casting, type conversion, bytes sizes. Create items.\n\nLet's make facts: order of operations priority: parentheses > multiplication/division > addition/subtraction. Cite Q0000.\n\nFact: short is 2 bytes, int is 4 bytes. Cite Q0001.\n\nFact: implicit casting converts smaller type to larger automatically. Cite Q0003.\n\nFact: byte -> short -> int -> long automatic. Cite Q0003.\n\nFact: assigning double to int causes compilation error; need double variable. Cite Q0004.\n\nFact: integer automatically cast to double in expression. Cite Q0005.\n\nDefinitions: term \"implicit casting\" definition. term text \"implicit casting that means automatic casting or automatic conversion\". Cite Q0003.\n\nTerm \"casting\" maybe. But okay.\n\nExamples: example of short X=1, int Y = X+2 results Y=3. Cite Q0000 and Q0001.\n\nExample of double assignment error. Cite Q0004.\n\nExplanations: explanation of how Java performs implicit casting: allocate anonymous int variable, copy value, add. Cite Q0002.\n\nProcedures maybe none.\n\nRelationships maybe none.\n\nConcepts maybe none.\n\nProvide excluded empty.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191482,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_b1dd3e7a63",
+  "usage": {
+    "completion_tokens": 1062,
+    "prompt_tokens": 3142,
+    "total_tokens": 4204,
+    "completion_time": 2.21255639,
+    "completion_tokens_details": {
+      "reasoning_tokens": 281
+    },
+    "prompt_time": 0.135240558,
+    "prompt_tokens_details": null,
+    "queue_time": 0.391883517,
+    "total_time": 2.347796948
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z2amg8esa8psjh2vhjcfst",
+    "debug": null,
+    "seed": 265657045,
+    "usage": null
+  }
+}

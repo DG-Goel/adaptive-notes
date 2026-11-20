@@ -1,0 +1,178 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "CON_0043"
+      ],
+      "reason": "Connection direction and label need one ordered evidence quote"
+    },
+    {
+      "note_ids": [
+        "CON_0053",
+        "CON_0054"
+      ],
+      "reason": "Unsupported visual label or value"
+    },
+    {
+      "note_ids": [
+        "CON_0047",
+        "CON_0046"
+      ],
+      "reason": "Table row lacks joint evidence"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Multiplier Chain Reaction",
+      "source_segment_ids": [
+        "CON_0043"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0043"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0043",
+              "quote": "The multiplier arises because an increase in income raises consumption, which raises income again, creating a chain reaction."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Multiplier Chain Reaction",
+            "direction": "DOWN",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "Increase in income",
+                "kind": "start"
+              },
+              {
+                "id": "n2",
+                "label": "Raises consumption",
+                "kind": "action"
+              },
+              {
+                "id": "n3",
+                "label": "Raises income again",
+                "kind": "action"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": "raises"
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": "raises"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Trade Outcome Comparison",
+      "source_segment_ids": [
+        "CON_0053",
+        "CON_0054"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0053",
+            "CON_0054"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0053",
+              "quote": "I would have ended up with a bigger trade deficit."
+            },
+            {
+              "note_id": "CON_0054",
+              "quote": "I end up with a trade surplus rather than a trade deficit."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Trade Outcome Comparison",
+            "headers": [
+              "Outcome",
+              "Description"
+            ],
+            "rows": [
+              [
+                "Trade deficit",
+                "I would have ended up with a bigger trade deficit."
+              ],
+              [
+                "Trade surplus",
+                "I end up with a trade surplus rather than a trade deficit."
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Net Export Function Characteristics",
+      "source_segment_ids": [
+        "CON_0047",
+        "CON_0046"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0047",
+            "CON_0046"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0047",
+              "quote": "The net export function is export minus import divided by the exchange rate. It is a decreasing function of domestic output."
+            },
+            {
+              "note_id": "CON_0046",
+              "quote": "Domestic demand for goods is the same as demand for domestically produced goods. Trade balance is 0, meaning exports are exactly equal to imports. Net exports are equal to 0."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Net Export Function Characteristics",
+            "headers": [
+              "Item",
+              "Description"
+            ],
+            "rows": [
+              [
+                "Net export function",
+                "export minus import divided by the exchange rate; decreasing function of domestic output."
+              ],
+              [
+                "Trade balance (0)",
+                "Exports equal imports; net exports equal 0."
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

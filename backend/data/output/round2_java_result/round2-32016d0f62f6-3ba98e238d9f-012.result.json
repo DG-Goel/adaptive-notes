@@ -1,0 +1,126 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0408",
+        "FCT_0411",
+        "FCT_0412",
+        "FCT_0413",
+        "FCT_0414",
+        "FCT_0415",
+        "FCT_0416",
+        "FCT_0417"
+      ],
+      "reason": "Source note is unresolved"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Loop Comparison: for vs foreach",
+      "source_segment_ids": [
+        "FCT_0408",
+        "FCT_0411",
+        "FCT_0412",
+        "FCT_0413",
+        "FCT_0414",
+        "FCT_0415",
+        "FCT_0416",
+        "FCT_0417"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0408",
+            "FCT_0411",
+            "FCT_0412",
+            "FCT_0413",
+            "FCT_0414",
+            "FCT_0415",
+            "FCT_0416",
+            "FCT_0417"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0408",
+              "exact_quote": "First I'm going to use the for loop to iterate over this array.\nSo we type for, here we declare our loop variable or loop counter into i, we set it to 0, as long as i is than fruits.length, we're going to increment i by one after each iteration.\nAnd here we simply print fruits of i."
+            },
+            {
+              "note_id": "FCT_0411",
+              "exact_quote": "Now, there is another way to write the same code using the for each loop."
+            },
+            {
+              "note_id": "FCT_0412",
+              "exact_quote": "Here we type for, in parentheses we declare a loop variable, but the type of this variable should be based on the type of items in our array."
+            },
+            {
+              "note_id": "FCT_0413",
+              "exact_quote": "So here we have a string array and that means every item in this array is a string."
+            },
+            {
+              "note_id": "FCT_0414",
+              "exact_quote": "So here we should declare a string variable, we call it fruit here we type a colon and then the name of our array fruits."
+            },
+            {
+              "note_id": "FCT_0415",
+              "exact_quote": "Now in each iteration, fruit will hold the value of one item in this array."
+            },
+            {
+              "note_id": "FCT_0416",
+              "exact_quote": "So here we don't have to declare a numeric counter, we don't have to write a boolean expression like this, we don't have to increment our counter, it's much easier to iterate over an array."
+            },
+            {
+              "note_id": "FCT_0417",
+              "exact_quote": "Now, if we print fruit, we get the exact same result as before."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "for loop vs foreach loop",
+            "headers": [
+              "Aspect",
+              "for loop",
+              "foreach loop"
+            ],
+            "rows": [
+              [
+                "Syntax",
+                "for (int i = 0; i < fruits.length; i++) { ... }",
+                "for (String fruit : fruits) { ... }"
+              ],
+              [
+                "Counter Variable",
+                "Explicit numeric counter (i)",
+                "Implicit element variable (fruit)"
+              ],
+              [
+                "Condition Check",
+                "i < fruits.length each iteration",
+                "Handled automatically"
+              ],
+              [
+                "Increment",
+                "i++ each iteration",
+                "Not required"
+              ],
+              [
+                "Readability",
+                "More verbose",
+                "Simpler and clearer"
+              ],
+              [
+                "Typical Use",
+                "When index needed",
+                "When only element needed"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

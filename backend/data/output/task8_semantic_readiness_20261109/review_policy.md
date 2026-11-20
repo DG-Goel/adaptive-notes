@@ -1,0 +1,15 @@
+# Review decisions, reuse and invalidation
+
+The immutable review input and canonical source determine packet bindings. Every field remains an unsplit bundle; atomic claim counts are unknown until reviewers explicitly separate material assertions. Identical main/category text with identical evidence, full qualification context, instructional role, source version and primary/context permissions can share a packet. Auxiliary fields and superficially similar statements remain separate. The Task 7 equivalence link is preserved for presentation; its different wording/evidence does not receive an automatic shared approval.
+
+An explicit decision targets the complete enumerated packet membership and includes reviewer identity/type, an aware timestamp, rationale, checked evidence/qualifications and a whole-bundle scope. Supported/partial decisions need valid, authorized quotations. Literal reconstructed code and incomplete equations cannot be approved as complete literal material. Partial status does not approve an entire field for the student subset.
+
+Every decision appends to a hash-chained history; revisions and NOT_REVIEWED resets retain earlier records. This detects mutation but is not cryptographic authentication of a reviewer's identity. Names/type are explicitly supplied, not silently inferred. All actual new decisions in this delivery are assistant source comparisons, not human reviews.
+
+Changing text, citations or offsets, item qualifications, roles/links, primary/context permissions or any canonical source-document content changes the binding. Source-version invalidation is deliberately conservative: a source-document change invalidates all its approvals. Stale records remain in history but do not approve current claims. In the real mortgage case, three earlier records were invalidated and three explicit follow-up reviews were recorded; no approval was auto-transferred.
+
+Task 7 legacy records are pinned only after verifying the historical knowledge/source artifact hashes. Their original identity and rationale survive, with reviewed_at=null because no historical timestamp was recorded. Import time is separately recorded. Missing/invalid evidence permission or an incomplete equation cannot be grandfathered into a positive status.
+
+Use review_input_knowledge.json as the continuing review input. knowledge_v8.json is a derived projection for existing field validators and rendering, not the ledger authority; its prior review records and per-field provenance are preserved in metadata. Re-ingesting a projection can conservatively change citation representations and require fresh bindings. The original source, immutable review input, decision history, legacy pin and relation records are the reproducible review package.
+
+Neighbor context is bounded and explicitly context-only. It grants no new evidence permission. To use an additional passage, make an explicit source-backed citation repair, preserve primary identity, rebuild packets, then review affected bindings again. Quotes and mechanical validation do not establish entailment or factual truth.

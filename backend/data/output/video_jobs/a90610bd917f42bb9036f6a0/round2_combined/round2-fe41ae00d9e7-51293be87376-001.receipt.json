@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-911727be-7eec-4e46-aa11-0ca883e17c54",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Exchange Rate Model Connections\",\n      \"source_segment_ids\": [\"CON_0011\", \"CON_0012\", \"CON_0013\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0011\", \"CON_0012\", \"CON_0013\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0011\",\n              \"exact_quote\": \"The exchange rate moves in response to different monetary policies in different countries and influences aggregate demand and output in the very short run.\"\n            },\n            {\n              \"note_id\": \"CON_0012\",\n              \"exact_quote\": \"The Mandela Fleming model connects monetary policies across countries to exchange‑rate movements and examines how those movements affect real activity in the short run.\"\n            },\n            {\n              \"note_id\": \"CON_0013\",\n              \"exact_quote\": \"In the short run the IS‑LM framework can be applied with nominal prices fixed, extending it to an open economy by adding the exchange rate as a variable.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"concept_tree\",\n            \"title\": \"Exchange Rate Model\",\n            \"nodes\": [\n              {\n                \"id\": \"n0\",\n                \"label\": \"Exchange Rate\"\n              },\n              {\n                \"id\": \"n1\",\n                \"label\": \"Monetary Policies (cross‑country)\",\n                \"parent\": \"n0\"\n              },\n              {\n                \"id\": \"n2\",\n                \"label\": \"Impact on Aggregate Demand & Output\",\n                \"parent\": \"n0\"\n              },\n              {\n                \"id\": \"n3\",\n                \"label\": \"IS‑LM Extension (open economy)\",\n                \"parent\": \"n0\"\n              }\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Net Exports Response to Income Changes\",\n      \"source_segment_ids\": [\"FCT_0062\", \"CON_0014\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0062\", \"CON_0014\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0062\",\n              \"exact_quote\": \"Net exports decrease when domestic income rises because imports increase.\"\n            },\n            {\n              \"note_id\": \"CON_0014\",\n              \"exact_quote\": \"Net exports increase when the income of the rest of the world rises because foreign demand for domestically produced goods goes up.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Net Exports vs. Income\",\n            \"direction\": \"DOWN\",\n            \"nodes\": [\n              {\n                \"id\": \"s0\",\n                \"label\": \"Start\",\n                \"kind\": \"start\"\n              },\n              {\n                \"id\": \"d1\",\n                \"label\": \"Domestic Income ↑\",\n                \"kind\": \"action\"\n              },\n              {\n                \"id\": \"d2\",\n                \"label\": \"Net Exports ↓\",\n                \"kind\": \"action\"\n              },\n              {\n                \"id\": \"f1\",\n                \"label\": \"Foreign Income ↑\",\n                \"kind\": \"action\"\n              },\n              {\n                \"id\": \"f2\",\n                \"label\": \"Net Exports ↑\",\n                \"kind\": \"action\"\n              }\n            ],\n            \"edges\": [\n              { \"from\": \"s0\", \"to\": \"d1\", \"label\": \"\" },\n              { \"from\": \"d1\", \"to\": \"d2\", \"label\": \"\" },\n              { \"from\": \"s0\", \"to\": \"f1\", \"label\": \"\" },\n              { \"from\": \"f1\", \"to\": \"f2\", \"label\": \"\" }\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Interest Rate Hike Observations\",\n      \"source_segment_ids\": [\"CON_0009\", \"CON_0010\", \"CON_0003\", \"CON_0004\", \"CON_0005\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0009\", \"CON_0010\", \"CON_0003\", \"CON_0004\", \"CON_0005\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0009\",\n              \"exact_quote\": \"Japan hasn't had hikes in interest rates for three decades\"\n            },\n            {\n              \"note_id\": \"CON_0010\",\n              \"exact_quote\": \"The scale here is very small\"\n            },\n            {\n              \"note_id\": \"CON_0003\",\n              \"exact_quote\": \"These are a few basis points\"\n            },\n            {\n              \"note_id\": \"CON_0004\",\n              \"exact_quote\": \"Not to say that the interest rate in the US will be lower than the interest rate in Japan, but the direction of the change is in that way\"\n            },\n            {\n              \"note_id\": \"CON_0005\",\n              \"exact_quote\": \"The direction of the change is towards the US loosening monetary policy before the rest of the world does\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"concept_tree\",\n            \"title\": \"Interest Rate Hike Context\",\n            \"nodes\": [\n              {\n                \"id\": \"i0\",\n                \"label\": \"Interest Rate Hike\"\n              },\n              {\n                \"id\": \"i1\",\n                \"label\": \"Japan: No hikes for 30 years\",\n                \"parent\": \"i0\"\n              },\n              {\n                \"id\": \"i2\",\n                \"label\": \"Scale: Very small (few basis points)\",\n                \"parent\": \"i0\"\n              },\n              {\n                \"id\": \"i3\",\n                \"label\": \"US direction: Loosening before rest of world\",\n                \"parent\": \"i0\"\n              }\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visuals. Identify possible concept tree: exchange rate connections. Could make concept tree for \"exchange rate\" linking monetary policy, aggregate demand, etc. Use notes CON_0011, CON_0012, CON_0013. Also interest rate hike notes maybe tree.\n\nCreate unit with visual_only? Probably partial. We'll output units.\n\nLet's craft one concept_tree titled \"Exchange Rate Model\". Nodes: Exchange Rate (root). Children: Monetary Policies (from CON_0012), Aggregate Demand Impact (from CON_0011), IS‑LM Extension (from CON_0013). Provide evidence quotes.\n\nAlso maybe flowchart for net exports relationship: Net exports decrease when domestic income rises (FCT_0062) and increase when foreign income rises (CON_0014). Could be flowchart: Domestic Income ↑ -> Net Exports ↓ ; Foreign Income ↑ -> Net Exports ↑. That's decision? Use flowchart.\n\nCreate table for interest rate hike statements? Might be table of statements.\n\nWe'll output JSON with units.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794813793,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8ea50c0161",
+  "usage": {
+    "completion_tokens": 1566,
+    "prompt_tokens": 2888,
+    "total_tokens": 4454,
+    "completion_time": 3.269743988,
+    "completion_tokens_details": {
+      "reasoning_tokens": 211
+    },
+    "prompt_time": 0.140086622,
+    "prompt_tokens_details": null,
+    "queue_time": 0.315881914,
+    "total_time": 3.40983061
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hkt1yqe9ytkstbz45ftfve",
+    "debug": null,
+    "seed": 1528771465,
+    "usage": null
+  }
+}

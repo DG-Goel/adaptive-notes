@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-78eb6582-1e0d-43b5-ab62-a77cf67e15dd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"F001\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Expansionary fiscal policy has no effect on the exchange rate.\",\n      \"refs\": [\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"F002\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"In an open economy, the currency tends to appreciate.\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"F003\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Fiscal policy has no effect on the interest rate.\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"F004\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"An expansionary fiscal policy that keeps the interest rate unchanged does not lead to currency appreciation.\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what is the effect of an expansionary fiscal policy on the exchange rate?\",\n      \"answer\": \"No effect\",\n      \"distractors\": [\n        \"It causes the exchange rate to appreciate\",\n        \"It causes the exchange rate to depreciate\",\n        \"It makes the exchange rate more volatile\"\n      ],\n      \"explanation\": \"The speaker explicitly states that expansionary fiscal policy does not move the exchange rate (Q0010).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Fiscal policy and exchange rate\",\n      \"refs\": [\"Q0010\"]\n    },\n    {\n      \"question\": \"In an open economy, what tends to happen to the domestic currency according to the speaker?\",\n      \"answer\": \"It tends to appreciate\",\n      \"distractors\": [\n        \"It tends to depreciate\",\n        \"It remains unchanged\",\n        \"It becomes more volatile\"\n      ],\n      \"explanation\": \"The speaker says, \\\"one of the effects ... in an open economy is that your currency will tend to appreciate\\\" (Q0004).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Open economy currency effects\",\n      \"refs\": [\"Q0004\"]\n    },\n    {\n      \"question\": \"What does the speaker claim about fiscal policy's impact on interest rates?\",\n      \"answer\": \"It has no effect on the interest rate\",\n      \"distractors\": [\n        \"It raises the interest rate\",\n        \"It lowers the interest rate\",\n        \"It makes the interest rate more volatile\"\n      ],\n      \"explanation\": \"The speaker explicitly states, \\\"It has no effect on the interest rate\\\" (Q0007).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Fiscal policy and interest rates\",\n      \"refs\": [\"Q0007\"]\n    },\n    {\n      \"question\": \"If an expansionary fiscal policy keeps the interest rate unchanged, what does the speaker say about currency appreciation?\",\n      \"answer\": \"It does not lead to appreciation\",\n      \"distractors\": [\n        \"It leads to strong appreciation\",\n        \"It leads to depreciation\",\n        \"It causes high inflation\"\n      ],\n      \"explanation\": \"The speaker explains that with unchanged interest rates, expansionary fiscal policy does not cause currency appreciation (Q0009).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Fiscal policy, interest rates, and exchange rates\",\n      \"refs\": [\"Q0009\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? The excerpts talk about fiscal policy, interest rate, exchange rate. Could create facts. For example: \"Expansionary fiscal policy has no effect on exchange rate.\" That's stated. So rows in facts category.\n\nCreate fact_text rows with availability SOURCE_MISSING? Since exact code missing but statement is present. It's explicit. So availability SOURCE_SUPPORTED. basis explicit. literal_kind verbal. instructional_role null. item maybe \"F001\". Provide refs.\n\nWe need at least one required field per item. For facts only fact_text required. So rows.\n\nCreate maybe multiple facts: Q0004 about open economy currency appreciates. That's a statement: \"In an open economy, your currency will tend to appreciate.\" That's a fact.\n\nQ0007: \"It has no effect on the interest rate.\" (ref to what? likely fiscal policy). Provide.\n\nQ0010: \"It doesn't move the exchange rate.\"\n\nAdd abstentions none.\n\nQuiz: need up to four questions. Use these facts.\n\nQuestion1: What effect does an expansionary fiscal policy have on exchange rate according to the speaker? Answer: No effect. Distractors: Causes appreciation, Causes depreciation, Increases volatility.\n\nProvide refs Q0010 or Q0011.\n\nBloom: Understand.\n\nSimilarly other questions.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794808849,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_fe269835c7",
+  "usage": {
+    "completion_tokens": 1262,
+    "prompt_tokens": 2492,
+    "total_tokens": 3754,
+    "completion_time": 2.647000969,
+    "completion_tokens_details": {
+      "reasoning_tokens": 266
+    },
+    "prompt_time": 0.154082712,
+    "prompt_tokens_details": null,
+    "queue_time": 0.321240314,
+    "total_time": 2.801083681
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hf35m9en3sje6tt7ahw48v",
+    "debug": null,
+    "seed": 132177534,
+    "usage": null
+  }
+}

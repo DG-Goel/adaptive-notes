@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-bd42a92d-6810-47ac-be00-28d09ddc7194",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Traditional AI vs Generative AI Comparison\",\n      \"source_segment_ids\": [\"FCT_0040\", \"FCT_0041\", \"FCT_0043\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0040\", \"FCT_0041\", \"FCT_0043\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0040\",\n              \"quote\": \"Traditional AI is used for classification, regression, prediction, and decision making and is considered lightweight.\"\n            },\n            {\n              \"note_id\": \"FCT_0041\",\n              \"quote\": \"the purpose of traditional AI was to analyze predict classify or make decisions whereas generative AI means you are generating new content\"\n            },\n            {\n              \"note_id\": \"FCT_0043\",\n              \"quote\": \"traditional AI has limited capabilities, whereas generative AI has high capabilities.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Traditional AI vs Generative AI\",\n            \"headers\": [\"Aspect\", \"Traditional AI\", \"Generative AI\"],\n            \"rows\": [\n              [\"Primary tasks\", \"classification, regression, prediction, decision making\", \"content generation (text, audio, video, etc.)\"],\n              [\"Capability level\", \"limited capabilities\", \"high capabilities\"],\n              [\"Output type\", \"yes/no labels, numbers\", \"new content of various modalities\"]\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need visual comparing traditional vs generative AI. Use notes FCT_0040, FCT_0041, FCT_0043. Provide table. Source ids. Build one visual. Return units list with that visual. No text-only units. Provide evidence quotes. Let's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794603078,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 425,
+    "prompt_tokens": 1686,
+    "total_tokens": 2111,
+    "completion_time": 0.889191569,
+    "completion_tokens_details": {
+      "reasoning_tokens": 60
+    },
+    "prompt_time": 0.078930526,
+    "prompt_tokens_details": null,
+    "queue_time": 0.318340343,
+    "total_time": 0.968122095
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7bavkgdesva3vry6v44tq6s",
+    "debug": null,
+    "seed": 1818576760,
+    "usage": null
+  }
+}

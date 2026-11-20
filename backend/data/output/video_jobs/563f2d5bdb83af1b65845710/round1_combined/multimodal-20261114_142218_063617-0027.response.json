@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-a0819286-507b-4e24-bb34-1c480975b431",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the domestic interest rate is increased, the exchange rate appreciates.\",\n      \"refs\": [\"Q0015\", \"Q0016\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If the exchange rate is kept fixed and the currency appreciates today, it is expected to depreciate in the next period.\",\n      \"refs\": [\"Q0042\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"exchange rate appreciation\",\n      \"refs\": [\"Q0015\", \"Q0016\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"An increase in the domestic interest rate leads to a higher exchange rate, meaning the domestic currency becomes more expensive.\",\n      \"refs\": [\"Q0015\", \"Q0016\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00017\", \"G00018\", \"G00019\", \"G00020\"],\n      \"reason\": \"No explicit term-definition pairs are present in the excerpts.\"\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00017\", \"G00018\", \"G00019\", \"G00020\"],\n      \"reason\": \"Exact equations are referenced but not provided in the excerpts.\"\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00017\", \"G00018\", \"G00019\", \"G00020\"],\n      \"reason\": \"No step‑by‑step procedural instructions are present.\"\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc. The excerpts discuss uncovered interest parity, exchange rate appreciation when domestic interest rate rises. So we can create concept: \"Uncovered interest parity\". content from excerpts? Not explicit term. No term defined. Might abstain.\n\nWe have facts: \"If domestic interest rate increases, exchange rate appreciates.\" supported by Q0011 etc. Create fact rows.\n\nProvide rows with availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, etc.\n\nLet's produce fact rows.\n\nAlso concept maybe \"exchange rate appreciation\". Provide concept_name and content.\n\nExtract content: Q0011 \"If the domestic interest rate is equal to international interest rate, what is the exchange rate today equal to?\" Not. Better Q0010? Q0010 \"What is it equal to?\" ambiguous.\n\nBut Q0011+Q0012 explain no capital gain when rates equal. Then later Q0015 \"And it's very easy for you to read from here that the exchange rate will go up.\" So fact: exchange rate will go up when domestic interest rate increases.\n\nCreate fact row with text \"When the domestic interest rate is increased, the exchange rate appreciates.\" refs Q0015,Q0016.\n\nAdd another fact: \"If the exchange rate is fixed and the currency appreciates today, it is expected to depreciate in the next period.\" from Q0042.\n\nCreate concept: \"exchange rate appreciation\" content from Q0015 etc.\n\nLet's output rows.\n\nAlso abstentions for missing definitions etc.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794666216,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_90620edd96",
+  "usage": {
+    "completion_tokens": 981,
+    "prompt_tokens": 3450,
+    "total_tokens": 4431,
+    "completion_time": 2.057075788,
+    "completion_tokens_details": {
+      "reasoning_tokens": 309
+    },
+    "prompt_time": 0.137437336,
+    "prompt_tokens_details": null,
+    "queue_time": 0.375937628,
+    "total_time": 2.194513124
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7d72c2aetg93h9k9px40ebh",
+    "debug": null,
+    "seed": 2045486975,
+    "usage": null
+  }
+}

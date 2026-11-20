@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-4bfc8235-1cf1-44fb-a16c-09c3696d0747",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"assumption_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Assumption\",\n      \"refs\": [\"Q0000\", \"Q0002\", \"Q0003\", \"Q0004\", \"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"assumption_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The speaker assumes that the second effect is not as strong as the volume effect, that net exports decrease when the currency appreciates, and that the quantity effect is more important than the price effect.\",\n      \"refs\": [\"Q0000\", \"Q0003\", \"Q0004\", \"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what happens to net exports when the currency appreciates?\",\n      \"answer\": \"Net exports decrease.\",\n      \"distractors\": [\n        \"Net exports increase.\",\n        \"Net exports stay the same.\",\n        \"Net exports become unpredictable.\"\n      ],\n      \"explanation\": \"The speaker explicitly states, \\\"Our assumption will be that net exports decrease when the currency appreciates\\\" (Q0003).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Net exports and currency appreciation\",\n      \"refs\": [\"Q0003\"]\n    },\n    {\n      \"question\": \"What does the speaker assume about the relative strength of the second effect compared to the volume effect?\",\n      \"answer\": \"The second effect is not as strong as the volume effect.\",\n      \"distractors\": [\n        \"The second effect is stronger than the volume effect.\",\n        \"Both effects have equal strength.\",\n        \"The volume effect is negligible.\"\n      ],\n      \"explanation\": \"The speaker says, \\\"we're going to assume ... that this second effect is not as strong as the volume effect\\\" (Q0000).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Relative effect strength\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"Which effect does the speaker consider more important, quantity or price?\",\n      \"answer\": \"Quantity effect.\",\n      \"distractors\": [\n        \"Price effect.\",\n        \"Both effects equally.\",\n        \"Neither effect is important.\"\n      ],\n      \"explanation\": \"The speaker states, \\\"So the quantity's effect is more important than the price effect\\\" (Q0006).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Importance of effects\",\n      \"refs\": [\"Q0006\"]\n    },\n    {\n      \"question\": \"What does the speaker say about the realism of the assumption regarding the short run?\",\n      \"answer\": \"It is realistic except for a very short run.\",\n      \"distractors\": [\n        \"It is unrealistic in all cases.\",\n        \"It is realistic for the long run only.\",\n        \"It is realistic for all time periods.\"\n      ],\n      \"explanation\": \"The speaker notes, \\\"And that's a very realistic assumption, except for the very, very, very short run\\\" (Q0001).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Scope of the assumption\",\n      \"refs\": [\"Q0001\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. The excerpts talk about assumptions. So concepts: assumption. Provide concept_name and content. Use rows.\n\nItem label e.g., \"item1\". Provide concept_name row and content row.\n\nExtract content: \"we're going to assume ... second effect is not as strong as the volume effect.\" etc.\n\nWe can combine? Each row separate claim. Provide multiple rows for concept content? Probably one content row summarizing.\n\nWe'll create rows:\n\nitem: \"assumption_concept\"\n\nrow1 concept_name text \"Assumption\" refs Q0000 etc basis explicit availability SOURCE_SUPPORTED literal_kind verbal part value instructional_role null related_refs [].\n\nrow2 content text combine primary excerpts: maybe \"The speaker assumes that the second effect is not as strong as the volume effect, that net exports decrease when the currency appreciates, and that the quantity effect is more important than the price effect.\" Use refs multiple.\n\nProvide basis explicit.\n\nQuiz: need 4 questions about teaching in primary excerpts. Could ask: What does the speaker assume about net exports when currency appreciates? etc.\n\nCreate 4 MCQs with answer and three distractors.\n\nProvide refs to relevant excerpt.\n\nNow output JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794764034,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f73454f048",
+  "usage": {
+    "completion_tokens": 1077,
+    "prompt_tokens": 2501,
+    "total_tokens": 3578,
+    "completion_time": 2.265470503,
+    "completion_tokens_details": {
+      "reasoning_tokens": 240
+    },
+    "prompt_time": 0.108858043,
+    "prompt_tokens_details": null,
+    "queue_time": 0.287473068,
+    "total_time": 2.374328546
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g4bj14e0tbcev0krph8wxg",
+    "debug": null,
+    "seed": 372765286,
+    "usage": null
+  }
+}

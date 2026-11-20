@@ -1,0 +1,531 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-16T05:55:21.746812+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00009"
+      ],
+      "document_id": "DOC001",
+      "content": "Net exports increase when foreign (rest‑of‑the‑world) income rises because foreign demand for domestically produced goods rises, and they also rise when the foreign country’s imports (which are our exports) increase.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00009",
+              "quote": "So net exports is increasing in the income\n of the rest of the world.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 211,
+              "end_char": 280,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00009",
+              "quote": "So net exports is increasing in the income\n of the rest of the world.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 211,
+              "end_char": 280,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00009",
+              "quote": "So if the income in the other country goes up,\n then their imports will go up, which\n is our exports that go up.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 539,
+              "end_char": 651,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00009",
+              "quote": "That's the reason that exports goes up.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 653,
+              "end_char": 692,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "net exports",
+              "claims": [
+                {
+                  "text": "net exports",
+                  "refs": [
+                    "Q0003"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00009",
+                      "quote": "So net exports is increasing in the income\n of the rest of the world."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Net exports increase when foreign (rest‑of‑the‑world) income rises because foreign demand for domestically produced goods rises, and they also rise when the foreign country’s imports (which are our exports) increase.",
+              "claims": [
+                {
+                  "text": "Net exports increase when foreign (rest‑of‑the‑world) income rises because foreign demand for domestically produced goods rises, and they also rise when the foreign country’s imports (which are our exports) increase.",
+                  "refs": [
+                    "Q0003",
+                    "Q0010",
+                    "Q0011"
+                  ],
+                  "basis": "direct_entailment",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "explanation_of_mistake",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00009",
+                      "quote": "So net exports is increasing in the income\n of the rest of the world."
+                    },
+                    {
+                      "source_id": "G00009",
+                      "quote": "So if the income in the other country goes up,\n then their imports will go up, which\n is our exports that go up."
+                    },
+                    {
+                      "source_id": "G00009",
+                      "quote": "That's the reason that exports goes up."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "reason": "No explicit definition excerpts provided for terms.",
+              "source_ids": [
+                "G00009",
+                "G00010"
+              ],
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "reason": "No formula excerpts available; ASR speech prevents exact formula extraction.",
+              "source_ids": [
+                "G00009",
+                "G00010"
+              ],
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Net exports increase when foreign (rest‑of‑the‑world) income rises because foreign demand for domestically produced goods rises, and they also rise when the foreign country’s imports (which are our exports) increase.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "direct_entailment",
+                    "literal_kind": "verbal",
+                    "instructional_role": "explanation_of_mistake",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So net exports is increasing in the income\n of the rest of the world.",
+                      "So if the income in the other country goes up,\n then their imports will go up, which\n is our exports that go up.",
+                      "That's the reason that exports goes up."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00009",
+                        "quote": "So net exports is increasing in the income\n of the rest of the world.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 211,
+                        "end_char": 280,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00009",
+                        "quote": "So if the income in the other country goes up,\n then their imports will go up, which\n is our exports that go up.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 539,
+                        "end_char": 651,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00009",
+                        "quote": "That's the reason that exports goes up.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 653,
+                        "end_char": 692,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Net exports increase when foreign (rest‑of‑the‑world) income rises because foreign demand for domestically produced goods rises, and they also rise when the foreign country’s imports (which are our exports) increase.",
+                "preview_text": "Net exports increase when foreign (rest‑of‑the‑world) income rises because foreign demand for domestically produced goods rises, and they also rise when the foreign country’s imports (which are our exports) increase.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "net exports",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So net exports is increasing in the income\n of the rest of the world."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00009",
+                        "quote": "So net exports is increasing in the income\n of the rest of the world.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 211,
+                        "end_char": 280,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "net exports",
+                "preview_text": "net exports",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00009"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "net exports",
+      "aliases": []
+    },
+    {
+      "knowledge_id": "CON_0002",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00009",
+        "G00010"
+      ],
+      "document_id": "DOC001",
+      "content": "When the real exchange rate rises, domestic goods become more expensive relative to foreign goods, causing exports to fall and imports to rise.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00009",
+              "quote": "It makes our goods more expensive relative to foreign goods.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 850,
+              "end_char": 910,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00009",
+              "quote": "It makes our goods more expensive relative to foreign goods.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 850,
+              "end_char": 910,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00010",
+              "quote": "First, our exports will tend to decline because our goods are more expensive,\n and also our imports are going to tend to increase because foreign goods are cheaper,\n And so that's the reason this is decreasing with respect to the exchange rate.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 111,
+              "end_char": 355,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "real exchange rate",
+              "claims": [
+                {
+                  "text": "real exchange rate",
+                  "refs": [
+                    "Q0015"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00009",
+                      "quote": "It makes our goods more expensive relative to foreign goods."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "When the real exchange rate rises, domestic goods become more expensive relative to foreign goods, causing exports to fall and imports to rise.",
+              "claims": [
+                {
+                  "text": "When the real exchange rate rises, domestic goods become more expensive relative to foreign goods, causing exports to fall and imports to rise.",
+                  "refs": [
+                    "Q0015",
+                    "Q0018"
+                  ],
+                  "basis": "direct_entailment",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "explanation_of_mistake",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00009",
+                      "quote": "It makes our goods more expensive relative to foreign goods."
+                    },
+                    {
+                      "source_id": "G00010",
+                      "quote": "First, our exports will tend to decline because our goods are more expensive,\n and also our imports are going to tend to increase because foreign goods are cheaper,\n And so that's the reason this is decreasing with respect to the exchange rate."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "reason": "No explicit definition excerpts provided for terms.",
+              "source_ids": [
+                "G00009",
+                "G00010"
+              ],
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "reason": "No formula excerpts available; ASR speech prevents exact formula extraction.",
+              "source_ids": [
+                "G00009",
+                "G00010"
+              ],
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "When the real exchange rate rises, domestic goods become more expensive relative to foreign goods, causing exports to fall and imports to rise.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "direct_entailment",
+                    "literal_kind": "verbal",
+                    "instructional_role": "explanation_of_mistake",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "It makes our goods more expensive relative to foreign goods.",
+                      "First, our exports will tend to decline because our goods are more expensive,\n and also our imports are going to tend to increase because foreign goods are cheaper,\n And so that's the reason this is decreasing with respect to the exchange rate."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00009",
+                        "quote": "It makes our goods more expensive relative to foreign goods.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 850,
+                        "end_char": 910,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00010",
+                        "quote": "First, our exports will tend to decline because our goods are more expensive,\n and also our imports are going to tend to increase because foreign goods are cheaper,\n And so that's the reason this is decreasing with respect to the exchange rate.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 111,
+                        "end_char": 355,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "When the real exchange rate rises, domestic goods become more expensive relative to foreign goods, causing exports to fall and imports to rise.",
+                "preview_text": "When the real exchange rate rises, domestic goods become more expensive relative to foreign goods, causing exports to fall and imports to rise.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "real exchange rate",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "It makes our goods more expensive relative to foreign goods."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00009",
+                        "quote": "It makes our goods more expensive relative to foreign goods.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 850,
+                        "end_char": 910,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "real exchange rate",
+                "preview_text": "real exchange rate",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00009",
+          "G00010"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "real exchange rate",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 2,
+  "source_units_processed": 2,
+  "extraction_metadata": null
+}

@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-296487cb-6cb3-4b1a-ada3-f8f0606e7150",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"Install the necessary tools to build Java applications.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"Open up your browser and search for JDK.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"Download the JDK.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"JDK is short for Java development.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\n        \"Install the necessary tools to build Java applications.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"C1\"]\n      }\n    },\n    {\n      \"fact_text\": [\n        \"Open up your browser and search for JDK.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"C2\"]\n      }\n    },\n    {\n      \"fact_text\": [\n        \"Download the JDK.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"C3\"]\n      }\n    },\n    {\n      \"fact_text\": [\n        \"JDK is short for Java development.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"C4\"]\n      }\n    }\n  ],\n  \"definitions\": [\n    {\n      \"term\": [\n        \"JDK\"\n      ],\n      \"definition_text\": [\n        \"JDK is short for Java development.\"\n      ],\n      \"context\": {\n        \"is_null\": false,\n        \"value\": [\"Q0003\"]\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce typed_claim_refs_v1 with claims from excerpts. Likely facts about installing JDK. Create claims: install tools, open browser search JDK, download, JDK stands for Java development. All explicit. Provide claims with availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role maybe prerequisite? Use none. Provide refs. Then categories: facts. definitions maybe term JDK. Provide definition. Use excerpts. Let's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317471,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_87b3c396db",
+  "usage": {
+    "completion_tokens": 703,
+    "prompt_tokens": 2937,
+    "total_tokens": 3640,
+    "completion_time": 1.638086837,
+    "completion_tokens_details": {
+      "reasoning_tokens": 92
+    },
+    "prompt_time": 1.664117549,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "queue_time": 1.5613070470000001,
+    "total_time": 3.302204386
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72tff8xe57t2m5tnnmgb077",
+    "debug": null,
+    "seed": 1160124114,
+    "usage": null
+  }
+}

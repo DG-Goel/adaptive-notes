@@ -1,0 +1,147 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "CON_0035"
+      ],
+      "reason": "Source note is unresolved"
+    },
+    {
+      "note_ids": [
+        "CON_0031"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Neural Network Architecture Types",
+      "source_segment_ids": [
+        "CON_0035"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0035"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "CON_0035",
+              "exact_quote": "So you are feeding information forward there is no loop nothing information goes from input hidden to output layer okay so this is the picture of a feed forward neural network."
+            },
+            {
+              "note_id": "CON_0035",
+              "exact_quote": "A recurrent neural network is sort of like creating a soup so you put some ingredient then you test it you get some feedback now you add more ingredients or you adjust the ingredients okay."
+            },
+            {
+              "note_id": "CON_0035",
+              "exact_quote": "And the third, the most important architecture is Transformer."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Neural Network Architecture Types",
+            "headers": [
+              "Architecture",
+              "Data Flow",
+              "Key Characteristic"
+            ],
+            "rows": [
+              [
+                "Feed‑Forward Neural Network",
+                "Input → Hidden → Output (no loops)",
+                "Static forward propagation"
+              ],
+              [
+                "Recurrent Neural Network (RNN)",
+                "Input ↔ Hidden (feedback loops)",
+                "Handles sequential/temporal data"
+              ],
+              [
+                "Transformer",
+                "Self‑attention across all positions",
+                "Parallel processing, foundation of modern LLMs"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Collaborative Feature Detection Workflow",
+      "source_segment_ids": [
+        "CON_0031"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0031"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "CON_0031",
+              "exact_quote": "You can make this a teamwork and give individual responsibility to each of these students such as Mike can work on detecting only eyes, Mohan can work on detecting only nose."
+            },
+            {
+              "note_id": "CON_0031",
+              "exact_quote": "So each of these students are working on detecting a specific part of Koala's body from an image."
+            },
+            {
+              "note_id": "CON_0031",
+              "exact_quote": "And then these three students can go to Serena and Serena can work on deciding if the image has koalas face or not."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Collaborative Feature Detection",
+            "direction": "top-down",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "Mike – Detect eyes"
+              },
+              {
+                "id": "n2",
+                "label": "Mohan – Detect nose"
+              },
+              {
+                "id": "n3",
+                "label": "Saqib – Detect ears"
+              },
+              {
+                "id": "n4",
+                "label": "Serena – Aggregate scores → decide face"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n4",
+                "label": "eye score (0‑1)"
+              },
+              {
+                "from": "n2",
+                "to": "n4",
+                "label": "nose score (0‑1)"
+              },
+              {
+                "from": "n3",
+                "to": "n4",
+                "label": "ear score (0‑1)"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

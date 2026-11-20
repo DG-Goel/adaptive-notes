@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-7d9b85ac-5a64-4c38-b276-8359eaa9851d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"Hundreds or even thousands of classes may be created.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"Classes should be organized into packages.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"Base package for a Java project is the domain name of your company in reverse.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"Example base package: come.codewithmosh for website codewithmosh.com.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"You do not need an actual registered domain; the reverse domain is just a namespace.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"Every class created in the project will belong to this package.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"Packages will be discussed in more detail later.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0006\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C8\",\n      \"text\": \"Prompt to type a base package for your project.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0007\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\n        \"C1\",\n        \"C2\",\n        \"C3\",\n        \"C4\",\n        \"C5\",\n        \"C6\",\n        \"C7\",\n        \"C8\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce typed_claim_refs_v1 with claims from excerpts. Identify facts: about packages naming. Create claims. Then categories maybe facts. Provide abstentions for missing. Let's craft.\n\nClaims:\nC1: \"Hundreds or even thousands of classes may be created.\" basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, refs Q0000.\nC2: \"Classes should be organized into packages.\" refs Q0001.\nC3: \"Base package for a Java project is the domain name of your company in reverse.\" refs Q0002.\nC4: \"Example base package: come.codewithmosh for website codewithmosh.com.\" refs Q0003.\nC5: \"You do not need an actual registered domain; the reverse domain is just a namespace.\" refs Q0004.\nC6: \"Every class created in the project will belong to this package.\" refs Q0005.\nC7: \"Will discuss packages in more detail later.\" refs Q0006.\nC8: \"Prompt to type a base package for your project.\" refs Q0007.\n\nNow categories: facts maybe. Put each claim id in facts.fact_text list in order. fact_type maybe null? Provide is_null true.\n\nWe'll need abstentions? No missing.\n\nConstruct JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318507,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 1032,
+    "prompt_tokens": 3045,
+    "total_tokens": 4077,
+    "completion_time": 2.15957765,
+    "completion_tokens_details": {
+      "reasoning_tokens": 265
+    },
+    "prompt_time": 0.171624528,
+    "prompt_tokens_details": null,
+    "queue_time": 0.3267707,
+    "total_time": 2.331202178
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72vf538e13rfp08aegjveta",
+    "debug": null,
+    "seed": 907889921,
+    "usage": null
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "classification": "Partial live execution",
+  "selected_slots": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "rotation_policy": "pinned_primary_round_robin_recovery_same_org",
+  "continue_validation_failures": true,
+  "live": true,
+  "source_sha256": "54a017edc6b3465c37a6faf051a63dedd81437728df6b99276e998aedb127598",
+  "total_chunks": 48,
+  "completed_chunks": 47,
+  "recovered_truncations": 0,
+  "requests_attempted": 48,
+  "http_successes": 47,
+  "http_429": 0,
+  "input_tokens": 143859,
+  "output_tokens": 38448,
+  "unknown_usage_attempts": 1,
+  "elapsed_seconds": 601.6439158916473,
+  "errors": [
+    {
+      "request_id": "java-20261107_152814_899964-0042",
+      "chunk_number": 7,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/procedures/0' does not validate with /properties/procedures/items/$ref/required: missing properties: 'content'\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"concepts\": [],\\n  \"definitions\": [],\\n  \"examples\": [],\\n  \"facts\": [\\n    {\\n      \"fact_text\": {\\n        \"text\": \"javac compiles a .java file into bytecode (.class).\",\\n        \"refs\": [\"Q0001\"]\\n      },\\n      \"fact_type\": null\\n    },\\n    {\\n      \"fact_text\": {\\n        \"text\": \"Java bytecode is platform independent and can run on any operating system that has a Java Runtime Environment.\",\\n        \"refs\": [\"Q0003\", \"Q0004\"]\\n      },\\n      \"fact_type\": null\\n    },\\n    {\\n      \"fact_text\": {\\n        \"text\": \"The Java Virtual Machine (JVM) translates bytecode to native code for the underlying "
+    }
+  ],
+  "assembly": "completed",
+  "quality_score": null,
+  "total_actual_tokens": null,
+  "invocation_elapsed_seconds": 602.281,
+  "elapsed_basis": "First durable claim to latest operation completion, including resume gaps and quota waits; invocation time is separate.",
+  "physical_call_seconds": 113.80000000000064,
+  "token_count_note": "Input/output sums include reported usage only; missing usage is not zero consumption.",
+  "notes_status": "UNVERIFIED_PREVIEW",
+  "items": 369,
+  "source_units_with_items": 49
+}

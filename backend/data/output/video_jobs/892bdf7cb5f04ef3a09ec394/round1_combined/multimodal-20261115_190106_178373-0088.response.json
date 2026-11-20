@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-0dfde7de-4f2d-46bc-ab50-24bce83a0a15",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Domestic demand adjustment\",\n      \"refs\": [\"Q0003\",\"Q0005\",\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Subtracting imports from total demand yields domestic demand, which shifts the demand curve downward and makes it flatter.\",\n      \"refs\": [\"Q0003\",\"Q0005\",\"Q0009\",\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The demand curve shift caused by subtracting imports is not a parallel shift; it also rotates, becoming flatter at higher income levels.\",\n      \"refs\": [\"Q0006\",\"Q0011\",\"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What is the first step in adjusting total demand to obtain domestic demand according to the lecture?\",\n      \"answer\": \"Subtract imports from total demand.\",\n      \"distractors\": [\n        \"Add exports to total demand.\",\n        \"Multiply total demand by the domestic share.\",\n        \"Divide total demand by the import ratio.\"\n      ],\n      \"explanation\": \"The speaker states that the first thing to do is subtract imports because part of the demand goes to foreign goods, yielding domestic demand.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Domestic demand adjustment\",\n      \"refs\": [\"Q0003\",\"Q0005\"]\n    },\n    {\n      \"question\": \"How does subtracting imports affect the shape of the demand curve?\",\n      \"answer\": \"It shifts the curve down and makes it flatter.\",\n      \"distractors\": [\n        \"It shifts the curve up and steepens it.\",\n        \"It shifts the curve down without changing its slope.\",\n        \"It shifts the curve up and flattens it.\"\n      ],\n      \"explanation\": \"The lecture notes that subtracting imports moves the curve down and also causes it to become flatter, indicating a rotation.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Demand curve transformation\",\n      \"refs\": [\"Q0009\",\"Q0011\"]\n    },\n    {\n      \"question\": \"Why is the shift caused by subtracting imports not a parallel shift?\",\n      \"answer\": \"Because the curve also rotates, becoming flatter at higher income levels.\",\n      \"distractors\": [\n        \"Because the shift only affects low-income levels.\",\n        \"Because imports are added back later.\",\n        \"Because the shift is purely vertical.\"\n      ],\n      \"explanation\": \"The speaker explicitly says the shift is not parallel and notes that the curve becomes flatter, indicating rotation.\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"Shift characteristics\",\n      \"refs\": [\"Q0006\",\"Q0013\"]\n    },\n    {\n      \"question\": \"According to the speaker, what causes the demand curve to become flatter after adjusting for imports?\",\n      \"answer\": \"A positive marginal propensity to import, leading to larger imports at higher output.\",\n      \"distractors\": [\n        \"A negative marginal propensity to import, reducing imports at higher output.\",\n        \"Constant imports regardless of output level.\",\n        \"A decrease in domestic production capacity.\"\n      ],\n      \"explanation\": \"The lecture explains that a positive marginal propensity to import means more imports as output rises, flattening the curve.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Marginal propensity to import\",\n      \"refs\": [\"Q0014\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? The excerpts talk about subtracting imports, domestic demand, shift down, rotation, curve flatter. Could make a concept: \"Domestic demand adjustment\". Provide concept_name and content. Use rows.\n\nWe'll create item \"item1\". Provide concept_name row and content row.\n\nAlso maybe a fact: \"Subtracting imports from domestic demand shifts the demand curve down and makes it flatter.\" Provide fact_text.\n\nCreate rows accordingly.\n\nQuiz: need 4 questions. Use these facts.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794769411,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a655021f7d",
+  "usage": {
+    "completion_tokens": 1069,
+    "prompt_tokens": 2590,
+    "total_tokens": 3659,
+    "completion_time": 2.223996606,
+    "completion_tokens_details": {
+      "reasoning_tokens": 107
+    },
+    "prompt_time": 0.119329156,
+    "prompt_tokens_details": null,
+    "queue_time": 0.163350203,
+    "total_time": 2.343325762
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g9fn73exvsb6er9qg00xza",
+    "debug": null,
+    "seed": 1370970421,
+    "usage": null
+  }
+}

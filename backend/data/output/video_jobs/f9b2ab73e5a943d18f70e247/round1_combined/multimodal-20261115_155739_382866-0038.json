@@ -1,0 +1,485 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-15T15:59:04.315466+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00011"
+      ],
+      "document_id": "DOC001",
+      "content": "When inflation is zero, the nominal interest rate does not need to be distinguished from the real interest rate.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00011",
+              "quote": "So nominal interest is equal to the real interest rate.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 408,
+              "end_char": 463,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00011",
+              "quote": "I mean, it's the same equation, but now I don't need to differentiate between real\n interest rate and nominal interest rate,\n because inflation is zero.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 254,
+              "end_char": 406,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "Nominal interest rate equals real interest rate when inflation is zero.",
+              "claims": [
+                {
+                  "text": "Nominal interest rate equals real interest rate when inflation is zero.",
+                  "refs": [
+                    "Q0005"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00011",
+                      "quote": "So nominal interest is equal to the real interest rate."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "When inflation is zero, the nominal interest rate does not need to be distinguished from the real interest rate.",
+              "claims": [
+                {
+                  "text": "When inflation is zero, the nominal interest rate does not need to be distinguished from the real interest rate.",
+                  "refs": [
+                    "Q0004"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00011",
+                      "quote": "I mean, it's the same equation, but now I don't need to differentiate between real\n interest rate and nominal interest rate,\n because inflation is zero."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "reason": "No explicit definition of terms such as inflation, nominal interest rate, or exchange rate is provided in the excerpts.",
+              "source_ids": [
+                "G00011",
+                "G00012"
+              ],
+              "counts_as_completed": false
+            },
+            {
+              "category": "examples",
+              "availability": "SOURCE_MISSING",
+              "reason": "No concrete worked examples are given; statements are general explanations.",
+              "source_ids": [
+                "G00011",
+                "G00012"
+              ],
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "reason": "Exact equations or formulas are not present; the speaker references equations verbally without providing the literal form.",
+              "source_ids": [
+                "G00011",
+                "G00012"
+              ],
+              "counts_as_completed": false
+            },
+            {
+              "category": "procedures",
+              "availability": "SOURCE_MISSING",
+              "reason": "No step‑by‑step procedure is outlined in the excerpts.",
+              "source_ids": [
+                "G00011",
+                "G00012"
+              ],
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "When inflation is zero, the nominal interest rate does not need to be distinguished from the real interest rate.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": true
+                    },
+                    "evidence": [
+                      "I mean, it's the same equation, but now I don't need to differentiate between real\n interest rate and nominal interest rate,\n because inflation is zero."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00011",
+                        "quote": "I mean, it's the same equation, but now I don't need to differentiate between real\n interest rate and nominal interest rate,\n because inflation is zero.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 254,
+                        "end_char": 406,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "When inflation is zero, the nominal interest rate does not need to be distinguished from the real interest rate.",
+                "preview_text": "When inflation is zero, the nominal interest rate does not need to be distinguished from the real interest rate.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "Nominal interest rate equals real interest rate when inflation is zero.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So nominal interest is equal to the real interest rate."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00011",
+                        "quote": "So nominal interest is equal to the real interest rate.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 408,
+                        "end_char": 463,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Nominal interest rate equals real interest rate when inflation is zero.",
+                "preview_text": "Nominal interest rate equals real interest rate when inflation is zero.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00011"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "Nominal interest rate equals real interest rate when inflation is zero.",
+      "aliases": []
+    },
+    {
+      "knowledge_id": "CON_0002",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00011"
+      ],
+      "document_id": "DOC001",
+      "content": "With fixed prices, changes in the nominal exchange rate are the sole driver of changes in the real exchange rate.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00011",
+              "quote": "And so all that will move the real exchange rate\n is the nominal exchange rate.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 673,
+              "end_char": 752,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00011",
+              "quote": "Second, I really don't need to differentiate\n between real exchange rate and nominal exchange rate,\n because the prices themselves are not changing.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 523,
+              "end_char": 671,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "Exchange rate moves only through nominal exchange rate when prices are fixed.",
+              "claims": [
+                {
+                  "text": "Exchange rate moves only through nominal exchange rate when prices are fixed.",
+                  "refs": [
+                    "Q0008"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00011",
+                      "quote": "And so all that will move the real exchange rate\n is the nominal exchange rate."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "With fixed prices, changes in the nominal exchange rate are the sole driver of changes in the real exchange rate.",
+              "claims": [
+                {
+                  "text": "With fixed prices, changes in the nominal exchange rate are the sole driver of changes in the real exchange rate.",
+                  "refs": [
+                    "Q0007"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00011",
+                      "quote": "Second, I really don't need to differentiate\n between real exchange rate and nominal exchange rate,\n because the prices themselves are not changing."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "reason": "No explicit definition of terms such as inflation, nominal interest rate, or exchange rate is provided in the excerpts.",
+              "source_ids": [
+                "G00011",
+                "G00012"
+              ],
+              "counts_as_completed": false
+            },
+            {
+              "category": "examples",
+              "availability": "SOURCE_MISSING",
+              "reason": "No concrete worked examples are given; statements are general explanations.",
+              "source_ids": [
+                "G00011",
+                "G00012"
+              ],
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "reason": "Exact equations or formulas are not present; the speaker references equations verbally without providing the literal form.",
+              "source_ids": [
+                "G00011",
+                "G00012"
+              ],
+              "counts_as_completed": false
+            },
+            {
+              "category": "procedures",
+              "availability": "SOURCE_MISSING",
+              "reason": "No step‑by‑step procedure is outlined in the excerpts.",
+              "source_ids": [
+                "G00011",
+                "G00012"
+              ],
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "With fixed prices, changes in the nominal exchange rate are the sole driver of changes in the real exchange rate.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": true
+                    },
+                    "evidence": [
+                      "Second, I really don't need to differentiate\n between real exchange rate and nominal exchange rate,\n because the prices themselves are not changing."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00011",
+                        "quote": "Second, I really don't need to differentiate\n between real exchange rate and nominal exchange rate,\n because the prices themselves are not changing.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 523,
+                        "end_char": 671,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "With fixed prices, changes in the nominal exchange rate are the sole driver of changes in the real exchange rate.",
+                "preview_text": "With fixed prices, changes in the nominal exchange rate are the sole driver of changes in the real exchange rate.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "Exchange rate moves only through nominal exchange rate when prices are fixed.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And so all that will move the real exchange rate\n is the nominal exchange rate."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00011",
+                        "quote": "And so all that will move the real exchange rate\n is the nominal exchange rate.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 673,
+                        "end_char": 752,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Exchange rate moves only through nominal exchange rate when prices are fixed.",
+                "preview_text": "Exchange rate moves only through nominal exchange rate when prices are fixed.",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00011"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "Exchange rate moves only through nominal exchange rate when prices are fixed.",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 2,
+  "source_units_processed": 2,
+  "extraction_metadata": null
+}

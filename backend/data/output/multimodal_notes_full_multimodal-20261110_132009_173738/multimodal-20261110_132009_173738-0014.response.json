@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-fb946519-e9d5-411f-ae8e-f422a7315f8f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"text\": \"JDK\",\n      \"refs\": [\"Q0003\", \"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": [],\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\"\n    },\n    {\n      \"text\": \"Java development kit\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": [],\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"aliases\",\n      \"element\": 0,\n      \"part\": \"value\"\n    },\n    {\n      \"text\": \"Java SE\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": [],\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\"\n    },\n    {\n      \"text\": \"Java Development Kit, short for Java development kit, a software development environment for building Java applications.\",\n      \"refs\": [\"Q0003\", \"Q0004\", \"Q0005\", \"Q0006\", \"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": [],\n      \"item\": \"item1\",\n      \"category\": \"definitions\",\n      \"field\": \"definition_text\",\n      \"element\": 0,\n      \"part\": \"value\"\n    },\n    {\n      \"text\": \"JDK\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": [],\n      \"item\": \"item1\",\n      \"category\": \"definitions\",\n      \"field\": \"term\",\n      \"element\": 0,\n      \"part\": \"value\"\n    },\n    {\n      \"text\": \"Java SE, short for Java standard edition, a version of the Java platform.\",\n      \"refs\": [\"Q0009\", \"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": [],\n      \"item\": \"item2\",\n      \"category\": \"definitions\",\n      \"field\": \"definition_text\",\n      \"element\": 0,\n      \"part\": \"value\"\n    },\n    {\n      \"text\": \"Java SE\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": [],\n      \"item\": \"item2\",\n      \"category\": \"definitions\",\n      \"field\": \"term\",\n      \"element\": 0,\n      \"part\": \"value\"\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc. The excerpts talk about installing JDK etc. Likely concepts: \"JDK\", \"Java development kit\". definitions maybe term JDK definition. Provide rows with availability SOURCE_MISSING? Since ASR speech, exact code unavailable, but text is present. So availability SOURCE_SUPPORTED? It's explicit quote. Use basis explicit. literal_kind verbal. Provide item e.g., \"item1\". We'll create rows for concept_name, aliases maybe. Also definition term JDK. Provide explanation? Probably just concepts and definitions.\n\nLet's craft rows:\n\nRow1: category concepts, field concept_name, text \"JDK\", refs [\"Q0003\",\"Q0009\"], basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [], item \"item1\", element0, part value.\n\nRow2: concepts aliases \"Java development kit\", refs [\"Q0003\"], etc.\n\nDefinition: term \"JDK\", definition_text \"Java Development Kit, short for Java development kit, a software development environment for building Java applications.\", refs combine Q0003,Q0004,Q0005,Q0006,Q0007. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [], item \"item1\", element0, part value.\n\nAlso maybe concept \"Java SE\" definition. Provide.\n\nAdd abstentions none.\n\nExcluded none.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794316868,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e1a78f200e",
+  "usage": {
+    "completion_tokens": 1052,
+    "prompt_tokens": 2601,
+    "total_tokens": 3653,
+    "completion_time": 2.2151531,
+    "completion_tokens_details": {
+      "reasoning_tokens": 286
+    },
+    "prompt_time": 0.134392512,
+    "prompt_tokens_details": null,
+    "queue_time": 0.416471151,
+    "total_time": 2.349545612
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72sx477esfa1aw0f5svj1qy",
+    "debug": null,
+    "seed": 73221530,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-36025f61-aea8-4044-8582-173a65c2249c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"I001\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"exchange rate parity\",\n      \"refs\": [\"Q0014\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I001\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"In equilibrium, returns on comparable investments in different currencies should be equal after accounting for expected exchange‑rate changes.\",\n      \"refs\": [\"Q0014\", \"Q0017\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"F001\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A UK bond offering 10% return and a 5% capital loss from dollar appreciation yields a net 5% return for a US investor.\",\n      \"refs\": [\"Q0010\", \"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"F002\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If the pound is expected to depreciate relative to the dollar, a US investor may lose the foreign‑exchange gain when converting back to dollars.\",\n      \"refs\": [\"Q0006\", \"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"F003\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If the dollar is expected to appreciate 5% relative to the pound, the investor is indifferent between the two bonds.\",\n      \"refs\": [\"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Exact numeric formula for exchange‑rate parity not provided in the excerpts.\",\n      \"source_ids\": [\"G00008\", \"G00009\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what condition makes the returns on a US bond and a UK bond comparable for a US investor?\",\n      \"answer\": \"When expected exchange‑rate changes offset the difference in nominal bond yields.\",\n      \"distractors\": [\n        \"When the UK bond’s nominal yield is higher than the US bond’s yield.\",\n        \"When the US dollar depreciates by exactly the UK bond’s yield.\",\n        \"When transaction costs are zero.\"\n      ],\n      \"explanation\": \"The speaker explains that in equilibrium the two returns should be equal after accounting for expected exchange‑rate movements (Q0014, Q0017).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"exchange rate parity\",\n      \"refs\": [\"Q0014\", \"Q0017\"]\n    },\n    {\n      \"question\": \"What net return does the speaker calculate for investing in the UK bond after accounting for a 5% dollar appreciation?\",\n      \"answer\": \"5% net return\",\n      \"distractors\": [\n        \"10% net return\",\n        \"0% net return\",\n        \"15% net return\"\n      ],\n      \"explanation\": \"The UK bond gives 10% return minus a 5% capital loss from dollar appreciation, resulting in a net 5% (Q0010, Q0011).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"bond return calculation\",\n      \"refs\": [\"Q0010\", \"Q0011\"]\n    },\n    {\n      \"question\": \"If the pound is expected to depreciate relative to the dollar, what impact does this have on a US investor’s converted return?\",\n      \"answer\": \"It reduces the converted return, potentially erasing the foreign‑exchange gain.\",\n      \"distractors\": [\n        \"It increases the converted return.\",\n        \"It has no effect on the converted return.\",\n        \"It guarantees a higher return than the nominal bond yield.\"\n      ],\n      \"explanation\": \"The speaker notes that a depreciating pound can cause the investor to lose the gain when converting back to dollars (Q0006, Q0007).\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"exchange‑rate effect\",\n      \"refs\": [\"Q0006\", \"Q0007\"]\n    },\n    {\n      \"question\": \"When the dollar is expected to appreciate 5% relative to the pound, how does the speaker describe the investor’s choice between the US and UK bonds?\",\n      \"answer\": \"The investor is indifferent between the two bonds.\",\n      \"distractors\": [\n        \"The investor should choose the US bond.\",\n        \"The investor should choose the UK bond.\",\n        \"The investor should avoid both bonds.\"\n      ],\n      \"explanation\": \"The speaker states that a 5% dollar appreciation makes the investor indifferent (Q0008).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"investment indifference\",\n      \"refs\": [\"Q0008\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows. Identify concepts? Probably concept: exchange rate parity. Use excerpts. Create rows for concepts content and name. Also facts. Let's make item \"I001\". rows: concept_name \"exchange rate parity\" from Q0003? content from Q0014 etc. Provide availability SOURCE_SUPPORTED? ASR speech, but exact code unavailable; still text is supported. Use availability SOURCE_SUPPORTED. basis explicit. literal_kind verbal. instructional_role explanation_of_mistake? No. Just explanation. Use null.\n\nCreate rows for fact: \"Investing in UK bond yields 10% return but 5% capital loss due to dollar appreciation, net 5%\" from Q0010. etc.\n\nAdd abstentions for missing formulas.\n\nQuiz: 4 questions about concepts.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794763613,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_fe269835c7",
+  "usage": {
+    "completion_tokens": 1477,
+    "prompt_tokens": 2810,
+    "total_tokens": 4287,
+    "completion_time": 3.095651751,
+    "completion_tokens_details": {
+      "reasoning_tokens": 161
+    },
+    "prompt_time": 0.16061533,
+    "prompt_tokens_details": null,
+    "queue_time": 0.325257658,
+    "total_time": 3.256267081
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g3ynn4e3ksezrx5q4js25t",
+    "debug": null,
+    "seed": 990908617,
+    "usage": null
+  }
+}

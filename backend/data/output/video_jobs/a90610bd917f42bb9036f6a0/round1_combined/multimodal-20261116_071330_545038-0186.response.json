@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-5abdc64a-3fe1-47c8-8cb1-a86c8670596d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"F1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Net exports decline.\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What happens to net exports when there is an appreciation?\",\n      \"answer\": \"Net exports decline.\",\n      \"distractors\": [\n        \"Net exports increase.\",\n        \"Net exports remain unchanged.\",\n        \"Net exports become volatile.\"\n      ],\n      \"explanation\": \"The primary excerpt Q0004 states that net exports decline when there is an appreciation.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Effect of appreciation on net exports\",\n      \"refs\": [\"Q0004\"]\n    },\n    {\n      \"question\": \"According to the excerpt, what moves to the left as a first effect?\",\n      \"answer\": \"The yes\",\n      \"distractors\": [\n        \"The exchange rate\",\n        \"The interest rate\",\n        \"The parameter\"\n      ],\n      \"explanation\": \"Excerpt Q0006 says, \\\"So this movement will move the yes to the left as a first effect.\\\"\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Direction of movement in the described scenario\",\n      \"refs\": [\"Q0006\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract claims. The excerpts are mostly questions and short answers. Likely can form facts: appreciation leads to net exports decline. Also \"Appreciate.\" as answer. So create rows.\n\nWe have concepts? maybe \"appreciation\" concept. definitions none. facts: Net exports decline when appreciation. Also movement moves the yes to the left? unclear.\n\nWe can create fact rows.\n\nProvide rows with required fields. For facts category: fact_text.\n\nCreate rows:\n\nitem \"F1\" fact_text \"Net exports decline.\" refs Q0004 basis explicit availability SOURCE_SUPPORTED literal_kind verbal instructional_role null related_refs [] element0 part value.\n\nAlso maybe fact: \"Appreciate.\" not a fact.\n\nWe need at least one row per required field of each item. We'll just have one fact item.\n\nQuiz: need 4 questions but limited content. Could ask about effect of appreciation on net exports. Also about direction of movement? Might be insufficient. Provide maybe 2 questions only.\n\nBut requirement: aim for four, but can return fewer. So return 2.\n\nCreate quiz entries with refs.\n\nQuestion1: What happens to net exports when there is an appreciation? Answer: Net exports decline. Distractors: Net exports increase, Net exports unchanged, Net exports become volatile. Explanation: Based on excerpt Q0004.\n\nBloom: Understand.\n\nQuestion2: According to the excerpt, what moves to the left as a first effect? Answer: The yes. Distractors: The exchange rate, The interest rate, The parameter. Explanation: Based on Q0006.\n\nOk.\n\nNow construct JSON. No abstentions, no excluded. rows array with one row.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794813637,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_0708ac49a5",
+  "usage": {
+    "completion_tokens": 711,
+    "prompt_tokens": 2575,
+    "total_tokens": 3286,
+    "completion_time": 1.518597923,
+    "completion_tokens_details": {
+      "reasoning_tokens": 339
+    },
+    "prompt_time": 0.142531271,
+    "prompt_tokens_details": null,
+    "queue_time": 0.251631977,
+    "total_time": 1.661129194
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hknb6rejvvsf0823zrmy1e",
+    "debug": null,
+    "seed": 1988033408,
+    "usage": null
+  }
+}

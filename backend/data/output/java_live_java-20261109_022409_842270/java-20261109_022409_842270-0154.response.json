@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-99421c17-6865-4ce2-83d4-91f823f4bfe7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"postfix increment operator behavior\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_type\": null,\n      \"explanation_text\": {\n        \"text\": \"When the increment operator is used as a postfix (e.g., X++), the current value of X is first copied to the target variable, and then X is incremented by 1. Thus after `Y = X++`, Y receives the original value of X and X becomes the original value plus one.\",\n        \"refs\": [\"Q0000\"]\n      }\n    },\n    {\n      \"topic\": {\n        \"text\": \"prefix increment operator behavior\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_type\": null,\n      \"explanation_text\": {\n        \"text\": \"When the increment operator is used as a prefix (e.g., ++X), X is first incremented by 1, and then the new value is copied to the target variable. Thus after `Y = ++X`, both X and Y contain the incremented value.\",\n        \"refs\": [\"Q0001\"]\n      }\n    },\n    {\n      \"topic\": {\n        \"text\": \"augmented (compound) assignment operators\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"explanation_type\": null,\n      \"explanation_text\": {\n        \"text\": \"Augmented assignment operators combine an arithmetic operation with assignment, such as `X += 2` which adds 2 to X and stores the result back in X. They provide a shorter syntax equivalent to `X = X + 2`. Similar operators exist for subtraction (`-=`), multiplication (`*=`), and division (`/=`).\",\n        \"refs\": [\"Q0002\"]\n      }\n    },\n    {\n      \"topic\": {\n        \"text\": \"operator precedence in arithmetic expressions\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"explanation_type\": null,\n      \"explanation_text\": {\n        \"text\": \"In arithmetic expressions, multiplication and division have higher precedence than addition and subtraction, so they are evaluated first. Parentheses can be used to override the default precedence and force a different evaluation order.\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      }\n    }\n  ],\n  \"examples\": [\n    {\n      \"exemplifies\": {\n        \"text\": \"postfix increment example\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"example_type\": null,\n      \"example_text\": {\n        \"text\": \"int X = 1; int Y = X++; // Y becomes 1, X becomes 2\",\n        \"refs\": [\"Q0000\"]\n      }\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"prefix increment example\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"example_type\": null,\n      \"example_text\": {\n        \"text\": \"int X = 1; int Y = ++X; // both X and Y become 2\",\n        \"refs\": [\"Q0001\"]\n      }\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"augmented assignment example\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"example_type\": null,\n      \"example_text\": {\n        \"text\": \"X += 2; // equivalent to X = X + 2\",\n        \"refs\": [\"Q0002\"]\n      }\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"operator precedence example\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"example_type\": null,\n      \"example_text\": {\n        \"text\": \"int result = 10 + 3 * 2; // result is 16 because 3*2 evaluated first\",\n        \"refs\": [\"Q0003\"]\n      }\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"parentheses to change precedence example\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_type\": null,\n      \"example_text\": {\n        \"text\": \"int result = (10 + 3) * 2; // result is 26 because parentheses force addition first\",\n        \"refs\": [\"Q0004\"]\n      }\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"Using `X++` as a postfix increments X after its current value is used.\",\n        \"refs\": [\"Q0000\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"Using `++X` as a prefix increments X before its value is used.\",\n        \"refs\": [\"Q0001\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"`X += 2` adds 2 to X and stores the result back in X.\",\n        \"refs\": [\"Q0002\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"Multiplication and division have higher precedence than addition and subtraction.\",\n        \"refs\": [\"Q0003\"]\n      }\n    }\n  ],\n  \"formulas\": [\n    {\n      \"conditions\": null,\n      \"derivation\": null,\n      \"formula_text\": {\n        \"text\": \"10 + 3 * 2 = 16\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"variables\": [\n        {\n          \"symbol\": {\n            \"text\": \"10\",\n            \"refs\": [\"Q0003\"]\n          },\n          \"description\": {\n            \"text\": \"first operand\",\n            \"refs\": [\"Q0003\"]\n          }\n        },\n        {\n          \"symbol\": {\n            \"text\": \"3\",\n            \"refs\": [\"Q0003\"]\n          },\n          \"description\": {\n            \"text\": \"second operand\",\n            \"refs\": [\"Q0003\"]\n          }\n        },\n        {\n          \"symbol\": {\n            \"text\": \"2\",\n            \"refs\": [\"Q0003\"]\n          },\n          \"description\": {\n            \"text\": \"third operand\",\n            \"refs\": [\"Q0003\"]\n          }\n        }\n      ]\n    },\n    {\n      \"conditions\": null,\n      \"derivation\": null,\n      \"formula_text\": {\n        \"text\": \"(10 + 3) * 2 = 26\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"variables\": [\n        {\n          \"symbol\": {\n            \"text\": \"10\",\n            \"refs\": [\"Q0004\"]\n          },\n          \"description\": {\n            \"text\": \"first operand\",\n            \"refs\": [\"Q0004\"]\n          }\n        },\n        {\n          \"symbol\": {\n            \"text\": \"3\",\n            \"refs\": [\"Q0004\"]\n          },\n          \"description\": {\n            \"text\": \"second operand\",\n            \"refs\": [\"Q0004\"]\n          }\n        },\n        {\n          \"symbol\": {\n            \"text\": \"2\",\n            \"refs\": [\"Q0004\"]\n          },\n          \"description\": {\n            \"text\": \"multiplier after parentheses\",\n            \"refs\": [\"Q0004\"]\n          }\n        }\n      ]\n    }\n  ],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract facts, explanations, examples, formulas, procedures. From excerpts.\n\nIdentify facts: increment operator behavior. Provide fact_text with refs.\n\nAlso example of prefix vs postfix. That's example.\n\nAlso explanation of operator precedence.\n\nAlso formula? maybe expression evaluation? Could be formula: 10 + 3 * 2 = 16 given precedence. Provide formula_text.\n\nProceed JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191477,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_bb691ea66b",
+  "usage": {
+    "completion_tokens": 1668,
+    "prompt_tokens": 3145,
+    "total_tokens": 4813,
+    "completion_time": 3.5382301800000002,
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_time": 0.182323556,
+    "prompt_tokens_details": null,
+    "queue_time": 0.392788929,
+    "total_time": 3.720553736
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z2af2vevhbtwvgjgcrxez1",
+    "debug": null,
+    "seed": 1271514853,
+    "usage": null
+  }
+}

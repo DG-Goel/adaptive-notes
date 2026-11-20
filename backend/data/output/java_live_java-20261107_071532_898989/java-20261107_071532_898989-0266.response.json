@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-4fd814ae-3bc8-4b12-b094-f6ce058ea75c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"An if statement can be used to execute different code blocks based on the role of the current user (admin, moderator, guest).\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"A switch statement can be used as an alternative to if statements for role‑based branching, requiring case clauses for each role and an optional default clause.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Each case clause in a switch statement should end with a break statement to exit the switch block after executing its code.\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"If a break statement is omitted from a case that is not the last one, execution will fall through to the next case.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Switch statements can operate on integer types (byte, short, int) as well as strings; using a string variable as the switch expression without proper handling can cause a compilation error.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts about if vs switch, roles, break statements. Extract facts, explanations, procedures maybe. Let's create facts: role-based conditional logic using if statements and switch statements. Also break statement usage. Provide refs.\n\nWe'll produce facts array. No definitions etc. Also excluded empty.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036421,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 447,
+    "prompt_tokens": 3024,
+    "total_tokens": 3471,
+    "completion_time": 0.931849245,
+    "completion_tokens_details": {
+      "reasoning_tokens": 66
+    },
+    "prompt_time": 0.197536859,
+    "prompt_tokens_details": null,
+    "queue_time": 0.32765447,
+    "total_time": 1.129386104
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6teejyte2yskehet21bwn5w",
+    "debug": null,
+    "seed": 1893295256,
+    "usage": null
+  }
+}

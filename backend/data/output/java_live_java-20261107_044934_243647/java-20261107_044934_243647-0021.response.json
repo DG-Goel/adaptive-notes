@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-17945515-559a-4223-9806-a0dcdf570cda",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"command line application\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"an application that we can run from the command line; it doesn't have a graphical user interface\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"package\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a namespace to group related classes\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"JDK version 12 is selected here\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Base package for a Java project is the domain name of your company in reverse\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays except maybe facts etc. The excerpts are about Java project setup, not clear facts? Could extract facts like \"JDK version 12 is selected\". That's a fact. Also \"base package is domain name reversed\". That's a fact. We'll create facts entries.\n\nFact 1: \"JDK version 12 is selected here\". refs Q0001.\n\nFact 2: \"Base package for a Java project is the domain name of your company in reverse\". refs Q0004.\n\nAlso maybe concept: \"command line application\" definition? Could be definition: term \"command line application\" and definition text. Use Q0001.\n\nDefinition: term \"command line application\" definition \"an application that we can run from the command line; it doesn't have a graphical user interface\". refs Q0001.\n\nAlso definition: term \"package\" definition \"a namespace to group related classes\". refs Q0003 and Q0004.\n\nWe'll include definitions.\n\nNow produce JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794027182,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_ca5edfaab2",
+  "usage": {
+    "completion_tokens": 514,
+    "prompt_tokens": 2840,
+    "total_tokens": 3354,
+    "completion_time": 1.12295691,
+    "completion_tokens_details": {
+      "reasoning_tokens": 203
+    },
+    "prompt_time": 0.036643024,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "queue_time": 0.38747896,
+    "total_time": 1.159599934
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6t5mmsxerp8dd1j4cvbcvkk",
+    "debug": null,
+    "seed": 459899798,
+    "usage": null
+  }
+}

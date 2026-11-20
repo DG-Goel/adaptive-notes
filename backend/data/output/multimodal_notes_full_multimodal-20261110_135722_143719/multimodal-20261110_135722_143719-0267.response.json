@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-dabca5e2-85c9-4216-bc46-ec183c9c1f92",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"for each loop in java is used to iterate over arrays or collections.\",\n        \"refs\": [\"Q0000\", \"Q0001\"],\n        \"claims\": [\n          {\n            \"text\": \"for each loop in java is used to iterate over arrays or collections.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"PARTIALLY_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0000\", \"Q0001\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"You can declare a string array called fruits initialized with three items: apple, mango, and orange.\",\n        \"refs\": [\"Q0003\", \"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"You can declare a string array called fruits initialized with three items: apple, mango, and orange.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"PARTIALLY_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0003\", \"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"You can iterate over this array and print each item on the terminal using a loop.\",\n        \"refs\": [\"Q0005\", \"Q0006\", \"Q0007\", \"Q0008\", \"Q0009\"],\n        \"claims\": [\n          {\n            \"text\": \"You can iterate over this array and print each item on the terminal using a loop.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"PARTIALLY_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0005\", \"Q0006\", \"Q0007\", \"Q0008\", \"Q0009\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"availability\": \"INCOMPLETE_LITERAL\",\n      \"reason\": \"Exact code or formula for the for-each loop not provided in the transcript.\",\n      \"source_ids\": [\"G00115\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract facts. The teaching about for-each loop. Claims: definition that for-each loop iterates over arrays or collections. Also that you can declare string array fruits with items apple, mango, orange. Also that you can iterate and print each item. Provide claims with explicit basis. Availability SOURCE_SUPPORTED? The source is primary speech, but exact code unavailable. So availability maybe PARTIALLY_SUPPORTED? Since code not given. Use PARTIALLY_SUPPORTED. Provide claims.\n\nCreate items list.\n\nFact 1: \"for each loop in java is used to iterate over arrays or collections.\" refs Q0000,Q0001. basis explicit. literal_kind verbal. instructional_role prerequisite? maybe explanation. Use \"prerequisite\". availability PARTIALLY_SUPPORTED.\n\nFact 2: \"You can declare a string array called fruits initialized with three items: apple, mango, and orange.\" refs Q0003,Q0004. basis explicit. literal_kind verbal. instructional_role prerequisite. availability PARTIALLY_SUPPORTED.\n\nFact3: \"You can iterate over this array and print each item on the terminal using a loop.\" refs Q0005,Q0006,Q0007,Q0008,Q0009. basis explicit. literal_kind verbal. instructional_role correct_demonstration? It's demonstration of loop. availability PARTIALLY_SUPPORTED.\n\nNo code literal, so incomplete literal.\n\nCreate abstentions: maybe need code literal unavailable => INCOMPLETE_LITERAL for code. Provide abstention entry.\n\nExcluded none.\n\nReturn schema.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794325062,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_19b184c447",
+  "usage": {
+    "completion_tokens": 858,
+    "prompt_tokens": 2177,
+    "total_tokens": 3035,
+    "completion_time": 1.800076789,
+    "completion_tokens_details": {
+      "reasoning_tokens": 305
+    },
+    "prompt_time": 0.12545778,
+    "prompt_tokens_details": null,
+    "queue_time": 0.377548477,
+    "total_time": 1.9255345689999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m731q6rqerv9s8kack9751m5",
+    "debug": null,
+    "seed": 2124366823,
+    "usage": null
+  }
+}

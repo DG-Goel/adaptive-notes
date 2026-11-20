@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-d218e0d5-e024-44b5-a987-be605d345a8a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": [\n        \"C1\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    },\n    {\n      \"fact_text\": [\n        \"C2\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    },\n    {\n      \"fact_text\": [\n        \"C3\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    },\n    {\n      \"fact_text\": [\n        \"C4\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    },\n    {\n      \"fact_text\": [\n        \"C5\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    },\n    {\n      \"fact_text\": [\n        \"C6\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"In Java, the left brace is placed on the same line as the function definition.\",\n      \"refs\": [\n        \"Q0001\",\n        \"Q0003\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"Every Java program must have at least one function called main.\",\n      \"refs\": [\n        \"Q0004\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"The main function is the entry point of a Java program and its code is executed when the program runs.\",\n      \"refs\": [\n        \"Q0005\",\n        \"Q0006\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"In Java, functions (methods) must always belong to a class.\",\n      \"refs\": [\n        \"Q0008\",\n        \"Q0009\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"A class is a container for one or more related functions.\",\n      \"refs\": [\n        \"Q0010\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"After the parenthesis, a pair of curly braces is added and the actual Java code is written inside these braces.\",\n      \"refs\": [\n        \"Q0000\"\n      ],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify facts etc. Probably concepts: braces style, main function, classes contain functions. Create claims.\n\nLet's make claims:\n\nC1: In Java, the left brace is placed on the same line as the function definition. refs Q0001,Q0003 basis explicit availability SOURCE_SUPPORTED literal_kind verbal.\n\nC2: In Java, a program must have at least one function called main. refs Q0004 basis explicit.\n\nC3: The main function is the entry point of a Java program. refs Q0005,Q0006.\n\nC4: Functions in Java must belong to a class. refs Q0008,Q0009.\n\nC5: A class is a container for one or more related functions. refs Q0010.\n\nC6: Curly braces enclose the actual Java code after the parenthesis. refs Q0000.\n\nNow map to categories: facts maybe. Use facts array.\n\nWe'll put each claim in claims list and reference in facts.fact_text list.\n\nCreate facts entries each with fact_text list containing claim IDs.\n\nWe need at least one fact entry; can have multiple.\n\nWe'll put each claim as separate fact.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318764,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 1075,
+    "prompt_tokens": 3420,
+    "total_tokens": 4495,
+    "completion_time": 4.130331394,
+    "completion_tokens_details": {
+      "reasoning_tokens": 244
+    },
+    "prompt_time": 0.267095004,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "queue_time": 0.323808497,
+    "total_time": 4.397426398
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72vpxhae2bsms3pwrxdzcn9",
+    "debug": null,
+    "seed": 614281312,
+    "usage": null
+  }
+}

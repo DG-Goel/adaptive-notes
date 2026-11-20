@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-fbebd99c-7b8b-47bc-b06a-dcbd79cb202f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Shift+F6 is the shortcut for the Rename refactor menu on Mac.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Method chaining allows calling multiple methods in a single statement by using the dot operator on the returned object.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In Java, System.in is used to read input from the terminal window.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The Scanner class (java.util.Scanner) is used to read input from the user in Java.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Methods of the Scanner class for reading data start with the prefix \\\"next\\\" (e.g., nextInt, nextLine).\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output JSON with empty arrays likely no educational items? Actually content includes programming tutorial: rename refactor, method chaining, scanner input. These are educational facts/examples. We must extract facts, explanations, procedures, etc.\n\nWe can create facts: \"Method chaining allows calling multiple methods in a single statement.\" supported by Q0002. Also \"In Java, System.in is used to read input from the terminal.\" from Q0004. \"Scanner class is used to read input from the user.\" Q0003 and Q0005. Also \"Shift+F6 is shortcut for rename refactor on Mac.\" from Q0000.\n\nCreate facts entries. Provide refs arrays.\n\nNo definitions etc.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065652,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_27194a498a",
+  "usage": {
+    "completion_tokens": 475,
+    "prompt_tokens": 3037,
+    "total_tokens": 3512,
+    "completion_time": 0.982558732,
+    "completion_tokens_details": {
+      "reasoning_tokens": 144
+    },
+    "prompt_time": 0.117732773,
+    "prompt_tokens_details": null,
+    "queue_time": 0.166051572,
+    "total_time": 1.100291505
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6vaan9ce7p9e5x43cg27xcy",
+    "debug": null,
+    "seed": 1505709024,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-65604e5e-921e-4d19-9b0b-2d54042f647e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"C001\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"distinction between demand for domestic goods and domestic demand for goods\",\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"C001\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the economy was closed, demand for domestic goods and domestic demand for goods were the same, but in an open economy they differ: domestic demand remains unchanged while the demand for domestically produced goods is affected by imports and exports.\",\n      \"refs\": [\"Q0004\", \"Q0010\", \"Q0011\", \"Q0012\", \"Q0025\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"F001\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Domestic demand is unchanged from the closed‑economy model.\",\n      \"refs\": [\"Q0012\", \"Q0016\", \"Q0019\", \"Q0020\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"F002\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Some of the demand for domestically produced goods will be satisfied by imports.\",\n      \"refs\": [\"Q0025\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows. Identify concepts: distinction between demand for domestic goods vs domestic demand for goods. Create concept item. Provide concept_name and content. Use primary excerpts. Let's make item \"C001\". Rows: concept_name from Q0004 maybe. content from Q0004- Q0010. Provide refs list. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null. Provide element indices 0 for concept_name, 0 for content. Also maybe aliases none.\n\nAlso facts? Could extract fact that domestic demand unchanged. Use Q0012 etc. Provide fact_text. Item \"F001\". Provide.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794650969,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_90620edd96",
+  "usage": {
+    "completion_tokens": 657,
+    "prompt_tokens": 2637,
+    "total_tokens": 3294,
+    "completion_time": 1.362605634,
+    "completion_tokens_details": {
+      "reasoning_tokens": 130
+    },
+    "prompt_time": 0.128420288,
+    "prompt_tokens_details": null,
+    "queue_time": 0.372158076,
+    "total_time": 1.491025922
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7crh3sye35r16syctf782q1",
+    "debug": null,
+    "seed": 1105758266,
+    "usage": null
+  }
+}

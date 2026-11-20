@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-6906473f-14a0-45c6-8baf-8798abc0e71d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"multiplier effect\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Output will go up, and then there will be a multiplier.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what happens to the Z‑Z curve?\",\n      \"answer\": \"It moves up.\",\n      \"distractors\": [\n        \"It moves down.\",\n        \"It stays unchanged.\",\n        \"It shifts left.\"\n      ],\n      \"explanation\": \"The speaker explicitly says, “Well, that moves the Z‑Z curve up.”\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Z‑Z curve movement\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"Why does output increase less than it would in a closed economy?\",\n      \"answer\": \"Because part of the extra income is spent on foreign goods.\",\n      \"distractors\": [\n        \"Because taxes are increased.\",\n        \"Because domestic wages fall.\",\n        \"Because the government reduces spending.\"\n      ],\n      \"explanation\": \"The speaker explains that “part of that extra energy, the amount for consumption, will go to foreign goods.”\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Open‑economy multiplier effect\",\n      \"refs\": [\"Q0010\"]\n    },\n    {\n      \"question\": \"How does the increase in output compare to the increase in government expenditure?\",\n      \"answer\": \"Output increases by more than the increase in government expenditure.\",\n      \"distractors\": [\n        \"Output increases by less than the increase in government expenditure.\",\n        \"Output increases by exactly the same amount as government expenditure.\",\n        \"Output does not change despite increased government expenditure.\"\n      ],\n      \"explanation\": \"The speaker states, “So the increasing output will be more than the increasing government expenditure…\\\"\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"Relationship between output and government spending\",\n      \"refs\": [\"Q0005\"]\n    },\n    {\n      \"question\": \"What does the trade deficit indicate in the example given?\",\n      \"answer\": \"It starts with a balanced trade.\",\n      \"distractors\": [\n        \"It shows a large surplus.\",\n        \"It indicates a growing deficit.\",\n        \"It reflects a sudden shift to protectionism.\"\n      ],\n      \"explanation\": \"The speaker notes, \\\"the trade deficit, in this particular example, we start with a situation where the trade was balanced.\\\"\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"Trade balance context\",\n      \"refs\": [\"Q0012\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? The excerpts discuss output, government expenditure, open vs closed economy. Likely concept: multiplier effect. Create item e.g., concept_name \"multiplier effect\" content from Q0001 etc. Provide rows.\n\nWe need required fields for concepts: concept_name and content. Provide rows.\n\nAlso maybe explanations? Could treat as explanation of why output increase less than closed economy. Provide explanation item.\n\nWe'll create one concept item \"multiplier effect\" with content from Q0001 and Q0004. Provide two rows: concept_name and content.\n\nRows need fields: item label same e.g., \"item1\". Provide refs list.\n\nAvailability: SOURCE_SUPPORTED (since explicit). basis explicit. literal_kind verbal. instructional_role null.\n\nNow quiz: need 4 questions. Use excerpts.\n\nQ1: What happens to the Z-Z curve? Answer: It moves up. Distractors.\n\nQ2: Why does output increase less than in a closed economy? Answer: Part of extra income goes to foreign goods. Use Q0010.\n\nQ3: What is the relationship between output increase and government expenditure increase? Answer: Output increases by more than the increase in government expenditure. Use Q0005.\n\nQ4: What does the trade deficit indicate in the example? Answer: It starts with a balanced trade. Use Q0012.\n\nProvide refs accordingly.\n\nNow construct JSON. No abstentions or excluded.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794766939,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_93703442d9",
+  "usage": {
+    "completion_tokens": 1049,
+    "prompt_tokens": 2480,
+    "total_tokens": 3529,
+    "completion_time": 2.196051857,
+    "completion_tokens_details": {
+      "reasoning_tokens": 290
+    },
+    "prompt_time": 0.137247213,
+    "prompt_tokens_details": null,
+    "queue_time": 0.377044299,
+    "total_time": 2.33329907
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g7472re9jt7ewbtn7py0mm",
+    "debug": null,
+    "seed": 990253178,
+    "usage": null
+  }
+}

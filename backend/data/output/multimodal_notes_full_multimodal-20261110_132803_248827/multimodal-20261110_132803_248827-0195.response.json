@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-bd2932dd-a566-4669-b44b-8674b533caa7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"A Java program has a main class.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"The main class contains the main method.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"Java class names follow the Pascal naming convention, using a capital letter at the start.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"explanation_of_mistake\",\n      \"refs\": [\"Q0005\", \"Q0008\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"The capital M in the class name follows Java naming conventions.\",\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"identified_mistake\",\n      \"refs\": [\"Q0004\", \"Q0008\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"A basic Java program structure includes class and method declarations.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"refs\": [\"Q0006\", \"Q0007\"],\n      \"related_refs\": []\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00119\", \"S00120\", \"S00121\", \"S00122\", \"S00118\", \"S00123\"],\n      \"reason\": \"No explicit concept definitions provided in the excerpts.\"\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00119\", \"S00120\", \"S00121\", \"S00122\", \"S00118\", \"S00123\"],\n      \"reason\": \"No definition statements were present.\"\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00119\", \"S00120\", \"S00121\", \"S00122\", \"S00118\", \"S00123\"],\n      \"reason\": \"No concrete code examples were provided.\"\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00119\", \"S00120\", \"S00121\", \"S00122\", \"S00118\", \"S00123\"],\n      \"reason\": \"No factual statements beyond the claims were identified.\"\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00119\", \"S00120\", \"S00121\", \"S00122\", \"S00118\", \"S00123\"],\n      \"reason\": \"No formulas were present.\"\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00119\", \"S00120\", \"S00121\", \"S00122\", \"S00118\", \"S00123\"],\n      \"reason\": \"No procedural steps were described.\"\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00119\", \"S00120\", \"S00121\", \"S00122\", \"S00118\", \"S00123\"],\n      \"reason\": \"No explicit relational statements were identified.\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify statements: likely about Java class naming conventions, main class, main method. Create claims.\n\nExtract primary excerpts:\n\nQ0000: \"of a Java program.\"\nQ0001: \"At a minimum we have a main class\"\nQ0002: \"and inside this main class we have the main method.\"\nQ0003: \"Now you might\"\nQ0004: \"be curious why we have a capital M in the name of this class.\"\nQ0005: \"Because in Java we use different conventions for naming our classes and our\"\n\nContext excerpts give naming conventions: Q0006: \"class and method declarations.\" Q0007: \"So this is the basic structure\" Q0008: \"to name our classes, we use the Pascal naming convention\"\n\nWe can form claims:\n\nC1: A Java program has a main class. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role prerequisite? maybe explanation. refs Q0001.\n\nC2: The main class contains the main method. refs Q0002.\n\nC3: Class names in Java use Pascal naming convention (capitalized). refs Q0005 and Q0008.\n\nC4: The capital M in class name follows naming convention. refs Q0004 and Q0008.\n\nC5: Basic structure includes class and method declarations. refs Q0006,Q0007.\n\nNow fill schema. No concepts etc likely empty. Provide abstentions for missing formulas etc.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317878,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_df9620fe21",
+  "usage": {
+    "completion_tokens": 1279,
+    "prompt_tokens": 3041,
+    "total_tokens": 4320,
+    "completion_time": 2.702509998,
+    "completion_tokens_details": {
+      "reasoning_tokens": 310
+    },
+    "prompt_time": 0.17244805,
+    "prompt_tokens_details": null,
+    "queue_time": 0.285643706,
+    "total_time": 2.874958048
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72tvy7de27svvgptdjeshpf",
+    "debug": null,
+    "seed": 1940664411,
+    "usage": null
+  }
+}

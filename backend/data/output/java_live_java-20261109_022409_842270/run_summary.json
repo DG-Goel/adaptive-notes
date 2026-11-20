@@ -1,0 +1,48 @@
+{
+  "classification": "Partial live execution",
+  "selected_slots": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "rotation_policy": "pinned_primary_round_robin_recovery_same_org",
+  "continue_validation_failures": true,
+  "live": true,
+  "source_sha256": "54a017edc6b3465c37a6faf051a63dedd81437728df6b99276e998aedb127598",
+  "total_chunks": 50,
+  "completed_chunks": 48,
+  "recovered_truncations": 0,
+  "requests_attempted": 50,
+  "http_successes": 48,
+  "http_429": 0,
+  "input_tokens": 150754,
+  "output_tokens": 50556,
+  "unknown_usage_attempts": 2,
+  "elapsed_seconds": 624.5879549980164,
+  "errors": [
+    {
+      "request_id": "java-20261109_022409_842270-0021",
+      "chunk_number": 4,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '' does not validate with /required: missing properties: 'formulas'\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"concepts\": [],\\n  \"definitions\": [],\\n  \"examples\": [],\\n  \"facts\": [\\n    {\\n      \"fact_text\": {\\n        \"text\": \"Select Java SDK (JDK) version 12 for the project; ensure project SDK is not blank.\",\\n        \"refs\": [\"Q0000\", \"Q0001\"]\\n      },\\n      \"fact_type\": null\\n    },\\n    {\\n      \"fact_text\": {\\n        \"text\": \"Create a command line application project; it runs from the command line and has no graphical user interface.\",\\n        \"refs\": [\"Q0001\"]\\n      },\\n      \"fact_type\": null\\n    },\\n    {\\n      \"fact_text\": {\\n        \"text\": \"The base package for a Java project follows the reversed domain name convention, e.g., com.codewithm"
+    },
+    {
+      "request_id": "java-20261109_022409_842270-0308",
+      "chunk_number": 45,
+      "type": "GroqProviderError",
+      "error": "Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '' does not validate with /required: missing properties: 'formulas'\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  \"concepts\": [],\\n  \"definitions\": [],\\n  \"examples\": [],\\n  \"facts\": [\\n    {\\n      \"fact_text\": {\\n        \"text\": \"In Java, the equals method of String objects should be used to compare string values.\",\\n        \"refs\": [\"Q0000\"]\\n      },\\n      \"fact_type\": null\\n    },\\n    {\\n      \"fact_text\": {\\n        \"text\": \"The not operator is applied so that the loop continues while the input does not equal \\\\\"quit\\\\\".\",\\n        \"refs\": [\"Q0000\"]\\n      },\\n      \"fact_type\": null\\n    },\\n    {\\n      \"fact_text\": {\\n        \"text\": \"Creating a new Scanner object inside each iteration of a while loop unnecessarily creates multiple objects and pollute"
+    }
+  ],
+  "assembly": "completed",
+  "quality_score": null,
+  "total_actual_tokens": null,
+  "invocation_elapsed_seconds": 625.078,
+  "elapsed_basis": "First durable claim to latest operation completion, including resume gaps and quota waits; invocation time is separate.",
+  "physical_call_seconds": 139.4200000000003,
+  "token_count_note": "Input/output sums include reported usage only; missing usage is not zero consumption.",
+  "notes_status": "UNVERIFIED_PREVIEW",
+  "items": 458,
+  "source_units_with_items": 48
+}

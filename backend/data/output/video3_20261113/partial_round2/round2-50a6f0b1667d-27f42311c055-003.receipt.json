@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-eab13f0a-31b2-403d-b0e2-e812d0c827b2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Onboarding Workflow for a New Intern\",\n      \"source_segment_ids\": [\"FCT_0051\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0051\", \"FCT_0053\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0051\",\n              \"exact_quote\": \"it is taking the question which is on board the new intern joining to it and it is using this tool to send a welcome meeting then you want to create intense profile in HR management system ... then it will create a IT helpdesk ticket to get a Wi‑Fi credentials email, Slack access.\"\n            },\n            {\n              \"note_id\": \"FCT_0053\",\n              \"exact_quote\": \"Goal‑oriented planning is a characteristic of agentic AI where the user provides a goal (e.g., onboarding a new intern) and the system autonomously decides the sequence of actions to achieve it.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Onboarding Workflow for a New Intern\",\n            \"direction\": \"top-down\",\n            \"nodes\": [\n              { \"id\": \"n1\", \"label\": \"Receive onboarding request (new intern)\" },\n              { \"id\": \"n2\", \"label\": \"Send welcome meeting invitation\" },\n              { \"id\": \"n3\", \"label\": \"Create intern profile in HRMS\" },\n              { \"id\": \"n4\", \"label\": \"Create IT helpdesk ticket for Wi‑Fi credentials\" },\n              { \"id\": \"n5\", \"label\": \"Send Slack access email\" }\n            ],\n            \"edges\": [\n              { \"from\": \"n1\", \"to\": \"n2\", \"label\": \"trigger\" },\n              { \"from\": \"n2\", \"to\": \"n3\", \"label\": \"after meeting scheduled\" },\n              { \"from\": \"n3\", \"to\": \"n4\", \"label\": \"upon profile creation\" },\n              { \"from\": \"n4\", \"to\": \"n5\", \"label\": \"after ticket resolved\" }\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce units for visual candidates only. Identify notes that support visuals: likely process flow of onboarding steps. From primary FCT_0051 has detailed steps: create profile, ticket, etc. That's visual flowchart. Also maybe FCT_0053 goal-oriented planning could be flowchart. Use earliest primary chunk. So create unit with title maybe \"Onboarding Workflow\". source_segment_ids include FCT_0051 and maybe FCT_0053 as supporting. mode text_and_visual? Since we provide visual plus remaining_text? We need remaining_text maybe empty if all covered? Provide visuals. Provide evidence objects with note_id and exact quote. Use quotes from excerpts.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794600481,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c3da0d4bb9",
+  "usage": {
+    "completion_tokens": 655,
+    "prompt_tokens": 1920,
+    "total_tokens": 2575,
+    "completion_time": 1.366976167,
+    "completion_tokens_details": {
+      "reasoning_tokens": 142
+    },
+    "prompt_time": 0.1037961,
+    "prompt_tokens_details": null,
+    "queue_time": 0.170495631,
+    "total_time": 1.470772267
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b8carmecht6kes653jmmv2",
+    "debug": null,
+    "seed": 120274330,
+    "usage": null
+  }
+}

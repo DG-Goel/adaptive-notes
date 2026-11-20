@@ -1,0 +1,353 @@
+[
+  {
+    "title": "Exchange‑Rate Movements and Currency Appreciation/Depreciation",
+    "source_segment_ids": [
+      "CON_0002",
+      "CON_0003"
+    ],
+    "mode": "text_and_visual",
+    "remaining_text": "",
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0002",
+          "CON_0003"
+        ],
+        "needs_review": false,
+        "missing_information": null,
+        "evidence": [
+          {
+            "note_id": "CON_0002",
+            "exact_quote": "When the exchange rate goes up, it means an appreciation of the local currency (the dollar). This yields more foreign currency per unit of domestic currency."
+          },
+          {
+            "note_id": "CON_0003",
+            "exact_quote": "When the exchange rate goes down, it indicates a depreciation of the local currency."
+          }
+        ],
+        "payload": {
+          "type": "table",
+          "title": "Effect of Exchange‑Rate Direction",
+          "headers": [
+            "Direction",
+            "Interpretation",
+            "Result"
+          ],
+          "rows": [
+            [
+              "Up",
+              "Appreciation of domestic currency",
+              "More foreign currency per unit of domestic currency"
+            ],
+            [
+              "Down",
+              "Depreciation of domestic currency",
+              "Less foreign currency per unit of domestic currency"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Uncovered Interest Parity (UIP) Relationship",
+    "source_segment_ids": [
+      "CON_0017",
+      "CON_0018",
+      "FCT_0002",
+      "CON_0019",
+      "CON_0023"
+    ],
+    "mode": "text_and_visual",
+    "remaining_text": "",
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0017",
+          "CON_0018",
+          "FCT_0002",
+          "CON_0019",
+          "CON_0023"
+        ],
+        "needs_review": false,
+        "missing_information": null,
+        "evidence": [
+          {
+            "note_id": "CON_0017",
+            "exact_quote": "Well, it's the uncovered interest parity condition."
+          },
+          {
+            "note_id": "CON_0018",
+            "exact_quote": "An increase in the domestic interest rate leads to a higher exchange rate, meaning the domestic currency becomes more expensive."
+          },
+          {
+            "note_id": "FCT_0002",
+            "exact_quote": "When the domestic interest rate is increased, the exchange rate appreciates."
+          },
+          {
+            "note_id": "CON_0019",
+            "exact_quote": "Compensate the interest rate differential with an expected depreciation of the currency that is paying a higher interest rate."
+          },
+          {
+            "note_id": "CON_0023",
+            "exact_quote": "If the domestic interest rate is above the international interest rate, the exchange rate today must be above the expected exchange rate, because the expected depreciation of the currency compensates for the higher domestic interest rate."
+          }
+        ],
+        "payload": {
+          "type": "flowchart",
+          "title": "Uncovered Interest Parity Mechanism",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "Domestic interest rate ↑"
+            },
+            {
+              "id": "n2",
+              "label": "Exchange rate ↑ (domestic currency appreciates)"
+            },
+            {
+              "id": "n3",
+              "label": "Expected future depreciation"
+            },
+            {
+              "id": "n4",
+              "label": "Compensates higher domestic interest"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": "higher i → higher e"
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": "today's high e → expected depreciation"
+            },
+            {
+              "from": "n3",
+              "to": "n4",
+              "label": "expected depreciation → offsets interest differential"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Policy Rate Path Illustration",
+    "source_segment_ids": [
+      "CON_0005"
+    ],
+    "mode": "text_and_visual",
+    "remaining_text": "",
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0005"
+        ],
+        "needs_review": true,
+        "missing_information": "Exact numeric values or timeline for policy rate expectations are not provided in the source excerpts.",
+        "evidence": [
+          {
+            "note_id": "CON_0005",
+            "exact_quote": "This is a expected policy rate path."
+          },
+          {
+            "note_id": "CON_0005",
+            "exact_quote": "What the market thinks now, the policy rate will be in the next meeting, two meetings from now, three meetings from now, four meetings of the FOMC from now."
+          }
+        ],
+        "payload": {
+          "type": "sequence",
+          "title": "Projected Policy Rate Over Upcoming Meetings",
+          "participants": [
+            {
+              "id": "p1",
+              "label": "Market Expectation"
+            }
+          ],
+          "events": [
+            {
+              "kind": "message",
+              "from": "p1",
+              "to": "p1",
+              "text": "Rate now"
+            },
+            {
+              "kind": "message",
+              "from": "p1",
+              "to": "p1",
+              "text": "Rate next meeting"
+            },
+            {
+              "kind": "message",
+              "from": "p1",
+              "to": "p1",
+              "text": "Rate two meetings ahead"
+            },
+            {
+              "kind": "message",
+              "from": "p1",
+              "to": "p1",
+              "text": "Rate three meetings ahead"
+            },
+            {
+              "kind": "message",
+              "from": "p1",
+              "to": "p1",
+              "text": "Rate four meetings ahead"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Interest‑Rate Differential Effects on Exchange Rate",
+    "source_segment_ids": [
+      "CON_0024",
+      "CON_0023"
+    ],
+    "mode": "visual_only",
+    "remaining_text": null,
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0024",
+          "CON_0023"
+        ],
+        "needs_review": false,
+        "missing_information": null,
+        "evidence": [
+          {
+            "note_id": "CON_0024",
+            "exact_quote": "If the domestic interest rate is above that, the international interest rate, then the exchange rate today has to be above the expected exchange rate, because that will give you a expected depreciation of the currency, which will compensate for the fact that the domestic bond is paying a higher interest rate than international bond."
+          },
+          {
+            "note_id": "CON_0023",
+            "exact_quote": "Conversely, if the domestic bond is paying a lower interest rate, then the exchange rate today is very depreciated, because you have to expect it to appreciate in order to compensate for the interest rate differential."
+          }
+        ],
+        "payload": {
+          "type": "table",
+          "title": "Interest‑Rate Differential Effects on Exchange Rate",
+          "headers": [
+            "Domestic Interest Rate vs. Foreign",
+            "Relation of Today’s Exchange Rate to Expected",
+            "Implied Currency Movement"
+          ],
+          "rows": [
+            [
+              "Higher than foreign",
+              "Exchange rate today > expected exchange rate",
+              "Expected depreciation of domestic currency"
+            ],
+            [
+              "Lower than foreign",
+              "Exchange rate today < expected exchange rate (depreciated)",
+              "Expected appreciation of domestic currency"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "title": "Monetary‑Policy Transmission in an Open Economy",
+    "source_segment_ids": [
+      "CON_0028",
+      "CON_0036",
+      "CON_0037",
+      "CON_0038"
+    ],
+    "mode": "visual_only",
+    "remaining_text": null,
+    "visuals": [
+      {
+        "source_segment_ids": [
+          "CON_0028",
+          "CON_0036",
+          "CON_0037",
+          "CON_0038"
+        ],
+        "needs_review": false,
+        "missing_information": null,
+        "evidence": [
+          {
+            "note_id": "CON_0028",
+            "exact_quote": "An increase in the interest rate is contractionary for two reasons: it reduces investment and it appreciates the exchange rate, which lowers net exports."
+          },
+          {
+            "note_id": "CON_0036",
+            "exact_quote": "An expansionary domestic monetary policy will lead to a contraction in output and an appreciation of the currency."
+          },
+          {
+            "note_id": "CON_0037",
+            "exact_quote": "An expansionary domestic monetary policy will lead to a contraction in output."
+          },
+          {
+            "note_id": "CON_0038",
+            "exact_quote": "An expansionary domestic monetary policy will lead to an appreciation of the currency."
+          }
+        ],
+        "payload": {
+          "type": "flowchart",
+          "title": "Monetary‑Policy Transmission in an Open Economy",
+          "direction": "top-down",
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "Increase Domestic Interest Rate"
+            },
+            {
+              "id": "n2",
+              "label": "Reduces Investment"
+            },
+            {
+              "id": "n3",
+              "label": "Appreciates Exchange Rate"
+            },
+            {
+              "id": "n4",
+              "label": "Lower Net Exports"
+            },
+            {
+              "id": "n5",
+              "label": "Contraction in Output"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": "direct effect"
+            },
+            {
+              "from": "n1",
+              "to": "n3",
+              "label": "direct effect"
+            },
+            {
+              "from": "n3",
+              "to": "n4",
+              "label": "exchange‑rate channel"
+            },
+            {
+              "from": "n2",
+              "to": "n5",
+              "label": "investment channel"
+            },
+            {
+              "from": "n4",
+              "to": "n5",
+              "label": "trade channel"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

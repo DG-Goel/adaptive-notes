@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-7c5c348f-e017-4dd8-bc8e-e18281d7a8f9",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"markdown\":\"## Inference Phase\\n\\nThe **inference phase** is the stage where a trained model is applied to new, unseen data to generate predictions or outputs. During this phase, the model utilizes the patterns and knowledge it acquired during training to infer results without further updating its parameters.\\n\\n- **Purpose**: Deploy the model for real‑world tasks such as classification, regression, translation, or recommendation.\\n- **Key Steps**:\\n  1. **Load** the trained model and its weights.\\n  2. **Preprocess** incoming data to match the format used during training (e.g., scaling, tokenization).\\n  3. **Run** the model on the preprocessed data using `model.predict()` or an equivalent inference call.\\n  4. **Post‑process** the raw outputs into a usable form (e.g., converting logits to class labels, applying thresholds).\\n- **Considerations**:\\n  - **Latency**: Optimize for speed, especially in real‑time applications.\\n  - **Batching**: Process multiple inputs together when possible to improve throughput.\\n  - **Resource Usage**: Choose appropriate hardware (CPU, GPU, TPU) based on model size and performance requirements.\\n\\nBy carefully managing these aspects, the inference phase ensures that the model delivers accurate and efficient predictions in production environments.\"}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output JSON with field markdown. Include the polished notes. The notes are just \"- inference phase\". So produce something like:\n\n{\n \"markdown\": \"## Inference Phase\\n\\n...\"\n}\n\nAdd bold etc. Probably just a heading and description. Provide minimal.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794646572,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4200b3f836",
+  "usage": {
+    "completion_tokens": 348,
+    "prompt_tokens": 254,
+    "total_tokens": 602,
+    "completion_time": 0.725902636,
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_time": 0.010275087,
+    "prompt_tokens_details": null,
+    "queue_time": 0.319745432,
+    "total_time": 0.736177723
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cmayj8en4spck01y5brkr1",
+    "debug": null,
+    "seed": 14666713,
+    "usage": null
+  }
+}

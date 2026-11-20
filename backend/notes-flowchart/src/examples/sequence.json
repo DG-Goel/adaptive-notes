@@ -1,0 +1,134 @@
+
+{
+  "type": "sequence",
+  "title": "Web Application Authentication Sequence",
+  "participants": [
+    {
+      "id": "U",
+      "label": "User",
+      "kind": "actor"
+    },
+    {
+      "id": "W",
+      "label": "Web App",
+      "kind": "system"
+    },
+    {
+      "id": "A",
+      "label": "Auth API",
+      "kind": "system"
+    },
+    {
+      "id": "D",
+      "label": "Database",
+      "kind": "system"
+    }
+  ],
+  "events": [
+    {
+      "kind": "message",
+      "from": "U",
+      "to": "W",
+      "text": "Enter email and password"
+    },
+    {
+      "kind": "message",
+      "from": "W",
+      "to": "A",
+      "text": "POST /login"
+    },
+    {
+      "kind": "message",
+      "from": "A",
+      "to": "D",
+      "text": "Find user by email"
+    },
+    {
+      "kind": "message",
+      "from": "D",
+      "to": "A",
+      "text": "Return account record",
+      "dashed": true
+    },
+    {
+      "kind": "alternative",
+      "branches": [
+        {
+          "condition": "Credentials valid",
+          "events": [
+            {
+              "kind": "message",
+              "from": "A",
+              "to": "W",
+              "text": "200 OK and session cookie",
+              "dashed": true
+            },
+            {
+              "kind": "message",
+              "from": "W",
+              "to": "U",
+              "text": "Display dashboard",
+              "dashed": true
+            },
+            {
+              "kind": "optional",
+              "label": "Load user preferences",
+              "events": [
+                {
+                  "kind": "message",
+                  "from": "W",
+                  "to": "A",
+                  "text": "GET /preferences"
+                },
+                {
+                  "kind": "message",
+                  "from": "A",
+                  "to": "D",
+                  "text": "Fetch preferences"
+                },
+                {
+                  "kind": "message",
+                  "from": "D",
+                  "to": "A",
+                  "text": "Preference records",
+                  "dashed": true
+                },
+                {
+                  "kind": "message",
+                  "from": "A",
+                  "to": "W",
+                  "text": "200 OK",
+                  "dashed": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "condition": "Invalid credentials",
+          "events": [
+            {
+              "kind": "message",
+              "from": "A",
+              "to": "W",
+              "text": "401 Unauthorized",
+              "dashed": true
+            },
+            {
+              "kind": "message",
+              "from": "W",
+              "to": "U",
+              "text": "Display login error",
+              "dashed": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "note",
+      "over": "A",
+      "text": "Illustrative authentication workflow"
+    }
+  ]
+}

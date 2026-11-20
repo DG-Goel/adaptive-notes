@@ -1,0 +1,13 @@
+{
+  "provider_error_response": {
+    "http_status": 400,
+    "body": {
+      "error": {
+        "message": "Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/quiz' does not validate with /properties/quiz/type: expected array, but got string",
+        "type": "invalid_request_error",
+        "code": "json_validate_failed",
+        "failed_generation": "{\n  \"rows\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit concept statements in provided excerpts.\",\n      \"source_ids\": [\"G00022\"]\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No term definitions present in the excerpts.\",\n      \"source_ids\": [\"G00022\"]\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explanatory content covering a specific topic is provided.\",\n      \"source_ids\": [\"G00022\"]\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No example statements are present.\",\n      \"source_ids\": [\"G00022\"]\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No factual statements are supported by the excerpts.\",\n      \"source_ids\": [\"G00022\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No formula text is available in the excerpts.\",\n      \"source_ids\": [\"G00022\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No procedural content is present.\",\n      \"source_ids\": [\"G00022\"]\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No relationship statements are provided.\",\n      \"source_ids\": [\"G00022\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": \"FAIL: The provided source excerpts do not contain sufficient educational content to generate four distinct short‑answer quiz questions as required.\"\n}"
+      }
+    }
+  }
+}

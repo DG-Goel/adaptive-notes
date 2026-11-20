@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-54b24027-c2ed-45a7-8632-d51bcdbe2b9e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit concept name or content provided in primary excerpts.\",\n      \"source_ids\": [\"G00027\"]\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No term and definition text are present in the excerpts.\",\n      \"source_ids\": [\"G00027\"]\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explanatory statements about a specific topic are given.\",\n      \"source_ids\": [\"G00027\"]\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No clear exemplification of a concept or principle is provided.\",\n      \"source_ids\": [\"G00027\"]\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No factual statements are presented in the excerpts.\",\n      \"source_ids\": [\"G00027\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No formula text or mathematical expression is available.\",\n      \"source_ids\": [\"G00027\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No procedural steps or named procedure are described.\",\n      \"source_ids\": [\"G00027\"]\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No relationship statements linking subjects and objects are present.\",\n      \"source_ids\": [\"G00027\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract claims. The excerpts are vague, no clear concepts. Likely no supported items. So produce abstentions for each category? Probably empty rows, no claims. Provide empty quiz. Include abstentions for missing content. We'll output rows empty, abstentions maybe for each category unavailable due to source missing. Provide one abstention per category indicating SOURCE_MISSING.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794806428,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_86dc843b12",
+  "usage": {
+    "completion_tokens": 486,
+    "prompt_tokens": 2553,
+    "total_tokens": 3039,
+    "completion_time": 1.057629339,
+    "completion_tokens_details": {
+      "reasoning_tokens": 76
+    },
+    "prompt_time": 0.126952734,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "queue_time": 0.165457693,
+    "total_time": 1.184582073
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hcsbr6eqrvh0rjfpwdjyk1",
+    "debug": null,
+    "seed": 216834886,
+    "usage": null
+  }
+}

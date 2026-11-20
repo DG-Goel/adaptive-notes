@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-7353cd8e-1b7e-461d-a5cd-803f65dae0de",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Traditional Software vs Machine Learning\",\n      \"source_segment_ids\": [\"FCT_0014\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0014\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0014\",\n              \"quote\": \"Traditional software programming takes an input and an equation and produces an output, whereas machine learning takes input‑output pairs and derives the underlying relationship.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Traditional Software vs Machine Learning\",\n            \"headers\": [\"Aspect\", \"Traditional Software\", \"Machine Learning\"],\n            \"rows\": [\n              [\n                \"Process\",\n                \"takes an input and an equation and produces an output\",\n                \"takes input‑output pairs and derives the underlying relationship\"\n              ]\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visuals if supported. We have comparison between traditional software and ML (FCT_0014). Also classification description (FCT_0018). Could make a table comparing traditional vs ML. Use source quotes. Provide evidence notes.\n\nCreate one visual table. No more than two visuals. Return units list with that visual. No text-only units.\n\nConstruct payload type table with title \"Traditional Software vs Machine Learning\". Headers: \"Aspect\",\"Traditional Software\",\"Machine Learning\". Rows using quotes.\n\nGather quotes: from FCT_0014: \"Traditional software programming takes an input and an equation and produces an output, whereas machine learning takes input‑output pairs and derives the underlying relationship.\"\n\nFrom DEF_0001 maybe definition but not needed.\n\nAlso from FCT_0013 partially supports? It mentions input-output etc but unresolved. Use only resolved notes. So use FCT_0014 and maybe FCT_0017? Not comparison.\n\nThus one table.\n\nProvide source_segment_ids: [\"FCT_0014\"].\n\nneeds_review false.\n\nmissing_information [].\n\nevidence: note_id \"FCT_0014\", quote exact.\n\nReturn JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794603070,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_19b184c447",
+  "usage": {
+    "completion_tokens": 472,
+    "prompt_tokens": 1932,
+    "total_tokens": 2404,
+    "completion_time": 0.989702411,
+    "completion_tokens_details": {
+      "reasoning_tokens": 236
+    },
+    "prompt_time": 0.098623273,
+    "prompt_tokens_details": null,
+    "queue_time": 0.369963922,
+    "total_time": 1.088325684
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7bavb7we8dsxs1wh3fky8z6",
+    "debug": null,
+    "seed": 701325992,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-23965c73-55b2-4318-b3fd-1b3727636d51",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"markdown\": \"## Scanner Input Methods\\n\\n- **`next()`** returns a **`String`** representing the next token. Since it reads only up to the next whitespace, using it where another type is expected can cause a compilation error.\\n- Each invocation of **`next()`** consumes **one token**; tokens are delimited by spaces, tabs, or line breaks.\\n- To capture a **full name** that includes a space, you have two options:\\n  1. Call **`next()`** twice (once for each part of the name).\\n  2. Use **`nextLine()`**, which reads the **entire line** regardless of spaces or tabs.\\n- **`nextLine()`** returns the whole line entered by the user, preserving internal whitespace.\\n- The **`trim()`** method removes **leading and trailing whitespace** from a `String`, useful for cleaning input before further processing.\"\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output JSON with field markdown. Provide polished notes.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794583576,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_87b3c396db",
+  "usage": {
+    "completion_tokens": 222,
+    "prompt_tokens": 348,
+    "total_tokens": 570,
+    "completion_time": 0.469022534,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14
+    },
+    "prompt_time": 0.017365993,
+    "prompt_tokens_details": null,
+    "queue_time": 0.285216503,
+    "total_time": 0.486388527
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ar8ey9ehpaek5wk0vmq4t4",
+    "debug": null,
+    "seed": 2071480667,
+    "usage": null
+  }
+}

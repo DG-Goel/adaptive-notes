@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-802da84f-152e-435d-81e4-6a14c21f311d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"A for‑each loop does not provide access to the index of each item; it only supplies the loop variable that holds the value of each item.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The mortgage loan amount must be between $1,000 and $1,000,000 inclusive.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The annual interest rate must be greater than 0 and less than or equal to 30.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"An infinite loop (e.g., `while true`) can be used to repeatedly ask the same question until the user enters a valid value.\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [\n    {\n      \"procedure_name\": {\n        \"text\": \"Validate mortgage input using an infinite loop\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"steps\": [\n        {\n          \"text\": \"Wrap the input prompt for a question inside `while true` to create an infinite loop.\",\n          \"refs\": [\"Q0004\"]\n        },\n        {\n          \"text\": \"Read the user's input.\",\n          \"refs\": [\"Q0004\"]\n        },\n        {\n          \"text\": \"Check if the input satisfies the required range (e.g., loan amount between 1,000 and 1,000,000; interest rate >0 and ≤30).\",\n          \"refs\": [\"Q0001\", \"Q0002\"]\n        },\n        {\n          \"text\": \"If the input is valid, `break` out of the loop.\",\n          \"refs\": [\"Q0004\"]\n        },\n        {\n          \"text\": \"If the input is invalid, display an error message and the loop repeats, asking the same question again.\",\n          \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\"]\n        }\n      ],\n      \"prerequisites\": null,\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"This procedure ensures that the program only proceeds once the user provides values that meet the specified constraints.\",\n        \"refs\": [\"Q0003\"]\n      }\n    }\n  ],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract facts, definitions, etc. The excerpts talk about for-each loop limitation, mortgage calculator error handling, validation conditions. So we can create facts: limitation of for-each loop: no index access. Also fact: mortgage loan amount must be between $1,000 and $1,000,000. Interest rate >0 and <=30. Use infinite loop to repeat question until valid. Provide definitions maybe of infinite loop? Not given definition. So produce facts and maybe procedures? Could extract procedure steps for validation using infinite loop. We'll output schema with arrays. Include excluded empty. Provide refs.\n\nLet's craft facts:\n\n- For-each loop does not provide index of each item; only loop variable holds value. (ref Q0000)\n\n- Mortgage loan amount must be between $1,000 and $1,000,000 inclusive. (ref Q0001)\n\n- Annual interest rate must be greater than 0 and less than or equal to 30. (ref Q0002)\n\n- Using an infinite loop (while true) to repeatedly ask for input until valid. (ref Q0004, Q0005)\n\nProcedures: maybe \"Validate mortgage input using infinite loop\". Steps: wrap input reading in while true, check condition, break if valid else show error and continue. Use refs Q0004, Q0003.\n\nWe'll output facts, procedures. No definitions, examples, formulas, relationships, concepts. Excluded empty.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191808,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_60e4b492db",
+  "usage": {
+    "completion_tokens": 904,
+    "prompt_tokens": 3156,
+    "total_tokens": 4060,
+    "completion_time": 1.915809087,
+    "completion_tokens_details": {
+      "reasoning_tokens": 298
+    },
+    "prompt_time": 0.166728714,
+    "prompt_tokens_details": null,
+    "queue_time": 0.253295312,
+    "total_time": 2.082537801
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z2mm53e9askfbhd6h92hks",
+    "debug": null,
+    "seed": 464215272,
+    "usage": null
+  }
+}

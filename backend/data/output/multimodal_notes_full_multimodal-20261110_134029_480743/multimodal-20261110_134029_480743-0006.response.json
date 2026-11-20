@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-e7d25826-cddc-4a7c-a36f-3d9b664b9f34",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"claims\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00002\"],\n      \"reason\": \"No conceptual teaching content present in the provided excerpts.\"\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00002\"],\n      \"reason\": \"No definitions are provided in the excerpts.\"\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00002\"],\n      \"reason\": \"No explanatory material is present in the excerpts.\"\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00002\"],\n      \"reason\": \"No example content is provided.\"\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00002\"],\n      \"reason\": \"No factual teaching statements are present.\"\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00002\"],\n      \"reason\": \"No formulas are included in the excerpts.\"\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00002\"],\n      \"reason\": \"No procedural instructions are provided.\"\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00002\"],\n      \"reason\": \"No relational teaching content is present.\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output typed_claim_refs_v1. The source only contains promotional statements, no educational content. So likely all categories empty, claims empty, abstentions maybe indicate source missing for educational content. We can produce empty arrays and maybe abstentions for each category indicating source missing or noneducational. Probably mark excluded? No excluded needed. We'll output empty structures.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318104,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_19b184c447",
+  "usage": {
+    "completion_tokens": 502,
+    "prompt_tokens": 3140,
+    "total_tokens": 3642,
+    "completion_time": 1.0495844540000001,
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_time": 1.259614591,
+    "prompt_tokens_details": {
+      "cached_tokens": 2560
+    },
+    "queue_time": 0.375752806,
+    "total_time": 2.309199045
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72v2vqwetpr7dav62r311pj",
+    "debug": null,
+    "seed": 548820190,
+    "usage": null
+  }
+}

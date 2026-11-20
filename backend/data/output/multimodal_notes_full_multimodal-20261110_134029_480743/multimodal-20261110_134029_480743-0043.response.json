@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-6ba13848-a141-4922-a7c9-f917b717b8dd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"A Java program has a main class and a main method.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"Java class names use PascalCase (the first letter of each word is uppercase).\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"Java method names use camelCase (the first letter of the first word is lowercase, subsequent words start with uppercase).\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"The capital M in the class name is due to the PascalCase naming convention for classes.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": [\"Q0002\"]\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"To start a Java project, you create a new project in an IDE such as IntelliJ IDEA.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0008\", \"Q0009\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"This tutorial will teach how to write and execute your first Java program.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0007\"],\n      \"related_refs\": []\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify statements: naming conventions, main class/method. Create claims.\n\nExtract claims:\n\nC1: \"A Java program has a main class and a main method.\" from Q0001.\n\nC2: \"Java class names use PascalCase (first letter of each word uppercase).\" from Q0003.\n\nC3: \"Java method names use camelCase (first letter of first word lowercase, subsequent words capitalized).\" from Q0004.\n\nC4: \"The capital M in class name is due to PascalCase convention.\" from Q0005 (and Q0002 context).\n\nC5: \"To start a Java project, you create a new project in an IDE like IntelliJ IDEA.\" from Q0008,Q0009.\n\nC6: \"The tutorial will teach how to write and execute your first Java program.\" from Q0007.\n\nAll basis explicit, availability SOURCE_SUPPORTED. literal_kind verbal. instructional_role maybe explanation_of_mistake? No, just explanation. Use null.\n\nNow fill schema: claims list with those. No concepts etc maybe empty arrays. Abstentions none.\n\nProvide empty arrays for other categories.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318487,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c800245357",
+  "usage": {
+    "completion_tokens": 823,
+    "prompt_tokens": 3137,
+    "total_tokens": 3960,
+    "completion_time": 1.7293865309999998,
+    "completion_tokens_details": {
+      "reasoning_tokens": 243
+    },
+    "prompt_time": 0.218238941,
+    "prompt_tokens_details": null,
+    "queue_time": 0.296688453,
+    "total_time": 1.947625472
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72vej57epnbvnvna72cxc4s",
+    "debug": null,
+    "seed": 1754211723,
+    "usage": null
+  }
+}

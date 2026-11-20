@@ -1,0 +1,75 @@
+{
+  "operations": [
+    {
+      "id": "multimodal-20261110_085436_074829-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "slot": 1,
+      "request_hash": "697c1ceffdef89adae4f4815ccec7179b614bc0001a7e975b4e6082c106e4aa2",
+      "state": "failed",
+      "created": 1794301008.7987297,
+      "completed": 1794301017.0351691,
+      "validation": "failed"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "multimodal-20261110_085436_074829-0000",
+      "number": 1,
+      "created": 1794301008.7987297,
+      "dispatched": 1794301016.7172096,
+      "completed": 1794301017.0206058,
+      "input_reserved": 3666,
+      "output_reserved": 3000,
+      "input_actual": null,
+      "output_actual": null,
+      "reasoning": null,
+      "charged": 6666,
+      "http_status": 400,
+      "finish": null,
+      "duration": 0.2969999999986612,
+      "category": "permanent_request"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 813,
+      "request_id": "multimodal-20261110_085436_074829-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794301008.799734,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"7cd83b2aca537f217a657d43082fd9794a3e13487c29dd84bb5b8b6bdc539c26\", \"estimated_input\": 3666, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 814,
+      "request_id": "multimodal-20261110_085436_074829-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794301016.7172096,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 815,
+      "request_id": "multimodal-20261110_085436_074829-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794301017.0216045,
+      "event": "provider_error",
+      "details": "{\"category\": \"permanent_request\", \"error_code\": null, \"message\": \"Groq API call failed: Error code: 400 - {'error': {'message': \\\"invalid JSON schema for response_format: 'canonical_evidence_first_12a_v1': /$defs/value/anyOf/1/properties/refs: uniqueItems is not supported [unsupported_uniqueItems]\\\", 'type': 'invalid_request_error', 'param': 'response_format', 'schema_path': '/$defs/value/anyOf/1/properties/refs', 'schema_path_segments': ['$', '$defs', 'value', 'anyOf', '1', 'properties', 'refs'], 'schema_kind': 'unsupported_keyword', 'schema_code': 'unsupported_uniqueItems'}}\", \"retry_after\": null, \"retry_after_header\": null, \"retryable\": false, \"status_code\": 400}"
+    },
+    {
+      "sequence": 816,
+      "request_id": "multimodal-20261110_085436_074829-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794301017.036575,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"failed\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"not_passed\"}"
+    },
+    {
+      "sequence": 817,
+      "request_id": "multimodal-20261110_085436_074829-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794301017.0463026,
+      "event": "operation_error",
+      "details": "{\"message\": \"Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \\\"invalid JSON schema for response_format: 'canonical_evidence_first_12a_v1': /$defs/value/anyOf/1/properties/refs: uniqueItems is not supported [unsupported_uniqueItems]\\\", 'type': 'invalid_request_error', 'param': 'response_format', 'schema_path': '/$defs/value/anyOf/1/properties/refs', 'schema_path_segments': ['$', '$defs', 'value', 'anyOf', '1', 'properties', 'refs'], 'schema_kind': 'unsupported_keyword', 'schema_code': 'unsupported_uniqueItems'}}\", \"type\": \"GroqProviderError\"}"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0071",
+        "CON_0027",
+        "FCT_0072"
+      ],
+      "reason": "Unsupported visual label or value"
+    },
+    {
+      "note_ids": [
+        "REL_0003"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Interest Rate Effects on Exchange Rate",
+      "source_segment_ids": [
+        "FCT_0071",
+        "CON_0027",
+        "FCT_0072"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0071",
+            "CON_0027",
+            "FCT_0072"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0071",
+              "quote": "An increase in the domestic interest rate, other things equal, appreciates the exchange rate."
+            },
+            {
+              "note_id": "CON_0027",
+              "quote": "When the domestic interest rate rises relative to the foreign interest rate, the exchange rate appreciates (the domestic currency becomes more expensive)."
+            },
+            {
+              "note_id": "FCT_0072",
+              "quote": "If domestic and foreign interest rates are equal, the current exchange rate equals the expected future exchange rate."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Interest Rate Effects on Exchange Rate",
+            "headers": [
+              "Condition",
+              "Result"
+            ],
+            "rows": [
+              [
+                "Domestic interest rate ↑ (others equal)",
+                "Exchange rate appreciates"
+              ],
+              [
+                "Domestic rate ↑ relative to foreign rate",
+                "Exchange rate appreciates"
+              ],
+              [
+                "Domestic rate = foreign rate",
+                "Current exchange rate = expected future exchange rate"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Expected vs. Current Exchange Rate Flow",
+      "source_segment_ids": [
+        "REL_0003"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "REL_0003"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "REL_0003",
+              "quote": "expected exchange rate --> current exchange rate"
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Expected to Current Exchange Rate",
+            "direction": "LR",
+            "nodes": [
+              {
+                "id": "A",
+                "label": "expected exchange rate",
+                "kind": "start"
+              },
+              {
+                "id": "B",
+                "label": "current exchange rate",
+                "kind": "action"
+              }
+            ],
+            "edges": [
+              {
+                "from": "A",
+                "to": "B",
+                "label": "leads to"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-32e7e91f-4f49-4ff8-8278-af63e71c9ad6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If the domestic interest rate equals the international interest rate, then the exchange rate equals the expected exchange rate.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What condition on domestic and international interest rates leads to the exchange rate being equal to the expected exchange rate?\",\n      \"answer\": \"When the domestic interest rate equals the international interest rate.\",\n      \"explanation\": \"The speaker states that if i (domestic rate) is equal to the international rate, then the exchange rate must equal the expected exchange rate.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"interest rate parity condition\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"According to the speaker, what must the exchange rate be equal to when the interest rates are equal?\",\n      \"answer\": \"It must be equal to the expected exchange rate.\",\n      \"explanation\": \"The speaker confirms that the answer is that the exchange rate has to be equal to the expected exchange rate.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"exchange rate outcome\",\n      \"refs\": [\"Q0003\"]\n    },\n    {\n      \"question\": \"If the domestic interest rate is 5% and the international interest rate is also 5%, what can be said about the current exchange rate relative to expectations?\",\n      \"answer\": \"The current exchange rate must equal the expected exchange rate.\",\n      \"explanation\": \"Because the rates are equal, the condition described by the speaker applies, forcing the exchange rate to match expectations.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"applying parity condition\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"Why does the equality of interest rates matter for determining the exchange rate in the speaker's explanation?\",\n      \"answer\": \"Because when the rates are equal, the exchange rate is required to equal the expected exchange rate, indicating parity between domestic and foreign conditions.\",\n      \"explanation\": \"The speaker links equal interest rates directly to the exchange rate being equal to its expected value, showing the logical link.\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"reasoning behind parity\",\n      \"refs\": [\"Q0000\", \"Q0003\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows etc. The source only contains statements about interest rate parity: domestic rate = international rate => exchange rate = expected exchange rate. No explicit definitions etc. We can extract a concept: \"interest rate parity\" maybe but not named. We have limited info. We need required fields for any item we create. Could create a fact: \"If domestic interest rate i equals international interest rate, then the exchange rate equals the expected exchange rate.\" That's a fact. So category facts, required fact_text. Provide row.\n\nAlso maybe concept: \"exchange rate\" concept_name and content? Not enough definition. Might abstain.\n\nWe need at least one row for each required field of each item we include. We can include only one fact item. Provide item label e.g., \"item1\". Provide row with fact_text. Provide availability SOURCE_SUPPORTED? The excerpt is primary but ASR speech evidence, exact code/formula unavailable. Still text is present, so SOURCE_SUPPORTED.\n\nbasis explicit. literal_kind verbal. instructional_role null. related_refs empty.\n\nNow abstentions for missing required fields in other categories? Not needed if we only include facts. No other items.\n\nQuiz: need four questions based on primary chunk. We can ask about the relationship. All supported by excerpts.\n\nCreate questions:\n\n1. Remember: What condition on domestic and international interest rates leads to exchange rate equaling expected exchange rate? Answer: when they are equal. Use Q0000.\n\n2. Understand: According to the speaker, what must the exchange rate be equal to when the interest rates are equal? Answer: the expected exchange rate. Use Q0003.\n\n3. Apply: If the domestic interest rate is 5% and the international interest rate is also 5%, what can be said about the current exchange rate relative to expectations? Answer: it must equal the expected exchange rate. Use Q0000.\n\n4. Analyze: Why does the speaker consider the equality of interest rates important for determining the exchange rate? Answer: because under that condition the exchange rate must match the expected exchange rate, indicating parity. Use Q0000 and Q0003.\n\nAll supported.\n\nProvide rows, abstentions empty, excluded empty.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794730116,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 1050,
+    "prompt_tokens": 2381,
+    "total_tokens": 3431,
+    "completion_time": 2.190112906,
+    "completion_tokens_details": {
+      "reasoning_tokens": 448
+    },
+    "prompt_time": 0.105408659,
+    "prompt_tokens_details": null,
+    "queue_time": 0.324053797,
+    "total_time": 2.295521565
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f40f6eexbsxn1y0qr8trr2",
+    "debug": null,
+    "seed": 446338338,
+    "usage": null
+  }
+}

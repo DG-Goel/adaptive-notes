@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-e0efaf95-741f-4ae3-9d06-e5e4ab70bb13",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"mortgage_calculator_validation\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The program must validate that the principal entered by the user is between 1,000 and 1,000,000.\",\n      \"refs\": [\"Q0000\", \"Q0018\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"mortgage_calculator_validation\",\n      \"category\": \"explanations\",\n      \"field\": \"explanation_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"An infinite loop (while true) is used to keep asking the same question until the user provides a valid value.\",\n      \"refs\": [\"Q0009\", \"Q0012\", \"Q0013\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"explanation_of_mistake\"\n    },\n    {\n      \"item\": \"mortgage_calculator_validation\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"An if statement checks the entered principal; if it is within the valid range, the loop is broken.\",\n      \"refs\": [\"Q0014\", \"Q0015\", \"Q0016\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"mortgage_calculator_scope\",\n      \"category\": \"explanations\",\n      \"field\": \"explanation_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A variable declared inside a loop is scoped to that block and cannot be accessed outside of it, causing a compilation error.\",\n      \"refs\": [\"Q0024\", \"Q0025\", \"Q0026\", \"Q0027\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"identified_mistake\"\n    },\n    {\n      \"item\": \"mortgage_calculator_scope\",\n      \"category\": \"procedures\",\n      \"field\": \"steps\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Declare the principal variable outside the infinite loop, then assign its value inside the loop.\",\n      \"refs\": [\"Q0028\", \"Q0029\", \"Q0030\", \"Q0031\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"corrected_approach\"\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for educational content. From excerpts we have info about input validation loop, variable scope. Create facts and explanations. Provide rows with availability SOURCE_SUPPORTED? Since ASR speech, exact code unavailable, but concepts are supported. Use SOURCE_SUPPORTED for textual claims. Provide items e.g., item \"validation_loop\". Include facts: need to validate user input, use infinite loop, break when valid. Also variable scope explanation. Provide rows.\n\nLet's craft rows.\n\nRow1: fact about needing to validate user input between 1000 and 1,000,000. text from Q0000,Q0018. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs.\n\nRow2: explanation of infinite loop while true for repeated prompting. from Q0009,Q0012,Q0013. etc.\n\nRow3: fact about using if statement to check range and break. from Q0014,Q0015,Q0016.\n\nRow4: explanation of error due to variable scope, principal declared inside loop not accessible outside. from Q0024-Q0027.\n\nRow5: solution: declare variable outside loop. from Q0028-Q0031.\n\nProvide item ids like \"mortgage_calculator_validation\". Category facts/explanations.\n\nNow format rows.\n\nAlso abstentions: none needed.\n\nExcluded: none.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636718,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4200b3f836",
+  "usage": {
+    "completion_tokens": 974,
+    "prompt_tokens": 3822,
+    "total_tokens": 4796,
+    "completion_time": 2.027543113,
+    "completion_tokens_details": {
+      "reasoning_tokens": 274
+    },
+    "prompt_time": 0.303194453,
+    "prompt_tokens_details": null,
+    "queue_time": 0.37900851,
+    "total_time": 2.330737566
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cay666e9ftg7s9mnzr49f7",
+    "debug": null,
+    "seed": 413719666,
+    "usage": null
+  }
+}

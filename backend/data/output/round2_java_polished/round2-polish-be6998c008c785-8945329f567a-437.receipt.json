@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-84b7e146-7a4f-408f-8795-18f671260a0c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"markdown\": \"# Loop Constructs in Java\\n\\n## `while` Loop\\n\\n- A `while` loop is created by:\\n  1. Declaring a **loop variable**.\\n  2. Specifying a **condition** in parentheses.\\n  3. Placing the **loop body** inside braces `{}`.\\n- The loop variable can be **decremented** each iteration to count down.\\n- Use a `while` loop when the number of iterations is **not known in advance** (e.g., reading user input until the user types `\\\"quit\\\"`).\\n\\n### Typical Pattern\\n```java\\nwhile (condition) {\\n    // loop body\\n}\\n```\\n\\n### Example: Echo Until `quit`\\n```java\\nScanner sc = new Scanner(System.in);\\nwhile (true) {                     // loop runs forever until we break\\n    String input = sc.nextLine();\\n    if (input.equals(\\\"quit\\\")) {   // break when the user types quit\\n        break;\\n    }\\n    if (input.equals(\\\"pass\\\")) {   // skip echoing \\\"pass\\\" but keep looping\\n        continue;                  // go to the next iteration\\n    }\\n    System.out.println(input);     // echo the input\\n}\\n```\\n- **`break`** terminates the loop immediately; any code after it in the current iteration is ignored.\\n- **`continue`** skips the remainder of the current iteration and jumps to the beginning of the loop.\\n- Using `while (true)` simplifies the structure, but **always include a `break`** to avoid an infinite loop.\\n\\n## `for-each` Loop (Enhanced `for`)\\n\\nThe **for-each** loop provides a concise way to iterate over arrays or collections without managing an index.\\n\\n### Syntax\\n```java\\nfor (ElementType element : arrayOrCollection) {\\n    // use element\\n}\\n```\\n- `ElementType` matches the type of items in the array/collection.\\n- `element` holds the current item for each iteration.\\n\\n### Example: Iterating Over a String Array\\n```java\\nString[] fruits = {\\\"apple\\\", \\\"banana\\\", \\\"cherry\\\"};\\nfor (String fruit : fruits) {\\n    System.out.println(fruit);\\n}\\n```\\n- No numeric counter, no explicit boolean condition, and no manual incrementing—**much easier** than a traditional `for` loop.\\n- The output is identical to using a `while` loop that prints each fruit on a new line.\\n\\n## Summary\\n- Use a **`while` loop** when the termination condition depends on runtime data (e.g., user input).\\n- Use **`break`** to exit a loop early and **`continue`** to skip to the next iteration.\\n- Prefer the **for-each loop** for straightforward traversal of arrays or collections; it reduces boilerplate and improves readability.\"\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output JSON with field markdown. We'll craft markdown.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794583591,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_86dc843b12",
+  "usage": {
+    "completion_tokens": 659,
+    "prompt_tokens": 752,
+    "total_tokens": 1411,
+    "completion_time": 1.3914250959999999,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14
+    },
+    "prompt_time": 0.191554187,
+    "prompt_tokens_details": null,
+    "queue_time": 0.167510532,
+    "total_time": 1.582979283
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ar8wqpexc9rzzy3knt2eqp",
+    "debug": null,
+    "seed": 1015811560,
+    "usage": null
+  }
+}

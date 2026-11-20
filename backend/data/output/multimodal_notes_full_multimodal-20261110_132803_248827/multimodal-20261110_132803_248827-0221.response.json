@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-bbe33630-47f7-436f-954e-8a07b58d60b2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"Make sure project SDK is not blank.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"So earlier we downloaded\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"JDK or java development kit version 12,\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"JDK version 12 is selected here.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"correct_demonstration\",\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"If you don't see that, make sure\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"to select it from this drop down list.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"correct_demonstration\",\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"Alright now let's click\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"correct_demonstration\",\n      \"refs\": [\"Q0006\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C8\",\n      \"text\": \"Alright, on the left side, select java,\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"refs\": [\"Q0007\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C9\",\n      \"text\": \"on next, on this page select create project from template\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"prerequisite\",\n      \"refs\": [\"Q0008\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\"Make sure project SDK is not blank.\", \"So earlier we downloaded\", \"JDK or java development kit version 12,\", \"JDK version 12 is selected here.\", \"If you don't see that, make sure\", \"to select it from this drop down list.\", \"Alright now let's click\", \"Alright, on the left side, select java,\", \"on next, on this page select create project from template\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"verbal\"]\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Likely statements: ensure project SDK not blank, download JDK version 12, select JDK version 12, etc. Create claims.\n\nWe'll list claims C1..C? each with text from excerpt, basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role maybe prerequisite or correct_demonstration. refs list excerpt ref. related_refs empty.\n\nThen categories: facts maybe. Use facts field with fact_text claim IDs.\n\nWe'll map each excerpt as fact.\n\nCreate claims:\n\nC1: \"Make sure project SDK is not blank.\" from Q0000.\n\nC2: \"Earlier we downloaded ...\" incomplete but maybe fact about downloading. Use text \"So earlier we downloaded\". Might be incomplete, but still.\n\nC3: \"JDK or java development kit version 12,\" from Q0002.\n\nC4: \"JDK version 12 is selected here.\" from Q0003.\n\nC5: \"If you don't see that, make sure\" from Q0004 (incomplete). Might be partial.\n\nC6: \"to select it from this drop down list.\" from Q0005.\n\nC7: \"Alright now let's click\" from Q0006.\n\nC8: \"Alright, on the left side, select java,\" from Q0007.\n\nC9: \"on next, on this page select create project from template\" from Q0008.\n\nWe'll assign instructional_role: prerequisite for SDK, correct_demonstration for clicking etc.\n\nNow build schema.\n\nfacts: list all claim IDs.\n\nexplanations etc empty.\n\nabstentions none.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317955,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a7bb72c24",
+  "usage": {
+    "completion_tokens": 1215,
+    "prompt_tokens": 3042,
+    "total_tokens": 4257,
+    "completion_time": 2.942086062,
+    "completion_tokens_details": {
+      "reasoning_tokens": 334
+    },
+    "prompt_time": 0.024677519,
+    "prompt_tokens_details": {
+      "cached_tokens": 2560
+    },
+    "queue_time": 0.15944494,
+    "total_time": 2.966763581
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72ty9mqenf8xrfm66s3x86y",
+    "debug": null,
+    "seed": 864716017,
+    "usage": null
+  }
+}

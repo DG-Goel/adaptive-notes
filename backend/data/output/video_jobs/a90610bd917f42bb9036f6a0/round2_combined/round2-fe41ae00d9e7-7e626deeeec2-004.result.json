@@ -1,0 +1,256 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0077",
+        "FCT_0078",
+        "FCT_0079",
+        "CON_0032"
+      ],
+      "reason": "Invalid or context-owned visual span"
+    },
+    {
+      "note_ids": [
+        "CON_0033",
+        "CON_0035",
+        "CON_0036",
+        "CON_0037"
+      ],
+      "reason": "Unsupported visual label or value"
+    },
+    {
+      "note_ids": [
+        "CON_0039",
+        "CON_0059",
+        "FCT_0088"
+      ],
+      "reason": "Source note is unresolved"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Exchange Rate Depreciation",
+      "source_segment_ids": [
+        "FCT_0077",
+        "FCT_0078",
+        "FCT_0079",
+        "CON_0032"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0077",
+            "FCT_0078",
+            "FCT_0079",
+            "CON_0032"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0077",
+              "exact_quote": "the exchange rate is depreciating"
+            },
+            {
+              "note_id": "FCT_0078",
+              "exact_quote": "the dollar is depreciating"
+            },
+            {
+              "note_id": "FCT_0079",
+              "exact_quote": "the exchange rate will fall"
+            },
+            {
+              "note_id": "CON_0032",
+              "exact_quote": "When the exchange rate falls, the domestic currency is said to be depreciating."
+            }
+          ],
+          "payload": {
+            "type": "concept_tree",
+            "title": "Exchange Rate Depreciation",
+            "nodes": [
+              {
+                "id": "n0",
+                "label": "Exchange Rate Depreciation",
+                "description": null
+              },
+              {
+                "id": "n1",
+                "label": "exchange rate is depreciating",
+                "parent": "n0"
+              },
+              {
+                "id": "n2",
+                "label": "dollar is depreciating",
+                "parent": "n0"
+              },
+              {
+                "id": "n3",
+                "label": "exchange rate will fall",
+                "parent": "n0"
+              },
+              {
+                "id": "n4",
+                "label": "exchange rate falls → domestic currency depreciates",
+                "parent": "n0"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Same Interest Rate Relationships",
+      "source_segment_ids": [
+        "CON_0033",
+        "CON_0035",
+        "CON_0036",
+        "CON_0037"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0033",
+            "CON_0035",
+            "CON_0036",
+            "CON_0037"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0033",
+              "exact_quote": "Starting from the same interest rate and then increasing one rate makes the foreign bond have a higher interest rate than the domestic bond."
+            },
+            {
+              "note_id": "CON_0035",
+              "exact_quote": "If the expected exchange rate is fixed, the only way to achieve an expected appreciation of the dollar is by depreciating the dollar today."
+            },
+            {
+              "note_id": "CON_0036",
+              "exact_quote": "The mechanism linking interest rates and exchange rate movements is symmetric."
+            },
+            {
+              "note_id": "CON_0037",
+              "exact_quote": "The adjustment of exchange rates to interest rate changes now occurs in milliseconds, performed by machines."
+            }
+          ],
+          "payload": {
+            "type": "concept_tree",
+            "title": "Same Interest Rate Relationships",
+            "nodes": [
+              {
+                "id": "n0",
+                "label": "Same Interest Rate",
+                "description": null
+              },
+              {
+                "id": "n1",
+                "label": "Increasing one rate → foreign bond higher interest than domestic",
+                "parent": "n0"
+              },
+              {
+                "id": "n2",
+                "label": "Fixed expected exchange rate → must depreciate dollar today to expect appreciation",
+                "parent": "n0"
+              },
+              {
+                "id": "n3",
+                "label": "Interest‑rate ↔ exchange‑rate link is symmetric",
+                "parent": "n0"
+              },
+              {
+                "id": "n4",
+                "label": "Adjustment occurs in milliseconds (machines)",
+                "parent": "n0"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Effect of Expected Exchange Rate Changes",
+      "source_segment_ids": [
+        "CON_0039",
+        "CON_0059",
+        "FCT_0088"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0039",
+            "CON_0059",
+            "FCT_0088"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0039",
+              "exact_quote": "When the expected exchange rate is increased, the current exchange rate rises immediately."
+            },
+            {
+              "note_id": "CON_0059",
+              "exact_quote": "The expected exchange rate moves to the right."
+            },
+            {
+              "note_id": "FCT_0088",
+              "exact_quote": "Only one curve can move."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Effect of Expected Exchange Rate Changes",
+            "direction": "DOWN",
+            "nodes": [
+              {
+                "id": "s0",
+                "label": "Increase expected exchange rate",
+                "kind": "start"
+              },
+              {
+                "id": "a1",
+                "label": "Current exchange rate rises immediately",
+                "kind": "action"
+              },
+              {
+                "id": "a2",
+                "label": "Expected exchange rate moves right",
+                "kind": "action"
+              },
+              {
+                "id": "a3",
+                "label": "Only one curve can move",
+                "kind": "action"
+              }
+            ],
+            "edges": [
+              {
+                "from": "s0",
+                "to": "a1",
+                "label": ""
+              },
+              {
+                "from": "a1",
+                "to": "a2",
+                "label": ""
+              },
+              {
+                "from": "a2",
+                "to": "a3",
+                "label": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

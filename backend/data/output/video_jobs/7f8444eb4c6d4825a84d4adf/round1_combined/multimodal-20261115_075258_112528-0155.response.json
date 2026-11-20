@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-a584267b-8a5e-4e1b-b0e6-5d5c2d291b4f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit concept name or content provided in the primary excerpts.\",\n      \"source_ids\": [\"G00024\"]\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No term and definition text are present in the excerpts.\",\n      \"source_ids\": [\"G00024\"]\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Excerpts contain informal remarks without a clearly defined explanatory topic.\",\n      \"source_ids\": [\"G00024\"]\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No concrete example with exemplifies and example_text fields is supplied.\",\n      \"source_ids\": [\"G00024\"]\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No factual statements with fact_text are explicitly presented.\",\n      \"source_ids\": [\"G00024\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No formula text or related components are provided; the source mentions an equation but does not present it.\",\n      \"source_ids\": [\"G00024\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No procedural steps or procedure name are described.\",\n      \"source_ids\": [\"G00024\"]\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit relationship statements with subject, object, and relationship_type are given.\",\n      \"source_ids\": [\"G00024\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"Cannot generate quiz questions because the source does not contain sufficient educational content to support four distinct short‑answer questions.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"The primary excerpts only contain informal commentary and lack concrete concepts, definitions, facts, formulas, or examples required to formulate supported quiz items.\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0000\"],\n      \"topic\": \"insufficient_content\"\n    },\n    {\n      \"question\": \"Cannot generate quiz questions because the source does not contain sufficient educational content to support four distinct short‑answer questions.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"The primary excerpts only contain informal commentary and lack concrete concepts, definitions, facts, formulas, or examples required to formulate supported quiz items.\",\n      \"bloom_level\": \"Understand\",\n      \"refs\": [\"Q0001\"],\n      \"topic\": \"insufficient_content\"\n    },\n    {\n      \"question\": \"Cannot generate quiz questions because the source does not contain sufficient educational content to support four distinct short‑answer questions.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"The primary excerpts only contain informal commentary and lack concrete concepts, definitions, facts, formulas, or examples required to formulate supported quiz items.\",\n      \"bloom_level\": \"Apply\",\n      \"refs\": [\"Q0002\"],\n      \"topic\": \"insufficient_content\"\n    },\n    {\n      \"question\": \"Cannot generate quiz questions because the source does not contain sufficient educational content to support four distinct short‑answer questions.\",\n      \"answer\": \"N/A\",\n      \"explanation\": \"The primary excerpts only contain informal commentary and lack concrete concepts, definitions, facts, formulas, or examples required to formulate supported quiz items.\",\n      \"bloom_level\": \"Analyze\",\n      \"refs\": [\"Q0003\"],\n      \"topic\": \"insufficient_content\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows etc but source only has vague statements, no concrete concepts? Likely cannot extract required fields. Must abstain for each category. Need four quiz questions but source insufficient -> must fail explicitly. So output with error? According to instruction: if cannot support four questions, fail explicitly rather than fabricate. So respond with error? Probably output empty with explanation? We'll state failure.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794729654,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_49bfac06f1",
+  "usage": {
+    "completion_tokens": 908,
+    "prompt_tokens": 2762,
+    "total_tokens": 3670,
+    "completion_time": 1.9049333370000001,
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_time": 0.260839614,
+    "prompt_tokens_details": null,
+    "queue_time": 0.291268758,
+    "total_time": 2.165772951
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f3jbzse6v83hknxh4a7fk7",
+    "debug": null,
+    "seed": 1145725051,
+    "usage": null
+  }
+}

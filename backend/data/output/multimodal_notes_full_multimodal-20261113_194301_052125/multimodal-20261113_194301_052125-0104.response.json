@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-1d7606ac-5b29-49f6-ac4d-d5a4860d0fb2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit procedural teaching (steps, prerequisites, outcomes) is present in the provided primary excerpts.\",\n      \"source_ids\": [\"G00027\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract procedures. The excerpts describe tool-augmented chatbot, workflow, agent, multi-step planning, onboarding checklist. No explicit step list. Likely no supported teaching of procedure steps. So items empty, abstain for missing procedures? We have no procedure teaching, so abstention for procedures category? We must provide abstention with availability PARTIALLY_SUPPORTED? Actually missing part of actual teaching point: there is no procedure. So abstain with reason \"SOURCE_MISSING\"? Use primary_source_ids. Provide one abstention. Excluded none.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794599241,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_69334c0be3",
+  "usage": {
+    "completion_tokens": 200,
+    "prompt_tokens": 2459,
+    "total_tokens": 2659,
+    "completion_time": 0.418956459,
+    "completion_tokens_details": {
+      "reasoning_tokens": 112
+    },
+    "prompt_time": 0.115429719,
+    "prompt_tokens_details": null,
+    "queue_time": 0.166122202,
+    "total_time": 0.534386178
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b76gmxeab9wrt3tdshc32z",
+    "debug": null,
+    "seed": 764906690,
+    "usage": null
+  }
+}

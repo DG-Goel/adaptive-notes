@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-3f31b4b2-dd90-423f-b818-5d1215da95c7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"net exports\",\n      \"refs\": [\"Q0010\", \"Q0011\", \"Q0015\", \"Q0017\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Net exports is a function of output, domestic income, and imports; it declines when output or domestic income rise because more of the demand is satisfied by foreign goods.\",\n      \"refs\": [\"Q0010\", \"Q0011\", \"Q0015\", \"Q0017\", \"Q0019\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"equilibrium in the goods market\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Equilibrium in the goods market is when output equals total demand, including domestic demand and net exports.\",\n      \"refs\": [\"Q0003\", \"Q0005\", \"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Net exports declines as domestic output increases.\",\n      \"refs\": [\"Q0010\", \"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Net exports declines as domestic income rises because imports increase.\",\n      \"refs\": [\"Q0015\", \"Q0017\", \"Q0018\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What determines the net export term in the open‑economy goods‑market equilibrium?\",\n      \"answer\": \"Output, domestic income, and imports (net exports is a function of these variables).\",\n      \"explanation\": \"The speaker states that net exports is a function of output and domestic income, and that higher income leads to more imports, reducing net exports.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"net exports function\",\n      \"refs\": [\"Q0010\", \"Q0011\", \"Q0015\", \"Q0017\"]\n    },\n    {\n      \"question\": \"Why does net exports decrease when domestic income rises?\",\n      \"answer\": \"Because higher domestic income leads to more imports, shifting demand to foreign goods.\",\n      \"explanation\": \"The excerpt explains that as domestic income rises, residents import more, which reduces net exports.\",\n      \"bloom_level\": \"Explain\",\n      \"topic\": \"net exports and income\",\n      \"refs\": [\"Q0015\", \"Q0017\", \"Q0018\"]\n    },\n    {\n      \"question\": \"In the goods‑market equilibrium, what two components make up total demand?\",\n      \"answer\": \"Domestic demand for goods and net exports.\",\n      \"explanation\": \"The speaker distinguishes domestic demand from net exports, noting that total demand includes both.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"goods‑market equilibrium\",\n      \"refs\": [\"Q0005\", \"Q0007\"]\n    },\n    {\n      \"question\": \"How does the open‑economy multiplier compare to the closed‑economy multiplier?\",\n      \"answer\": \"It is smaller because part of the increase in output is absorbed by foreign demand rather than domestic demand.\",\n      \"explanation\": \"The speaker notes that with net exports, the multiplier is reduced since some of the extra output goes to foreign goods.\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"open vs closed economy multiplier\",\n      \"refs\": [\"Q0020\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract claims. The excerpts talk about net exports function of output and income decreasing. So concepts: net exports, equilibrium goods market, closed vs open economy. We'll create rows for concepts content and concept_name. Also facts: net exports is decreasing function of output and domestic income. Provide rows.\n\nQuiz: four short answer questions.\n\nConstruct rows.\n\nItem label e.g., \"item1\". Provide rows for concept_name and content.\n\nLet's do two concepts: \"net exports\" and \"equilibrium in the goods market\". Content from quotes.\n\nRows:\n\nitem: \"item1\", category concepts, field concept_name, element0, part value, text \"net exports\", refs Q0010,Q0011 etc, basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\ncontent row: text from Q0010- Q0019 describing net exports function. Use combined? Must be one claim per row. We'll make content row with text \"Net exports is a function of output, domestic income, and imports, decreasing as output and income rise.\" Use primary excerpts Q0010,Q0011,Q0015,Q0017 etc.\n\nSimilarly for equilibrium.\n\nNow facts: net exports decreasing function of output. Provide fact rows.\n\nFormulas none (no explicit formula).\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794732951,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_02b0d31eca",
+  "usage": {
+    "completion_tokens": 1440,
+    "prompt_tokens": 2754,
+    "total_tokens": 4194,
+    "completion_time": 3.016000459,
+    "completion_tokens_details": {
+      "reasoning_tokens": 265
+    },
+    "prompt_time": 0.114815642,
+    "prompt_tokens_details": null,
+    "queue_time": 0.319631844,
+    "total_time": 3.130816101
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f6pyz7ej38nfnhvvx9e6nh",
+    "debug": null,
+    "seed": 1579769364,
+    "usage": null
+  }
+}

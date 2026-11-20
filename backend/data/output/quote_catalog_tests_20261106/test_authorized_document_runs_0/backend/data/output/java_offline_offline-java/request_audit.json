@@ -1,0 +1,67 @@
+{
+  "operations": [
+    {
+      "id": "offline-java-0000",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "90c0c2f48ca3a176e79c654546f95fa9606b05bf8d472b7788a4695cefea091c",
+      "state": "success",
+      "created": 1793981808.0759275,
+      "completed": 1793981808.0759275,
+      "validation": "passed_mechanical_only"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "offline-java-0000",
+      "number": 1,
+      "created": 1793981808.0759275,
+      "dispatched": 1793981808.0759275,
+      "completed": 1793981808.0759275,
+      "input_reserved": 2773,
+      "output_reserved": 4000,
+      "input_actual": 100,
+      "output_actual": 200,
+      "reasoning": 40,
+      "charged": 300,
+      "http_status": 200,
+      "finish": "stop",
+      "duration": 0.43800000000010186,
+      "category": "response"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1793981808.0759275,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"bdff428ad03ba647c9e904e0ce67cb93304287446f96bd88b7e2ffbe1d507aca\", \"estimated_input\": 2773, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 4000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 2,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1793981808.0759275,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 3,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1793981808.0759275,
+      "event": "quote_resolution",
+      "details": "{\"resolutions\": []}"
+    },
+    {
+      "sequence": 4,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1793981808.0759275,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"success\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"passed_mechanical_only\"}"
+    }
+  ]
+}

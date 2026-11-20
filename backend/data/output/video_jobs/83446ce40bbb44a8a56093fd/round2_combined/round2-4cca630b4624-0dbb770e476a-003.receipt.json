@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-fd49fe29-6057-4424-b0c3-f87d48aab56a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Interest Rate Effects on Exchange Rate\",\n      \"source_segment_ids\": [\"FCT_0071\", \"CON_0027\", \"FCT_0072\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0071\", \"CON_0027\", \"FCT_0072\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0071\",\n              \"quote\": \"An increase in the domestic interest rate, other things equal, appreciates the exchange rate.\"\n            },\n            {\n              \"note_id\": \"CON_0027\",\n              \"quote\": \"When the domestic interest rate rises relative to the foreign interest rate, the exchange rate appreciates (the domestic currency becomes more expensive).\"\n            },\n            {\n              \"note_id\": \"FCT_0072\",\n              \"quote\": \"If domestic and foreign interest rates are equal, the current exchange rate equals the expected future exchange rate.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Interest Rate Effects on Exchange Rate\",\n            \"headers\": [\"Condition\", \"Result\"],\n            \"rows\": [\n              [\n                \"Domestic interest rate ↑ (others equal)\",\n                \"Exchange rate appreciates\"\n              ],\n              [\n                \"Domestic rate ↑ relative to foreign rate\",\n                \"Exchange rate appreciates\"\n              ],\n              [\n                \"Domestic rate = foreign rate\",\n                \"Current exchange rate = expected future exchange rate\"\n              ]\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Expected vs. Current Exchange Rate Flow\",\n      \"source_segment_ids\": [\"REL_0003\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"REL_0003\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"REL_0003\",\n              \"quote\": \"expected exchange rate --> current exchange rate\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Expected to Current Exchange Rate\",\n            \"direction\": \"LR\",\n            \"nodes\": [\n              { \"id\": \"A\", \"label\": \"expected exchange rate\", \"kind\": \"start\" },\n              { \"id\": \"B\", \"label\": \"current exchange rate\", \"kind\": \"action\" }\n            ],\n            \"edges\": [\n              { \"from\": \"A\", \"to\": \"B\", \"label\": \"leads to\" }\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visual units. Look for comparisons etc. We have facts about interest rates and exchange rate. Could make a table comparing scenarios: domestic rate up -> exchange rate appreciates; equal rates -> exchange rate = expected; etc. Use table.\n\nAlso maybe flowchart of relationship? There's a mermaid flowchart in context showing expected -> current exchange rate. Could include that as architecture? It's a flowchart already source. Use that as visual.\n\nSo two visuals: table and flowchart (reuse source). Provide JSON units.\n\nIdentify source_segment_ids: use note IDs. For table rows need quotes containing both items. We have separate notes: FCT_0071 (increase domestic rate -> appreciates), CON_0027 (domestic rate rises relative to foreign -> appreciates), FCT_0072 (equal rates -> current = expected). Use these three rows.\n\nCreate table with Item and Effect.\n\nEvidence per row.\n\nUnit source_segment_ids list all involved IDs.\n\nPayload type table.\n\nSecond visual: flowchart from REL_0003. Use that as flowchart payload. Need nodes and edges. From mermaid: A \"expected exchange rate\" -> B \"current exchange rate\". Direction LR.\n\nProvide evidence from REL_0003.\n\nReturn JSON with units array.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794806795,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5a93aea882",
+  "usage": {
+    "completion_tokens": 854,
+    "prompt_tokens": 2825,
+    "total_tokens": 3679,
+    "completion_time": 1.75566936,
+    "completion_tokens_details": {
+      "reasoning_tokens": 256
+    },
+    "prompt_time": 0.148026976,
+    "prompt_tokens_details": null,
+    "queue_time": 0.159626435,
+    "total_time": 1.9036963359999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hd4hm8e8wvrgk2bc2vwm5c",
+    "debug": null,
+    "seed": 417000145,
+    "usage": null
+  }
+}

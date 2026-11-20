@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-d6b94aca-6bc9-4afc-8cae-d4ebc0f0a850",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Output will go up\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The increase in output will be more than the increase in government expenditure, but less than it would have been in a closed economy\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Part of the extra energy for consumption will go to foreign goods, so it does not increase domestic demand\",\n      \"refs\": [\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The trade deficit starts from a balanced situation in the example\",\n      \"refs\": [\"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, what happens to the Z‑Z curve when government spending increases?\",\n      \"answer\": \"It moves up\",\n      \"distractors\": [\n        \"It shifts left\",\n        \"It moves down\",\n        \"It stays unchanged\"\n      ],\n      \"explanation\": \"The speaker explicitly says, “Well, that moves the Z‑Z curve up.” (Q0000)\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Z‑Z curve response\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"In an open economy, how does the increase in output compare to the increase in government expenditure?\",\n      \"answer\": \"Output rises more than the increase in government spending, but less than it would in a closed economy\",\n      \"distractors\": [\n        \"Output rises less than the increase in government spending\",\n        \"Output rises exactly the same as the increase in government spending\",\n        \"Output does not change at all\"\n      ],\n      \"explanation\": \"The speaker states, “So the increasing output will be more than the increasing government expenditure, but it will be not as much as it would have been had we had a close economy.” (Q0005)\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"Open‑economy multiplier effect\",\n      \"refs\": [\"Q0005\"]\n    },\n    {\n      \"question\": \"Why does the extra output in an open economy not fully return to domestic production?\",\n      \"answer\": \"Because part of the extra consumption goes to foreign goods\",\n      \"distractors\": [\n        \"Because taxes increase proportionally\",\n        \"Because the government reduces spending elsewhere\",\n        \"Because domestic firms become less efficient\"\n      ],\n      \"explanation\": \"The speaker explains, “It’s because part of that extra energy, the amount for consumption, will go to foreign goods.” (Q0010)\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Leakage to foreign sector\",\n      \"refs\": [\"Q0010\"]\n    },\n    {\n      \"question\": \"What is the initial condition of the trade balance in the example discussed?\",\n      \"answer\": \"It starts balanced\",\n      \"distractors\": [\n        \"It starts with a large surplus\",\n        \"It starts with a large deficit\",\n        \"It starts with a slight surplus\"\n      ],\n      \"explanation\": \"The speaker notes, “the trade deficit, in this particular example, we start with a situation where the trade was balanced.” (Q0012)\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Trade balance baseline\",\n      \"refs\": [\"Q0012\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? The excerpts discuss output, government expenditure, open vs closed economy. Could extract fact: output goes up, multiplier effect, less than closed economy. Create rows for facts. Item label maybe \"item1\". Provide rows for fact_text. Use primary excerpts.\n\nWe'll create facts category rows.\n\nRow1: fact_text \"Output will go up\" from Q0001. availability SOURCE_SUPPORTED? but ASR speech, exact code unavailable but text is present, so SOURCE_SUPPORTED.\n\nbasis explicit.\n\nliteral_kind verbal.\n\ninstructional_role null.\n\nrelated_refs empty.\n\nelement 0 part value.\n\nSimilarly other facts.\n\nCreate maybe three rows.\n\nAlso abstentions none.\n\nQuiz: need 4 questions but maybe limited. We can craft 3? Need four distinct. Might manage.\n\nQuestions about: 1) What happens to Z-Z curve? 2) How does output change relative to government expenditure in open economy? 3) Why does output increase less than in closed economy? 4) What happens to trade deficit initially? Use excerpts.\n\nProvide distractors.\n\nReturn JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794769674,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_245acb052a",
+  "usage": {
+    "completion_tokens": 1273,
+    "prompt_tokens": 2479,
+    "total_tokens": 3752,
+    "completion_time": 2.681734647,
+    "completion_tokens_details": {
+      "reasoning_tokens": 224
+    },
+    "prompt_time": 0.103782524,
+    "prompt_tokens_details": null,
+    "queue_time": 0.059410315,
+    "total_time": 2.785517171
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g9qn12e55vavpe9fbcr54g",
+    "debug": null,
+    "seed": 1921101019,
+    "usage": null
+  }
+}

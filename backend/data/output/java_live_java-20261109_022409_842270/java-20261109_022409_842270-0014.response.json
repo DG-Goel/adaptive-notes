@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-cd70c06d-f60f-4ed3-9249-c24802b8c665",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"class\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a container for one or more related functions; it is used to organize code similar to sections in a supermarket that contain related products\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"method\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a function that is part of a class\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"access modifier\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a special keyword that determines if other classes and methods in the program can access these classes and methods (e.g., public, private)\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"Pascal naming convention\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a convention for naming classes where the first letter of every word is uppercase\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"camel naming convention\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a convention for naming methods where the first letter of the first word is lowercase and the first letter of each subsequent word is uppercase\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"In Java the left brace is placed on the same line as the function definition.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Every Java program must have at least one function called main, which is the entry point.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Functions in Java must belong to a class; they cannot exist independently.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Every Java program must have at least one class that contains the main function.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The public access modifier is most commonly used for class and method declarations in Java.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts: concepts? definitions? facts? explanations etc.\n\nWe can extract definitions: e.g., definition of class, method, access modifier, naming conventions.\n\nCreate definitions entries.\n\nAlso facts: Java puts left brace on same line, main is entry point, every program has at least one class, etc.\n\nProceed.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191206,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e5b4e54fbb",
+  "usage": {
+    "completion_tokens": 774,
+    "prompt_tokens": 3131,
+    "total_tokens": 3905,
+    "completion_time": 1.606301015,
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_time": 0.125017123,
+    "prompt_tokens_details": null,
+    "queue_time": 0.389779604,
+    "total_time": 1.731318138
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z228che3h9h08hx6aqytqt",
+    "debug": null,
+    "seed": 1257301996,
+    "usage": null
+  }
+}

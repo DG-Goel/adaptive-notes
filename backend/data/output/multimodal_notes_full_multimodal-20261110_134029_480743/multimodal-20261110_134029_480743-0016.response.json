@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-8742a413-5dd5-49fe-ab98-ee92442ce46a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"Java Development Kit is available for Linux, macOS, and Windows.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"On a Mac, you can download the DMG file.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"You must accept the license agreement before proceeding.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"Installation steps: open the DMG, double‑click the package, follow the installation wizard, click Continue, enter your computer's password, finish, and then move the installer to the trash.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\"C1\", \"C2\", \"C3\", \"C4\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"instructional\"]\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce typed_claim_refs_v1 with claims from excerpts. Likely facts about JDK download on Mac, license agreement, installation steps. Create claims.\n\nExtract primary excerpts.\n\nCreate claims:\nC1: \"Java Development Kit is available for Linux, macOS, and Windows.\" basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, refs Q0000.\n\nC2: \"On a Mac, you can download the DMG file.\" from Q0001.\n\nC3: \"You must accept the license agreement before proceeding.\" from Q0002.\n\nC4: \"Installation steps: open DMG, double-click package, follow wizard, click continue, enter password, finish, then move to trash.\" from Q0003.\n\nNow categories: facts maybe. Put in facts array with fact_text claim IDs.\n\nNo definitions, etc.\n\nAbstentions none.\n\nProvide schema.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318357,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 645,
+    "prompt_tokens": 2955,
+    "total_tokens": 3600,
+    "completion_time": 1.364556826,
+    "completion_tokens_details": {
+      "reasoning_tokens": 183
+    },
+    "prompt_time": 0.222312708,
+    "prompt_tokens_details": null,
+    "queue_time": 0.357588946,
+    "total_time": 1.5868695339999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72vajx5e0mvryevdqgz5dw5",
+    "debug": null,
+    "seed": 959284691,
+    "usage": null
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-5b745e4f-aaa8-48a9-bd3f-10db534d55ce",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00001\", \"S00002\", \"S00003\", \"S00004\", \"S00005\", \"S00006\", \"S00007\", \"S00008\"],\n      \"reason\": \"No conceptual teaching content present in the provided excerpts.\"\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00001\", \"S00002\", \"S00003\", \"S00004\", \"S00005\", \"S00006\", \"S00007\", \"S00008\"],\n      \"reason\": \"No definitions are provided in the excerpts.\"\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00001\", \"S00002\", \"S00003\", \"S00004\", \"S00005\", \"S00006\", \"S00007\", \"S00008\"],\n      \"reason\": \"No explanatory material is present.\"\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00001\", \"S00002\", \"S00003\", \"S00004\", \"S00005\", \"S00006\", \"S00007\", \"S00008\"],\n      \"reason\": \"No examples are provided.\"\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00001\", \"S00002\", \"S00003\", \"S00004\", \"S00005\", \"S00006\", \"S00007\", \"S00008\"],\n      \"reason\": \"No factual statements about Java concepts are included.\"\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00001\", \"S00002\", \"S00003\", \"S00004\", \"S00005\", \"S00006\", \"S00007\", \"S00008\"],\n      \"reason\": \"No formulas are present.\"\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00001\", \"S00002\", \"S00003\", \"S00004\", \"S00005\", \"S00006\", \"S00007\", \"S00008\"],\n      \"reason\": \"No procedural steps are provided.\"\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00001\", \"S00002\", \"S00003\", \"S00004\", \"S00005\", \"S00006\", \"S00007\", \"S00008\"],\n      \"reason\": \"No relational information is included.\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with empty educational content since only intro statements. Likely no claims. So all categories empty, claims empty, abstentions maybe for missing content? We can abstain for each category due to source missing. Provide abstentions for each category with availability SOURCE_MISSING and source_ids list. Use primary sources. Provide reason \"No educational content provided\".",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317368,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "usage": {
+    "completion_tokens": 780,
+    "prompt_tokens": 3116,
+    "total_tokens": 3896,
+    "completion_time": 1.647378665,
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_time": 0.135376129,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "queue_time": 0.168128089,
+    "total_time": 1.7827547940000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72tcdgee75805t3k2066yxz",
+    "debug": null,
+    "seed": 2017352564,
+    "usage": null
+  }
+}

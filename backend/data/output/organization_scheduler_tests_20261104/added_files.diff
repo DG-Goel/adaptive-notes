@@ -1,0 +1,1198 @@
+--- /dev/null
++++ app/extraction/organization_scheduler.py
+@@ -0,0 +1,485 @@
++"""Opt-in organization admission. No network, environment loading or Stage A/B hooks.
++
++Evidence is a trusted operator attestation, not a provider-authenticated signature.
++SQLite partitions claims/usage by verified organization; it cannot see other callers.
++"""
++from contextlib import contextmanager
++from hashlib import sha256
++import json
++import math
++import os
++from pathlib import Path
++import sqlite3
++import time
++from typing import Annotated, Literal
++
++from pydantic import BaseModel, ConfigDict, Field
++
++
++MODEL = "openai/gpt-oss-120b"
++METRICS = ("RPM", "RPD", "TPM", "TPD")
++Text = Annotated[str, Field(pattern=r"\S")]
++Hash = Annotated[str, Field(pattern=r"^[0-9a-f]{64}$")]
++Stamp = Annotated[float, Field(allow_inf_nan=False)]
++
++
++class SchedulerHold(RuntimeError):
++    retryable = False
++
++
++class Frozen(BaseModel):
++    model_config = ConfigDict(frozen=True, extra="forbid", strict=True, hide_input_in_errors=True)
++
++
++class ExtractionConfiguration(Frozen):
++    provider: Literal["Groq"] = "Groq"
++    model: Literal["openai/gpt-oss-120b"] = MODEL
++    temperature: Literal[0] = 0
++    response_format: Literal["json_object"] = "json_object"
++    strict_evidence: Literal[True] = True
++    fallback: Literal[False] = False
++    # Existing extractor/budget defaults, not the new aggregate admission margin.
++    tokens_per_minute: Literal[8000] = 8000
++    preferred_output_tokens: Literal[4000] = 4000
++    min_output_tokens: Literal[500] = 500
++    max_retries: int = Field(default=2, ge=0, le=3)
++
++
++SHARED_CONFIGURATION = ExtractionConfiguration()
++
++
++class Identity(Frozen):
++    slot: int = Field(ge=1, le=5)
++    organization: Text
++    project: Text
++    credential_id: Text
++    credential_sha256: Hash
++    verified_by: Text
++    ownership_evidence: Text
++    verified_at: Stamp
++    expires_at: Stamp
++
++
++class Organizations:
++    """Runtime secrets are separate from serializable identity and status records."""
++    def __init__(self, identities, credentials, enabled):
++        self.identities = tuple(identities)
++        self.enabled = tuple(enabled)
++        self.__credentials = dict(credentials)
++        slots = [i.slot for i in self.identities]
++        orgs = [i.organization.strip() for i in self.identities]
++        fingerprints = [i.credential_sha256 for i in self.identities]
++        if (len(slots) != len(set(slots)) or len(orgs) != len(set(orgs))
++                or len(fingerprints) != len(set(fingerprints))):
++            raise SchedulerHold("Duplicate organization, credential or slot")
++        if not self.enabled or len(set(self.enabled)) != len(self.enabled):
++            raise SchedulerHold("At least one distinct enabled slot required")
++        if any(s not in slots for s in self.enabled):
++            raise SchedulerHold("Enabled slot has no verified identity")
++        for identity in self.identities:
++            if identity.slot in self.enabled:
++                self.key(identity)
++
++    def __repr__(self):
++        return f"Organizations(enabled_slots={self.enabled!r})"
++
++    def key(self, identity):
++        key = self.__credentials.get(identity.slot)
++        if not isinstance(key, str) or not key.strip() or sha256(key.encode()).hexdigest() != identity.credential_sha256:
++            raise SchedulerHold("Credential does not match verified identity")
++        return key
++
++    def check_metadata(self, value):
++        text = json.dumps(value, default=str)
++        if any(key and key in text for key in self.__credentials.values()):
++            raise SchedulerHold("Credential material found in metadata")
++
++
++def load_organizations(identities, environ=None):
++    """Read already-loaded environment. Never reads/writes .env or uses legacy keys."""
++    environ = os.environ if environ is None else environ
++    enabled, keys = [], {}
++    for slot in range(1, 6):
++        prefix = f"GROQ_ORG_{slot}_"
++        flag = environ.get(prefix + "ENABLED", "false").strip().lower()
++        if flag not in ("true", "false"):
++            raise SchedulerHold("Organization ENABLED must be true or false")
++        if flag == "true":
++            enabled.append(slot)
++            keys[slot] = environ.get(prefix + "API_KEY")
++            matches = [i for i in identities if i.slot == slot]
++            if len(matches) != 1 or environ.get(prefix + "ID") != matches[0].organization:
++                raise SchedulerHold("Organization ID does not match verified inventory")
++    return Organizations(identities, keys, enabled)
++
++
++class QuotaWindow(Frozen):
++    scope: Literal["organization", "project"]
++    metric: Literal["RPM", "RPD", "TPM", "TPD", "ITPM", "OTPM"]
++    limit: int = Field(gt=0)
++    used: int = Field(ge=0)
++    outstanding: int = Field(ge=0)
++    data_as_of: Stamp
++    evidence: Text
++
++
++class VerifiedAdmission(Frozen):
++    organization: Text
++    project: Text
++    credential_id: Text
++    credential_sha256: Hash
++    request_id: Text
++    request_sha256: Hash
++    configuration_sha256: Hash
++    state: Literal["quota_verified", "quota_estimated", "quota_unknown", "quota_exhausted"]
++    authorization: Text
++    verified_by: Text
++    inventory_evidence: Text
++    complete_limit_inventory: Literal[True]
++    complete_usage_inventory: Literal[True]
++    project_limits_apply: bool
++    organization_split_metrics: tuple[Literal["ITPM", "OTPM"], ...] = ()
++    project_split_metrics: tuple[Literal["ITPM", "OTPM"], ...] = ()
++    traffic: Literal["controlled", "accounted", "unknown"]
++    coordination_evidence: Text
++    verified_at: Stamp
++    control_until: Stamp
++    windows: tuple[QuotaWindow, ...]
++
++    def check(self, identity, request_id, request_hash, config_hash, now):
++        if self.state != "quota_verified" or self.traffic == "unknown":
++            raise SchedulerHold("Unverified quota is non-dispatchable")
++        if any(getattr(self, f) != getattr(identity, f) for f in
++               ("organization", "project", "credential_id", "credential_sha256")):
++            raise SchedulerHold("Admission identity mismatch")
++        if (self.request_id, self.request_sha256, self.configuration_sha256) != (request_id, request_hash, config_hash):
++            raise SchedulerHold("Admission request/configuration mismatch")
++        if not identity.verified_at <= now < identity.expires_at:
++            raise SchedulerHold("Identity review expired or future-dated")
++        if not 0 <= now - self.verified_at <= 15 or self.control_until < now + 90:
++            raise SchedulerHold("Stale admission or insufficient traffic-control duration")
++        expected = {("organization", m) for m in METRICS}
++        if self.project_limits_apply:
++            expected.update(("project", m) for m in METRICS)
++        elif self.project_split_metrics:
++            raise SchedulerHold("Contradictory project applicability")
++        for scope, metrics in (("organization", self.organization_split_metrics), ("project", self.project_split_metrics)):
++            if len(metrics) != len(set(metrics)):
++                raise SchedulerHold("Duplicate split metric")
++            expected.update((scope, m) for m in metrics)
++        rows = {(w.scope, w.metric): w for w in self.windows}
++        if len(rows) != len(self.windows) or set(rows) != expected:
++            raise SchedulerHold("Incomplete or duplicate quota inventory")
++        for w in self.windows:
++            if not 0 <= now - w.data_as_of <= 15 or w.data_as_of > self.verified_at:
++                raise SchedulerHold("Stale or future-dated usage evidence")
++            org = rows.get(("organization", w.metric))
++            if w.scope == "project" and org and w.limit > org.limit:
++                raise SchedulerHold("Project ceiling exceeds organization ceiling")
++
++
++def digest(value):
++    return sha256(json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode()).hexdigest()
++
++
++class OrganizationScheduler:
++    """One active operation globally: success-ordered rotation is deterministic.
++
++    Cross-process callers receive HOLD while busy; no lease expiry releases claims.
++    Each network attempt has its own conservative reservation, including retries.
++    """
++    def __init__(self, path, organizations, configuration=SHARED_CONFIGURATION):
++        self.path = Path(path)
++        self.organizations = organizations
++        self._configuration = configuration
++        from app.extraction.prompts import EXTRACTION_SYSTEM_PROMPT, build_extraction_prompt
++        import inspect
++        self.config_hash = digest({"config": configuration.model_dump(), "system": EXTRACTION_SYSTEM_PROMPT,
++                                   "prompt_builder": inspect.getsource(build_extraction_prompt)})
++        identities = [i.model_dump() for i in organizations.identities]
++        organizations.check_metadata(identities)
++        with self.transaction() as db:
++            db.executescript("""
++                CREATE TABLE IF NOT EXISTS scheduler (id INTEGER PRIMARY KEY CHECK(id=1), cursor INTEGER NOT NULL, active TEXT, config TEXT NOT NULL);
++                CREATE TABLE IF NOT EXISTS organizations (slot INTEGER PRIMARY KEY, org TEXT UNIQUE NOT NULL, project TEXT NOT NULL, identity TEXT NOT NULL, blocked TEXT, cooldown REAL NOT NULL DEFAULT 0);
++                CREATE TABLE IF NOT EXISTS operations (id TEXT PRIMARY KEY, org TEXT NOT NULL, slot INTEGER NOT NULL, request_hash TEXT NOT NULL, state TEXT NOT NULL, admission TEXT NOT NULL, created REAL NOT NULL, completed REAL, validation TEXT NOT NULL);
++                CREATE TABLE IF NOT EXISTS attempts (request_id TEXT NOT NULL, number INTEGER NOT NULL, created REAL NOT NULL, dispatched REAL, completed REAL, input_reserved INTEGER NOT NULL, output_reserved INTEGER NOT NULL, input_actual INTEGER, output_actual INTEGER, reasoning INTEGER, charged INTEGER NOT NULL, http_status INTEGER, finish TEXT, duration REAL, category TEXT, PRIMARY KEY(request_id,number));
++                CREATE TABLE IF NOT EXISTS audit_events (sequence INTEGER PRIMARY KEY, request_id TEXT, org TEXT, created REAL NOT NULL, event TEXT NOT NULL, details TEXT NOT NULL);
++            """)
++        # executescript commits implicitly; initialization bindings use a separate transaction.
++        with self.transaction() as db:
++            db.execute("INSERT OR IGNORE INTO scheduler VALUES(1,1,NULL,?)", (self.config_hash,))
++            if db.execute("SELECT config FROM scheduler WHERE id=1").fetchone()[0] != self.config_hash:
++                raise SchedulerHold("Shared extraction configuration changed; review required")
++            for identity in organizations.identities:
++                row = db.execute("SELECT identity FROM organizations WHERE slot=?", (identity.slot,)).fetchone()
++                encoded = json.dumps(identity.model_dump(), sort_keys=True)
++                if row and row[0] != encoded:
++                    raise SchedulerHold("Registered identity changed; explicit review required")
++                db.execute("INSERT OR IGNORE INTO organizations(slot,org,project,identity) VALUES(?,?,?,?)",
++                           (identity.slot, identity.organization, identity.project, encoded))
++
++    @property
++    def configuration(self):
++        return self._configuration
++
++    def _event(self, db, request_id, org, event, details):
++        self.organizations.check_metadata(details)
++        db.execute("INSERT INTO audit_events(request_id,org,created,event,details) VALUES(?,?,?,?,?)",
++                   (request_id, org, time.time(), event, json.dumps(details, sort_keys=True)))
++
++    def review_organization(self, updated_registry, slot, evidence):
++        """Explicit administrative repair, not an automatic rotation/claim release.
++
++        Caller must independently protect this operator entry point. Existing usage
++        and claims remain charged. Organization/project identity cannot be reassigned.
++        """
++        if not isinstance(evidence, str) or not evidence.strip():
++            raise SchedulerHold("Explicit repair review evidence required")
++        identity = next((i for i in updated_registry.identities if i.slot == slot), None)
++        if identity is None or slot not in updated_registry.enabled:
++            raise SchedulerHold("Reviewed enabled identity required")
++        updated_registry.key(identity)
++        updated_registry.check_metadata([evidence, identity.model_dump()])
++        now = time.time()
++        if not identity.verified_at <= now < identity.expires_at:
++            raise SchedulerHold("Identity review is not current")
++        with self.transaction() as db:
++            if db.execute("SELECT active FROM scheduler WHERE id=1").fetchone()[0] is not None:
++                raise SchedulerHold("Cannot repair while an operation is active")
++            old = db.execute("SELECT * FROM organizations WHERE slot=?", (slot,)).fetchone()
++            if not old or (old["org"], old["project"]) != (identity.organization, identity.project):
++                raise SchedulerHold("Repair cannot reassign organization/project quota")
++            for other in updated_registry.identities:
++                if other.slot != slot:
++                    row = db.execute("SELECT identity FROM organizations WHERE slot=?", (other.slot,)).fetchone()
++                    if not row or row[0] != json.dumps(other.model_dump(), sort_keys=True):
++                        raise SchedulerHold("Repair changed an unrelated identity")
++            db.execute("UPDATE organizations SET identity=?,blocked=NULL WHERE slot=?",
++                       (json.dumps(identity.model_dump(), sort_keys=True), slot))
++            self._event(db, None, identity.organization, "operator_identity_review", {"evidence": evidence})
++        # Cooldown, usage and unresolved claims are deliberately not cleared.
++        self.organizations = updated_registry
++
++    @contextmanager
++    def transaction(self):
++        db = sqlite3.connect(self.path, timeout=15)
++        db.row_factory = sqlite3.Row
++        try:
++            db.execute("PRAGMA synchronous=FULL")
++            db.execute("BEGIN IMMEDIATE")
++            with db:
++                yield db
++        finally:
++            db.close()
++
++    def _capacity(self, db, identity, admission, input_tokens, output_tokens, now):
++        for w in admission.windows:
++            seconds = 86400 if w.metric in ("RPD", "TPD") else 60
++            rows = db.execute("""SELECT a.* FROM attempts a JOIN operations o ON o.id=a.request_id
++                WHERE o.org=? AND (a.completed IS NULL OR a.completed>?)""",
++                (identity.organization, now - seconds)).fetchall()
++            if w.metric in ("RPM", "RPD"):
++                local, planned = len(rows), 1
++            elif w.metric == "ITPM":
++                local = sum(r["input_actual"] if r["input_actual"] is not None else r["input_reserved"] for r in rows)
++                planned = input_tokens
++            elif w.metric == "OTPM":
++                local = sum(r["output_actual"] if r["output_actual"] is not None else r["output_reserved"] for r in rows)
++                planned = output_tokens
++            else:
++                local, planned = sum(r["charged"] for r in rows), input_tokens + output_tokens
++            if w.used + w.outstanding + local + planned > w.limit * 70 // 100:
++                raise SchedulerHold("quota_exhausted: insufficient aggregate headroom")
++
++    def claim(self, request_id, request_hash, input_tokens, output_tokens, admissions):
++        if not isinstance(request_id, str) or not request_id.strip():
++            raise SchedulerHold("Unique request ID required")
++        if any(type(n) is not int or n <= 0 for n in (input_tokens, output_tokens)):
++            raise SchedulerHold("Positive token reservation required")
++        self.organizations.check_metadata([request_id, request_hash])
++        for a in admissions.values():
++            self.organizations.check_metadata(a.model_dump())
++        with self.transaction() as db:
++            if db.execute("SELECT 1 FROM operations WHERE id=?", (request_id,)).fetchone():
++                raise SchedulerHold("Request already claimed; cannot redispatch")
++            state = db.execute("SELECT * FROM scheduler WHERE id=1").fetchone()
++            if state["active"] is not None:
++                raise SchedulerHold("Another operation is active; crashed claims require review")
++            now = time.time()
++            identities = {i.slot: i for i in self.organizations.identities}
++            for offset in range(5):
++                slot = (state["cursor"] - 1 + offset) % 5 + 1
++                if slot not in self.organizations.enabled:
++                    continue
++                identity = identities[slot]
++                eligibility = db.execute("SELECT * FROM organizations WHERE slot=?", (slot,)).fetchone()
++                if eligibility["identity"] != json.dumps(identity.model_dump(), sort_keys=True):
++                    raise SchedulerHold("Worker identity is stale after operator review")
++                if eligibility["blocked"] or eligibility["cooldown"] > now:
++                    continue
++                admission = admissions.get(identity.organization)
++                if admission is None:
++                    continue
++                try:
++                    admission.check(identity, request_id, request_hash, self.config_hash, now)
++                    self.organizations.key(identity)
++                    self._capacity(db, identity, admission, input_tokens, output_tokens, now)
++                except SchedulerHold:
++                    continue
++                # Keep evidence and fingerprint binding, but no secret material.
++                db.execute("INSERT INTO operations VALUES(?,?,?,?,? ,?,?,NULL,?)",
++                           (request_id, identity.organization, slot, request_hash, "claimed",
++                            admission.model_dump_json(), now, "not_run"))
++                db.execute("UPDATE scheduler SET active=? WHERE id=1", (request_id,))
++                self._reserve(db, request_id, 1, input_tokens, output_tokens, now)
++                self._event(db, request_id, identity.organization, "claimed", {
++                    "model": MODEL, "selection_reason": "success_ordered_round_robin_first_verified_eligible",
++                    "quota_before": "quota_verified", "quota_after": "reservation_charged",
++                    "estimated_input": input_tokens, "reserved_completion": output_tokens,
++                    "configuration_sha256": self.config_hash})
++                return identity, admission
++            raise SchedulerHold("No eligible organization with verified admission and headroom")
++
++    @staticmethod
++    def _reserve(db, request_id, number, input_tokens, output_tokens, now):
++        db.execute("""INSERT INTO attempts(request_id,number,created,input_reserved,output_reserved,charged)
++                      VALUES(?,?,?,?,?,?)""", (request_id, number, now, input_tokens, output_tokens, input_tokens + output_tokens))
++
++    def retry(self, request_id, identity, admission, input_tokens, output_tokens):
++        with self.transaction() as db:
++            op = db.execute("SELECT * FROM operations WHERE id=?", (request_id,)).fetchone()
++            if not op or op["state"] != "claimed" or op["org"] != identity.organization:
++                raise SchedulerHold("Retry is not bound to the active operation")
++            n = db.execute("SELECT count(*) FROM attempts WHERE request_id=?", (request_id,)).fetchone()[0]
++            if n > self.configuration.max_retries:
++                raise SchedulerHold("Retry budget exhausted")
++            now = time.time()
++            admission.check(identity, request_id, op["request_hash"], self.config_hash, now)
++            self._capacity(db, identity, admission, input_tokens, output_tokens, now)
++            self._reserve(db, request_id, n + 1, input_tokens, output_tokens, now)
++            self._event(db, request_id, identity.organization, "retry_reserved", {"retry_count": n, "same_organization": True})
++
++    def check_dispatch(self, request_id, identity, admission):
++        with self.transaction() as db:
++            op = db.execute("SELECT * FROM operations WHERE id=?", (request_id,)).fetchone()
++            org = db.execute("SELECT * FROM organizations WHERE slot=?", (identity.slot,)).fetchone()
++            active = db.execute("SELECT active FROM scheduler WHERE id=1").fetchone()[0]
++            if (not op or op["state"] != "claimed" or active != request_id or op["org"] != identity.organization
++                    or not org or org["blocked"] or org["cooldown"] > time.time()
++                    or org["identity"] != json.dumps(identity.model_dump(), sort_keys=True)):
++                raise SchedulerHold("Dispatch claim or organization eligibility changed")
++            admission.check(identity, request_id, op["request_hash"], self.config_hash, time.time())
++            self.organizations.key(identity)
++            attempt = db.execute("SELECT * FROM attempts WHERE request_id=? ORDER BY number DESC LIMIT 1", (request_id,)).fetchone()
++            if attempt["dispatched"] is not None:
++                raise SchedulerHold("Attempt already dispatched; cannot send twice")
++            db.execute("UPDATE attempts SET dispatched=? WHERE request_id=? AND number=?", (time.time(), request_id, attempt["number"]))
++            self._event(db, request_id, identity.organization, "dispatch_attempt", {"attempt": attempt["number"]})
++
++    def record_attempt(self, request_id, *, usage=None, http_status=None, finish=None, duration=0,
++                       category=None, uncertain=False, diagnostics=None):
++        usage = usage or {}
++        def count(name):
++            n = usage.get(name)
++            return n if type(n) is int and n >= 0 else None
++        inp, out, total = (count(k) for k in ("prompt_tokens", "completion_tokens", "total_tokens"))
++        details = usage.get("completion_tokens_details") or {}
++        reasoning = details.get("reasoning_tokens") if isinstance(details, dict) else None
++        reasoning = reasoning if type(reasoning) is int and reasoning >= 0 else None
++        # Reasoning is a subset of completion tokens, not an additional charge.
++        if reasoning is not None and (out is None or reasoning > out):
++            inp = out = total = None
++        if inp is None or out is None or (total is not None and total < inp + out):
++            inp = out = total = None
++        self.organizations.check_metadata([finish, category])
++        with self.transaction() as db:
++            row = db.execute("SELECT * FROM attempts WHERE request_id=? ORDER BY number DESC LIMIT 1", (request_id,)).fetchone()
++            op = db.execute("SELECT * FROM operations WHERE id=?", (request_id,)).fetchone()
++            if not row or not op or op["state"] != "claimed" or row["category"] is not None:
++                raise SchedulerHold("Attempt already recorded or operation is not active")
++            charged = max(inp + out, total or 0) if inp is not None else row["charged"]
++            # Any unexplained total excess is also charged to input for split limits.
++            if inp is not None:
++                inp += charged - inp - out
++            db.execute("""UPDATE attempts SET completed=?,input_actual=?,output_actual=?,reasoning=?,charged=?,
++                http_status=?,finish=?,duration=?,category=? WHERE request_id=? AND number=?""",
++                (None if uncertain else time.time(), inp, out, reasoning, charged, http_status, finish, duration,
++                 category or "response", request_id, row["number"]))
++            if diagnostics:
++                self._event(db, request_id, op["org"], "provider_error", diagnostics)
++
++    def finish(self, request_id, outcome, *, status=None, retry_after=None):
++        if outcome not in ("success", "failed", "uncertain", "validation_failed"):
++            raise SchedulerHold("Invalid operation outcome")
++        with self.transaction() as db:
++            row = db.execute("SELECT * FROM operations WHERE id=?", (request_id,)).fetchone()
++            if not row or row["state"] != "claimed":
++                raise SchedulerHold("Operation is not active")
++            latest = db.execute("SELECT * FROM attempts WHERE request_id=? ORDER BY number DESC LIMIT 1", (request_id,)).fetchone()
++            if outcome == "success" and (latest["category"] != "response" or latest["completed"] is None):
++                raise SchedulerHold("Unresolved attempt cannot be successful")
++            if status in (401, 403):
++                db.execute("UPDATE organizations SET blocked=? WHERE slot=?", (str(status), row["slot"]))
++            if status == 429:
++                delay = retry_after if isinstance(retry_after, (int, float)) and math.isfinite(retry_after) else 60
++                db.execute("UPDATE organizations SET cooldown=? WHERE slot=?", (time.time() + max(1, delay), row["slot"]))
++            db.execute("UPDATE operations SET state=?,completed=?,validation=? WHERE id=?",
++                       (outcome, time.time(), "passed_mechanical_only" if outcome == "success" else outcome, request_id))
++            db.execute("UPDATE scheduler SET active=NULL,cursor=CASE WHEN ?='success' THEN ? ELSE cursor END WHERE id=1",
++                       (outcome, row["slot"] % 5 + 1))
++            self._event(db, request_id, row["org"], "completed", {
++                "model": MODEL, "extraction_outcome": outcome,
++                "validation_outcome": "passed_mechanical_only" if outcome == "success" else "not_passed",
++                "semantic_entailment_verified": False,
++                "quota_after": "rate_limited" if status == 429 else "quota_unknown",
++                "retry_count": latest["number"] - 1})
++
++    def status(self, admissions=None, input_tokens=0, output_tokens=0):
++        """Secret-free historical status; never represents old observations as current headroom."""
++        with self.transaction() as db:
++            state = dict(db.execute("SELECT * FROM scheduler WHERE id=1").fetchone())
++            slots = []
++            for slot in range(1, 6):
++                org = db.execute("SELECT * FROM organizations WHERE slot=?", (slot,)).fetchone()
++                last = db.execute("SELECT * FROM operations WHERE slot=? ORDER BY created DESC LIMIT 1", (slot,)).fetchone()
++                attempts = [dict(r) for r in db.execute("SELECT a.* FROM attempts a JOIN operations o ON o.id=a.request_id WHERE o.slot=?", (slot,))]
++                admission = json.loads(last["admission"]) if last else None
++                current = (admissions or {}).get(org["org"]) if org else None
++                quota_state = "quota_unknown"
++                if current and org:
++                    quota_state = current.state
++                    try:
++                        identity = Identity.model_validate_json(org["identity"])
++                        current.check(identity, current.request_id, current.request_sha256, self.config_hash, time.time())
++                        self._capacity(db, identity, current, input_tokens, output_tokens, time.time())
++                    except SchedulerHold as exc:
++                        quota_state = "quota_exhausted" if str(exc).startswith("quota_exhausted") else (
++                            current.state if current.state in ("quota_estimated", "quota_exhausted") else "quota_unknown")
++                    if db.execute("SELECT 1 FROM operations WHERE id=?", (current.request_id,)).fetchone():
++                        quota_state = "quota_unknown"
++                rate_limited = bool(org and org["cooldown"] > time.time())
++                if rate_limited:
++                    quota_state = "quota_exhausted"
++                slots.append({"slot": slot, "enabled": slot in self.organizations.enabled,
++                              "organization": org["org"] if org else None,
++                              "identity_verified": org is not None and json.loads(org["identity"])["expires_at"] > time.time(),
++                              "model_access": org["blocked"] if org and org["blocked"] else "not_blocked_not_proven",
++                              "cooldown_until": org["cooldown"] if org else None,
++                              "eligibility": "rate_limited" if rate_limited else ("blocked" if org and org["blocked"] else "requires_admission"),
++                              "quota_state": quota_state, "last_admission_state": admission["state"] if admission else None,
++                              "budgets": [{"scope": w["scope"], "metric": w["metric"], "limit": w["limit"], "internal": w["limit"] * 70 // 100} for w in admission["windows"]] if admission else [],
++                              "last_outcome": last["state"] if last else None, "attempts": attempts,
++                              "tracked_usage": {"minute_tokens": sum(a["charged"] for a in attempts if a["completed"] is None or a["completed"] > time.time() - 60),
++                                                "daily_tokens": sum(a["charged"] for a in attempts if a["completed"] is None or a["completed"] > time.time() - 86400)},
++                              "outstanding_reservations": sum(a["charged"] for a in attempts if a["completed"] is None)})
++            next_org = None
++            for offset in range(5):
++                slot = slots[(state["cursor"] - 1 + offset) % 5]
++                if (state["active"] is None and slot["enabled"] and slot["quota_state"] == "quota_verified"
++                        and slot["model_access"] == "not_blocked_not_proven" and slot["cooldown_until"] <= time.time()):
++                    next_org = slot["organization"]
++                    break
++            return {"model": MODEL, "cursor": state["cursor"], "active_request": state["active"],
++                    "next_eligible_organization": next_org, "eligibility_note": "Snapshot only; claim rechecks admission atomically",
++                    "slots": slots}
+--- /dev/null
++++ app/extraction/organization_extraction.py
+@@ -0,0 +1,151 @@
++"""Opt-in chunk operation; deliberately not installed in production or Stage A/B.
++
++Reuses the existing prompt, budget, response guard, strict parser and classifier.
++An operation ID is durable. All attempts stay on the claimed organization.
++"""
++from types import SimpleNamespace
++import json
++import time
++
++from app.extraction.extractor import KnowledgeExtractor
++from app.extraction.llm_provider import GroqProvider, GroqProviderError, LLMProvider
++from app.extraction.prompts import EXTRACTION_SYSTEM_PROMPT, build_extraction_prompt
++from app.extraction.token_budget import TokenBudgetManager
++from app.extraction.organization_scheduler import MODEL, SchedulerHold, digest
++
++
++def prepare_request(chunk, configuration):
++    prompt = build_extraction_prompt(chunk.text_content, chunk.chunk_id, allowed_source_ids=chunk.source_units)
++    budget = TokenBudgetManager(tokens_per_minute=configuration.tokens_per_minute).calculate_budget(
++        prompt, system_text=EXTRACTION_SYSTEM_PROMPT,
++        min_output_tokens=configuration.min_output_tokens,
++        preferred_output_tokens=configuration.preferred_output_tokens)
++    if not budget.is_safe:
++        raise SchedulerHold("Existing extraction budget rejects this chunk")
++    payload = {"model": configuration.model,
++               "messages": [{"role": "system", "content": EXTRACTION_SYSTEM_PROMPT},
++                            {"role": "user", "content": prompt}],
++               "temperature": configuration.temperature, "max_tokens": budget.max_output_tokens,
++               "response_format": {"type": configuration.response_format}}
++    return payload, budget
++
++
++class _BoundProvider(LLMProvider):
++    def __init__(self, scheduler, identity, admission, request_id, payload, budget, transport):
++        self.scheduler, self.identity, self.admission = scheduler, identity, admission
++        self.request_id, self.payload, self.budget = request_id, payload, budget
++        self.transport = transport
++        self.tokens_per_minute = scheduler.configuration.tokens_per_minute
++        self.called = False
++        # Reuse classification and response validation without constructing legacy clients/pools.
++        self.guard = GroqProvider.__new__(GroqProvider)
++        self.guard.api_key = scheduler.organizations.key(identity)
++        self.guard.key_pool = SimpleNamespace(credentials=[SimpleNamespace(api_key=scheduler.organizations.key(i))
++                for i in scheduler.organizations.identities if i.slot in scheduler.organizations.enabled])
++
++    def generate(self, prompt, system=None, temperature=0.0, max_tokens=4000):
++        actual = {"model": MODEL, "messages": [{"role": "system", "content": system}, {"role": "user", "content": prompt}],
++                  "temperature": temperature, "max_tokens": max_tokens, "response_format": {"type": "json_object"}}
++        if self.called or actual != self.payload:
++            raise SchedulerHold("Bound operation already used or request settings changed")
++        self.called = True
++        from groq import Groq
++        import httpx
++        # No SDK retries, environment proxies, credential pools or automatic redirects.
++        client = Groq(api_key=self.guard.api_key, max_retries=0,
++                      http_client=httpx.Client(transport=self.transport or httpx.HTTPTransport(retries=0, trust_env=False),
++                                              timeout=90, trust_env=False, follow_redirects=False))
++        try:
++            for attempt in range(self.scheduler.configuration.max_retries + 1):
++                if attempt:
++                    self.scheduler.retry(self.request_id, self.identity, self.admission,
++                                         self.budget.input_tokens, self.budget.max_output_tokens)
++                # Revalidate immediately before every physical dispatch, including retries.
++                self.scheduler.check_dispatch(self.request_id, self.identity, self.admission)
++                start = time.monotonic()
++                try:
++                    raw_response = client.chat.completions.with_raw_response.create(**self.payload)
++                    response = raw_response.parse()
++                except Exception as exc:
++                    failure = self.guard._classify_error(exc)
++                    uncertain = failure.category in ("transient_network", "transient_server", "unknown")
++                    self.scheduler.record_attempt(self.request_id, http_status=failure.status_code,
++                                                  duration=time.monotonic() - start, category=failure.category,
++                                                  uncertain=uncertain, diagnostics=failure.diagnostics())
++                    can_retry = failure.category in ("transient_network", "transient_server", "transient_request")
++                    if failure.status_code in (400, 401, 403, 429):
++                        can_retry = False
++                    if can_retry and attempt < self.scheduler.configuration.max_retries:
++                        time.sleep(2 ** attempt)
++                        continue
++                    self.scheduler.finish(self.request_id, "uncertain" if uncertain else "failed",
++                                          status=failure.status_code, retry_after=failure.retry_after)
++                    # No outer retry can reinterpret the same operation as a new selection.
++                    raise GroqProviderError(str(failure), category=failure.category, retryable=False,
++                                            status_code=failure.status_code, error_code=failure.error_code,
++                                            retry_after=failure.retry_after, retry_after_header=failure.retry_after_header) from None
++                usage = response.usage.model_dump() if response.usage else {}
++                finish = response.choices[0].finish_reason if response.choices else None
++                # Avoid arbitrary model-generated diagnostic strings in the audit ledger.
++                safe_finish = finish if finish in ("stop", "length", "end_turn", "tool_calls", "content_filter") else "unexpected"
++                self.scheduler.record_attempt(self.request_id, usage=usage, http_status=raw_response.status_code, finish=safe_finish,
++                                              duration=time.monotonic() - start)
++                if response.model != MODEL or len(response.choices) != 1:
++                    raise SchedulerHold("Unexpected model or response choice count")
++                content = self.guard._extract_response_content(response)
++                self.scheduler.organizations.check_metadata(content)
++                # Fail malformed JSON before the legacy parser's diagnostic file writer.
++                def unique(pairs):
++                    result = {}
++                    for key, value in pairs:
++                        if key in result:
++                            raise SchedulerHold("Duplicate JSON field")
++                        result[key] = value
++                    return result
++                def invalid_constant(value):
++                    raise SchedulerHold("Invalid JSON numeric constant")
++                json.loads(content, object_pairs_hook=unique, parse_constant=invalid_constant)
++                return content
++        finally:
++            client.close()
++
++
++def extract_chunk(scheduler, request_id, chunk, source_units, document_id, admissions, *, transport=None):
++    """Explicitly invoked operation. No document loop, recovery, publication or stage hooks.
++
++    transport exists for offline HTTP tests. Production callers must separately authorize
++    execution and provide verified per-organization admissions for this exact request.
++    Returned items pass mechanical evidence only; semantic verification remains downstream.
++    """
++    sources = {}
++    for unit in source_units:
++        if unit.source_id in sources:
++            raise SchedulerHold("Ambiguous canonical source ID")
++        sources[unit.source_id] = unit.text or ""
++    if not chunk.source_units or any(sid not in sources for sid in chunk.source_units):
++        raise SchedulerHold("Chunk references unknown canonical sources")
++    payload, budget = prepare_request(chunk, scheduler.configuration)
++    identity, admission = scheduler.claim(request_id, digest(payload), budget.input_tokens, budget.max_output_tokens, admissions)
++    try:
++        provider = _BoundProvider(scheduler, identity, admission, request_id, payload, budget, transport)
++        extractor = KnowledgeExtractor(provider, verbose=False, strict_evidence=True,
++                                       min_output_tokens=scheduler.configuration.min_output_tokens,
++                                       preferred_output_tokens=scheduler.configuration.preferred_output_tokens)
++        extractor.valid_source_ids = set(sources)
++        extractor._evidence_sources = sources
++        # Existing method performs exact prompt assembly, budget and strict validation.
++        items = extractor._extract_from_chunk(chunk, document_id)
++        if not items:
++            raise SchedulerHold("No validated extraction items; not a successful extraction")
++    except Exception as exc:
++        with scheduler.transaction() as db:
++            op = db.execute("SELECT state FROM operations WHERE id=?", (request_id,)).fetchone()
++            unresolved = db.execute("SELECT 1 FROM attempts WHERE request_id=? AND completed IS NULL AND category IS NOT NULL", (request_id,)).fetchone()
++        if op["state"] == "claimed":
++            scheduler.finish(request_id, "uncertain" if unresolved else "validation_failed")
++        if isinstance(exc, GroqProviderError):
++            raise
++        # Never expose source/model text, credentials or nested SDK exceptions.
++        raise SchedulerHold("Operation failed validation or admission; inspect secret-free audit") from None
++    scheduler.finish(request_id, "success")
++    return items
+--- /dev/null
++++ app/extraction/ORGANIZATION_SCHEDULER.md
+@@ -0,0 +1,75 @@
++# Opt-in five-organization scheduler
++
++Implementation is offline-tested only. Live execution is not authorized. Stage A HOLD, Stage B HOLD, release NO-GO.
++
++## Scope and entry points
++
++`organization_scheduler.py` provides immutable configuration, credential inventory binding, verified admission, durable organization-partitioned claims/usage, and secret-free status/audit records. `organization_extraction.py` provides `prepare_request()` and the explicitly invoked `extract_chunk()` operation. Neither module is imported by an existing production runner or Stage A/B harness. No CLI or background worker starts requests automatically.
++
++The adapter reuses `build_extraction_prompt`, `TokenBudgetManager`, `KnowledgeExtractor._extract_from_chunk`, the strict raw-contract/evidence parser, and `GroqProvider` error classification and response guards. Legacy credential pools, extraction accounting, chunking, splitting, semantic thresholds and the existing 85% token policy are unchanged. This is a per-chunk adapter, not a document orchestrator or note publisher. Existing downstream semantic/structural evaluation remains required. Separate chunk results must not be blindly concatenated into a production knowledge base; normal ID/merge and document accounting require reviewed integration.
++
++## Configuration and organization registration
++
++Load environment using the application's existing explicit dotenv convention if needed. This module does not load or modify `.env`. Its loader has no fallback to GROQ_API_KEY or GROQ_API_KEY_1..5. Configure five slots with placeholders only:
++
++```dotenv
++GROQ_ORG_1_ENABLED=false
++GROQ_ORG_1_ID=<verified-organization-1-id>
++GROQ_ORG_1_API_KEY=<secret-store-value>
++GROQ_ORG_2_ENABLED=false
++GROQ_ORG_2_ID=<verified-organization-2-id>
++GROQ_ORG_2_API_KEY=<secret-store-value>
++GROQ_ORG_3_ENABLED=false
++GROQ_ORG_3_ID=<verified-organization-3-id>
++GROQ_ORG_3_API_KEY=<secret-store-value>
++GROQ_ORG_4_ENABLED=false
++GROQ_ORG_4_ID=<verified-organization-4-id>
++GROQ_ORG_4_API_KEY=<secret-store-value>
++GROQ_ORG_5_ENABLED=false
++GROQ_ORG_5_ID=<verified-organization-5-id>
++GROQ_ORG_5_API_KEY=<secret-store-value>
++```
++
++An enabled slot requires a matching `Identity` from a separately controlled custodian inventory. Each record contains slot, organization, project, credential_id, credential_sha256, verified_by, ownership_evidence, verified_at and expires_at. Timestamps are finite UTC Unix seconds. The custodian must actually verify provider ownership and project membership. Fingerprints bind secret bytes to that reviewed inventory; they do not prove organization ownership. These are operator attestations, not cryptographic signatures or authenticated provider introspection. Protect inventory, admission inputs, process environment and database permissions accordingly.
++
++Pass those records to `load_organizations(identities)`. Duplicate organizations, slots or credential fingerprints are rejected. Keys are retained in private runtime storage, never in SQLite, representations, status or audit output. Enabling a slot without a credential fails closed. Disabled slots are not scheduled. Registration is persisted, and an unexpected identity change on restart fails closed.
++
++One frozen `ExtractionConfiguration` object is shared by every slot. It pins Groq, openai/gpt-oss-120b, temperature 0, json_object, strict_evidence=True, no fallback, and existing output/budget defaults. Bounded transient retries default to two retries (three physical attempts), configurable down to zero and capped at three retries. No model/provider/temperature option varies by organization. The database pins a fingerprint of configuration and prompt construction; an unreviewed change refuses startup. Runtime changes to protected implementations still require deployment review.
++
++## Admission and quota accounting
++
++Create no real admission until separately authorized. `VerifiedAdmission` binds organization, project, credential ID/fingerprint, request ID, exact payload hash, configuration hash, authorization and operator evidence. Four organization windows are mandatory: RPM, RPD, TPM, TPD. Applicable project windows and declared ITPM/OTPM windows are also mandatory. Each row has scope, metric, configured limit, used, outstanding, data_as_of and evidence. Inventory/usage completeness declarations and traffic coordination are required. Duplicate/missing windows, stale/future timestamps, blank evidence and contradictory ceilings fail. Every observation must be at most 15 seconds old, with at least 90 seconds of traffic control remaining; rechecked immediately before dispatch.
++
++`quota_unknown`, `quota_estimated` and `quota_exhausted` never dispatch. Only a valid, current `quota_verified` record permits admission. “Verified” describes the gate's validation of trusted evidence declarations, not an independent provider query. The implementation cannot discover external organization traffic. Unknown traffic is never zero. Configured limits are supplied per organization; there are no assumed Free Tier defaults in admission. Reference ceilings 30/1000/8000/200000 yield internal budgets 21/700/5600/140000, but must be independently established for each organization.
++
++The new aggregate ceiling is exactly `floor(limit * 70 / 100)` for each applicable metric. It does not change the existing extraction budget's 85% policy or reduce/increase its computed output allowance. A request whose unchanged allocation exceeds a 70% ceiling receives HOLD. For example, a 6800-token extraction allocation does not fit a 5600-token organization ceiling. A 5007-token allocation leaves only 593 tokens before other charges under that ceiling.
++
++The same SQLite file coordinates all workers, with distinct organization identities and organization-partitioned claims/usage. It must not be cloned, reset or replaced to bypass history. Admission charges external used + external outstanding + local reservations/usage + the proposed attempt. Overlap is conservatively double-counted. Each retry reserves another estimated input plus full completion allowance. Every actual request counts toward minute/day request limits, including failures. Complete valid reported input/output/total usage reconciles that attempt. Reasoning is recorded as a subset of completion tokens, not added twice. Missing/inconsistent usage keeps the full reservation. Unexplained total-token excess is conservatively charged to input for split accounting.
++
++Uncertain attempts retain their reservations indefinitely, even if a later retry succeeds. Confirmed attempts remain charged for conservative rolling local minute/day windows. These local accounting windows are not a claim about Groq's exact internal limiter/reset algorithm. External evidence must account for that difference.
++
++## Selection, concurrency and failures
++
++There is one globally active operation in a scheduler database. SQLite BEGIN IMMEDIATE serializes admission, and unique operation/attempt keys prevent duplicate claims. Other workers receive HOLD while it is active. This deliberate serialization preserves deterministic rotation after **validated success**, rather than after selection or response arrival. Successful eligible sequence is 1,2,3,4,5,1. Disabled, blocked, cooling or unverified organizations can be skipped for independent requests. Failed operations do not advance the cursor. The same request ID cannot be resubmitted to another organization.
++
++A claim survives process crashes without automatic lease release. A crash can block the scheduler until reviewed recovery is separately implemented/approved. Do not edit or delete the ledger to release it. Individual timeout/server attempts remain charged as uncertain. The pre-send dispatch marker records intent; a crash between that marker and socket dispatch cannot establish whether the provider received the request.
++
++- 401 disables the credential/organization persistently. No same-operation rotation.
++- 403 disables the organization for this fixed model operation pending review.
++- 429 records rate-limited eligibility, respects Retry-After (at least one second, otherwise a conservative 60 seconds), stops the operation and returns retryable=False. Cooldown alone never establishes fresh quota admission.
++- 400/model validation errors stop permanently without identical-request retries.
++- Classified transient network/server/request errors use bounded retries on the same organization, each requiring fresh admission and additional capacity. SDK and transport retries are zero.
++- Unknown errors fail closed. All exhausted/final failures are non-retryable to an outer extractor.
++- Truncation, empty output, malformed/duplicate-key JSON, wrong model and strict source-evidence failures return no items and never count as successful extraction.
++
++`review_organization(updated_registry, slot, evidence)` is an explicit protected operator repair entry point. It requires current reviewed identity, preserves organization/project, all usage, cooldown and claims, and clears only the reviewed authentication/access block. It refuses active operations or unrelated identity changes. Existing workers using stale identity are rejected. It is not an automatic repair or a Stage A authorization mechanism.
++
++## Audit and status
++
++SQLite stores operations, attempts and audit_events with request/organization IDs, pinned model/configuration, selection reason, timestamps, reservations, actual usage/reasoning, dispatch markers, status, finish reason, duration, retries, error classification/sanitized diagnostics and extraction/mechanical-validation outcomes. No keys or Authorization headers are stored. Returned items preserve normal evidence metadata; semantic entailment is explicitly unverified.
++
++`status()` displays all five slots, enabled state, identity expiry, access block, cooldown, configured budgets from historical admission, tracked usage, outstanding reservations and last outcomes. Historical evidence alone never yields current availability. `status(admissions, input_tokens, output_tokens)` can compute a request-specific eligibility snapshot and next candidate, but reserves nothing. Admission is rechecked atomically on claim and before dispatch.
++
++## Remaining boundaries
++
++This library is not permission to invoke its network-capable adapter. No Stage A/B authorization/checkpoint code was changed or bypassed. Integration with those gates, document orchestration, live admission evidence, any live smoke test and production release are separate decisions. There is no automatic recovery, output publication, mock fallback or provider switch. MockTransport is used only by offline tests. Passing tests prove mechanics, not real-model quality, semantic faithfulness, provider ownership or actual quota headroom.
+--- /dev/null
++++ tests/test_organization_scheduler.py
+@@ -0,0 +1,299 @@
++"""Offline admission/SQLite tests; synthetic identities are never operator evidence."""
++from hashlib import sha256
++import json
++import multiprocessing
++import time
++
++import pytest
++from pydantic import ValidationError
++
++from app.extraction.organization_scheduler import (
++    Identity, Organizations, load_organizations, QuotaWindow, VerifiedAdmission,
++    OrganizationScheduler, ExtractionConfiguration, SHARED_CONFIGURATION, SchedulerHold, METRICS,
++)
++
++
++def registry(enabled=(1, 2, 3, 4, 5)):
++    # Fixed validity allows restart and process-contention tests to use identical records.
++    identities = [Identity(slot=s, organization=f"org-{s}", project=f"project-{s}", credential_id=f"inventory-{s}",
++                           credential_sha256=sha256(f"test-secret-{s}".encode()).hexdigest(),
++                           verified_by="fixture", ownership_evidence="synthetic-test-only",
++                           verified_at=0.0, expires_at=4102444800.0) for s in range(1, 6)]
++    return Organizations(identities, {s: f"test-secret-{s}" for s in enabled}, enabled)
++
++
++def approvals(scheduler, request_id="r", request_hash="a" * 64, **changes):
++    now = time.time()
++    limits = dict(RPM=30, RPD=1000, TPM=8000, TPD=200000)
++    result = {}
++    for i in scheduler.organizations.identities:
++        data = dict(organization=i.organization, project=i.project, credential_id=i.credential_id,
++                    credential_sha256=i.credential_sha256, request_id=request_id, request_sha256=request_hash,
++                    configuration_sha256=scheduler.config_hash, state="quota_verified", authorization="fixture-only",
++                    verified_by="fixture", inventory_evidence="fixture-only", complete_limit_inventory=True,
++                    complete_usage_inventory=True, project_limits_apply=False, traffic="controlled",
++                    coordination_evidence="fixture-only", verified_at=now, control_until=now + 200,
++                    windows=tuple(QuotaWindow(scope="organization", metric=m, limit=v, used=0, outstanding=0,
++                                              data_as_of=now, evidence="fixture-only") for m, v in limits.items()))
++        data.update(changes)
++        result[i.organization] = VerifiedAdmission(**data)
++    return result
++
++
++def make(tmp_path, enabled=(1, 2, 3, 4, 5), **config):
++    return OrganizationScheduler(tmp_path / "quota.sqlite", registry(enabled), ExtractionConfiguration(**config))
++
++
++def success(s, request="r", inp=100, out=200):
++    identity, admission = s.claim(request, "a" * 64, inp, out, approvals(s, request))
++    s.record_attempt(request, usage={"prompt_tokens": inp, "completion_tokens": out, "total_tokens": inp + out})
++    s.finish(request, "success")
++    return identity.slot
++
++
++def test_five_organization_order_and_restart(tmp_path):
++    s = make(tmp_path)
++    assert [success(s, f"r-{n}") for n in range(6)] == [1, 2, 3, 4, 5, 1]
++    assert success(make(tmp_path), "restart") == 2
++    assert len(s.status()["slots"]) == 5
++
++
++def test_disabled_slots(tmp_path):
++    s = make(tmp_path, (2, 4))
++    assert [success(s, f"r{n}") for n in range(3)] == [2, 4, 2]
++
++
++@pytest.mark.parametrize("state", ["quota_unknown", "quota_estimated", "quota_exhausted"])
++def test_unverified_never_dispatchable(tmp_path, state):
++    s = make(tmp_path)
++    with pytest.raises(SchedulerHold):
++        s.claim("r", "a" * 64, 100, 200, approvals(s, state=state))
++    assert s.status()["active_request"] is None
++    assert all(i["quota_state"] == "quota_unknown" for i in s.status()["slots"])
++
++
++@pytest.mark.parametrize("field,value", [("traffic", "unknown"), ("request_sha256", "b" * 64),
++    ("configuration_sha256", "b" * 64), ("credential_sha256", "b" * 64),
++    ("project", "wrong"), ("organization", "wrong"), ("credential_id", "wrong"),
++    ("verified_at", 0.0), ("verified_at", 4102444800.0), ("control_until", 0.0)])
++def test_bad_admission_hold(tmp_path, field, value):
++    s = make(tmp_path)
++    with pytest.raises(SchedulerHold):
++        s.claim("r", "a" * 64, 100, 200, approvals(s, **{field: value}))
++
++
++@pytest.mark.parametrize("defect", ["missing_daily", "duplicate", "stale", "future", "project", "split"])
++def test_complete_fresh_inventory(tmp_path, defect):
++    s = make(tmp_path)
++    admissions = approvals(s)
++    for org, a in list(admissions.items()):
++        data = a.model_dump()
++        if defect == "missing_daily":
++            data["windows"] = a.windows[:-1]
++        elif defect == "duplicate":
++            data["windows"] = a.windows + (a.windows[0],)
++        elif defect in ("stale", "future"):
++            row = a.windows[0].model_dump()
++            row["data_as_of"] = time.time() + (-16 if defect == "stale" else 60)
++            data["windows"] = (QuotaWindow(**row),) + a.windows[1:]
++        elif defect == "project":
++            data["project_limits_apply"] = True
++        else:
++            data["organization_split_metrics"] = ("ITPM",)
++        admissions[org] = VerifiedAdmission(**data)
++    with pytest.raises(SchedulerHold):
++        s.claim("r", "a" * 64, 100, 200, admissions)
++
++
++@pytest.mark.parametrize("metric", METRICS)
++def test_70_percent_ceiling_and_outstanding(tmp_path, metric):
++    s = make(tmp_path, (1,))
++    a = approvals(s)["org-1"]
++    rows = []
++    for w in a.windows:
++        row = w.model_dump()
++        if w.metric == metric:
++            row["outstanding"] = w.limit * 70 // 100
++        rows.append(QuotaWindow(**row))
++    a = VerifiedAdmission(**{**a.model_dump(), "windows": tuple(rows)})
++    with pytest.raises(SchedulerHold):
++        s.claim("r", "a" * 64, 100, 200, {"org-1": a})
++
++
++def test_independent_quotas_and_actual_reconciliation(tmp_path):
++    s = make(tmp_path)
++    i, a = s.claim("r", "a" * 64, 1000, 4000, approvals(s))
++    s.record_attempt("r", usage={"prompt_tokens": 100, "completion_tokens": 200,
++                                 "total_tokens": 300, "completion_tokens_details": {"reasoning_tokens": 50}})
++    s.finish("r", "success")
++    row = s.status()["slots"][0]["attempts"][0]
++    assert row["charged"] == 300 and row["reasoning"] == 50
++    assert not s.status()["slots"][1]["attempts"]
++    assert success(s, "next", 1000, 4000) == 2
++    assert s.status()["slots"][0]["budgets"] == [
++        {"scope": "organization", "metric": m, "limit": v, "internal": b}
++        for m, v, b in [("RPM",30,21),("RPD",1000,700),("TPM",8000,5600),("TPD",200000,140000)]]
++
++
++def test_uncertain_usage_never_zero_and_crash_persists(tmp_path):
++    s = make(tmp_path)
++    s.claim("crash", "a" * 64, 1000, 4000, approvals(s, "crash"))
++    restarted = make(tmp_path)
++    assert restarted.status()["slots"][0]["outstanding_reservations"] == 5000
++    with pytest.raises(SchedulerHold):
++        restarted.claim("new", "a" * 64, 1, 1, approvals(s, "new"))
++    with pytest.raises(SchedulerHold, match="already claimed"):
++        restarted.claim("crash", "a" * 64, 1, 1, approvals(s, "crash"))
++
++
++def test_retry_bound_and_reserved_separately(tmp_path):
++    s = make(tmp_path)
++    i, a = s.claim("r", "a" * 64, 100, 200, approvals(s))
++    s.record_attempt("r", uncertain=True, category="transient_network")
++    s.retry("r", i, a, 100, 200)
++    assert s.status()["slots"][0]["outstanding_reservations"] == 600
++    s.record_attempt("r", usage={"prompt_tokens": 50, "completion_tokens": 50}, http_status=200)
++    s.finish("r", "success")
++    assert s.status()["slots"][0]["outstanding_reservations"] == 300
++    with pytest.raises(SchedulerHold):
++        s.claim("r", "a" * 64, 100, 200, approvals(s))
++
++
++@pytest.mark.parametrize("field", ["provider", "model", "temperature", "strict_evidence", "fallback"])
++def test_shared_configuration_rejects_drift(field):
++    with pytest.raises(ValidationError):
++        ExtractionConfiguration(**{field: "wrong"})
++    with pytest.raises(ValidationError):
++        SHARED_CONFIGURATION.model = "wrong"
++
++
++def test_environment_no_legacy_fallback_or_secret_repr():
++    reg = registry()
++    with pytest.raises(SchedulerHold):
++        load_organizations(reg.identities, {"GROQ_API_KEY": "legacy"})
++    env = {"GROQ_ORG_1_ENABLED": "true", "GROQ_ORG_1_ID": "org-1"}
++    with pytest.raises(SchedulerHold):
++        load_organizations(reg.identities, env)
++    env["GROQ_ORG_1_API_KEY"] = "test-secret-1"
++    loaded = load_organizations(reg.identities, env)
++    assert loaded.enabled == (1,) and "test-secret" not in repr(loaded)
++    env["GROQ_ORG_1_ID"] = "wrong"
++    with pytest.raises(SchedulerHold):
++        load_organizations(reg.identities, env)
++
++
++@pytest.mark.parametrize("field,value", [("organization", "org-1"), ("credential_sha256", sha256(b"test-secret-1").hexdigest()), ("slot", 1)])
++def test_duplicate_identity_rejected(field, value):
++    identities = list(registry().identities)
++    identities[1] = Identity(**{**identities[1].model_dump(), field: value})
++    with pytest.raises(SchedulerHold, match="Duplicate"):
++        Organizations(identities, {}, (1,2))
++
++
++def contender(path, queue):
++    s = OrganizationScheduler(path, registry())
++    try:
++        s.claim("contended", "a" * 64, 100, 200, approvals(s, "contended"))
++        queue.put("claimed")
++    except SchedulerHold:
++        queue.put("hold")
++
++
++def test_cross_process_claim_once(tmp_path):
++    make(tmp_path)
++    ctx = multiprocessing.get_context("spawn")
++    queue = ctx.Queue()
++    workers = [ctx.Process(target=contender, args=(str(tmp_path / "quota.sqlite"), queue)) for _ in range(3)]
++    for w in workers:
++        w.start()
++    for w in workers:
++        w.join(20)
++        assert w.exitcode == 0
++    assert sorted(queue.get(timeout=5) for _ in workers) == ["claimed", "hold", "hold"]
++
++
++def test_no_secrets_in_database_or_status(tmp_path, caplog):
++    s = make(tmp_path)
++    success(s)
++    output = json.dumps(s.status()) + caplog.text + (tmp_path / "quota.sqlite").read_bytes().decode("latin1")
++    assert all(f"test-secret-{i}" not in output for i in range(1,6))
++    with pytest.raises(SchedulerHold, match="Credential material"):
++        s.claim("test-secret-1", "a" * 64, 1, 1, approvals(s, "test-secret-1"))
++
++
++def test_current_status_and_configuration_read_only(tmp_path):
++    s = make(tmp_path)
++    status = s.status(approvals(s), 100, 200)
++    assert status["next_eligible_organization"] == "org-1"
++    assert status["slots"][0]["quota_state"] == "quota_verified"
++    assert s.status(approvals(s, state="quota_estimated"))["next_eligible_organization"] is None
++    assert s.status(approvals(s, state="quota_exhausted"))["slots"][0]["quota_state"] == "quota_exhausted"
++    with pytest.raises(AttributeError):
++        s.configuration = ExtractionConfiguration(max_retries=0)
++
++
++def test_repair_requires_review_preserves_usage_and_blocks_stale_worker(tmp_path):
++    s = make(tmp_path)
++    stale = make(tmp_path)
++    s.claim("r", "a" * 64, 100, 200, approvals(s))
++    s.record_attempt("r", http_status=401)
++    s.finish("r", "failed", status=401)
++    identities = list(s.organizations.identities)
++    identities[0] = Identity(**{**identities[0].model_dump(), "credential_sha256": sha256(b"repaired-test-secret").hexdigest()})
++    updated = Organizations(identities, {**{i:f"test-secret-{i}" for i in range(1,6)}, 1:"repaired-test-secret"}, (1,2,3,4,5))
++    with pytest.raises(SchedulerHold):
++        s.review_organization(updated, 1, " ")
++    s.review_organization(updated, 1, "fixture-reviewed-repair")
++    assert s.status()["slots"][0]["model_access"] == "not_blocked_not_proven"
++    assert s.status()["slots"][0]["attempts"][0]["charged"] == 300
++    with pytest.raises(SchedulerHold, match="stale"):
++        stale.claim("new", "a" * 64, 100, 200, approvals(stale, "new"))
++    assert success(s, "repaired") == 1
++
++
++def test_attempt_cannot_be_reconciled_twice(tmp_path):
++    s = make(tmp_path)
++    s.claim("r", "a" * 64, 100, 200, approvals(s))
++    with pytest.raises(SchedulerHold):
++        s.finish("r", "success")
++    s.record_attempt("r", usage={"prompt_tokens":100,"completion_tokens":200})
++    with pytest.raises(SchedulerHold):
++        s.record_attempt("r", usage={"prompt_tokens":0,"completion_tokens":0})
++
++
++@pytest.mark.parametrize("usage", [{}, {"prompt_tokens":True,"completion_tokens":1},
++    {"prompt_tokens":100,"completion_tokens":50,"total_tokens":20},
++    {"prompt_tokens":100,"completion_tokens":50,"completion_tokens_details":{"reasoning_tokens":100}}])
++def test_missing_or_inconsistent_usage_retains_reservation(tmp_path, usage):
++    s = make(tmp_path)
++    s.claim("r", "a" * 64, 100, 200, approvals(s))
++    s.record_attempt("r", usage=usage)
++    assert s.status()["slots"][0]["attempts"][0]["charged"] == 300
++
++
++def test_whitespace_evidence_and_nonfinite_time_rejected():
++    for change in ({"evidence":" "}, {"data_as_of":float("nan")}, {"used":-1}):
++        with pytest.raises(ValidationError):
++            QuotaWindow(**{**dict(scope="organization", metric="TPM", limit=8000, used=0, outstanding=0,
++                                  data_as_of=time.time(), evidence="fixture"), **change})
++
++
++def test_dispatch_claim_prevents_second_send(tmp_path):
++    s = make(tmp_path)
++    identity, admission = s.claim("r", "a" * 64, 100, 200, approvals(s))
++    s.check_dispatch("r", identity, admission)
++    with pytest.raises(SchedulerHold, match="already dispatched"):
++        s.check_dispatch("r", identity, admission)
++    assert s.status()["slots"][0]["attempts"][0]["dispatched"] is not None
++
++
++def test_reservation_blocks_other_process_requests_without_overspend(tmp_path):
++    s = make(tmp_path, (1,))
++    other = make(tmp_path, (1,))
++    s.claim("first", "a" * 64, 1000, 4000, approvals(s, "first"))
++    with pytest.raises(SchedulerHold, match="active"):
++        other.claim("second", "a" * 64, 1000, 4000, approvals(other, "second"))
++    s.record_attempt("first", uncertain=True)
++    s.finish("first", "uncertain")
++    with pytest.raises(SchedulerHold, match="No eligible"):
++        other.claim("second", "a" * 64, 1000, 4000, approvals(other, "second"))
+--- /dev/null
++++ tests/test_organization_extraction.py
+@@ -0,0 +1,173 @@
++"""Real SDK serialization with mocked HTTP only; prohibit real HTTP transports."""
++import json
++import time
++
++import httpx
++import pytest
++
++from app.extraction.organization_extraction import extract_chunk, prepare_request
++from app.extraction.organization_scheduler import SchedulerHold, digest
++from app.extraction.llm_provider import GroqProviderError
++from app.models.source import SourceUnit
++from app.models.knowledge import ExtractionChunk
++from tests.test_organization_scheduler import make, approvals
++
++TEXT = "A value is an expression."
++
++
++@pytest.fixture(autouse=True)
++def offline(monkeypatch):
++    def blocked(*args, **kwargs):
++        raise AssertionError("Real HTTP transport forbidden")
++    monkeypatch.setattr(httpx, "HTTPTransport", blocked)
++    monkeypatch.setattr("app.extraction.organization_extraction.time.sleep", lambda _: None)
++
++
++def setup(s, request="r"):
++    chunk = ExtractionChunk(chunk_id="JAVA_CHUNK_000", source_units=["T0022"], text_content="[T0022] " + TEXT)
++    source = SourceUnit(source_id="T0022", document_id="JAVA", type="paragraph", text=TEXT, position=0)
++    payload, budget = prepare_request(chunk, s.configuration)
++    # Larger verified fixture limits, not assumptions about real Free Tier capacity.
++    admitted = approvals(s, request, digest(payload))
++    for org, a in list(admitted.items()):
++        from app.extraction.organization_scheduler import QuotaWindow, VerifiedAdmission
++        rows = tuple(QuotaWindow(**{**w.model_dump(), "limit": 1000000}) for w in a.windows)
++        admitted[org] = VerifiedAdmission(**{**a.model_dump(), "windows": rows})
++    return chunk, [source], payload, admitted
++
++
++def envelope(content=None, finish="stop", model="openai/gpt-oss-120b"):
++    if content is None:
++        content = json.dumps({"concepts": [{"concept_name": "expression", "content": TEXT, "source_unit_ids": ["T0022"],
++            "source_evidence": [{"source_id": "T0022", "quote": TEXT, "fields": ["/concept_name", "/content"]}]}]})
++    return {"id": "fixture", "object": "chat.completion", "created": 0, "model": model,
++            "choices": [{"index": 0, "finish_reason": finish, "message": {"role": "assistant", "content": content}}],
++            "usage": {"prompt_tokens": 100, "completion_tokens": 200, "total_tokens": 300,
++                      "completion_tokens_details": {"reasoning_tokens": 40}}}
++
++
++def test_identical_requests_and_strict_validation_across_five(tmp_path):
++    s = make(tmp_path)
++    bodies, auth = [], []
++    def respond(req):
++        bodies.append(json.loads(req.content))
++        auth.append(req.headers["authorization"])
++        return httpx.Response(200, json=envelope())
++    for n in range(6):
++        chunk, sources, payload, admitted = setup(s, f"r{n}")
++        items = extract_chunk(s, f"r{n}", chunk, sources, "JAVA", admitted, transport=httpx.MockTransport(respond))
++        assert len(items) == 1
++        assert items[0].extraction_metadata["source_grounding"]["mechanically_valid"]
++        assert items[0].extraction_metadata["source_grounding"]["semantic_entailment_verified"] is False
++    assert all(b == payload for b in bodies)
++    assert auth == [f"Bearer test-secret-{i}" for i in [1,2,3,4,5,1]]
++
++
++@pytest.mark.parametrize("status", [400, 401, 403, 429])
++def test_permanent_and_rate_limit_no_rotation_or_outer_retry(tmp_path, status):
++    s = make(tmp_path)
++    chunk, sources, payload, admitted = setup(s)
++    calls = []
++    def respond(req):
++        calls.append(req.headers["authorization"])
++        return httpx.Response(status, json={"error": {"code": "invalid_api_key" if status == 401 else "fixture_error",
++                                                     "message": "test-secret-1"}}, headers={"Retry-After": "120"})
++    with pytest.raises(GroqProviderError) as error:
++        extract_chunk(s, "r", chunk, sources, "JAVA", admitted, transport=httpx.MockTransport(respond))
++    assert error.value.retryable is False
++    assert "test-secret" not in str(error.value)
++    assert calls == ["Bearer test-secret-1"]
++    with pytest.raises(SchedulerHold, match="already claimed"):
++        extract_chunk(s, "r", chunk, sources, "JAVA", admitted, transport=httpx.MockTransport(respond))
++    assert len(calls) == 1
++    state = s.status()
++    assert state["cursor"] == 1
++    assert state["slots"][0]["last_outcome"] == "failed"
++    if status in (401,403):
++        assert state["slots"][0]["model_access"] == str(status)
++    if status == 429:
++        assert state["slots"][0]["cooldown_until"] >= time.time() + 119
++        assert error.value.retry_after == 120
++        assert state["slots"][0]["eligibility"] == "rate_limited"
++        assert state["slots"][0]["quota_state"] == "quota_exhausted"
++
++
++@pytest.mark.parametrize("kind", ["server", "network"])
++def test_transient_bounded_same_org_and_accounted(tmp_path, kind):
++    s = make(tmp_path)
++    chunk, sources, payload, admitted = setup(s)
++    calls = []
++    def respond(req):
++        calls.append(req.headers["authorization"])
++        if kind == "network":
++            raise httpx.ConnectError("fixture", request=req)
++        return httpx.Response(503, json={"error": {"message": "fixture"}})
++    with pytest.raises(GroqProviderError) as error:
++        extract_chunk(s, "r", chunk, sources, "JAVA", admitted, transport=httpx.MockTransport(respond))
++    assert not error.value.retryable
++    assert calls == ["Bearer test-secret-1"] * 3
++    state = s.status()["slots"][0]
++    assert state["last_outcome"] == "uncertain"
++    assert len(state["attempts"]) == 3
++    assert state["outstanding_reservations"] > 0
++
++
++def test_transient_then_success(tmp_path):
++    s = make(tmp_path)
++    chunk, sources, payload, admitted = setup(s)
++    calls = []
++    def respond(req):
++        calls.append(req.headers["authorization"])
++        return httpx.Response(503, json={"error": {"message": "fixture"}}) if len(calls) == 1 else httpx.Response(200, json=envelope())
++    items = extract_chunk(s, "r", chunk, sources, "JAVA", admitted, transport=httpx.MockTransport(respond))
++    assert len(items) == 1 and calls == ["Bearer test-secret-1"] * 2
++    assert s.status()["cursor"] == 2
++    assert s.status()["slots"][0]["outstanding_reservations"] > 0
++
++
++@pytest.mark.parametrize("defect", ["missing_content", "bad_quote", "scheduling_source", "empty", "json", "length", "model", "secret", "duplicate"])
++def test_failure_atomic_and_no_success_rotation(tmp_path, defect):
++    s = make(tmp_path)
++    chunk, sources, payload, admitted = setup(s)
++    reply = envelope()
++    content = json.loads(reply["choices"][0]["message"]["content"])
++    raw = content["concepts"][0]
++    if defect == "missing_content":
++        del raw["content"]
++    elif defect == "bad_quote":
++        raw["source_evidence"][0]["quote"] = "fabricated"
++    elif defect == "scheduling_source":
++        raw["source_unit_ids"] = ["JAVA_CHUNK_000"]
++    elif defect == "empty":
++        content = {}
++    reply["choices"][0]["message"]["content"] = json.dumps(content)
++    if defect in ("json", "secret", "duplicate"):
++        reply["choices"][0]["message"]["content"] = {"json": "{", "secret": '"test-secret-1"', "duplicate": '{"facts":[],"facts":[]}'}[defect]
++    if defect == "length":
++        reply["choices"][0]["finish_reason"] = "length"
++    if defect == "model":
++        reply["model"] = "other"
++    calls = []
++    def respond(req):
++        calls.append(1)
++        return httpx.Response(200, json=reply)
++    with pytest.raises(SchedulerHold):
++        extract_chunk(s, "r", chunk, sources, "JAVA", admitted, transport=httpx.MockTransport(respond))
++    assert calls == [1]
++    assert s.status()["cursor"] == 1
++    assert s.status()["slots"][0]["last_outcome"] == "validation_failed"
++
++
++def test_sdk_error_diagnostics_are_sanitized_in_audit(tmp_path, caplog):
++    import logging
++    caplog.set_level(logging.DEBUG)
++    s = make(tmp_path)
++    chunk, sources, payload, admitted = setup(s)
++    def respond(req):
++        return httpx.Response(400, json={"error":{"code":"json_validate_failed", "message":"credential test-secret-1"}})
++    with pytest.raises(GroqProviderError):
++        extract_chunk(s, "r", chunk, sources, "JAVA", admitted, transport=httpx.MockTransport(respond))
++    with s.transaction() as db:
++        rows = [dict(r) for r in db.execute("SELECT * FROM audit_events")]
++    assert any("json_validate_failed" in row["details"] for row in rows)
++    assert "test-secret-1" not in json.dumps(rows) + caplog.text

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-5bd01282-be13-4934-9286-c7bcd2e7b74a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"F001\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Net exports decline.\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No excerpt provides a defined concept name or content.\",\n      \"source_ids\": [\"G00041\"]\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No excerpt defines a term.\",\n      \"source_ids\": [\"G00041\"]\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No excerpt offers an explanation of a topic.\",\n      \"source_ids\": [\"G00041\"]\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No excerpt provides a concrete example.\",\n      \"source_ids\": [\"G00041\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No excerpt contains a formula.\",\n      \"source_ids\": [\"G00041\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No excerpt outlines a procedure.\",\n      \"source_ids\": [\"G00041\"]\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No excerpt describes a relationship between entities.\",\n      \"source_ids\": [\"G00041\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the excerpt, what is a direct economic effect of a currency appreciation?\",\n      \"answer\": \"Net exports decline.\",\n      \"distractors\": [\n        \"Net exports increase.\",\n        \"Inflation rises.\",\n        \"Unemployment falls.\"\n      ],\n      \"explanation\": \"The primary excerpt Q0004 states \\\"Net exports decline\\\" in response to a question about what happens when there is an appreciation, indicating that appreciation leads to a reduction in net exports.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Currency appreciation effect\",\n      \"refs\": [\"Q0004\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract claims. The excerpts are mostly questions and short answers. Teaching content: appreciation leads to net exports decline. Also movement of \"yes\" left? Hard to parse. Likely about exchange rate, UIP. We can create facts: \"Appreciation leads to net exports decline.\" That's a fact. Also \"If interest rate doesn't move, foreign interest doesn't move, and expected exchange rate goes up, the current exchange rate...?\" Not answered. So limited.\n\nWe produce rows: one fact row. Also maybe concept: \"Appreciation\" as concept? But no definition. So only fact.\n\nProvide abstention for missing fields.\n\nQuiz: we can ask: What is a consequence of currency appreciation? Answer: Net exports decline. Distractors: Net exports increase, Inflation rises, Unemployment falls. Provide refs Q0004.\n\nProvide another question: What moves \"yes\" to the left? Not clear. Skip.\n\nWe need at least one row per required fields of each item we include. We'll include a fact item with item id \"F001\". Provide fact_text from Q0004. Provide availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, related_refs empty.\n\nAlso need concept? Not enough.\n\nProvide abstentions for missing categories.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794808910,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_49bfac06f1",
+  "usage": {
+    "completion_tokens": 840,
+    "prompt_tokens": 2577,
+    "total_tokens": 3417,
+    "completion_time": 1.771517858,
+    "completion_tokens_details": {
+      "reasoning_tokens": 262
+    },
+    "prompt_time": 0.156449961,
+    "prompt_tokens_details": null,
+    "queue_time": 0.294013587,
+    "total_time": 1.927967819
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hf52azexgv8zd10qpcfp9d",
+    "debug": null,
+    "seed": 2097502595,
+    "usage": null
+  }
+}

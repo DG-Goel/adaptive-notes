@@ -1,0 +1,738 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-15T17:35:00.390636+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00040"
+      ],
+      "document_id": "DOC001",
+      "content": "The trade balance is the difference between the DD curve (domestic demand) and the ZZ curve (total demand), i.e., net exports.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00040",
+              "quote": "So the trade balance is nothing else\n than that DD curve minus the ZZ curve.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 371,
+              "end_char": 447,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00040",
+              "quote": "So the trade balance is nothing else\n than that DD curve minus the ZZ curve.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 371,
+              "end_char": 447,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00040",
+              "quote": "That's a trade balance.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 449,
+              "end_char": 472,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00040",
+              "quote": "Sorry, the Z-Z curve minus the D-D curve, that's net exports.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 474,
+              "end_char": 535,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "trade balance",
+              "claims": [
+                {
+                  "text": "trade balance",
+                  "refs": [
+                    "Q0004"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00040",
+                      "quote": "So the trade balance is nothing else\n than that DD curve minus the ZZ curve."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "The trade balance is the difference between the DD curve (domestic demand) and the ZZ curve (total demand), i.e., net exports.",
+              "claims": [
+                {
+                  "text": "The trade balance is the difference between the DD curve (domestic demand) and the ZZ curve (total demand), i.e., net exports.",
+                  "refs": [
+                    "Q0004",
+                    "Q0005",
+                    "Q0006"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "correct_demonstration",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00040",
+                      "quote": "So the trade balance is nothing else\n than that DD curve minus the ZZ curve."
+                    },
+                    {
+                      "source_id": "G00040",
+                      "quote": "That's a trade balance."
+                    },
+                    {
+                      "source_id": "G00040",
+                      "quote": "Sorry, the Z-Z curve minus the D-D curve, that's net exports."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "The trade balance is the difference between the DD curve (domestic demand) and the ZZ curve (total demand), i.e., net exports.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "correct_demonstration",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So the trade balance is nothing else\n than that DD curve minus the ZZ curve.",
+                      "That's a trade balance.",
+                      "Sorry, the Z-Z curve minus the D-D curve, that's net exports."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00040",
+                        "quote": "So the trade balance is nothing else\n than that DD curve minus the ZZ curve.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 371,
+                        "end_char": 447,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00040",
+                        "quote": "That's a trade balance.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 449,
+                        "end_char": 472,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00040",
+                        "quote": "Sorry, the Z-Z curve minus the D-D curve, that's net exports.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 474,
+                        "end_char": 535,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "The trade balance is the difference between the DD curve (domestic demand) and the ZZ curve (total demand), i.e., net exports.",
+                "preview_text": "The trade balance is the difference between the DD curve (domestic demand) and the ZZ curve (total demand), i.e., net exports.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "trade balance",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So the trade balance is nothing else\n than that DD curve minus the ZZ curve."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00040",
+                        "quote": "So the trade balance is nothing else\n than that DD curve minus the ZZ curve.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 371,
+                        "end_char": 447,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "trade balance",
+                "preview_text": "trade balance",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00040"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "trade balance",
+      "aliases": []
+    },
+    {
+      "knowledge_id": "CON_0002",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00040",
+        "G00041"
+      ],
+      "document_id": "DOC001",
+      "content": "Net exports equal the Z‑Z curve minus the D‑D curve; when the two curves are equal, net exports are zero.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00040",
+              "quote": "Sorry, the Z-Z curve minus the D-D curve, that's net exports.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 474,
+              "end_char": 535,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00040",
+              "quote": "Sorry, the Z-Z curve minus the D-D curve, that's net exports.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 474,
+              "end_char": 535,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00041",
+              "quote": "That's the reason when the two of them are the same,\n that also means the net export is equal to 0.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 100,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "net exports",
+              "claims": [
+                {
+                  "text": "net exports",
+                  "refs": [
+                    "Q0006"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00040",
+                      "quote": "Sorry, the Z-Z curve minus the D-D curve, that's net exports."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Net exports equal the Z‑Z curve minus the D‑D curve; when the two curves are equal, net exports are zero.",
+              "claims": [
+                {
+                  "text": "Net exports equal the Z‑Z curve minus the D‑D curve; when the two curves are equal, net exports are zero.",
+                  "refs": [
+                    "Q0006",
+                    "Q0014"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "correct_demonstration",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00040",
+                      "quote": "Sorry, the Z-Z curve minus the D-D curve, that's net exports."
+                    },
+                    {
+                      "source_id": "G00041",
+                      "quote": "That's the reason when the two of them are the same,\n that also means the net export is equal to 0."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Net exports equal the Z‑Z curve minus the D‑D curve; when the two curves are equal, net exports are zero.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "correct_demonstration",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Sorry, the Z-Z curve minus the D-D curve, that's net exports.",
+                      "That's the reason when the two of them are the same,\n that also means the net export is equal to 0."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00040",
+                        "quote": "Sorry, the Z-Z curve minus the D-D curve, that's net exports.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 474,
+                        "end_char": 535,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00041",
+                        "quote": "That's the reason when the two of them are the same,\n that also means the net export is equal to 0.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 100,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Net exports equal the Z‑Z curve minus the D‑D curve; when the two curves are equal, net exports are zero.",
+                "preview_text": "Net exports equal the Z‑Z curve minus the D‑D curve; when the two curves are equal, net exports are zero.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "net exports",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Sorry, the Z-Z curve minus the D-D curve, that's net exports."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00040",
+                        "quote": "Sorry, the Z-Z curve minus the D-D curve, that's net exports.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 474,
+                        "end_char": 535,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "net exports",
+                "preview_text": "net exports",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00040",
+          "G00041"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "net exports",
+      "aliases": []
+    },
+    {
+      "knowledge_id": "CON_0003",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00041"
+      ],
+      "document_id": "DOC001",
+      "content": "Depreciation improves the trade balance by shifting both domestic and foreign expenditures toward domestic goods.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00041",
+              "quote": "Again, that's what it's called expenditure switching\n mechanism.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 259,
+              "end_char": 323,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00041",
+              "quote": "Very important also message from this part of the course\n is that the depreciation improves the trade balance\n and increases the demand for domestic goods.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 102,
+              "end_char": 257,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00041",
+              "quote": "Again, that's what it's called expenditure switching\n mechanism.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 259,
+              "end_char": 323,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00041",
+              "quote": "The expenditures both of domestic, of residents and foreigners,\n switches towards domestic goods.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 324,
+              "end_char": 421,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "expenditure switching mechanism",
+              "claims": [
+                {
+                  "text": "expenditure switching mechanism",
+                  "refs": [
+                    "Q0016"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00041",
+                      "quote": "Again, that's what it's called expenditure switching\n mechanism."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Depreciation improves the trade balance by shifting both domestic and foreign expenditures toward domestic goods.",
+              "claims": [
+                {
+                  "text": "Depreciation improves the trade balance by shifting both domestic and foreign expenditures toward domestic goods.",
+                  "refs": [
+                    "Q0015",
+                    "Q0016",
+                    "Q0017"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "correct_demonstration",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00041",
+                      "quote": "Very important also message from this part of the course\n is that the depreciation improves the trade balance\n and increases the demand for domestic goods."
+                    },
+                    {
+                      "source_id": "G00041",
+                      "quote": "Again, that's what it's called expenditure switching\n mechanism."
+                    },
+                    {
+                      "source_id": "G00041",
+                      "quote": "The expenditures both of domestic, of residents and foreigners,\n switches towards domestic goods."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Depreciation improves the trade balance by shifting both domestic and foreign expenditures toward domestic goods.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": "correct_demonstration",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Very important also message from this part of the course\n is that the depreciation improves the trade balance\n and increases the demand for domestic goods.",
+                      "Again, that's what it's called expenditure switching\n mechanism.",
+                      "The expenditures both of domestic, of residents and foreigners,\n switches towards domestic goods."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00041",
+                        "quote": "Very important also message from this part of the course\n is that the depreciation improves the trade balance\n and increases the demand for domestic goods.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 102,
+                        "end_char": 257,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00041",
+                        "quote": "Again, that's what it's called expenditure switching\n mechanism.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 259,
+                        "end_char": 323,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00041",
+                        "quote": "The expenditures both of domestic, of residents and foreigners,\n switches towards domestic goods.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 324,
+                        "end_char": 421,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Depreciation improves the trade balance by shifting both domestic and foreign expenditures toward domestic goods.",
+                "preview_text": "Depreciation improves the trade balance by shifting both domestic and foreign expenditures toward domestic goods.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "expenditure switching mechanism",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "Again, that's what it's called expenditure switching\n mechanism."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00041",
+                        "quote": "Again, that's what it's called expenditure switching\n mechanism.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 259,
+                        "end_char": 323,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "expenditure switching mechanism",
+                "preview_text": "expenditure switching mechanism",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00041"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "expenditure switching mechanism",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 3,
+  "source_units_processed": 2,
+  "extraction_metadata": null
+}

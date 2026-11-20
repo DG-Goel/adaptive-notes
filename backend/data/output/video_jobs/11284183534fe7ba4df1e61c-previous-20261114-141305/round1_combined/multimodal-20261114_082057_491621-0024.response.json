@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-d44b3cd5-9cbc-4e25-bd5f-0a5381cc3404",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"structured data\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"unstructured data\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"neural network\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Koala face detection\",\n      \"refs\": [\"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"definitions\",\n      \"field\": \"term\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"score\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"definitions\",\n      \"field\": \"definition_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"a numeric value between 0 and 1 indicating confidence that a detected part matches the target (0 = definitely not, 1 = definitely yes)\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item5\",\n      \"category\": \"procedures\",\n      \"field\": \"procedure_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"collaborative detection of Koala facial features\",\n      \"refs\": [\"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item5\",\n      \"category\": \"procedures\",\n      \"field\": \"steps\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"assign each student to detect a specific facial part (eyes, nose, ears)\",\n      \"refs\": [\"Q0012\", \"Q0015\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item5\",\n      \"category\": \"procedures\",\n      \"field\": \"steps\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"each student outputs a confidence score (0‑1) for their part\",\n      \"refs\": [\"Q0007\", \"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item5\",\n      \"category\": \"procedures\",\n      \"field\": \"steps\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"a higher‑level student (Serena) combines the part scores to decide if the image contains a Koala face\",\n      \"refs\": [\"Q0014\", \"Q0015\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc based on excerpts. Likely concepts: \"structured data\", \"unstructured data\", \"neural network\", \"Koala detection\". Provide rows. Use primary excerpts. Provide availability SOURCE_SUPPORTED. basis explicit. literal_kind verbal. instructional_role null. Provide item id maybe \"item1\". We'll create few rows.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794644466,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_02b0d31eca",
+  "usage": {
+    "completion_tokens": 1168,
+    "prompt_tokens": 3789,
+    "total_tokens": 4957,
+    "completion_time": 2.433125535,
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_time": 0.155630462,
+    "prompt_tokens_details": null,
+    "queue_time": 0.324992883,
+    "total_time": 2.588755997
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cjakp0eaja3v3khbpegpgk",
+    "debug": null,
+    "seed": 747128914,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-f6042df8-2146-4d6d-8d9f-4b6cf2f0b0dc",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No procedural teaching (steps, outcomes, or prerequisites) found in the provided primary excerpts.\",\n      \"source_ids\": [\"G00005\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract procedures. The excerpts are definitions, not procedures. Likely no procedures, so items empty, abstain for missing procedures? We must abstain for missing part of actual teaching point. No procedure teaching present, so abstention with SOURCE_MISSING? Use primary_source_ids. Provide abstention.\n\nReturn schema.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794599045,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e1a78f200e",
+  "usage": {
+    "completion_tokens": 153,
+    "prompt_tokens": 3387,
+    "total_tokens": 3540,
+    "completion_time": 0.322322937,
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    },
+    "prompt_time": 0.156200196,
+    "prompt_tokens_details": null,
+    "queue_time": 0.378635707,
+    "total_time": 0.478523133
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b70hvde9ebpfsvwmex4n4v",
+    "debug": null,
+    "seed": 1053400726,
+    "usage": null
+  }
+}

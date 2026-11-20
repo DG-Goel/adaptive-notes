@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-00d6a27b-6800-455b-80d2-596162d3d8fc",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"equilibrium interest rate\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The interest rate that is consistent with equilibrium in financial markets.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Federal Reserve's role in setting interest rates\",\n      \"refs\": [\"Q0006\", \"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The interest rate is set by the Fed, not by the ECB.\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Uncovered Interest Parity (UIP) condition\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The UIP condition can be used to determine the exchange rate given the interest rate.\",\n      \"refs\": [\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What does the equilibrium interest rate represent in financial markets?\",\n      \"answer\": \"The rate at which both markets are in equilibrium.\",\n      \"distractors\": [\n        \"The rate set by the central bank regardless of market conditions.\",\n        \"The rate that maximizes inflation.\",\n        \"The rate that minimizes unemployment.\"\n      ],\n      \"explanation\": \"The excerpt states that the interest rate is consistent with equilibrium in financial markets, meaning it is the point where both markets are in equilibrium.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"equilibrium interest rate\",\n      \"refs\": [\"Q0000\", \"Q0002\"]\n    },\n    {\n      \"question\": \"According to the speaker, who sets the interest rate in the United States?\",\n      \"answer\": \"The Federal Reserve (Fed).\",\n      \"distractors\": [\n        \"The European Central Bank (ECB).\",\n        \"The President of the United States.\",\n        \"The International Monetary Fund (IMF).\"\n      ],\n      \"explanation\": \"The speaker explicitly says the interest rate is set by the Fed, not by the ECB.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Fed's role\",\n      \"refs\": [\"Q0006\", \"Q0007\"]\n    },\n    {\n      \"question\": \"How does the UIP condition help determine the exchange rate?\",\n      \"answer\": \"It links the exchange rate to the interest rate.\",\n      \"distractors\": [\n        \"It sets the exchange rate based on trade balances.\",\n        \"It determines the exchange rate solely from inflation differentials.\",\n        \"It fixes the exchange rate independent of interest rates.\"\n      ],\n      \"explanation\": \"The speaker notes that using the UIP condition and a given interest rate tells exactly what the exchange rate is.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"UIP condition\",\n      \"refs\": [\"Q0009\", \"Q0010\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. The excerpts talk about interest rate equilibrium, Fed sets rate, UIP condition gives exchange rate. Likely concepts: equilibrium interest rate, Fed role, UIP condition. Create rows for concepts with content and concept_name. Use primary excerpts.\n\nWe'll create item \"item1\" concept. rows: concept_name \"equilibrium interest rate\" from Q0000. content from Q0000. Also concept \"Federal Reserve role\" from Q0006/Q0007. Also concept \"UIP condition\" from Q0009/Q0010.\n\nProvide abstentions none. Quiz: make 3 questions maybe 3. Provide four? We have enough.\n\nCreate questions.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794813572,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_b1dd3e7a63",
+  "usage": {
+    "completion_tokens": 1229,
+    "prompt_tokens": 2501,
+    "total_tokens": 3730,
+    "completion_time": 2.5630059,
+    "completion_tokens_details": {
+      "reasoning_tokens": 140
+    },
+    "prompt_time": 0.129530991,
+    "prompt_tokens_details": null,
+    "queue_time": 0.376575003,
+    "total_time": 2.692536891
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hkkathenbtq40j3xbpjyf2",
+    "debug": null,
+    "seed": 630243818,
+    "usage": null
+  }
+}

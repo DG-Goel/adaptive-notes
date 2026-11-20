@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-055b3510-d30f-4e8a-996e-e99093d3a6dc",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The AND operator returns true only if both conditions are true.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"The OR operator is represented by two vertical bars (||).\",\n      \"refs\": [\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"With the OR operator, if at least one condition is true, the result is true.\",\n      \"refs\": [\"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 3,\n      \"part\": \"value\",\n      \"text\": \"In a loan eligibility example, an applicant is eligible if they have high income OR good credit.\",\n      \"refs\": [\"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 4,\n      \"part\": \"value\",\n      \"text\": \"When evaluating an OR expression, Java evaluates from the left; if the left side is true, the right side is not evaluated.\",\n      \"refs\": [\"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for facts about OR operator etc. Extract claims from excerpts.\n\nIdentify claims:\n\nQ0000: \"Because the AND operator will return true if both conditions are true.\" => fact about AND.\n\nQ0001: \"Now let's look at another operator, that is the or operator.\" => introduction.\n\nQ0008: rule: applicant eligible if high income or good credit. => fact about OR.\n\nQ0010: \"so these two vertical bars represent the or operator.\" => fact about symbol.\n\nQ0012: \"with the or operator, if at least one condition is true, the result will be true.\" => fact.\n\nQ0013: evaluation left side true short-circuits. maybe fact about OR short-circuit.\n\nWe create rows category facts. Provide text, refs, basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs maybe none.\n\nItem id can be same for all, e.g., \"item1\". Provide element incremental.\n\nLet's produce rows.\n\nAlso maybe concepts: concept_name \"OR operator\". but not required.\n\nWe'll output rows only.\n\nAbstentions none, excluded none.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636657,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e5b4e54fbb",
+  "usage": {
+    "completion_tokens": 821,
+    "prompt_tokens": 3568,
+    "total_tokens": 4389,
+    "completion_time": 1.726057645,
+    "completion_tokens_details": {
+      "reasoning_tokens": 234
+    },
+    "prompt_time": 0.210939995,
+    "prompt_tokens_details": null,
+    "queue_time": 1.452327048,
+    "total_time": 1.93699764
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7caw9rmeryrk61fq8f7mzs7",
+    "debug": null,
+    "seed": 1699505613,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-973a8650-5524-465f-ad67-9347649907e2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"markdown\": \"## Using the `Scanner` Class in Java\\n\\n### Importing the Class\\n- The `Scanner` class resides in the `java.util` package.\\n- Import it with:\\n  ```java\\n  import java.util.Scanner;\\n  ```\\n\\n### Creating a `Scanner` Object\\n- Instantiate a `Scanner` by specifying the input source inside the parentheses:\\n  ```java\\n  Scanner scanner = new Scanner(System.in);\\n  ```\\n- **Input sources** can be the terminal (`System.in`), a file, or any other readable stream.\\n\\n### Understanding `System.in` and `System.out`\\n- `System.in` is a **field** of the `System` class that represents standard input (the terminal).\\n- `System.out` is the counterpart for standard output, used to print to the terminal.\\n\\n### Reading Data with `Scanner`\\n- The `Scanner` object provides several methods that begin with `next`:\\n  - `nextByte()` – reads a **byte** value.\\n  - `nextLine()` – reads an entire **line** of text.\\n  - `nextBoolean()` – reads a **boolean** value.\\n- Example of reading a byte and storing it:\\n  ```java\\n  byte b = scanner.nextByte();\\n  ```\\n- When a byte is concatenated with a `String`, Java implicitly converts the byte to a string.\\n\\n### Printing Output\\n- `System.out.println()` prints a value **and adds a newline**.\\n- To avoid the extra newline, use `System.out.print()` instead.\\n\\n### Summary\\n1. Import `java.util.Scanner`.\\n2. Create a `Scanner` with the desired input source (e.g., `System.in`).\\n3. Use `next...` methods to read different data types.\\n4. Choose `print` or `println` based on whether you want a trailing newline.\"\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output JSON with field markdown. Provide polished notes.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794583574,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4727af4560",
+  "usage": {
+    "completion_tokens": 441,
+    "prompt_tokens": 523,
+    "total_tokens": 964,
+    "completion_time": 0.925341594,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14
+    },
+    "prompt_time": 0.025475523,
+    "prompt_tokens_details": null,
+    "queue_time": 0.156921661,
+    "total_time": 0.950817117
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ar8d9wey7anycp7j9v7br4",
+    "debug": null,
+    "seed": 1147636258,
+    "usage": null
+  }
+}

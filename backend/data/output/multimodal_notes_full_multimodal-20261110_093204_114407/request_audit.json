@@ -1,0 +1,75 @@
+{
+  "operations": [
+    {
+      "id": "multimodal-20261110_093204_114407-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "slot": 1,
+      "request_hash": "7fccc4450c58069f8828d0555c9d519912ee2dabb2605a83be7eb22aa8f0d24d",
+      "state": "failed",
+      "created": 1794303185.5308695,
+      "completed": 1794303198.7086768,
+      "validation": "failed"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "multimodal-20261110_093204_114407-0000",
+      "number": 1,
+      "created": 1794303185.5308695,
+      "dispatched": 1794303198.4425483,
+      "completed": 1794303198.6932194,
+      "input_reserved": 2673,
+      "output_reserved": 2000,
+      "input_actual": null,
+      "output_actual": null,
+      "reasoning": null,
+      "charged": 4673,
+      "http_status": 413,
+      "finish": null,
+      "duration": 0.25,
+      "category": "permanent_request"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 829,
+      "request_id": "multimodal-20261110_093204_114407-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794303185.5357227,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"a15c3edae898298666b62d158af0b5f19c25d38bf9973db88a415506482324a6\", \"estimated_input\": 2673, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 2000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 830,
+      "request_id": "multimodal-20261110_093204_114407-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794303198.4452178,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 831,
+      "request_id": "multimodal-20261110_093204_114407-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794303198.6961684,
+      "event": "provider_error",
+      "details": "{\"category\": \"permanent_request\", \"error_code\": \"rate_limit_exceeded\", \"message\": \"Groq API call failed: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01k0m8r3x9f14b8qcaj4n8bffr` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 8495, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}\", \"retry_after\": 4.0, \"retry_after_header\": \"4\", \"retryable\": false, \"status_code\": 413}"
+    },
+    {
+      "sequence": 832,
+      "request_id": "multimodal-20261110_093204_114407-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794303198.7096806,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"failed\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"not_passed\"}"
+    },
+    {
+      "sequence": 833,
+      "request_id": "multimodal-20261110_093204_114407-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794303198.71972,
+      "event": "operation_error",
+      "details": "{\"message\": \"Groq API call failed: Groq API call failed: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01k0m8r3x9f14b8qcaj4n8bffr` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 8495, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}\", \"type\": \"GroqProviderError\"}"
+    }
+  ]
+}

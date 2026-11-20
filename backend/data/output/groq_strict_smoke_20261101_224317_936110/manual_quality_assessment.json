@@ -1,0 +1,84 @@
+{
+  "approved": false,
+  "status": "FAILED",
+  "reviewer": "Codex source-versus-response inspection",
+  "returned_items": 0,
+  "substantive_fields_available_for_review": 0,
+  "supported_items": {
+    "count": 0,
+    "assessment": "No returned items; this is not a quality pass."
+  },
+  "unsupported_additions": {
+    "assessment": "NOT_ASSESSABLE",
+    "reason": "No model generation was returned."
+  },
+  "reconstructed_java_code_or_formulas": {
+    "assessment": "NOT_ASSESSABLE"
+  },
+  "overgeneralizations": {
+    "assessment": "NOT_ASSESSABLE"
+  },
+  "missing_important_source_facts": {
+    "assessment": "FAILED",
+    "all_listed_facts_missing": true,
+    "facts": [
+      {
+        "topic": "constants",
+        "fact": "Final variable pi is described as a constant; attempting to change its value produces a compilation error."
+      },
+      {
+        "topic": "naming convention",
+        "fact": "Constants conventionally use capital letters, illustrated by PI."
+      },
+      {
+        "topic": "arithmetic operators",
+        "fact": "Addition, subtraction, multiplication, division and modulus are named; modulus is described as remainder."
+      },
+      {
+        "topic": "spoken addition example",
+        "fact": "An integer result variable is discussed; ten plus three yields thirteen. No reconstructed Java statement is required."
+      },
+      {
+        "topic": "integer division",
+        "fact": "Division of two whole numbers is described as yielding a whole number."
+      },
+      {
+        "topic": "conversion alternatives",
+        "fact": "The example discusses conversion to float or double for a floating-point result."
+      },
+      {
+        "topic": "type mismatch",
+        "fact": "Assigning the demonstrated double expression to an integer variable causes a compilation error; changing the variable type to double fixes the demonstration."
+      },
+      {
+        "topic": "definition",
+        "fact": "An expression is a piece of code that produces a value."
+      },
+      {
+        "topic": "terminology",
+        "fact": "The numbers in the arithmetic expression are called operands."
+      },
+      {
+        "topic": "increment example",
+        "fact": "Integer X is set to one and incremented to two; prefix and postfix applicability is mentioned."
+      }
+    ]
+  },
+  "incorrect_evidence_associations": {
+    "assessment": "NOT_ASSESSABLE"
+  },
+  "invalid_quotations": {
+    "assessment": "NOT_ASSESSABLE"
+  },
+  "output_truncation": {
+    "assessment": "NOT_VERIFIED",
+    "reason": "No finish reason or generation was returned; do not infer truncation from the JSON-validation error."
+  },
+  "incomplete_extraction": true,
+  "mechanical_evidence_acceptance": {
+    "assessment": "NOT_DEMONSTRATED",
+    "reason": "Zero items; an empty provenance report is not a passing item-level validation."
+  },
+  "semantic_entailment_verified": false,
+  "reason": "HTTP 400 json_validate_failed with empty failed_generation; no extractable response, no coverage, no manual quality approval."
+}

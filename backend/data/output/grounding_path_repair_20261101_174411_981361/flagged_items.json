@@ -1,0 +1,170 @@
+[
+  {
+    "knowledge_id": null,
+    "raw_item_path": "/concepts/1",
+    "offline_diagnostic_id": "CON_0001",
+    "exact_claim": "An expression using arithmetic operators such as addition, subtraction, multiplication, division, or modulus.",
+    "additional_substantive_fields": {
+      "concept_name": "arithmetic expression"
+    },
+    "exact_evidence_quotation": [
+      "we have addition subtraction multiplication division and modulus"
+    ],
+    "supported_portion": "The arithmetic operator list is supported, and the wider passage introduces arithmetic expressions. The association is plausible; the earlier blanket unsupported label is too strong.",
+    "unsupported_or_overgeneralized_portion_and_missing_context": "The selected quote alone does not establish the synthesized definition. Preserve lecture framing rather than introduce a textbook definition.",
+    "likely_cause": "model completion; field association",
+    "recommended_correction": "Prefer: The lecture introduces arithmetic expressions and lists addition, subtraction, multiplication, division and modulus. Cite both the introduction and list."
+  },
+  {
+    "knowledge_id": null,
+    "raw_item_path": "/concepts/2",
+    "offline_diagnostic_id": "CON_0001",
+    "exact_claim": "Operator that increases an integer variable's value by 1, usable as prefix or postfix.",
+    "additional_substantive_fields": {
+      "concept_name": "increment operator"
+    },
+    "exact_evidence_quotation": [
+      "we also have increment and decrement operators let me show you so I'm gonna declare a new variable int X we set it to 1 now if you want to increase the value of x by 1 we use the increment operator"
+    ],
+    "supported_portion": "Increasing x by 1 and prefix/postfix applicability are both stated. Integer x is the demonstrated variable.",
+    "unsupported_or_overgeneralized_portion_and_missing_context": "The citation omits prefix/postfix; the generic operator definition obscures that integer x is the example, not a stated type restriction.",
+    "likely_cause": "field association; model completion",
+    "recommended_correction": "Keep the demonstration scoped to x, with initial 1 and printed 2; cite the later prefix/postfix sentence separately, without inventing its unfinished outcome."
+  },
+  {
+    "knowledge_id": null,
+    "raw_item_path": "/concepts/3",
+    "offline_diagnostic_id": "CON_0001",
+    "exact_claim": "Values that operators act upon in an expression.",
+    "additional_substantive_fields": {
+      "concept_name": "operand"
+    },
+    "exact_evidence_quotation": [
+      "these numbers that we have here are called operands"
+    ],
+    "supported_portion": "The displayed numbers are explicitly called operands. The generalized definition is a reasonable paraphrase but is broader than that wording.",
+    "unsupported_or_overgeneralized_portion_and_missing_context": "Values that operators act upon adds a definition instead of preserving the local naming.",
+    "likely_cause": "model completion",
+    "recommended_correction": "Use: The numbers in this example are called operands. No new formal definition needed."
+  },
+  {
+    "knowledge_id": null,
+    "raw_item_path": "/explanations/0",
+    "offline_diagnostic_id": "EXP_0001",
+    "exact_claim": "Casting operands to double (e.g., (double) ...) makes the division produce a floating‑point result.",
+    "additional_substantive_fields": {
+      "topic": "floating‑point division casting",
+      "explanation_text": "Casting operands to double (e.g., (double) ...) makes the division produce a floating‑point result."
+    },
+    "exact_evidence_quotation": [
+      "if you want to get a floating-point number here you need to convert these numbers to a float or a double let me show you so we prefix this number with parentheses and in parentheses we type double now we are casting or converting this number to a double"
+    ],
+    "supported_portion": "The spoken conversion to double and floating-point objective are supported.",
+    "unsupported_or_overgeneralized_portion_and_missing_context": "Literal (double) ... is reconstructed, and float-or-double alternatives and local scope are lost.",
+    "likely_cause": "model completion; prompt representation instructions insufficiently explicit",
+    "recommended_correction": "Keep conversion in prose, preserving float or double and the particular demonstration; do not synthesize Java syntax."
+  },
+  {
+    "knowledge_id": null,
+    "raw_item_path": "/facts/1",
+    "offline_diagnostic_id": "FCT_0001",
+    "exact_claim": "In Java, dividing two integers produces an integer result (truncates fractional part).",
+    "additional_substantive_fields": {
+      "fact_text": "In Java, dividing two integers produces an integer result (truncates fractional part)."
+    },
+    "exact_evidence_quotation": [
+      "the result is a whole number because in Java the division of two whole numbers is a whole number"
+    ],
+    "supported_portion": "The general whole-number division result is explicitly stated by the lecturer; it need not be narrowed merely because examples surround it.",
+    "unsupported_or_overgeneralized_portion_and_missing_context": "Only the parenthetical truncates fractional part is unstated.",
+    "likely_cause": "model completion",
+    "recommended_correction": "Delete the parenthetical. Retain the explicitly stated whole-number result rule."
+  },
+  {
+    "knowledge_id": null,
+    "raw_item_path": "/facts/2",
+    "offline_diagnostic_id": "FCT_0001",
+    "exact_claim": "The increment operator may be applied before (prefix) or after (postfix) the variable.",
+    "additional_substantive_fields": {
+      "fact_text": "The increment operator may be applied before (prefix) or after (postfix) the variable."
+    },
+    "exact_evidence_quotation": [
+      "we can apply this operator as a postfix or as a prefix"
+    ],
+    "supported_portion": "Prefix/postfix applicability is explicitly stated. Before/after is conventional terminology, but is not defined in this supplied passage.",
+    "unsupported_or_overgeneralized_portion_and_missing_context": "Under the source-only contract, omit the before/after expansion and do not complete the trailing and we get sentence.",
+    "likely_cause": "model completion; source ambiguity at truncated ending",
+    "recommended_correction": "Use: The increment operator can be applied as a postfix or prefix. Preserve the unfinished result as unknown."
+  },
+  {
+    "knowledge_id": null,
+    "raw_item_path": "/facts/3",
+    "offline_diagnostic_id": "FCT_0001",
+    "exact_claim": "The modulus operator (%) returns the remainder of a division.",
+    "additional_substantive_fields": {
+      "fact_text": "The modulus operator (%) returns the remainder of a division."
+    },
+    "exact_evidence_quotation": [
+      "modulus which is the remainder of a division"
+    ],
+    "supported_portion": "The remainder description is directly supported.",
+    "unsupported_or_overgeneralized_portion_and_missing_context": "Only the % symbol is absent; the rest of the item can be preserved.",
+    "likely_cause": "model completion; field association",
+    "recommended_correction": "Remove (%); keep the source remainder description."
+  },
+  {
+    "knowledge_id": null,
+    "raw_item_path": "/facts/4",
+    "offline_diagnostic_id": "FCT_0001",
+    "exact_claim": "A final variable cannot be assigned a new value after initialization.",
+    "additional_substantive_fields": {
+      "fact_text": "A final variable cannot be assigned a new value after initialization."
+    },
+    "exact_evidence_quotation": [
+      "cannot assign a value to final variable pi"
+    ],
+    "supported_portion": "A compilation error on assignment to final variable pi is directly supported.",
+    "unsupported_or_overgeneralized_portion_and_missing_context": "After initialization is not stated. The beginning its value later on lacks its prior context, so avoid inferring lifecycle rules.",
+    "likely_cause": "model completion; source ambiguity at excerpt boundary",
+    "recommended_correction": "Use: In the example, assigning to final variable pi causes the reported compilation error. Preserve the actual diagnostic quote."
+  },
+  {
+    "knowledge_id": null,
+    "raw_item_path": "/procedures/0",
+    "offline_diagnostic_id": null,
+    "exact_claim": "Cast one operand to double, then divide, and store the result in a double variable to obtain a floating‑point result.",
+    "additional_substantive_fields": {
+      "procedure_name": "Obtain floating‑point division result",
+      "steps": [
+        "Cast one operand to double (e.g., (double) numerator)",
+        "Perform division",
+        "Assign result to a double variable"
+      ]
+    },
+    "exact_evidence_quotation": [
+      "if you want to get a floating-point number here you need to convert these numbers to a float or a double let me show you so we prefix this number with parentheses and in parentheses we type double now we are casting or converting this number to a double"
+    ],
+    "supported_portion": "Floating-point conversion, division context and declaration repair are supported in different passages.",
+    "unsupported_or_overgeneralized_portion_and_missing_context": "One operand and (double) numerator are additions. The quote omits the declaration repair; /steps is invalid and cannot cover indexed steps. Float alternative and local demonstration scope are lost.",
+    "likely_cause": "model completion; field association; prompt array-path contract insufficiently explicit",
+    "recommended_correction": "Prefer one scoped explanation joining alternatives, demonstration and error/repair. If steps are retained, use only spoken instructions, exact supporting excerpts per step, and /steps/0 etc."
+  },
+  {
+    "knowledge_id": null,
+    "raw_item_path": "/relationships/0",
+    "offline_diagnostic_id": "REL_0001",
+    "exact_claim": "A constant is a final variable.",
+    "additional_substantive_fields": {
+      "relationship_type": "is a",
+      "subject": "constant",
+      "object": "final variable"
+    },
+    "exact_evidence_quotation": [
+      "pi is a final variable or a constant"
+    ],
+    "supported_portion": "The source calls pi a final variable or constant. A connection between the terms is supported.",
+    "unsupported_or_overgeneralized_portion_and_missing_context": "A universal constant-is-final-variable taxonomy is broader than this instance-level statement; it is not necessarily wrong in full, but is unnecessary here.",
+    "likely_cause": "model completion; field association",
+    "recommended_correction": "Fold the scoped statement about pi into the constant item instead of creating a universal relationship."
+  }
+]

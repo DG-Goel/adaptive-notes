@@ -1,0 +1,139 @@
+[
+  {
+    "topic": "In this recorded IntelliJ demonstration, the project uses JDK version 12. This identifies the tutorial setup, not a present-day version requirement.",
+    "source_id": "T0004",
+    "quote": "earlier we downloaded jdk or Java development kit version 12 that is why JDK version 12 is selected here",
+    "represented_by": [
+      "FCT_5001:/content"
+    ],
+    "reviewer": "assistant source-comparison review; not independent human certification",
+    "scope_checked": true,
+    "rationale": "Task 7 explicit source-comparison review retained; scope is this named point, not the entire source unit."
+  },
+  {
+    "topic": "The tutorial creates a Java project in IntelliJ, checks the selected project SDK, and chooses a project template for a command-line application.",
+    "source_id": "T0004",
+    "quote": "on the left side select java and make sure project sdk is not black so earlier we downloaded jdk or Java development kit version 12 that is why JDK version 12 is selected here if you don't see that make sure to select it from this drop-down list alright now let's click on next on this page select create project from template so we're gonna create a command line application",
+    "represented_by": [
+      "FCT_5002:/content"
+    ],
+    "reviewer": "assistant source-comparison review; not independent human certification",
+    "scope_checked": true,
+    "rationale": "Task 7 explicit source-comparison review retained; scope is this named point, not the entire source unit."
+  },
+  {
+    "topic": "A command-line application runs from the command line and has no graphical user interface in this explanation.",
+    "source_id": "T0004",
+    "quote": "a command line application which is an application that we can run from the command line it doesn't have a graphical user interface or a GUI",
+    "represented_by": [
+      "FCT_5003:/content"
+    ],
+    "reviewer": "assistant source-comparison review; not independent human certification",
+    "scope_checked": true,
+    "rationale": "Task 7 explicit source-comparison review retained; scope is this named point, not the entire source unit."
+  },
+  {
+    "topic": "A package groups related classes, helping organize an application as its number of classes grows.",
+    "source_id": "T0004",
+    "quote": "we have a concept called package and we use a package to group related classes so as our applications grow we're gonna end up with hundreds or even thousands of classes so we should properly organize this class us into packages",
+    "represented_by": [
+      "FCT_5004:/content"
+    ],
+    "reviewer": "assistant source-comparison review; not independent human certification",
+    "scope_checked": true,
+    "rationale": "Task 7 explicit source-comparison review retained; scope is this named point, not the entire source unit."
+  },
+  {
+    "topic": "The source describes a convention of reversing the company domain name for a base package. It explicitly says an actual registered Internet domain is not required; the purpose is a namespace for classes.",
+    "source_id": "T0004",
+    "quote": "now by convention the base package for a Java project is the domain name of your company in Reverse so my website is code with mass comm that is why I'm gonna set the base package for this project to come that code with Marsh now it doesn't mean that you should have an actual domain registered on an Internet this is just a way to create a namespace for our classes",
+    "represented_by": [
+      "FCT_5005:/content"
+    ],
+    "reviewer": "assistant source-comparison review; not independent human certification",
+    "scope_checked": true,
+    "rationale": "Task 7 explicit source-comparison review retained; scope is this named point, not the entire source unit."
+  },
+  {
+    "topic": "The input-loop example uses the equals method of string objects to compare values and repeats while the input does not equal quit.",
+    "source_id": "T0045",
+    "quote": "to compare their value instead we need to use the equals method of string objects so we want to check to see if the input equals quit now here we need to apply the not operator so as long as the input does not equal quit we're gonna continuously ask the user to enter something",
+    "represented_by": [
+      "FCT_5006:/content"
+    ],
+    "reviewer": "assistant source-comparison review; not independent human certification",
+    "scope_checked": true,
+    "rationale": "Task 7 explicit source-comparison review retained; scope is this named point, not the entire source unit."
+  },
+  {
+    "topic": "In this example, create the scanner outside the while loop and reuse it, avoiding a new scanner object on each iteration.",
+    "source_id": "T0045",
+    "quote": "with this implementation in every iteration we're going to create a new scanner object so if the user enters 10 numbers we're gonna create 10 scanner objects in memory this is unnecessary and it's actually a bad practice because it's going to pollute our memory so it's better to create the scanner object outside of a while loop and then simply use it here",
+    "represented_by": [
+      "FCT_5007:/content"
+    ],
+    "reviewer": "assistant source-comparison review; not independent human certification",
+    "scope_checked": true,
+    "rationale": "Task 7 explicit source-comparison review retained; scope is this named point, not the entire source unit."
+  },
+  {
+    "topic": "The example converts input to lowercase after reading it so uppercase or mixed-case versions of quit satisfy the intended termination check.",
+    "source_id": "T0045",
+    "quote": "here we are assuming that the user is typing everything in lowercase so if they type quit in uppercase or any combinations of lowercase and uppercase characters this logic is not gonna work the way we want so over here right after reading something from the terminal we're gonna call the to lowercase method of string objects to convert it to lowercase",
+    "represented_by": [
+      "FCT_5008:/content"
+    ],
+    "reviewer": "assistant source-comparison review; not independent human certification",
+    "scope_checked": true,
+    "rationale": "Task 7 explicit source-comparison review retained; scope is this named point, not the entire source unit."
+  },
+  {
+    "topic": "The demonstration echoes entered values back to the terminal and terminates when the user types quit.",
+    "source_id": "T0045",
+    "quote": "let's echo back whatever the user enters so we simply print that on the terminal now let's run this and see what happens so I'm going to enter if your numbers like 1 2 & 3 whatever we type gets a code back but the moment we type quit our program terminates",
+    "represented_by": [
+      "FCT_5009:/content"
+    ],
+    "reviewer": "assistant source-comparison review; not independent human certification",
+    "scope_checked": true,
+    "rationale": "Task 7 explicit source-comparison review retained; scope is this named point, not the entire source unit."
+  },
+  {
+    "topic": "The source presents while loops as useful when the required number of repetitions is not known ahead of time.",
+    "source_id": "T0045",
+    "quote": "while loops are useful in situations where we don't know ahead of time how many times we want to repeat something",
+    "represented_by": [
+      "FCT_5010:/content"
+    ],
+    "reviewer": "assistant source-comparison review; not independent human certification",
+    "scope_checked": true,
+    "rationale": "Task 7 explicit source-comparison review retained; scope is this named point, not the entire source unit."
+  },
+  {
+    "topic": "A while loop checks its condition first and may execute zero times if the condition is initially false. A do-while loop checks last and executes its body at least once.",
+    "source_id": "T0045",
+    "quote": "with while loops we check the condition first so if the condition is false the first time this loop will never get executed in contrast with do-while loops we check the condition last so do-while loops always get executed at least once even if the condition is false",
+    "represented_by": [
+      "FCT_5011:/content"
+    ],
+    "reviewer": "assistant source-comparison review; not independent human certification",
+    "scope_checked": true,
+    "rationale": "Task 7 explicit source-comparison review retained; scope is this named point, not the entire source unit."
+  },
+  {
+    "topic": "Do-while construction sequence",
+    "source_id": "T0045",
+    "quote": "we start with a do keyword then we create a code block at the end of this code block we type while followed by our loop condition so not input dot equals quit and then we terminate this using a semicolon now inside the body of this loop we'll simply copy all these lines we have here",
+    "represented_by": [
+      "PRC_5001:/content",
+      "PRC_5001:/procedure_name",
+      "PRC_5001:/steps/0",
+      "PRC_5001:/steps/1",
+      "PRC_5001:/steps/2",
+      "PRC_5001:/steps/3"
+    ],
+    "reviewer": "assistant Task 8 source-comparison review; no independent human certification",
+    "scope_checked": true,
+    "rationale": "Exact sequence reviewed offline; Task 7 timing fact alone did not retain these construction details."
+  }
+]

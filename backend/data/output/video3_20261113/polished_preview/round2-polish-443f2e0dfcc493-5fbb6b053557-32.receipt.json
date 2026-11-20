@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-39998fd3-4fb6-4d29-a1ea-4f7649bd6e24",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"markdown\":\"# Overview of Machine Learning Approaches\\n\\n## 1. Choosing Between Statistical ML and Deep Learning\\n- **Statistical machine learning** is best for *simple, structured features* (e.g., tabular data). Common tools: `XGBoost`, `scikit-learn`.\\n- **Deep learning** excels with *complex, unstructured features* such as **images**, **videos**, **audio**, and **text**. It can also be applied to large‑scale structured data, though this is not the default recommendation.\\n- **Guideline:** If you have a **huge number of training samples**, deep learning usually outperforms statistical methods. Ultimately, experiment to determine which approach yields the best performance.\\n\\n## 2. Types of Data\\n- **Unstructured data:** videos, audio, text, images.\\n- **Structured data:** tables, relational databases.\\n\\n# Deep Learning Fundamentals\\n\\n## 1. Core Architectures\\n- **Feed‑forward neural network:** information flows from input → hidden → output layers without loops.\\n- **Recurrent neural network (RNN):** includes a **time axis** to process sequences sequentially.\\n- **Transformer:** the dominant architecture for modern **generative AI** applications.\\n\\n## 2. Frameworks\\n- **PyTorch** (Meta) – currently the more popular deep‑learning library.\\n- **TensorFlow** (Google).\\n\\n# Generative AI vs. Traditional AI\\n\\n## 1. Traditional AI\\n- Tasks: classification, regression, prediction, decision‑making.\\n- Considered **lightweight**.\\n- Tooling: `XGBoost`, `scikit-learn`.\\n\\n## 2. Generative AI\\n- Objective: **generate new content** (text, audio, video, images) from prompts.\\n- Relies on **large language models (LLMs)** trained on massive datasets (e.g., the entire internet).\\n- Example: **ChatGPT**, powered by the **GPT** LLM.\\n- A language model predicts the next words based on statistical probability and randomness – often described as a *stochastic parrot*.\\n\\n# Agentic AI\\n\\n## 1. Definition\\n- **AI agents** (or *agentic AI*) perceive their environment and act autonomously.\\n- They combine an LLM with **memory**, **knowledge bases**, and **external tools**.\\n- A **reasoning model** creates a plan and executes multi‑step actions.\\n\\n## 2. Capabilities\\n- **Goal‑oriented planning:** given a goal (e.g., onboarding a new intern), the system decides the sequence of actions—creating checklists, scheduling meetings, sending access requests.\\n- **Autonomy:** can reason, plan, and act without detailed step‑by‑step instructions.\\n- **Integration:** multiple agents, each with its own tools and memory, can collaborate.\\n\\n## 3. Components of an AI Agent\\n1. **Memory store** – retains context across interactions.\\n2. **Chat model (LLM)** – provides natural‑language understanding and generation.\\n3. **Tool integrations** – e.g., Jira, Slack, APIs.\\n\\n## 4. Tooling & Platforms\\n- **Python libraries:** Auto‑GPT, Google Agent Development Kit, OpenAI’s toolkit.\\n- **Low‑code/no‑code platforms:** n8n, Zapier, n18 – enable building agentic systems without coding.\\n\\n## 5. Comparison with Generative AI\\n- **Generative AI:** creates content (answers, images) but does **not** perform external actions.\\n- **Agentic AI:** higher autonomy; performs planning, reasoning, and executes multi‑step workflows (e.g., automating onboarding, provisioning accounts, updating Slack channels).\\n\"}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output JSON with field markdown. Provide polished notes. Ensure valid compact JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794600534,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d577f40f11",
+  "usage": {
+    "completion_tokens": 839,
+    "prompt_tokens": 1028,
+    "total_tokens": 1867,
+    "completion_time": 1.748431821,
+    "completion_tokens_details": {
+      "reasoning_tokens": 19
+    },
+    "prompt_time": 0.041324222,
+    "prompt_tokens_details": null,
+    "queue_time": 0.049539205,
+    "total_time": 1.7897560430000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b8dyq5e8fbfn2fgq6gzf9m",
+    "debug": null,
+    "seed": 1280001248,
+    "usage": null
+  }
+}

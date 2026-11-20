@@ -1,0 +1,300 @@
+{
+  "document_id": "JAVA",
+  "source_filename": "java.txt",
+  "extraction_timestamp": "2026-11-07T15:31:00.672581+00:00",
+  "concepts": [],
+  "definitions": [],
+  "explanations": [
+    {
+      "knowledge_id": "EXP_0001",
+      "knowledge_type": "explanation",
+      "source_unit_ids": [
+        "T0015"
+      ],
+      "document_id": "JAVA",
+      "content": "When a variable of a reference type is declared, it holds the address of the object in memory. Assigning one reference variable to another copies the reference, so both variables point to the same object. Updating the object through any reference is reflected when accessed via the other reference.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0015",
+              "quote": "address of that memory location is 100 then it's going to allocate a separate part of the memory and it's going to attach this label to that memory location point 1 in that memory location it's going to store the address of our point object so this is the critical difference between primitive and reference types when we declare a primitive variable like a byte the value that we assigned to that variable will be stored in that memory location but when we use a reference type like this point class",
+              "fields": [
+                "/topic"
+              ],
+              "match_count": 1,
+              "start_char": 500,
+              "end_char": 1000,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0015",
+              "quote": "our variable is going to hold the ax of that point object in memory not the actual pointer object now look at line 9 here we're copying the value that we have in this variable into this other variable so that value as you learn is not the point object is the address or the reference to the point object in memory that is why we refer to these tiles as reference types because they don't store the actual values they store a reference to an object somewhere in the memory so in this example point one",
+              "fields": [
+                "/explanation_text"
+              ],
+              "match_count": 1,
+              "start_char": 1001,
+              "end_char": 1501,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0015",
+              "quote": "and point two are referencing the exact same point object in memory we only have one point object so these two variables are not independent of each other they're referencing the same object and that means if I update this point object through either of these variables the changes will be visible to the other variable I'm gonna show you so using the first variable point one we're going to update the value of x so we use the dot operator and here we can see the members of this object X on Y are",
+              "fields": [
+                "/explanation_text"
+              ],
+              "match_count": 1,
+              "start_char": 1502,
+              "end_char": 2000,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0015",
+              "quote": "both fields which are variables that exist inside of a class so we said X just like a regular variable to a different value let's say two now because point one and point two are referencing the exact same object if we print point two we're going to see the change that we just made take a look so S or ut tab let's print point to run the program there you go so the change was visible so remember this reference types are copied by the references whereas primitive types are copied by their value and",
+              "fields": [
+                "/explanation_text"
+              ],
+              "match_count": 1,
+              "start_char": 2001,
+              "end_char": 2501,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0015",
+              "quote": "our variable is going to hold the ax of that point object in memory not the actual pointer object now look at line 9 here we're copying the value that we have in this variable into this other variable so that value as you learn is not the point object is the address or the reference to the point object in memory that is why we refer to these tiles as reference types because they don't store the actual values they store a reference to an object somewhere in the memory so in this example point one",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1001,
+              "end_char": 1501,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0015",
+              "quote": "and point two are referencing the exact same point object in memory we only have one point object so these two variables are not independent of each other they're referencing the same object and that means if I update this point object through either of these variables the changes will be visible to the other variable I'm gonna show you so using the first variable point one we're going to update the value of x so we use the dot operator and here we can see the members of this object X on Y are",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1502,
+              "end_char": 2000,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0015",
+              "quote": "both fields which are variables that exist inside of a class so we said X just like a regular variable to a different value let's say two now because point one and point two are referencing the exact same object if we print point two we're going to see the change that we just made take a look so S or ut tab let's print point to run the program there you go so the change was visible so remember this reference types are copied by the references whereas primitive types are copied by their value and",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 2001,
+              "end_char": 2501,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0015"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "topic": "Reference types in Java store a reference (address) to an object in memory rather than the actual object value.",
+      "explanation_text": "When a variable of a reference type is declared, it holds the address of the object in memory. Assigning one reference variable to another copies the reference, so both variables point to the same object. Updating the object through any reference is reflected when accessed via the other reference.",
+      "explanation_type": null
+    }
+  ],
+  "examples": [],
+  "facts": [
+    {
+      "knowledge_id": "FCT_0002",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "T0015"
+      ],
+      "document_id": "JAVA",
+      "content": "Primitive variables store the actual value in their memory location, while reference variables store the address of an object.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0015",
+              "quote": "address of that memory location is 100 then it's going to allocate a separate part of the memory and it's going to attach this label to that memory location point 1 in that memory location it's going to store the address of our point object so this is the critical difference between primitive and reference types when we declare a primitive variable like a byte the value that we assigned to that variable will be stored in that memory location but when we use a reference type like this point class",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 500,
+              "end_char": 1000,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0015",
+              "quote": "address of that memory location is 100 then it's going to allocate a separate part of the memory and it's going to attach this label to that memory location point 1 in that memory location it's going to store the address of our point object so this is the critical difference between primitive and reference types when we declare a primitive variable like a byte the value that we assigned to that variable will be stored in that memory location but when we use a reference type like this point class",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 500,
+              "end_char": 1000,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0015"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Primitive variables store the actual value in their memory location, while reference variables store the address of an object.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0003",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "T0015"
+      ],
+      "document_id": "JAVA",
+      "content": "Assigning one reference variable to another copies the reference, causing both variables to refer to the same object.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0015",
+              "quote": "our variable is going to hold the ax of that point object in memory not the actual pointer object now look at line 9 here we're copying the value that we have in this variable into this other variable so that value as you learn is not the point object is the address or the reference to the point object in memory that is why we refer to these tiles as reference types because they don't store the actual values they store a reference to an object somewhere in the memory so in this example point one",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 1001,
+              "end_char": 1501,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0015",
+              "quote": "our variable is going to hold the ax of that point object in memory not the actual pointer object now look at line 9 here we're copying the value that we have in this variable into this other variable so that value as you learn is not the point object is the address or the reference to the point object in memory that is why we refer to these tiles as reference types because they don't store the actual values they store a reference to an object somewhere in the memory so in this example point one",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1001,
+              "end_char": 1501,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0015"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Assigning one reference variable to another copies the reference, causing both variables to refer to the same object.",
+      "fact_type": null
+    },
+    {
+      "knowledge_id": "FCT_0004",
+      "knowledge_type": "fact",
+      "source_unit_ids": [
+        "T0015"
+      ],
+      "document_id": "JAVA",
+      "content": "Changes made to an object via one reference variable are visible through any other reference variable that points to the same object.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0015",
+              "quote": "and point two are referencing the exact same point object in memory we only have one point object so these two variables are not independent of each other they're referencing the same object and that means if I update this point object through either of these variables the changes will be visible to the other variable I'm gonna show you so using the first variable point one we're going to update the value of x so we use the dot operator and here we can see the members of this object X on Y are",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 1502,
+              "end_char": 2000,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0015",
+              "quote": "both fields which are variables that exist inside of a class so we said X just like a regular variable to a different value let's say two now because point one and point two are referencing the exact same object if we print point two we're going to see the change that we just made take a look so S or ut tab let's print point to run the program there you go so the change was visible so remember this reference types are copied by the references whereas primitive types are copied by their value and",
+              "fields": [
+                "/fact_text"
+              ],
+              "match_count": 1,
+              "start_char": 2001,
+              "end_char": 2501,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0015",
+              "quote": "and point two are referencing the exact same point object in memory we only have one point object so these two variables are not independent of each other they're referencing the same object and that means if I update this point object through either of these variables the changes will be visible to the other variable I'm gonna show you so using the first variable point one we're going to update the value of x so we use the dot operator and here we can see the members of this object X on Y are",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1502,
+              "end_char": 2000,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0015",
+              "quote": "both fields which are variables that exist inside of a class so we said X just like a regular variable to a different value let's say two now because point one and point two are referencing the exact same object if we print point two we're going to see the change that we just made take a look so S or ut tab let's print point to run the program there you go so the change was visible so remember this reference types are copied by the references whereas primitive types are copied by their value and",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 2001,
+              "end_char": 2501,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0015"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "fact_text": "Changes made to an object via one reference variable are visible through any other reference variable that points to the same object.",
+      "fact_type": null
+    }
+  ],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 4,
+  "source_units_processed": 1,
+  "extraction_metadata": null
+}

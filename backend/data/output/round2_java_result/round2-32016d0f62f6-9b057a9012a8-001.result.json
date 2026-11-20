@@ -1,0 +1,328 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0016"
+      ],
+      "reason": "Candidate requires review"
+    },
+    {
+      "note_ids": [
+        "FCT_0010",
+        "FCT_0011",
+        "FCT_0019"
+      ],
+      "reason": "Candidate requires review"
+    },
+    {
+      "note_ids": [
+        "FCT_0040",
+        "FCT_0041",
+        "FCT_0043",
+        "FCT_0045",
+        "FCT_0047"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    },
+    {
+      "note_ids": [
+        "FCT_0026",
+        "FCT_0028",
+        "FCT_0030",
+        "FCT_0033",
+        "FCT_0034"
+      ],
+      "reason": "Candidate requires review"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Popular Java Code Editors",
+      "source_segment_ids": [
+        "FCT_0016"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0016"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0016",
+              "exact_quote": "Popular code editors for building Java applications are NetBeans, Eclipse, and IntelliJ."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Java Code Editors",
+            "headers": [
+              "Editor"
+            ],
+            "rows": [
+              [
+                "NetBeans"
+              ],
+              [
+                "Eclipse"
+              ],
+              [
+                "IntelliJ IDEA"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "macOS JDK Installation Flow",
+      "source_segment_ids": [
+        "FCT_0010",
+        "FCT_0011",
+        "FCT_0019"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0010",
+            "FCT_0011",
+            "FCT_0019"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0010",
+              "exact_quote": "Installation of the JDK requires accepting the license agreement."
+            },
+            {
+              "note_id": "FCT_0011",
+              "exact_quote": "The JDK installation wizard on macOS guides the user through clicking continue, entering the computer password, and completing the installation."
+            },
+            {
+              "note_id": "FCT_0019",
+              "exact_quote": "After downloading, the application should be dragged into the Applications folder."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "JDK Installation on macOS",
+            "direction": "top-down",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "Download JDK (.dmg)"
+              },
+              {
+                "id": "n2",
+                "label": "Open .dmg"
+              },
+              {
+                "id": "n3",
+                "label": "Accept License Agreement"
+              },
+              {
+                "id": "n4",
+                "label": "Run Installation Wizard"
+              },
+              {
+                "id": "n5",
+                "label": "Click Continue"
+              },
+              {
+                "id": "n6",
+                "label": "Enter Computer Password"
+              },
+              {
+                "id": "n7",
+                "label": "Complete Installation"
+              },
+              {
+                "id": "n8",
+                "label": "Drag JDK to Applications folder"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": ""
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": ""
+              },
+              {
+                "from": "n3",
+                "to": "n4",
+                "label": ""
+              },
+              {
+                "from": "n4",
+                "to": "n5",
+                "label": ""
+              },
+              {
+                "from": "n5",
+                "to": "n6",
+                "label": ""
+              },
+              {
+                "from": "n6",
+                "to": "n7",
+                "label": ""
+              },
+              {
+                "from": "n7",
+                "to": "n8",
+                "label": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Java Class‑Method Architecture",
+      "source_segment_ids": [
+        "FCT_0040",
+        "FCT_0041",
+        "FCT_0043",
+        "FCT_0045",
+        "FCT_0047"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0040",
+            "FCT_0041",
+            "FCT_0043",
+            "FCT_0045",
+            "FCT_0047"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0040",
+              "exact_quote": "Functions in Java must belong to a class; they cannot exist on their own."
+            },
+            {
+              "note_id": "FCT_0041",
+              "exact_quote": "A class is a container for one or more related functions (methods) and is used to organize code."
+            },
+            {
+              "note_id": "FCT_0043",
+              "exact_quote": "Every Java program should have at least one class that contains the main function."
+            },
+            {
+              "note_id": "FCT_0045",
+              "exact_quote": "Functions defined inside a class are called methods."
+            },
+            {
+              "note_id": "FCT_0047",
+              "exact_quote": "A Java program must contain a main class and inside this main class we have the main method."
+            }
+          ],
+          "payload": {
+            "type": "architecture",
+            "title": "Class‑Method Relationship",
+            "direction": "left-to-right",
+            "components": [
+              {
+                "id": "c1",
+                "label": "Class"
+              },
+              {
+                "id": "c2",
+                "label": "Method (e.g., main)"
+              }
+            ],
+            "connections": [
+              {
+                "from": "c1",
+                "to": "c2",
+                "label": "contains"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Structure of a Java Function Declaration",
+      "source_segment_ids": [
+        "FCT_0026",
+        "FCT_0028",
+        "FCT_0030",
+        "FCT_0033",
+        "FCT_0034"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0026",
+            "FCT_0028",
+            "FCT_0030",
+            "FCT_0033",
+            "FCT_0034"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0026",
+              "exact_quote": "The return type of a function is specified first."
+            },
+            {
+              "note_id": "FCT_0028",
+              "exact_quote": "The return type of functions that do not return a value is void."
+            },
+            {
+              "note_id": "FCT_0030",
+              "exact_quote": "After the return type, the name of the function appears."
+            },
+            {
+              "note_id": "FCT_0033",
+              "exact_quote": "After the function name, parentheses contain the parameters for the function."
+            },
+            {
+              "note_id": "FCT_0034",
+              "exact_quote": "Parameters are used to pass values to a function."
+            }
+          ],
+          "payload": {
+            "type": "data_structure",
+            "title": "Function Declaration Components",
+            "subtype": "array",
+            "values": [
+              {
+                "label": "Return Type"
+              },
+              {
+                "label": "Function Name"
+              },
+              {
+                "label": "Parameter List"
+              },
+              {
+                "label": "Method Body"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

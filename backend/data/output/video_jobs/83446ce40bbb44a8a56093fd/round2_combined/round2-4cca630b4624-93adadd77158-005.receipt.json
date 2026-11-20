@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-ce022a43-1ab3-494a-9d1b-442189df80c1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Interest‑Rate Increase Contractionary Channels\",\n      \"source_segment_ids\": [\"EXP_0002\", \"CON_0048\", \"CON_0049\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"EXP_0002\", \"CON_0048\", \"CON_0049\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"EXP_0002\",\n              \"quote\": \"In a closed economy the interest‑rate channel operated only through reduced investment.\"\n            },\n            {\n              \"note_id\": \"EXP_0002\",\n              \"quote\": \"In an open economy a second channel appears: a higher interest rate raises the exchange rate, making exports more expensive and imports cheaper, so net exports fall.\"\n            },\n            {\n              \"note_id\": \"CON_0048\",\n              \"quote\": \"When I increase interest rate from here to there, then my exchange rate has to appreciate.\"\n            },\n            {\n              \"note_id\": \"CON_0049\",\n              \"quote\": \"my exchange rate has to appreciate\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Interest‑Rate Increase → Contractionary Effects\",\n            \"direction\": \"DOWN\",\n            \"nodes\": [\n              { \"id\": \"n1\", \"label\": \"Interest rate ↑\", \"kind\": \"start\" },\n              { \"id\": \"n2\", \"label\": \"Investment ↓\", \"kind\": \"action\" },\n              { \"id\": \"n3\", \"label\": \"Exchange rate ↑\", \"kind\": \"action\" },\n              { \"id\": \"n4\", \"label\": \"Net exports ↓\", \"kind\": \"action\" },\n              { \"id\": \"n5\", \"label\": \"Aggregate demand ↓\", \"kind\": \"success\" }\n            ],\n            \"edges\": [\n              { \"from\": \"n1\", \"to\": \"n2\", \"label\": \"reduces investment\" },\n              { \"from\": \"n1\", \"to\": \"n3\", \"label\": \"raises exchange rate\" },\n              { \"from\": \"n3\", \"to\": \"n4\", \"label\": \"reduces net exports\" },\n              { \"from\": \"n2\", \"to\": \"n5\", \"label\": \"lowers demand\" },\n              { \"from\": \"n4\", \"to\": \"n5\", \"label\": \"lowers demand\" }\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Closed vs Open Economy Interest‑Rate Channels\",\n      \"source_segment_ids\": [\"EXP_0002\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"EXP_0002\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"EXP_0002\",\n              \"quote\": \"In a closed economy the interest‑rate channel operated only through reduced investment.\"\n            },\n            {\n              \"note_id\": \"EXP_0002\",\n              \"quote\": \"In an open economy a second channel appears: a higher interest rate raises the exchange rate, making exports more expensive and imports cheaper, so net exports fall.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Interest‑Rate Channels by Economy Type\",\n            \"headers\": [\"Economy\", \"Channel(s)\"],\n            \"rows\": [\n              [\n                \"Closed economy\",\n                \"investment falls\"\n              ],\n              [\n                \"Open economy\",\n                \"investment falls; exchange‑rate appreciation → net exports fall\"\n              ]\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visual units. Identify comparisons/processes. From primary notes: interest rate increase reduces aggregate demand via two channels: investment fall and exchange-rate appreciation leading to net exports decline. That's a flowchart: interest rate up -> investment falls -> aggregate demand down; also interest rate up -> exchange rate appreciates -> net exports decline -> aggregate demand down. Could make flowchart.\n\nAlso maybe table comparing closed vs open economy channels. Evidence: EXP_0002 describes closed economy only investment, open economy also exchange rate. Could table with Item: Closed economy, Open economy; Property: Channels; Description. Use quotes.\n\nWe need units only for visuals. Provide two units: one flowchart, one table.\n\nGather source_segment_ids: use note IDs. For flowchart, earliest supporting note is CON_0040 (unresolved true) but unresolved? It is unresolved true, but still source? Probably skip unresolved? The instruction: skip notes marked unresolved. So cannot use CON_0040. Use EXP_0002 (unresolved false) provides both channels. Also CON_0048 etc. Use earliest ID among used notes that are not unresolved: EXP_0002 id. So unit source_segment_ids include EXP_0002, CON_0048, CON_0049 maybe.\n\nTable: use EXP_0002 and maybe CON_0040 unresolved can't. Use EXP_0002 and maybe other note? Could use CON_0040 unresolved, skip. Use EXP_0002 only gives both. Might need separate rows: Closed economy: \"investment falls\". Open economy: \"investment falls and exchange rate appreciates, net exports decline\". Use quotes from EXP_0002 for both? It contains both. Might split.\n\nWe'll create table with rows using quotes: For closed: \"In a closed economy the interest‑rate channel operated only through reduced investment.\" For open: \"In an open economy a second channel appears: a higher interest rate raises the exchange rate, making exports more expensive and imports cheaper, so net exports fall.\"\n\nProvide evidence entries with note_id and quote.\n\nNow construct JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794806803,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_90620edd96",
+  "usage": {
+    "completion_tokens": 1264,
+    "prompt_tokens": 3001,
+    "total_tokens": 4265,
+    "completion_time": 2.617539021,
+    "completion_tokens_details": {
+      "reasoning_tokens": 425
+    },
+    "prompt_time": 0.132210962,
+    "prompt_tokens_details": null,
+    "queue_time": 0.370746033,
+    "total_time": 2.749749983
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hd4r72e9d9d4bm7wcrha3b",
+    "debug": null,
+    "seed": 703495187,
+    "usage": null
+  }
+}

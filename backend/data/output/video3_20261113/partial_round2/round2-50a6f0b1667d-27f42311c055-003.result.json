@@ -1,0 +1,90 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0051"
+      ],
+      "reason": "Source note is unresolved"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Onboarding Workflow for a New Intern",
+      "source_segment_ids": [
+        "FCT_0051"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0051",
+            "FCT_0053"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0051",
+              "exact_quote": "it is taking the question which is on board the new intern joining to it and it is using this tool to send a welcome meeting then you want to create intense profile in HR management system ... then it will create a IT helpdesk ticket to get a Wi‑Fi credentials email, Slack access."
+            },
+            {
+              "note_id": "FCT_0053",
+              "exact_quote": "Goal‑oriented planning is a characteristic of agentic AI where the user provides a goal (e.g., onboarding a new intern) and the system autonomously decides the sequence of actions to achieve it."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Onboarding Workflow for a New Intern",
+            "direction": "top-down",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "Receive onboarding request (new intern)"
+              },
+              {
+                "id": "n2",
+                "label": "Send welcome meeting invitation"
+              },
+              {
+                "id": "n3",
+                "label": "Create intern profile in HRMS"
+              },
+              {
+                "id": "n4",
+                "label": "Create IT helpdesk ticket for Wi‑Fi credentials"
+              },
+              {
+                "id": "n5",
+                "label": "Send Slack access email"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": "trigger"
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": "after meeting scheduled"
+              },
+              {
+                "from": "n3",
+                "to": "n4",
+                "label": "upon profile creation"
+              },
+              {
+                "from": "n4",
+                "to": "n5",
+                "label": "after ticket resolved"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

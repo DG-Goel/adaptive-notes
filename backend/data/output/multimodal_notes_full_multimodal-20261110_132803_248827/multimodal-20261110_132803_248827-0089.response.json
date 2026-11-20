@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-06fe7926-1893-49ab-8cd6-f6ffab936950",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00058\"],\n      \"reason\": \"ASR speech evidence; exact factual statement unavailable without verification.\"\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00059\"],\n      \"reason\": \"ASR speech evidence; exact factual statement unavailable without verification.\"\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00060\"],\n      \"reason\": \"ASR speech evidence; exact factual statement unavailable without verification.\"\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00061\"],\n      \"reason\": \"ASR speech evidence; exact factual statement unavailable without verification.\"\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00057\"],\n      \"reason\": \"Context excerpt does not contain verifiable educational content.\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with empty categories likely, and abstentions for missing code/formula. No claims given. So all categories empty, claims empty, abstentions for each primary source due to ASR speech. Provide abstentions.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317591,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a7bb72c24",
+  "usage": {
+    "completion_tokens": 366,
+    "prompt_tokens": 3002,
+    "total_tokens": 3368,
+    "completion_time": 0.772519315,
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_time": 0.198402209,
+    "prompt_tokens_details": null,
+    "queue_time": 0.162595689,
+    "total_time": 0.970921524
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72tk88xe5dvfjacvns5ecp0",
+    "debug": null,
+    "seed": 1907901277,
+    "usage": null
+  }
+}

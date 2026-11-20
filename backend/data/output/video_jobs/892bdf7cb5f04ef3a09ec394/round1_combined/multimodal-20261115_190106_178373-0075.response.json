@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-4ce26ae1-1cc3-41d5-b805-f1a26711aac7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"I0001\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"China reopening leads to increased demand for commodities\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I0001\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Increased Chinese demand boosts exports from commodity‑producing economies\",\n      \"refs\": [\"Q0001\", \"Q0003\", \"Q0004\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I0002\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Exports are increasing\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What is the main reason for the boom in emerging markets according to the speaker?\",\n      \"answer\": \"Increased demand from China due to reopening\",\n      \"distractors\": [\n        \"Decrease in oil prices\",\n        \"Technological innovation\",\n        \"Lower interest rates\"\n      ],\n      \"explanation\": \"The speaker says China is reopening, creating a big domestic boom that raises demand for goods from emerging‑market commodity producers.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"China reopening impact\",\n      \"refs\": [\"Q0000\", \"Q0001\"]\n    },\n    {\n      \"question\": \"According to the speaker, what happens when a trading partner’s output and income rise?\",\n      \"answer\": \"They consume more, including imports\",\n      \"distractors\": [\n        \"They save more\",\n        \"They reduce imports\",\n        \"They focus only on domestic production\"\n      ],\n      \"explanation\": \"The speaker notes that higher output and income lead the partner to consume everything, which includes imported goods.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Effect of partner income rise\",\n      \"refs\": [\"Q0003\"]\n    },\n    {\n      \"question\": \"Which economies benefit from China's increased demand?\",\n      \"answer\": \"Commodity‑producing economies\",\n      \"distractors\": [\n        \"Service‑based economies\",\n        \"Agricultural‑only economies\",\n        \"Technology exporters\"\n      ],\n      \"explanation\": \"The speaker mentions that the demand boost is especially good for commodity‑producing economies.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"Beneficiaries of Chinese demand\",\n      \"refs\": [\"Q0001\"]\n    },\n    {\n      \"question\": \"What does the speaker identify as the result of the increased demand?\",\n      \"answer\": \"Higher exports\",\n      \"distractors\": [\n        \"Lower inflation\",\n        \"Reduced trade deficits\",\n        \"Increased imports\"\n      ],\n      \"explanation\": \"The speaker links the rising Chinese demand to an increase in exports.\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"Outcome of demand rise\",\n      \"refs\": [\"Q0005\", \"Q0006\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? The excerpts talk about China reopening, boom, demand, exports. Could make concepts: \"China reopening leads to increased demand for commodities\". Provide concept_name and content. Use rows.\n\nCreate item e.g., item \"I0001\". category concepts, fields concept_name and content.\n\nRow for concept_name: text \"China reopening leads to increased demand for commodities\". refs Q0000. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\nRow for content: combine maybe from Q0001 etc. Provide text \"Increased Chinese demand boosts exports from commodity‑producing economies\". refs Q0001,Q0003,Q0004. basis direct_entailment? It's inferred but explicit? It's stated. Use direct_entailment. availability SOURCE_SUPPORTED.\n\nAlso facts: fact_text \"Exports are increasing\". from Q0006. Provide.\n\nRow fact: text \"Exports are increasing\". refs Q0006. basis explicit.\n\nNow quiz: need 4 questions. Use these excerpts.\n\nQ1: What is the main reason for the boom in emerging markets according to the speaker? Answer: Increased demand from China due to reopening. Distractors: Decrease in oil prices; Technological innovation; Lower interest rates. Bloom: Understand. refs Q0000,Q0001.\n\nQ2: According to the speaker, what happens when a trading partner’s output and income rise? Answer: They consume more, including imports. Distractors: They save more; They reduce imports; They focus on domestic production only. Bloom: Remember. refs Q0003.\n\nQ3: Which economies benefit from China's increased demand? Answer: Commodity‑producing economies. Distractors: Service‑based economies; Agricultural only economies; Technology exporters. Bloom: Apply. refs Q0001.\n\nQ4: What does the speaker identify as the result of the increased demand? Answer: Higher exports. Distractors: Lower inflation; Reduced trade deficits; Increased imports. Bloom: Analyze. refs Q0005,Q0006.\n\nProvide rows, abstentions empty, excluded empty.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794769674,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5a93aea882",
+  "usage": {
+    "completion_tokens": 1265,
+    "prompt_tokens": 2277,
+    "total_tokens": 3542,
+    "completion_time": 2.641445434,
+    "completion_tokens_details": {
+      "reasoning_tokens": 432
+    },
+    "prompt_time": 0.15396186,
+    "prompt_tokens_details": null,
+    "queue_time": 0.173387589,
+    "total_time": 2.795407294
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g9qnajegbst4twnm522w1b",
+    "debug": null,
+    "seed": 1281059548,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-65bb81d1-af70-494c-9f53-fb67d13a8d06",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"constant\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"definition_text\": {\n        \"text\": \"A variable declared with the keyword final, which cannot be changed after it is initialized.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"A two‑dimensional array in Java requires two pairs of square brackets, one for each dimension.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"To access an element in a two‑dimensional array you must supply two indexes: the row index followed by the column index.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Arrays.deepToString can be used to obtain a readable string representation of a multi‑dimensional array.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"A two‑dimensional array can be initialized with curly‑brace syntax, where each row is itself an array literal.\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In Java, a floating‑point literal must be suffixed with F (or f) to be treated as a float; otherwise it is a double.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract facts, definitions, etc. From excerpts about Java arrays and constants. Identify facts: multi-dimensional array creation, need two indexes, use Arrays.deepToString, curly brace syntax, constants with final. Create facts entries.\n\nNo definitions? Could define constant. We'll make definitions: term \"constant\" with definition. Use excerpts.\n\nProceed JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036164,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_86dc843b12",
+  "usage": {
+    "completion_tokens": 509,
+    "prompt_tokens": 3049,
+    "total_tokens": 3558,
+    "completion_time": 1.086636422,
+    "completion_tokens_details": {
+      "reasoning_tokens": 73
+    },
+    "prompt_time": 0.134454737,
+    "prompt_tokens_details": null,
+    "queue_time": 0.167687967,
+    "total_time": 1.221091159
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6te6rzwejkvhtnpeeg8agr0",
+    "debug": null,
+    "seed": 1136886267,
+    "usage": null
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "operations": [
+    {
+      "id": "offline-java-0000",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "a20074bc353e5591dd9e92ca8a9583f453125d6c0b2aba13cb70957a34030301",
+      "state": "validation_failed",
+      "created": 1794232976.6858745,
+      "completed": 1794232976.6858745,
+      "validation": "validation_failed"
+    },
+    {
+      "id": "offline-java-0001",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "8e652441efaed0795261e7a12a18d3cbef4bd15d2e7efab4208f91480c690255",
+      "state": "success",
+      "created": 1794232976.6858745,
+      "completed": 1794232976.6858745,
+      "validation": "passed_mechanical_only"
+    },
+    {
+      "id": "offline-java-0002",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "0a7380597934a978c12ae5c5d010804449e3652f73962f88e99cd8901ec1a2b5",
+      "state": "success",
+      "created": 1794233036.6858745,
+      "completed": 1794233036.6858745,
+      "validation": "passed_mechanical_only"
+    },
+    {
+      "id": "offline-java-0003",
+      "org": "org-2",
+      "slot": 2,
+      "request_hash": "e0ce45221ca17557e1d89e410547ee4d72582d1f629a3e38e67b0f4bb6b70da0",
+      "state": "success",
+      "created": 1794233036.6858745,
+      "completed": 1794233036.6858745,
+      "validation": "passed_mechanical_only"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "offline-java-0000",
+      "number": 1,
+      "created": 1794232976.6858745,
+      "dispatched": 1794232976.6858745,
+      "completed": 1794232976.6858745,
+      "input_reserved": 2567,
+      "output_reserved": 4000,
+      "input_actual": 100,
+      "output_actual": 200,
+      "reasoning": 40,
+      "charged": 300,
+      "http_status": 200,
+      "finish": "length",
+      "duration": 0.0,
+      "category": "response"
+    },
+    {
+      "request_id": "offline-java-0001",
+      "number": 1,
+      "created": 1794232976.6858745,
+      "dispatched": 1794232976.6858745,
+      "completed": 1794232976.6858745,
+      "input_reserved": 2449,
+      "output_reserved": 4000,
+      "input_actual": 100,
+      "output_actual": 200,
+      "reasoning": 40,
+      "charged": 300,
+      "http_status": 200,
+      "finish": "stop",
+      "duration": 0.0,
+      "category": "response"
+    },
+    {
+      "request_id": "offline-java-0002",
+      "number": 1,
+      "created": 1794233036.6858745,
+      "dispatched": 1794233036.6858745,
+      "completed": 1794233036.6858745,
+      "input_reserved": 2449,
+      "output_reserved": 4000,
+      "input_actual": 100,
+      "output_actual": 200,
+      "reasoning": 40,
+      "charged": 300,
+      "http_status": 200,
+      "finish": "stop",
+      "duration": 0.0,
+      "category": "response"
+    },
+    {
+      "request_id": "offline-java-0003",
+      "number": 1,
+      "created": 1794233036.6858745,
+      "dispatched": 1794233036.6858745,
+      "completed": 1794233036.6858745,
+      "input_reserved": 2567,
+      "output_reserved": 4000,
+      "input_actual": 100,
+      "output_actual": 200,
+      "reasoning": 40,
+      "charged": 300,
+      "http_status": 200,
+      "finish": "stop",
+      "duration": 0.0,
+      "category": "response"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794232976.6858745,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"3e5acb95de32086396bb67cf6c1899ad24dcbe5697b12e700ef6dc044486fb47\", \"estimated_input\": 2567, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 4000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 2,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794232976.6858745,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 3,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794232976.6858745,
+      "event": "response_saved",
+      "details": "{\"sha256\": \"494a8d71cc2bc62256ddb10cdb59a7f167180f2e2d31b4950edfb143fa252b72\"}"
+    },
+    {
+      "sequence": 4,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794232976.6858745,
+      "event": "operation_error",
+      "details": "{\"message\": \"Response truncated due to max_tokens limit (input: 100, output: 200, total: 300). Increase max_tokens or reduce input size.\", \"type\": \"ValueError\"}"
+    },
+    {
+      "sequence": 5,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794232976.6858745,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"validation_failed\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"not_passed\"}"
+    },
+    {
+      "sequence": 6,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794232976.6858745,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"3e5acb95de32086396bb67cf6c1899ad24dcbe5697b12e700ef6dc044486fb47\", \"estimated_input\": 2449, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 4000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 7,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794232976.6858745,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 8,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794232976.6858745,
+      "event": "response_saved",
+      "details": "{\"sha256\": \"910a4d4bb1c2d72387c3819ccf8f239088ba55f2c38938ee257a92036c071445\"}"
+    },
+    {
+      "sequence": 9,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794232976.6858745,
+      "event": "quote_resolution",
+      "details": "{\"resolutions\": []}"
+    },
+    {
+      "sequence": 10,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794232976.6858745,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"success\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"passed_mechanical_only\"}"
+    },
+    {
+      "sequence": 11,
+      "request_id": "offline-java-0002",
+      "org": "org-1",
+      "created": 1794233036.6858745,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"3e5acb95de32086396bb67cf6c1899ad24dcbe5697b12e700ef6dc044486fb47\", \"estimated_input\": 2449, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 4000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 12,
+      "request_id": "offline-java-0002",
+      "org": "org-1",
+      "created": 1794233036.6858745,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 13,
+      "request_id": "offline-java-0002",
+      "org": "org-1",
+      "created": 1794233036.6858745,
+      "event": "response_saved",
+      "details": "{\"sha256\": \"910a4d4bb1c2d72387c3819ccf8f239088ba55f2c38938ee257a92036c071445\"}"
+    },
+    {
+      "sequence": 14,
+      "request_id": "offline-java-0002",
+      "org": "org-1",
+      "created": 1794233036.6858745,
+      "event": "quote_resolution",
+      "details": "{\"resolutions\": []}"
+    },
+    {
+      "sequence": 15,
+      "request_id": "offline-java-0002",
+      "org": "org-1",
+      "created": 1794233036.6858745,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"success\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"passed_mechanical_only\"}"
+    },
+    {
+      "sequence": 16,
+      "request_id": "offline-java-0003",
+      "org": "org-2",
+      "created": 1794233036.6858745,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"3e5acb95de32086396bb67cf6c1899ad24dcbe5697b12e700ef6dc044486fb47\", \"estimated_input\": 2567, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 4000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 17,
+      "request_id": "offline-java-0003",
+      "org": "org-2",
+      "created": 1794233036.6858745,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 18,
+      "request_id": "offline-java-0003",
+      "org": "org-2",
+      "created": 1794233036.6858745,
+      "event": "response_saved",
+      "details": "{\"sha256\": \"e862e944b96ddeecc515ffb967c9ea3967d672a11671bbceb96047676d8d3b41\"}"
+    },
+    {
+      "sequence": 19,
+      "request_id": "offline-java-0003",
+      "org": "org-2",
+      "created": 1794233036.6858745,
+      "event": "quote_resolution",
+      "details": "{\"resolutions\": []}"
+    },
+    {
+      "sequence": 20,
+      "request_id": "offline-java-0003",
+      "org": "org-2",
+      "created": 1794233036.6858745,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"success\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"passed_mechanical_only\"}"
+    }
+  ]
+}

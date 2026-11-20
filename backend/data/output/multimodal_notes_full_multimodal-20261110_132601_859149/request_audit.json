@@ -1,0 +1,75 @@
+{
+  "operations": [
+    {
+      "id": "multimodal-20261110_132601_859149-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "slot": 1,
+      "request_hash": "f7ca8be5eb9845e24d4fcd650a649dbca85058c30d12bf0de37dab9186e8a74c",
+      "state": "failed",
+      "created": 1794317209.036927,
+      "completed": 1794317218.7058053,
+      "validation": "failed"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "multimodal-20261110_132601_859149-0000",
+      "number": 1,
+      "created": 1794317209.036927,
+      "dispatched": 1794317218.4185574,
+      "completed": 1794317218.694805,
+      "input_reserved": 3456,
+      "output_reserved": 3000,
+      "input_actual": null,
+      "output_actual": null,
+      "reasoning": null,
+      "charged": 6456,
+      "http_status": 400,
+      "finish": null,
+      "duration": 0.26599999999962165,
+      "category": "permanent_request"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 979,
+      "request_id": "multimodal-20261110_132601_859149-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794317209.037937,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"9216844e49ad661bf9068cf391a39ad0728d7db6b54ffeb98aa05a362c9f812f\", \"estimated_input\": 3456, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 980,
+      "request_id": "multimodal-20261110_132601_859149-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794317218.4195397,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 981,
+      "request_id": "multimodal-20261110_132601_859149-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794317218.696806,
+      "event": "provider_error",
+      "details": "{\"category\": \"permanent_request\", \"error_code\": null, \"message\": \"Groq API call failed: Error code: 400 - {'error': {'message': \\\"invalid JSON schema for response_format: 'typed_claim_refs_v1': /$defs/examples/properties/example_type/anyOf: anyOf branches must be disambiguated via a required discriminator (const/enum) or by key-set exclusion with additionalProperties:false\\\", 'type': 'invalid_request_error', 'param': 'response_format', 'schema_path': '/$defs/examples/properties/example_type/anyOf', 'schema_path_segments': ['$', '$defs', 'examples', 'properties', 'example_type', 'anyOf'], 'schema_kind': 'anyOf'}}\", \"retry_after\": null, \"retry_after_header\": null, \"retryable\": false, \"status_code\": 400}"
+    },
+    {
+      "sequence": 982,
+      "request_id": "multimodal-20261110_132601_859149-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794317218.7058053,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"failed\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"not_passed\"}"
+    },
+    {
+      "sequence": 983,
+      "request_id": "multimodal-20261110_132601_859149-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1794317218.7148502,
+      "event": "operation_error",
+      "details": "{\"message\": \"Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': \\\"invalid JSON schema for response_format: 'typed_claim_refs_v1': /$defs/examples/properties/example_type/anyOf: anyOf branches must be disambiguated via a required discriminator (const/enum) or by key-set exclusion with additionalProperties:false\\\", 'type': 'invalid_request_error', 'param': 'response_format', 'schema_path': '/$defs/examples/properties/example_type/anyOf', 'schema_path_segments': ['$', '$defs', 'examples', 'properties', 'example_type', 'anyOf'], 'schema_kind': 'anyOf'}}\", \"type\": \"GroqProviderError\"}"
+    }
+  ]
+}

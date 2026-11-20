@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-12387911-50ad-4ab2-9ec2-1fbf1ee0b601",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"fact1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Here, that's not going to be enough, because we also have an exchange rate floating around.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"And we need to bring another equation here to deal with this new endogenous variable.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Well, it's the uncovered interest parity condition.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact4\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"And it says that the exchange rate is equal to that.\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact5\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"And now, then we open the capital account, and then people need to decide where they're going to invest their money.\",\n      \"refs\": [\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact6\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"But the expected rate of return has to be the same for like domestic goods.\",\n      \"refs\": [\"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, why is the current situation \\\"not going to be enough\\\"?\",\n      \"answer\": \"Because there is an exchange rate floating around.\",\n      \"distractors\": [\n        \"Because the interest rate is too high.\",\n        \"Because the capital account is closed.\",\n        \"Because the goods market is perfectly competitive.\"\n      ],\n      \"explanation\": \"The speaker explicitly says the situation is insufficient because an exchange rate is also present.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"exchange rate relevance\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"What extra equation does the speaker say is needed for the new endogenous variable?\",\n      \"answer\": \"The uncovered interest parity condition.\",\n      \"distractors\": [\n        \"The Phillips curve.\",\n        \"The money market equilibrium.\",\n        \"The consumption function.\"\n      ],\n      \"explanation\": \"The speaker asks for the extra equation and identifies it as the uncovered interest parity condition.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"additional equation\",\n      \"refs\": [\"Q0001\", \"Q0003\"]\n    },\n    {\n      \"question\": \"What must be the same for domestic goods according to the speaker?\",\n      \"answer\": \"The expected rate of return.\",\n      \"distractors\": [\n        \"The price level.\",\n        \"The marginal propensity to consume.\",\n        \"The unemployment rate.\"\n      ],\n      \"explanation\": \"The speaker states that the expected rate of return has to be the same for like domestic goods.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"expected rate of return\",\n      \"refs\": [\"Q0013\"]\n    },\n    {\n      \"question\": \"When the capital account is opened, what decision do people need to make?\",\n      \"answer\": \"Where they are going to invest their money.\",\n      \"distractors\": [\n        \"How much to save.\",\n        \"Which currency to use.\",\n        \"What price to set for goods.\"\n      ],\n      \"explanation\": \"The speaker notes that after opening the capital account, people need to decide where to invest their money.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"capital account decisions\",\n      \"refs\": [\"Q0011\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? There's mention of uncovered interest parity condition. So definition maybe. Extract term and definition? Not fully given. We have quote: \"Well, it's the uncovered interest parity condition.\" No definition. So abstention for definition. We can create concept: concept_name \"uncovered interest parity condition\", content maybe from quote? content: it's the uncovered interest parity condition. That's just name. Might be insufficient. Probably abstain.\n\nWe have facts: exchange rate floating around, need extra equation, etc. Could create fact rows.\n\nLet's produce rows for facts: each quote as fact_text.\n\nWe'll assign item \"item1\" for each fact? Could use same item per category? Probably separate items.\n\nWe'll produce rows with availability SOURCE_MISSING? The quotes are primary source, so availability SOURCE_SUPPORTED. basis explicit. literal_kind verbal. instructional_role null. related_refs empty.\n\nCreate rows for each fact.\n\nAlso maybe relationship: subject \"exchange rate\", object \"uncovered interest parity condition\", relationship_type \"related_to\". But not explicit.\n\nProbably just facts.\n\nQuiz: need 4 questions. Use excerpts.\n\nQ1: What does the speaker say is not enough? Answer: \"the exchange rate floating around\". Distractors.\n\nQ2: What extra equation is needed? Answer: uncovered interest parity condition.\n\nQ3: According to the speaker, what must be equal for domestic goods? Answer: expected rate of return.\n\nQ4: When opening capital account, what do people need to decide? Answer: where to invest their money.\n\nProvide refs.\n\nNow construct JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794808521,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_86dc843b12",
+  "usage": {
+    "completion_tokens": 1506,
+    "prompt_tokens": 2516,
+    "total_tokens": 4022,
+    "completion_time": 3.191773751,
+    "completion_tokens_details": {
+      "reasoning_tokens": 323
+    },
+    "prompt_time": 0.152369481,
+    "prompt_tokens_details": null,
+    "queue_time": 0.169277078,
+    "total_time": 3.344143232
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hes5ajetcax62gz1ref1vw",
+    "debug": null,
+    "seed": 1957127725,
+    "usage": null
+  }
+}

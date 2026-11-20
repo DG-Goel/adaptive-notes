@@ -1,0 +1,174 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "CON_0001",
+        "CON_0002",
+        "FCT_0001",
+        "FCT_0002",
+        "FCT_0003",
+        "FCT_0004",
+        "FCT_0049"
+      ],
+      "reason": "Evidence must be exact Round 1 note text"
+    },
+    {
+      "note_ids": [
+        "CON_0009",
+        "CON_0010"
+      ],
+      "reason": "Unsupported visual label or value"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Domestic vs Foreign Bond Return Comparison",
+      "source_segment_ids": [
+        "CON_0001",
+        "CON_0002",
+        "FCT_0001",
+        "FCT_0002",
+        "FCT_0003",
+        "FCT_0004",
+        "FCT_0049"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0001",
+            "CON_0002",
+            "FCT_0001",
+            "FCT_0002",
+            "FCT_0003",
+            "FCT_0004",
+            "FCT_0049"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "CON_0001",
+              "exact_quote": "the idea that an economy can trade goods and financial assets with foreign economies, requiring comparison of relative prices and returns"
+            },
+            {
+              "note_id": "CON_0002",
+              "exact_quote": "the relative price of domestic goods versus foreign goods, expressed in a common currency"
+            },
+            {
+              "note_id": "FCT_0002",
+              "exact_quote": "UK bond offers a 10 percent interest rate. US bond offers a 5 percent interest rate."
+            },
+            {
+              "note_id": "FCT_0003",
+              "exact_quote": "If I go the UK bond route, I get 10% in return in the bond, minus 5% in the capital loss due to the appreciation of the dollar."
+            },
+            {
+              "note_id": "FCT_0004",
+              "exact_quote": "So net I get 5% as well."
+            },
+            {
+              "note_id": "FCT_0049",
+              "exact_quote": "So I divide this by the expected exchange rate it next year, and then I get that's my return in dollars of having gone the UK bond route."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Return Comparison of Domestic (US) vs Foreign (UK) Bonds",
+            "headers": [
+              "Asset",
+              "Nominal Interest Rate",
+              "Currency Effect",
+              "Net Return (approx.)"
+            ],
+            "rows": [
+              [
+                "US Bond (Domestic)",
+                "5 %",
+                "None (base currency)",
+                "5 %"
+              ],
+              [
+                "UK Bond (Foreign)",
+                "10 %",
+                "–5 % (dollar appreciation)",
+                "5 %"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Uncovered Interest Parity (UIP) Flowchart",
+      "source_segment_ids": [
+        "CON_0009",
+        "CON_0010"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0009",
+            "CON_0010"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "CON_0009",
+              "exact_quote": "That's called, and it's a very important concept in international finance, the uncovered interest parity condition."
+            },
+            {
+              "note_id": "CON_0010",
+              "exact_quote": "In equilibrium, the domestic and foreign interest rates adjusted for expected currency appreciation/depreciation are equal."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Uncovered Interest Parity Relationship",
+            "direction": "top-down",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "Domestic interest rate (i_d)"
+              },
+              {
+                "id": "n2",
+                "label": "Foreign interest rate (i_f)"
+              },
+              {
+                "id": "n3",
+                "label": "Expected exchange rate change (E[e_{t+1}]/e_t)"
+              },
+              {
+                "id": "n4",
+                "label": "UIP condition: i_d = i_f + expected depreciation"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n4",
+                "label": "input"
+              },
+              {
+                "from": "n2",
+                "to": "n4",
+                "label": "input"
+              },
+              {
+                "from": "n3",
+                "to": "n4",
+                "label": "adjusts"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

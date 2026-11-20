@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-bf297d15-4ff8-4962-89e1-814d65b04416",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The exchange rate will fall when the foreign interest rate goes up.\",\n      \"refs\": [\"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"The exchange rate is depreciating.\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"explanations\",\n      \"field\": \"explanation_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When interest rates are equal internationally, the exchange rate equals the expected exchange rate.\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The US interest rate is stabilizing while Europe is hiking more.\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Exchange rate depreciation\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A decline in the value of a currency relative to another currency.\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What happens to the exchange rate when the foreign interest rate increases?\",\n      \"answer\": \"It falls (depreciates).\",\n      \"distractors\": [\n        \"It rises (appreciates).\",\n        \"It stays unchanged.\",\n        \"It becomes more volatile.\"\n      ],\n      \"explanation\": \"The speaker states that when the foreign interest rate goes up, the exchange rate will fall, indicating depreciation.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Effect of foreign interest rate on exchange rate\",\n      \"refs\": [\"Q0008\"]\n    },\n    {\n      \"question\": \"Which country's interest rate is described as stabilizing?\",\n      \"answer\": \"The United States.\",\n      \"distractors\": [\n        \"Europe.\",\n        \"Japan.\",\n        \"Canada.\"\n      ],\n      \"explanation\": \"The speaker says, \\\"The US is sort of stabilizing here, and Europe is beginning to hike a little more than the US.\\\"\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Interest rate trends by region\",\n      \"refs\": [\"Q0007\"]\n    },\n    {\n      \"question\": \"According to the speaker, what is the relationship between equal international interest rates and the exchange rate?\",\n      \"answer\": \"The exchange rate equals the expected exchange rate.\",\n      \"distractors\": [\n        \"The exchange rate becomes unpredictable.\",\n        \"The exchange rate doubles.\",\n        \"The exchange rate falls sharply.\"\n      ],\n      \"explanation\": \"The speaker notes, \\\"We start from interest rate equal to international interest rate, therefore, the exchange rate is equal to expected exchange rate.\\\"\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Interest parity condition\",\n      \"refs\": [\"Q0004\"]\n    },\n    {\n      \"question\": \"What term does the speaker use to describe the dollar’s movement when the foreign interest rate rises?\",\n      \"answer\": \"Depreciating.\",\n      \"distractors\": [\n        \"Appreciating.\",\n        \"Stabilizing.\",\n        \"Volatile.\"\n      ],\n      \"explanation\": \"The speaker says, \\\"So that means the exchange rate is depreciating\\\" and later \\\"and the dollar is depreciating.\\\"\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Currency movement terminology\",\n      \"refs\": [\"Q0009\", \"Q0010\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? The excerpts talk about exchange rate depreciation when foreign interest rate rises. So we can create facts, explanations. For example fact: exchange rate falls when foreign interest rate rises. Provide rows.\n\nItem label maybe \"item1\". We'll create facts.\n\nRows: fact_text from Q0008 and Q0009. Provide availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null, related_refs empty.\n\nAlso concept: \"exchange rate depreciation\". concept_name from Q0009? Provide content.\n\nLet's craft.\n\nQuiz: need 4 questions. Use excerpts.\n\nQ1: What happens to exchange rate when foreign interest rate increases? Answer: It falls/depreciates. Distractors: rises/appreciates, stays same, becomes volatile. Bloom: Understand.\n\nQ2: Which country’s interest rate is described as stabilizing? Answer: US. Distractors: Europe, Japan, Canada.\n\nQ3: According to the speaker, what is the relationship between interest rate equality and exchange rate? Answer: When interest rates are equal, exchange rate equals expected exchange rate. Distractors etc.\n\nQ4: What term describes the dollar’s movement when foreign interest rate rises? Answer: Depreciating. Distractors: Appreciating, Stable, Volatile.\n\nProvide refs primary first.\n\nNow rows: need required fields per category. We'll create facts and explanations.\n\nCreate fact rows for each fact.\n\nAlso explanation row: topic \"effect of foreign interest rate on exchange rate\", explanation_text from Q0008.\n\nLet's produce.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794806362,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_90620edd96",
+  "usage": {
+    "completion_tokens": 1488,
+    "prompt_tokens": 2517,
+    "total_tokens": 4005,
+    "completion_time": 3.108070054,
+    "completion_tokens_details": {
+      "reasoning_tokens": 313
+    },
+    "prompt_time": 0.113321077,
+    "prompt_tokens_details": null,
+    "queue_time": 0.375549928,
+    "total_time": 3.221391131
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hcq90eetzv23rwczsvg1gq",
+    "debug": null,
+    "seed": 596805502,
+    "usage": null
+  }
+}

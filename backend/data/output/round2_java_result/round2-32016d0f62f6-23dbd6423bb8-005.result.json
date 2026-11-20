@@ -1,0 +1,290 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0154"
+      ],
+      "reason": "Candidate requires review"
+    },
+    {
+      "note_ids": [
+        "FCT_0155"
+      ],
+      "reason": "Candidate requires review"
+    },
+    {
+      "note_ids": [
+        "FCT_0159",
+        "FCT_0165",
+        "FCT_0166"
+      ],
+      "reason": "Candidate requires review"
+    },
+    {
+      "note_ids": [
+        "FCT_0169",
+        "FCT_0170"
+      ],
+      "reason": "Candidate requires review"
+    },
+    {
+      "note_ids": [
+        "FCT_0162",
+        "FCT_0163",
+        "FCT_0161"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Java Array",
+      "source_segment_ids": [
+        "FCT_0154"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0154"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0154",
+              "exact_quote": "Arrays are used to store a list of items such as numbers, people, or messages."
+            }
+          ],
+          "payload": {
+            "type": "data_structure",
+            "title": "Java Array",
+            "subtype": [
+              "array"
+            ],
+            "values": [
+              "numbers",
+              "people",
+              "messages"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Array Creation Syntax",
+      "source_segment_ids": [
+        "FCT_0155"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0155"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0155",
+              "exact_quote": "To create an array you place square brackets after the type and use the new operator with the type repeated and the size in brackets."
+            }
+          ],
+          "payload": {
+            "type": "data_structure",
+            "title": "Array Creation",
+            "subtype": [
+              "array"
+            ],
+            "values": [
+              "int[] numbers = new int[5];"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Array Length and Fixed Size",
+      "source_segment_ids": [
+        "FCT_0159",
+        "FCT_0165",
+        "FCT_0166"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0159",
+            "FCT_0165",
+            "FCT_0166"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0159",
+              "exact_quote": "When creating an array, you must specify the size (number of elements) you want it to hold."
+            },
+            {
+              "note_id": "FCT_0165",
+              "exact_quote": "The length of a Java array can be obtained via its length field."
+            },
+            {
+              "note_id": "FCT_0166",
+              "exact_quote": "Java arrays have a fixed size; once created, their length cannot be changed."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Array Size Properties",
+            "headers": [
+              "Property",
+              "Description"
+            ],
+            "rows": [
+              [
+                "Specify size at creation",
+                "When creating an array, you must specify the size (number of elements) you want it to hold."
+              ],
+              [
+                "Access length",
+                "The length of a Java array can be obtained via its length field."
+              ],
+              [
+                "Fixed after creation",
+                "Java arrays have a fixed size; once created, their length cannot be changed."
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Multi‑Dimensional Array Declaration",
+      "source_segment_ids": [
+        "FCT_0169",
+        "FCT_0170"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0169",
+            "FCT_0170"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0169",
+              "exact_quote": "Java supports multi‑dimensional arrays; a two‑dimensional array is declared with two pairs of square brackets."
+            },
+            {
+              "note_id": "FCT_0170",
+              "exact_quote": "Accessing an element in a multi‑dimensional array requires providing an index for each dimension."
+            }
+          ],
+          "payload": {
+            "type": "architecture",
+            "title": "Two‑Dimensional Array Structure",
+            "direction": "vertical",
+            "components": [
+              {
+                "id": "row0",
+                "label": "int[0][]"
+              },
+              {
+                "id": "row1",
+                "label": "int[1][]"
+              }
+            ],
+            "connections": [
+              {
+                "from": "row0",
+                "to": "col0",
+                "label": "[0][0]"
+              },
+              {
+                "from": "row0",
+                "to": "col1",
+                "label": "[0][1]"
+              },
+              {
+                "from": "row1",
+                "to": "col0",
+                "label": "[1][0]"
+              },
+              {
+                "from": "row1",
+                "to": "col1",
+                "label": "[1][1]"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Default Initialization Values",
+      "source_segment_ids": [
+        "FCT_0162",
+        "FCT_0163",
+        "FCT_0161"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0162",
+            "FCT_0163",
+            "FCT_0161"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0162",
+              "exact_quote": "If the array type is boolean, all items are initialized to false by default."
+            },
+            {
+              "note_id": "FCT_0163",
+              "exact_quote": "If you have a string array, all items are initialized to an empty string by default."
+            },
+            {
+              "note_id": "FCT_0161",
+              "exact_quote": "the first two items are initialized, the others are set to 0 by default, because here we're dealing with an integer array"
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Default Values by Type",
+            "headers": [
+              "Array Type",
+              "Default Value"
+            ],
+            "rows": [
+              [
+                "boolean[]",
+                "false"
+              ],
+              [
+                "String[]",
+                "\"\" (empty string)"
+              ],
+              [
+                "int[]",
+                "0"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

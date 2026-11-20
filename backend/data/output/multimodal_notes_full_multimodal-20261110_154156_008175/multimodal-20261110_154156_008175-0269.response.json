@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-4f31c758-8ffb-477e-aa4f-a40f6abcbf95",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00102\"],\n      \"reason\": \"No definition teaching found in the provided primary excerpts.\"\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract definitions. The excerpts are about fizzbuzz logic, not definitions. Likely no definitions, so items empty, abstentions maybe for missing definitions? We must abstain for missing part of actual teaching point? There's no definition teaching, so we can leave items empty and no abstentions? Probably abstain that definitions missing. Provide abstention with availability SOURCE_MISSING? source_ids primary. Reason \"no definition provided\".",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326624,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_19b184c447",
+  "usage": {
+    "completion_tokens": 165,
+    "prompt_tokens": 3811,
+    "total_tokens": 3976,
+    "completion_time": 0.34659035,
+    "completion_tokens_details": {
+      "reasoning_tokens": 87
+    },
+    "prompt_time": 0.36106293,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "queue_time": 0.383020372,
+    "total_time": 0.70765328
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7336wvceqy8xrzcv09zd6ch",
+    "debug": null,
+    "seed": 894532865,
+    "usage": null
+  }
+}

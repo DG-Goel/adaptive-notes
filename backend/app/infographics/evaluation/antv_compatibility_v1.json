@@ -1,0 +1,164 @@
+{
+  "antv_version": "0.2.20",
+  "tarball": "https://registry.npmjs.org/@antv/infographic/-/infographic-0.2.20.tgz",
+  "tarball_sha256": "cb82ca6a37be7c21ab3d2e5caa495cc6546441d30c214f261d4c732db465696e",
+  "sources": [
+    "https://github.com/antvis/Infographic",
+    "https://infographic.antv.vision/learn/data",
+    "https://github.com/antvis/Infographic/tree/main/skills/infographic-syntax-creator"
+  ],
+  "inspected_package_files": [
+    "src/types/data.ts",
+    "src/templates/built-in.ts",
+    "src/templates/hierarchy-mindmap.ts",
+    "src/templates/hierarchy-tree.ts",
+    "src/templates/hierarchy-structure.ts",
+    "src/templates/relation-dagre-flow.ts",
+    "src/templates/sequence-interaction.ts",
+    "src/templates/compare-quadrant.ts",
+    "src/templates/chart-pie.ts",
+    "src/designs/structures/hierarchy-structure.tsx",
+    "src/designs/structures/sequence-interaction.tsx",
+    "src/designs/structures/chart-line.tsx",
+    "src/designs/structures/compare-quadrant.tsx"
+  ],
+  "templates": [
+    {
+      "code": "A1",
+      "identifier": "hierarchy-mindmap-branch-gradient-capsule-item",
+      "source_registration": "verified including dynamic family expansion",
+      "native_mapping": "root",
+      "limitations": "No semantic suitability guarantee from structural validation.",
+      "description_support": "native desc; rendering behavior pending browser verification",
+      "browser_status": "not-tested-phase7"
+    },
+    {
+      "code": "A2",
+      "identifier": "hierarchy-tree-curved-line-rounded-rect-node",
+      "source_registration": "verified including dynamic family expansion",
+      "native_mapping": "root",
+      "limitations": "No semantic suitability guarantee from structural validation.",
+      "description_support": "native desc; rendering behavior pending browser verification",
+      "browser_status": "not-tested-phase7"
+    },
+    {
+      "code": "A3",
+      "identifier": "hierarchy-structure",
+      "source_registration": "verified including dynamic family expansion",
+      "native_mapping": "items[].children[].children",
+      "limitations": "At most layer/group/component depth is mapped; deeper source requires support.",
+      "description_support": "structure consumes labels; adapter folds desc into labels",
+      "browser_status": "not-tested-phase7"
+    },
+    {
+      "code": "A4",
+      "identifier": "list-grid-badge-card",
+      "source_registration": "verified including dynamic family expansion",
+      "native_mapping": "items",
+      "limitations": "No semantic suitability guarantee from structural validation.",
+      "description_support": "native desc; rendering behavior pending browser verification",
+      "browser_status": "not-tested-phase7"
+    },
+    {
+      "code": "A5",
+      "identifier": "sequence-pyramid-simple",
+      "source_registration": "verified including dynamic family expansion",
+      "native_mapping": "sequences; order asc",
+      "limitations": "No semantic suitability guarantee from structural validation.",
+      "description_support": "native desc; rendering behavior pending browser verification",
+      "browser_status": "not-tested-phase7"
+    },
+    {
+      "code": "B1",
+      "identifier": "sequence-snake-steps-compact-card",
+      "source_registration": "verified including dynamic family expansion",
+      "native_mapping": "sequences; order asc",
+      "limitations": "No semantic suitability guarantee from structural validation.",
+      "description_support": "native desc; rendering behavior pending browser verification",
+      "browser_status": "not-tested-phase7"
+    },
+    {
+      "code": "B2",
+      "identifier": "sequence-circular-simple",
+      "source_registration": "verified including dynamic family expansion",
+      "native_mapping": "sequences; order asc",
+      "limitations": "Closure requires explicit source refs; references alone do not prove a genuine cycle.",
+      "description_support": "native desc; rendering behavior pending browser verification",
+      "browser_status": "not-tested-phase7"
+    },
+    {
+      "code": "B3",
+      "identifier": "sequence-timeline-rounded-rect-node",
+      "source_registration": "verified including dynamic family expansion",
+      "native_mapping": "sequences; order asc; time folded into label",
+      "limitations": "No semantic suitability guarantee from structural validation.",
+      "description_support": "native desc; rendering behavior pending browser verification",
+      "browser_status": "not-tested-phase7"
+    },
+    {
+      "code": "B4",
+      "identifier": "relation-dagre-flow-tb-badge-card",
+      "source_registration": "verified including dynamic family expansion",
+      "native_mapping": "nodes; relations from/to/direction forward",
+      "limitations": "No semantic suitability guarantee from structural validation.",
+      "description_support": "native desc; rendering behavior pending browser verification",
+      "browser_status": "not-tested-phase7"
+    },
+    {
+      "code": "B5",
+      "identifier": "sequence-interaction-default-compact-card",
+      "source_registration": "verified including dynamic family expansion",
+      "native_mapping": "items actor lanes with children action id/step; relations",
+      "limitations": "No semantic suitability guarantee from structural validation.",
+      "description_support": "lane desc supported; action desc folded into label",
+      "browser_status": "not-tested-phase7"
+    },
+    {
+      "code": "C1",
+      "identifier": "compare-binary-horizontal-simple-fold",
+      "source_registration": "verified including dynamic family expansion",
+      "native_mapping": "compares: two roots and child comparison points",
+      "limitations": "No semantic suitability guarantee from structural validation.",
+      "description_support": "native desc; rendering behavior pending browser verification",
+      "browser_status": "not-tested-phase7"
+    },
+    {
+      "code": "C2",
+      "identifier": "compare-quadrant-quarter-simple-card",
+      "source_registration": "verified including dynamic family expansion",
+      "native_mapping": "compares: four roots; dimensions in data desc",
+      "limitations": "No semantic suitability guarantee from structural validation.",
+      "description_support": "native desc; rendering behavior pending browser verification",
+      "browser_status": "not-tested-phase7"
+    },
+    {
+      "code": "C3",
+      "identifier": "chart-bar-plain-text",
+      "source_registration": "verified including dynamic family expansion",
+      "native_mapping": "values; exact numeric text retained in labels",
+      "limitations": "No semantic suitability guarantee from structural validation.",
+      "description_support": "native desc; rendering behavior pending browser verification",
+      "browser_status": "not-tested-phase7"
+    },
+    {
+      "code": "C4",
+      "identifier": "chart-line-plain-text",
+      "source_registration": "verified including dynamic family expansion",
+      "native_mapping": "values in input order; progression in data desc",
+      "limitations": "Package places observations at equal index spacing, not a continuous numerical time axis.",
+      "description_support": "native desc; rendering behavior pending browser verification",
+      "browser_status": "not-tested-phase7"
+    },
+    {
+      "code": "C5",
+      "identifier": "chart-pie-donut-plain-text",
+      "source_registration": "verified including dynamic family expansion",
+      "native_mapping": "values; whole and unit in data desc",
+      "limitations": "Whole/exclusivity refs require later semantic verification; negative/zero-total values rejected.",
+      "description_support": "native desc; rendering behavior pending browser verification",
+      "browser_status": "not-tested-phase7"
+    }
+  ],
+  "browser_rendering_tested": false,
+  "package_installed": false
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-72302935-55c1-4a63-8872-e57405f42191",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"subject\": {\n        \"text\": \"A feedforward neural network passes information from input to hidden to output layers without loops.\",\n        \"refs\": [\"Q0001\"],\n        \"claims\": [\n          {\n            \"text\": \"A feedforward neural network passes information from input to hidden to output layers without loops.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0001\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"object\": {\n        \"text\": \"A recurrent neural network feeds the output back as input, creating a feedback loop over time.\",\n        \"refs\": [\"Q0002\", \"Q0004\", \"Q0006\", \"Q0008\"],\n        \"claims\": [\n          {\n            \"text\": \"A recurrent neural network feeds the output back as input, creating a feedback loop over time.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0002\", \"Q0004\", \"Q0006\", \"Q0008\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"relationship_type\": {\n        \"text\": \"The recurrent neural network extends the feedforward network by adding a feedback loop, making it a continuation of the basic feedforward architecture.\",\n        \"refs\": [\"Q0002\", \"Q0004\", \"Q0006\", \"Q0008\"],\n        \"claims\": [\n          {\n            \"text\": \"The recurrent neural network extends the feedforward network by adding a feedback loop, making it a continuation of the basic feedforward architecture.\",\n            \"basis\": \"direct_entailment\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"continuation\",\n            \"refs\": [\"Q0002\", \"Q0004\", \"Q0006\", \"Q0008\"],\n            \"related_refs\": [\"Q0001\"]\n          }\n        ]\n      },\n      \"description\": null,\n      \"content\": {\n        \"text\": \"Explanation of recurrent neural networks as feedback extensions of feedforward networks.\",\n        \"refs\": [\"Q0001\", \"Q0002\", \"Q0004\", \"Q0006\", \"Q0008\"],\n        \"claims\": [\n          {\n            \"text\": \"Recurrent neural networks are described as a feedback process analogous to adjusting a soup over time.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0002\", \"Q0008\"],\n            \"related_refs\": []\n          }\n        ]\n      }\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output relationships. Identify teaching: explanation of recurrent neural network as feedback loop. So subject maybe \"feedforward neural network\" object \"recurrent neural network\". relationship_type \"prerequisite\" or \"continuation\". Provide claims.\n\nWe'll create one item: subject claim from Q0001 describing feedforward NN. object claim from Q0002/Q0004 describing recurrent NN. relationship_type claim \"continuation\" or \"prerequisite\". Use explicit basis.\n\nProvide refs.\n\nAbstentions none. Excluded none.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794599871,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_b1dd3e7a63",
+  "usage": {
+    "completion_tokens": 757,
+    "prompt_tokens": 3120,
+    "total_tokens": 3877,
+    "completion_time": 1.584174821,
+    "completion_tokens_details": {
+      "reasoning_tokens": 110
+    },
+    "prompt_time": 0.122857002,
+    "prompt_tokens_details": null,
+    "queue_time": 0.378570973,
+    "total_time": 1.707031823
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b7spphe8sayw126xhmgvyp",
+    "debug": null,
+    "seed": 277392428,
+    "usage": null
+  }
+}

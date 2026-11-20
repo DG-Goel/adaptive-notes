@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-470f231c-cd87-4f87-8a48-4a380a3d1ce8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Comparison: Tool‑augmented chatbot vs. Agentic AI system\",\n      \"source_segment_ids\": [\"CON_0045\", \"CON_0046\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0045\", \"CON_0046\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0045\",\n              \"exact_quote\": \"tool augmented chatbot ... this is called tool augmented chatbot\"\n            },\n            {\n              \"note_id\": \"CON_0046\",\n              \"exact_quote\": \"So this is an agentic AI system and this chatbot is your AI agent.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Tool‑augmented chatbot vs. Agentic AI system\",\n            \"headers\": [\"Aspect\", \"Tool‑augmented chatbot\", \"Agentic AI system\"],\n            \"rows\": [\n              [\"Goal specification\", \"Simple task execution (no autonomous planning)\", \"User provides high‑level goal; system plans autonomously\"],\n              [\"Tool usage\", \"Uses a single tool per request\", \"Access to multiple tools, knowledge, memory\"],\n              [\"Autonomy\", \"Low – performs single step actions\", \"High – multi‑step reasoning and decision‑making\"],\n              [\"Planning\", \"None or trivial\", \"Goal‑oriented multi‑step planning\"],\n              [\"Typical description\", \"Chatbot that can call an API to retrieve info\", \"AI agent that can orchestrate workflows\"]\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Onboarding workflow for a new intern\",\n      \"source_segment_ids\": [\"EXM_0054\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"EXM_0054\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"EXM_0054\",\n              \"exact_quote\": \"create onboarding checklist, it will schedule welcoming meeting, it will send access request to IT department\"\n            },\n            {\n              \"note_id\": \"EXM_0054\",\n              \"exact_quote\": \"create intense profile in HR management system ... create IT helpdesk ticket to get a Wi‑Fi credentials email, Slack access\"\n            },\n            {\n              \"note_id\": \"EXM_0054\",\n              \"exact_quote\": \"order laptop and ID card\"\n            },\n            {\n              \"note_id\": \"EXM_0054\",\n              \"exact_quote\": \"onboard the new intern joining next Monday\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"sequence\",\n            \"title\": \"Onboarding steps for a new intern\",\n            \"participants\": [\n              {\"id\": \"user\", \"label\": \"User\"},\n              {\"id\": \"agent\", \"label\": \"AI Agent\"}\n            ],\n            \"events\": [\n              {\n                \"kind\": \"action\",\n                \"from\": \"user\",\n                \"to\": \"agent\",\n                \"text\": \"Request onboarding of new intern (next Monday)\"\n              },\n              {\n                \"kind\": \"action\",\n                \"from\": \"agent\",\n                \"to\": \"system\",\n                \"text\": \"Create onboarding checklist\"\n              },\n              {\n                \"kind\": \"action\",\n                \"from\": \"agent\",\n                \"to\": \"calendar\",\n                \"text\": \"Schedule welcoming meeting\"\n              },\n              {\n                \"kind\": \"action\",\n                \"from\": \"agent\",\n                \"to\": \"HRMS\",\n                \"text\": \"Create intern profile in HR management system\"\n              },\n              {\n                \"kind\": \"action\",\n                \"from\": \"agent\",\n                \"to\": \"IT helpdesk\",\n                \"text\": \"Send access request (Wi‑Fi, email, Slack)\"\n              },\n              {\n                \"kind\": \"action\",\n                \"from\": \"agent\",\n                \"to\": \"procurement\",\n                \"text\": \"Order laptop and ID card\"\n              }\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visual units where appropriate. Identify comparisons, sequences, etc. From data: maybe compare RLHF vs standard? Could make table of definitions vs agents. Also sequence of onboarding steps. Use EXM_0054 excerpts for sequence. Create visual unit sequence. Also maybe table comparing tool-augmented chatbot vs agentic AI. Provide visuals.\n\nReturn JSON with units list. Include source_segment_ids. Provide needs_review false, missing_information null, evidence with note_id and exact quote.\n\nLet's craft two visuals: a table comparing \"Tool-augmented chatbot\" (CON_0045) and \"Agentic AI system\" (CON_0046). Evidence quotes.\n\nSecond visual: sequence of onboarding steps from EXM_0054. Use excerpts.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794646563,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_93703442d9",
+  "usage": {
+    "completion_tokens": 1063,
+    "prompt_tokens": 1920,
+    "total_tokens": 2983,
+    "completion_time": 2.228843831,
+    "completion_tokens_details": {
+      "reasoning_tokens": 158
+    },
+    "prompt_time": 0.10384855,
+    "prompt_tokens_details": null,
+    "queue_time": 0.370666234,
+    "total_time": 2.332692381
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cmam2me6yrk3pxk1g6ac8b",
+    "debug": null,
+    "seed": 754494439,
+    "usage": null
+  }
+}

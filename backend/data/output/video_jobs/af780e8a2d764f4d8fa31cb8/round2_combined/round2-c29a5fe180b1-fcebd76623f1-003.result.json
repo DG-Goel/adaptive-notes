@@ -1,0 +1,334 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "CON_0021",
+        "FCT_0066",
+        "FCT_0067",
+        "FCT_0068",
+        "FCT_0069",
+        "FCT_0070"
+      ],
+      "reason": "Unsupported visual label or value"
+    },
+    {
+      "note_ids": [
+        "CON_0025",
+        "CON_0026",
+        "EXP_0003",
+        "EXP_0004"
+      ],
+      "reason": "Source note is unresolved"
+    },
+    {
+      "note_ids": [
+        "CON_0020"
+      ],
+      "reason": "Source note is unresolved"
+    },
+    {
+      "note_ids": [
+        "FCT_0065",
+        "CON_0019"
+      ],
+      "reason": "Source note is unresolved"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Uncovered Interest Parity (UIP) Components",
+      "source_segment_ids": [
+        "CON_0021",
+        "FCT_0066",
+        "FCT_0067",
+        "FCT_0068",
+        "FCT_0069",
+        "FCT_0070"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0021",
+            "FCT_0066",
+            "FCT_0067",
+            "FCT_0068",
+            "FCT_0069",
+            "FCT_0070"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0021",
+              "exact_quote": "The uncovered interest parity is the extra equation needed when an endogenous variable such as a floating exchange rate is introduced."
+            },
+            {
+              "note_id": "FCT_0066",
+              "exact_quote": "The exchange rate is floating."
+            },
+            {
+              "note_id": "FCT_0067",
+              "exact_quote": "And in the denominator, you have the foreign interest rate."
+            },
+            {
+              "note_id": "FCT_0068",
+              "exact_quote": "Well, remember, I can divide this by the exchange rate on both sides."
+            },
+            {
+              "note_id": "FCT_0069",
+              "exact_quote": "And then what you get is 1 equal to a numerator that has the nominal exchange rate times the expected appreciation of the currency plus."
+            },
+            {
+              "note_id": "FCT_0070",
+              "exact_quote": "And so when you compare the two, you have to compare one base interest rate, the domestic of the foreign, plus expected appreciation of the appreciation of that currency."
+            }
+          ],
+          "payload": {
+            "type": "concept_tree",
+            "title": "UIP Equation Elements",
+            "nodes": [
+              {
+                "id": "n0",
+                "label": "Uncovered Interest Parity (UIP)",
+                "description": "extra equation for floating exchange rate"
+              },
+              {
+                "id": "n1",
+                "label": "Floating exchange rate",
+                "parent": "n0",
+                "description": "exchange rate is floating"
+              },
+              {
+                "id": "n2",
+                "label": "Domestic interest rate",
+                "parent": "n0"
+              },
+              {
+                "id": "n3",
+                "label": "Foreign interest rate",
+                "parent": "n0",
+                "description": "in denominator"
+              },
+              {
+                "id": "n4",
+                "label": "Nominal exchange rate",
+                "parent": "n0",
+                "description": "appears in numerator"
+              },
+              {
+                "id": "n5",
+                "label": "Expected appreciation of currency",
+                "parent": "n0",
+                "description": "multiplied with nominal exchange rate"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Interest Rate Differential and Expected Depreciation",
+      "source_segment_ids": [
+        "CON_0025",
+        "CON_0026",
+        "EXP_0003",
+        "EXP_0004"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0025",
+            "CON_0026",
+            "EXP_0003",
+            "EXP_0004"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0025",
+              "exact_quote": "When one bond pays a higher interest rate than another, the higher return must be offset by an expected depreciation of the currency of the higher‑interest bond."
+            },
+            {
+              "note_id": "CON_0026",
+              "exact_quote": "The anticipated fall in the value of a currency that is used to offset a higher interest rate on a bond denominated in that currency."
+            },
+            {
+              "note_id": "EXP_0003",
+              "exact_quote": "So what I need to do is compensate say, for the interest rate differential with an expected depreciation of the currency that's paying a higher interest rate."
+            },
+            {
+              "note_id": "EXP_0004",
+              "exact_quote": "When the currency appreciates enough, the higher‑interest advantage disappears because the expected depreciation component is reduced."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Mechanism of Interest Rate Differential",
+            "direction": "DOWN",
+            "nodes": [
+              {
+                "id": "s",
+                "label": "Higher domestic interest rate",
+                "kind": "start"
+              },
+              {
+                "id": "a1",
+                "label": "Higher return on bond",
+                "kind": "action"
+              },
+              {
+                "id": "d1",
+                "label": "Need offset",
+                "kind": "decision"
+              },
+              {
+                "id": "a2",
+                "label": "Expected depreciation of currency",
+                "kind": "action"
+              },
+              {
+                "id": "s2",
+                "label": "Currency appreciation",
+                "kind": "decision"
+              },
+              {
+                "id": "e1",
+                "label": "Depreciation reduced → advantage lost",
+                "kind": "success"
+              }
+            ],
+            "edges": [
+              {
+                "from": "s",
+                "to": "a1",
+                "label": ""
+              },
+              {
+                "from": "a1",
+                "to": "d1",
+                "label": ""
+              },
+              {
+                "from": "d1",
+                "to": "a2",
+                "label": "yes"
+              },
+              {
+                "from": "a2",
+                "to": "s2",
+                "label": ""
+              },
+              {
+                "from": "s2",
+                "to": "e1",
+                "label": "appreciates enough"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Consumer Confidence and Aggregate Demand",
+      "source_segment_ids": [
+        "CON_0020"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0020"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0020",
+              "exact_quote": "Remember, if the consumer confidence goes up, then aggregate demand goes up."
+            }
+          ],
+          "payload": {
+            "type": "mind_map",
+            "title": "Consumer Confidence Effect",
+            "nodes": [
+              {
+                "id": "root",
+                "label": "Consumer Confidence"
+              },
+              {
+                "id": "c1",
+                "label": "Increases",
+                "parent": "root"
+              },
+              {
+                "id": "c2",
+                "label": "Aggregate Demand",
+                "parent": "c1",
+                "description": "goes up"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Fixed Price Assumption",
+      "source_segment_ids": [
+        "FCT_0065",
+        "CON_0019"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0065",
+            "CON_0019"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0065",
+              "exact_quote": "Both the domestic and foreign prices are assumed to be completely fixed."
+            },
+            {
+              "note_id": "CON_0019",
+              "exact_quote": "Real exchange rate moves only with nominal exchange rate when prices are fixed"
+            }
+          ],
+          "payload": {
+            "type": "concept_tree",
+            "title": "Fixed Prices and Exchange Rate Relationship",
+            "nodes": [
+              {
+                "id": "n0",
+                "label": "Fixed Prices",
+                "description": "domestic and foreign prices fixed"
+              },
+              {
+                "id": "n1",
+                "label": "Nominal Exchange Rate",
+                "parent": "n0",
+                "description": "only variable moving"
+              },
+              {
+                "id": "n2",
+                "label": "Real Exchange Rate",
+                "parent": "n0",
+                "description": "moves with nominal rate"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

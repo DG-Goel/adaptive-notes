@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-9b4b4a75-573e-4b8e-bedf-e50bd9a2e2c4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"uncovered interest parity condition\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"In equilibrium investors must be indifferent between holding domestic and foreign bonds, so the domestic interest rate equals the foreign interest rate minus the expected appreciation rate of the domestic currency.\",\n      \"refs\": [\"Q0004\", \"Q0010\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"explanation_of_mistake\",\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit definition excerpt provided.\",\n      \"source_ids\": [\"G00010\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Exact formula not quoted; only verbal description present.\",\n      \"source_ids\": [\"G00010\"]\n    }\n  ],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What is the name of the condition described as making investors indifferent between domestic and foreign bonds?\",\n      \"answer\": \"uncovered interest parity condition\",\n      \"distractors\": [\n        \"covered interest parity condition\",\n        \"law of one price\",\n        \"purchasing power parity\"\n      ],\n      \"explanation\": \"The speaker explicitly calls it the \\\"uncovered interest parity condition\\\" (Q0000).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Term identification\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"According to the speaker, what must hold true for investors in equilibrium?\",\n      \"answer\": \"They must be indifferent between investing in a domestic bond and a foreign bond.\",\n      \"distractors\": [\n        \"They must prefer the bond with the higher interest rate.\",\n        \"They must only invest in the bond with lower risk.\",\n        \"They must convert all assets to the domestic currency.\"\n      ],\n      \"explanation\": \"The speaker says \\\"in equilibrium, you have to be indifferent between investing in one bond or the other\\\" (Q0004).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Equilibrium condition\",\n      \"refs\": [\"Q0004\"]\n    },\n    {\n      \"question\": \"Which approximation technique does the speaker mention when simplifying the interest parity relationship?\",\n      \"answer\": \"Taylor expansion\",\n      \"distractors\": [\n        \"Fourier series\",\n        \"Monte Carlo simulation\",\n        \"Laplace transform\"\n      ],\n      \"explanation\": \"The speaker refers to \\\"that kind of approximation, Taylor expansion when these terms are small\\\" (Q0007).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Mathematical approximation\",\n      \"refs\": [\"Q0007\"]\n    },\n    {\n      \"question\": \"If the U.S. interest rate is lower than the U.K. interest rate, under what condition can investors remain indifferent?\",\n      \"answer\": \"When they expect the U.S. dollar to appreciate.\",\n      \"distractors\": [\n        \"When the U.S. dollar is expected to depreciate.\",\n        \"When inflation rates are identical in both countries.\",\n        \"When the U.K. bond has lower default risk.\"\n      ],\n      \"explanation\": \"The speaker explains that indifference is possible \\\"as long as you're expecting an appreciation of the dollar\\\" (Q0010).\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"Interest rate and exchange rate expectation\",\n      \"refs\": [\"Q0010\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows etc. From excerpts we have concept: uncovered interest parity condition. So create concept item. Provide concept_name and content. Use rows.\n\nItem label e.g., \"item1\". Provide rows for concept_name and content.\n\nAlso maybe definition? We have definition text? Not explicit. So abstention for definitions.\n\nQuiz: need 4 questions about teaching. Use primary excerpts. Create Q about term, meaning, approximation, indifference.\n\nProvide refs primary Q0000 etc.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794769340,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_96d96a151c",
+  "usage": {
+    "completion_tokens": 1023,
+    "prompt_tokens": 2809,
+    "total_tokens": 3832,
+    "completion_time": 2.1574977730000002,
+    "completion_tokens_details": {
+      "reasoning_tokens": 103
+    },
+    "prompt_time": 0.136712177,
+    "prompt_tokens_details": null,
+    "queue_time": 0.293765269,
+    "total_time": 2.29420995
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g9dft2exrb60jp4x7t4sp2",
+    "debug": null,
+    "seed": 506789640,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-6370d65a-3713-4ef4-9043-24a845a5dbcc",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"switch statement versus if statement for role-based messages\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"A switch statement can be used instead of multiple if/else statements to compare a variable (e.g., role) against constant values (e.g., admin, moderator, guest) and execute the matching case block.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"purpose of break statement in a switch block\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"The break statement exits the switch block after a case has been executed; without it, execution falls through to subsequent case blocks.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"If role equals \\\"admin\\\", the program should print \\\"you are an admin\\\".\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"If role equals \\\"moderator\\\", the program should print \\\"you are a moderator\\\".\",\n        \"refs\": [\"Q0000\", \"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"If role matches none of the specified cases, the default case prints \\\"you are a guest\\\".\",\n        \"refs\": [\"Q0000\", \"Q0002\", \"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"When the switch variable is a string, cases must use string literals; using an integer variable would require numeric case labels.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [\n    {\n      \"procedure_name\": {\n        \"text\": \"Implement role-based messaging with a switch statement\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"steps\": [\n        {\n          \"text\": \"Write the switch keyword followed by parentheses containing the variable to test (e.g., role).\",\n          \"refs\": [\"Q0001\"]\n        },\n        {\n          \"text\": \"Open a block with braces and add case clauses for each role value (admin, moderator, etc.), ending each case label with a colon.\",\n          \"refs\": [\"Q0002\"]\n        },\n        {\n          \"text\": \"Inside each case block, add the code to print the appropriate message.\",\n          \"refs\": [\"Q0002\"]\n        },\n        {\n          \"text\": \"Add a break statement after each case (except the final default case) to exit the switch.\",\n          \"refs\": [\"Q0002\", \"Q0003\"]\n        },\n        {\n          \"text\": \"Optionally add a default case to handle any unmatched role values.\",\n          \"refs\": [\"Q0002\"]\n        }\n      ],\n      \"prerequisites\": null,\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"A switch statement evaluates the role variable and executes the matching case block, printing the corresponding message and using break statements to prevent fall‑through.\",\n        \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\"]\n      }\n    }\n  ],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts about if vs switch, roles, break statements. Extract facts, explanations, procedures maybe.\n\nIdentify facts: roles mapping to messages. Example: if role equals admin -> print \"you are an admin\". etc. Also break statement purpose.\n\nCreate facts entries.\n\nAlso explanations: difference between if and switch, break statement behavior.\n\nProcedures: steps for switch statement.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065784,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_93703442d9",
+  "usage": {
+    "completion_tokens": 895,
+    "prompt_tokens": 3024,
+    "total_tokens": 3919,
+    "completion_time": 1.8740695120000002,
+    "completion_tokens_details": {
+      "reasoning_tokens": 87
+    },
+    "prompt_time": 0.13230297,
+    "prompt_tokens_details": null,
+    "queue_time": 0.37425334,
+    "total_time": 2.006372482
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6vaencyex9b6ngvrs10n1pn",
+    "debug": null,
+    "seed": 739569403,
+    "usage": null
+  }
+}

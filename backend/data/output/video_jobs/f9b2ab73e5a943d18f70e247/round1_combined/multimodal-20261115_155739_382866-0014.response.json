@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-315adb0e-d692-4530-8a19-4a036eaae105",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"interest rate\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Japan hasn't had hikes in interest rates for three decades.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"monetary policy\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The US is expected to loosen monetary policy before the rest of the world.\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the speaker, how long has it been since Japan last raised its interest rates?\",\n      \"answer\": \"Three decades.\",\n      \"explanation\": \"The primary excerpt Q0000 states, \\\"Japan hasn't had hikes in interest rates for three decades,\\\" directly answering the question.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"interest rate history\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"What does the speaker suggest about the direction of US interest rates relative to Japan's?\",\n      \"answer\": \"US interest rates are expected to move lower relative to Japan's.\",\n      \"explanation\": \"In Q0003 and Q0004 the speaker says people expect US rates to go down relative to Japan's, and that the direction of change is toward US loosening.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"comparative interest rates\",\n      \"refs\": [\"Q0003\", \"Q0004\"]\n    },\n    {\n      \"question\": \"What is the implied sequence of monetary policy changes globally, according to the speaker?\",\n      \"answer\": \"The US will loosen monetary policy before the rest of the world does.\",\n      \"explanation\": \"Q0005 explicitly states, \\\"the direction of the change is towards the US loosening monetary policy before the rest of the world does.\\\"\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"global monetary policy timing\",\n      \"refs\": [\"Q0005\"]\n    },\n    {\n      \"question\": \"How does the speaker describe the impact of US policy changes on currency movements, especially the yen?\",\n      \"answer\": \"US tightening creates currency opportunities, particularly for the yen, which has been overbound for a long time.\",\n      \"explanation\": \"Q0007 mentions that when the US starts tightening, there are currency opportunities, especially regarding the yen, which has been overbound for a very long time.\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"currency effects of policy\",\n      \"refs\": [\"Q0007\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows etc but content is just statements about interest rates. No concepts? Could create concepts like \"interest rate\". Provide rows for concepts content and name. Use primary excerpts. Provide abstentions for missing definitions etc. Quiz four questions.\n\nLet's craft rows: item \"item1\" concept. concept_name \"interest rate\". content from Q0000 maybe. Provide availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role null.\n\nAlso maybe concept \"monetary policy\". Use Q0005. Provide.\n\nRows list.\n\nAbstentions empty.\n\nQuiz: Q1: What does the speaker say about Japan's interest rates over the past three decades? Answer: Japan hasn't had hikes in interest rates for three decades. etc.\n\nProvide 4.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794758272,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_ca5edfaab2",
+  "usage": {
+    "completion_tokens": 1044,
+    "prompt_tokens": 2904,
+    "total_tokens": 3948,
+    "completion_time": 2.201141055,
+    "completion_tokens_details": {
+      "reasoning_tokens": 158
+    },
+    "prompt_time": 0.115912538,
+    "prompt_tokens_details": null,
+    "queue_time": 0.37631857,
+    "total_time": 2.317053593
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7fyvqamekeabp3rxmmg8wcm",
+    "debug": null,
+    "seed": 2098745795,
+    "usage": null
+  }
+}

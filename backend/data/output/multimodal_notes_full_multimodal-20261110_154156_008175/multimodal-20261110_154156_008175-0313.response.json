@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-21a3b466-7374-448f-ab3b-ad758a779990",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explicit definition of terms was provided in the primary teaching excerpts.\",\n      \"source_ids\": [\"G00119\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract definitions. The excerpts seem about input validation, loops, mortgage calculator. No explicit definition. Likely no definitions, so items empty, abstentions maybe for missing definitions? We must abstain for missing part of actual teaching point. There's teaching about validation but not definition. So we can abstain: availability SOURCE_MISSING, reason \"definition missing\". source_ids primary_source_ids. Excluded none.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326748,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4727af4560",
+  "usage": {
+    "completion_tokens": 165,
+    "prompt_tokens": 3341,
+    "total_tokens": 3506,
+    "completion_time": 0.345006418,
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_time": 0.157738572,
+    "prompt_tokens_details": null,
+    "queue_time": 0.161019446,
+    "total_time": 0.50274499
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m733apcxer0s0tf2yr6h5cg7",
+    "debug": null,
+    "seed": 356761589,
+    "usage": null
+  }
+}

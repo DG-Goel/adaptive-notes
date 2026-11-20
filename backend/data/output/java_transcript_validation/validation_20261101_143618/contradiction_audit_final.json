@@ -1,0 +1,169 @@
+{
+  "audit_timestamp": "2026-11-01T14:36:00",
+  "total_contradictions": 11,
+  "audit_results": [
+    {
+      "knowledge_id": "CON_0167",
+      "knowledge_type": "concept",
+      "claim_text": "Array elements are accessed with an index that starts at 0.",
+      "source_ids": [
+        "T0019"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['0'] but source has ['1', '2', '10', '3']",
+      "classification": {
+        "type": "INCONCLUSIVE",
+        "reasoning": "Requires domain expert review to determine if extraction error or verifier limitation",
+        "evidence": "Knowledge type: concept, Reason: Numeric contradiction: claimed ['0'] but source has ['1', '2', '10', '3']"
+      }
+    },
+    {
+      "knowledge_id": "CON_0205",
+      "knowledge_type": "concept",
+      "claim_text": "Manual conversion of a value to a different type using a cast syntax, e.g., (double) 5.",
+      "source_ids": [
+        "T0024"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['5'] but source has ['1', '2', '3', '4', '3.1']",
+      "classification": {
+        "type": "VERIFIER_FALSE_POSITIVE",
+        "reasoning": "Concept uses illustrative example value to explain principle",
+        "evidence": "Single example value in concept: ['5']"
+      }
+    },
+    {
+      "knowledge_id": "DEF_0239",
+      "knowledge_type": "definition",
+      "claim_text": "Method that returns a double value uniformly distributed between 0.0 (inclusive) and 1.0 (exclusive).",
+      "source_ids": [
+        "T0026"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['0.0', '1.0'] but source has ['3.1', '1.1', '2', '1', '0', '100']",
+      "classification": {
+        "type": "VERIFIER_FALSE_POSITIVE",
+        "reasoning": "Definition describes a range/boundary, not claiming exact values appear in source",
+        "evidence": "Range language detected: 'Method that returns a double value uniformly distributed between 0.0 (inclusive) and 1.0 (exclusive)'"
+      }
+    },
+    {
+      "knowledge_id": "EXP_0303",
+      "knowledge_type": "explanation",
+      "claim_text": "int is used for principal because short's max (32,000) is insufficient; float suffices for interest rates; byte is enough for a period up to 30 years.",
+      "source_ids": [
+        "T0032"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['30'] but source has ['12', '100', '32,000', '1,000', '000']",
+      "classification": {
+        "type": "INCONCLUSIVE",
+        "reasoning": "Requires domain expert review to determine if extraction error or verifier limitation",
+        "evidence": "Knowledge type: explanation, Reason: Numeric contradiction: claimed ['30'] but source has ['12', '100', '32,000', '1,000', '000']"
+      }
+    },
+    {
+      "knowledge_id": "EXM_0215",
+      "knowledge_type": "example",
+      "claim_text": "double result = (double)5 / 2; // result is 2.5",
+      "source_ids": [
+        "T0022"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['5', '2.5'] but source has ['10', '3', '13', '1', '2']",
+      "classification": {
+        "type": "VERIFIER_FALSE_POSITIVE",
+        "reasoning": "Example contains illustrative code with array sizes/indices not meant to match source prose",
+        "evidence": "Code pattern detected in example: double result = (double)5 / 2; // result is 2.5"
+      }
+    },
+    {
+      "knowledge_id": "EXM_0273",
+      "knowledge_type": "example",
+      "claim_text": "Calling next() twice on input \"Marsh Hamid\" returns \"Marsh\" then \"Hamid\".",
+      "source_ids": [
+        "T0030"
+      ],
+      "verifier_reason": "Entity mismatch: claimed entities ['Marsh Hamid'] not found in source",
+      "classification": {
+        "type": "VERIFIER_FALSE_POSITIVE",
+        "reasoning": "Multi-word entity (full name) not found as single token, but parts may be present",
+        "evidence": "Multi-word entities: ['Marsh Hamid']"
+      }
+    },
+    {
+      "knowledge_id": "EXM_0380",
+      "knowledge_type": "example",
+      "claim_text": "Input 5 → fizz; Input 10 → fizz; Input 3 → buzz; Input 15 → fizzbuzz; Input 2 → 2",
+      "source_ids": [
+        "T0041",
+        "T0042"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['10', '2'] but source has ['3', '5', '0', '15', '12', '14']",
+      "classification": {
+        "type": "INCONCLUSIVE",
+        "reasoning": "Requires domain expert review to determine if extraction error or verifier limitation",
+        "evidence": "Knowledge type: example, Reason: Numeric contradiction: claimed ['10', '2'] but source has ['3', '5', '0', '15', '12', '14']"
+      }
+    },
+    {
+      "knowledge_id": "EXM_0403",
+      "knowledge_type": "example",
+      "claim_text": "Printing \"hello world\" inside a for loop with I from 0 to 4 results in five lines of output.",
+      "source_ids": [
+        "T0043"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['4'] but source has ['0']",
+      "classification": {
+        "type": "INCONCLUSIVE",
+        "reasoning": "Requires domain expert review to determine if extraction error or verifier limitation",
+        "evidence": "Knowledge type: example, Reason: Numeric contradiction: claimed ['4'] but source has ['0']"
+      }
+    },
+    {
+      "knowledge_id": "EXM_0431",
+      "knowledge_type": "example",
+      "claim_text": "An infinite while‑true loop asks for the principal; if the entered value is between 1,000 and 1,000,000, break exits the loop.",
+      "source_ids": [
+        "T0048"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['000'] but source has ['1,000', '1', '0', '30', '3.9', '1000']",
+      "classification": {
+        "type": "INCONCLUSIVE",
+        "reasoning": "Requires domain expert review to determine if extraction error or verifier limitation",
+        "evidence": "Knowledge type: example, Reason: Numeric contradiction: claimed ['000'] but source has ['1,000', '1', '0', '30', '3.9', '1000']"
+      }
+    },
+    {
+      "knowledge_id": "FCT_0313",
+      "knowledge_type": "fact",
+      "claim_text": "A byte can store values up to 127, sufficient for a period of 30 years.",
+      "source_ids": [
+        "T0033"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['127'] but source has ['30']",
+      "classification": {
+        "type": "GENUINE_ERROR",
+        "reasoning": "Fact states numeric value that contradicts source",
+        "evidence": "Claimed ['127', '30'] but source has ['30']"
+      }
+    },
+    {
+      "knowledge_id": "PRC_0253",
+      "knowledge_type": "procedure",
+      "claim_text": "Call Math.random() to obtain a double in [0,1). Multiply the result by 100. Cast the final expression to int.",
+      "source_ids": [
+        "T0027"
+      ],
+      "verifier_reason": "Numeric contradiction: claimed ['0,1'] but source has ['0', '100', '8', '4', '0.1', '10']",
+      "classification": {
+        "type": "INCONCLUSIVE",
+        "reasoning": "Requires domain expert review to determine if extraction error or verifier limitation",
+        "evidence": "Knowledge type: procedure, Reason: Numeric contradiction: claimed ['0,1'] but source has ['0', '100', '8', '4', '0.1', '10']"
+      }
+    }
+  ],
+  "summary": {
+    "total": 11,
+    "genuine_errors": 1,
+    "verifier_false_positives": 4,
+    "inconclusive": 6,
+    "false_positive_rate": "36.4%",
+    "genuine_error_rate": "9.1%"
+  }
+}

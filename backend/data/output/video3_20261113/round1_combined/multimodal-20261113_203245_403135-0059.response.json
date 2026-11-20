@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-56f13199-e720-4cce-9a6b-cdb0e6227573",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"AI agent\",\n      \"refs\": [\"Q0019\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"has access to tools, knowledge, memory, and an LLM; can perform autonomous tasks\",\n      \"refs\": [\"Q0019\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"agentic AI\",\n      \"refs\": [\"Q0021\", \"Q0034\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"system that receives a goal, creates a plan, executes multi‑step actions, and can review and correct its output\",\n      \"refs\": [\"Q0029\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"generative AI\",\n      \"refs\": [\"Q0022\", \"Q0030\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"creates new content in response to a prompt, with minimal planning\",\n      \"refs\": [\"Q0022\", \"Q0030\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"low‑code / no‑code tools\",\n      \"refs\": [\"Q0004\", \"Q0005\", \"Q0009\", \"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"enable building agentic AI systems without programming, e.g., n8n, Zapier\",\n      \"refs\": [\"Q0004\", \"Q0009\", \"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item5\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"RAG chatbot\",\n      \"refs\": [\"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item5\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"reactive tool that answers questions without autonomous planning\",\n      \"refs\": [\"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows for concepts, definitions, etc based on excerpts. Likely concepts: \"AI agent\", \"agentic AI\", \"generative AI\", \"low code tools\", etc. Provide rows with text from excerpts. Use availability SOURCE_SUPPORTED? Since ASR speech evidence, but still source-supported? Might be PARTIALLY_SUPPORTED due to ASR uncertainty. Use PARTIALLY_SUPPORTED. basis explicit. literal_kind verbal. instructional_role null. Provide item id e.g., \"item1\". Provide refs list. Let's craft few rows.\n\nWe'll output rows, abstentions empty, excluded empty.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794602538,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_64b2f1c926",
+  "usage": {
+    "completion_tokens": 1259,
+    "prompt_tokens": 3351,
+    "total_tokens": 4610,
+    "completion_time": 2.6440804890000003,
+    "completion_tokens_details": {
+      "reasoning_tokens": 122
+    },
+    "prompt_time": 0.146688658,
+    "prompt_tokens_details": null,
+    "queue_time": 0.325158258,
+    "total_time": 2.790769147
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7bab2c5e2atnnfkc7xdv6t6",
+    "debug": null,
+    "seed": 19162509,
+    "usage": null
+  }
+}

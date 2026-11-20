@@ -1,0 +1,159 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0275",
+        "FCT_0276",
+        "FCT_0277",
+        "FCT_0278",
+        "FCT_0280",
+        "FCT_0013",
+        "FCT_0014",
+        "FCT_0281",
+        "FCT_0286"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Mortgage Calculator Workflow",
+      "source_segment_ids": [
+        "FCT_0275",
+        "FCT_0276",
+        "FCT_0277",
+        "FCT_0278",
+        "FCT_0280",
+        "FCT_0013",
+        "FCT_0014",
+        "FCT_0281",
+        "FCT_0286"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0275",
+            "FCT_0276",
+            "FCT_0277",
+            "FCT_0278",
+            "FCT_0280",
+            "FCT_0013",
+            "FCT_0014",
+            "FCT_0281",
+            "FCT_0286"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0275",
+              "quote": "Students are asked to use what they have learned in this section to build a mortgage calculator."
+            },
+            {
+              "note_id": "FCT_0276",
+              "quote": "When the program runs, it asks a few questions."
+            },
+            {
+              "note_id": "FCT_0277",
+              "quote": "The first question asks for the principal, or the amount of loan."
+            },
+            {
+              "note_id": "FCT_0278",
+              "quote": "Example principal value: $100,000."
+            },
+            {
+              "note_id": "FCT_0280",
+              "quote": "Example interest rate: 3.92%."
+            },
+            {
+              "note_id": "FCT_0013",
+              "quote": "The third question asks for the period in years."
+            },
+            {
+              "note_id": "FCT_0014",
+              "quote": "Example period: 30 years."
+            },
+            {
+              "note_id": "FCT_0281",
+              "quote": "We need to multiply this number by 12 (months in a year) to calculate the number of payments."
+            },
+            {
+              "note_id": "FCT_0286",
+              "quote": "Monthly interest is calculated by taking the annual interest, dividing it by percent, and then dividing by months in a year."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Mortgage Calculator Workflow",
+            "direction": "DOWN",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "Ask principal"
+              },
+              {
+                "id": "n2",
+                "label": "Ask annual interest rate"
+              },
+              {
+                "id": "n3",
+                "label": "Ask period (years)"
+              },
+              {
+                "id": "n4",
+                "label": "Calculate total payments = period × 12"
+              },
+              {
+                "id": "n5",
+                "label": "Calculate monthly interest = annual rate ÷ 100 ÷ 12"
+              },
+              {
+                "id": "n6",
+                "label": "Compute monthly payment (formula)"
+              },
+              {
+                "id": "n7",
+                "label": "Display payment as currency"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": ""
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": ""
+              },
+              {
+                "from": "n3",
+                "to": "n4",
+                "label": ""
+              },
+              {
+                "from": "n4",
+                "to": "n5",
+                "label": ""
+              },
+              {
+                "from": "n5",
+                "to": "n6",
+                "label": ""
+              },
+              {
+                "from": "n6",
+                "to": "n7",
+                "label": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

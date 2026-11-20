@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-cc8e178f-daee-4680-b1ed-39dc0e9a058f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"operand\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"numbers that we have here are called operands\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"Numbers that we have here are called operands.\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"Numbers that we have here are called operands.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"augmented assignment operator\",\n        \"refs\": [\"Q0022\", \"Q0023\"],\n        \"claims\": [\n          {\n            \"text\": \"augmented or compound assignment operator\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0022\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"x plus equals 2\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0023\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"The augmented or compound assignment operator provides a shorter way to write arithmetic operations, e.g., x += 2 is equivalent to x = x + 2.\",\n        \"refs\": [\"Q0022\", \"Q0023\"],\n        \"claims\": [\n          {\n            \"text\": \"The augmented or compound assignment operator provides a shorter way to write arithmetic operations, e.g., x += 2 is equivalent to x = x + 2.\",\n            \"basis\": \"direct_entailment\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0022\", \"Q0023\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"operator precedence\",\n        \"refs\": [\"Q0040\"],\n        \"claims\": [\n          {\n            \"text\": \"multiplication and division operators have a higher priority so they get applied first\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0040\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"In math, the multiplication and division operators have a higher priority so they get applied first.\",\n        \"refs\": [\"Q0040\"],\n        \"claims\": [\n          {\n            \"text\": \"In math, the multiplication and division operators have a higher priority so they get applied first.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0040\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need definitions extraction. Look for definitions in excerpts: likely \"arithmetic operators ... called operands.\" That's definition of operands. Also maybe definition of increment operator? It's described. We'll extract items with term and definition_text.\n\nCreate one item: term \"operand\" definition \"numbers that we have here are called operands.\" Claim text from Q0000. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role prerequisite? maybe explanation. Use null for related_refs.\n\nAlso maybe term \"increment operator\" definition from Q0011? Actually description of increment operator usage. Could define \"increment operator\" as operator that increases value by 1. Use Q0011? Actually Q0011 is just result. Better use Q0011? Not definition. Use Q0011? No. Use Q0011? Not. Use Q0011? skip.\n\nAlso term \"augmented assignment operator\" definition from Q0022 etc. Provide definition: \"augmented or compound assignment operator\" described. Use Q0022 and Q0023. Provide term \"augmented assignment operator\". Definition text combine. Use explicit.\n\nAlso term \"operator precedence\" from Q0040. Definition: multiplication and division have higher priority. Provide.\n\nThus three items.\n\nProvide refs list per item include all used refs.\n\nAbstentions none. Excluded none.\n\nConstruct JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326124,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_ca5edfaab2",
+  "usage": {
+    "completion_tokens": 1114,
+    "prompt_tokens": 3983,
+    "total_tokens": 5097,
+    "completion_time": 2.344192582,
+    "completion_tokens_details": {
+      "reasoning_tokens": 273
+    },
+    "prompt_time": 0.201002852,
+    "prompt_tokens_details": null,
+    "queue_time": 0.380717062,
+    "total_time": 2.545195434
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m732qjwvehvv6ws8ybkx4vca",
+    "debug": null,
+    "seed": 919738611,
+    "usage": null
+  }
+}

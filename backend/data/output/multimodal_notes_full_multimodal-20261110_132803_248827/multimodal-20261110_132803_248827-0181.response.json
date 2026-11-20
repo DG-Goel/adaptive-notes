@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-2d806d44-59ca-4428-8bc9-2ea886d4e058",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"An access modifier is a special keyword that determines if other classes and methods in this program can access these classes and methods.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\", \"Q0005\", \"Q0007\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"We refer to it as a method of that class.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"In Java, all these classes and methods should have an access modifier.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\n        \"An access modifier is a special keyword that determines if other classes and methods in this program can access these classes and methods.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"C1\"]\n      }\n    },\n    {\n      \"fact_text\": [\n        \"We refer to it as a method of that class.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"C2\"]\n      }\n    },\n    {\n      \"fact_text\": [\n        \"In Java, all these classes and methods should have an access modifier.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"C3\"]\n      }\n    }\n  ],\n  \"definitions\": [],\n  \"concepts\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify statements: likely definition of access modifier. Combine quotes Q0004 etc. Create claim C1: \"An access modifier is a special keyword that determines if other classes and methods in this program can access these classes and methods.\" Basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role definition? maybe fact. We'll place in facts. Also concept of method of class. C2: \"We refer to it as a method of that class.\" from Q0000. C3: \"In Java, all these classes and methods should have an access modifier.\" from Q0002. Provide refs. Build schema with claims list, then categories: facts, definitions maybe. Use primary excerpts only. Provide abstentions none.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317842,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5082008e34",
+  "usage": {
+    "completion_tokens": 658,
+    "prompt_tokens": 3041,
+    "total_tokens": 3699,
+    "completion_time": 1.394821479,
+    "completion_tokens_details": {
+      "reasoning_tokens": 163
+    },
+    "prompt_time": 0.167174544,
+    "prompt_tokens_details": null,
+    "queue_time": 0.294149061,
+    "total_time": 1.5619960229999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72ttw30e3m9853sphschz4m",
+    "debug": null,
+    "seed": 1787349238,
+    "usage": null
+  }
+}

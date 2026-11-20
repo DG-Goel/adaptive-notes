@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-206f6896-ca48-4175-bd4e-3b9b165ebf34",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Uncovered interest parity condition\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The uncovered interest parity condition states that the exchange rate equals the ratio that equalizes expected rates of return between domestic and foreign assets, accounting for expected appreciation of the currency.\",\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"explanation_of_mistake\",\n      \"refs\": [\"Q0003\", \"Q0015\", \"Q0016\"],\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"In equilibrium, expected returns must be similar in both places.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0019\"],\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"relationship1\",\n      \"category\": \"relationships\",\n      \"field\": \"relationship_type\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"equalizes\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0015\"],\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"relationship1\",\n      \"category\": \"relationships\",\n      \"field\": \"subject\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"exchange rate\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0006\"],\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"relationship1\",\n      \"category\": \"relationships\",\n      \"field\": \"object\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"expected rate of return\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0015\"],\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"relationship1\",\n      \"category\": \"relationships\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The equation derived from uncovered interest parity makes the exchange rate adjust so that expected returns on domestic and foreign assets are equal.\",\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": \"explanation_of_mistake\",\n      \"refs\": [\"Q0015\", \"Q0016\", \"Q0022\"],\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What condition is described as the equation that makes the exchange rate adjust to equalize expected returns?\",\n      \"answer\": \"Uncovered interest parity condition\",\n      \"explanation\": \"The excerpts identify the uncovered interest parity condition as the equation that equalizes expected rates of return between domestic and foreign assets.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Uncovered interest parity\",\n      \"refs\": [\"Q0003\"]\n    },\n    {\n      \"question\": \"According to the lecture, what must happen to expected returns in equilibrium?\",\n      \"answer\": \"They must be similar (equal) in both places.\",\n      \"explanation\": \"The primary excerpt Q0019 states that absent other factors, the returns have to be similar in both places.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Equilibrium returns\",\n      \"refs\": [\"Q0019\"]\n    },\n    {\n      \"question\": \"How does the uncovered interest parity condition relate the exchange rate to expected returns?\",\n      \"answer\": \"It makes the exchange rate adjust so that expected returns on domestic and foreign assets are equal.\",\n      \"explanation\": \"The relationship rows explain that the equation derived from uncovered interest parity causes the exchange rate to equalize expected returns.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"Exchange rate adjustment\",\n      \"refs\": [\"Q0015\", \"Q0016\", \"Q0022\"]\n    },\n    {\n      \"question\": \"Why would investors move all their portfolios into an asset that offers a higher expected return, according to the lecture?\",\n      \"answer\": \"Because higher expected returns attract capital flows, which then equalize returns in equilibrium.\",\n      \"explanation\": \"Excerpt Q0020 describes that if one asset offers higher expected return, investors will shift portfolios to it, leading to equalization of returns.\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"Capital flows and return equalization\",\n      \"refs\": [\"Q0020\", \"Q0021\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows. Identify concepts? Probably uncovered interest parity condition. Create concept item. Provide concept_name and content. Use excerpts Q0003 for content. Also maybe relationship: equation equalizes expected returns. Use Q0015 etc.\n\nWe'll create one item \"concept1\". rows: concept_name, content. Also maybe definition term? Not enough.\n\nWe'll also create facts: e.g., \"In equilibrium, expected returns must be equal.\" from Q0016.\n\nCreate relationships: subject \"exchange rate\", object \"expected rate of return\", relationship_type \"equalizes\". Use Q0015.\n\nQuiz four questions.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794758344,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e1a78f200e",
+  "usage": {
+    "completion_tokens": 1378,
+    "prompt_tokens": 2942,
+    "total_tokens": 4320,
+    "completion_time": 2.916849441,
+    "completion_tokens_details": {
+      "reasoning_tokens": 127
+    },
+    "prompt_time": 0.160417273,
+    "prompt_tokens_details": null,
+    "queue_time": 0.376652132,
+    "total_time": 3.077266714
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7fyxws7exmbm1qnx9h4c9q4",
+    "debug": null,
+    "seed": 1347833534,
+    "usage": null
+  }
+}

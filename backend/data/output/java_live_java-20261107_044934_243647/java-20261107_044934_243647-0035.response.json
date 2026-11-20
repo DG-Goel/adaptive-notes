@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-21717718-90ef-4c84-b899-9b7d977d6863",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"The dot operator is used to access members of a class.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In IntelliJ, an icon with \\\"F\\\" indicates a field.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In IntelliJ, an icon with \\\"M\\\" indicates a method.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The method printLn belongs to the PrintStream class and prints a line.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In Java, textual data (strings) must be enclosed in double quotes.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Running a Java program in IntelliJ involves compilation to bytecode and execution.\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays except extracted facts etc. From excerpts we can extract facts: e.g., dot operator accesses members, F indicates field, M indicates method, print string is a class, printLn is method, strings use double quotes, etc. Create facts items.\n\nAlso maybe definitions? term \"field\" etc but not defined fully. We'll just include facts.\n\nProvide refs.\n\nLet's craft facts:\n\n1. The dot operator is used to access members of a class. refs Q0000.\n\n2. In IntelliJ, an icon with \"F\" indicates a field. refs Q0000.\n\n3. In IntelliJ, an icon with \"M\" indicates a method. refs Q0001.\n\n4. The method printLn belongs to the PrintStream class and prints a line. refs Q0001.\n\n5. In Java, textual data (strings) must be enclosed in double quotes. refs Q0002.\n\n6. Running a Java program in IntelliJ involves compilation to bytecode and execution. refs Q0004,Q0005.\n\nReturn schema.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794027307,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c3da0d4bb9",
+  "usage": {
+    "completion_tokens": 576,
+    "prompt_tokens": 2841,
+    "total_tokens": 3417,
+    "completion_time": 1.196237778,
+    "completion_tokens_details": {
+      "reasoning_tokens": 218
+    },
+    "prompt_time": 0.114615733,
+    "prompt_tokens_details": null,
+    "queue_time": 0.165955273,
+    "total_time": 1.310853511
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6t5reshe38rcdmn8wz96n7n",
+    "debug": null,
+    "seed": 1301713486,
+    "usage": null
+  }
+}

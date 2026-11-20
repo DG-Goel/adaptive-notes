@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-cb36ee23-27c4-4690-ad12-5cea6ed5c12e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"markdown\": \"# Mortgage Calculator Lecture Notes\\n\\n## Method Chaining and String Handling\\n- The `nextLine()` method returns a **string** that we store in a variable.\\n- Before storing, we can use the **dot operator** to access members of the string object, call the `trim()` method, and then assign the trimmed result.\\n- This demonstrates **method chaining**.\\n- Running the program produces output that includes a few spaces, the word `mosh`, and `howdy`, resulting in a clean display.\\n\\n## Project Introduction\\n- The instructor announces a project: **build a mortgage calculator** using concepts from this section.\\n\\n## User Input Requirements\\n1. **Principal** – the loan amount (e.g., `$100,000`).\\n2. **Annual interest rate** – expressed as a percentage (e.g., `3.92%`).\\n3. **Period** – loan term in years (e.g., `30` years).\\n\\n## Core Calculations\\n- **Number of payments**: `monthsInYear * periodYears` (multiply the loan term by **12** months).\\n- **Monthly interest rate**:\\n  ```java\\n  monthlyInterest = annualInterest / percent / monthsInYear;\\n  ```\\n  where `percent = 100` and `monthsInYear = 12`.\\n- **Power operation**: use `Math.pow(base, exponent)` to raise a number to the *n*th power.\\n- **Mortgage formula**:\\n  ```java\\n  mortgage = principal * (monthlyInterest * Math.pow(1 + monthlyInterest, numberOfPayments))\\n             / (Math.pow(1 + monthlyInterest, numberOfPayments) - 1);\\n  ```\\n- Format the result as currency with `NumberFormat.getCurrencyInstance()` and store it in `mortgageFormatted` before printing.\\n\\n## Data Types and Variable Naming\\n- **Principal**: `int` (supports values up to ~2 billion).\\n- **Annual interest rate**: `float` (sufficient for small decimal values).\\n- **Period (years)**: `byte` (max 30 years for this assignment).\\n- Use **meaningful, camelCase** variable names (e.g., `monthlyInterest`, `principalAmount`).\\n- Declare constants to avoid magic numbers:\\n  ```java\\n  final int MONTHS_IN_YEAR = 12;\\n  final int PERCENT = 100;\\n  ```\\n\\n## Code Readability Tips\\n- Insert expressions directly in `System.out.println` when it improves clarity, though storing intermediate results in variables is also acceptable.\\n- Avoid ambiguous names like `MI`; prefer descriptive identifiers.\\n\\n## Common Issues and Validation\\n- **Input validation**: non‑numeric entries cause the program to crash.\\n- Use **conditional statements** (`if`, `try‑catch`) to validate user input and handle errors gracefully.\\n- The next section will cover how to implement these validation checks.\\n\\n---\\n*End of notes.*\"\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output JSON with field markdown. Provide polished notes.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794583578,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 676,
+    "prompt_tokens": 850,
+    "total_tokens": 1526,
+    "completion_time": 1.414596964,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14
+    },
+    "prompt_time": 0.0381477,
+    "prompt_tokens_details": null,
+    "queue_time": 0.315614679,
+    "total_time": 1.452744664
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ar8g9eed7vn4qv6d6fvkx7",
+    "debug": null,
+    "seed": 1920726416,
+    "usage": null
+  }
+}

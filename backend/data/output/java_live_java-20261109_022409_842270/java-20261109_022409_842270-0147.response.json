@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-ddbd432a-b4c0-4d7d-a85c-cb9017ef1cea",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"final variable\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a variable declared with the final keyword that cannot be assigned a new value after its initialization, effectively making it a constant\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"constant\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a value that does not change during program execution; in Java it is typically declared with the final keyword and named using all capital letters\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"arithmetic expression\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a piece of code that combines operands and operators to produce a value\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"operand\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a value or variable that an operator works on within an expression\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"exemplifies\": {\n        \"text\": \"addition\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"example_text\": {\n        \"text\": \"int result = 10 + 3; // result is 13\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"casting to double for floating‑point division\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"example_text\": {\n        \"text\": \"double result = (double)10 / 3; // result is 3.333…\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"increment operator (postfix)\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"example_text\": {\n        \"text\": \"int x = 1; x++; // x becomes 2\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"increment operator (prefix)\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"example_text\": {\n        \"text\": \"int x = 1; ++x; // x becomes 2\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"example_type\": null\n    }\n  ],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"naming convention for constants\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"By convention, constants are named using all capital letters (e.g., PI) to distinguish them from regular variables.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"integer division behavior\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"In Java, dividing two whole numbers yields a whole number (the fractional part is discarded).\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"floating‑point division requirement\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"To obtain a floating‑point result from division, at least one operand must be cast to a float or double.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"increment/decrement operators\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"The ++ operator increases a variable's value by 1; it can be used as a prefix (e.g., ++x) or postfix (e.g., x++).\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"A final variable cannot be assigned a new value after its initial assignment.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The arithmetic operators in Java are addition (+), subtraction (‑), multiplication (*), division (/), and modulus (%).\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"When an integer variable is assigned the result of a division between two integers, the result is an integer.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Casting an integer to double before division yields a floating‑point result.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract facts, definitions, examples, explanations, formulas, procedures, relationships, concepts. From excerpts about constants, arithmetic operators, casting, increment. Let's create facts: constant final variable pi cannot be assigned, naming convention uppercase. Also arithmetic operators addition, subtraction, multiplication, division, modulus. Division of two ints yields int. To get floating point, cast to double. Increment operator ++ can be prefix or postfix.\n\nCreate definitions: term \"final variable\" definition? Not explicit definition but description. Could make definition of \"final variable\" as constant. Use excerpt Q0000. term \"final variable\" with definition text.\n\nExamples: example of addition 10+3 =13. Example of casting to double. Example of increment operator.\n\nExplanations: explanation of expression produces value. Explanation of division behavior.\n\nProcedures maybe not.\n\nRelationships maybe none.\n\nNow produce JSON with arrays. Include refs.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191472,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c652c0ffaa",
+  "usage": {
+    "completion_tokens": 1426,
+    "prompt_tokens": 3140,
+    "total_tokens": 4566,
+    "completion_time": 3.041172315,
+    "completion_tokens_details": {
+      "reasoning_tokens": 188
+    },
+    "prompt_time": 0.132362558,
+    "prompt_tokens_details": null,
+    "queue_time": 0.338357497,
+    "total_time": 3.173534873
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z2aaabe5msezd6h9dknjdb",
+    "debug": null,
+    "seed": 766881621,
+    "usage": null
+  }
+}

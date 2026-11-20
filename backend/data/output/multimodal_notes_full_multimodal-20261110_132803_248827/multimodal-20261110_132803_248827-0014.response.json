@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-677adc41-ff17-4555-ab10-f4da1cb2c659",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [\n    {\n      \"ref\": \"Q0000\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0001\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0002\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0003\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0004\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0005\",\n      \"reason\": \"noneducational\"\n    }\n  ],\n  \"claims\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00012\", \"S00013\", \"S00014\", \"S00015\", \"S00011\", \"S00016\"],\n      \"reason\": \"No conceptual teaching content present in provided excerpts.\"\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00012\", \"S00013\", \"S00014\", \"S00015\", \"S00011\", \"S00016\"],\n      \"reason\": \"No definitions of terms are provided.\"\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00012\", \"S00013\", \"S00014\", \"S00015\", \"S00011\", \"S00016\"],\n      \"reason\": \"No explanatory material is present.\"\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00012\", \"S00013\", \"S00014\", \"S00015\", \"S00011\", \"S00016\"],\n      \"reason\": \"No illustrative examples are provided.\"\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00012\", \"S00013\", \"S00014\", \"S00015\", \"S00011\", \"S00016\"],\n      \"reason\": \"No factual statements about Java or programming are present.\"\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00012\", \"S00013\", \"S00014\", \"S00015\", \"S00011\", \"S00016\"],\n      \"reason\": \"No formulas are included.\"\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00012\", \"S00013\", \"S00014\", \"S00015\", \"S00011\", \"S00016\"],\n      \"reason\": \"No procedural instructions are provided.\"\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00012\", \"S00013\", \"S00014\", \"S00015\", \"S00011\", \"S00016\"],\n      \"reason\": \"No relational statements are present.\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with no claims since no factual content. Likely abstentions for missing educational content. All categories empty. Provide abstentions for each category? Probably source missing for facts etc. We'll output empty arrays and abstentions indicating source missing for each category. Use primary excerpts but they are promotional. So noneducational? Might be excluded. We'll put excluded entries for each primary ref with reason noneducational. Provide claims none.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317404,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_69dbc96c74",
+  "usage": {
+    "completion_tokens": 849,
+    "prompt_tokens": 2982,
+    "total_tokens": 3831,
+    "completion_time": 1.8022545650000001,
+    "completion_tokens_details": {
+      "reasoning_tokens": 93
+    },
+    "prompt_time": 0.150772388,
+    "prompt_tokens_details": null,
+    "queue_time": 0.064940025,
+    "total_time": 1.953026953
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72tdfwhe2eskxtk60m1s458",
+    "debug": null,
+    "seed": 23883871,
+    "usage": null
+  }
+}

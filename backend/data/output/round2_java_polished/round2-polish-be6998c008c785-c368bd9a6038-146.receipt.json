@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-e1ae2f77-c00d-4291-9c39-5cc214e9b92c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"markdown\": \"# Java `String` Basics\\n\\n## Overview\\n- A **string literal** is a direct representation of a string value in code.\\n- The `String` class resides in the `java.lang` package, which is imported automatically.\\n- `String` is a **reference type**; reference types are copied by reference, while primitive types are copied by value.\\n\\n## Declaring and Initializing Strings\\n1. **Literal initialization** (preferred):\\n   ```java\\n   String message = \\\"Hello, World!\\\";\\n   ```\\n2. Using the `new` operator (redundant):\\n   ```java\\n   String message = new String(\\\"Hello, World!\\\");\\n   ```\\n   *The literal form is shorter and more idiomatic.*\\n\\n## Common Operations\\n### Concatenation\\n- Use the `+` operator to join strings:\\n  ```java\\n  String full = message + \\\" Have a nice day!\\\";\\n  ```\\n\\n### Accessing Members\\n- Since `String` is a class, its methods are accessed with the dot (`.`) operator, e.g., `message.length()`.\\n\\n## Frequently Used Methods\\n| Method | Description | Example | Returns |\\n|--------|-------------|---------|---------|\\n| `endsWith(String suffix)` | Checks if the string ends with the given suffix. | `message.endsWith(\\\"!!\\\")` | `boolean` (`true`/`false`) |\\n| `startsWith(String prefix)` | Checks if the string starts with the given prefix. | `message.startsWith(\\\"!!\\\")` | `boolean` |\\n| `length()` | Returns the number of characters in the string. | `message.length()` | `int` (e.g., `13`) |\\n| `indexOf(char/String ch)` | Index of the first occurrence of the argument. | `message.indexOf('h')` → `0`<br>`message.indexOf('e')` → `1` | `int` |\\n| `replace(CharSequence target, CharSequence replacement)` | Returns a new string with all occurrences of *target* replaced by *replacement*. | `message.replace(\\\"!\\\", \\\"store\\\")` | New `String` |\\n| `toLowerCase()` | Converts all characters to lower case, returning a new string. | `message.toLowerCase()` | New `String` |\\n| `trim()` | Removes leading and trailing whitespace, returning a new string. | `message.trim()` | New `String` |\\n\\n### Important Notes\\n- **Immutability**: `String` objects cannot be mutated. Methods like `replace`, `toLowerCase`, and `trim` return **new** strings; the original remains unchanged.\\n- **Parameters vs. Arguments**: In method definitions, *parameters* are placeholders (e.g., `target`, `replacement`). When calling a method, the actual values supplied (e.g., `\\\"!\\\"`, `\\\"store\\\"`) are *arguments*.\\n\\n## Practical Applications\\n- Validate input length:\\n  ```java\\n  if (username.length() > 20) {\\n      System.err.println(\\\"Username exceeds 20 characters.\\\");\\n  }\\n  ```\\n- Check string patterns using `startsWith`/`endsWith`.\\n- Clean user input with `trim()` before processing.\\n\\n---\\n*All examples assume `String message = \\\"Hello!!\\\";` unless otherwise noted.*\"\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output JSON with field markdown. Provide polished notes.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794583562,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_93703442d9",
+  "usage": {
+    "completion_tokens": 769,
+    "prompt_tokens": 848,
+    "total_tokens": 1617,
+    "completion_time": 1.6186652129999999,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14
+    },
+    "prompt_time": 0.039450101,
+    "prompt_tokens_details": null,
+    "queue_time": 0.368288617,
+    "total_time": 1.658115314
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ar7zvke0vsh01762ya5wd5",
+    "debug": null,
+    "seed": 748097336,
+    "usage": null
+  }
+}

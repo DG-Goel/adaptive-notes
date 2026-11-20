@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-e2c15011-9fda-4016-8bfc-56f209e3560e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"context\": null,\n      \"term\": {\n        \"text\": \"machine learning\",\n        \"refs\": [\"Q0001\"],\n        \"claims\": [\n          {\n            \"text\": \"machine learning\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0001\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"machine learning is a discipline in computer science where we train machines on data so that they can make predictions without explicit programming.\",\n        \"refs\": [\"Q0001\"],\n        \"claims\": [\n          {\n            \"text\": \"machine learning is a discipline in computer science where we train machines on data so that they can make predictions without explicit programming.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0001\"],\n            \"related_refs\": []\n          }\n        ]\n      }\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract definitions. Look at excerpts: Q0001 defines machine learning. That's a definition. So create item with term and definition_text. term likely \"machine learning\". definition_text from Q0001. Claims: text = quote. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role prerequisite? It's definition so maybe prerequisite? Could set null. Use null allowed. related_refs empty.\n\nProvide context maybe null. context field optional? schema expects context object maybe null. We'll set context null.\n\nProvide refs list includes Q0001. term also has refs Q0001? term text \"machine learning\". Provide claims for term maybe same? Could just include term with claim same definition? Probably term claim just term identification. We'll include term with claim text \"machine learning\". basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs empty, refs Q0001.\n\nDefinition_text claims same as term? Actually definition_text claims the definition quote. Provide.\n\nNow abstentions none. excluded none.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794595662,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_854fa9be4c",
+  "usage": {
+    "completion_tokens": 483,
+    "prompt_tokens": 3331,
+    "total_tokens": 3814,
+    "completion_time": 1.176759591,
+    "completion_tokens_details": {
+      "reasoning_tokens": 210
+    },
+    "prompt_time": 0.669741899,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "queue_time": 0.293607492,
+    "total_time": 1.84650149
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b3s8g0e0wt0g3dj608ty6a",
+    "debug": null,
+    "seed": 236912370,
+    "usage": null
+  }
+}

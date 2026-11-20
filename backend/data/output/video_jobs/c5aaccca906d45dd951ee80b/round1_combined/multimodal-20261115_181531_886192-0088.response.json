@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-ef49bb48-3cea-4325-b63e-f7f9f99efa87",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Domestic demand adjustment\",\n      \"refs\": [\"Q0003\",\"Q0005\",\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Subtracting imports from total demand to obtain domestic demand shifts the demand curve downward and makes it flatter, indicating a rotation rather than a parallel shift.\",\n      \"refs\": [\"Q0003\",\"Q0005\",\"Q0009\",\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The demand curve becomes flatter after adjusting for imports.\",\n      \"refs\": [\"Q0011\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"explanations\",\n      \"field\": \"topic\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Effect of subtracting imports on demand curve\",\n      \"refs\": [\"Q0009\",\"Q0010\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"explanations\",\n      \"field\": \"explanation_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Removing import demand lowers the overall demand level (downward shift) and also changes the slope, making the curve flatter because higher income levels see a larger reduction.\",\n      \"refs\": [\"Q0009\",\"Q0011\",\"Q0013\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What happens to the demand curve when imports are subtracted from total demand?\",\n      \"answer\": \"It shifts downward and becomes flatter.\",\n      \"distractors\": [\n        \"It shifts upward and becomes steeper.\",\n        \"It remains unchanged.\",\n        \"It shifts downward but retains the same slope.\"\n      ],\n      \"explanation\": \"The speaker explains that subtracting imports moves the curve down and also makes it flatter, indicating a rotation rather than a parallel shift.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Demand curve adjustment\",\n      \"refs\": [\"Q0009\",\"Q0011\"]\n    },\n    {\n      \"question\": \"Why does the curve become flatter after adjusting for imports?\",\n      \"answer\": \"Because the reduction in demand is larger at higher income levels.\",\n      \"distractors\": [\n        \"Because imports are more expensive at low incomes.\",\n        \"Because domestic producers increase output equally at all income levels.\",\n        \"Because the total population decreases.\"\n      ],\n      \"explanation\": \"The speaker notes that the decline is larger for high levels of income than for low levels, leading to a flatter curve.\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"Curve flattening reason\",\n      \"refs\": [\"Q0013\"]\n    },\n    {\n      \"question\": \"Which term best describes the movement of the demand curve after subtracting imports?\",\n      \"answer\": \"Rotation\",\n      \"distractors\": [\n        \"Parallel shift\",\n        \"Translation\",\n        \"Reflection\"\n      ],\n      \"explanation\": \"The speaker states that the change is not a parallel shift but involves rotation, as the curve becomes flatter.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Type of curve movement\",\n      \"refs\": [\"Q0010\"]\n    },\n    {\n      \"question\": \"In the context of domestic demand, what does subtracting imports represent?\",\n      \"answer\": \"Removing the portion of demand that goes to foreign goods.\",\n      \"distractors\": [\n        \"Adding foreign demand to domestic supply.\",\n        \"Increasing domestic production capacity.\",\n        \"Changing the price of domestic goods.\"\n      ],\n      \"explanation\": \"The speaker explains that part of the demand goes to foreign goods, so subtracting imports isolates demand for domestic producers.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Import subtraction purpose\",\n      \"refs\": [\"Q0003\",\"Q0005\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? The excerpts talk about subtracting imports, domestic demand, shift down, rotation, curve flatter. Could make a concept: \"Domestic demand adjustment\". Provide content and concept_name. Use primary excerpts.\n\nCreate item \"item1\". rows for concept_name and content.\n\nAlso maybe fact: \"Subtracting imports from domestic demand shifts the demand curve down and makes it flatter.\" Use excerpt Q0009, Q0011.\n\nCreate rows.\n\nQuiz: need 4 questions. Use these concepts.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794766680,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a7bb72c24",
+  "usage": {
+    "completion_tokens": 1249,
+    "prompt_tokens": 2591,
+    "total_tokens": 3840,
+    "completion_time": 2.6256766320000002,
+    "completion_tokens_details": {
+      "reasoning_tokens": 110
+    },
+    "prompt_time": 0.104557259,
+    "prompt_tokens_details": null,
+    "queue_time": 0.162161651,
+    "total_time": 2.730233891
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g6w9yhems8ty02pcr5q3qs",
+    "debug": null,
+    "seed": 803620766,
+    "usage": null
+  }
+}

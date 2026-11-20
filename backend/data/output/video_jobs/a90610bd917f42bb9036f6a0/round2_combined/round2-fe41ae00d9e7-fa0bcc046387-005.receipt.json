@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-c973b500-df7f-413f-b334-bc7fdee0f690",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Uncovered interest parity relationships\",\n      \"source_segment_ids\": [\"CON_0043\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0043\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0043\",\n              \"exact_quote\": \"If the domestic interest rate is above that, the international interest rate, then the exchange rate today has to be above the expected exchange rate, because that will give you a expected depreciation of the currency, which will compensate for the fact that the domestic bond is paying a higher interest rate than international bond.\"\n            },\n            {\n              \"note_id\": \"CON_0043\",\n              \"exact_quote\": \"Conversely, if the domestic bond is paying a lower interest rate, then the exchange rate today is very depreciated, because you have to expect it to appreciate in order to compensate for the interest rate differential.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"concept_tree\",\n            \"title\": \"Uncovered interest parity\",\n            \"nodes\": [\n              { \"id\": \"n0\", \"label\": \"Uncovered interest parity\" },\n              { \"id\": \"n1\", \"label\": \"Domestic interest rate\", \"parent\": \"n0\" },\n              { \"id\": \"n2\", \"label\": \"Foreign (international) interest rate\", \"parent\": \"n0\" },\n              { \"id\": \"n3\", \"label\": \"Current exchange rate\", \"parent\": \"n0\" },\n              { \"id\": \"n4\", \"label\": \"Expected exchange rate\", \"parent\": \"n0\" },\n              { \"id\": \"n5\", \"label\": \"Expected depreciation/appreciation\", \"parent\": \"n0\" }\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Effects of an interest‑rate increase in an open economy\",\n      \"source_segment_ids\": [\"CON_0052\", \"CON_0044\", \"FCT_0087\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0052\", \"CON_0044\", \"FCT_0087\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0052\",\n              \"exact_quote\": \"An increase in the domestic interest rate leads to an appreciation of the exchange rate.\"\n            },\n            {\n              \"note_id\": \"CON_0044\",\n              \"exact_quote\": \"An increase in the interest rate lowers investment, which cuts aggregate demand.\"\n            },\n            {\n              \"note_id\": \"FCT_0087\",\n              \"exact_quote\": \"Net exports decline.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Interest‑rate increase cascade\",\n            \"direction\": \"DOWN\",\n            \"nodes\": [\n              { \"id\": \"s0\", \"label\": \"Interest rate rises\", \"kind\": \"start\" },\n              { \"id\": \"a1\", \"label\": \"Currency appreciates\", \"kind\": \"action\" },\n              { \"id\": \"a2\", \"label\": \"Exports become more expensive\", \"kind\": \"action\" },\n              { \"id\": \"a3\", \"label\": \"Net exports decline\", \"kind\": \"action\" },\n              { \"id\": \"a4\", \"label\": \"Investment falls\", \"kind\": \"action\" },\n              { \"id\": \"a5\", \"label\": \"Aggregate demand falls\", \"kind\": \"action\" },\n              { \"id\": \"e1\", \"label\": \"Output contraction\", \"kind\": \"success\" }\n            ],\n            \"edges\": [\n              { \"from\": \"s0\", \"to\": \"a1\", \"label\": \"\" },\n              { \"from\": \"a1\", \"to\": \"a2\", \"label\": \"\" },\n              { \"from\": \"a2\", \"to\": \"a3\", \"label\": \"\" },\n              { \"from\": \"s0\", \"to\": \"a4\", \"label\": \"\" },\n              { \"from\": \"a4\", \"to\": \"a5\", \"label\": \"\" },\n              { \"from\": \"a3\", \"to\": \"a5\", \"label\": \"\" },\n              { \"from\": \"a5\", \"to\": \"e1\", \"label\": \"\" }\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visuals. Identify relationships: Uncovered interest parity linking domestic interest, foreign interest, exchange rates. Could make concept tree for UIP. Also flowchart for interest rate increase effects: appreciation, net exports decline, aggregate demand down. Could table compare effects. We'll output units.\n\nCreate unit for UIP concept tree: root \"Uncovered interest parity\". Children: domestic interest rate, foreign interest rate, current exchange rate, expected exchange rate, expected depreciation. Evidence from CON_0043 excerpts.\n\nProvide source ids: CON_0043.\n\nAlso unit for interest rate increase effects: flowchart: start \"Interest rate rises\" -> decision? Actually sequence: rise -> currency appreciates -> exports more expensive -> net exports fall -> aggregate demand falls -> investment falls. Could be flowchart.\n\nUse sources: CON_0044 (investment falls), CON_0052 (appreciation), CON_0057 (fiscal effect not needed), CON_0055 maybe, CON_0056 not. Use CON_0052, CON_0044, CON_0057? Also CON_0055 about precision. Use CON_0052, CON_0044, CON_0057? Actually CON_0057 about fiscal. Use CON_0052, CON_0044, CON_0057 not relevant. Use CON_0052, CON_0044, CON_0055? We'll include.\n\nCreate flowchart nodes.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794813810,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_49bfac06f1",
+  "usage": {
+    "completion_tokens": 1302,
+    "prompt_tokens": 3444,
+    "total_tokens": 4746,
+    "completion_time": 2.749578863,
+    "completion_tokens_details": {
+      "reasoning_tokens": 295
+    },
+    "prompt_time": 0.175725143,
+    "prompt_tokens_details": null,
+    "queue_time": 0.286979942,
+    "total_time": 2.925304006
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hktjhkesc8xcegvh8nnqqy",
+    "debug": null,
+    "seed": 1209064133,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-356f1fa8-2375-4682-ab4c-cc3a3c72db48",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"uncovered interest parity condition\",\n      \"refs\": [\"Q0033\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Well, it's the uncovered interest parity condition.\",\n      \"refs\": [\"Q0033\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Exact formula for uncovered interest parity condition not provided in primary excerpts; only nonquotable OCR candidate unavailable for citation.\",\n      \"source_ids\": [\"Va1c7f3886d75c946c1d5\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce rows for concepts etc. From excerpts we have explanation of uncovered interest parity condition. So create concept: concept_name \"uncovered interest parity condition\", content from Q0034? Actually Q0034 is assumption. Use Q0034? The definition appears Q0034? No. Use Q0034? Better: Q0034 is assumption about expected exchange rate fixed. For concept we have \"uncovered interest parity condition\" from Q0033? Q0033 is \"Well, it's the uncovered interest parity condition.\" That's Q0033. So concept row.\n\nAlso facts: equation E = (1+i)/(1+i*) E^e from nonquotable but can't use. So abstain for formula.\n\nProvide rows: concept item \"item1\". Provide content text from Q0033 and maybe Q0034? Use primary excerpt Q0033. Provide concept_name from same.\n\nRow fields: category concepts, field concept_name, text \"uncovered interest parity condition\", refs [\"Q0033\"], basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [].\n\nContent row: text from Q0033 maybe \"Well, it's the uncovered interest parity condition.\" Use same ref.\n\nAdd abstention for formula unavailable.\n\nProvide excluded none.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794666151,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8655ddce88",
+  "usage": {
+    "completion_tokens": 571,
+    "prompt_tokens": 3959,
+    "total_tokens": 4530,
+    "completion_time": 1.203711285,
+    "completion_tokens_details": {
+      "reasoning_tokens": 262
+    },
+    "prompt_time": 0.205173313,
+    "prompt_tokens_details": null,
+    "queue_time": 0.376399381,
+    "total_time": 1.408884598
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7d70dd8es5ac53c7vv1jv8z",
+    "debug": null,
+    "seed": 1059206808,
+    "usage": null
+  }
+}

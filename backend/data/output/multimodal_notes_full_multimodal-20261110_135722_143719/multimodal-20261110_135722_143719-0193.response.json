@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-53c2a909-ec8b-453e-979d-27d0977448f4",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"A boolean expression produces a boolean value, true or false.\",\n        \"refs\": [\"Q0001\"],\n        \"claims\": [\n          {\n            \"text\": \"A boolean expression produces a boolean value, true or false.\",\n            \"refs\": [\"Q0001\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The inequality operator ( != ) returns false when the two operands are equal.\",\n        \"refs\": [\"Q0002\"],\n        \"claims\": [\n          {\n            \"text\": \"The inequality operator ( != ) returns false when the two operands are equal.\",\n            \"refs\": [\"Q0002\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The expression x is not equal to y returns false when x and y have the same value.\",\n        \"refs\": [\"Q0003\"],\n        \"claims\": [\n          {\n            \"text\": \"The expression x is not equal to y returns false when x and y have the same value.\",\n            \"refs\": [\"Q0003\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java provides the comparison operators: greater than (>), greater than or equal to (>=), less than (<), and less than or equal to (<=).\",\n        \"refs\": [\"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"Java provides the comparison operators: greater than (>), greater than or equal to (>=), less than (<), and less than or equal to (<=).\",\n            \"refs\": [\"Q0004\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"If y is changed to 2 while x remains 1, the expression x <= y evaluates to true because 1 is less than or equal to 2.\",\n        \"refs\": [\"Q0005\"],\n        \"claims\": [\n          {\n            \"text\": \"If y is changed to 2 while x remains 1, the expression x <= y evaluates to true because 1 is less than or equal to 2.\",\n            \"refs\": [\"Q0005\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Logical operators can be used to combine multiple boolean expressions.\",\n        \"refs\": [\"Q0008\", \"Q0010\"],\n        \"claims\": [\n          {\n            \"text\": \"Logical operators can be used to combine multiple boolean expressions.\",\n            \"refs\": [\"Q0008\", \"Q0010\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In a previous tutorial it was stated that a boolean expression produces a boolean value.\",\n        \"refs\": [\"Q0009\"],\n        \"claims\": [\n          {\n            \"text\": \"In a previous tutorial it was stated that a boolean expression produces a boolean value.\",\n            \"refs\": [\"Q0009\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"An integer variable named temperature is declared and initialized to 22.\",\n        \"refs\": [\"Q0012\"],\n        \"claims\": [\n          {\n            \"text\": \"An integer variable named temperature is declared and initialized to 22.\",\n            \"refs\": [\"Q0012\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output facts from primary excerpts. Identify statements: Q0000 \"that produces a value.\" vague. Q0001 defines boolean expression produces boolean value true or false. Q0002 inequality operator produces false when equal. Q0003 x is not equal to y returns false. Q0004 list of comparison operators. Q0005 change y to 2 expression evaluates true because x <= y. Q0008 logical operators mention. Q0009 boolean expression produces boolean value. Q0010 combine multiple boolean expressions. Q0012 declare integer temperature set to 22.\n\nCreate items with fact_text text and claims. Each claim includes text, refs, basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role maybe explanation_of_mistake? For definitions use explanation_of_mistake? Actually role: explanation_of_mistake not. Use explanation_of_mistake? Better: explanation_of_mistake not. Use explanation_of_mistake for mistake. Here it's explanation. So instructional_role null.\n\nWe'll produce separate items per fact.\n\nAbstentions none. Excluded none.\n\nReturn schema.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794320672,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a7bb72c24",
+  "usage": {
+    "completion_tokens": 1346,
+    "prompt_tokens": 2957,
+    "total_tokens": 4303,
+    "completion_time": 2.842615902,
+    "completion_tokens_details": {
+      "reasoning_tokens": 226
+    },
+    "prompt_time": 0.175833955,
+    "prompt_tokens_details": null,
+    "queue_time": 0.173918373,
+    "total_time": 3.018449857
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72xh6tgep3v5nbvv2vrsea4",
+    "debug": null,
+    "seed": 1405038646,
+    "usage": null
+  }
+}

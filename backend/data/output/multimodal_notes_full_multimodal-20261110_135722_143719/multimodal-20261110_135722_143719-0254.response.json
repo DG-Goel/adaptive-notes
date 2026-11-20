@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-835dd74e-74bc-44e2-bc3e-2e28e56c188e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"In Java, string objects are reference types and cannot be compared with the == or != operators because these operators compare object addresses, not their values.\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0002\", \"Q0003\"],\n        \"claims\": [\n          {\n            \"text\": \"String objects are reference types and cannot be compared with == or != operators.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0000\", \"Q0001\", \"Q0002\", \"Q0003\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"To compare the value of two strings in Java you must use the equals method (e.g., input.equals(\\\"quit\\\")).\",\n        \"refs\": [\"Q0004\", \"Q0005\"],\n        \"claims\": [\n          {\n            \"text\": \"String values must be compared using the equals method.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0004\", \"Q0005\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"To loop until the user types \\\"quit\\\", the condition should be written as !input.equals(\\\"quit\\\") so the loop continues while the input is not equal to \\\"quit\\\".\",\n        \"refs\": [\"Q0006\"],\n        \"claims\": [\n          {\n            \"text\": \"Use !input.equals(\\\"quit\\\") as the loop condition to continue while input is not \\\"quit\\\".\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0006\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"A Scanner object should be created once outside the loop; creating a new Scanner inside each iteration creates unnecessary objects and pollutes memory.\",\n        \"refs\": [\"Q0007\", \"Q0008\", \"Q0009\", \"Q0010\", \"Q0011\"],\n        \"claims\": [\n          {\n            \"text\": \"Create the Scanner object outside the loop to avoid creating many Scanner instances.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0007\", \"Q0008\", \"Q0009\", \"Q0010\", \"Q0011\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"If user input may contain uppercase letters, convert the input to lower case before comparing to \\\"quit\\\".\",\n        \"refs\": [\"Q0013\", \"Q0014\"],\n        \"claims\": [\n          {\n            \"text\": \"Convert input to lower case before comparison to handle case variations.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0013\", \"Q0014\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"A while loop checks its condition before each iteration; if the condition is false the first time, the loop body never executes.\",\n        \"refs\": [\"Q0031\", \"Q0032\"],\n        \"claims\": [\n          {\n            \"text\": \"While loops evaluate the condition before each iteration; a false initial condition prevents any execution.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0031\", \"Q0032\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"A do‑while loop executes its body at least once because the condition is evaluated after the body.\",\n        \"refs\": [\"Q0033\", \"Q0034\", \"Q0035\"],\n        \"claims\": [\n          {\n            \"text\": \"Do‑while loops always run the body once before checking the condition.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0033\", \"Q0034\", \"Q0035\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In practice, while loops are used more frequently than do‑while loops; do‑while loops are reserved for cases where the body must run at least once.\",\n        \"refs\": [\"Q0036\", \"Q0037\"],\n        \"claims\": [\n          {\n            \"text\": \"While loops are preferred in most code; do‑while loops are used when at least one execution is required.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0036\", \"Q0037\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"When the program echoes user input, the word \\\"quit\\\" is also echoed before the program terminates, which may be undesirable.\",\n        \"refs\": [\"Q0041\"],\n        \"claims\": [\n          {\n            \"text\": \"Echoing input causes \\\"quit\\\" to be printed before termination.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"identified_mistake\",\n            \"refs\": [\"Q0041\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"availability\": \"INCOMPLETE_LITERAL\",\n      \"reason\": \"Exact code snippets for the while‑loop condition and scanner usage are not available due to ASR speech evidence.\",\n      \"source_ids\": [\"G00110\"]\n    },\n    {\n      \"availability\": \"INCOMPLETE_LITERAL\",\n      \"reason\": \"Exact code for the do‑while loop syntax is not available; only verbal description is present.\",\n      \"source_ids\": [\"G00111\"]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce facts from primary teaching. Extract statements like string comparison uses equals, not ==, create scanner outside loop, do-while executes at least once, etc. Build items with claims. Provide abstentions for missing code literals. Excluded none.\n\nLet's craft items.\n\nWe'll include multiple facts.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794324794,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_47082602e2",
+  "usage": {
+    "completion_tokens": 1615,
+    "prompt_tokens": 3437,
+    "total_tokens": 5052,
+    "completion_time": 3.402841898,
+    "completion_tokens_details": {
+      "reasoning_tokens": 63
+    },
+    "prompt_time": 0.190753277,
+    "prompt_tokens_details": null,
+    "queue_time": 0.572996259,
+    "total_time": 3.593595175
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m731ez65evst7sm9gcve1gqk",
+    "debug": null,
+    "seed": 584738415,
+    "usage": null
+  }
+}

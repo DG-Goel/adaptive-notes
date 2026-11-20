@@ -1,0 +1,83 @@
+{
+  "operations": [
+    {
+      "id": "offline-java-0000",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "8e7d4a65c29ee66333c258db5edabc4727029fa9e2214c6ef0aa93c40db25c1a",
+      "state": "success",
+      "created": 1794233204.4946685,
+      "completed": 1794233204.4946685,
+      "validation": "passed_mechanical_only"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "offline-java-0000",
+      "number": 1,
+      "created": 1794233204.4946685,
+      "dispatched": 1794233204.4946685,
+      "completed": 1794233204.4946685,
+      "input_reserved": 2332,
+      "output_reserved": 3000,
+      "input_actual": 100,
+      "output_actual": 200,
+      "reasoning": 40,
+      "charged": 300,
+      "http_status": 200,
+      "finish": "stop",
+      "duration": 0.0,
+      "category": "response"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794233204.4946685,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"d3ab401bb8d352b0b57b3fccfec4becc341d896a6d3922a6805b1a00bceff7e5\", \"estimated_input\": 2332, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 2,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794233204.4946685,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 3,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794233204.4946685,
+      "event": "response_saved",
+      "details": "{\"sha256\": \"eeecfa8337621c59d7d6ac54a2ee2624815753f06762b3e59f4b3753a7f50fc4\"}"
+    },
+    {
+      "sequence": 4,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794233204.4946685,
+      "event": "quote_resolution",
+      "details": "{\"resolutions\": [{\"excluded\": {\"Q0000\": \"promotion\", \"Q0001\": \"promotion\", \"Q0002\": \"promotion\", \"Q0003\": \"promotion\", \"Q0004\": \"promotion\", \"Q0005\": \"promotion\", \"Q0006\": \"promotion\", \"Q0007\": \"promotion\", \"Q0008\": \"promotion\", \"Q0009\": \"promotion\", \"Q0010\": \"promotion\", \"Q0011\": \"promotion\", \"Q0012\": \"promotion\", \"Q0013\": \"promotion\", \"Q0014\": \"promotion\", \"Q0015\": \"promotion\", \"Q0016\": \"promotion\", \"Q0017\": \"promotion\", \"Q0018\": \"promotion\", \"Q0019\": \"promotion\", \"Q0020\": \"promotion\", \"Q0021\": \"promotion\", \"Q0022\": \"promotion\", \"Q0023\": \"promotion\", \"Q0024\": \"promotion\", \"Q0025\": \"promotion\", \"Q0026\": \"promotion\", \"Q0027\": \"promotion\", \"Q0028\": \"promotion\", \"Q0029\": \"promotion\", \"Q0030\": \"promotion\", \"Q0031\": \"promotion\", \"Q0032\": \"promotion\", \"Q0033\": \"promotion\", \"Q0034\": \"promotion\", \"Q0035\": \"promotion\", \"Q0036\": \"promotion\", \"Q0037\": \"promotion\", \"Q0038\": \"promotion\", \"Q0039\": \"promotion\"}, \"exclusion_scope\": \"excerpt_only_not_whole_source_unit\", \"policy\": \"grounded_fields_v2\", \"review_required\": false, \"semantic_entailment_verified\": false, \"unaccounted_refs\": [], \"used_refs\": []}]}"
+    },
+    {
+      "sequence": 5,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794233204.4946685,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"success\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"passed_mechanical_only\"}"
+    },
+    {
+      "sequence": 6,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794233204.4946685,
+      "event": "successful_checkpoint_recovery",
+      "details": "{\"items\": 0, \"redispatched\": false, \"response_sha256\": \"eeecfa8337621c59d7d6ac54a2ee2624815753f06762b3e59f4b3753a7f50fc4\"}"
+    }
+  ]
+}

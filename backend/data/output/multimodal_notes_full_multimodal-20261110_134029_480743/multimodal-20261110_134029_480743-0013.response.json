@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-aa7376bd-9290-46bc-83c7-73362a5b9d43",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"claims\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00003\"],\n      \"reason\": \"No concept definitions or explanations present in the provided excerpts.\"\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00003\"],\n      \"reason\": \"No term definitions are given in the excerpts.\"\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00003\"],\n      \"reason\": \"No illustrative examples are provided.\"\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00003\"],\n      \"reason\": \"No explanatory statements are present.\"\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00003\"],\n      \"reason\": \"No factual assertions are made beyond generic introductions.\"\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00003\"],\n      \"reason\": \"No mathematical formulas are included.\"\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00003\"],\n      \"reason\": \"No step‑by‑step procedural instructions are provided.\"\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"G00003\"],\n      \"reason\": \"No relational statements linking concepts are present.\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with empty categories except maybe concepts? No teaching content? The excerpts are just intro, no factual claims. So likely abstentions for missing categories. Provide claims none. All arrays empty. Provide abstentions for each category indicating SOURCE_MISSING? Since no content. We'll list abstentions for each category with reason \"no educational content\". source_ids empty? Must have source_ids list nonempty. Use G00003.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318351,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_90620edd96",
+  "usage": {
+    "completion_tokens": 525,
+    "prompt_tokens": 3004,
+    "total_tokens": 3529,
+    "completion_time": 1.123726621,
+    "completion_tokens_details": {
+      "reasoning_tokens": 92
+    },
+    "prompt_time": 0.149223988,
+    "prompt_tokens_details": null,
+    "queue_time": 0.37878308,
+    "total_time": 1.272950609
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72vadygepvr9a47h11stxk0",
+    "debug": null,
+    "seed": 964037282,
+    "usage": null
+  }
+}

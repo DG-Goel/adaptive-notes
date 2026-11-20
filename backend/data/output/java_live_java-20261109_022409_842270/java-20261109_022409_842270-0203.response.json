@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-ee7255f0-4ad4-447d-9362-81273a750743",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"Scanner input methods in Java\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\"]\n      },\n      \"explanation_type\": null,\n      \"explanation_text\": {\n        \"text\": \"The Scanner class provides several methods for reading different types of input: `nextByte()` reads a byte value, `nextInt()` reads an int, `nextFloat()`/`nextDouble()` read floating‑point numbers, `next()` reads the next token (delimited by whitespace), and `nextLine()` reads the remainder of the current line including the line‑separator. `next()` returns a token, so when a user enters a full name separated by a space, two calls to `next()` are needed to obtain both parts. `nextLine()` consumes the line‑separator that `print()` leaves, which is why output appears on the next line after a `print` call.\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\"]\n      }\n    }\n  ],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"`nextByte()` returns a byte value that can be stored in a byte variable.\",\n        \"refs\": [\"Q0000\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"When concatenating a string with a byte, Java performs implicit casting of the byte to a string.\",\n        \"refs\": [\"Q0000\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"`print()` does not add a newline after the output, while `println()` does.\",\n        \"refs\": [\"Q0001\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"If a floating‑point number (e.g., 20.1) is entered when `nextInt()` is expected, a `InputMismatchException` is thrown because the method can only parse integer values.\",\n        \"refs\": [\"Q0002\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"`nextFloat()` or `nextDouble()` must be used to read floating‑point numbers.\",\n        \"refs\": [\"Q0003\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"`next()` returns a token; each call reads up to the next whitespace delimiter.\",\n        \"refs\": [\"Q0003\"]\n      }\n    },\n    {\n      \"fact_type\": null,\n      \"fact_text\": {\n        \"text\": \"When reading a full name with a space, two calls to `next()` are required to obtain both tokens.\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      }\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract facts, explanations, etc. From excerpts about Java Scanner methods. Identify facts: nextByte returns byte, implicit casting, nextLine adds newline, next returns token, need two next calls for full name. Create facts. Also explanations of behavior. No definitions. Build JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191551,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4200b3f836",
+  "usage": {
+    "completion_tokens": 770,
+    "prompt_tokens": 3146,
+    "total_tokens": 3916,
+    "completion_time": 1.835305693,
+    "completion_tokens_details": {
+      "reasoning_tokens": 59
+    },
+    "prompt_time": 0.042284922,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "queue_time": 0.326958779,
+    "total_time": 1.877590615
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z2crvdewnrd1m60tk62jse",
+    "debug": null,
+    "seed": 830068621,
+    "usage": null
+  }
+}

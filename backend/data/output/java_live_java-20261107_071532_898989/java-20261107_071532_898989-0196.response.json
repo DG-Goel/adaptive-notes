@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-677ef83d-b373-47b2-b965-50b71d11faeb",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"The nextByte method returns a byte value which can be stored in a byte variable.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Concatenating a string with a byte causes implicit casting to string in Java.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The println method adds a new line after the label.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The print method does not add a new line.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The next method reads a token (up to whitespace).\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The nextLine method reads the rest of the line including spaces.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The nextFloat or nextDouble methods are needed to read floating-point numbers; using nextInt on a float causes an exception.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Each call to next reads one token; to read a full name with a space you need to call next twice.\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract facts, definitions, etc. From excerpts about Java Scanner methods. Likely facts: nextByte returns byte, implicit casting, nextLine adds newline, next reads token, nextFloat etc. We'll output facts. No definitions given. Use schema.\n\nCreate facts array with each fact_text and fact_type null. Cite refs.\n\nLet's list facts:\n\n1. The nextByte method returns a byte value which can be stored in a byte variable. refs Q0000.\n\n2. Concatenating a string with a byte causes implicit casting to string in Java. refs Q0000.\n\n3. The println method adds a new line after the label. refs Q0001.\n\n4. The print method does not add a new line. (implied from \"recall the print method\") refs Q0001.\n\n5. The next method reads a token (up to whitespace). refs Q0003 and Q0004.\n\n6. The nextLine method reads the rest of the line including spaces. refs Q0003.\n\n7. The nextFloat or nextDouble methods are needed to read floating-point numbers; using nextInt on a float causes an exception. refs Q0002.\n\n8. Each call to next reads one token; to read a full name with a space you need to call next twice. refs Q0004 and Q0005.\n\nThat's enough.\n\nReturn JSON with empty other arrays. excluded empty.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036292,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8ea50c0161",
+  "usage": {
+    "completion_tokens": 758,
+    "prompt_tokens": 3039,
+    "total_tokens": 3797,
+    "completion_time": 1.592468431,
+    "completion_tokens_details": {
+      "reasoning_tokens": 287
+    },
+    "prompt_time": 0.153470685,
+    "prompt_tokens_details": null,
+    "queue_time": 0.330193365,
+    "total_time": 1.745939116
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6teamcyeer8mqd8pqxy9aap",
+    "debug": null,
+    "seed": 1262203446,
+    "usage": null
+  }
+}

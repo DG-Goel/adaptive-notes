@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-be177dd3-0f96-4d24-81a8-b39abab93201",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"F1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"It depended on foreign output.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"F2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Foreign output is a parameter in this curve.\",\n      \"refs\": [\"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"F3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Changing foreign output does not change the slope of that curve.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"F4\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The ZZ curve represents the random for equilibrium domestic equilibrium output.\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"DD curve\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The original curve before the new ZZ curve.\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the excerpt, what role does foreign output play in the curve?\",\n      \"answer\": \"It is a parameter in the curve.\",\n      \"distractors\": [\n        \"It changes the slope of the curve.\",\n        \"It directly determines domestic output.\",\n        \"It has no effect on the curve.\"\n      ],\n      \"explanation\": \"The excerpt states, \\\"So foreign output is going to be a parameter in this curve,\\\" indicating foreign output serves as a parameter.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Foreign output as a parameter\",\n      \"refs\": [\"Q0002\"]\n    },\n    {\n      \"question\": \"How does changing foreign output affect the slope of the curve?\",\n      \"answer\": \"It does not change the slope.\",\n      \"distractors\": [\n        \"It increases the slope.\",\n        \"It decreases the slope.\",\n        \"It reverses the slope.\"\n      ],\n      \"explanation\": \"The excerpt says, \\\"But it doesn't change the slope of that curve,\\\" indicating the slope remains unchanged.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Effect on slope\",\n      \"refs\": [\"Q0003\"]\n    },\n    {\n      \"question\": \"What does the ZZ curve represent?\",\n      \"answer\": \"Random for equilibrium domestic equilibrium output.\",\n      \"distractors\": [\n        \"The domestic demand curve.\",\n        \"The foreign supply curve.\",\n        \"A constant output line.\"\n      ],\n      \"explanation\": \"The excerpt describes the ZZ curve as \\\"the random for equilibrium domestic equilibrium output,\\\" defining its purpose.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"ZZ curve definition\",\n      \"refs\": [\"Q0004\"]\n    },\n    {\n      \"question\": \"Which curve was compared to the new ZZ curve?\",\n      \"answer\": \"DD curve\",\n      \"distractors\": [\n        \"AA curve\",\n        \"BB curve\",\n        \"CC curve\"\n      ],\n      \"explanation\": \"The speaker says, \\\"So here we went from the DD curve to the new curve,\\\" indicating the DD curve is the one being compared.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Curve comparison\",\n      \"refs\": [\"Q0004\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows. Identify concepts? The excerpts talk about curves, domestic output, foreign output parameter, slope unchanged. Could extract facts. Let's create facts rows.\n\nWe need required fields per category. Choose facts.\n\nRow1: fact_text \"Domestic output depends on domestic output.\" nonsense. Actually excerpt Q0000: \"depend on domestic output.\" incomplete. Might be unsupported. Use abstention for fact? We have clear fact: Q0001 \"It depended on foreign output.\" So fact: foreign output is a factor.\n\nRow2: fact: foreign output is a parameter in the curve (Q0002).\n\nRow3: fact: changing foreign output does not change slope of the curve (Q0003).\n\nRow4: fact: ZZ curve represents random for equilibrium domestic equilibrium output (Q0004) though unclear.\n\nWe need item label same for each fact, e.g., item \"F1\",\"F2\"... Provide rows.\n\nAlso need quiz of up to four questions based on these.\n\nCreate rows with availability SOURCE_SUPPORTED? Excerpts are primary but may be incomplete. Use SOURCE_SUPPORTED.\n\nProvide basis explicit.\n\nLiteral_kind verbal.\n\nInstructional_role null.\n\nRelated_refs empty.\n\nNow quiz: Q1: What does foreign output affect according to the excerpt? Answer: It is a parameter in the curve. Distractors: It changes the slope, It determines domestic output directly, It has no effect. Bloom: Understand.\n\nQ2: How does changing foreign output affect the slope? Answer: It does not change the slope. Distractors: It increases slope, It decreases slope, It reverses slope.\n\nQ3: What does the ZZ curve represent? Answer: Random for equilibrium domestic equilibrium output. Distractors: Domestic demand curve, Foreign supply curve, Constant output line.\n\nQ4: Which curve was compared to the new curve? Answer: DD curve. Distractors: AA curve, BB curve, CC curve.\n\nProvide refs accordingly.\n\nNow construct JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794763965,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_df9620fe21",
+  "usage": {
+    "completion_tokens": 1528,
+    "prompt_tokens": 2286,
+    "total_tokens": 3814,
+    "completion_time": 3.233755406,
+    "completion_tokens_details": {
+      "reasoning_tokens": 397
+    },
+    "prompt_time": 0.101430522,
+    "prompt_tokens_details": null,
+    "queue_time": 0.290072235,
+    "total_time": 3.335185928
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g49da2er4ayqg2kgjwskm5",
+    "debug": null,
+    "seed": 296052682,
+    "usage": null
+  }
+}

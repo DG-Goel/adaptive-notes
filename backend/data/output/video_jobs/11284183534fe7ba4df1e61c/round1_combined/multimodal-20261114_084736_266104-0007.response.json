@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-3b4eae22-2936-4773-9b92-c1ff12f713a1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"ml_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"machine learning\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"ml_concept\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Machine learning is a discipline in computer science where we train machines on data so that they can make predictions without explicit programming.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"trad_vs_ml\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"traditional software program vs machine learning\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"trad_vs_ml\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Traditional software programming requires explicit programming of logic, whereas machine learning provides input and output pairs and the system derives the underlying pattern or logic.\",\n      \"refs\": [\"Q0000\", \"Q0002\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"classification_task\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"classification\",\n      \"refs\": [\"Q0003\", \"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"classification_task\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Classification maps input data to one of several predefined categories, such as spam vs non‑spam email or cat vs dog images, and can involve multiple categories.\",\n      \"refs\": [\"Q0004\", \"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"regression_task\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"regression\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"regression_task\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Regression is a type of machine‑learning task that predicts a continuous numeric value from input data.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc based on excerpts. Identify concepts: machine learning definition, distinction between traditional software and ML, tasks classification and regression. Create items.\n\nWe'll produce rows with availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, instructional_role maybe explanation_of_mistake? No, just explanation. Use appropriate fields.\n\nItem label e.g., \"item1\". Provide concept_name and content.\n\nLet's do concepts: concept_name \"machine learning\", content from Q0001. Also concept \"traditional software program vs machine learning\" content from Q0000. Also concept \"classification\" content from Q0003/Q0004. Also \"regression\" maybe not described fully but mentioned as category.\n\nWe'll need rows for each required field: concept_name and content. Provide refs.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794646066,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_93703442d9",
+  "usage": {
+    "completion_tokens": 1080,
+    "prompt_tokens": 2983,
+    "total_tokens": 4063,
+    "completion_time": 2.261403525,
+    "completion_tokens_details": {
+      "reasoning_tokens": 161
+    },
+    "prompt_time": 0.133561091,
+    "prompt_tokens_details": null,
+    "queue_time": 0.375960454,
+    "total_time": 2.394964616
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ckveh8ekz8p20g6fh8s2r0",
+    "debug": null,
+    "seed": 1702758557,
+    "usage": null
+  }
+}

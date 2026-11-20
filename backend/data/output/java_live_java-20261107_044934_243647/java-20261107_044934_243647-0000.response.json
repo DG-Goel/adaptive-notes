@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-9fa6783c-f93e-4a80-a2e8-6a82732988c6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"JDK is short for Java Development Kit.\",\n        \"refs\": [\"Q0006\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The Java Development Kit is a software development environment for building Java applications; it includes a compiler, reusable code, a Java Runtime Environment, and other components.\",\n        \"refs\": [\"Q0007\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [\n    {\n      \"ref\": \"Q0000\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0001\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0002\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0003\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0004\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0005\",\n      \"reason\": \"promotion\"\n    },\n    {\n      \"ref\": \"Q0008\",\n      \"reason\": \"noneducational\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays except maybe facts? The excerpts are mostly promotional, not educational content except mentions of installing JDK. Could extract fact: JDK stands for Java Development Kit. Also JDK is a software development environment for building Java applications, includes compiler, runtime, etc. These are educational facts.\n\nCreate facts items.\n\nAlso maybe concept: Java Development Kit.\n\nLet's produce facts with text exactly from excerpts. Need refs covering whole claim. For JDK abbreviation: from Q0006 \"jdk is short for Java development kit\". Also Q0007 \"development kit and it's basically a software development environment for building Java applications\". Combine? Might need separate facts.\n\nWe'll create two fact entries.\n\nFirst fact: \"JDK is short for Java Development Kit.\" refs Q0006.\n\nSecond fact: \"The Java Development Kit is a software development environment for building Java applications; it includes a compiler, reusable code, a Java Runtime Environment, and other components.\" refs Q0007 (covers description). Might need both Q0006 and Q0007 for full claim. Use both.\n\nNo other educational content. Excluded list: promotional excerpts like sponsor etc. Mark those as noneducational: Q0005, Q0006 includes promo but also tool download; but contains educational part, so not excluded. Q0000 greeting noneducational. Q0001 intro maybe promotional but not teaching. Could exclude those noneducational. We'll list excluded with reason.\n\nLet's output.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794026993,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_ca5edfaab2",
+  "usage": {
+    "completion_tokens": 630,
+    "prompt_tokens": 2892,
+    "total_tokens": 3522,
+    "completion_time": 1.301839306,
+    "completion_tokens_details": {
+      "reasoning_tokens": 300
+    },
+    "prompt_time": 0.118762292,
+    "prompt_tokens_details": null,
+    "queue_time": 0.379495851,
+    "total_time": 1.420601598
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6t5ew55eph902hj676kwbfg",
+    "debug": null,
+    "seed": 1816291052,
+    "usage": null
+  }
+}

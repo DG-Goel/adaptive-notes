@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-fc0c17f6-e308-48a1-b78f-e73360efa290",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"abstentions\":[],\"excluded\":[],\"rows\":[{\"availability\":\"SOURCE_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"concepts\",\"element\":0,\"field\":\"content\",\"instructional_role\":null,\"item\":\"item1\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0002\",\"Q0004\"],\"related_refs\":[],\"text\":\"Casting the result of Math.random() to int before multiplying by 100 yields zero because the fractional part is lost.\"},{\"availability\":\"SOURCE_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"concepts\",\"element\":1,\"field\":\"content\",\"instructional_role\":null,\"item\":\"item1\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0005\",\"Q0006\"],\"related_refs\":[],\"text\":\"Wrapping the entire expression in parentheses before casting produces an integer between 0 and 100.\"},{\"availability\":\"SOURCE_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"concepts\",\"element\":0,\"field\":\"content\",\"instructional_role\":null,\"item\":\"item2\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0018\",\"Q0019\",\"Q0020\"],\"related_refs\":[],\"text\":\"NumberFormat is an abstract class in java.text and cannot be instantiated directly.\"},{\"availability\":\"SOURCE_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"concepts\",\"element\":1,\"field\":\"content\",\"instructional_role\":null,\"item\":\"item2\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0025\",\"Q0026\",\"Q0027\",\"Q0028\"],\"related_refs\":[],\"text\":\"Use NumberFormat.getCurrencyInstance() as a factory method to obtain a NumberFormat object.\"},{\"availability\":\"SOURCE_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"definitions\",\"element\":0,\"field\":\"term\",\"instructional_role\":null,\"item\":\"item3\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0018\",\"Q0019\"],\"related_refs\":[],\"text\":\"abstract class\"},{\"availability\":\"SOURCE_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"definitions\",\"element\":0,\"field\":\"definition_text\",\"instructional_role\":null,\"item\":\"item3\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0018\",\"Q0019\",\"Q0020\"],\"related_refs\":[],\"text\":\"A class that cannot be instantiated directly and may contain abstract methods; it must be subclassed.\"},{\"availability\":\"SOURCE_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"facts\",\"element\":0,\"field\":\"fact_text\",\"instructional_role\":null,\"item\":\"item4\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0004\"],\"related_refs\":[],\"text\":\"Casting a double to int truncates the fractional part.\"},{\"availability\":\"SOURCE_SUPPORTED\",\"basis\":\"explicit\",\"category\":\"relationships\",\"element\":0,\"field\":\"content\",\"instructional_role\":null,\"item\":\"item5\",\"literal_kind\":\"verbal\",\"part\":\"value\",\"refs\":[\"Q0018\",\"Q0020\"],\"related_refs\":[],\"text\":\"NumberFormat (abstract) cannot be instantiated with new operator.\"},{\"availability\":\"SOURCE_MISSING\",\"basis\":\"explicit\",\"category\":\"examples\",\"element\":0,\"field\":\"example_text\",\"instructional_role\":\"identified_mistake\",\"item\":\"item6\",\"literal_kind\":\"incorrect_code\",\"part\":\"value\",\"refs\":[\"Q0000\",\"Q0002\",\"Q0004\"],\"related_refs\":[],\"text\":\"int result = (int) Math.round(Math.random() * 100); // always zero without parentheses\"},{\"availability\":\"SOURCE_MISSING\",\"basis\":\"explicit\",\"category\":\"examples\",\"element\":1,\"field\":\"example_text\",\"instructional_role\":\"correct_demonstration\",\"item\":\"item6\",\"literal_kind\":\"corrected_code\",\"part\":\"value\",\"refs\":[\"Q0005\",\"Q0006\"],\"related_refs\":[],\"text\":\"int result = (int) Math.round((Math.random() * 100)); // yields 0‑100\"}]}\n",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts, definitions, etc based on excerpts. Likely concepts: casting, abstract class, factory method, number format, formatting numbers, currency formatting. Create rows with availability SOURCE_SUPPORTED, basis explicit, literal_kind verbal, etc. Provide item id e.g., \"item1\". Provide refs list with excerpt refs. Provide related_refs empty.\n\nWe'll produce rows for concepts content. Also definitions maybe term \"abstract class\". Provide definition_text from excerpts. Provide examples? maybe example of casting causing zero. Provide facts like casting result loses fraction. Provide relationships: abstract class cannot be instantiated.\n\nLet's craft minimal rows.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636249,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c868cf1eaa",
+  "usage": {
+    "completion_tokens": 1350,
+    "prompt_tokens": 3560,
+    "total_tokens": 4910,
+    "completion_time": 2.835744482,
+    "completion_tokens_details": {
+      "reasoning_tokens": 128
+    },
+    "prompt_time": 0.191747374,
+    "prompt_tokens_details": null,
+    "queue_time": 0.3725552,
+    "total_time": 3.027491856
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cafvaje4aaxbjqf4tjzd3c",
+    "debug": null,
+    "seed": 1427867814,
+    "usage": null
+  }
+}

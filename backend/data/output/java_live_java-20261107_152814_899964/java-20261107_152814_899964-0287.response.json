@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-c5151c82-41ff-4c5d-9fd9-55b246fb02ed",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"A for loop in Java consists of three parts: an initialization of a counter variable, a boolean condition that determines how many times the loop executes, and an increment operation.\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The loop executes its body while the condition is true; after each iteration the counter is incremented, and when the condition becomes false the loop terminates.\",\n        \"refs\": [\"Q0002\", \"Q0003\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [\n    {\n      \"procedure_name\": {\n        \"text\": \"Print \\\"Hello World\\\" five times using a for loop\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\"]\n      },\n      \"prerequisites\": null,\n      \"steps\": [\n        {\n          \"text\": \"Start with the for keyword and an opening parenthesis.\",\n          \"refs\": [\"Q0000\"]\n        },\n        {\n          \"text\": \"Initialize a counter variable, e.g., int i = 0.\",\n          \"refs\": [\"Q0000\"]\n        },\n        {\n          \"text\": \"Add a semicolon to terminate the initialization statement.\",\n          \"refs\": [\"Q0001\"]\n        },\n        {\n          \"text\": \"Write a boolean condition, e.g., i < 5, that determines how many times the loop runs.\",\n          \"refs\": [\"Q0001\"]\n        },\n        {\n          \"text\": \"Add a semicolon to terminate the condition.\",\n          \"refs\": [\"Q0001\"]\n        },\n        {\n          \"text\": \"Write the increment expression, e.g., i++.\",\n          \"refs\": [\"Q0001\"]\n        },\n        {\n          \"text\": \"Close the parentheses and add the loop body; for a single statement no braces are needed.\",\n          \"refs\": [\"Q0002\"]\n        },\n        {\n          \"text\": \"Place the statement to be repeated, e.g., System.out.println(\\\"Hello World\\\");\",\n          \"refs\": [\"Q0002\", \"Q0005\"]\n        },\n        {\n          \"text\": \"Optionally, add a space and concatenate the counter variable to the output if desired.\",\n          \"refs\": [\"Q0004\"]\n        },\n        {\n          \"text\": \"Close the loop with a closing brace if a block was opened.\",\n          \"refs\": [\"Q0002\"]\n        }\n      ],\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"The loop prints \\\"Hello World\\\" five times on the terminal.\",\n        \"refs\": [\"Q0005\"]\n      }\n    }\n  ],\n  \"relationships\": [],\n  \"explanations\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts about for loops. Extract facts, definitions, procedures maybe. Let's create facts: definition of for loop structure. Also procedure steps.\n\nWe'll produce facts and procedures. Use required fields.\n\nCreate fact: \"A for loop in Java consists of initialization, a boolean condition, and an increment.\" Cite Q0000,Q0001.\n\nAnother fact: \"The loop executes the body while the condition is true, incrementing after each iteration.\" Cite Q0002,Q0003,Q0004.\n\nProcedure: name \"Using a for loop to print Hello World five times\". Steps: initialize i=0; check condition i<5; execute body (print); increment i++; repeat. Cite appropriate excerpts.\n\nAlso maybe concept? Not needed.\n\nProvide empty arrays for others.\n\nProvide excluded empty.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065844,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c3da0d4bb9",
+  "usage": {
+    "completion_tokens": 837,
+    "prompt_tokens": 3029,
+    "total_tokens": 3866,
+    "completion_time": 1.751960585,
+    "completion_tokens_details": {
+      "reasoning_tokens": 171
+    },
+    "prompt_time": 0.157331232,
+    "prompt_tokens_details": null,
+    "queue_time": 0.162168212,
+    "total_time": 1.909291817
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6vaggm5eze8s130mk2edqvn",
+    "debug": null,
+    "seed": 613526257,
+    "usage": null
+  }
+}

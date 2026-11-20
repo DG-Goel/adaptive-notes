@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-73f988e6-4cce-4d9f-8f8a-3fc2e3dc0101",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Classification Types Comparison\",\n      \"source_segment_ids\": [\"CON_0001\", \"CON_0002\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0001\", \"CON_0002\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0001\",\n              \"exact_quote\": \"two categories as an output it's called binary classification for multiple it's called multi-class classification\"\n            },\n            {\n              \"note_id\": \"CON_0002\",\n              \"exact_quote\": \"type of problem where output can be any number, not fixed categories\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Classification Types\",\n            \"headers\": [\"Problem Type\", \"Output Characteristics\", \"Common Name\"],\n            \"rows\": [\n              [\"Binary Classification\", \"Two fixed categories\", \"binary classification\"],\n              [\"Multi‑Class Classification\", \"More than two fixed categories\", \"multi‑class classification\"]\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visual units. Identify candidates: classification types maybe table comparing binary vs multi-class. Use CON_0001 and CON_0002. Create visual table. source ids those two. Provide payload. No missing info. needs_review false. evidence from notes. Return JSON with units list.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794602426,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d577f40f11",
+  "usage": {
+    "completion_tokens": 329,
+    "prompt_tokens": 946,
+    "total_tokens": 1275,
+    "completion_time": 0.682639984,
+    "completion_tokens_details": {
+      "reasoning_tokens": 62
+    },
+    "prompt_time": 0.037389572,
+    "prompt_tokens_details": null,
+    "queue_time": 0.050894236,
+    "total_time": 0.720029556
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7ba7qs6e4k8rydbcmet9j68",
+    "debug": null,
+    "seed": 2083446454,
+    "usage": null
+  }
+}

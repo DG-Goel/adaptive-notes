@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-ff7982f2-88e6-48db-b470-b9d4a9998dac",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"The for‑each loop has a limitation that it can only iterate forward, so it cannot iterate over an array from the end to the beginning.\",\n        \"refs\": [\"Q0001\"],\n        \"claims\": [\n          {\n            \"text\": \"The for‑each loop can only iterate forward and cannot iterate from the end to the beginning of an array.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0001\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The for‑each loop does not provide access to the index of each item; only the loop variable holding the item value is available.\",\n        \"refs\": [\"Q0005\", \"Q0006\"],\n        \"claims\": [\n          {\n            \"text\": \"The for‑each loop does not give access to the index of each element, only the element value via the loop variable.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0005\", \"Q0006\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In a traditional for loop you can access both the index and the actual item, e.g., using i as the index and fruits[i] as the item.\",\n        \"refs\": [\"Q0007\", \"Q0008\"],\n        \"claims\": [\n          {\n            \"text\": \"A traditional for loop allows access to both the index (i) and the item (fruits[i]).\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0007\", \"Q0008\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"If you need the index of each element, you should use a for loop rather than a for‑each loop; otherwise the for‑each loop is easier to use.\",\n        \"refs\": [\"Q0009\"],\n        \"claims\": [\n          {\n            \"text\": \"Use a for loop when the index is needed; otherwise the for‑each loop is simpler.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"correct_demonstration\",\n            \"refs\": [\"Q0009\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce facts about for-each loop limitations etc. Use primary excerpts. Create items with claims. Provide abstentions none. Excluded none. Build schema.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794325071,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a7bb72c24",
+  "usage": {
+    "completion_tokens": 701,
+    "prompt_tokens": 3525,
+    "total_tokens": 4226,
+    "completion_time": 1.49132928,
+    "completion_tokens_details": {
+      "reasoning_tokens": 34
+    },
+    "prompt_time": 0.172718587,
+    "prompt_tokens_details": null,
+    "queue_time": 0.160203772,
+    "total_time": 1.6640478669999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m731qg2yeftvtmajf75tc6ma",
+    "debug": null,
+    "seed": 405379156,
+    "usage": null
+  }
+}

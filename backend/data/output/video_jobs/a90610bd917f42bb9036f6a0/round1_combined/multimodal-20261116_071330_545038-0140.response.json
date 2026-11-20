@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-9f5d80e6-12a3-4bfc-a8ff-c957a81b92e5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"I001\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Interest rate increase reduces aggregate demand\",\n      \"refs\": [\"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I001\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"An increase in the interest rate lowers investment, which cuts aggregate demand.\",\n      \"refs\": [\"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I002\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Exchange‑rate appreciation reduces net exports\",\n      \"refs\": [\"Q0016\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"I002\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"When the interest rate rises, the domestic currency appreciates, making exports more expensive and lowering net exports.\",\n      \"refs\": [\"Q0017\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"According to the lecture, what is the first way an increase in the interest rate contracts aggregate demand?\",\n      \"answer\": \"It reduces domestic investment.\",\n      \"distractors\": [\n        \"It raises the exchange rate.\",\n        \"It increases government spending.\",\n        \"It lowers taxes.\"\n      ],\n      \"explanation\": \"The speaker states that a higher interest rate leads to lower investment, which reduces aggregate demand (Q0009).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Interest‑rate channel – investment\",\n      \"refs\": [\"Q0009\"]\n    },\n    {\n      \"question\": \"What is the second channel through which a higher interest rate contracts aggregate demand in an open economy?\",\n      \"answer\": \"It causes the exchange rate to appreciate, reducing net exports.\",\n      \"distractors\": [\n        \"It increases consumer confidence.\",\n        \"It lowers the price level.\",\n        \"It raises the money supply.\"\n      ],\n      \"explanation\": \"The lecturer explains that a higher interest rate appreciates the exchange rate, which lowers net exports (Q0016‑Q0017).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Interest‑rate channel – exchange rate\",\n      \"refs\": [\"Q0016\", \"Q0017\"]\n    },\n    {\n      \"question\": \"Why does an appreciated exchange rate lead to a decline in net exports?\",\n      \"answer\": \"Exports become relatively more expensive for foreign buyers.\",\n      \"distractors\": [\n        \"Imports become cheaper for domestic consumers.\",\n        \"Domestic producers receive subsidies.\",\n        \"Foreign interest rates fall.\"\n      ],\n      \"explanation\": \"When the domestic currency appreciates, foreign buyers face higher prices for exported goods, reducing export volumes (implied by Q0017).\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"Exchange‑rate effect on trade\",\n      \"refs\": [\"Q0017\"]\n    },\n    {\n      \"question\": \"In a closed‑economy model, which of the following was the only channel through which monetary policy affected output?\",\n      \"answer\": \"The investment channel.\",\n      \"distractors\": [\n        \"The exchange‑rate channel.\",\n        \"The fiscal‑spending channel.\",\n        \"The wage‑setting channel.\"\n      ],\n      \"explanation\": \"The speaker notes that in a closed economy, monetary policy worked solely through the investment channel (Q0006).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Closed‑economy monetary transmission\",\n      \"refs\": [\"Q0006\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc. From excerpts we have teaching about interest rate effects: two channels: investment fall and exchange rate appreciation reducing net exports. Create concepts: \"interest rate increase effect on aggregate demand\". Provide rows.\n\nWe'll produce rows for concepts with concept_name and content. Use primary excerpts.\n\nRows:\n\nitem \"I001\" category concepts, field concept_name element0 part value text \"Interest rate increase reduces aggregate demand\". refs Q0004 etc.\n\ncontent field element0 part value text from Q0004 and Q0017 combine? Provide separate rows.\n\nAlso maybe concept \"Exchange rate appreciation reduces net exports\". Use Q0016,Q0017.\n\nAdd abstentions none.\n\nQuiz: four questions.\n\nCreate questions about the two channels.\n\nProvide refs.\n\nReturn JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794813507,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c800245357",
+  "usage": {
+    "completion_tokens": 1167,
+    "prompt_tokens": 2771,
+    "total_tokens": 3938,
+    "completion_time": 2.445077033,
+    "completion_tokens_details": {
+      "reasoning_tokens": 158
+    },
+    "prompt_time": 0.160730774,
+    "prompt_tokens_details": null,
+    "queue_time": 0.291972992,
+    "total_time": 2.605807807
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hkhaqme20vg6vaffprj53e",
+    "debug": null,
+    "seed": 37600015,
+    "usage": null
+  }
+}

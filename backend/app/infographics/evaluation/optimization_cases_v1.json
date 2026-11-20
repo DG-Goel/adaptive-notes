@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "provenance": "Original assistant-authored editorial optimization scenarios, independent of planner outputs; not expert-reviewed annotations. Existing Phase 3 fixtures unchanged.",
+  "cases": [
+    {
+      "id": "four_related",
+      "source_description": "Four complementary component descriptions and one independent concept.",
+      "acceptable_behavior": "merge first four; retain independent fifth",
+      "dominant_category": "A"
+    },
+    {
+      "id": "complete_workflow",
+      "source_description": "Document loading, text chunking, embedding creation and vector indexing.",
+      "acceptable_behavior": "one B workflow if capacity permits",
+      "dominant_category": "B"
+    },
+    {
+      "id": "mixed_category",
+      "source_description": "System modules followed by how those same modules exchange messages.",
+      "acceptable_behavior": "A/B may become B after source confirmation",
+      "dominant_category": "B"
+    },
+    {
+      "id": "continuation",
+      "source_description": "A definition and properties separated only by request context exhaustion.",
+      "acceptable_behavior": "recover continuation within generator capacity",
+      "dominant_category": "A"
+    },
+    {
+      "id": "oversized",
+      "source_description": "A very large continued concept exceeds the configured generation input ceiling.",
+      "acceptable_behavior": "retain linked segments",
+      "dominant_category": "A"
+    },
+    {
+      "id": "false_keywords",
+      "source_description": "Java memory model and human working memory share the word memory.",
+      "acceptable_behavior": "retain genuinely independent objectives",
+      "dominant_category": "A"
+    },
+    {
+      "id": "quantitative_theory",
+      "source_description": "Three experimental readings followed by unrelated legal classification theory.",
+      "acceptable_behavior": "retain numerical and theoretical segments",
+      "dominant_category": "C"
+    },
+    {
+      "id": "nonvisual",
+      "source_description": "A visual theorem overview followed by its lengthy proof.",
+      "acceptable_behavior": "retain N ownership with display attachment",
+      "dominant_category": "N"
+    },
+    {
+      "id": "unchanged",
+      "source_description": "Two independent topics already form clear readable visuals.",
+      "acceptable_behavior": "keep both unchanged",
+      "dominant_category": "A"
+    },
+    {
+      "id": "soft_excess",
+      "source_description": "Many genuinely independent topics exceed an initial engineering visual target.",
+      "acceptable_behavior": "retain excess with explicit explanation",
+      "dominant_category": "A"
+    }
+  ]
+}

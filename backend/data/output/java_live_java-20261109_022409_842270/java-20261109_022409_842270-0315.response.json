@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-a3e708d8-79d7-4299-b5c9-cdd14c7b4f25",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"The break statement terminates a loop.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The continue statement moves control to the beginning of a loop.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"A loop condition can be simplified to `true` so the loop runs forever until a break statement ends it.\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [\n    {\n      \"procedure_name\": {\n        \"text\": \"Handle user input with break and continue statements\",\n        \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\"]\n      },\n      \"prerequisites\": null,\n      \"steps\": [\n        {\n          \"text\": \"Read user input.\",\n          \"refs\": [\"Q0000\"]\n        },\n        {\n          \"text\": \"If the input equals \\\"quit\\\", execute a `break` statement to terminate the loop.\",\n          \"refs\": [\"Q0001\", \"Q0002\"]\n        },\n        {\n          \"text\": \"Else if the input equals \\\"pass\\\", execute a `continue` statement to skip the rest of the loop body and start the next iteration.\",\n          \"refs\": [\"Q0003\"]\n        },\n        {\n          \"text\": \"Otherwise, print the input.\",\n          \"refs\": [\"Q0000\"]\n        }\n      ],\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"This procedure ensures that the word \\\"quit\\\" ends the program without being echoed, \\\"pass\\\" causes the loop to restart without echoing, and all other inputs are echoed back.\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0002\", \"Q0003\"]\n      }\n    }\n  ],\n  \"relationships\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"Break and continue statements in loops\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"When Java encounters a `break` statement inside a loop, it exits the loop immediately, ignoring any remaining statements in the current iteration. When it encounters a `continue` statement, it skips the remaining statements of the current iteration and jumps to the next iteration by moving control to the beginning of the loop.\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract facts, explanations, procedures, etc. From excerpts about break and continue statements. Likely facts: break terminates loop, continue moves to beginning. Procedures: checking input, using if, using break, using continue. We'll output schema.\n\nLet's create facts: break statement terminates a loop. continue statement moves control to beginning of loop. Also that loop condition can be true always.\n\nExplanations: explanation of break and continue usage.\n\nProcedures: steps to modify program: check input, if equals quit then break, else if equals pass then continue, else print.\n\nWe'll cite refs accordingly. Use primary excerpts Q0000- Q0005.\n\nNow produce JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191801,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a655021f7d",
+  "usage": {
+    "completion_tokens": 766,
+    "prompt_tokens": 3135,
+    "total_tokens": 3901,
+    "completion_time": 1.602036488,
+    "completion_tokens_details": {
+      "reasoning_tokens": 140
+    },
+    "prompt_time": 0.161139731,
+    "prompt_tokens_details": null,
+    "queue_time": 0.163757096,
+    "total_time": 1.763176219
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z2mdpnexhs1c3n7hvns2nn",
+    "debug": null,
+    "seed": 1007026697,
+    "usage": null
+  }
+}

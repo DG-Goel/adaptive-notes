@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-425bec20-b8bf-4aed-88fb-1b959dd8fe7d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"control flow statements\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"control flow statements include conditional statements like if and switch for making decisions in programs, as well as loops for executing code repeatedly such as for loops, while loops, do-while loops, and for-each loops, and also break and continue statements for breaking or jumping to the beginning of a loop.\",\n        \"refs\": [\"Q0001\", \"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"clean code\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"clean code is code that is easy for humans to read, understand, and maintain, achieved by structuring code into smaller, well‑named chunks and applying techniques that improve its readability and maintainability.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"maintainability of code\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"When the code inside a method becomes too long, it hurts maintainability because readers must scan many statements to understand the logic; breaking the code into smaller, logical chunks makes it easier to read and understand.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"break and continue statements are used for breaking or jumping to the beginning of a loop.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract educational items. From excerpts, we have concepts about code maintainability, control flow, clean code, etc. Identify facts, definitions, explanations. Likely definitions: \"control flow statements\", \"conditional statements\", \"loops\". Provide facts like \"break and continue statements break or jump to beginning of a loop\". Use excerpts IDs.\n\nWe must output schema with arrays. Include excluded none.\n\nLet's craft definitions: term \"control flow statements\" with definition text from Q0001 and Q0002. term refs Q0001. definition refs Q0001+Q0002.\n\nAlso definition for \"clean code\" from Q0003.\n\nFacts: \"break and continue statements are used for breaking or jumping to the beginning of a loop\" from Q0002.\n\nExplanations: maybe explanation of why break code into smaller chunks improves maintainability from Q0000.\n\nExamples maybe none.\n\nProcedures none.\n\nRelationships none.\n\nLet's produce JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065911,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_47082602e2",
+  "usage": {
+    "completion_tokens": 638,
+    "prompt_tokens": 3010,
+    "total_tokens": 3648,
+    "completion_time": 1.332797444,
+    "completion_tokens_details": {
+      "reasoning_tokens": 193
+    },
+    "prompt_time": 0.1328479,
+    "prompt_tokens_details": null,
+    "queue_time": 0.306713842,
+    "total_time": 1.465645344
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6vajjbpepr86bsjkzptyxhb",
+    "debug": null,
+    "seed": 1200493225,
+    "usage": null
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0258",
+        "FCT_0259",
+        "FCT_0255",
+        "FCT_0256",
+        "FCT_0257",
+        "FCT_0254",
+        "FCT_0264",
+        "FCT_0265",
+        "FCT_0266",
+        "FCT_0267"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Method Comparison",
+      "source_segment_ids": [
+        "FCT_0258",
+        "FCT_0259",
+        "FCT_0255",
+        "FCT_0256",
+        "FCT_0257",
+        "FCT_0254",
+        "FCT_0264",
+        "FCT_0265",
+        "FCT_0266",
+        "FCT_0267"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0258",
+            "FCT_0259",
+            "FCT_0255",
+            "FCT_0256",
+            "FCT_0257",
+            "FCT_0264",
+            "FCT_0265",
+            "FCT_0266",
+            "FCT_0267"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0258",
+              "quote": "println method adds a new line after the printed label"
+            },
+            {
+              "note_id": "FCT_0259",
+              "quote": "use the print method instead of println"
+            },
+            {
+              "note_id": "FCT_0255",
+              "quote": "methods nextByte, nextLine, nextBoolean for reading a byte, a line, and a boolean respectively"
+            },
+            {
+              "note_id": "FCT_0256",
+              "quote": "Calling the nextByte method returns a byte value"
+            },
+            {
+              "note_id": "FCT_0257",
+              "quote": "Concatenating a string with a byte causes implicit casting of the byte to a string"
+            },
+            {
+              "note_id": "FCT_0264",
+              "quote": "The next method returns a string, which can cause a compilation issue if a different type is expected"
+            },
+            {
+              "note_id": "FCT_0265",
+              "quote": "Each call to the next method reads one token; tokens are separated by whitespace"
+            },
+            {
+              "note_id": "FCT_0266",
+              "quote": "To obtain a full name containing a space you must call next twice (once for each token) or use the nextLine method"
+            },
+            {
+              "note_id": "FCT_0267",
+              "quote": "The nextLine method returns the entire line entered by the user, regardless of spaces or tabs"
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Method behavior comparison",
+            "headers": [
+              "Method",
+              "Effect"
+            ],
+            "rows": [
+              [
+                "println",
+                "adds a new line after the printed label"
+              ],
+              [
+                "print",
+                "does not add a new line"
+              ],
+              [
+                "next",
+                "reads one token separated by whitespace"
+              ],
+              [
+                "nextLine",
+                "returns the entire line entered by the user"
+              ],
+              [
+                "next (as string)",
+                "returns a string, may cause compilation issue if type mismatched"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "educational_review": {
+    "claim_reviews": [
+      {
+        "item_id": "CON_0001",
+        "status": "NOT_REVIEWED",
+        "supporting_sources": [
+          "T0001"
+        ],
+        "quotations": [
+          "A value is an expression.",
+          "A value is an expression."
+        ],
+        "review": null
+      }
+    ],
+    "issues": [],
+    "readiness": "READY_FOR_MANUAL_REVIEW",
+    "semantic_certification": false
+  },
+  "publication_eligible": false,
+  "status": "UNVERIFIED_PREVIEW",
+  "gates": {
+    "extraction_completion": {
+      "outcome": "PASS",
+      "required": [
+        "offline-java-0000"
+      ],
+      "completed": [
+        "offline-java-0000"
+      ]
+    },
+    "structural_validity": {
+      "outcome": "PASS",
+      "missing_items": []
+    },
+    "semantic_faithfulness": {
+      "outcome": "NEEDS_REVIEW",
+      "mechanical_provenance": {
+        "valid": true,
+        "items_checked": 1,
+        "errors": []
+      },
+      "semantic_entailment_verified": false
+    },
+    "educational_completeness": {
+      "outcome": "NEEDS_REVIEW",
+      "source_units_without_primary_knowledge": [],
+      "topic_coverage": "NOT_EVALUATED"
+    },
+    "notes_usability": {
+      "outcome": "NEEDS_REVIEW",
+      "fallbacks": [],
+      "render_warnings": []
+    }
+  },
+  "source_coverage": {
+    "T0001": [
+      "CON_0001"
+    ],
+    "T0002": [
+      "CON_0001"
+    ]
+  },
+  "before": 1,
+  "after": 1,
+  "consolidation": {
+    "decisions": [
+      {
+        "action": "retain",
+        "original": "CON_0001",
+        "target": "CON_0001"
+      }
+    ],
+    "original_ids": {
+      "CON_0001": [
+        "CON_0001"
+      ]
+    },
+    "id_normalization": [
+      {
+        "artifact_id": "consolidation",
+        "category": "concepts",
+        "item_index": 0,
+        "old_id": "CON_0001",
+        "new_id": "CON_0001",
+        "content_fingerprint": "c0efd4de185bc8c773ac27e1555b4511fdf14032339d573cfd834f36ec3674d9",
+        "reason": "preserved"
+      }
+    ],
+    "review_pairs": []
+  },
+  "representation_distribution": {
+    "standard_text": 1
+  },
+  "knowledge_quality": {
+    "supported": null,
+    "partially_supported": null,
+    "unsupported": null,
+    "contradicted": null,
+    "inconclusive": 1
+  },
+  "examples_preserved": 0,
+  "original_knowledge": [
+    {
+      "id": "CON_0001",
+      "sources": [
+        "T0001"
+      ],
+      "fields": {
+        "content": "A value is an expression.",
+        "concept_name": "expression",
+        "aliases": []
+      },
+      "metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "T0001",
+              "quote": "A value is an expression.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 20,
+              "start_char": null,
+              "end_char": null,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "T0001",
+              "quote": "A value is an expression.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 20,
+              "start_char": null,
+              "end_char": null,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": []
+        },
+        "primary_source_ids": [
+          "T0001",
+          "T0002"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "suppressed_fields": [],
+      "original_ids": [
+        "CON_0001"
+      ]
+    }
+  ],
+  "manual_review_required": true,
+  "coverage_dimensions": {
+    "primary_sources_with_items": 2,
+    "primary_sources_total": 2,
+    "accepted_items_before_consolidation": 1,
+    "items_after_consolidation": 1,
+    "rendered_item_ids": 1,
+    "knowledge_ids_missing_from_render": [],
+    "examples_in_audit": 0,
+    "procedures_in_audit": 0,
+    "topic_coverage": "NOT_EVALUATED"
+  }
+}

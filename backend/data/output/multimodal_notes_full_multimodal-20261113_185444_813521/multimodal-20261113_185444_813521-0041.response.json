@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-34167ee6-4371-49c5-9f19-89757e09aebd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"topic\": {\n        \"text\": \"Guidelines for choosing statistical machine learning versus deep learning\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\", \"Q0006\", \"Q0007\", \"Q0008\", \"Q0009\", \"Q0010\", \"Q0011\"],\n        \"claims\": [\n          {\n            \"text\": \"Use statistical machine learning when features are simple and structured (e.g., tables).\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0003\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"Use deep learning when features are complex such as images, video, audio, or text.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0004\", \"Q0008\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"Deep learning can also be applied to large amounts of structured data, though it is not required.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0005\", \"Q0006\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"Experimentation is necessary because the guidelines are loose and the best approach depends on performance.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0007\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"When the amount of training data is huge, deep learning usually performs better.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0010\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"explanation_text\": {\n        \"text\": \"The speaker outlines several criteria for deciding between statistical machine learning and deep learning: (1) the simplicity and structure of features – simple, tabular data favors statistical methods, while complex, unstructured data such as images, video, audio, or text favors deep learning; (2) the volume of training data – large datasets tend to benefit deep learning; (3) these are loose guidelines, so experimentation is required to determine the best approach for a given problem.\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\", \"Q0005\", \"Q0006\", \"Q0007\", \"Q0008\", \"Q0009\", \"Q0010\", \"Q0011\"],\n        \"claims\": [\n          {\n            \"text\": \"Criteria include feature type (simple vs. complex) and data volume.\",\n            \"basis\": \"direct_entailment\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0002\", \"Q0009\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"Guidelines are not strict; experimentation is needed to choose the best approach.\",\n            \"basis\": \"direct_entailment\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"continuation\",\n            \"refs\": [\"Q0007\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"explanation_type\": {\n        \"text\": \"explanatory\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"The passage explains how to decide between statistical ML and deep learning.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          }\n        ]\n      }\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output explanations extraction. The excerpts give teaching about criteria. So create items with explanation_text covering that. Claims: each statement explicit. Provide claims list. Let's craft one item summarizing criteria. Use explicit basis. availability SOURCE_SUPPORTED. literal_kind verbal. instructional_role prerequisite? maybe explanation_of_choice. Use \"explanation_of_mistake\"? No. Use null? Probably null. Provide refs list of all Q0000- Q0011. topic maybe \"Choosing between statistical ML and deep learning\". Provide explanation_type value with claims etc. We'll output schema.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794596614,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "usage": {
+    "completion_tokens": 1075,
+    "prompt_tokens": 2573,
+    "total_tokens": 3648,
+    "completion_time": 2.240870341,
+    "completion_tokens_details": {
+      "reasoning_tokens": 116
+    },
+    "prompt_time": 0.118779916,
+    "prompt_tokens_details": null,
+    "queue_time": 0.165961015,
+    "total_time": 2.359650257
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b4p9hxexr93zfn9dhqame9",
+    "debug": null,
+    "seed": 26495812,
+    "usage": null
+  }
+}

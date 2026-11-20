@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-81c83023-5536-47a2-afe0-9e1d284ef53b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Recurrent Neural Network Feedback Loop\",\n      \"source_segment_ids\": [\"FCT_0032\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0032\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0032\",\n              \"quote\": \"A recurrent neural network is sort of like creating a soup so you put some ingredient then you test it you get some feedback now you add more ingredients or you adjust the ingredients okay.\"\n            },\n            {\n              \"note_id\": \"FCT_0032\",\n              \"quote\": \"So that is this feedback process.\"\n            },\n            {\n              \"note_id\": \"FCT_0032\",\n              \"quote\": \"So you get the feedback then you again give new input you train the model, you again get feedback and so on, short of like preparing a soup.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"RNN Feedback Loop\",\n            \"direction\": \"RIGHT\",\n            \"nodes\": [\n              {\"id\": \"n1\", \"label\": \"Input\"},\n              {\"id\": \"n2\", \"label\": \"RNN Cell\"},\n              {\"id\": \"n3\", \"label\": \"Output\"},\n              {\"id\": \"n4\", \"label\": \"Feedback\"}\n            ],\n            \"edges\": [\n              {\"from\": \"n1\", \"to\": \"n2\", \"label\": \"feed\"},\n              {\"from\": \"n2\", \"to\": \"n3\", \"label\": \"produce\"},\n              {\"from\": \"n3\", \"to\": \"n4\", \"label\": \"feedback\"},\n              {\"from\": \"n4\", \"to\": \"n2\", \"label\": \"next input\"}\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Traditional AI vs Generative AI\",\n      \"source_segment_ids\": [\"FCT_0040\", \"FCT_0041\", \"FCT_0043\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0040\", \"FCT_0041\", \"FCT_0043\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0040\",\n              \"quote\": \"Traditional AI is used for classification, regression, prediction, and decision making and is considered lightweight.\"\n            },\n            {\n              \"note_id\": \"FCT_0041\",\n              \"quote\": \"the purpose of traditional AI was to analyze predict classify or make decisions whereas generative AI means you are generating new content\"\n            },\n            {\n              \"note_id\": \"FCT_0043\",\n              \"quote\": \"traditional AI has limited capabilities, whereas generative AI has high capabilities.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Traditional AI vs Generative AI\",\n            \"headers\": [\"Aspect\", \"Traditional AI\", \"Generative AI\"],\n            \"rows\": [\n              [\"Purpose\", \"analyze, predict, classify, decide\", \"generate new content\"],\n              [\"Typical Output\", \"yes/no labels, numbers\", \"text, images, audio, video\"],\n              [\"Capability Level\", \"limited\", \"high\"]\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visuals where supported. Look at notes: FCT_0032 describes RNN feedback loop like soup. Could make flowchart of RNN feedback. Evidence: quotes from that note. Use primary chunk earliest. So unit with flowchart. Also maybe comparison table between Traditional AI and Generative AI from FCT_0040 and FCT_0041 and context FCT_0043. Provide table comparing purpose, output type, capabilities. Use quotes. That's second visual. Return units list with two visuals. No text-only units. Provide source_segment_ids. Let's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794603076,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4727af4560",
+  "usage": {
+    "completion_tokens": 893,
+    "prompt_tokens": 1600,
+    "total_tokens": 2493,
+    "completion_time": 1.861030703,
+    "completion_tokens_details": {
+      "reasoning_tokens": 121
+    },
+    "prompt_time": 0.091675937,
+    "prompt_tokens_details": null,
+    "queue_time": 0.159320695,
+    "total_time": 1.9527066400000002
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7bavgttenat1j2nnv2n57wk",
+    "debug": null,
+    "seed": 135160425,
+    "usage": null
+  }
+}

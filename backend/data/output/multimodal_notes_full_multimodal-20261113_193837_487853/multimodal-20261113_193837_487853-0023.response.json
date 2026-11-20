@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-039aef9f-923e-4b2e-b3f9-0758b64fb754",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No example teaching (code, demonstration, or concrete illustration) is present in the provided primary excerpts.\",\n      \"source_ids\": [\n        \"G00008\",\n        \"G00009\",\n        \"G00010\"\n      ]\n    }\n  ],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract examples. The excerpts contain no explicit code examples, just explanations. Likely no examples, so items empty, abstain? No examples category missing, so abstain with reason missing part of teaching? There are no examples, so abstain? Probably abstention: availability SOURCE_MISSING, reason \"no examples provided\". source_ids from primary_source_ids. Provide empty items.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794598785,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_b1dd3e7a63",
+  "usage": {
+    "completion_tokens": 182,
+    "prompt_tokens": 3557,
+    "total_tokens": 3739,
+    "completion_time": 0.38016158,
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_time": 0.569086124,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "queue_time": 0.377714546,
+    "total_time": 0.949247704
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b6rk77eqzrgyw0w2ajk6mf",
+    "debug": null,
+    "seed": 1442653613,
+    "usage": null
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-49f407ff-0731-4496-a6ce-9fb6477788bd",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"implicit casting\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"definition_text\": {\n        \"text\": \"implicit casting happens whenever you're not gonna lose data; there is no chance for data loss\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"explicit casting\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"explicit casting converts a value to a specified type using a cast operator, e.g., (int) X, and can only occur between compatible types\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"wrapper class\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a reference type that provides methods to convert between strings and primitive types, e.g., Integer for int, Short for short\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"parseInt method\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a static method in the Integer wrapper class that takes a string and returns an int\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"parseShort method\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a static method in the Short wrapper class that takes a string and returns a short\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"parseFloat method\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a static method in the Float wrapper class that takes a string and returns a float\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"exemplifies\": {\n        \"text\": \"casting X to an integer\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"example_text\": {\n        \"text\": \"cast X to an integer like this (int) X; the result would be 1 without a decimal point, then 1 will be added to 2 and Y would be 3\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"parsing a string to an integer\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"example_text\": {\n        \"text\": \"Integer.parseInt(X) where X is a string \\\"1\\\" returns the integer 1; adding to 2 yields 3\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"example_type\": null\n    }\n  ],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"need for parsing user input\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"User interface frameworks deliver input as strings, so converting these strings to numeric representations is necessary to perform arithmetic operations\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"You cannot cast a string to an integer directly because they are not compatible types\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"All primitive numeric types (int, float, double, short, etc.) are compatible for casting among each other\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [\n    {\n      \"procedure_name\": {\n        \"text\": \"Convert a string to an integer using Integer.parseInt\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      },\n      \"steps\": [\n        {\n          \"text\": \"Obtain the string value (e.g., from user input)\",\n          \"refs\": [\"Q0004\"]\n        },\n        {\n          \"text\": \"Call Integer.parseInt(string) to obtain the int value\",\n          \"refs\": [\"Q0002\", \"Q0003\"]\n        }\n      ],\n      \"prerequisites\": null,\n      \"outcomes\": null,\n      \"content\": {\n        \"text\": \"Use the Integer wrapper class's parseInt method to convert a numeric string to an int\",\n        \"refs\": [\"Q0002\", \"Q0003\"]\n      }\n    }\n  ],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts about casting, parsing. Facts, definitions, examples, explanations. Let's extract:\n\nDefinition: implicit casting: happens whenever you're not going to lose data. explicit casting: converting type explicitly.\n\nTerm: implicit casting, explicit casting, wrapper class, parseInt, parseShort, parseFloat.\n\nDefinition text from Q0000 and Q0001.\n\nExample: casting X to int yields 1 etc. Also parsing string to int yields 3.\n\nExplanation: why need parsing strings from UI.\n\nFacts: cannot cast string to int directly; need wrapper parse methods.\n\nFormulas not present.\n\nProcedures maybe: steps to parse int: Integer.parseInt(string).\n\nWe'll create entries.\n\nNeed refs arrays covering whole claim. For definition of implicit casting: Q0000. explicit casting: Q0001. For incompatibility: Q0001. For wrapper class: Q0002. For parseInt method: Q0002 and Q0003. For example of casting X: Q0001. Example of parsing string: Q0003. Explanation why parse: Q0004.\n\nNow construct JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036226,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8655ddce88",
+  "usage": {
+    "completion_tokens": 1326,
+    "prompt_tokens": 3029,
+    "total_tokens": 4355,
+    "completion_time": 3.230091044,
+    "completion_tokens_details": {
+      "reasoning_tokens": 230
+    },
+    "prompt_time": 0.039404579,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "queue_time": 0.374874894,
+    "total_time": 3.269495623
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6te8jr6enqt5w7zv145y36c",
+    "debug": null,
+    "seed": 500964804,
+    "usage": null
+  }
+}

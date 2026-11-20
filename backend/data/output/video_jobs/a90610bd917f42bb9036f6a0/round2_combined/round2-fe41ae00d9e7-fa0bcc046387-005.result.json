@@ -1,0 +1,197 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "CON_0043"
+      ],
+      "reason": "Source note is unresolved"
+    },
+    {
+      "note_ids": [
+        "CON_0052",
+        "CON_0044",
+        "FCT_0087"
+      ],
+      "reason": "Unsupported visual label or value"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Uncovered interest parity relationships",
+      "source_segment_ids": [
+        "CON_0043"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0043"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0043",
+              "exact_quote": "If the domestic interest rate is above that, the international interest rate, then the exchange rate today has to be above the expected exchange rate, because that will give you a expected depreciation of the currency, which will compensate for the fact that the domestic bond is paying a higher interest rate than international bond."
+            },
+            {
+              "note_id": "CON_0043",
+              "exact_quote": "Conversely, if the domestic bond is paying a lower interest rate, then the exchange rate today is very depreciated, because you have to expect it to appreciate in order to compensate for the interest rate differential."
+            }
+          ],
+          "payload": {
+            "type": "concept_tree",
+            "title": "Uncovered interest parity",
+            "nodes": [
+              {
+                "id": "n0",
+                "label": "Uncovered interest parity"
+              },
+              {
+                "id": "n1",
+                "label": "Domestic interest rate",
+                "parent": "n0"
+              },
+              {
+                "id": "n2",
+                "label": "Foreign (international) interest rate",
+                "parent": "n0"
+              },
+              {
+                "id": "n3",
+                "label": "Current exchange rate",
+                "parent": "n0"
+              },
+              {
+                "id": "n4",
+                "label": "Expected exchange rate",
+                "parent": "n0"
+              },
+              {
+                "id": "n5",
+                "label": "Expected depreciation/appreciation",
+                "parent": "n0"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Effects of an interest‑rate increase in an open economy",
+      "source_segment_ids": [
+        "CON_0052",
+        "CON_0044",
+        "FCT_0087"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0052",
+            "CON_0044",
+            "FCT_0087"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0052",
+              "exact_quote": "An increase in the domestic interest rate leads to an appreciation of the exchange rate."
+            },
+            {
+              "note_id": "CON_0044",
+              "exact_quote": "An increase in the interest rate lowers investment, which cuts aggregate demand."
+            },
+            {
+              "note_id": "FCT_0087",
+              "exact_quote": "Net exports decline."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Interest‑rate increase cascade",
+            "direction": "DOWN",
+            "nodes": [
+              {
+                "id": "s0",
+                "label": "Interest rate rises",
+                "kind": "start"
+              },
+              {
+                "id": "a1",
+                "label": "Currency appreciates",
+                "kind": "action"
+              },
+              {
+                "id": "a2",
+                "label": "Exports become more expensive",
+                "kind": "action"
+              },
+              {
+                "id": "a3",
+                "label": "Net exports decline",
+                "kind": "action"
+              },
+              {
+                "id": "a4",
+                "label": "Investment falls",
+                "kind": "action"
+              },
+              {
+                "id": "a5",
+                "label": "Aggregate demand falls",
+                "kind": "action"
+              },
+              {
+                "id": "e1",
+                "label": "Output contraction",
+                "kind": "success"
+              }
+            ],
+            "edges": [
+              {
+                "from": "s0",
+                "to": "a1",
+                "label": ""
+              },
+              {
+                "from": "a1",
+                "to": "a2",
+                "label": ""
+              },
+              {
+                "from": "a2",
+                "to": "a3",
+                "label": ""
+              },
+              {
+                "from": "s0",
+                "to": "a4",
+                "label": ""
+              },
+              {
+                "from": "a4",
+                "to": "a5",
+                "label": ""
+              },
+              {
+                "from": "a3",
+                "to": "a5",
+                "label": ""
+              },
+              {
+                "from": "a5",
+                "to": "e1",
+                "label": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

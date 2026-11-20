@@ -1,0 +1,185 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0122",
+        "FCT_0125",
+        "FCT_0119"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    },
+    {
+      "note_ids": [
+        "FCT_0150",
+        "FCT_0151",
+        "FCT_0152",
+        "FCT_0153"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Primitive vs Reference Types in Java",
+      "source_segment_ids": [
+        "FCT_0122",
+        "FCT_0125",
+        "FCT_0119"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0122",
+            "FCT_0125",
+            "FCT_0119"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0122",
+              "exact_quote": "Assigning a primitive variable copies the actual value into a new memory location; assigning a reference variable copies the address, not the object itself."
+            },
+            {
+              "note_id": "FCT_0125",
+              "exact_quote": "Reference types are copied by reference, whereas primitive types are copied by value."
+            },
+            {
+              "note_id": "FCT_0119",
+              "exact_quote": "In other words, if I change the value of x, y is not going to get affected."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Copying Behavior",
+            "headers": [
+              "Aspect",
+              "Primitive Types",
+              "Reference Types"
+            ],
+            "rows": [
+              [
+                "Copy Mechanism",
+                "Copy value",
+                "Copy address (reference)"
+              ],
+              [
+                "Effect of Changing Original",
+                "No effect on copy",
+                "Change reflected in all references"
+              ],
+              [
+                "Memory Location",
+                "Separate",
+                "Shared object"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "String Immutability and Method Effects",
+      "source_segment_ids": [
+        "FCT_0150",
+        "FCT_0151",
+        "FCT_0152",
+        "FCT_0153"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0150",
+            "FCT_0151",
+            "FCT_0152",
+            "FCT_0153"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "FCT_0150",
+              "exact_quote": "The replace method does not modify the original string; it returns a new string."
+            },
+            {
+              "note_id": "FCT_0151",
+              "exact_quote": "In Java, strings are immutable; they cannot be mutated."
+            },
+            {
+              "note_id": "FCT_0152",
+              "exact_quote": "The toLowerCase method returns a new string with all characters converted to lower case, leaving the original string unchanged."
+            },
+            {
+              "note_id": "FCT_0153",
+              "exact_quote": "The trim method returns a new string with leading and trailing whitespace removed, without altering the original string."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "String Method Effects",
+            "direction": "LR",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "Original String"
+              },
+              {
+                "id": "n2",
+                "label": "replace()"
+              },
+              {
+                "id": "n3",
+                "label": "toLowerCase()"
+              },
+              {
+                "id": "n4",
+                "label": "trim()"
+              },
+              {
+                "id": "n5",
+                "label": "New String (result)"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": "returns new"
+              },
+              {
+                "from": "n1",
+                "to": "n3",
+                "label": "returns new"
+              },
+              {
+                "from": "n1",
+                "to": "n4",
+                "label": "returns new"
+              },
+              {
+                "from": "n2",
+                "to": "n5",
+                "label": ""
+              },
+              {
+                "from": "n3",
+                "to": "n5",
+                "label": ""
+              },
+              {
+                "from": "n4",
+                "to": "n5",
+                "label": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

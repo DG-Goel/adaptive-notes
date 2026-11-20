@@ -1,0 +1,67 @@
+{
+  "operations": [
+    {
+      "id": "java-20261106_142907_743633-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "slot": 1,
+      "request_hash": "0bb83a86c6e36c075e10a88e340a73c78761a8ab0f5dc4d3c72e2fbbb95770fa",
+      "state": "failed",
+      "created": 1793978698.8760357,
+      "completed": 1793978706.8810933,
+      "validation": "failed"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "java-20261106_142907_743633-0000",
+      "number": 1,
+      "created": 1793978698.8760357,
+      "dispatched": 1793978699.4533408,
+      "completed": 1793978706.867997,
+      "input_reserved": 3678,
+      "output_reserved": 3122,
+      "input_actual": null,
+      "output_actual": null,
+      "reasoning": null,
+      "charged": 6800,
+      "http_status": 400,
+      "finish": null,
+      "duration": 7.406000000000859,
+      "category": "permanent_request"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "request_id": "java-20261106_142907_743633-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1793978698.8770363,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"7602b3d2985be6a36eb2632d956fdb3bb137461263e345116ae18e61310f28f0\", \"estimated_input\": 3678, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3122, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 2,
+      "request_id": "java-20261106_142907_743633-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1793978699.4553587,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 3,
+      "request_id": "java-20261106_142907_743633-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1793978706.8710132,
+      "event": "provider_error",
+      "details": "{\"category\": \"permanent_request\", \"error_code\": \"json_validate_failed\", \"message\": \"Groq API call failed: Error code: 400 - {'error': {'message': \\\"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\\\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'max completion tokens reached before generating a valid document'}}\", \"retry_after\": null, \"retry_after_header\": null, \"retryable\": false, \"status_code\": 400}"
+    },
+    {
+      "sequence": 4,
+      "request_id": "java-20261106_142907_743633-0000",
+      "org": "org_01k0m8r3x9f14b8qcaj4n8bffr",
+      "created": 1793978706.8830957,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"failed\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"not_passed\"}"
+    }
+  ]
+}

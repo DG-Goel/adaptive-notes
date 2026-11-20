@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-5bc3091e-6b8b-4b1d-9432-cdbb44905ebf",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"Java file extension\",\n        \"refs\": [\"Q0009\"],\n        \"claims\": [\n          {\n            \"text\": \"All Java files should have the Java extension.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0009\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"All Java files should have the Java extension.\",\n        \"refs\": [\"Q0009\"],\n        \"claims\": [\n          {\n            \"text\": \"All Java files should have the Java extension.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0009\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"package statement\",\n        \"refs\": [\"Q0013\"],\n        \"claims\": [\n          {\n            \"text\": \"The package statement is used to specify what package this class belongs to.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0013\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"The package statement is used to specify what package this class belongs to.\",\n        \"refs\": [\"Q0013\"],\n        \"claims\": [\n          {\n            \"text\": \"The package statement is used to specify what package this class belongs to.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0013\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"static method\",\n        \"refs\": [\"Q0019\", \"Q0020\"],\n        \"claims\": [\n          {\n            \"text\": \"The main method in a Java program should always be static.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0020\"],\n            \"related_refs\": [\"Q0019\"]\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"The main method in a Java program should always be static.\",\n        \"refs\": [\"Q0020\"],\n        \"claims\": [\n          {\n            \"text\": \"The main method in a Java program should always be static.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0020\"],\n            \"related_refs\": [\"Q0019\"]\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"void return type\",\n        \"refs\": [\"Q0021\"],\n        \"claims\": [\n          {\n            \"text\": \"A method with a void return type does not return a value.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0021\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"A method with a void return type does not return a value.\",\n        \"refs\": [\"Q0021\"],\n        \"claims\": [\n          {\n            \"text\": \"A method with a void return type does not return a value.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0021\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need definitions extraction. Look for teaching definitions. From excerpts: definitions of package statement, Java file extension, static method, etc. Provide items with term and definition_text. Identify primary excerpts. We'll create one item per definition.\n\nDefine term \"Java file extension\" with definition \"All Java files should have the Java extension.\" source Q0009.\n\nTerm \"package statement\" definition from Q0013 and Q0015 maybe combined but primary separate. Use Q0013: \"On top of this file, we have the package statement, and this is used to specify what package this class belongs to.\"\n\nTerm \"static method\" definition from Q0019/Q0020: \"For now just remember that the main method in your program should always be static.\"\n\nTerm \"void return type\" from Q0021: definition of void.\n\nTerm \"project panel\" maybe not definition. We'll include those.\n\nProvide claims with explicit basis, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role prerequisite? maybe explanation. Use explicit.\n\nProvide refs list with the excerpt ref.\n\nNo abstentions, excluded none.\n\nReturn schema.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794325489,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_6b677c2caf",
+  "usage": {
+    "completion_tokens": 1174,
+    "prompt_tokens": 2984,
+    "total_tokens": 4158,
+    "completion_time": 3.07996344,
+    "completion_tokens_details": {
+      "reasoning_tokens": 223
+    },
+    "prompt_time": 0.431612099,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "queue_time": 0.265004759,
+    "total_time": 3.511575539
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m73246a2e6caxazsn3fpxte7",
+    "debug": null,
+    "seed": 312352382,
+    "usage": null
+  }
+}

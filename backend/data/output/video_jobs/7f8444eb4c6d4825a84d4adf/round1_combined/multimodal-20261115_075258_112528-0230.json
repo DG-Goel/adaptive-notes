@@ -1,0 +1,538 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-15T08:09:25.617964+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00037"
+      ],
+      "document_id": "DOC001",
+      "content": "When the domestic interest rate is increased relative to foreign rates, the domestic currency must appreciate to compensate for the higher interest rate differential.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00037",
+              "quote": "When I increase interest rate from here to there,\n then my exchange rate has to appreciate.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 92,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00037",
+              "quote": "When I increase interest rate from here to there,\n then my exchange rate has to appreciate.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 92,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00037",
+              "quote": "If I move the domestic interest rate,\n and the rest of the world does not follow me,\n so we move interest rate dead on,\n then now I need to compensate for this increase\n in the interest rate differential.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 354,
+              "end_char": 558,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00037",
+              "quote": "And the compensation will come through an expected capital\n loss through the currency.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 560,
+              "end_char": 646,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "Higher domestic interest rates cause exchange rate appreciation",
+              "claims": [
+                {
+                  "text": "Higher domestic interest rates cause exchange rate appreciation",
+                  "refs": [
+                    "Q0000"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00037",
+                      "quote": "When I increase interest rate from here to there,\n then my exchange rate has to appreciate."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "When the domestic interest rate is increased relative to foreign rates, the domestic currency must appreciate to compensate for the higher interest rate differential.",
+              "claims": [
+                {
+                  "text": "When the domestic interest rate is increased relative to foreign rates, the domestic currency must appreciate to compensate for the higher interest rate differential.",
+                  "refs": [
+                    "Q0000",
+                    "Q0006",
+                    "Q0007"
+                  ],
+                  "basis": "direct_entailment",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "explanation_of_mistake",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00037",
+                      "quote": "When I increase interest rate from here to there,\n then my exchange rate has to appreciate."
+                    },
+                    {
+                      "source_id": "G00037",
+                      "quote": "If I move the domestic interest rate,\n and the rest of the world does not follow me,\n so we move interest rate dead on,\n then now I need to compensate for this increase\n in the interest rate differential."
+                    },
+                    {
+                      "source_id": "G00037",
+                      "quote": "And the compensation will come through an expected capital\n loss through the currency."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "When the domestic interest rate is increased relative to foreign rates, the domestic currency must appreciate to compensate for the higher interest rate differential.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "direct_entailment",
+                    "literal_kind": "verbal",
+                    "instructional_role": "explanation_of_mistake",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": true
+                    },
+                    "evidence": [
+                      "When I increase interest rate from here to there,\n then my exchange rate has to appreciate.",
+                      "If I move the domestic interest rate,\n and the rest of the world does not follow me,\n so we move interest rate dead on,\n then now I need to compensate for this increase\n in the interest rate differential.",
+                      "And the compensation will come through an expected capital\n loss through the currency."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00037",
+                        "quote": "When I increase interest rate from here to there,\n then my exchange rate has to appreciate.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 92,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00037",
+                        "quote": "If I move the domestic interest rate,\n and the rest of the world does not follow me,\n so we move interest rate dead on,\n then now I need to compensate for this increase\n in the interest rate differential.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 354,
+                        "end_char": 558,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00037",
+                        "quote": "And the compensation will come through an expected capital\n loss through the currency.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 560,
+                        "end_char": 646,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "When the domestic interest rate is increased relative to foreign rates, the domestic currency must appreciate to compensate for the higher interest rate differential.",
+                "preview_text": "When the domestic interest rate is increased relative to foreign rates, the domestic currency must appreciate to compensate for the higher interest rate differential.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "Higher domestic interest rates cause exchange rate appreciation",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "When I increase interest rate from here to there,\n then my exchange rate has to appreciate."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00037",
+                        "quote": "When I increase interest rate from here to there,\n then my exchange rate has to appreciate.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 92,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Higher domestic interest rates cause exchange rate appreciation",
+                "preview_text": "Higher domestic interest rates cause exchange rate appreciation",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00037"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "Higher domestic interest rates cause exchange rate appreciation",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [
+    {
+      "knowledge_id": "EXP_0002",
+      "knowledge_type": "explanation",
+      "source_unit_ids": [
+        "G00037"
+      ],
+      "document_id": "DOC001",
+      "content": "An expansionary domestic monetary policy reduces output (contraction) and leads to appreciation of the domestic currency.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00037",
+              "quote": "So an expansionary domestic monetary policy will lead\n to a contraction in output, which is what we get\n out of monetary policy, but it will also\n lead to an appreciation of the currency.",
+              "fields": [
+                "/topic"
+              ],
+              "match_count": 1,
+              "start_char": 108,
+              "end_char": 295,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00037",
+              "quote": "So an expansionary domestic monetary policy will lead\n to a contraction in output, which is what we get\n out of monetary policy, but it will also\n lead to an appreciation of the currency.",
+              "fields": [
+                "/explanation_text"
+              ],
+              "match_count": 1,
+              "start_char": 108,
+              "end_char": 295,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00037",
+              "quote": "So an expansionary domestic monetary policy will lead\n to a contraction in output, which is what we get\n out of monetary policy, but it will also\n lead to an appreciation of the currency.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 108,
+              "end_char": 295,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/topic",
+              "text": "Effect of expansionary monetary policy on output and exchange rate",
+              "claims": [
+                {
+                  "text": "Effect of expansionary monetary policy on output and exchange rate",
+                  "refs": [
+                    "Q0002"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00037",
+                      "quote": "So an expansionary domestic monetary policy will lead\n to a contraction in output, which is what we get\n out of monetary policy, but it will also\n lead to an appreciation of the currency."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/explanation_text",
+              "text": "An expansionary domestic monetary policy reduces output (contraction) and leads to appreciation of the domestic currency.",
+              "claims": [
+                {
+                  "text": "An expansionary domestic monetary policy reduces output (contraction) and leads to appreciation of the domestic currency.",
+                  "refs": [
+                    "Q0002"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00037",
+                      "quote": "So an expansionary domestic monetary policy will lead\n to a contraction in output, which is what we get\n out of monetary policy, but it will also\n lead to an appreciation of the currency."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "An expansionary domestic monetary policy reduces output (contraction) and leads to appreciation of the domestic currency.",
+              "claims": [
+                {
+                  "text": "An expansionary domestic monetary policy reduces output (contraction) and leads to appreciation of the domestic currency.",
+                  "refs": [
+                    "Q0002"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00037",
+                      "quote": "So an expansionary domestic monetary policy will lead\n to a contraction in output, which is what we get\n out of monetary policy, but it will also\n lead to an appreciation of the currency."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "An expansionary domestic monetary policy reduces output (contraction) and leads to appreciation of the domestic currency.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So an expansionary domestic monetary policy will lead\n to a contraction in output, which is what we get\n out of monetary policy, but it will also\n lead to an appreciation of the currency."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00037",
+                        "quote": "So an expansionary domestic monetary policy will lead\n to a contraction in output, which is what we get\n out of monetary policy, but it will also\n lead to an appreciation of the currency.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 108,
+                        "end_char": 295,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "An expansionary domestic monetary policy reduces output (contraction) and leads to appreciation of the domestic currency.",
+                "preview_text": "An expansionary domestic monetary policy reduces output (contraction) and leads to appreciation of the domestic currency.",
+                "withheld": false
+              },
+              {
+                "path": "/explanation_text",
+                "claims": [
+                  {
+                    "text": "An expansionary domestic monetary policy reduces output (contraction) and leads to appreciation of the domestic currency.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So an expansionary domestic monetary policy will lead\n to a contraction in output, which is what we get\n out of monetary policy, but it will also\n lead to an appreciation of the currency."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00037",
+                        "quote": "So an expansionary domestic monetary policy will lead\n to a contraction in output, which is what we get\n out of monetary policy, but it will also\n lead to an appreciation of the currency.",
+                        "fields": [
+                          "/explanation_text"
+                        ],
+                        "match_count": 1,
+                        "start_char": 108,
+                        "end_char": 295,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "An expansionary domestic monetary policy reduces output (contraction) and leads to appreciation of the domestic currency.",
+                "preview_text": "An expansionary domestic monetary policy reduces output (contraction) and leads to appreciation of the domestic currency.",
+                "withheld": false
+              },
+              {
+                "path": "/topic",
+                "claims": [
+                  {
+                    "text": "Effect of expansionary monetary policy on output and exchange rate",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So an expansionary domestic monetary policy will lead\n to a contraction in output, which is what we get\n out of monetary policy, but it will also\n lead to an appreciation of the currency."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00037",
+                        "quote": "So an expansionary domestic monetary policy will lead\n to a contraction in output, which is what we get\n out of monetary policy, but it will also\n lead to an appreciation of the currency.",
+                        "fields": [
+                          "/topic"
+                        ],
+                        "match_count": 1,
+                        "start_char": 108,
+                        "end_char": 295,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Effect of expansionary monetary policy on output and exchange rate",
+                "preview_text": "Effect of expansionary monetary policy on output and exchange rate",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00037"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "topic": "Effect of expansionary monetary policy on output and exchange rate",
+      "explanation_text": "An expansionary domestic monetary policy reduces output (contraction) and leads to appreciation of the domestic currency.",
+      "explanation_type": null
+    }
+  ],
+  "examples": [],
+  "facts": [],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 2,
+  "source_units_processed": 1,
+  "extraction_metadata": null
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-64c4dc00-1259-4407-9602-e01cf6d76815",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"markdown\": \"## Uncovered Interest Parity (UIP) Condition\\n\\nThe **uncovered interest parity condition** states that the expected return on domestic assets should equal the expected return on foreign assets when adjusted for expected changes in the exchange rate. Formally, it can be expressed as:\\n\\n```\\n(1 + i_{domestic}) = (1 + i_{foreign}) \\\\times \\\\frac{E_t[S_{t+1}]}{S_t}\\n```\\n\\nwhere:\\n- `i_{domestic}` is the domestic interest rate,\\n- `i_{foreign}` is the foreign interest rate,\\n- `S_t` is the spot exchange rate (domestic currency per unit of foreign currency) at time *t*, and\\n- `E_t[S_{t+1}]` is the expected spot exchange rate at time *t+1*.\\n\\nThis relationship implies that any deviation from parity will be arbitraged away by investors seeking higher expected returns.\\n\\n---\\n\\n## Need for an Additional Equation\\n\\nWhen introducing a new **endogenous variable** into the model—such as an expectation term, a policy variable, or a market-clearing condition—**an extra equation is required** to uniquely determine the system's equilibrium. This additional equation typically captures:\\n1. **Behavioral relationships** (e.g., consumption or investment functions),\\n2. **Policy rules** (e.g., a monetary policy reaction function), or\\n3. **Market-clearing conditions** (e.g., goods or asset market equilibrium).\\n\\nIncluding this supplementary equation ensures that the number of equations matches the number of endogenous variables, allowing the model to be solved consistently.\"\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output JSON with field markdown. Include the polished notes. Let's craft markdown.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794806874,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_02b0d31eca",
+  "usage": {
+    "completion_tokens": 385,
+    "prompt_tokens": 271,
+    "total_tokens": 656,
+    "completion_time": 0.806975515,
+    "completion_tokens_details": {
+      "reasoning_tokens": 19
+    },
+    "prompt_time": 0.014810938,
+    "prompt_tokens_details": null,
+    "queue_time": 0.319021788,
+    "total_time": 0.821786453
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hd6ze1ef8v5zzsz0fgtxvv",
+    "debug": null,
+    "seed": 711591083,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-87284770-48dd-4d26-8f80-22b83c4755ed",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"Parameter\",\n        \"refs\": [\"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"Parameters are the holes that we define in our methods, arguments are the actual values that we pass to these methods.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"Parameters are the holes that we define in our methods.\",\n        \"refs\": [\"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"Parameters are the holes that we define in our methods.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"Argument\",\n        \"refs\": [\"Q0002\"],\n        \"claims\": [\n          {\n            \"text\": \"In programming terms, we refer to these values as arguments.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0002\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"Arguments are the actual values that we pass to these methods.\",\n        \"refs\": [\"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"Arguments are the actual values that we pass to these methods.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0004\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"Immutable string\",\n        \"refs\": [\"Q0011\"],\n        \"claims\": [\n          {\n            \"text\": \"Because in Java, strings are immutable.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0011\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"We cannot mutate them, we cannot change them.\",\n        \"refs\": [\"Q0012\"],\n        \"claims\": [\n          {\n            \"text\": \"We cannot mutate them, we cannot change them.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0012\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need definitions extraction. Identify definitions: terms like \"parameter\", \"argument\", \"immutable\". Provide items with term and definition_text. Use primary excerpts. Let's create items.\n\nDefinitions:\n\n- Parameter: \"Parameters are the holes that we define in our methods\" (Q0004). Also earlier mention replace method has two parameters. Use Q0004 as definition.\n\n- Argument: \"In programming terms, we refer to these values as arguments.\" (Q0002) and also \"arguments are the actual values that we pass to these methods.\" (Q0004). Use Q0002.\n\n- Immutable strings: \"Because in Java, strings are immutable.\" (Q0011) plus \"We cannot mutate them, we cannot change them.\" (Q0012). Definition of immutability.\n\n- Trim method: definition of trim: \"Trim. And with this we can get rid of extra white spaces that can be at the beginning or the end of a string.\" (Q0021). Could be definition.\n\n- Lowercase method: \"We also have another useful method to lowercase.\" (Q0015) maybe not definition.\n\nWe'll include three items: parameter, argument, immutable strings. Provide claims.\n\nConstruct claims: each claim text is the excerpt text. basis explicit, availability SOURCE_SUPPORTED? Since primary source provided. literal_kind verbal. instructional_role prerequisite? maybe definition is prerequisite. Use \"prerequisite\". related_refs empty.\n\nProvide refs list with the excerpt ref.\n\nNow format.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326052,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4200b3f836",
+  "usage": {
+    "completion_tokens": 1012,
+    "prompt_tokens": 3068,
+    "total_tokens": 4080,
+    "completion_time": 2.117494681,
+    "completion_tokens_details": {
+      "reasoning_tokens": 301
+    },
+    "prompt_time": 0.129218917,
+    "prompt_tokens_details": null,
+    "queue_time": 0.324182611,
+    "total_time": 2.246713598
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m732nctqedwtnmjqgy110vc6",
+    "debug": null,
+    "seed": 1456354688,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-7a60e6bc-7b10-4338-aebd-1f86e79cdd4b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"net export term\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"the only term that depends on the exchange rate is the net export term\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"export minus input\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"net exports are defined as export minus input\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"net exports will increase if you increase y*\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"net exports will decrease if domestic output goes up because inputs increase\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"fact3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"the effect of a real exchange appreciation on net exports is ambiguous\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What happens to net exports when the parameter y* increases?\",\n      \"answer\": \"Net exports increase.\",\n      \"distractors\": [\n        \"Net exports decrease.\",\n        \"Net exports stay the same.\",\n        \"The effect is ambiguous.\"\n      ],\n      \"explanation\": \"The source states that \\\"net exports will increase if you increase y*\\\" (Q0005).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Effect of y* on net exports\",\n      \"refs\": [\"Q0005\"]\n    },\n    {\n      \"question\": \"How does an increase in domestic output affect net exports?\",\n      \"answer\": \"Net exports decrease.\",\n      \"distractors\": [\n        \"Net exports increase.\",\n        \"Net exports stay unchanged.\",\n        \"The effect is ambiguous.\"\n      ],\n      \"explanation\": \"The source explains that \\\"net exports will decrease if domestic output goes up, because inputs increase\\\" (Q0006).\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"Domestic output and net exports\",\n      \"refs\": [\"Q0006\"]\n    },\n    {\n      \"question\": \"According to the discussion, which term is the only one that depends on the exchange rate?\",\n      \"answer\": \"The net export term.\",\n      \"distractors\": [\n        \"The import term.\",\n        \"The consumption term.\",\n        \"The investment term.\"\n      ],\n      \"explanation\": \"The excerpt says, \\\"the only term that depends on the exchange rate is this net export term\\\" (Q0000).\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"Exchange‑rate‑dependent term\",\n      \"refs\": [\"Q0000\"]\n    },\n    {\n      \"question\": \"What does the speaker say about the impact of a real exchange appreciation on net exports?\",\n      \"answer\": \"It is ambiguous.\",\n      \"distractors\": [\n        \"It causes net exports to increase.\",\n        \"It causes net exports to decrease.\",\n        \"It has no effect on net exports.\"\n      ],\n      \"explanation\": \"The speaker notes, \\\"But from this expression, it's a little ambiguous what happens to net exports when the real exchanges appreciate\\\" (Q0007).\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"Real exchange appreciation\",\n      \"refs\": [\"Q0007\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows etc. The excerpts talk about net exports, exchange rate, y*. We can create concepts: concept_name \"net export term\", content from Q0000. Also concept about \"export minus input\". facts: net exports increase if y* increases (Q0005). net exports decrease if domestic output goes up (Q0006). ambiguous effect of real exchange appreciation (Q0007). Provide rows.\n\nCreate item id maybe \"item1\". Provide rows for concepts: concept_name and content. Also facts.\n\nLet's produce rows.\n\nQuiz: need 4 questions. Use these facts.\n\nQuestion1: What happens to net exports when y* increases? Answer: increase. Distractors: decrease, stay same, become ambiguous.\n\nQuestion2: What happens to net exports when domestic output increases? Answer: decrease. Distractors: increase, stay same, ambiguous.\n\nQuestion3: Which term depends on exchange rate? Answer: net export term. Distractors: import term, export term, consumption term.\n\nQuestion4: According to the discussion, what is the effect of a real appreciation on net exports? Answer: ambiguous. Distractors: increase, decrease, no effect.\n\nProvide refs primary Q0005 etc.\n\nNow rows: need required fields for concepts: concept_name, content. Provide two concepts: \"net export term\" and \"export minus input\". Also maybe \"real exchange appreciation ambiguity\". Provide facts rows.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794766814,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_49bfac06f1",
+  "usage": {
+    "completion_tokens": 1557,
+    "prompt_tokens": 3033,
+    "total_tokens": 4590,
+    "completion_time": 3.305888522,
+    "completion_tokens_details": {
+      "reasoning_tokens": 292
+    },
+    "prompt_time": 0.171659976,
+    "prompt_tokens_details": null,
+    "queue_time": 0.293544172,
+    "total_time": 3.477548498
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g70bd9efnb2eh2w195g09b",
+    "debug": null,
+    "seed": 1536192684,
+    "usage": null
+  }
+}

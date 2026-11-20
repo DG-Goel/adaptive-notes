@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-7cf92015-6862-44a0-a289-84e4429562b5",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Variables and constants include primitive and reference types; primitive types store simple values while reference types hold references to complex objects.\",\n        \"refs\": [\"Q0001\"],\n        \"claims\": [\n          {\n            \"text\": \"Variables and constants include primitive and reference types; primitive types store simple values while reference types hold references to complex objects.\",\n            \"refs\": [\"Q0001\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"There are two types of casting: implicit casting and explicit casting.\",\n        \"refs\": [\"Q0002\"],\n        \"claims\": [\n          {\n            \"text\": \"There are two types of casting: implicit casting and explicit casting.\",\n            \"refs\": [\"Q0002\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"You can work with numbers, strings, and arrays, and read input from the terminal.\",\n        \"refs\": [\"Q0002\"],\n        \"claims\": [\n          {\n            \"text\": \"You can work with numbers, strings, and arrays, and read input from the terminal.\",\n            \"refs\": [\"Q0002\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Control flow statements are used to control the flow of execution of programs.\",\n        \"refs\": [\"Q0012\"],\n        \"claims\": [\n          {\n            \"text\": \"Control flow statements are used to control the flow of execution of programs.\",\n            \"refs\": [\"Q0012\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Comparison operators are used for comparing values.\",\n        \"refs\": [\"Q0013\"],\n        \"claims\": [\n          {\n            \"text\": \"Comparison operators are used for comparing values.\",\n            \"refs\": [\"Q0013\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [\n    {\n      \"ref\": \"Q0000\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0003\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0004\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0005\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0006\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0007\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0008\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0009\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0010\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0011\",\n      \"reason\": \"noneducational\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output facts from primary excerpts. Identify educational statements. Excerpts contain teaching about variables, types, casting, control flow, comparison operators. Create items.\n\nEach fact_text with text and refs. Claims list maybe one claim per fact. Basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role maybe prerequisite or explanation.\n\nLet's extract:\n\nQ0011? Actually Q0012 about control flow. Q0013 about comparison operators.\n\nCreate facts:\n\n1. Variables and constants, primitive and reference types: primitive store simple values, reference hold references to complex objects. (from Q0001)\n\n2. Two types of casting: implicit and explicit. (from Q0002)\n\n3. Work with numbers, strings, arrays, and read input from terminal. (from Q0002)\n\n4. Control flow statements control program execution. (from Q0012)\n\n5. Comparison operators compare values. (from Q0013)\n\nAlso maybe about course etc not educational. Exclude promotional.\n\nNow format.\n\nEach item: fact_text {text, refs, claims}. claims array with one claim.\n\nProvide abstentions empty, excluded for promotional excerpts like Q0000 etc? Those are noneducational. Exclude those with reason promotion or noneducational.\n\nList excluded refs Q0000, Q0003, Q0004, Q0005, Q0006, Q0007, Q0008, Q0009, Q0010, Q0011 maybe promotional. Also Q0000 is closing. So exclude all noneducational.\n\nNow produce JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794320620,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_df9620fe21",
+  "usage": {
+    "completion_tokens": 1226,
+    "prompt_tokens": 3672,
+    "total_tokens": 4898,
+    "completion_time": 2.59883336,
+    "completion_tokens_details": {
+      "reasoning_tokens": 317
+    },
+    "prompt_time": 0.172977873,
+    "prompt_tokens_details": null,
+    "queue_time": 0.287004375,
+    "total_time": 2.771811233
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72xfm5eewgrqqj5mbszpwkk",
+    "debug": null,
+    "seed": 863811646,
+    "usage": null
+  }
+}

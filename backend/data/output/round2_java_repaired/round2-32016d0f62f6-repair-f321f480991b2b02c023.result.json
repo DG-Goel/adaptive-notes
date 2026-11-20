@@ -1,0 +1,109 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0398",
+        "FCT_0399",
+        "FCT_0400"
+      ],
+      "reason": "Unsupported visual label or value"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Loop control statements",
+      "source_segment_ids": [
+        "FCT_0398",
+        "FCT_0399",
+        "FCT_0400"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0398",
+            "FCT_0399",
+            "FCT_0400"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0398",
+              "quote": "When Java sees the break statement it will ignore everything else after and terminate the loop."
+            },
+            {
+              "note_id": "FCT_0399",
+              "quote": "The continue statement moves control to the beginning of a loop."
+            },
+            {
+              "note_id": "FCT_0400",
+              "quote": "If the user types pass, we don't want to echo that, but also we don't want to terminate the loop."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Loop control statements",
+            "direction": "DOWN",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "Start loop"
+              },
+              {
+                "id": "n2",
+                "label": "Loop body"
+              },
+              {
+                "id": "n3",
+                "label": "break statement"
+              },
+              {
+                "id": "n4",
+                "label": "continue statement"
+              },
+              {
+                "id": "n5",
+                "label": "End loop"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": ""
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": "break"
+              },
+              {
+                "from": "n2",
+                "to": "n4",
+                "label": "continue"
+              },
+              {
+                "from": "n2",
+                "to": "n5",
+                "label": "normal exit"
+              },
+              {
+                "from": "n3",
+                "to": "n5",
+                "label": "terminate loop"
+              },
+              {
+                "from": "n4",
+                "to": "n1",
+                "label": "restart loop"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

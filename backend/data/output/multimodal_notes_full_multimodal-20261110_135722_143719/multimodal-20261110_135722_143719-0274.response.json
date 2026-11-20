@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-ecf7bb9f-b3ef-4875-b8a2-d64b03d97500",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"For each question, we want to validate the value that the user enters and keep asking the same question until the user enters a valid value.\",\n        \"refs\": [\"Q0010\", \"Q0013\", \"Q0014\", \"Q0016\", \"Q0017\", \"Q0018\"],\n        \"claims\": [\n          {\n            \"text\": \"Validate user input in a loop and repeat the prompt until a valid value is entered.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0010\", \"Q0013\", \"Q0014\", \"Q0016\", \"Q0017\", \"Q0018\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"An infinite loop (while true) can be used to repeatedly ask the same question until a valid input is received.\",\n        \"refs\": [\"Q0012\", \"Q0019\"],\n        \"claims\": [\n          {\n            \"text\": \"Use an infinite while‑true loop to repeatedly prompt for input until validation succeeds.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0012\", \"Q0019\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"When validating the principal amount, the valid range is between 1,000 and 1,000,000 (underscores may be used for readability).\",\n        \"refs\": [\"Q0015\", \"Q0018\"],\n        \"claims\": [\n          {\n            \"text\": \"Principal must be >= 1000 and <= 1_000_000; underscores are allowed in numeric literals for readability.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0015\", \"Q0018\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"A variable declared inside a loop block is scoped to that block and is not available outside of it, causing a compilation error if referenced later.\",\n        \"refs\": [\"Q0024\", \"Q0025\", \"Q0026\", \"Q0027\"],\n        \"claims\": [\n          {\n            \"text\": \"Variables declared inside a loop are block‑scoped and cannot be accessed outside the loop.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0024\", \"Q0025\", \"Q0026\", \"Q0027\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"To fix the compilation error, declare the variable (e.g., int principal) outside the loop, optionally initializing it to zero.\",\n        \"refs\": [\"Q0028\", \"Q0029\", \"Q0030\", \"Q0031\"],\n        \"claims\": [\n          {\n            \"text\": \"Declare variables needed across iterations outside the loop (e.g., int principal = 0) to avoid scope errors.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"corrected_approach\",\n            \"refs\": [\"Q0028\", \"Q0029\", \"Q0030\", \"Q0031\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The same validation pattern with an infinite loop should be repeated for other inputs such as annual interest rate.\",\n        \"refs\": [\"Q0032\", \"Q0033\", \"Q0034\", \"Q0035\"],\n        \"claims\": [\n          {\n            \"text\": \"Apply the same input‑validation‑in‑loop pattern to each subsequent question (e.g., annual interest).\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"continuation\",\n            \"refs\": [\"Q0032\", \"Q0033\", \"Q0034\", \"Q0035\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Exact code for the infinite loop and validation statements is not directly quoted; only verbal description is available.\",\n      \"source_ids\": [\"G00119\"]\n    },\n    {\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"Exact code showing the variable scope error and its correction is not quoted; only verbal explanation is present.\",\n      \"source_ids\": [\"G00120\"]\n    }\n  ],\n  \"excluded\": [\n    {\n      \"ref\": \"Q0000\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0001\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0002\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0003\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0004\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0005\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0006\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0007\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0008\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0009\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0011\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0016\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0019\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0020\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0021\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0022\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0023\",\n      \"reason\": \"noneducational\"\n    },\n    {\n      \"ref\": \"Q0032\",\n      \"reason\": \"noneducational\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output facts from primary teaching. Extract statements like validation loop, variable scope. Create items with claims. Use source refs. Provide abstentions for missing code. Likely many facts. We'll include a few.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794325077,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 1618,
+    "prompt_tokens": 4244,
+    "total_tokens": 5862,
+    "completion_time": 3.398366445,
+    "completion_tokens_details": {
+      "reasoning_tokens": 45
+    },
+    "prompt_time": 0.235641953,
+    "prompt_tokens_details": null,
+    "queue_time": 0.324498159,
+    "total_time": 3.6340083979999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m731qkcbe2y8nbdqyb6h9reb",
+    "debug": null,
+    "seed": 1835125209,
+    "usage": null
+  }
+}

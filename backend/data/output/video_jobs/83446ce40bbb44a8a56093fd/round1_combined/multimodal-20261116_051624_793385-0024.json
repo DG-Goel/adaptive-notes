@@ -1,0 +1,615 @@
+{
+  "document_id": "DOC001",
+  "source_filename": "multimodal_transcript.json",
+  "extraction_timestamp": "2026-11-16T05:16:57.488677+00:00",
+  "concepts": [
+    {
+      "knowledge_id": "CON_0001",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00007"
+      ],
+      "document_id": "DOC001",
+      "content": "Net exports are the difference between foreign demand for domestic goods and domestic demand for foreign goods, and they appear as an extra term in the goods‑market equilibrium.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00007",
+              "quote": "So that's the reason we got an extra term here, which is this net exports.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 800,
+              "end_char": 874,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00007",
+              "quote": "domestic reduced goods is not the same as domestic demand for goods, which is this,\n because now there's a net export term.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 398,
+              "end_char": 521,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00007",
+              "quote": "So part of the things that the residents sort of demand,\n they demand from the rest of the world, not from domestic producers, and at the same time part of\n the demand perceived by domestic producers comes from the rest of the world, from exports, not from\n domestic producers.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 522,
+              "end_char": 799,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00007",
+              "quote": "So that's the reason we got an extra term here, which is this net exports.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 800,
+              "end_char": 874,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "net exports",
+              "claims": [
+                {
+                  "text": "net exports",
+                  "refs": [
+                    "Q0009"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00007",
+                      "quote": "So that's the reason we got an extra term here, which is this net exports."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Net exports are the difference between foreign demand for domestic goods and domestic demand for foreign goods, and they appear as an extra term in the goods‑market equilibrium.",
+              "claims": [
+                {
+                  "text": "Net exports are the difference between foreign demand for domestic goods and domestic demand for foreign goods, and they appear as an extra term in the goods‑market equilibrium.",
+                  "refs": [
+                    "Q0007",
+                    "Q0008",
+                    "Q0009"
+                  ],
+                  "basis": "direct_entailment",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "explanation_of_mistake",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00007",
+                      "quote": "domestic reduced goods is not the same as domestic demand for goods, which is this,\n because now there's a net export term."
+                    },
+                    {
+                      "source_id": "G00007",
+                      "quote": "So part of the things that the residents sort of demand,\n they demand from the rest of the world, not from domestic producers, and at the same time part of\n the demand perceived by domestic producers comes from the rest of the world, from exports, not from\n domestic producers."
+                    },
+                    {
+                      "source_id": "G00007",
+                      "quote": "So that's the reason we got an extra term here, which is this net exports."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00007",
+                "G00008"
+              ],
+              "reason": "No explicit definition statements for the concepts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00007",
+                "G00008"
+              ],
+              "reason": "No formula text provided.",
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Net exports are the difference between foreign demand for domestic goods and domestic demand for foreign goods, and they appear as an extra term in the goods‑market equilibrium.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "direct_entailment",
+                    "literal_kind": "verbal",
+                    "instructional_role": "explanation_of_mistake",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": true
+                    },
+                    "evidence": [
+                      "domestic reduced goods is not the same as domestic demand for goods, which is this,\n because now there's a net export term.",
+                      "So part of the things that the residents sort of demand,\n they demand from the rest of the world, not from domestic producers, and at the same time part of\n the demand perceived by domestic producers comes from the rest of the world, from exports, not from\n domestic producers.",
+                      "So that's the reason we got an extra term here, which is this net exports."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00007",
+                        "quote": "domestic reduced goods is not the same as domestic demand for goods, which is this,\n because now there's a net export term.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 398,
+                        "end_char": 521,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00007",
+                        "quote": "So part of the things that the residents sort of demand,\n they demand from the rest of the world, not from domestic producers, and at the same time part of\n the demand perceived by domestic producers comes from the rest of the world, from exports, not from\n domestic producers.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 522,
+                        "end_char": 799,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00007",
+                        "quote": "So that's the reason we got an extra term here, which is this net exports.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 800,
+                        "end_char": 874,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Net exports are the difference between foreign demand for domestic goods and domestic demand for foreign goods, and they appear as an extra term in the goods‑market equilibrium.",
+                "preview_text": "Net exports are the difference between foreign demand for domestic goods and domestic demand for foreign goods, and they appear as an extra term in the goods‑market equilibrium.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "net exports",
+                    "availability": "SOURCE_SUPPORTED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "So that's the reason we got an extra term here, which is this net exports."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00007",
+                        "quote": "So that's the reason we got an extra term here, which is this net exports.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 800,
+                        "end_char": 874,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "net exports",
+                "preview_text": "net exports",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00007"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "net exports",
+      "aliases": []
+    },
+    {
+      "knowledge_id": "CON_0002",
+      "knowledge_type": "concept",
+      "source_unit_ids": [
+        "G00007",
+        "G00008"
+      ],
+      "document_id": "DOC001",
+      "content": "Net exports are a decreasing function of domestic output and domestic income because higher domestic income leads to more imports.",
+      "section": null,
+      "page_range": null,
+      "confidence": null,
+      "extraction_metadata": {
+        "source_grounding": {
+          "validation_scope": "exact quotation, chunk membership and field coverage only",
+          "mechanically_valid": true,
+          "semantic_entailment_verified": false,
+          "evidence": [
+            {
+              "source_id": "G00007",
+              "quote": "And we said this net exports is a function of three things.",
+              "fields": [
+                "/concept_name"
+              ],
+              "match_count": 1,
+              "start_char": 876,
+              "end_char": 935,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00008",
+              "quote": "It's a function of output, and it's a decreasing\n function of output.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 1,
+              "end_char": 70,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00008",
+              "quote": "Why is it a decreasing function of domestic income?",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 142,
+              "end_char": 193,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00008",
+              "quote": "They import more.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 251,
+              "end_char": 268,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00008",
+              "quote": "They consume everything more, but part of that is import.",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 270,
+              "end_char": 327,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            },
+            {
+              "source_id": "G00008",
+              "quote": "And so part of that energy of an extra demand goes to foreign goods and that's what deteriorates net exports, okay?",
+              "fields": [
+                "/content"
+              ],
+              "match_count": 1,
+              "start_char": 329,
+              "end_char": 444,
+              "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+            }
+          ],
+          "validation_errors": [],
+          "generation_annotations": [
+            {
+              "path": "/concept_name",
+              "text": "net exports function",
+              "claims": [
+                {
+                  "text": "net exports function",
+                  "refs": [
+                    "Q0010"
+                  ],
+                  "basis": "explicit",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": null,
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00007",
+                      "quote": "And we said this net exports is a function of three things."
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            },
+            {
+              "path": "/content",
+              "text": "Net exports are a decreasing function of domestic output and domestic income because higher domestic income leads to more imports.",
+              "claims": [
+                {
+                  "text": "Net exports are a decreasing function of domestic output and domestic income because higher domestic income leads to more imports.",
+                  "refs": [
+                    "Q0011",
+                    "Q0015",
+                    "Q0017",
+                    "Q0018",
+                    "Q0019"
+                  ],
+                  "basis": "direct_entailment",
+                  "availability": "SOURCE_SUPPORTED",
+                  "literal_kind": "verbal",
+                  "instructional_role": "explanation_of_mistake",
+                  "related_refs": [],
+                  "evidence": [
+                    {
+                      "source_id": "G00008",
+                      "quote": "It's a function of output, and it's a decreasing\n function of output."
+                    },
+                    {
+                      "source_id": "G00008",
+                      "quote": "Why is it a decreasing function of domestic income?"
+                    },
+                    {
+                      "source_id": "G00008",
+                      "quote": "They import more."
+                    },
+                    {
+                      "source_id": "G00008",
+                      "quote": "They consume everything more, but part of that is import."
+                    },
+                    {
+                      "source_id": "G00008",
+                      "quote": "And so part of that energy of an extra demand goes to foreign goods and that's what deteriorates net exports, okay?"
+                    }
+                  ],
+                  "related_evidence": []
+                }
+              ]
+            }
+          ],
+          "abstentions": [
+            {
+              "category": "definitions",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00007",
+                "G00008"
+              ],
+              "reason": "No explicit definition statements for the concepts.",
+              "counts_as_completed": false
+            },
+            {
+              "category": "formulas",
+              "availability": "SOURCE_MISSING",
+              "source_ids": [
+                "G00007",
+                "G00008"
+              ],
+              "reason": "No formula text provided.",
+              "counts_as_completed": false
+            }
+          ],
+          "generation_policy": {
+            "version": "evidence_first_12a_v1",
+            "fields": [
+              {
+                "path": "/content",
+                "claims": [
+                  {
+                    "text": "Net exports are a decreasing function of domestic output and domestic income because higher domestic income leads to more imports.",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "direct_entailment",
+                    "literal_kind": "verbal",
+                    "instructional_role": "explanation_of_mistake",
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "It's a function of output, and it's a decreasing\n function of output.",
+                      "Why is it a decreasing function of domestic income?",
+                      "They import more.",
+                      "They consume everything more, but part of that is import.",
+                      "And so part of that energy of an extra demand goes to foreign goods and that's what deteriorates net exports, okay?"
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00008",
+                        "quote": "It's a function of output, and it's a decreasing\n function of output.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 1,
+                        "end_char": 70,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00008",
+                        "quote": "Why is it a decreasing function of domestic income?",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 142,
+                        "end_char": 193,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00008",
+                        "quote": "They import more.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 251,
+                        "end_char": 268,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00008",
+                        "quote": "They consume everything more, but part of that is import.",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 270,
+                        "end_char": 327,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      },
+                      {
+                        "source_id": "G00008",
+                        "quote": "And so part of that energy of an extra demand goes to foreign goods and that's what deteriorates net exports, okay?",
+                        "fields": [
+                          "/content"
+                        ],
+                        "match_count": 1,
+                        "start_char": 329,
+                        "end_char": 444,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "Net exports are a decreasing function of domestic output and domestic income because higher domestic income leads to more imports.",
+                "preview_text": "Net exports are a decreasing function of domestic output and domestic income because higher domestic income leads to more imports.",
+                "withheld": false
+              },
+              {
+                "path": "/concept_name",
+                "claims": [
+                  {
+                    "text": "net exports function",
+                    "availability": "REVIEW_REQUIRED",
+                    "eligible_for_preview": true,
+                    "reasons": [],
+                    "basis": "explicit",
+                    "literal_kind": "verbal",
+                    "instructional_role": null,
+                    "incorrect_context_cue": false,
+                    "signals": {
+                      "unsupported_numbers": [],
+                      "possibly_lost_qualifiers": [],
+                      "possible_contradiction": false
+                    },
+                    "evidence": [
+                      "And we said this net exports is a function of three things."
+                    ],
+                    "related_evidence": [],
+                    "semantic_verified": false,
+                    "semantic_review_status": "NOT_REVIEWED",
+                    "source_evidence": [
+                      {
+                        "source_id": "G00007",
+                        "quote": "And we said this net exports is a function of three things.",
+                        "fields": [
+                          "/concept_name"
+                        ],
+                        "match_count": 1,
+                        "start_char": 876,
+                        "end_char": 935,
+                        "offset_basis": "supplied_source_unit_text; zero-based; end exclusive"
+                      }
+                    ]
+                  }
+                ],
+                "original_text": "net exports function",
+                "preview_text": "net exports function",
+                "withheld": false
+              }
+            ],
+            "semantic_entailment_verified": false,
+            "human_review_decisions_unchanged": true
+          }
+        },
+        "primary_source_ids": [
+          "G00007",
+          "G00008"
+        ],
+        "context_source_ids": [],
+        "semantic_verified": false
+      },
+      "concept_name": "net exports function",
+      "aliases": []
+    }
+  ],
+  "definitions": [],
+  "explanations": [],
+  "examples": [],
+  "facts": [],
+  "formulas": [],
+  "procedures": [],
+  "relationships": [],
+  "total_items": 2,
+  "source_units_processed": 2,
+  "extraction_metadata": null
+}

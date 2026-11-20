@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-893b2459-d04b-4ebf-8294-2acc0e409fc1",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Impact of Interest‑Rate Changes on the Exchange Rate\",\n      \"source_segment_ids\": [\"FCT_0054\", \"FCT_0058\", \"FCT_0056\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"type\": \"table\",\n          \"source_segment_ids\": [\"FCT_0054\", \"FCT_0058\", \"FCT_0056\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0054\",\n              \"quote\": \"An increase in the domestic interest rate, other things equal, appreciates the exchange rate.\"\n            },\n            {\n              \"note_id\": \"FCT_0058\",\n              \"quote\": \"When the foreign interest rate goes up, the exchange rate falls (depreciates).\"\n            },\n            {\n              \"note_id\": \"FCT_0056\",\n              \"quote\": \"Traders will move to the higher‑return US‑dollar bond until the currency appreciates enough to erase the advantage.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Interest‑Rate Changes vs. Exchange‑Rate Movement\",\n            \"headers\": [\"Factor Change\", \"Direction of Exchange‑Rate Movement\", \"Explanation\"],\n            \"rows\": [\n              {\n                \"Item\": \"Domestic interest rate ↑\",\n                \"Property\": \"Exchange rate appreciates\",\n                \"Description\": \"An increase in the domestic interest rate, other things equal, appreciates the exchange rate.\"\n              },\n              {\n                \"Item\": \"Foreign interest rate ↑\",\n                \"Property\": \"Exchange rate depreciates\",\n                \"Description\": \"When the foreign interest rate goes up, the exchange rate falls (depreciates).\"\n              },\n              {\n                \"Item\": \"Higher‑return US‑dollar bond\",\n                \"Property\": \"Currency appreciates until advantage erased\",\n                \"Description\": \"Traders will move to the higher‑return US‑dollar bond until the currency appreciates enough to erase the advantage.\"\n              }\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to find visual candidates. Look for comparisons etc. We have many facts about interest rates and exchange rates. Could make table comparing effect of domestic vs foreign interest rate changes. Use evidence quotes.\n\nIdentify rows: e.g., \"An increase in the domestic interest rate, other things equal, appreciates the exchange rate.\" (FCT_0054). \"When the foreign interest rate goes up, the exchange rate falls (depreciates).\" (FCT_0058). Also \"Traders will move to the higher‑return US‑dollar bond until the currency appreciates enough to erase the advantage.\" (FCT_0056). Could table with Factor, Effect on Exchange Rate.\n\nCreate unit with table visual.\n\nNeed source_segment_ids: IDs of notes used. Use primary IDs: FCT_0054, FCT_0058, FCT_0056 maybe.\n\nProvide evidence objects with note_id and exact quote.\n\nConstruct JSON.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794733305,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4727af4560",
+  "usage": {
+    "completion_tokens": 667,
+    "prompt_tokens": 3401,
+    "total_tokens": 4068,
+    "completion_time": 1.395079912,
+    "completion_tokens_details": {
+      "reasoning_tokens": 192
+    },
+    "prompt_time": 0.197217355,
+    "prompt_tokens_details": null,
+    "queue_time": 0.156685851,
+    "total_time": 1.592297267
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f71sh3efsvm2e7w4zcwrjc",
+    "debug": null,
+    "seed": 684609461,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-f173b753-716f-4274-8e51-28f59530e725",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"AI/ML Hierarchy\",\n      \"source_segment_ids\": [\"CON_0001\", \"CON_0002\", \"CON_0011\", \"CON_0012\", \"CON_0003\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0001\", \"CON_0002\", \"CON_0011\", \"CON_0012\", \"CON_0003\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0001\",\n              \"exact_quote\": \"Artificial intelligence is an overarching field in computer science where we train computers to perform tasks which humans are generally good at.\"\n            },\n            {\n              \"note_id\": \"CON_0002\",\n              \"exact_quote\": \"Machine learning is an important subdomain within artificial intelligence and has two main branches.\"\n            },\n            {\n              \"note_id\": \"CON_0011\",\n              \"exact_quote\": \"statistical ML is a subset of machine learning focusing on probabilistic models\"\n            },\n            {\n              \"note_id\": \"CON_0012\",\n              \"exact_quote\": \"deep learning is a subfield of machine learning based on neural network architectures\"\n            },\n            {\n              \"note_id\": \"CON_0003\",\n              \"exact_quote\": \"Statistical machine learning includes algorithms such as linear regression, decision tree, k-means, used for tasks like classification and regression.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"AI → ML → Sub‑domains\",\n            \"headers\": [\"Level\", \"Concept\", \"Notes\"],\n            \"rows\": [\n              [\"1\", \"Artificial Intelligence\", \"AI is the overarching field (CON_0001)\"],\n              [\"2\", \"Machine Learning\", \"ML is a subdomain of AI (CON_0002)\"],\n              [\"3a\", \"Statistical ML\", \"Subset focusing on probabilistic models (CON_0011)\"],\n              [\"3b\", \"Deep Learning\", \"Based on neural network architectures (CON_0012)\"],\n              [\"4\", \"Algorithms\", \"Linear regression, decision tree, k‑means (CON_0003)\"]\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Neural‑Network Architecture Types\",\n      \"source_segment_ids\": [\"CON_0005\", \"CON_0006\", \"CON_0007\", \"CON_0008\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0005\", \"CON_0006\", \"CON_0007\", \"CON_0008\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0005\",\n              \"exact_quote\": \"Neural networks are the core of deep learning; using new neural networks means you are using deep learning.\"\n            },\n            {\n              \"note_id\": \"CON_0006\",\n              \"exact_quote\": \"CNN is a type of neural network architecture.\"\n            },\n            {\n              \"note_id\": \"CON_0007\",\n              \"exact_quote\": \"RNN is a type of neural network architecture.\"\n            },\n            {\n              \"note_id\": \"CON_0008\",\n              \"exact_quote\": \"Transformer is a neural network architecture that is the reason behind modern generative AI and agentic AI.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"architecture\",\n            \"title\": \"Neural‑Network Architecture Types\",\n            \"direction\": \"vertical\",\n            \"components\": [\n              {\"id\": \"nn_core\", \"label\": \"Neural Networks\"},\n              {\"id\": \"cnn\", \"label\": \"CNN\"},\n              {\"id\": \"rnn\", \"label\": \"RNN\"},\n              {\"id\": \"transformer\", \"label\": \"Transformer\"}\n            ],\n            \"connections\": [\n              {\"from\": \"nn_core\", \"to\": \"cnn\", \"label\": \"type\"},\n              {\"from\": \"nn_core\", \"to\": \"rnn\", \"label\": \"type\"},\n              {\"from\": \"nn_core\", \"to\": \"transformer\", \"label\": \"type\"}\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Machine‑Learning Workflow\",\n      \"source_segment_ids\": [\"CON_0016\", \"CON_0017\", \"CON_0015\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0016\", \"CON_0017\", \"CON_0015\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0016\",\n              \"exact_quote\": \"Machine learning is a discipline in computer science where we train machines on data so that they can make predictions without explicit programming.\"\n            },\n            {\n              \"note_id\": \"CON_0017\",\n              \"exact_quote\": \"Traditional software programming requires explicit programming of logic, whereas machine learning provides input and output pairs and the system derives the underlying pattern or logic.\"\n            },\n            {\n              \"note_id\": \"CON_0015\",\n              \"exact_quote\": \"So in machine learning typically there are two phases the first one is training and the second one where you give computer the real task where it will give you the prediction is called inference.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"ML Process\",\n            \"direction\": \"top-down\",\n            \"nodes\": [\n              {\"id\": \"data\", \"label\": \"Labeled Data\"},\n              {\"id\": \"train\", \"label\": \"Training Phase\"},\n              {\"id\": \"model\", \"label\": \"Trained Model\"},\n              {\"id\": \"inference\", \"label\": \"Inference Phase\"},\n              {\"id\": \"output\", \"label\": \"Predictions\"}\n            ],\n            \"edges\": [\n              {\"from\": \"data\", \"to\": \"train\", \"label\": \"feeds\"},\n              {\"from\": \"train\", \"to\": \"model\", \"label\": \"produces\"},\n              {\"from\": \"model\", \"to\": \"inference\", \"label\": \"used in\"},\n              {\"from\": \"inference\", \"to\": \"output\", \"label\": \"yields\"}\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to create visuals where appropriate. Identify relationships: hierarchy AI > ML > statistical ML, deep learning, neural nets, CNN,RNN,Transformer. Also ML phases training vs inference. Could make a table hierarchy. Use visual_only units.\n\nCreate one architecture visual for neural network types. Also flowchart for ML process training->inference.\n\nProvide evidence quotes.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794646552,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_27194a498a",
+  "usage": {
+    "completion_tokens": 1489,
+    "prompt_tokens": 2864,
+    "total_tokens": 4353,
+    "completion_time": 3.11626184,
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_time": 0.135120578,
+    "prompt_tokens_details": null,
+    "queue_time": 0.156391163,
+    "total_time": 3.251382418
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cma8h9e6yv1y97y5r1p9q8",
+    "debug": null,
+    "seed": 424832976,
+    "usage": null
+  }
+}

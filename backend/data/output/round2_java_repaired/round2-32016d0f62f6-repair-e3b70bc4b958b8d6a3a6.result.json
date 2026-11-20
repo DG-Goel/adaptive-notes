@@ -1,0 +1,125 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0389",
+        "FCT_0390",
+        "FCT_0394",
+        "FCT_0395",
+        "FCT_0396",
+        "FCT_0397"
+      ],
+      "reason": "Evidence must be exact Round 1 note text"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "While‑loop control flow",
+      "source_segment_ids": [
+        "FCT_0389",
+        "FCT_0390",
+        "FCT_0394",
+        "FCT_0395",
+        "FCT_0396",
+        "FCT_0397"
+      ],
+      "mode": "text_and_visual",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0389",
+            "FCT_0390",
+            "FCT_0394",
+            "FCT_0395",
+            "FCT_0396",
+            "FCT_0397"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0389",
+              "quote": "Condition: input does not equal quit."
+            },
+            {
+              "note_id": "FCT_0390",
+              "quote": "A while loop can be written by declaring a loop variable, setting a condition in parentheses, and placing the loop body inside braces; the variable can be decremented each iteration to count down."
+            },
+            {
+              "note_id": "FCT_0394",
+              "quote": "If this condition is true, then we print the input."
+            },
+            {
+              "note_id": "FCT_0395",
+              "quote": "We can reverse this condition: if the user types quit, break out of the loop."
+            },
+            {
+              "note_id": "FCT_0396",
+              "quote": "Remove the not operator: if the user types quit, we break."
+            },
+            {
+              "note_id": "FCT_0397",
+              "quote": "Otherwise, continue execution and print this input on the terminal."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "While‑loop execution",
+            "direction": "DOWN",
+            "nodes": [
+              {
+                "id": "n0",
+                "label": "Start"
+              },
+              {
+                "id": "n1",
+                "label": "Condition: input does not equal quit"
+              },
+              {
+                "id": "n2",
+                "label": "Print input"
+              },
+              {
+                "id": "n3",
+                "label": "Loop back"
+              },
+              {
+                "id": "n4",
+                "label": "Break (input equals quit)"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n0",
+                "to": "n1",
+                "label": ""
+              },
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": "true"
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": ""
+              },
+              {
+                "from": "n3",
+                "to": "n1",
+                "label": ""
+              },
+              {
+                "from": "n1",
+                "to": "n4",
+                "label": "false"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

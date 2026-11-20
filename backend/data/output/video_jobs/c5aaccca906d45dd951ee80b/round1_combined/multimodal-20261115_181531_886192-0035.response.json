@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-3a44a689-8df5-4182-9843-1d9c373e4685",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"uncovered interest parity condition\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A very important concept in international finance that describes the condition under which investors are indifferent between holding domestic and foreign bonds in equilibrium.\",\n      \"refs\": [\"Q0000\", \"Q0004\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What does the uncovered interest parity condition describe?\",\n      \"answer\": \"It describes the equilibrium condition where investors are indifferent between domestic and foreign bonds.\",\n      \"distractors\": [\n        \"It specifies the exact future exchange rate between two currencies.\",\n        \"It determines the nominal interest rate of a single country.\",\n        \"It explains how central banks set monetary policy.\"\n      ],\n      \"explanation\": \"The primary excerpt states that the uncovered interest parity condition is a very important concept in international finance that tells you in equilibrium you must be indifferent between investing in one bond or the other.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"uncovered interest parity condition\",\n      \"refs\": [\"Q0000\", \"Q0004\"]\n    },\n    {\n      \"question\": \"According to the speaker, why is the condition called \\\"uncovered\\\"?\",\n      \"answer\": \"The speaker does not explain why it is called uncovered.\",\n      \"distractors\": [\n        \"Because it involves covered forward contracts.\",\n        \"Because it requires government guarantees.\",\n        \"Because it only applies to covered interest arbitrage.\"\n      ],\n      \"explanation\": \"The excerpt \\\"Don't ask me why it's uncovered\\\" indicates the speaker does not provide an explanation for the term.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"terminology of uncovered interest parity\",\n      \"refs\": [\"Q0001\"]\n    },\n    {\n      \"question\": \"What approximation does the speaker use when relating interest rates?\",\n      \"answer\": \"They use a Taylor expansion approximation for small terms.\",\n      \"distractors\": [\n        \"They apply a logarithmic transformation of rates.\",\n        \"They assume interest rates are constant over time.\",\n        \"They use a geometric mean of domestic and foreign rates.\"\n      ],\n      \"explanation\": \"The speaker mentions \\\"That's that kind of approximation, Taylor expansion when these terms are small.\\\" indicating the use of a Taylor series approximation.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"approximation method\",\n      \"refs\": [\"Q0007\"]\n    },\n    {\n      \"question\": \"In the speaker's example, when is it acceptable for the US bond interest rate to be lower than the UK bond interest rate?\",\n      \"answer\": \"When an appreciation of the dollar is expected.\",\n      \"distractors\": [\n        \"When the US inflation rate is higher than the UK inflation rate.\",\n        \"When the US central bank raises its policy rate.\",\n        \"When the UK bond has a higher credit rating.\"\n      ],\n      \"explanation\": \"The excerpt states that it is okay for the US bond rate to be lower as long as an appreciation of the dollar is expected, allowing indifference between the bonds.\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"interest rate comparison\",\n      \"refs\": [\"Q0010\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc. From excerpts we have concept: uncovered interest parity condition. So concept item. Provide concept_name and content. Use primary excerpts. Let's create item \"item1\". Rows: concept_name text \"uncovered interest parity condition\". content maybe description from Q0000 and Q0002. Use availability SOURCE_SUPPORTED, basis explicit. literal_kind verbal. instructional_role null. refs Q0000. element0 for concept_name, part value. content element0 part value.\n\nAlso maybe definition? but not full definition. So just concept.\n\nProvide abstentions for missing required fields elsewhere none.\n\nQuiz: need 4 questions about teaching. Use excerpts. Q1: What is the uncovered interest parity condition? Answer: It's a concept in international finance stating... Provide distractors. Use bloom Understand.\n\nNeed refs primary excerpt Q0000.\n\nCreate 4 questions.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794766609,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_27194a498a",
+  "usage": {
+    "completion_tokens": 1043,
+    "prompt_tokens": 2801,
+    "total_tokens": 3844,
+    "completion_time": 2.184240295,
+    "completion_tokens_details": {
+      "reasoning_tokens": 182
+    },
+    "prompt_time": 0.131015222,
+    "prompt_tokens_details": null,
+    "queue_time": 0.160978678,
+    "total_time": 2.3152555169999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g6t4y0e3kb5df8kk1kv08b",
+    "debug": null,
+    "seed": 799848611,
+    "usage": null
+  }
+}

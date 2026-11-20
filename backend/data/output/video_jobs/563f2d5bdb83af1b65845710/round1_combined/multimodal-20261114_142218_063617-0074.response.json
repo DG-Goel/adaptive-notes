@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-47f49967-0116-4fbc-a6f7-6909d4a302f6",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"increase in the interest rate differential.\",\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"The compensation will come through an expected capital loss through the currency.\",\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"If I appreciate more of the currencies and I haven't moved the expected exchange rate, I expect a larger loss from the currency side.\",\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 3,\n      \"part\": \"value\",\n      \"text\": \"That's what has happened here.\",\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 4,\n      \"part\": \"value\",\n      \"text\": \"That's what is behind the precision.\",\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 5,\n      \"part\": \"value\",\n      \"text\": \"The precision is already built in here, which makes monetary policy more powerful than the closed economy because you get the next export channel.\",\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": [],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract claims. The excerpts talk about interest rate differential, compensation via expected capital loss through currency, larger loss from currency side, etc. Likely facts.\n\nCreate rows for facts category. Each fact_text from excerpts.\n\nProvide item label maybe \"item1\". Provide fields fact_text.\n\nAdd rows with availability SOURCE_MISSING? The text is present, so SOURCE_SUPPORTED. basis explicit. literal_kind verbal. instructional_role null.\n\nDo for each excerpt.\n\nAlso maybe concepts? No.\n\nSo rows 5.\n\nAbstentions none. Excluded none.\n\nProvide JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794666482,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_86dc843b12",
+  "usage": {
+    "completion_tokens": 796,
+    "prompt_tokens": 1945,
+    "total_tokens": 2741,
+    "completion_time": 1.679049539,
+    "completion_tokens_details": {
+      "reasoning_tokens": 116
+    },
+    "prompt_time": 0.100103547,
+    "prompt_tokens_details": null,
+    "queue_time": 0.157712704,
+    "total_time": 1.779153086
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7d7ah2we2pb2app038tfhhm",
+    "debug": null,
+    "seed": 2108853665,
+    "usage": null
+  }
+}

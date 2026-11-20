@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-77794514-39d3-45bf-bbd9-941868ff6e5e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [\n    {\n      \"concept_name\": {\n        \"text\": \"abstract class\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"aliases\": null,\n      \"content\": {\n        \"text\": \"An abstract class is a class that cannot be instantiated with the new operator; it serves as a partial implementation that must be subclassed or accessed via other means.\",\n        \"refs\": [\"Q0000\"]\n      }\n    },\n    {\n      \"concept_name\": {\n        \"text\": \"factory method\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"aliases\": null,\n      \"content\": {\n        \"text\": \"A factory method is a static method that creates and returns an instance of a class, allowing object creation without using the new operator directly.\",\n        \"refs\": [\"Q0001\"]\n      }\n    },\n    {\n      \"concept_name\": {\n        \"text\": \"method overloading\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"aliases\": null,\n      \"content\": {\n        \"text\": \"Method overloading is the provision of multiple method signatures with the same name but different parameter types or counts, enabling the method to handle different argument types.\",\n        \"refs\": [\"Q0003\"]\n      }\n    },\n    {\n      \"concept_name\": {\n        \"text\": \"NumberFormat class\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0004\"]\n      },\n      \"aliases\": null,\n      \"content\": {\n        \"text\": \"NumberFormat is an abstract class in Java that provides methods for formatting numbers as currency, percent, etc., and must be obtained via factory methods such as getCurrencyInstance() or getPercentInstance().\",\n        \"refs\": [\"Q0000\", \"Q0001\", \"Q0004\"]\n      }\n    }\n  ],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"abstract class\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"definition_text\": {\n        \"text\": \"A class declared with the abstract keyword; it cannot be instantiated directly with new.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"factory method\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"A static method that creates and returns an instance of a class, acting as a “factory” for objects.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"method overloading\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"Having multiple methods with the same name but different parameter lists within the same class.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"NumberFormat cannot be instantiated directly because it is abstract.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"getCurrencyInstance() returns a NumberFormat object configured for currency formatting.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"getPercentInstance() returns a NumberFormat object configured for percent formatting.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"NumberFormat.format() can be overloaded to accept long, double, etc., and returns a formatted string.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"example_type\": null,\n      \"example_text\": {\n        \"text\": \"NumberFormat currency = NumberFormat.getCurrencyInstance();\\nString result = currency.format(1234567.891);\\n// result → \\\"$1,234,567.89\\\" (depending on locale)\",\n        \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\", \"Q0004\"]\n      },\n      \"exemplifies\": {\n        \"text\": \"Using a factory method to obtain a NumberFormat instance and formatting a number as currency.\",\n        \"refs\": [\"Q0001\", \"Q0003\"]\n      }\n    },\n    {\n      \"example_type\": null,\n      \"example_text\": {\n        \"text\": \"NumberFormat percent = NumberFormat.getPercentInstance();\\nString p = percent.format(0.85);\\n// p → \\\"85%\\\"\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"exemplifies\": {\n        \"text\": \"Obtaining a NumberFormat for percent formatting via a factory method.\",\n        \"refs\": [\"Q0004\"]\n      }\n    }\n  ],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"Why NumberFormat is abstract\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"NumberFormat provides a common API for different locale‑specific formatting strategies; the actual implementation is supplied by concrete subclasses created by the factory methods.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"Renaming variables in IDE\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"When a variable name is changed, the IDE can update all references automatically to avoid mismatched names.\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output JSON with empty arrays maybe some facts etc. Extract educational notes: concepts: abstract class, factory method, method overloading, NumberFormat usage. Provide definitions, facts, examples, explanations. Cite refs.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794191543,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_90620edd96",
+  "usage": {
+    "completion_tokens": 1323,
+    "prompt_tokens": 3134,
+    "total_tokens": 4457,
+    "completion_time": 2.819443609,
+    "completion_tokens_details": {
+      "reasoning_tokens": 48
+    },
+    "prompt_time": 0.041770624,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "queue_time": 0.391566285,
+    "total_time": 2.861214233
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6z2cgfwetqaa8y77975gr4r",
+    "debug": null,
+    "seed": 2096747529,
+    "usage": null
+  }
+}

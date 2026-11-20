@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-7ffcee5e-94e0-4313-8e97-9ca7b0de4d43",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"A method is a function that is part of a class.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\", \"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"Functions that exist outside a class are called functions, not methods.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\", \"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"Methods belong to a class.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\", \"Q0006\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\n        \"A method is a function that is part of a class.\",\n        \"Functions that exist outside a class are called functions, not methods.\",\n        \"Methods belong to a class.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify statements: method is function part of class. So claim C1: \"A method is a function that is part of a class.\" basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null? It's definition. Use role maybe explanation. We'll set instructional_role null. refs Q0001,Q0000? Primary excerpts include both. Use both. related_refs none.\n\nAlso claim C2: \"Functions that exist outside a class are called functions, not methods.\" From Q0003 and Q0004. Combine. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal. refs Q0003,Q0004.\n\nAlso claim C3: \"Methods belong to a class.\" from Q0005,Q0006. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal. refs Q0005,Q0006.\n\nNow populate categories: facts maybe. We'll put in facts. facts.fact_text list claim IDs in order? Should be claim texts. Provide fact_text array with each claim text. fact_type maybe null? Provide is_null true.\n\nWe need claims array with each claim object.\n\nAbstentions none.\n\nOther sections empty arrays.\n\nConstruct.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317825,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_19b184c447",
+  "usage": {
+    "completion_tokens": 636,
+    "prompt_tokens": 3032,
+    "total_tokens": 3668,
+    "completion_time": 1.451811364,
+    "completion_tokens_details": {
+      "reasoning_tokens": 245
+    },
+    "prompt_time": 0.317856777,
+    "prompt_tokens_details": {
+      "cached_tokens": 2560
+    },
+    "queue_time": 0.37632905,
+    "total_time": 1.769668141
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72ttb6wemb92eg1svzx214p",
+    "debug": null,
+    "seed": 765880449,
+    "usage": null
+  }
+}

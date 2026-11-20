@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-e574919d-5daf-4014-ba1b-70c76f8673da",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Net exports increase when the income of the rest of the world rises.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Higher foreign income raises foreign demand for domestically produced goods.\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"An increase in the real exchange rate makes domestic goods more expensive relative to foreign goods, reducing net exports.\",\n      \"refs\": [\"Q0015\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What happens to net exports when foreign income rises?\",\n      \"answer\": \"Net exports increase.\",\n      \"explanation\": \"The source states that net exports rise as the income of the rest of the world goes up (Q0003).\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0003\"],\n      \"topic\": \"foreign income effect on net exports\"\n    },\n    {\n      \"question\": \"Why does higher foreign income lead to higher net exports?\",\n      \"answer\": \"Because foreign consumers demand more domestically produced goods.\",\n      \"explanation\": \"The source explains that demand for domestically produced goods rises when foreign income goes up (Q0005).\",\n      \"bloom_level\": \"Understand\",\n      \"refs\": [\"Q0005\"],\n      \"topic\": \"demand mechanism\"\n    },\n    {\n      \"question\": \"How does an increase in the real exchange rate affect net exports?\",\n      \"answer\": \"It reduces net exports.\",\n      \"explanation\": \"The source says a higher real exchange rate makes domestic goods more expensive relative to foreign goods, lowering net exports (Q0015).\",\n      \"bloom_level\": \"Apply\",\n      \"refs\": [\"Q0015\"],\n      \"topic\": \"real exchange rate effect\"\n    },\n    {\n      \"question\": \"If a foreign country's income rises, what happens to its imports from the domestic country?\",\n      \"answer\": \"The foreign country's imports increase, which are the domestic country's exports.\",\n      \"explanation\": \"The source notes that when foreign income goes up, their imports (which are the domestic country's exports) go up (Q0010).\",\n      \"bloom_level\": \"Analyze\",\n      \"refs\": [\"Q0010\"],\n      \"topic\": \"export-import relationship\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows etc. The source only contains statements about net exports, foreign income, exchange rate. Likely concepts: net exports, foreign income effect, real exchange rate effect. We can create facts rows.\n\nRows: need required fields per category. We can make facts: \"Net exports increase when foreign income increases.\" etc.\n\nCreate rows with availability SOURCE_MISSING? Actually text present, so SOURCE_SUPPORTED.\n\nProvide item label e.g., \"item1\". Provide refs.\n\nLet's output rows for facts.\n\nWe need at least one row per required field of each item we include. We'll include facts only.\n\nCreate three fact rows.\n\nQuiz: need four questions based on primary chunk. Provide.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794729265,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_dee443f41b",
+  "usage": {
+    "completion_tokens": 891,
+    "prompt_tokens": 2690,
+    "total_tokens": 3581,
+    "completion_time": 1.8384582470000002,
+    "completion_tokens_details": {
+      "reasoning_tokens": 143
+    },
+    "prompt_time": 0.290491653,
+    "prompt_tokens_details": null,
+    "queue_time": 0.331942184,
+    "total_time": 2.1289499
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f36fy4e0qs7dddbz7yqw9c",
+    "debug": null,
+    "seed": 1365301301,
+    "usage": null
+  }
+}

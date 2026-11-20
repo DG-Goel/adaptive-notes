@@ -1,0 +1,373 @@
+{
+  "visuals": [
+    {
+      "id": "visual-a73b905b1328902903a7",
+      "payload": {
+        "type": "concept_tree",
+        "title": "Exchange Rate Depreciation",
+        "nodes": [
+          {
+            "id": "d0",
+            "label": "Exchange Rate Depreciation"
+          },
+          {
+            "id": "d1",
+            "label": "Exchange rate is depreciating",
+            "parent": "d0"
+          },
+          {
+            "id": "d2",
+            "label": "Dollar is depreciating",
+            "parent": "d0"
+          },
+          {
+            "id": "d3",
+            "label": "Exchange rate will fall",
+            "parent": "d0"
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "note_id": "CON_0027",
+          "quote": "the exchange rate is depreciating"
+        },
+        {
+          "note_id": "CON_0028",
+          "quote": "the dollar is depreciating"
+        },
+        {
+          "note_id": "FCT_0073",
+          "quote": "the exchange rate will fall"
+        }
+      ],
+      "source_segment_ids": [
+        "CON_0027",
+        "CON_0028",
+        "FCT_0073"
+      ],
+      "spans": [
+        {
+          "source_id": "G00023",
+          "segment_id": 459,
+          "start": 1451.44,
+          "end": 1454.92,
+          "resolution": "speech_segment"
+        },
+        {
+          "source_id": "G00023",
+          "segment_id": 460,
+          "start": 1454.92,
+          "end": 1457.98,
+          "resolution": "speech_segment"
+        },
+        {
+          "source_id": "G00023",
+          "segment_id": 461,
+          "start": 1458.06,
+          "end": 1461.12,
+          "resolution": "speech_segment"
+        },
+        {
+          "source_id": "G00023",
+          "segment_id": 462,
+          "start": 1461.12,
+          "end": 1462.32,
+          "resolution": "speech_segment"
+        }
+      ],
+      "needs_timestamp_alignment": false,
+      "anchor_note_id": "FCT_0073",
+      "proposed_mode": "visual_only",
+      "mode": "text_and_visual",
+      "adaptation": null
+    }
+  ],
+  "issues": [
+    {
+      "note_ids": [
+        "CON_0026",
+        "EXP_0003",
+        "CON_0025"
+      ],
+      "reason": "Invalid or context-owned visual span"
+    },
+    {
+      "note_ids": [
+        "CON_0032",
+        "FCT_0074"
+      ],
+      "reason": "Unsupported visual label or value"
+    },
+    {
+      "note_ids": [
+        "CON_0024",
+        "CON_0026"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Interest Rate Differential and Expected Currency Depreciation",
+      "source_segment_ids": [
+        "CON_0026",
+        "EXP_0003",
+        "CON_0025"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0026",
+            "EXP_0003",
+            "CON_0025"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0026",
+              "exact_quote": "The anticipated fall in the value of a currency that is used to offset a higher interest rate on a bond denominated in that currency."
+            },
+            {
+              "note_id": "EXP_0003",
+              "exact_quote": "So if I am now telling you that one bond is paying a higher interest than the other one, I need to offset that somehow."
+            },
+            {
+              "note_id": "EXP_0003",
+              "exact_quote": "How do I offset it by expecting a depreciation of the bond that is denominated in the currency that is expected to depreciate?"
+            },
+            {
+              "note_id": "EXP_0003",
+              "exact_quote": "So what I need to do is compensate say, for the interest rate differential with an expected depreciation of the currency that's paying a higher interest rate."
+            },
+            {
+              "note_id": "CON_0025",
+              "exact_quote": "When one bond pays a higher interest rate than another, the higher return must be offset by an expected depreciation of the currency of the higher‑interest bond."
+            }
+          ],
+          "payload": {
+            "type": "concept_tree",
+            "title": "Interest Rate Differential → Expected Depreciation",
+            "nodes": [
+              {
+                "id": "n0",
+                "label": "Interest Rate Differential"
+              },
+              {
+                "id": "n1",
+                "label": "Higher‑interest bond",
+                "parent": "n0"
+              },
+              {
+                "id": "n2",
+                "label": "Expected depreciation of its currency",
+                "parent": "n0",
+                "description": "Used to offset the higher interest"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Exchange Rate Depreciation Variants",
+      "source_segment_ids": [
+        "CON_0027",
+        "CON_0028",
+        "FCT_0073"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0027",
+            "CON_0028",
+            "FCT_0073"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0027",
+              "exact_quote": "the exchange rate is depreciating"
+            },
+            {
+              "note_id": "CON_0028",
+              "exact_quote": "the dollar is depreciating"
+            },
+            {
+              "note_id": "FCT_0073",
+              "exact_quote": "the exchange rate will fall"
+            }
+          ],
+          "payload": {
+            "type": "concept_tree",
+            "title": "Exchange Rate Depreciation",
+            "nodes": [
+              {
+                "id": "d0",
+                "label": "Exchange Rate Depreciation"
+              },
+              {
+                "id": "d1",
+                "label": "Exchange rate is depreciating",
+                "parent": "d0"
+              },
+              {
+                "id": "d2",
+                "label": "Dollar is depreciating",
+                "parent": "d0"
+              },
+              {
+                "id": "d3",
+                "label": "Exchange rate will fall",
+                "parent": "d0"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Expected Exchange Rate as an Exogenous Parameter",
+      "source_segment_ids": [
+        "CON_0032",
+        "FCT_0074"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0032",
+            "FCT_0074"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0032",
+              "exact_quote": "The expected exchange rate is treated as an exogenous parameter that is not endogenized."
+            },
+            {
+              "note_id": "FCT_0074",
+              "exact_quote": "If we expect the dollar to appreciate in the future, it appreciates today. Moving the expected exchange rate up causes the current exchange rate to rise immediately. Fixing the expected exchange rate prevents it from becoming an endogenous variable."
+            }
+          ],
+          "payload": {
+            "type": "concept_tree",
+            "title": "Expected Exchange Rate Parameter",
+            "nodes": [
+              {
+                "id": "e0",
+                "label": "Expected Exchange Rate"
+              },
+              {
+                "id": "e1",
+                "label": "Exogenous (not endogenized)",
+                "parent": "e0"
+              },
+              {
+                "id": "e2",
+                "label": "If expected to appreciate → current rate rises",
+                "parent": "e0"
+              },
+              {
+                "id": "e3",
+                "label": "Fixing it prevents endogeneity",
+                "parent": "e0"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Effect of Currency Appreciation on Return Advantage",
+      "source_segment_ids": [
+        "CON_0024",
+        "CON_0026"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0024",
+            "CON_0026"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0024",
+              "exact_quote": "When the currency appreciates enough, the higher‑interest advantage disappears because the expected depreciation component is reduced."
+            },
+            {
+              "note_id": "CON_0026",
+              "exact_quote": "The anticipated fall in the value of a currency that is used to offset a higher interest rate on a bond denominated in that currency."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Appreciation Reduces Return Advantage",
+            "direction": "DOWN",
+            "nodes": [
+              {
+                "id": "f0",
+                "label": "Higher‑interest bond",
+                "kind": "start"
+              },
+              {
+                "id": "f1",
+                "label": "Expect depreciation of its currency",
+                "kind": "action"
+              },
+              {
+                "id": "f2",
+                "label": "Currency appreciates",
+                "kind": "decision"
+              },
+              {
+                "id": "f3",
+                "label": "Depreciation expectation reduced",
+                "kind": "action"
+              },
+              {
+                "id": "f4",
+                "label": "Higher‑interest advantage disappears",
+                "kind": "success"
+              }
+            ],
+            "edges": [
+              {
+                "from": "f0",
+                "to": "f1",
+                "label": ""
+              },
+              {
+                "from": "f1",
+                "to": "f2",
+                "label": ""
+              },
+              {
+                "from": "f2",
+                "to": "f3",
+                "label": "Yes (appreciates)"
+              },
+              {
+                "from": "f3",
+                "to": "f4",
+                "label": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

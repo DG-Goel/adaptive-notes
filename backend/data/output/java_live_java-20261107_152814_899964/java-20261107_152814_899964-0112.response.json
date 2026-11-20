@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-92bf2d93-6db2-4f3e-be24-19370bf23b70",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"parameter\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"Parameters are the placeholders defined in a method signature.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"argument\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"Arguments are the actual values passed to a method when it is called.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"immutable string\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"definition_text\": {\n        \"text\": \"In Java, strings cannot be changed after they are created; any method that appears to modify a string actually returns a new string object.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"exemplifies\": {\n        \"text\": \"replace method\",\n        \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\"]\n      },\n      \"example_text\": {\n        \"text\": \"replace('!', '*') changes all exclamation marks in the original string to asterisks, returning a new string while leaving the original unchanged.\",\n        \"refs\": [\"Q0001\", \"Q0002\", \"Q0003\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"indexOf method\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"example_text\": {\n        \"text\": \"indexOf('H') returns 0; indexOf('e') returns 1; indexOf('Skye') returns -1 when the substring is not present.\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"example_type\": null\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"trim method\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"example_text\": {\n        \"text\": \"trim() removes leading and trailing whitespace from a string, e.g., \\\"  hello  \\\" becomes \\\"hello\\\".\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"example_type\": null\n    }\n  ],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"The length of a username can be checked and an error shown if it exceeds a specified limit (e.g., 20 characters).\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"indexOf returns the index of the first occurrence of a character or substring, or -1 if it does not exist.\",\n        \"refs\": [\"Q0000\", \"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"replace takes two arguments: the target to be replaced and the replacement value.\",\n        \"refs\": [\"Q0001\", \"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"String methods such as replace, toLowerCase, toUpperCase, and trim return new string objects and do not modify the original string.\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"toLowerCase converts all characters in a string to lowercase.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"toUpperCase converts all characters in a string to uppercase.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"trim removes extra whitespace at the beginning and end of a string.\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to extract facts, definitions, etc. From excerpts about string methods in Java. Identify facts like length check, indexOf returns -1 if not found, replace returns new string, parameters vs arguments, immutability, toLowerCase, toUpperCase, trim removes whitespace.\n\nCreate facts entries. No definitions? Could define parameter vs argument as definition. Provide term and definition_text.\n\nAlso examples? Could include example of replace. Use excerpts as refs.\n\nProceed JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065518,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 1076,
+    "prompt_tokens": 3035,
+    "total_tokens": 4111,
+    "completion_time": 2.318673666,
+    "completion_tokens_details": {
+      "reasoning_tokens": 97
+    },
+    "prompt_time": 0.03661913,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "queue_time": 0.329309994,
+    "total_time": 2.355292796
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6va6gxhe12bjmnaa2e6qrpw",
+    "debug": null,
+    "seed": 1245784423,
+    "usage": null
+  }
+}

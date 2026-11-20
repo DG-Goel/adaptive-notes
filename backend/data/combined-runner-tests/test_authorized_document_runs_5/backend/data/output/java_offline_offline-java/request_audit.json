@@ -1,0 +1,225 @@
+{
+  "operations": [
+    {
+      "id": "offline-java-0000",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "b3de2745657ca22592d8ffb04b135e513febf6f688d6f5f1c459f3b33bdfb535",
+      "state": "failed",
+      "created": 1794601981.4315982,
+      "completed": 1794601981.4315982,
+      "validation": "failed"
+    },
+    {
+      "id": "offline-java-0001",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "ea6a808acc2cbe57fe131742766595ecc391ac902d513764c57cc03bb0f26e7c",
+      "state": "success",
+      "created": 1794602041.4315982,
+      "completed": 1794602041.4315982,
+      "validation": "passed_mechanical_only"
+    },
+    {
+      "id": "offline-java-0004",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "49b345641de0d02980a71461386bec81772f0e1526af1d479230480bf6f202fb",
+      "state": "success",
+      "created": 1794602041.4315982,
+      "completed": 1794602041.4315982,
+      "validation": "passed_mechanical_only"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "offline-java-0000",
+      "number": 1,
+      "created": 1794601981.4315982,
+      "dispatched": 1794601981.4315982,
+      "completed": 1794601981.4315982,
+      "input_reserved": 3099,
+      "output_reserved": 3000,
+      "input_actual": null,
+      "output_actual": null,
+      "reasoning": null,
+      "charged": 6099,
+      "http_status": 400,
+      "finish": null,
+      "duration": 0.0,
+      "category": "permanent_request"
+    },
+    {
+      "request_id": "offline-java-0001",
+      "number": 1,
+      "created": 1794602041.4315982,
+      "dispatched": 1794602041.4315982,
+      "completed": 1794602041.4315982,
+      "input_reserved": 2857,
+      "output_reserved": 3000,
+      "input_actual": 100,
+      "output_actual": 200,
+      "reasoning": 40,
+      "charged": 300,
+      "http_status": 200,
+      "finish": "stop",
+      "duration": 0.014999999999417923,
+      "category": "response"
+    },
+    {
+      "request_id": "offline-java-0004",
+      "number": 1,
+      "created": 1794602041.4315982,
+      "dispatched": 1794602041.4315982,
+      "completed": 1794602041.4315982,
+      "input_reserved": 2857,
+      "output_reserved": 3000,
+      "input_actual": 100,
+      "output_actual": 200,
+      "reasoning": 40,
+      "charged": 300,
+      "http_status": 200,
+      "finish": "stop",
+      "duration": 0.0,
+      "category": "response"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794601981.4315982,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"86d3876ef96ed681426ebfda65dc441da64cc10db79cfdba38c6db977c3345b7\", \"estimated_input\": 3099, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 2,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794601981.4315982,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 3,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794601981.4315982,
+      "event": "provider_error",
+      "details": "{\"category\": \"permanent_request\", \"error_code\": \"json_validate_failed\", \"message\": \"Groq API call failed: Error code: 400 - {'error': {'message': 'max completion tokens reached before generating a valid document', 'code': 'json_validate_failed'}}\", \"retry_after\": null, \"retry_after_header\": null, \"retryable\": false, \"status_code\": 400}"
+    },
+    {
+      "sequence": 4,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794601981.4315982,
+      "event": "provider_error_response_saved",
+      "details": "{\"sha256\": \"3bf38a9347144d154b3c01dc6ce4516c325bace3ef8fc7faf415751338d837a3\"}"
+    },
+    {
+      "sequence": 5,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794601981.4315982,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"failed\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"not_passed\"}"
+    },
+    {
+      "sequence": 6,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794601981.4315982,
+      "event": "operation_error",
+      "details": "{\"message\": \"Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': 'max completion tokens reached before generating a valid document', 'code': 'json_validate_failed'}}\", \"type\": \"GroqProviderError\"}"
+    },
+    {
+      "sequence": 7,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794602041.4315982,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"86d3876ef96ed681426ebfda65dc441da64cc10db79cfdba38c6db977c3345b7\", \"estimated_input\": 2857, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 8,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794602041.4315982,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 9,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794602041.4315982,
+      "event": "response_saved",
+      "details": "{\"sha256\": \"910a4d4bb1c2d72387c3819ccf8f239088ba55f2c38938ee257a92036c071445\"}"
+    },
+    {
+      "sequence": 10,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794602041.4315982,
+      "event": "quote_resolution",
+      "details": "{\"resolutions\": []}"
+    },
+    {
+      "sequence": 11,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794602041.4315982,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"success\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"passed_mechanical_only\"}"
+    },
+    {
+      "sequence": 12,
+      "request_id": "offline-java-0004",
+      "org": "org-1",
+      "created": 1794602041.4315982,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"86d3876ef96ed681426ebfda65dc441da64cc10db79cfdba38c6db977c3345b7\", \"estimated_input\": 2857, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 3000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 13,
+      "request_id": "offline-java-0004",
+      "org": "org-1",
+      "created": 1794602041.4315982,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 14,
+      "request_id": "offline-java-0004",
+      "org": "org-1",
+      "created": 1794602041.4315982,
+      "event": "response_saved",
+      "details": "{\"sha256\": \"e862e944b96ddeecc515ffb967c9ea3967d672a11671bbceb96047676d8d3b41\"}"
+    },
+    {
+      "sequence": 15,
+      "request_id": "offline-java-0004",
+      "org": "org-1",
+      "created": 1794602041.4315982,
+      "event": "quote_resolution",
+      "details": "{\"resolutions\": []}"
+    },
+    {
+      "sequence": 16,
+      "request_id": "offline-java-0004",
+      "org": "org-1",
+      "created": 1794602041.4315982,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"success\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"passed_mechanical_only\"}"
+    },
+    {
+      "sequence": 17,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794602041.4315982,
+      "event": "successful_checkpoint_recovery",
+      "details": "{\"items\": 1, \"redispatched\": false, \"response_sha256\": \"910a4d4bb1c2d72387c3819ccf8f239088ba55f2c38938ee257a92036c071445\"}"
+    }
+  ]
+}

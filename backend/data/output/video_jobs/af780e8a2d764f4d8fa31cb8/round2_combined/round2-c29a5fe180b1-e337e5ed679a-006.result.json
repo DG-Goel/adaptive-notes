@@ -1,0 +1,198 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "CON_0044",
+        "CON_0049",
+        "CON_0050",
+        "FCT_0092",
+        "FCT_0093"
+      ],
+      "reason": "Invalid or context-owned visual span"
+    },
+    {
+      "note_ids": [
+        "CON_0049",
+        "CON_0050",
+        "FCT_0092",
+        "FCT_0093"
+      ],
+      "reason": "Invalid or context-owned visual span"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Effects of Interest‑Rate Increase in an Open Economy",
+      "source_segment_ids": [
+        "CON_0044",
+        "CON_0049",
+        "CON_0050",
+        "FCT_0092",
+        "FCT_0093"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0044",
+            "CON_0049",
+            "CON_0050",
+            "FCT_0092",
+            "FCT_0093"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0044",
+              "exact_quote": "In an open economy, monetary policy affects aggregate demand through two channels: investment reduction and exchange‑rate appreciation."
+            },
+            {
+              "note_id": "CON_0049",
+              "exact_quote": "When I increase interest rate from here to there, then my exchange rate has to appreciate."
+            },
+            {
+              "note_id": "CON_0050",
+              "exact_quote": "So an expansionary domestic monetary policy will lead to a contraction in output, which is what we get out of monetary policy, but it will also lead to an appreciation of the currency."
+            },
+            {
+              "note_id": "FCT_0092",
+              "exact_quote": "Net exports decline."
+            },
+            {
+              "note_id": "FCT_0093",
+              "exact_quote": "The US moves to the left, causing output to fall."
+            }
+          ],
+          "payload": {
+            "type": "concept_tree",
+            "title": "Interest‑Rate Increase → Economic Outcomes",
+            "nodes": [
+              {
+                "id": "n0",
+                "label": "Interest‑Rate Increase"
+              },
+              {
+                "id": "n1",
+                "label": "Investment Reduction",
+                "parent": "n0"
+              },
+              {
+                "id": "n2",
+                "label": "Exchange‑Rate Appreciation",
+                "parent": "n0"
+              },
+              {
+                "id": "n3",
+                "label": "Currency Appreciation → Net‑Exports Decline",
+                "parent": "n2"
+              },
+              {
+                "id": "n4",
+                "label": "Output Contraction",
+                "parent": "n0"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Sequence of Events After an Interest‑Rate Rise",
+      "source_segment_ids": [
+        "CON_0049",
+        "CON_0050",
+        "FCT_0092",
+        "FCT_0093"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0049",
+            "CON_0050",
+            "FCT_0092",
+            "FCT_0093"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "CON_0049",
+              "exact_quote": "When I increase interest rate from here to there, then my exchange rate has to appreciate."
+            },
+            {
+              "note_id": "CON_0050",
+              "exact_quote": "So an expansionary domestic monetary policy will lead to a contraction in output, which is what we get out of monetary policy, but it will also lead to an appreciation of the currency."
+            },
+            {
+              "note_id": "FCT_0092",
+              "exact_quote": "Net exports decline."
+            },
+            {
+              "note_id": "FCT_0093",
+              "exact_quote": "The US moves to the left, causing output to fall."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "Impact Chain of an Interest‑Rate Increase",
+            "direction": "DOWN",
+            "nodes": [
+              {
+                "id": "s0",
+                "label": "Start: Interest‑Rate Rise",
+                "kind": "start"
+              },
+              {
+                "id": "a1",
+                "label": "Currency Appreciates",
+                "kind": "action"
+              },
+              {
+                "id": "a2",
+                "label": "Net Exports Decline",
+                "kind": "action"
+              },
+              {
+                "id": "a3",
+                "label": "Output Contracts",
+                "kind": "action"
+              },
+              {
+                "id": "s1",
+                "label": "End",
+                "kind": "success"
+              }
+            ],
+            "edges": [
+              {
+                "from": "s0",
+                "to": "a1",
+                "label": ""
+              },
+              {
+                "from": "a1",
+                "to": "a2",
+                "label": ""
+              },
+              {
+                "from": "a2",
+                "to": "a3",
+                "label": ""
+              },
+              {
+                "from": "a3",
+                "to": "s1",
+                "label": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

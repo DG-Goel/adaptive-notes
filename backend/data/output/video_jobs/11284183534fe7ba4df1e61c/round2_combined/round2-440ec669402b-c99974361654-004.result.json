@@ -1,0 +1,172 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "CON_0045",
+        "CON_0046"
+      ],
+      "reason": "Source note is unresolved"
+    },
+    {
+      "note_ids": [
+        "EXM_0054"
+      ],
+      "reason": "Source note is unresolved"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Comparison: Tool‑augmented chatbot vs. Agentic AI system",
+      "source_segment_ids": [
+        "CON_0045",
+        "CON_0046"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "CON_0045",
+            "CON_0046"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "CON_0045",
+              "exact_quote": "tool augmented chatbot ... this is called tool augmented chatbot"
+            },
+            {
+              "note_id": "CON_0046",
+              "exact_quote": "So this is an agentic AI system and this chatbot is your AI agent."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Tool‑augmented chatbot vs. Agentic AI system",
+            "headers": [
+              "Aspect",
+              "Tool‑augmented chatbot",
+              "Agentic AI system"
+            ],
+            "rows": [
+              [
+                "Goal specification",
+                "Simple task execution (no autonomous planning)",
+                "User provides high‑level goal; system plans autonomously"
+              ],
+              [
+                "Tool usage",
+                "Uses a single tool per request",
+                "Access to multiple tools, knowledge, memory"
+              ],
+              [
+                "Autonomy",
+                "Low – performs single step actions",
+                "High – multi‑step reasoning and decision‑making"
+              ],
+              [
+                "Planning",
+                "None or trivial",
+                "Goal‑oriented multi‑step planning"
+              ],
+              [
+                "Typical description",
+                "Chatbot that can call an API to retrieve info",
+                "AI agent that can orchestrate workflows"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Onboarding workflow for a new intern",
+      "source_segment_ids": [
+        "EXM_0054"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "EXM_0054"
+          ],
+          "needs_review": false,
+          "missing_information": null,
+          "evidence": [
+            {
+              "note_id": "EXM_0054",
+              "exact_quote": "create onboarding checklist, it will schedule welcoming meeting, it will send access request to IT department"
+            },
+            {
+              "note_id": "EXM_0054",
+              "exact_quote": "create intense profile in HR management system ... create IT helpdesk ticket to get a Wi‑Fi credentials email, Slack access"
+            },
+            {
+              "note_id": "EXM_0054",
+              "exact_quote": "order laptop and ID card"
+            },
+            {
+              "note_id": "EXM_0054",
+              "exact_quote": "onboard the new intern joining next Monday"
+            }
+          ],
+          "payload": {
+            "type": "sequence",
+            "title": "Onboarding steps for a new intern",
+            "participants": [
+              {
+                "id": "user",
+                "label": "User"
+              },
+              {
+                "id": "agent",
+                "label": "AI Agent"
+              }
+            ],
+            "events": [
+              {
+                "kind": "action",
+                "from": "user",
+                "to": "agent",
+                "text": "Request onboarding of new intern (next Monday)"
+              },
+              {
+                "kind": "action",
+                "from": "agent",
+                "to": "system",
+                "text": "Create onboarding checklist"
+              },
+              {
+                "kind": "action",
+                "from": "agent",
+                "to": "calendar",
+                "text": "Schedule welcoming meeting"
+              },
+              {
+                "kind": "action",
+                "from": "agent",
+                "to": "HRMS",
+                "text": "Create intern profile in HR management system"
+              },
+              {
+                "kind": "action",
+                "from": "agent",
+                "to": "IT helpdesk",
+                "text": "Send access request (Wi‑Fi, email, Slack)"
+              },
+              {
+                "kind": "action",
+                "from": "agent",
+                "to": "procurement",
+                "text": "Order laptop and ID card"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

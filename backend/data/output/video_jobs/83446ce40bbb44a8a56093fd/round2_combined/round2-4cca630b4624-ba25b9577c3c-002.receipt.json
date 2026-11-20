@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-f247f647-ed91-409d-9a9a-c6366960074c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Key Economic Relationships\",\n      \"source_segment_ids\": [\"CON_0020\", \"CON_0022\", \"REL_0006\", \"CON_0021\", \"FCT_0063\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0020\", \"CON_0022\", \"REL_0006\", \"CON_0021\", \"FCT_0063\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0020\",\n              \"quote\": \"The real exchange rate reflects how expensive domestic goods are relative to foreign goods.\"\n            },\n            {\n              \"note_id\": \"CON_0022\",\n              \"quote\": \"A rise in the real exchange rate makes domestic goods more expensive relative to foreign goods.\"\n            },\n            {\n              \"note_id\": \"REL_0006\",\n              \"quote\": \"nominal interest rate equals real interest rate\"\n            },\n            {\n              \"note_id\": \"CON_0021\",\n              \"quote\": \"equal to the real interest rate when inflation is zero\"\n            },\n            {\n              \"note_id\": \"FCT_0063\",\n              \"quote\": \"inflation is zero\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Key Economic Relationships\",\n            \"headers\": [\"Item\", \"Description\"],\n            \"rows\": [\n              [\n                \"Real exchange rate\",\n                \"The real exchange rate reflects how expensive domestic goods are relative to foreign goods.\"\n              ],\n              [\n                \"Rise in real exchange rate\",\n                \"A rise in the real exchange rate makes domestic goods more expensive relative to foreign goods.\"\n              ],\n              [\n                \"Nominal interest rate\",\n                \"nominal interest rate equals real interest rate\"\n              ],\n              [\n                \"Real interest rate (inflation zero)\",\n                \"equal to the real interest rate when inflation is zero\"\n              ],\n              [\n                \"Inflation\",\n                \"inflation is zero\"\n              ]\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visual units. Look for comparisons etc. We have relationships: real exchange rate affects exports, foreign income -> exports, exchange rate = real interest rate when inflation zero, nominal = real interest rate, etc. Could make a table comparing concepts: Real exchange rate effect, nominal vs real interest rate, etc.\n\nCreate one table visual: Items: Real exchange rate, Nominal interest rate, Real interest rate, Inflation. Properties: Relationship.\n\nBut need exact quotes for each cell. Use quotes from notes.\n\nWe have quotes:\n- \"The real exchange rate reflects how expensive domestic goods are relative to foreign goods.\"\n- \"A rise in the real exchange rate makes domestic goods more expensive relative to foreign goods.\"\n- \"real exchange rate causal net exports\" (not a full quote)\n- \"Net exports increase when foreign income rises.\"\n- \"Exports increase when foreign income rises.\" (from REL_0004 unresolved, skip)\n- \"nominal interest rate equals real interest rate\"\n- \"equal to the real interest rate when inflation is zero\"\n- \"inflation is zero\"\n\nWe can make table with Item, Description.\n\nRows:\n1. Real exchange rate – \"The real exchange rate reflects how expensive domestic goods are relative to foreign goods.\"\n2. Rise in real exchange rate – \"A rise in the real exchange rate makes domestic goods more expensive relative to foreign goods.\"\n3. Nominal interest rate – \"nominal interest rate equals real interest rate\"\n4. Real interest rate when inflation zero – \"equal to the real interest rate when inflation is zero\"\n5. Inflation – \"inflation is zero\"\n\nBut each row needs one exact evidence quote containing all its cells. Might be okay each row separate quote.\n\nCreate unit with source_segment_ids list of note IDs used.\n\nProvide visual payload type table.\n\nReturn JSON with units array.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794806792,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e1a78f200e",
+  "usage": {
+    "completion_tokens": 846,
+    "prompt_tokens": 2914,
+    "total_tokens": 3760,
+    "completion_time": 1.770663058,
+    "completion_tokens_details": {
+      "reasoning_tokens": 372
+    },
+    "prompt_time": 0.119330867,
+    "prompt_tokens_details": null,
+    "queue_time": 0.370953832,
+    "total_time": 1.889993925
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7hd4eg7eav8553j1v8efdfz",
+    "debug": null,
+    "seed": 1576470741,
+    "usage": null
+  }
+}

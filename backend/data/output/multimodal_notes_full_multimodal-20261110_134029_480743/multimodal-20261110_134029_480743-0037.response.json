@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-58c9cc1f-e040-4fac-82ce-108efd584ee2",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"In a supermarket we have various sections like vegetables, fruits, cleaning products, and so on.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"Each section contains related products.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"A class in Java contains related functions.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"Every Java program should have at least one class that contains the main function.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"The name of that class is \\\"main\\\".\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"A class is defined in Java by the keyword \\\"class\\\" followed by a descriptive name and a pair of curly braces.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0007\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"Methods are functions defined inside the curly braces of a class.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0008\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C8\",\n      \"text\": \"A method is a\",\n      \"basis\": \"explicit\",\n      \"availability\": \"INCOMPLETE_LITERAL\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0009\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\"C1\", \"C2\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"general\"]\n      }\n    },\n    {\n      \"fact_text\": [\"C3\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"general\"]\n      }\n    },\n    {\n      \"fact_text\": [\"C4\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"general\"]\n      }\n    },\n    {\n      \"fact_text\": [\"C5\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"general\"]\n      }\n    }\n  ],\n  \"explanations\": [\n    {\n      \"topic\": [\"Java class definition\"],\n      \"explanation_text\": [\"C6\"],\n      \"explanation_type\": {\n        \"is_null\": false,\n        \"value\": [\"definition\"]\n      }\n    },\n    {\n      \"topic\": [\"Java method definition\"],\n      \"explanation_text\": [\"C7\"],\n      \"explanation_type\": {\n        \"is_null\": false,\n        \"value\": [\"definition\"]\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"INCOMPLETE_LITERAL\",\n      \"source_ids\": [\"G00007\"],\n      \"reason\": \"Excerpt Q0009 is incomplete; the full definition of a method is not provided.\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify statements.\n\nClaims: sections contain related products (fact). class contains related functions (fact). every Java program should have at least one class that contains main function (fact). name of that class is main (fact). definition of class syntax (explanation). method definition incomplete \"So a method is a\". incomplete.\n\nCreate claims IDs C1..C5.\n\nAssign basis explicit, availability SOURCE_SUPPORTED (since primary). literal_kind verbal. instructional_role maybe explanation_of_mistake? No. Use null.\n\nProvide refs list.\n\nThen categories: facts, explanations maybe definitions? We have no definition term. Could put explanations with topic Java class.\n\nCreate facts entries linking claim IDs.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318439,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e1a78f200e",
+  "usage": {
+    "completion_tokens": 1144,
+    "prompt_tokens": 3075,
+    "total_tokens": 4219,
+    "completion_time": 2.411866999,
+    "completion_tokens_details": {
+      "reasoning_tokens": 152
+    },
+    "prompt_time": 0.258365246,
+    "prompt_tokens_details": null,
+    "queue_time": 0.393259341,
+    "total_time": 2.6702322450000002
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72vd1tped1tt1tfvmjc0s3k",
+    "debug": null,
+    "seed": 408812205,
+    "usage": null
+  }
+}

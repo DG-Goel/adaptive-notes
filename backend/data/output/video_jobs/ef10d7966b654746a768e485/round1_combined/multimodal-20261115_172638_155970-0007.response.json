@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-e765824e-2f32-431c-be51-3c1ffdbbbeab",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"C001\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"openness in capital account\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C001\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"openness in capital account refers to the ability to invest in domestic or foreign assets, such as bonds, without restrictions.\",\n      \"refs\": [\"Q0001\", \"Q0004\", \"Q0005\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C002\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"expected relative return\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C002\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"the expected relative return is the sense of which investment (domestic or foreign bond) will yield a higher return.\",\n      \"refs\": [\"Q0007\", \"Q0008\", \"Q0012\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C003\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"basic financial comparison\",\n      \"refs\": [\"Q0012\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"C003\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"the basic comparison focuses on the expected return rather than the current price of assets.\",\n      \"refs\": [\"Q0012\", \"Q0006\"],\n      \"basis\": \"direct_entailment\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What does \\\"openness in capital account\\\" mean in the context of the lecture?\",\n      \"answer\": \"The ability to invest in domestic or foreign assets such as bonds without restrictions.\",\n      \"distractors\": [\n        \"The requirement to keep all investments within the domestic market.\",\n        \"A policy that fixes exchange rates between currencies.\",\n        \"A measure of a country's total foreign exchange reserves.\"\n      ],\n      \"explanation\": \"The speaker explains that openness in capital account allows choosing between domestic and foreign bonds, indicating unrestricted investment across borders.\",\n      \"bloom_level\": \"Understand\",\n      \"topic\": \"openness in capital account\",\n      \"refs\": [\"Q0000\", \"Q0001\", \"Q0004\", \"Q0005\"]\n    },\n    {\n      \"question\": \"According to the lecture, what is needed to decide between a domestic bond and a foreign bond?\",\n      \"answer\": \"An expectation of the relative return of the two bonds.\",\n      \"distractors\": [\n        \"The current exchange rate alone.\",\n        \"The absolute price of each bond.\",\n        \"The total amount of foreign reserves held by the country.\"\n      ],\n      \"explanation\": \"The speaker states that you need a sense of the expected relative return, not just the exchange rate, to compare investments.\",\n      \"bloom_level\": \"Apply\",\n      \"topic\": \"expected relative return\",\n      \"refs\": [\"Q0007\", \"Q0008\", \"Q0006\"]\n    },\n    {\n      \"question\": \"In the basic financial comparison described, what factor is emphasized over the asset's price?\",\n      \"answer\": \"The expected return on the investment.\",\n      \"distractors\": [\n        \"The historical volatility of the asset.\",\n        \"The current market capitalization of the issuing company.\",\n        \"The nominal interest rate of the domestic currency.\"\n      ],\n      \"explanation\": \"The lecture notes that the basic comparison focuses on the return you expect to get, not the current price of the assets.\",\n      \"bloom_level\": \"Analyze\",\n      \"topic\": \"basic financial comparison\",\n      \"refs\": [\"Q0012\", \"Q0006\"]\n    },\n    {\n      \"question\": \"Which of the following statements reflects a risk consideration that the lecturer explicitly says will not be covered?\",\n      \"answer\": \"Risk considerations related to the investments.\",\n      \"distractors\": [\n        \"The calculation of expected returns.\",\n        \"The distinction between domestic and foreign bonds.\",\n        \"The role of exchange rates in investment decisions.\"\n      ],\n      \"explanation\": \"The speaker mentions that risk considerations exist but will not be discussed in the course.\",\n      \"bloom_level\": \"Remember\",\n      \"topic\": \"scope of lecture\",\n      \"refs\": [\"Q0011\"]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows etc. Identify concepts: openness in capital account, openness in financial market, domestic vs foreign bond, expected return. Create concepts items.\n\nWe'll produce rows for concepts: concept_name and content.\n\nItem label e.g., \"C001\". Use refs primary.\n\nRows: each claim text.\n\nWe'll also create quiz 4 questions.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794763616,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a655021f7d",
+  "usage": {
+    "completion_tokens": 1367,
+    "prompt_tokens": 2871,
+    "total_tokens": 4238,
+    "completion_time": 2.844195148,
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_time": 0.163111122,
+    "prompt_tokens_details": null,
+    "queue_time": 0.167632817,
+    "total_time": 3.00730627
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g3yrpheq3tka8hehyzfbg6",
+    "debug": null,
+    "seed": 392337066,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-1a44532b-14ca-4958-9ab9-a445b24f0904",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"reference type\",\n        \"refs\": [\"Q0026\", \"Q0027\", \"Q0028\", \"Q0029\", \"Q0031\"],\n        \"claims\": [\n          {\n            \"text\": \"A reference type stores a reference (address) to an object in memory rather than the actual value.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0026\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"Variables of a reference type hold the address of the object, so multiple variables can reference the same object.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0027\", \"Q0028\", \"Q0029\", \"Q0031\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"Reference types do not store the actual values; they store a reference (address) to an object somewhere in memory. Variables of a reference type hold this address, so different variables can point to the same object, and changes via one variable are visible through the others.\",\n        \"refs\": [\"Q0026\", \"Q0027\", \"Q0028\", \"Q0029\", \"Q0031\"],\n        \"claims\": [\n          {\n            \"text\": \"Reference types store a reference to an object rather than the object's value.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0026\"],\n            \"related_refs\": []\n          },\n          {\n            \"text\": \"Multiple variables can reference the same object, making them not independent.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"explanation_of_mistake\",\n            \"refs\": [\"Q0029\", \"Q0031\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract definitions only. Look for definition of reference type vs primitive. Provide items with term and definition_text. Identify primary excerpts that define. Likely Q0022, Q0023, Q0026, Q0027, Q0028. Create one definition term \"reference type\" with definition_text from those. Also maybe \"primitive type\". Provide claims. Use explicit basis. Provide refs list. No context. So items array with one object. Provide abstentions empty, excluded empty.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794325991,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a7bb72c24",
+  "usage": {
+    "completion_tokens": 634,
+    "prompt_tokens": 3543,
+    "total_tokens": 4177,
+    "completion_time": 1.333840273,
+    "completion_tokens_details": {
+      "reasoning_tokens": 101
+    },
+    "prompt_time": 0.152548365,
+    "prompt_tokens_details": null,
+    "queue_time": 0.164256233,
+    "total_time": 1.486388638
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m732kj6zejra9xvctyk9jnsh",
+    "debug": null,
+    "seed": 1154979455,
+    "usage": null
+  }
+}

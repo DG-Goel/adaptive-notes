@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-2d800339-4f88-4e73-9b7d-811747dbdc92",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"switch statement\",\n        \"refs\": [\n          \"Q0000\"\n        ],\n        \"claims\": [\n          {\n            \"text\": \"We use switch statements to execute different parts of code depending on the value of an expression, kind of similar to if statements.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\n              \"Q0000\"\n            ],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"We use switch statements to execute different parts of code depending on the value of an expression, kind of similar to if statements.\",\n        \"refs\": [\n          \"Q0000\"\n        ],\n        \"claims\": [\n          {\n            \"text\": \"We use switch statements to execute different parts of code depending on the value of an expression, kind of similar to if statements.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\n              \"Q0000\"\n            ],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need definitions extraction. Look for definition of terms. Probably \"switch statement\" definition. Extract primary teaching. Provide items with term and definition_text. Identify claims. The excerpts give definition: Q0000 defines switch statements. Also maybe term \"switch statement\". So one item.\n\nCreate claim: text from Q0000. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role prerequisite? It's definition so maybe null. Use null.\n\nProvide refs [\"Q0000\"]. related_refs empty.\n\nTerm object: term text \"switch statement\". claims maybe same? Could use same excerpt.\n\nDefinition_text same.\n\nProvide context null.\n\nAbstentions none, excluded none.\n\nReturn schema.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326605,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_86dc843b12",
+  "usage": {
+    "completion_tokens": 451,
+    "prompt_tokens": 3550,
+    "total_tokens": 4001,
+    "completion_time": 0.964909196,
+    "completion_tokens_details": {
+      "reasoning_tokens": 138
+    },
+    "prompt_time": 0.182657244,
+    "prompt_tokens_details": null,
+    "queue_time": 0.160369454,
+    "total_time": 1.14756644
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7336aasev6vepfed1ck0drj",
+    "debug": null,
+    "seed": 799817144,
+    "usage": null
+  }
+}

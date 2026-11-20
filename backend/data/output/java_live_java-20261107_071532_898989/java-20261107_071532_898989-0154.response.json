@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-9b08a505-2862-4743-abd9-33af4b0cc24e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"When using the postfix increment operator (x++) in an assignment, the original value of x is assigned first and then x is incremented.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"When using the prefix increment operator (++x) in an assignment, x is incremented first and then the new value is assigned.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The augmented assignment operator X += 2 is equivalent to X = X + 2.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"In Java, multiplication and division have higher precedence than addition and subtraction; thus 10 + 3 * 2 evaluates to 16.\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Parentheses override default precedence; (10 + 3) * 2 evaluates to 26.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Order of operations priority: parentheses first, then multiplication/division, then addition/subtraction.\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Implicit casting automatically converts a short value to an int when assigned to an int variable.\",\n        \"refs\": [\"Q0006\", \"Q0007\", \"Q0008\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Assigning a double literal to an int variable without an explicit cast causes a compilation error.\",\n        \"refs\": [\"Q0009\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"When an int is used in an expression with a double, the int is automatically cast to double.\",\n        \"refs\": [\"Q0010\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output JSON with empty arrays maybe facts etc. Extract educational items: facts about increment operators, augmented assignment, operator precedence, casting. Provide structures with refs.\n\nLet's create facts.\n\nFact1: Postfix increment: value assigned before increment. refs Q0000.\n\nFact2: Prefix increment: increment before assignment. refs Q0001.\n\nFact3: Augmented assignment X += 2 equivalent to X = X + 2. refs Q0002.\n\nFact4: Operator precedence: multiplication/division before addition/subtraction. Example 10 + 3 * 2 = 16. refs Q0003,Q0004.\n\nFact5: Parentheses change order; (10+3)*2 = 26. refs Q0004.\n\nFact6: Order of operations priority list: parentheses, then multiplication/division, then addition/subtraction. refs Q0005.\n\nFact7: Implicit casting: short to int automatically. refs Q0006,Q0007,Q0008.\n\nFact8: Casting error when assigning double to int without cast. refs Q0009.\n\nFact9: Automatic casting of int to double in expression. refs Q0010.\n\nNow produce JSON with facts array. No definitions, examples, etc. excluded empty.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036221,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_86dc843b12",
+  "usage": {
+    "completion_tokens": 828,
+    "prompt_tokens": 3674,
+    "total_tokens": 4502,
+    "completion_time": 1.748780317,
+    "completion_tokens_details": {
+      "reasoning_tokens": 253
+    },
+    "prompt_time": 0.149584581,
+    "prompt_tokens_details": null,
+    "queue_time": 0.166462473,
+    "total_time": 1.898364898
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6te8ftqeesaq74qcpqfcw8p",
+    "debug": null,
+    "seed": 1368876928,
+    "usage": null
+  }
+}

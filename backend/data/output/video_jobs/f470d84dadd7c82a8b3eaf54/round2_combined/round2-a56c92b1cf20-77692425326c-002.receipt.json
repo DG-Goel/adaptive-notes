@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-f7f09e7e-12cc-47c0-9c71-57cab73c9318",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Multiplier Process Flow\",\n      \"source_segment_ids\": [\"CON_0025\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0025\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0025\",\n              \"exact_quote\": \"Multiplier is the process where an increase in income raises consumption, which raises income again, creating a chain of effects.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Multiplier Process\",\n            \"direction\": \"left_to_right\",\n            \"nodes\": [\n              {\"id\": \"n1\", \"label\": \"Increase in Income\"},\n              {\"id\": \"n2\", \"label\": \"Higher Consumption\"},\n              {\"id\": \"n3\", \"label\": \"Further Income Increase\"},\n              {\"id\": \"n4\", \"label\": \"Continues Cycle\"}\n            ],\n            \"edges\": [\n              {\"from\": \"n1\", \"to\": \"n2\", \"label\": \"raises\"},\n              {\"from\": \"n2\", \"to\": \"n3\", \"label\": \"raises\"},\n              {\"from\": \"n3\", \"to\": \"n4\", \"label\": \"creates\"},\n              {\"from\": \"n4\", \"to\": \"n1\", \"label\": \"feeds back\"}\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Open vs Closed Economy Multiplier Comparison\",\n      \"source_segment_ids\": [\"CON_0033\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0033\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0033\",\n              \"exact_quote\": \"In an open economy the output multiplier is smaller than in a closed economy because part of the additional demand leaks to foreign goods.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Multiplier Size by Economy Type\",\n            \"headers\": [\"Economy Type\", \"Multiplier Size\"],\n            \"rows\": [\n              [\"Closed Economy\", \"Larger\"],\n              [\"Open Economy\", \"Smaller\"]\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Trade Balance Definition\",\n      \"source_segment_ids\": [\"CON_0048\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0048\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0048\",\n              \"exact_quote\": \"The trade balance is the difference between the demand for domestic goods (DD curve) and the domestic demand for goods (ZZ curve), i.e., net exports equal ZZ minus DD.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"architecture\",\n            \"title\": \"Trade Balance Components\",\n            \"direction\": \"vertical\",\n            \"components\": [\n              {\"id\": \"c1\", \"label\": \"DD Curve (Demand for Domestic Goods)\"},\n              {\"id\": \"c2\", \"label\": \"ZZ Curve (Domestic Demand for Goods)\"},\n              {\"id\": \"c3\", \"label\": \"Net Exports = ZZ - DD\"}\n            ],\n            \"connections\": [\n              {\"from\": \"c1\", \"to\": \"c3\", \"label\": \"subtract\"},\n              {\"from\": \"c2\", \"to\": \"c3\", \"label\": \"subtract\"}\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Effect of Currency Depreciation on Net Exports\",\n      \"source_segment_ids\": [\"CON_0039\", \"FCT_0053\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"CON_0039\", \"FCT_0053\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"CON_0039\",\n              \"exact_quote\": \"When the exchange rate is depreciated, the net export function shifts upward.\"\n            },\n            {\n              \"note_id\": \"FCT_0053\",\n              \"exact_quote\": \"Depreciating the exchange rate moves the net export function up.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"flowchart\",\n            \"title\": \"Depreciation → Net Export Shift\",\n            \"direction\": \"top_to_bottom\",\n            \"nodes\": [\n              {\"id\": \"d1\", \"label\": \"Currency Depreciation\"},\n              {\"id\": \"d2\", \"label\": \"Net Export Function\"},\n              {\"id\": \"d3\", \"label\": \"Upward Shift\"},\n              {\"id\": \"d4\", \"label\": \"Higher Net Exports\"}\n            ],\n            \"edges\": [\n              {\"from\": \"d1\", \"to\": \"d2\", \"label\": \"affects\"},\n              {\"from\": \"d2\", \"to\": \"d3\", \"label\": \"moves\"},\n              {\"from\": \"d3\", \"to\": \"d4\", \"label\": \"results in\"}\n            ]\n          }\n        }\n      ]\n    },\n    {\n      \"title\": \"Sequence of Policy Effects: Depreciation and Government Spending\",\n      \"source_segment_ids\": [\"FCT_0006\"],\n      \"mode\": \"visual_only\",\n      \"remaining_text\": \"\",\n      \"visuals\": [\n        {\n          \"source_segment_ids\": [\"FCT_0006\"],\n          \"needs_review\": false,\n          \"missing_information\": null,\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0006\",\n              \"exact_quote\": \"A typical policy package pairs currency depreciation with reduced government expenditure.\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"sequence\",\n            \"title\": \"Policy Package Timeline\",\n            \"participants\": [\n              {\"id\": \"p1\", \"label\": \"Policy Makers\"},\n              {\"id\": \"p2\", \"label\": \"Economy\"}\n            ],\n            \"events\": [\n              {\n                \"kind\": \"action\",\n                \"from\": \"p1\",\n                \"to\": \"p2\",\n                \"text\": \"Depreciate currency\"\n              },\n              {\n                \"kind\": \"action\",\n                \"from\": \"p1\",\n                \"to\": \"p2\",\n                \"text\": \"Reduce government expenditure\"\n              }\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce units for visual candidates only. Identify notes that are visual candidates: those that describe comparisons, flows, structures. Likely multiplier chain, open economy multiplier smaller, trade balance equation, net export shift, etc. We create units with visuals.\n\nLet's pick: CON_0025 multiplier chain -> flowchart. CON_0033 open economy multiplier smaller -> comparison table. CON_0049? not present. CON_0039 exchange rate depreciation shifts net export function -> flowchart? maybe sequence. Also FCT_0053 similar.\n\nCreate units.\n\nProvide source_segment_ids list.\n\nInclude evidence with note_id and exact quote.\n\nWe'll output JSON with units array.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794657365,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4140daa9c2",
+  "usage": {
+    "completion_tokens": 1594,
+    "prompt_tokens": 2519,
+    "total_tokens": 4113,
+    "completion_time": 3.362201391,
+    "completion_tokens_details": {
+      "reasoning_tokens": 137
+    },
+    "prompt_time": 0.116638247,
+    "prompt_tokens_details": null,
+    "queue_time": 0.245792552,
+    "total_time": 3.478839638
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cym86peqjvssnqkkg198by",
+    "debug": null,
+    "seed": 964454133,
+    "usage": null
+  }
+}

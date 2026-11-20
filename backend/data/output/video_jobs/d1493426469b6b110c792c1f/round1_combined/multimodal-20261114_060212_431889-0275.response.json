@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-2fd10fe6-3ade-4b70-a7ef-06d68cb337be",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"concepts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No educational concepts presented in the provided excerpts.\",\n      \"source_ids\": [\"G00123\", \"G00124\"]\n    },\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No definitions are present in the provided excerpts.\",\n      \"source_ids\": [\"G00123\", \"G00124\"]\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No explanatory content is present in the provided excerpts.\",\n      \"source_ids\": [\"G00123\", \"G00124\"]\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No examples are present in the provided excerpts.\",\n      \"source_ids\": [\"G00123\", \"G00124\"]\n    },\n    {\n      \"category\": \"facts\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No factual statements are present in the provided excerpts.\",\n      \"source_ids\": [\"G00123\", \"G00124\"]\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No formulas are present in the provided excerpts.\",\n      \"source_ids\": [\"G00123\", \"G00124\"]\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No procedural content is present in the provided excerpts.\",\n      \"source_ids\": [\"G00123\", \"G00124\"]\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"reason\": \"No relational statements are present in the provided excerpts.\",\n      \"source_ids\": [\"G00123\", \"G00124\"]\n    }\n  ],\n  \"excluded\": [\n    {\n      \"ref\": \"Q0012\",\n      \"reason\": \"promotion\"\n    },\n    {\n      \"ref\": \"Q0013\",\n      \"reason\": \"promotion\"\n    },\n    {\n      \"ref\": \"Q0014\",\n      \"reason\": \"promotion\"\n    },\n    {\n      \"ref\": \"Q0015\",\n      \"reason\": \"promotion\"\n    },\n    {\n      \"ref\": \"Q0016\",\n      \"reason\": \"promotion\"\n    },\n    {\n      \"ref\": \"Q0017\",\n      \"reason\": \"promotion\"\n    },\n    {\n      \"ref\": \"Q0018\",\n      \"reason\": \"promotion\"\n    },\n    {\n      \"ref\": \"Q0019\",\n      \"reason\": \"promotion\"\n    },\n    {\n      \"ref\": \"Q0020\",\n      \"reason\": \"promotion\"\n    },\n    {\n      \"ref\": \"Q0010\",\n      \"reason\": \"greeting\"\n    },\n    {\n      \"ref\": \"Q0011\",\n      \"reason\": \"greeting\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows but there is no educational content except promotional. Likely abstentions. Provide abstention for each category with reason noneducational. Use source_ids. Provide excluded entries for promotional refs. Let's list excluded for each primary ref that is promotional/greeting. Identify: Q0012- Q0020 are promo. Also Q0010 \"Are you ready?\" greeting. Q0011 \"Let's jump in\" maybe greeting. Provide excluded entries. No rows.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636748,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_64b2f1c926",
+  "usage": {
+    "completion_tokens": 764,
+    "prompt_tokens": 2390,
+    "total_tokens": 3154,
+    "completion_time": 1.604849704,
+    "completion_tokens_details": {
+      "reasoning_tokens": 97
+    },
+    "prompt_time": 0.106732458,
+    "prompt_tokens_details": null,
+    "queue_time": 0.32090892,
+    "total_time": 1.711582162
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7caz3qeesz9gw1h6vw7mrek",
+    "debug": null,
+    "seed": 159686552,
+    "usage": null
+  }
+}

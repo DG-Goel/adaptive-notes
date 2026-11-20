@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-2c8b97cc-9088-43a3-87ff-abb19a9c8b5e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"concept_name\": {\n        \"text\": \"Unsupervised learning\",\n        \"refs\": [\"Q0004\"],\n        \"claims\": [\n          {\n            \"text\": \"this type of problem-solving is called unsupervised learning because you are not supervising your kid you are not saying hey do this and that they are just using their brain they are noticing some patterns and they categorize them as per that patterns unsupervised machine learning\",\n            \"refs\": [\"Q0004\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"aliases\": null,\n      \"content\": {\n        \"text\": \"Unsupervised learning involves categorizing data without predefined labels, relying on patterns observed in the data.\",\n        \"refs\": [\"Q0002\", \"Q0003\"],\n        \"claims\": [\n          {\n            \"text\": \"You are not supervising your kid you are not saying hey do this and that they are just using their brain they are noticing some patterns and they categorize them as per that patterns\",\n            \"refs\": [\"Q0002\", \"Q0003\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"related_refs\": []\n          }\n        ]\n      }\n    },\n    {\n      \"concept_name\": {\n        \"text\": \"Clustering\",\n        \"refs\": [\"Q0007\"],\n        \"claims\": [\n          {\n            \"text\": \"So clustering is a technique\",\n            \"refs\": [\"Q0007\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"aliases\": null,\n      \"content\": {\n        \"text\": \"Clustering is a technique used in unsupervised learning to group similar items together.\",\n        \"refs\": [\"Q0006\"],\n        \"claims\": [\n          {\n            \"text\": \"In my own company we can use this concept of clustering\",\n            \"refs\": [\"Q0006\"],\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"related_refs\": []\n          }\n        ]\n      }\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output concepts. Identify teaching: unsupervised learning, clustering. Create items.\n\nConcept 1: Unsupervised learning definition. Use quotes Q0004. Claim text: \"this type of problem-solving is called unsupervised learning because you are not supervising your kid...\" Provide claim.\n\nConcept 2: Clustering as technique. Use Q0007 and Q0006. Provide claim.\n\nAlso maybe concept of categorizing without labels. Use Q0002, Q0003.\n\nCreate items with concept_name and maybe aliases.\n\nWe'll produce items array with three concepts.\n\nProvide refs list primary refs.\n\nAll claims basis explicit, availability SOURCE_SUPPORTED? Since primary source provided. Use SOURCE_SUPPORTED.\n\nLiteral_kind verbal. Instructional_role explanation_of_mistake? Actually explanation. Use explanation_of_mistake? Better \"prerequisite\" or \"explanation_of_mistake\"? It's explanation. Use \"prerequisite\"? Might be \"explanation_of_mistake\" not. Use null? Choose null.\n\nWe'll output abstentions empty, excluded empty.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794597366,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_05e76be18c",
+  "usage": {
+    "completion_tokens": 774,
+    "prompt_tokens": 2536,
+    "total_tokens": 3310,
+    "completion_time": 1.652155419,
+    "completion_tokens_details": {
+      "reasoning_tokens": 216
+    },
+    "prompt_time": 0.154874509,
+    "prompt_tokens_details": null,
+    "queue_time": 0.054811159,
+    "total_time": 1.807029928
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7b5d8hwerjvytkaptt9k1bc",
+    "debug": null,
+    "seed": 26751667,
+    "usage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-b4d30873-a153-4145-bc9c-ca349d204be3",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"term\": {\n        \"text\": \"y loops\",\n        \"refs\": [\"Q0006\"],\n        \"claims\": [\n          {\n            \"text\": \"y loops are very similar to for loops in terms of their functionality, but they're different in terms of syntax.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0006\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"definition_text\": {\n        \"text\": \"y loops are very similar to for loops in terms of their functionality, but they're different in terms of syntax.\",\n        \"refs\": [\"Q0006\"],\n        \"claims\": [\n          {\n            \"text\": \"y loops are very similar to for loops in terms of their functionality, but they're different in terms of syntax.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0006\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"context\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need extract definitions only. Look for definition teaching. The excerpts talk about loops, while loops, for loops. No explicit definition? Maybe \"y loops are very similar to for loops in terms of their functionality, but they're different in terms of syntax.\" That's a definition of y loops. Also maybe definition of while loop condition. But we extract definitions. So one definition: term \"y loops\" definition text. Also maybe term \"for loop\" definition? Not explicit. We'll create item with term and definition_text.\n\nTerm: \"y loops\". Definition: \"y loops are very similar to for loops in terms of their functionality, but they're different in terms of syntax.\" Source Q0006. Claim basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role prerequisite? It's definition so maybe null. Use null.\n\nAlso maybe definition of while loop: \"While i greater than zero, then we're going to execute the code inside this block.\" That's description not definition. Might skip.\n\nThus items array with one item. No abstentions. No excluded.\n\nConstruct according schema.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794326681,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_86dc843b12",
+  "usage": {
+    "completion_tokens": 505,
+    "prompt_tokens": 3187,
+    "total_tokens": 3692,
+    "completion_time": 1.075392909,
+    "completion_tokens_details": {
+      "reasoning_tokens": 217
+    },
+    "prompt_time": 0.206793385,
+    "prompt_tokens_details": null,
+    "queue_time": 0.33161601,
+    "total_time": 1.282186294
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7338mdae5dvn9z84ymsgjyb",
+    "debug": null,
+    "seed": 253309649,
+    "usage": null
+  }
+}

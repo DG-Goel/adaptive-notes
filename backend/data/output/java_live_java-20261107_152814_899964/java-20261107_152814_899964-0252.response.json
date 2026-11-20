@@ -1,0 +1,47 @@
+{
+  "id": "chatcmpl-4ae298f7-159f-45b8-b30b-1e6ad7e11b14",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"examples\": [],\n  \"explanations\": [\n    {\n      \"topic\": {\n        \"text\": \"Variable scope in Java code blocks\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"A variable declared inside a code block is only available within that block; it cannot be accessed outside the block where it was declared.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"Declaration location restriction\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Variables can only be declared inside code blocks; declaring a variable outside a block results in a compilation error.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"explanation_type\": null\n    },\n    {\n      \"topic\": {\n        \"text\": \"Simplifying boolean assignment\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"explanation_text\": {\n        \"text\": \"Assign the boolean variable directly with the expression (income > $100,000); the expression evaluates to true or false, eliminating the need for an explicit if‑else statement.\",\n        \"refs\": [\"Q0003\", \"Q0004\"]\n      },\n      \"explanation_type\": null\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"If income is greater than $100,000, set hasHighIncome to true; otherwise set it to false.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Adding curly braces creates a new code block for variable declaration.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Wrapping a boolean expression in parentheses improves readability but is not required for correctness.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays except extracted items. The excerpts discuss boolean variable, if statements, scope, ternary operator. Extract facts, explanations, procedures maybe. Let's create facts: \"Declaration not allowed here: variables can only be declared inside code blocks.\" etc. Use excerpts refs.\n\nWe'll produce facts with fact_type null. Also explanation about scope. Also procedure for using ternary operator? Not fully described. Might just include facts and explanations.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065778,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c868cf1eaa",
+  "usage": {
+    "completion_tokens": 593,
+    "prompt_tokens": 3039,
+    "total_tokens": 3632,
+    "completion_time": 1.403092387,
+    "completion_tokens_details": {
+      "reasoning_tokens": 96
+    },
+    "prompt_time": 0.036859677,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "queue_time": 0.378881105,
+    "total_time": 1.4399520639999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6vaefvze0ytjmhgqfgnbb9a",
+    "debug": null,
+    "seed": 1105012449,
+    "usage": null
+  }
+}

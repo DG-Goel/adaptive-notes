@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-ea81297f-f939-4ceb-8e9a-67f240bf84ef",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"units\": [\n    {\n      \"title\": \"Factors Influencing Net Exports\",\n      \"source_segment_ids\": [\"FCT_0084\", \"FCT_0085\"],\n      \"mode\": \"text_and_visual\",\n      \"remaining_text\": null,\n      \"visuals\": [\n        {\n          \"type\": \"table\",\n          \"source_segment_ids\": [\"FCT_0084\", \"FCT_0085\"],\n          \"needs_review\": false,\n          \"missing_information\": [],\n          \"evidence\": [\n            {\n              \"note_id\": \"FCT_0084\",\n              \"quote\": \"net exports will increase if you increase y*\"\n            },\n            {\n              \"note_id\": \"FCT_0085\",\n              \"quote\": \"net exports will decrease if domestic output goes up because inputs increase\"\n            }\n          ],\n          \"payload\": {\n            \"type\": \"table\",\n            \"title\": \"Factors Influencing Net Exports\",\n            \"headers\": [\"Condition\", \"Effect on Net Exports\"],\n            \"rows\": [\n              [\"increase y*\", \"increase\"],\n              [\"domestic output goes up because inputs increase\", \"decrease\"]\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce visual units. Look for comparisons etc. Possible table: trade deficit vs surplus? We have statements: \"net exports will increase if you increase y*\" and \"net exports will decrease if domestic output goes up because inputs increase\". Could table compare factors affecting net exports. Use rows with evidence quotes.\n\nCreate one table visual.\n\nSource segment IDs: need earliest note ID in primary chunk that supports. Use e.g., FCT_0084 and FCT_0085.\n\nProvide evidence entries.\n\nReturn JSON with units array containing one unit with mode text_and_visual? Since we must not emit text_only, but remaining_text null. mode text_and_visual? Probably text_and_visual.\n\nProvide payload type table.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794767158,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_803c0ba83d",
+  "usage": {
+    "completion_tokens": 413,
+    "prompt_tokens": 2710,
+    "total_tokens": 3123,
+    "completion_time": 0.855872598,
+    "completion_tokens_details": {
+      "reasoning_tokens": 148
+    },
+    "prompt_time": 0.128763694,
+    "prompt_tokens_details": null,
+    "queue_time": 0.369225094,
+    "total_time": 0.984636292
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7g7ay8ye3g85ch8d3xgybds",
+    "debug": null,
+    "seed": 544140160,
+    "usage": null
+  }
+}

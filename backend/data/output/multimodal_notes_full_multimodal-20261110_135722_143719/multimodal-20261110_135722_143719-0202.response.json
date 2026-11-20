@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-2c9d4020-cbe8-4ab2-8673-483c7ef83660",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"items\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Java will not evaluate the rest of this expression, it simply returns true.\",\n        \"refs\": [\"Q0000\"],\n        \"claims\": [\n          {\n            \"text\": \"Java will not evaluate the rest of this expression, it simply returns true.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0000\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"If a boolean variable is false, Java continues evaluating the expression hoping that the next boolean value or expression is true.\",\n        \"refs\": [\"Q0001\"],\n        \"claims\": [\n          {\n            \"text\": \"If a boolean variable is false, Java continues evaluating the expression hoping that the next boolean value or expression is true.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0001\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The rule for loan eligibility is: a person should either have high income or good credit, and they should not have any criminal records.\",\n        \"refs\": [\"Q0002\", \"Q0005\", \"Q0006\", \"Q0009\"],\n        \"claims\": [\n          {\n            \"text\": \"A person should either have high income or good credit, and they should not have any criminal records to be eligible for a loan.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": \"prerequisite\",\n            \"refs\": [\"Q0002\", \"Q0005\", \"Q0006\", \"Q0009\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The NOT operator is used to reverse a boolean value.\",\n        \"refs\": [\"Q0009\"],\n        \"claims\": [\n          {\n            \"text\": \"The NOT operator is used to reverse a boolean value.\",\n            \"basis\": \"explicit\",\n            \"availability\": \"SOURCE_SUPPORTED\",\n            \"literal_kind\": \"verbal\",\n            \"instructional_role\": null,\n            \"refs\": [\"Q0009\"],\n            \"related_refs\": []\n          }\n        ]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output facts from primary excerpts. Identify statements: Q0000: \"Java will not evaluate the rest of this expression, it simply returns true.\" That's about short-circuit OR? Actually says will not evaluate rest, returns true. Claim.\n\nQ0001+Q0002 together: description of OR and NOT logic. Probably separate facts: if variable false, java continues evaluating... etc. We'll create items.\n\nWe need claims with fields. basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role explanation_of_mistake? Actually it's explanation. Use explanation_of_mistake? No mistake. Use explanation_of_mistake? maybe correct_demonstration? It's teaching. Use explanation_of_mistake? Not. Use null.\n\nWe'll produce items list.\n\nAlso abstentions none. excluded none.\n\nLet's craft.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794320686,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_ca5edfaab2",
+  "usage": {
+    "completion_tokens": 777,
+    "prompt_tokens": 3701,
+    "total_tokens": 4478,
+    "completion_time": 1.652094269,
+    "completion_tokens_details": {
+      "reasoning_tokens": 169
+    },
+    "prompt_time": 0.193520862,
+    "prompt_tokens_details": null,
+    "queue_time": 0.373642552,
+    "total_time": 1.845615131
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72xhn04emwbr461nwf3kg8r",
+    "debug": null,
+    "seed": 1972048026,
+    "usage": null
+  }
+}

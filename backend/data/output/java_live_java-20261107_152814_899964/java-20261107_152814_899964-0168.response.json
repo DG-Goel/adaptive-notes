@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-a3a123c6-f0bd-4947-9a8a-7fede8254db7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"Math class\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"The Math class is defined in the java.lang package, is always available without explicit import, and provides static methods for performing mathematical operations.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [\n    {\n      \"exemplifies\": {\n        \"text\": \"round method with float\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"example_type\": null,\n      \"example_text\": {\n        \"text\": \"Passing 1.1 as a float to Math.round returns 1 (stored in an int).\",\n        \"refs\": [\"Q0002\"]\n      }\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"ceil method\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"example_type\": null,\n      \"example_text\": {\n        \"text\": \"Math.ceil(1.1) returns 2 (a double), which must be cast to int to store in an integer variable.\",\n        \"refs\": [\"Q0002\"]\n      }\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"floor method\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"example_type\": null,\n      \"example_text\": {\n        \"text\": \"Math.floor(1.1) returns 1 (the largest integer less than or equal to the number).\",\n        \"refs\": [\"Q0003\"]\n      }\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"max method with integers\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"example_type\": null,\n      \"example_text\": {\n        \"text\": \"Math.max(1, 2) returns 2, the greater of the two integer arguments.\",\n        \"refs\": [\"Q0003\"]\n      }\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"min method with integers\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_type\": null,\n      \"example_text\": {\n        \"text\": \"Math.min(1, 2) returns 1, the smaller of the two integer arguments.\",\n        \"refs\": [\"Q0004\"]\n      }\n    },\n    {\n      \"exemplifies\": {\n        \"text\": \"random method\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"example_type\": null,\n      \"example_text\": {\n        \"text\": \"Math.random() returns a double between 0.0 (inclusive) and 1.0 (exclusive); multiplying by 100 yields a random number between 0 and 100.\",\n        \"refs\": [\"Q0004\", \"Q0005\"]\n      }\n    }\n  ],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"Math.round is overloaded: one version takes a float and returns an int; another version takes a double and returns a long.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Math.ceil returns the smallest integer greater than or equal to the argument (as a double).\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Math.floor returns the largest integer less than or equal to the argument (as a double).\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Math.max returns the greater of two values and is overloaded for int, long, float, and double.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Math.min returns the smaller of two values and is overloaded for int, long, float, and double.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Math.random returns a double value uniformly distributed between 0.0 (inclusive) and 1.0 (exclusive).\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts about Java Math class methods: round, ceil, floor, max, min, random. Extract facts, definitions, examples maybe. Let's create facts: round method overloads for float returns int, for double returns long. Ceil returns smallest integer >= number (returns double). Floor returns largest integer <= number. Max returns greater of two values, overloaded for int, long, float, double. Min similar. Random returns double between 0 and 1. Also example: passing 1.1 as float to round gives 1. Example: ceiling of 1.1 is 2. Floor of 1.1 is 1. Provide formulas? Not needed.\n\nCreate facts entries with text and refs. Use appropriate refs covering each claim. Might need multiple refs per fact.\n\nAlso definitions: maybe define Math class: \"Math class is defined in java.lang package and provides static methods for mathematical operations.\" Use Q0001.\n\nExamples: example of round, ceil, floor, max, min, random. Provide example_text and exemplifies (maybe method). Use refs.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065594,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_90620edd96",
+  "usage": {
+    "completion_tokens": 1229,
+    "prompt_tokens": 3047,
+    "total_tokens": 4276,
+    "completion_time": 2.56262663,
+    "completion_tokens_details": {
+      "reasoning_tokens": 231
+    },
+    "prompt_time": 0.1640387,
+    "prompt_tokens_details": null,
+    "queue_time": 0.37560494,
+    "total_time": 2.72666533
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6va8tvfex9bk7y44097ah6t",
+    "debug": null,
+    "seed": 1120047455,
+    "usage": null
+  }
+}

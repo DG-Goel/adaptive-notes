@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-026e7f15-e029-4074-bd2f-65c12d5fc78a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [\n    {\n      \"term\": {\n        \"text\": \"Class\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a container for one or more related functions\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"Method\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"definition_text\": {\n        \"text\": \"a function that is part of a class\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"Pascal naming convention\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"definition_text\": {\n        \"text\": \"the first letter of every word should be uppercase in class names\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"context\": null\n    },\n    {\n      \"term\": {\n        \"text\": \"Camel naming convention\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"definition_text\": {\n        \"text\": \"the first letter of every word should be lowercase in method names\",\n        \"refs\": [\"Q0005\"]\n      },\n      \"context\": null\n    }\n  ],\n  \"examples\": [],\n  \"explanations\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"In Java, the left brace is placed on the same line where the function is defined.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Every Java program should have at least one function called main, which is the entry point.\",\n        \"refs\": [\"Q0000\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Functions in Java must belong to a class.\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Every Java program should have at least one class that contains the main function.\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"Java classes and methods have access modifiers such as public and private.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"The public access modifier is most commonly used for classes and methods.\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"A minimal Java program consists of a main class and a main method inside that class.\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with extracted items. From excerpts we can get facts, definitions, explanations. Let's extract:\n\nFact: In Java, left brace is placed on same line as function definition. (from Q0000)\n\nFact: Every Java program should have at least one function called main, entry point. (Q0000)\n\nFact: Functions must belong to a class. (Q0001)\n\nDefinition: Class is a container for one or more related functions. (Q0001)\n\nFact: Every Java program should have at least one class that contains the main function. (Q0002)\n\nDefinition: Method is a function that is part of a class. (Q0002)\n\nFact: In Java, classes and methods have access modifiers like public, private. (Q0003)\n\nFact: Public is most commonly used access modifier. (Q0003)\n\nFact: Basic structure of Java program includes a main class and main method. (Q0004)\n\nDefinition: Pascal naming convention: first letter of each word uppercase for class names. (Q0004)\n\nDefinition: Camel naming convention: first letter of each word lowercase for method names. (Q0005)\n\nNow format.\n\nWe need arrays for each type. Provide refs.\n\nLet's craft JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794065320,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 930,
+    "prompt_tokens": 3024,
+    "total_tokens": 3954,
+    "completion_time": 1.960224994,
+    "completion_tokens_details": {
+      "reasoning_tokens": 255
+    },
+    "prompt_time": 0.132783595,
+    "prompt_tokens_details": null,
+    "queue_time": 0.325157091,
+    "total_time": 2.093008589
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6va0fxrej0r1peeqg8wqzd4",
+    "debug": null,
+    "seed": 546536805,
+    "usage": null
+  }
+}

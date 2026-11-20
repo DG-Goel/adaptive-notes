@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-8073013e-6710-4b17-922e-e5e6657ee83f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"assumption\",\n      \"refs\": [\"Q0000\", \"Q0002\", \"Q0008\", \"Q0009\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A stated premise that is taken to be true for the purpose of analysis, e.g., \\\"we're going to assume that this second effect is not as strong as the volume effect\\\" and \\\"our assumption will be that net exports decrease when the currency appreciates\\\".\",\n      \"refs\": [\"Q0000\", \"Q0003\", \"Q0004\", \"Q0005\", \"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"net exports\",\n      \"refs\": [\"Q0003\", \"Q0004\", \"Q0028\", \"Q0029\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The difference between a country's exports and imports, which is said to decrease when the currency appreciates and increase when the currency depreciates.\",\n      \"refs\": [\"Q0003\", \"Q0004\", \"Q0028\", \"Q0029\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"exchange rate depreciation\",\n      \"refs\": [\"Q0025\", \"Q0026\", \"Q0027\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A reduction in the value of a country's currency relative to others, making domestic goods cheaper abroad and increasing net exports.\",\n      \"refs\": [\"Q0025\", \"Q0026\", \"Q0027\", \"Q0028\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"trade deficit\",\n      \"refs\": [\"Q0017\", \"Q0019\", \"Q0022\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A situation where a country's imports exceed its exports, which the speaker suggests can be reduced by depreciating the exchange rate.\",\n      \"refs\": [\"Q0017\", \"Q0019\", \"Q0022\", \"Q0025\", \"Q0028\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows for concepts etc. The excerpts talk about assumptions, trade deficit, depreciation, net exports. Likely concepts: assumption, net exports, exchange rate depreciation, trade deficit. Provide rows.\n\nWe'll create item \"item1\" for concept assumption. concept_name \"assumption\", content from Q0000 etc. Provide refs list.\n\nSimilarly net exports concept.\n\nProvide rows with availability SOURCE_MISSING? Since ASR speech, exact code unavailable but text is present, so SOURCE_SUPPORTED? It's explicit statements, so SOURCE_SUPPORTED.\n\nCreate rows.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794657152,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4200b3f836",
+  "usage": {
+    "completion_tokens": 1153,
+    "prompt_tokens": 2753,
+    "total_tokens": 3906,
+    "completion_time": 2.411176057,
+    "completion_tokens_details": {
+      "reasoning_tokens": 112
+    },
+    "prompt_time": 0.149144168,
+    "prompt_tokens_details": null,
+    "queue_time": 0.330817837,
+    "total_time": 2.560320225
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cydrcve86v5x3nfk1xmv27",
+    "debug": null,
+    "seed": 1113678965,
+    "usage": null
+  }
+}

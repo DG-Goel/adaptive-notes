@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-6ff095b3-4aac-4ece-bbdc-afcafb51bdf0",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"interest rate parity\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"concept1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"If the domestic interest rate is above the international interest rate, the exchange rate today must be above the expected exchange rate, implying an expected depreciation of the currency; conversely, if the domestic bond pays a lower interest rate, the exchange rate today is very depreciated because it is expected to appreciate to compensate for the interest rate differential.\",\n      \"refs\": [\"Q0000\", \"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What must be true about today's exchange rate when the domestic interest rate is higher than the international interest rate?\",\n      \"answer\": \"Today's exchange rate must be above the expected future exchange rate (implying an expected depreciation).\",\n      \"explanation\": \"The source states that a higher domestic interest rate requires the current exchange rate to be above the expected rate so that the expected depreciation compensates for the higher return.\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0000\"],\n      \"topic\": \"interest rate parity\"\n    },\n    {\n      \"question\": \"If the domestic bond pays a lower interest rate than the international bond, how is today's exchange rate described?\",\n      \"answer\": \"It is very depreciated because it is expected to appreciate.\",\n      \"explanation\": \"The source explains that a lower domestic interest rate leads to a very depreciated current exchange rate, as investors expect it to appreciate to offset the interest differential.\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0001\"],\n      \"topic\": \"interest rate parity\"\n    },\n    {\n      \"question\": \"Why does a higher domestic interest rate lead to an expected depreciation of the currency?\",\n      \"answer\": \"Because investors need to be compensated for the higher return, so the currency must be expected to lose value.\",\n      \"explanation\": \"The explanation links the higher domestic rate to the need for an expected depreciation, ensuring the overall return is comparable to the international bond.\",\n      \"bloom_level\": \"Understand\",\n      \"refs\": [\"Q0000\"],\n      \"topic\": \"interest rate parity\"\n    },\n    {\n      \"question\": \"Given a domestic interest rate of 5% and an international rate of 3%, what qualitative relationship holds between today's exchange rate and the expected future exchange rate?\",\n      \"answer\": \"Today's exchange rate must be higher than the expected future exchange rate, indicating an expected depreciation.\",\n      \"explanation\": \"The principle described in the source applies: a higher domestic rate requires the current rate to exceed the expected future rate to offset the interest differential.\",\n      \"bloom_level\": \"Apply\",\n      \"refs\": [\"Q0000\"],\n      \"topic\": \"interest rate parity\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output rows etc. The source only gives explanations about interest rate parity. No concrete formula text. So we likely abstain for formulas. We can create concepts: concept_name \"interest rate parity\" content from Q0000 and Q0001. Provide rows.\n\nRows: concept item \"item1\". category concepts, field concept_name element0 part value text \"interest rate parity\". refs Q0000. basis explicit availability SOURCE_SUPPORTED literal_kind verbal instructional_role null related_refs [].\n\ncontent row: category concepts field content element0 part value text combine explanation. Use Q0000 and Q0001. Provide.\n\nAbstentions for formulas etc required? No required fields for concepts only concept_name and content. So okay.\n\nQuiz: need 4 questions based on primary chunk. We can ask: What happens to exchange rate today if domestic interest rate is higher than international? Answer: It must be above expected exchange rate (i.e., currency expected to depreciate). Bloom Remember. refs Q0000.\n\nSecond: If domestic bond pays lower interest rate, what is the expected movement of exchange rate? Answer: Exchange rate today is very depreciated because expected to appreciate. Bloom Remember. refs Q0001.\n\nThird: Explain why a higher domestic interest rate leads to expected depreciation. Answer: To compensate investors for higher return, currency must be expected to lose value. Bloom Understand. refs Q0000.\n\nFourth: Apply: Given domestic interest rate 5% and international 3%, what qualitative relationship between today's exchange rate and expected future rate? Answer: Today's rate must be higher than expected future rate (implying expected depreciation). Bloom Apply. refs Q0000.\n\nAll good.\n\nProvide abstentions empty array. Excluded empty.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794729986,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_49bfac06f1",
+  "usage": {
+    "completion_tokens": 1130,
+    "prompt_tokens": 2955,
+    "total_tokens": 4085,
+    "completion_time": 2.359743796,
+    "completion_tokens_details": {
+      "reasoning_tokens": 355
+    },
+    "prompt_time": 0.308528995,
+    "prompt_tokens_details": null,
+    "queue_time": 0.296889332,
+    "total_time": 2.668272791
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f3wf5vevrvzp158zva1hgk",
+    "debug": null,
+    "seed": 1045848246,
+    "usage": null
+  }
+}

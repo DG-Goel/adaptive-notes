@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-08348eb6-aa5a-4a17-a58c-b7b7401dca7b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"Select Java on the left side and ensure the project SDK is not blank.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"JDK version 12 was downloaded and is selected here.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"If the SDK is not visible, select it from the drop-down list.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"Create a command line application from the template.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"A command line application does not have a graphical user interface.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0004\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C6\",\n      \"text\": \"Command line applications are less exciting than GUI apps but are simpler for learning Java.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0005\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C7\",\n      \"text\": \"After learning Java, you can learn to build desktop or mobile applications.\",\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0006\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\n        \"Select Java on the left side and ensure the project SDK is not blank.\",\n        \"JDK version 12 was downloaded and is selected here.\",\n        \"If the SDK is not visible, select it from the drop-down list.\",\n        \"Create a command line application from the template.\",\n        \"A command line application does not have a graphical user interface.\",\n        \"Command line applications are less exciting than GUI apps but are simpler for learning Java.\",\n        \"After learning Java, you can learn to build desktop or mobile applications.\"\n      ],\n      \"fact_type\": {\n        \"is_null\": true,\n        \"value\": []\n      }\n    }\n  ],\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": [],\n  \"abstentions\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Identify facts: selecting Java SDK, JDK version 12 selected, need to select from dropdown, creating command line app, no GUI, command line apps simpler, later learn desktop/mobile. Create claims. Then categories: facts maybe. No definitions etc. Provide abstentions for missing categories. Let's craft claims IDs C1..C7.\n\nC1: \"Select Java on the left side and ensure the project SDK is not blank.\" basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, refs Q0000.\n\nC2: \"JDK version 12 was downloaded and is selected here.\" from Q0001.\n\nC3: \"If the SDK is not visible, select it from the drop-down list.\" Q0002.\n\nC4: \"Create a command line application from the template.\" Q0003.\n\nC5: \"A command line application does not have a graphical user interface.\" Q0004.\n\nC6: \"Command line applications are less exciting than GUI apps but are simpler for learning Java.\" Q0005.\n\nC7: \"After learning Java, you can learn to build desktop or mobile applications.\" Q0006.\n\nNow categories: facts: all these are factual statements. So facts fact_text list claim IDs in order. Provide fact_type null? need is_null true. Provide is_null true, value [].\n\nOther categories empty with is_null true.\n\nAbstentions: none needed.\n\nProvide claims array with each claim.\n\nNow output JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794318495,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_803c0ba83d",
+  "usage": {
+    "completion_tokens": 1077,
+    "prompt_tokens": 3076,
+    "total_tokens": 4153,
+    "completion_time": 2.283281293,
+    "completion_tokens_details": {
+      "reasoning_tokens": 313
+    },
+    "prompt_time": 0.198354269,
+    "prompt_tokens_details": null,
+    "queue_time": 1.013437988,
+    "total_time": 2.481635562
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72veqvee799eeyh9c17ge5p",
+    "debug": null,
+    "seed": 862228413,
+    "usage": null
+  }
+}

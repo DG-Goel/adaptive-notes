@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-182014f5-92e0-4c64-9917-a2ca82ac7c05",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Mandela Fleming model\",\n      \"refs\": [\"Q0004\",\"Q0006\",\"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item1\",\n      \"category\": \"concepts\",\n      \"field\": \"content\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"A short‑run open‑economy model that connects monetary policies in different countries to exchange‑rate movements and their impact on real activity.\",\n      \"refs\": [\"Q0004\",\"Q0005\",\"Q0007\",\"Q0008\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item2\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Nobody expected the yen to move to follow the US.\",\n      \"refs\": [\"Q0000\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item3\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"Europe was experiencing inflationary problems, leading people to expect it to follow the US at some point.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"item4\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"The massive depreciation of the yen was caused by appreciation of the US dollar.\",\n      \"refs\": [\"Q0003\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": [],\n  \"quiz\": [\n    {\n      \"question\": \"What is the name of the short‑run open‑economy model discussed?\",\n      \"answer\": \"Mandela Fleming model\",\n      \"explanation\": \"The speaker explicitly names the model as the Mandela Fleming model (Q0004, Q0006).\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0004\",\"Q0006\"],\n      \"topic\": \"Model name\"\n    },\n    {\n      \"question\": \"According to the speaker, what does the Mandela Fleming model aim to connect?\",\n      \"answer\": \"It connects monetary policies in different countries to exchange‑rate movements and their impact on real activity.\",\n      \"explanation\": \"The speaker describes the model as linking monetary policies, exchange‑rate movements, and short‑run real activity (Q0004, Q0005, Q0008).\",\n      \"bloom_level\": \"Understand\",\n      \"refs\": [\"Q0004\",\"Q0005\",\"Q0008\"],\n      \"topic\": \"Model purpose\"\n    },\n    {\n      \"question\": \"Why did the yen experience massive depreciation, according to the excerpt?\",\n      \"answer\": \"Because the US dollar appreciated relative to the yen.\",\n      \"explanation\": \"The speaker states that the massive depreciation of the yen was due to appreciation of the US dollar (Q0003).\",\n      \"bloom_level\": \"Analyze\",\n      \"refs\": [\"Q0003\"],\n      \"topic\": \"Exchange‑rate effect\"\n    },\n    {\n      \"question\": \"What expectation did people have about Europe’s inflationary situation?\",\n      \"answer\": \"People expected Europe’s inflation to eventually follow the US.\",\n      \"explanation\": \"The speaker notes that Europe had inflationary problems and people expected it to follow the US at some point (Q0001).\",\n      \"bloom_level\": \"Remember\",\n      \"refs\": [\"Q0001\"],\n      \"topic\": \"European inflation expectation\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to produce rows etc. The source only talks about exchange rate model, no concrete concepts? We can extract concept: \"Mandela Fleming model\". Provide concept_name and content. Also maybe fact: \"Nobody expected the yen to move to follow the US.\" Provide fact_text. Provide explanation? Could be explanations of model purpose. We'll create rows.\n\nQuiz need 4 questions supported. Use these excerpts.\n\nLet's craft.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794729264,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c868cf1eaa",
+  "usage": {
+    "completion_tokens": 1098,
+    "prompt_tokens": 2640,
+    "total_tokens": 3738,
+    "completion_time": 2.301052289,
+    "completion_tokens_details": {
+      "reasoning_tokens": 86
+    },
+    "prompt_time": 0.108827789,
+    "prompt_tokens_details": null,
+    "queue_time": 0.374551076,
+    "total_time": 2.409880078
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7f36eaqeadr58garw81fkc5",
+    "debug": null,
+    "seed": 2049778033,
+    "usage": null
+  }
+}

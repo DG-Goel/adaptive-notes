@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-5a0a3d07-f10c-442b-b54a-f90d584bf34d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"text\": \"the first letter of every word should be upper case\",\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0000\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C2\",\n      \"text\": \"except the first word\",\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0001\"],\n      \"related_refs\": [\"C1\"]\n    },\n    {\n      \"id\": \"C3\",\n      \"text\": \"So that is why we have a capital M\",\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0002\"],\n      \"related_refs\": [\"C1\", \"C2\"]\n    },\n    {\n      \"id\": \"C4\",\n      \"text\": \"in the name of this class\",\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0003\"],\n      \"related_refs\": []\n    },\n    {\n      \"id\": \"C5\",\n      \"text\": \"In contrast to name our methods, we use the camel naming convention\",\n      \"basis\": \"explicit\",\n      \"availability\": \"PARTIALLY_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"refs\": [\"Q0006\"],\n      \"related_refs\": []\n    }\n  ],\n  \"facts\": [\n    {\n      \"fact_text\": [\"C1\", \"C2\", \"C3\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"naming_convention\"]\n      }\n    },\n    {\n      \"fact_text\": [\"C5\"],\n      \"fact_type\": {\n        \"is_null\": false,\n        \"value\": [\"naming_convention\"]\n      }\n    }\n  ],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"concepts\": [],\n  \"excluded\": [],\n  \"abstentions\": [\n    {\n      \"category\": \"definitions\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00126\", \"S00127\", \"S00128\", \"S00129\"],\n      \"reason\": \"No explicit definition excerpts provided.\"\n    },\n    {\n      \"category\": \"explanations\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00126\", \"S00127\", \"S00128\", \"S00129\"],\n      \"reason\": \"No explanatory passages beyond brief statements.\"\n    },\n    {\n      \"category\": \"examples\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00126\", \"S00127\", \"S00128\", \"S00129\"],\n      \"reason\": \"No concrete examples of naming usage supplied.\"\n    },\n    {\n      \"category\": \"formulas\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00126\", \"S00127\", \"S00128\", \"S00129\"],\n      \"reason\": \"No formulas present in source.\"\n    },\n    {\n      \"category\": \"procedures\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00126\", \"S00127\", \"S00128\", \"S00129\"],\n      \"reason\": \"No procedural steps provided.\"\n    },\n    {\n      \"category\": \"relationships\",\n      \"availability\": \"SOURCE_MISSING\",\n      \"source_ids\": [\"S00126\", \"S00127\", \"S00128\", \"S00129\"],\n      \"reason\": \"No relational statements identified.\"\n    }\n  ]\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need produce typed_claim_refs_v1 with claims from excerpts. Extract statements: Q0000: \"the first letter of every word should be upper case\". Q0001: \"except the first word.\" Q0002: \"So that is why we have a capital M\". Q0003: \"in the name of this class.\" Q0004: \"Alright, now that you understand the anatomy\". Q0005: \"of a Java program, let's create a new Java project and see all these building\". Q0006 context: \"In contrast to name our methods, we use the camel naming convention\". Likely claims about naming conventions: capitalizing each word except first (camelCase). So create claims: C1: First letter of every word should be uppercase. C2: Except the first word. C3: Therefore capital M appears. C4: In the name of this class. C5: Understand anatomy. C6: Create new Java project... not factual. Probably only naming convention facts.\n\nWe'll mark availability SOURCE_SUPPORTED? But ASR speech evidence flagged as uncertain; maybe PARTIALLY_SUPPORTED. Use basis explicit. literal_kind verbal. instructional_role maybe explanation_of_mistake? Not. Just fact. Use fact_type? Not needed.\n\nWe'll create claims list and then categories: facts maybe. Provide fact_text with claim IDs.\n\nWe'll need abstentions for missing formulas etc empty.\n\nProceed.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794317916,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_df9620fe21",
+  "usage": {
+    "completion_tokens": 1186,
+    "prompt_tokens": 3006,
+    "total_tokens": 4192,
+    "completion_time": 2.518384949,
+    "completion_tokens_details": {
+      "reasoning_tokens": 288
+    },
+    "prompt_time": 0.188293002,
+    "prompt_tokens_details": null,
+    "queue_time": 0.291546486,
+    "total_time": 2.706677951
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m72tx3ryej1rawv17zmv6vx3",
+    "debug": null,
+    "seed": 415364950,
+    "usage": null
+  }
+}

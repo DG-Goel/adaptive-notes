@@ -1,0 +1,158 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0032"
+      ],
+      "reason": "Source note is unresolved"
+    },
+    {
+      "note_ids": [
+        "FCT_0040",
+        "FCT_0041",
+        "FCT_0043"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "Recurrent Neural Network Feedback Loop",
+      "source_segment_ids": [
+        "FCT_0032"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0032"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0032",
+              "quote": "A recurrent neural network is sort of like creating a soup so you put some ingredient then you test it you get some feedback now you add more ingredients or you adjust the ingredients okay."
+            },
+            {
+              "note_id": "FCT_0032",
+              "quote": "So that is this feedback process."
+            },
+            {
+              "note_id": "FCT_0032",
+              "quote": "So you get the feedback then you again give new input you train the model, you again get feedback and so on, short of like preparing a soup."
+            }
+          ],
+          "payload": {
+            "type": "flowchart",
+            "title": "RNN Feedback Loop",
+            "direction": "RIGHT",
+            "nodes": [
+              {
+                "id": "n1",
+                "label": "Input"
+              },
+              {
+                "id": "n2",
+                "label": "RNN Cell"
+              },
+              {
+                "id": "n3",
+                "label": "Output"
+              },
+              {
+                "id": "n4",
+                "label": "Feedback"
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "label": "feed"
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "label": "produce"
+              },
+              {
+                "from": "n3",
+                "to": "n4",
+                "label": "feedback"
+              },
+              {
+                "from": "n4",
+                "to": "n2",
+                "label": "next input"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Traditional AI vs Generative AI",
+      "source_segment_ids": [
+        "FCT_0040",
+        "FCT_0041",
+        "FCT_0043"
+      ],
+      "mode": "visual_only",
+      "remaining_text": null,
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0040",
+            "FCT_0041",
+            "FCT_0043"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0040",
+              "quote": "Traditional AI is used for classification, regression, prediction, and decision making and is considered lightweight."
+            },
+            {
+              "note_id": "FCT_0041",
+              "quote": "the purpose of traditional AI was to analyze predict classify or make decisions whereas generative AI means you are generating new content"
+            },
+            {
+              "note_id": "FCT_0043",
+              "quote": "traditional AI has limited capabilities, whereas generative AI has high capabilities."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "Traditional AI vs Generative AI",
+            "headers": [
+              "Aspect",
+              "Traditional AI",
+              "Generative AI"
+            ],
+            "rows": [
+              [
+                "Purpose",
+                "analyze, predict, classify, decide",
+                "generate new content"
+              ],
+              [
+                "Typical Output",
+                "yes/no labels, numbers",
+                "text, images, audio, video"
+              ],
+              [
+                "Capability Level",
+                "limited",
+                "high"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

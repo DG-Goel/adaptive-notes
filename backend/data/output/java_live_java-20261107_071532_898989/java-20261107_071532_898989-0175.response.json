@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-c89ba3af-1678-4696-a51f-cc2808ae1410",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"concepts\": [],\n  \"definitions\": [],\n  \"explanations\": [],\n  \"examples\": [],\n  \"facts\": [\n    {\n      \"fact_text\": {\n        \"text\": \"method returns a long but here we have declared an integer\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"implicit casting cannot happen when storing an 8-byte value into a 4-byte variable\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"explicit casting can be used when the result is known to fit in the target type\",\n        \"refs\": [\"Q0001\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"casting the result of Math.random() directly to int yields 0 because the fraction is lost\",\n        \"refs\": [\"Q0002\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"wrapping the entire expression in parentheses before casting yields an integer between 0 and 100\",\n        \"refs\": [\"Q0003\"]\n      },\n      \"fact_type\": null\n    },\n    {\n      \"fact_text\": {\n        \"text\": \"NumberFormat class in java.text can format numbers as currency or percentages\",\n        \"refs\": [\"Q0004\"]\n      },\n      \"fact_type\": null\n    }\n  ],\n  \"formulas\": [],\n  \"procedures\": [],\n  \"relationships\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need to output schema with empty arrays except extracted items. From excerpts, we can extract facts, explanations, procedures maybe. Identify teaching: rounding, casting, parentheses, NumberFormat usage. We can create facts: \"method returns a long\" etc. Provide refs.\n\nLet's produce facts.\n\nFact1: \"method returns a long but here we have declared an integer\" refs Q0001.\n\nFact2: \"implicit casting cannot happen when storing an 8-byte value into a 4-byte variable\" refs Q0001.\n\nFact3: \"explicit casting can be used when the result is known to fit in the target type\" refs Q0001.\n\nFact4: \"casting the result of Math.random() directly to int yields 0 because the fraction is lost\" refs Q0002.\n\nFact5: \"wrapping the entire expression in parentheses before casting yields an integer between 0 and 100\" refs Q0003.\n\nFact6: \"NumberFormat class in java.text can format numbers as currency or percentages\" refs Q0004.\n\nWe may also have procedure: formatting numbers steps? Not enough detail. We'll just include facts.\n\nNo definitions, examples, formulas, procedures, relationships, concepts. Excluded none.\n\nReturn JSON.",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794036233,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c800245357",
+  "usage": {
+    "completion_tokens": 618,
+    "prompt_tokens": 3044,
+    "total_tokens": 3662,
+    "completion_time": 1.298062381,
+    "completion_tokens_details": {
+      "reasoning_tokens": 251
+    },
+    "prompt_time": 0.154699944,
+    "prompt_tokens_details": null,
+    "queue_time": 0.298290798,
+    "total_time": 1.4527623250000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m6te8vareem82q5kbbzacba3",
+    "debug": null,
+    "seed": 1252124129,
+    "usage": null
+  }
+}

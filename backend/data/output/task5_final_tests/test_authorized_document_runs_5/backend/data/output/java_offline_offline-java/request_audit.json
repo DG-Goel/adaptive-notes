@@ -1,0 +1,217 @@
+{
+  "operations": [
+    {
+      "id": "offline-java-0000",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "90c0c2f48ca3a176e79c654546f95fa9606b05bf8d472b7788a4695cefea091c",
+      "state": "failed",
+      "created": 1794069663.8964438,
+      "completed": 1794069663.8964438,
+      "validation": "failed"
+    },
+    {
+      "id": "offline-java-0001",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "91832971a745e7a900b00c50653cc10fff8ff5658a198ffbaf8b51c8a3ca5063",
+      "state": "success",
+      "created": 1794069723.8964438,
+      "completed": 1794069723.8964438,
+      "validation": "passed_mechanical_only"
+    },
+    {
+      "id": "offline-java-0004",
+      "org": "org-1",
+      "slot": 1,
+      "request_hash": "6d920505c0af00c688f2435c3b36bd27ab1ae5066944b5e74b5663ced3b92d9c",
+      "state": "success",
+      "created": 1794069783.8964438,
+      "completed": 1794069783.8964438,
+      "validation": "passed_mechanical_only"
+    }
+  ],
+  "attempts": [
+    {
+      "request_id": "offline-java-0000",
+      "number": 1,
+      "created": 1794069663.8964438,
+      "dispatched": 1794069663.8964438,
+      "completed": 1794069663.8964438,
+      "input_reserved": 2773,
+      "output_reserved": 4000,
+      "input_actual": null,
+      "output_actual": null,
+      "reasoning": null,
+      "charged": 6773,
+      "http_status": 400,
+      "finish": null,
+      "duration": 0.0,
+      "category": "permanent_request"
+    },
+    {
+      "request_id": "offline-java-0001",
+      "number": 1,
+      "created": 1794069723.8964438,
+      "dispatched": 1794069723.8964438,
+      "completed": 1794069723.8964438,
+      "input_reserved": 2532,
+      "output_reserved": 4000,
+      "input_actual": 100,
+      "output_actual": 200,
+      "reasoning": 40,
+      "charged": 300,
+      "http_status": 200,
+      "finish": "stop",
+      "duration": 0.0,
+      "category": "response"
+    },
+    {
+      "request_id": "offline-java-0004",
+      "number": 1,
+      "created": 1794069783.8964438,
+      "dispatched": 1794069783.8964438,
+      "completed": 1794069783.8964438,
+      "input_reserved": 2532,
+      "output_reserved": 4000,
+      "input_actual": 100,
+      "output_actual": 200,
+      "reasoning": 40,
+      "charged": 300,
+      "http_status": 200,
+      "finish": "stop",
+      "duration": 0.0,
+      "category": "response"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794069663.8964438,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"490659b2cf836b9998daf70a507a725c02d220249813463ec5a9fc6c0891efb3\", \"estimated_input\": 2773, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 4000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 2,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794069663.8964438,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 3,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794069663.8964438,
+      "event": "provider_error",
+      "details": "{\"category\": \"permanent_request\", \"error_code\": \"json_validate_failed\", \"message\": \"Groq API call failed: Error code: 400 - {'error': {'message': 'max completion tokens reached before generating a valid document', 'code': 'json_validate_failed'}}\", \"retry_after\": null, \"retry_after_header\": null, \"retryable\": false, \"status_code\": 400}"
+    },
+    {
+      "sequence": 4,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794069663.8964438,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"failed\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"not_passed\"}"
+    },
+    {
+      "sequence": 5,
+      "request_id": "offline-java-0000",
+      "org": "org-1",
+      "created": 1794069663.8964438,
+      "event": "operation_error",
+      "details": "{\"message\": \"Groq API call failed: Groq API call failed: Error code: 400 - {'error': {'message': 'max completion tokens reached before generating a valid document', 'code': 'json_validate_failed'}}\", \"type\": \"GroqProviderError\"}"
+    },
+    {
+      "sequence": 6,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794069723.8964438,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"490659b2cf836b9998daf70a507a725c02d220249813463ec5a9fc6c0891efb3\", \"estimated_input\": 2532, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 4000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 7,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794069723.8964438,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 8,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794069723.8964438,
+      "event": "response_saved",
+      "details": "{\"sha256\": \"910a4d4bb1c2d72387c3819ccf8f239088ba55f2c38938ee257a92036c071445\"}"
+    },
+    {
+      "sequence": 9,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794069723.8964438,
+      "event": "quote_resolution",
+      "details": "{\"resolutions\": []}"
+    },
+    {
+      "sequence": 10,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794069723.8964438,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"success\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"passed_mechanical_only\"}"
+    },
+    {
+      "sequence": 11,
+      "request_id": "offline-java-0004",
+      "org": "org-1",
+      "created": 1794069783.8964438,
+      "event": "claimed",
+      "details": "{\"configuration_sha256\": \"490659b2cf836b9998daf70a507a725c02d220249813463ec5a9fc6c0891efb3\", \"estimated_input\": 2532, \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"reservation_charged\", \"quota_before\": \"local_tracked\", \"reserved_completion\": 4000, \"selection_reason\": \"success_ordered_round_robin_first_verified_eligible\"}"
+    },
+    {
+      "sequence": 12,
+      "request_id": "offline-java-0004",
+      "org": "org-1",
+      "created": 1794069783.8964438,
+      "event": "dispatch_attempt",
+      "details": "{\"attempt\": 1}"
+    },
+    {
+      "sequence": 13,
+      "request_id": "offline-java-0004",
+      "org": "org-1",
+      "created": 1794069783.8964438,
+      "event": "response_saved",
+      "details": "{\"sha256\": \"e862e944b96ddeecc515ffb967c9ea3967d672a11671bbceb96047676d8d3b41\"}"
+    },
+    {
+      "sequence": 14,
+      "request_id": "offline-java-0004",
+      "org": "org-1",
+      "created": 1794069783.8964438,
+      "event": "quote_resolution",
+      "details": "{\"resolutions\": []}"
+    },
+    {
+      "sequence": 15,
+      "request_id": "offline-java-0004",
+      "org": "org-1",
+      "created": 1794069783.8964438,
+      "event": "completed",
+      "details": "{\"extraction_outcome\": \"success\", \"model\": \"openai/gpt-oss-120b\", \"quota_after\": \"quota_unknown\", \"retry_count\": 0, \"semantic_entailment_verified\": false, \"validation_outcome\": \"passed_mechanical_only\"}"
+    },
+    {
+      "sequence": 16,
+      "request_id": "offline-java-0001",
+      "org": "org-1",
+      "created": 1794069783.8964438,
+      "event": "successful_checkpoint_recovery",
+      "details": "{\"items\": 1, \"redispatched\": false, \"response_sha256\": \"910a4d4bb1c2d72387c3819ccf8f239088ba55f2c38938ee257a92036c071445\"}"
+    }
+  ]
+}

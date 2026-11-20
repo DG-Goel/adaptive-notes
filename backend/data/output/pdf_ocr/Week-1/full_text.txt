@@ -1,0 +1,1506 @@
+=== PAGE 1 ===
+
+Fundamentals of Image
+Processing – Part I
+(Week-01, Lecture # 1)
+Jayanta Mukhopadhyay
+Dept. of Computer Science and Engg.
+Indian Institute of Technology, Kharagpur
+
+=== PAGE 2 ===
+
+How images are represented in
+computer?
+Width: 256
+Height: 384
+g
+95
+95 103 88
+73
+74
+89
+103101 97
+96
+96
+99
+98
+107
+90
+103 118 122 115 99
+85
+78
+81
+91
+97
+100
+97
+4
+73
+88
+196175129118120123116103
+85
+75
+73
+81
+81
+67
+157
+220
+226
+217
+184152 130128125 125 111 95
+C
+92
+88
+71
+75
+104147
+187219227
+209170138129133
+0102104100
+93
+84
+72
+69
+87
+122165208
+225
+213
+185
+0110122114111108103101
+95
+81
+73
+79
+105
+147
+1902
+3119 137 127 125 121 117 114111 108 107 103
+92
+83
+83
+A 2D Array of integers
+3 123 147 141 137 134 130 127 122 121 121 119 114 113 110
+126 150 148 148 143 143 141 135 135 134 127 126 123 123
+
+=== PAGE 3 ===
+
+Color images
+B
+G
+一
+R
+
+=== PAGE 4 ===
+
+Image File
+Header
+Stream of pixels
+EOF
+100
+101
+88
+width
+height
+t # Comp.
+# bytes/pixel
+Standard File Formats:
+TIFF, BMP, GIF, PGM, PPM, JPEG, DICOM,
+
+=== PAGE 5 ===
+
+Image formation in optical
+camera
+P → p : Projection
+E(P) → I(p) : Stimulation
+
+=== PAGE 6 ===
+
+Perspective
+Rules of projection
+projection
+Image points formed by intersection of the ray from a point P
+passing through the center of projection O with the image
+plane.
+Center of
+projection
+Image plane
+
+=== PAGE 7 ===
+
+Parallel
+projection
+Other imaging principle
+Image points formed by intersection of parallel rays
+with the image plane.
+
+=== PAGE 8 ===
+
+Other imaging principle
+Tx
+Scan radially / translating Tx-Rx
+Range
+along a direction.
+
+=== PAGE 9 ===
+
+What is an image?
+Impression of the physical world.
+Spatial distribution of a measurable
+quantity, encoding the geometry and
+material properties of objects.
+
+=== PAGE 10 ===
+
+A few concepts and operations
+
+=== PAGE 11 ===
+
+Image histogram
+4
+第11
+x 10
+16173121791
+16
+ 1  31
+911 （91627179111
+11010212
+14
+35
+12
+102121Φ2112110
+102121619169
+12
+Frequency
+可可
+9 2 
+169止至业）
+  2211 
+2 （ 217311
+可
+10
+可
+Ja9t
+8
+1021
+5
+153
+你可更可
+092118
+01  573 6夜   1
+6
+司1411 5370725 9077 211
+1业5
+2K
+可可因
+4
+可场可可何
+可可引
+可可
+2
+可市11
+112|021Φ11
+因可因
+doop
+0
+可可
+同91
+3面可同531
+0
+50
+100
+150
+200
+250
+57421
+Brightness
+s (x)
+同更
+同
+1202
+Normalized Histogram → p(x)
+
+=== PAGE 12 ===
+
+Binarization (Thresholding)
+Separation of foreground from
+background.
+Foreground: Dark pixels (text)
+Background: Bright pixels (white region)
+Pixels in a binarized image set to one of
+the two values (e.g. 255 or 0).
+ 255 for background.
+ 0 for foreground.
+
+=== PAGE 13 ===
+
+Binarization (Thresholding)
+ A simple algorithm
+ Choose a threshold value T.
+A pixel greater than T is set to 255
+(background), otherwise to 0 (foreground).
+
+=== PAGE 14 ===
+
+×10^4
+16
+14
+12
+10
+8
+Thresholding
+6
+4
+2
+50
+100
+150
+200
+250
+aqteté
+80112
+1021 12Φ2
+k  2162 ) 
+12218121
+1213/421
+2Φ1
+9 9 e
+1b22
+何币何可面！
+可に
+102 121Φ 21
+2
+Can you
+2219
+   219
+lrice 
+可可研
+  2
+àg 2k 
+ （Φ5215173 
+  22 ( 
+可
+automate
+  22731
+支1 （可
+可
+8|910
+kk
+液可
+291
+2
+可更
+R75
+JEUT
+this
+可可啊病
+12 1521
+5
+可
+5同可更要可
+1R75
+Ja9A
+B B 上2
+2
+可
+可领5
+operation?
+业
+ 2k
+可“
+9
+可可种对
+11    
+相啊
+②面可可可研可
+比站
+25可可
+  l
+可可
+可市
+ b  
+12 121Φ 
+2kk k
+doop
+12021
+可同可
+业
+deep
+配
+3 573 
+   í  
+ s s 
+体要币同新例更
+64
+同
+上02
+ g
+场
+lel
+不
+Ièe èk k B bee
+Th=156
+Th=192
+
+=== PAGE 15 ===
+
+Bayesian Classification of
+foreground and background pixels
+Pixels belonging to two classes:
+w1: Foreground
+w2: Background
+Compute p(w1|x) and p(w2|x).
+p(x)
+Bayes' theorem:
+p(ω)p(x|ω)
+p(ω|x) =
+X
+p(x|w2)
+p(x|w1)
+p(x)
+Bayes' classification rule:
+Assign x to w1 if p(w1|x) ≥ p(w2|x) else to w2.
+To check whether p(w1)p(x|w1) > p(w2) p(x|w2)
+
+=== PAGE 16 ===
+
+Expectation-Maximization
+Algorithm
+1. Compute p(w1) and
+p(w2) from proportional
+areas of each region.
+2. Compute parameters of
+p(x|w1) by assuming it
+Gaussian.
+µ1, σ1
+Th
+3. Compute parameters of p(x|w2)
+by assuming it Gaussian.
+μ2, σ2
+1
+N(x; µ, σ) =
+√2πσ
+
+=== PAGE 17 ===
+
+Expectation-Maximization
+Algorithm
+Th
+p(w1) =∑p(x)
+x=0
+p(w2)=1−p(w1)
+(x)d
+x.p(x)
+x=0
+Th
+Th
+σ1 = ∑x2.p(x)−µ2
+x
+x=0
+4. Compute new threshold
+255
+∑x.p(x)
+value so that for x<Th,
+μ2 =
+p(w1|x)>p(w2|x), and vice
+x=Th+1
+versa.
+255
+x2.p(x)− µ2
+5. Iterate till the value of Th
+converges.
+x=Th+1
+
+=== PAGE 18 ===
+
+Otsu Thresholding
+Choose a threshold value, which maximizes
+between class variance (σ2B).
+Th
+= p(wl)p(w2)(μ2−μ)2
+
+=== PAGE 19 ===
+
+16
+×104
+×10^4
+8
+14
+7
+12
+6
+10
+5
+8
+4
+3
+An example
+2
+50
+100
+150
+200
+250
+0
+50
+100
+150
+200
+250
+266
+260
+1021121Φ21
+10212Φ2
+ak  22) (
+2
+Bayesian
+21342
+Otsu:157
+  e
+可可
+:157
+ 9 e
+可可
+何币例可面
+何可例可水面
+12   
+可
+22
+59597 7  
+ 1 2 219
+UG可
+k
+àg 2k Φ
+9
+市 （5 25173 
+市 （5 2173 
+k
+|k9l6
+kk
+可何 叫啊
+2Φ
+JaUT
+Ja4T
+22
+布11573
+可更
+1R75
+2
+布115
+7可
+1R75
+B  上
+可
+e 2
+y
+e 2
+可 5
+11 k20  22 ||le
+ B2kk
+ 2k
+一
+11 
+11 101 
+比
+255可可
+25可可
+èlk Elk èlk
+PI El èle
+可可日1
+可市
+可市可
+限
+更羽
+更
+12 21Φ 
+doop
+12 21Φ 
+deep
+162 2$
+可
+3 157 
+研
+54
+体要币向例可更
+所向向同
+所盾向同
+要
+
+=== PAGE 20 ===
+
+Contrast Enhancement:
+Pixel mapping
+Function is monotonically increasing.
+255
+If x₁>x₂, y1≥y₂
+() lutt ud()
+x
+y = 255.∑ p(t)
+t=0
+1
+Dynamic Range
+255
+0
+Input pixel (x)
+
+=== PAGE 21 ===
+
+Histogram Equalization
+5000
+4000
+3000
+2000
+1000
+2000
+1500
+1000
+500
+50
+100
+150
+200
+250
+
+=== PAGE 22 ===
+
+Fundamentals of Image
+Processing- Part II
+(Week-01, Lecture #2)
+Jayanta Mukhopadhyay
+Dept. of Computer Science and Engg.
+Indian Institute of Technology, Kharagpur
+
+=== PAGE 23 ===
+
+Segmentation
+Partitioning image pixels into meaningful
+non-overlapping sets.
+Binarization: A special case.
+■
+Can be extended to group pixels in more than
+■
+two labels.
+2000
+1500
+1000
+500
+50
+100
+150
+200
+250
+
+=== PAGE 24 ===
+
+Multilevel thresholding:
+An example
+2000
+1500
+1000
+500
+Intervals: [0,60], [61, 119], [120,255]
+50
+100
+150
+200
+250
+Blue
+Green
+Yellow
+
+=== PAGE 25 ===
+
+Component Labeling
+Partitioning connected image pixels into
+meaningful non-overlapping sets.
+Neighborhood definition.
+■
+4-neighbor, 8-neighbor
+■
+0
+0
+4-neighbors
+8-neighbors
+
+=== PAGE 26 ===
+
+0
+0
+0
+0
+0
+0
+0
+Component Labeling
+Form a graph with edges between
+neighboring pixels having same labels.
+Compute connected components.
+Graph traversal algorithms
+■
+20
+20
+50
+20
+20
+20
+50
+100
+50
+50
+50
+100
+100
+100
+20
+20
+
+=== PAGE 27 ===
+
+0
+0
+0
+0
+0
+0
+Component Labeling
+Form graph with edges between
+neighboring pixels having same labels.
+Compute connected components.
+Graph traversal algorithms
+Do you require
+■
+an explicit
+20
+20
+50
+20
+graph
+representation?
+20
+20
+50
+100
+Can you
+compute using
+50
+50
+50
+100
+only the image
+100
+100
+20
+20
+array?
+
+=== PAGE 28 ===
+
+Examples of
+components
+
+=== PAGE 29 ===
+
+Why a part of river channel is missing?
+
+=== PAGE 30 ===
+
+Gradient Operations
+Consider the image as a 2D function: f(x, y)
+∂f (x, y)
+= f(x+1,y)− f(x,y)
+∂x
+∂f (x, y)
+= f(x, y +1)− f(x, y)
+∂y
+∂f (x, y) 
+∂f (x, y)
+∇f(x, y) =
+∂x
+∂y
+
+=== PAGE 31 ===
+
+Computation with mask
+1. Scan the image top to bottom
+-1
+1
+and left to right.
+2. At every point (x,y) place the
+(x, y) (x+1, y)
+mask and compute the
+Weights
+weighted sum.
+(x, y + 1)
+g(x,y)=(1).f(x,y+1)+(-1).f(x,y)
+1
+3. Write the value g(x,y) at (x,y)
+-1
+(x, y)
+pixel position of the processed
+image.
+
+=== PAGE 32 ===
+
+Robust gradient computation
+Averaging neighboring gradient values
+-1
+-1
+1
+1
+1
+1
+-1
+-1
+0
+1
+0
+0
+0
+-1
+0
+-1
+1
+-1
+1
+-1-1
+-1
+1
+Prewitt operator
+(6 times of the gradient value in any direction)
+
+=== PAGE 33 ===
+
+Robust gradient computation
+Weighted average of neighboring gradient values
+-1
+1x
+1
+0
+1
+1
+2
+1
+-1
+1
+-1
+-2
+0
+2
+0
+0
+0
+2x
+-1
+1
+1
+-1
+0
+1x
+-1
+1
+-1
+1
+-1
+-2
+-1
+1
+Sobel operator
+(8 times of the gradient value in any direction)
+
+=== PAGE 34 ===
+
+Results of gradient
+operations
+山
+Vertical
+Horizontal
+Resultant
+
+=== PAGE 35 ===
+
+More on computation with
+mask
+Convolution operation
+W1
+W2
+W3
+Filtering
+W4
+Wc
+W5
+Mask→ Filter Response (h(x,y))
+W6
+W7
+W8
+f(x,y)
+h(x,y)
+g(x,y)
+g(x, y) = w1 f(x −1, y + 1) + w2 f (x, y + 1) + w3 f(x + 1, y + 1) + w4 f(x −1, y) +
+wcf(x, y) + w5 f(x +1, y)+ w6f(x−1, y −1) + w, f(x, y +1) + w8 f(x +1, y + 1)
+
+=== PAGE 36 ===
+
+Noise Filtering
+b
+C
+C
+b
+b
+a
+C
+b
+C
+a=0.5, b=0.3/4,
+and, c=0.25/4
+
+=== PAGE 37 ===
+
+Gaussian Smoothing
+−((x−xc)2+(y−yc)2)
+1
+G(x, y) =
+2σ²
+2πσ²
+g(x, y) = f(x, y)*G(x, y)
+σ=2
+Mask size: 9x9
+
+=== PAGE 38 ===
+
+Median Filtering
+g(x,y)= the median value among
+the neighbors.
+
+=== PAGE 39 ===
+
+Summary
+1. Images formed by optical camera through
+perspective projection.
+2. Discussed different operations in image
+processing.
+Binarization
+Gradient
+Thresholding.
+computation.
+Contrast
+oComputing edges
+enhancement.
+oConvolution operation
+Segmentation
+Filtering
+o Component
+Median filtering
+Labeling
+
+=== PAGE 40 ===
+
+Image Transforms: A brief
+introduction
+(Week 01- Lectures 3- 4)
+Jayanta Mukhopadhyay
+Dept. of Computer Science and Engg.
+"Image and video processing in the
+compressed domain", CRC Press, 2011.
+
+=== PAGE 41 ===
+
+f(x, y) = ∑∑
+λijbij(x,y)
+Image Transform
+ Image in continuous form: f(x,y): A 2-D
+function, where (x,y) in R².
+Properties of
+basis functions
+ Let B be a set of basis functions:
+can be extended
+in the analysis.
+B={bi(x,y) | i=..-1,0,1,2,3,....}, bi(x,y) in R or C.
+□ Let f(x,y) be expanded using B as follows:
+f(x, y) = ∑
+Coefficients of
+λibi(x, y)
+transform
+The transform of f w.r.t. B is given by {λ|i = .. . −1,0,1,2,3,...}.
+Indexing may be multidimensional say, λj.
+
+=== PAGE 42 ===
+
+f(x) =∑
+Orthogonal Expansion
+λibi(x)
+and 1-D Transforms
+< f,g>=
+f(x)g(x)dx
+Inner product:
+Orthogonal expansion: If B satisfies :
+(bi, bj〉 = 0, for i ≠ j
+= ci Otherwise (f or i = j), where ci > 0
+Transform coefficients in O.E.: λi = —f, b〉
+Ci
+If c,=1, it becomes orthonormal expansion.
+Forward transform
+λi = 〈f, bi〉
+ Inverse transform: f(x) = 
+λibi(x)di
+i=-∝
+
+=== PAGE 43 ===
+
+Complete base
+Fourier
+B = {e jωx| − ∞ < ω < ∞}
+transform
+Unit impulse function
+∫2πδ(x),
+Orthogonality:
+for ω = 0
+ejωx dx
+0,
+otherwise.
+Fourier Transform: F(f (x)) = f(jω) =
+f(x)e−jωxdx
+x-
+Inverse Transform:
+f(x) = 
+f(x)ejωxdx
+2π
+Full reconstruction
+e−jωx = cos(ωx) − j sin(ωx)
+f(jω) =
+f(x)(cos(ωx) − j sin(ωx)) dx
+S = {sin(ωx)| − ∞ < ω < ∞}
+C = {cos(ωx)| − ∞ < ω < ∞}
+OrthogonalBut not complete!
+
+=== PAGE 44 ===
+
+ejθ+e−jθ
+Even and odd
+cos(θ) =
+2
+ejθ-e−jθ
+functions
+sin(θ) =
+2j
+ Even: f(-x)=f(x) for all x.
+ Odd: f(-x)=-f(x) for all x. →f(0)=0.
+ For even f(x) :
+f(x)(sin(ωx)) dx = 0
+ For odd f(x) :
+f(x)(cos(ωx)) dx = 0
+Full reconstruction possible with cosines
+(sines) only if it is even (odd).
+
+=== PAGE 45 ===
+
+Discrete representation
+Discrete representation of a function:
+Set of integers
+f(n) = {f (nX0)|n∈Z}
+Sampling interval
+ Can be considered as a vector in an infinite
+dimensional vector space.
+ In our context, it is of a finite dimensional
+space, e.g. {f(n), n=0,1,..N-1}, or
+f=[f(0) f(1) ... f(N-1)].
+
+=== PAGE 46 ===
+
+Discrete Linear Transform: A
+general form
+ For n-dimensional vector X any linear transform,
+e.g. Ymxl=BmxnXnx1
+Xnx1: A column vector of dimension n.
+Ymx1: A column vector of dimension m.
+Bmxn: A matrix of dimension mxn.
+■
+ Has inverse transform if B is a square matrix and
+invertible.
+
+=== PAGE 47 ===
+
+Basis vectors
+B is the transformation matrix.
+Rows of B are called basis vectors.
+[b*T
+B =
+Y(i)=<bi*T. X>
+Lb*
+dot product or inner product.
+Orthogonality condition:
+< biT. bj > = 0 if i ≠ j
+= Ci,
+otherwise
+
+=== PAGE 48 ===
+
+Discrete Fourier Transform
+(DFT)
+1
+N-1
+f(k) = ∑ f(n)e−j2πkn for 0 ≤ k ≤ N − 1.
+f(N + k) = f(k)
+n=0
+k/N: Normalized frequency
+N-1
+f(n) = N ∑ f(k) j2π n for 0 ≤ n ≤ N − 1.
+k=0
+Fundamental
+frequency: 1/(NX)
+A single period
+f(n+N)=f(n)
+DFT: Fourier series of a periodic function
+
+=== PAGE 49 ===
+
+: A linear
+DFT:
+N-1
+transform
+kn
+∑
+P(())
+f(n)e
+−j2π
+N
+for 0 ≤ k ≤ N − 1
+n=0
+1
+1
+1
+F(0)
+f(0)
+1
+-j2π
+N
+N-1
+F(1)
+1
+−j2π
+f(1)
+e
+e
+N
+[F(N − 1)]
+N-1
+(N-1)2
+[f(N − 1)]
+1
+-j2π
+-j2π
+e
+N
+N
+e
+k
+−j2π
+FN
+τNn
+0≤(k,n)≤N−1
+F = FNf
+Hermitian transpose
+f = F−1
+F
+N
+1
+HN
+F
+F
+N
+N
+
+=== PAGE 50 ===
+
+Generalized
+−j2π
+k+α
+(n+β)
+F
+α,β
+e
+N
+]0≤(k,n)≤N−1
+Discrete Fourier
+F
+-1
+NTNT
+F
+H
+1
+F
+1*
+0,0
+二
+020
+IN1IN
+0,0
+Transform (GDFT)
+F
+1
+F
+H12H
+F
+1*
+12
+1o
+二
+12
+F
+1
+F
+1
+F
+and
+0,
+121
+二
+N
+0,
+12
+二
+N
+11N
+1
+F
+F
+二
+N
+12
+1
+(α,β)
+br
+(n)
+ej2π
+(g+u)f
+ for 0 ≤ n ≤ N −1, and 0 ≤ k ≤ N −1
+√N
+N-1
+n=0
+N-1
+1
+∑fa,β(k)ej2πk+a(n+β),
+f(n) =
+N
+for 0 ≤ n ≤ N − 1
+k=0
+1
+1
+β
+Transform name
+Notation
+α
+0
+0
+Discrete Fourier Transform (DFT)
+f(k)
+0
+12
+Odd Time Discrete Fourier Transform (OTDFT)
+fo, ( k)
+12
+0
+Odd Frequency Discrete Fourier Transform (OFDFT)
+2,0(k)
+12
+12
+Odd Frequency Odd Time Discrete Fourier Transform (O²DFT)
+
+=== PAGE 51 ===
+
+Symmetric /
+/Antisymmetric
+extension of a finite sequence
+DCTs and DSTs exist for
+Original sequence
+any finite sequence.
+Even function-
+Whole symmetry (WS)
+Half symmetry (HS)
+Odd function
+V
+Half antisymmetry (HA)
+Whole antisymmetry (WA)
+
+=== PAGE 52 ===
+
+Discrete Cosine
+a(p) = { 1
+for p = 0 or N,
+Sine Transforms
+otherwise.
+Types of symmetric / antisymmetric
+extensions at the two ends of a sequence
+and a type of GDFT→ DCTs / DSTs
+WSWS
+F0,0
+Type-I Even DCT
+N
+, 0 ≤ k ≤ N:
+n=0
+
+=== PAGE 53 ===
+
+Discrete Cosine
+α(p) = {1
+for p = 0 or N,
+Sine Transforms
+otherwise.
+F0,1/2
+SHSH
+Type-2 Even DCT
+N-1
+(2πk(n + 1)
+) , 0 ≤ k ≤ N−1.
+2N
+n=0
+WAWA
+jF 0,0
+Type-1 Even DST
+N-1
+n=1
+
+=== PAGE 54 ===
+
+Discrete Cosine
+α(p) = {
+for p = 0 or N,
+Sine Transforms
+otherwise.
+jF0,1/2
+HAHA
+Type-2 Even DST
+N-1
+2πk(n + 1)
+1 ≤ k ≤ N−1
+2N
+n=0
+There exist 16 different types of DCTs and DSTs.
+Type-II Even DCT is used in signal, image, and
+video compression.
+
+=== PAGE 55 ===
+
+Matrix form of
+for p = 0 or N,
+α(p) = 
+otherwise.
+Type-II DCT
+Matrix form
+πk(2n + 1)]
+2N
+N-point DCT
+1−N(u)0
+Each row is either symmetric (even
+row) or antisymmetric (odd row).
+CN(k,N −1−n) ={
+CN (k, n) for k even
+{−CN(k, n) for k odd
+X = CN.X
+C−1 = CT
+
+=== PAGE 56 ===
+
+Convolution Multiplication
+Property (CMP)
+f(t)
+h(t)
+1p(1 − 7)y(1)f
+18
+F(jω)
+H(jω)
+H(jω)F(jω)
+CMP for Fourier Transform
+
+=== PAGE 57 ===
+
+f∅h(k) = f(k)¯(k)
+CMP for DFT
+CMP for DFT holds for
+Linear convolution
+circular convolution.
+f(m)h(n − m).
+f(n)
+h(n)
+m=-∞
+Periodic convolution: Convolution between two finite
+sequences with periodic extension.
+It is defined if both have the same period, providing a periodic
+sequence with the same period.
+Circular Convolution
+∑m=0 f (m)h(n − m),
+f o h(n)
+∑m=0 f(m)h(n − m) + ∑n−n+1 f(m)h(n − m + N).
+
+=== PAGE 58 ===
+
+Antiperiodic extension and
+skew-circular convolution
+Antiperiodic function with an antiperiod N,
+if f(x+N)=-f(x).
+An antiperiodic function of antiperiod N →
+a periodic function of period 2N.
+Skew-circular convolution: convolution
+between two antiperiodic extended
+sequences of the same antiperiod.
+'(u − u)y(u)f i=N3
+f⑤h(n)
+∑n=0 f(m)h(n − m) − ∑m−n+1 f(m)h(n − m + N),
+
+=== PAGE 59 ===
+
+u(n) = x(n) ⊕ y(n)
+(u)h⑤(u)x = (u)m
+CMPs for DCTs
+√2NC1e (x(l)) C1e (y(m))
+C1e (u(n))
+√2NC2e (x(l)) C1e (y(m))
+C2e (u(n))
+√2NC3e (x(l)) C3e (y(m))
+C3e (w(n))
+
+=== PAGE 60 ===
+
+f(x,y) =∑∑
+λijbij(x,y)
+2-D Transforms
+Easily extendable if basis functions are
+separable, i.e. B={ bj(x,y)=gi(x).gj(y)}.
+They could be from two different
+sets, say b(x,y)=g(x).h(y).
+1-D basis function
+ B: Orthogonal if G={g(x), i=1,2,..} is
+orthogonal.
+B: Orthogonal and complete if G is so.
+ Reuse of 1-D transform computation.
+2=∑i0)(∑1
+f(x,y)gi (x)
+
+=== PAGE 61 ===
+
+2D Discrete
+uxu
+BmxmXmxnβn
+T
+mxn
+uxu
+Transform
+Use of separability:
+Transform columns.
+Transform rows.
+■
+Input: Xmxn
+1-D Transform Matrix: B
+Transform columns: [Y1]mxn=BmxmXmxn
+Transform rows: Ymxn=[BxnYT]T
+=Y1B,
+T
+nxn
+=BmxmXmxnBn
+T
+nxn
+
+=== PAGE 62 ===
+
+Image Transform: DFT
+Image: f(m,n), of size M x N
+M-1
+N-1
+F(k,t) = ∑
+km
+ln
+∑
+-j2πN
+f(m, n)e−j2nkm e
+m=0
+n=0
+M-1 N-1
+1
+73
+km
+ln
+F(k, l)ej2πkM ej
+j2πN
+f(m,n) =
+MN
+0=10=x
+Property of separability
+F = FmfFT
+M-1
+N-1
+∑
+km
+3
+ln
+F(k, l) =
+-j2π
+f(m, n)e−j2πx
+M
+e
+m=0
+n=0
+
+=== PAGE 63 ===
+
+DFT Examples:
+Magnitudes
+and phases
+Magnitude
+are shown
+by bringing
+them into
+displayable
+range, and
+shifting the
+origin at the
+center of
+Phase
+image.
+
+=== PAGE 64 ===
+
+for p = 0 or N,
+= (d)p
+2D DCT
+otherwise.
+Type-I:
+= N.α (k).α (l).∑M=0 ∑n=0(x(m, n) cos(mk) cos(T )),
+X1(k, l)
+"M
+N≥1>0'W>Y70
+Type-II
+N.α(k).α(l). ∑M=1 ∑N−1 (x(m,n) cos(2m+1)πk) cos(2
+(2n+1)πl
+X11(k, l)
+)),
+2M
+2N
+0 ≤ k ≤ M − 1, 0 ≤ l ≤ N − 1.
+Matrix Representation:
+X = DCT(x) = CM.x.CT
+
+=== PAGE 65 ===
+
+An example:
+Input image
+Discrete Cosine Transform
+There are 16 different types of DCTs and DSTs.
+
+=== PAGE 66 ===
+
+Why image transforms?
+Alternative representation provides other insights of
+structure of images.
+ low frequency and high frequency components.
+May become useful for providing more compact
+representation.
+A few transform coefficients.
+Selective quantization of components, considering their
+effect on our perception.
+Image compression.
+Sometimes convenient for processing.
+Filtering, enhancement,
+
+=== PAGE 67 ===
+
+_
+

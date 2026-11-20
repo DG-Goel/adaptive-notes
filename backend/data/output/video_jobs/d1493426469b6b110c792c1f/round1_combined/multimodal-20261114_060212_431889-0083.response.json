@@ -1,0 +1,45 @@
+{
+  "id": "chatcmpl-7fb835d0-8d29-452a-9250-4776b75d8737",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"rows\": [\n    {\n      \"item\": \"string_methods\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"endsWith\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"string_methods\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"startsWith\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"string_methods\",\n      \"category\": \"concepts\",\n      \"field\": \"concept_name\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"length\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"string_methods\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 0,\n      \"part\": \"value\",\n      \"text\": \"endsWith returns a boolean value indicating whether the string ends with the specified character or sequence.\",\n      \"refs\": [\"Q0001\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"string_methods\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 1,\n      \"part\": \"value\",\n      \"text\": \"startsWith returns a boolean value indicating whether the string starts with the specified character or sequence.\",\n      \"refs\": [\"Q0006\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"string_methods\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 2,\n      \"part\": \"value\",\n      \"text\": \"length returns the number of characters in the string as an integer.\",\n      \"refs\": [\"Q0007\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    },\n    {\n      \"item\": \"string_methods\",\n      \"category\": \"facts\",\n      \"field\": \"fact_text\",\n      \"element\": 3,\n      \"part\": \"value\",\n      \"text\": \"Methods like endsWith and startsWith return boolean values that can be true or false.\",\n      \"refs\": [\"Q0005\"],\n      \"basis\": \"explicit\",\n      \"availability\": \"SOURCE_SUPPORTED\",\n      \"literal_kind\": \"verbal\",\n      \"instructional_role\": null,\n      \"related_refs\": []\n    }\n  ],\n  \"abstentions\": [],\n  \"excluded\": []\n}",
+        "role": "assistant",
+        "annotations": null,
+        "executed_tools": null,
+        "function_call": null,
+        "reasoning": "We need output rows for concepts etc. Extract info: methods: endsWith, startsWith, length. Provide facts. Use primary excerpts. Create rows.\n\nWe'll produce facts rows.\n\nItem id maybe \"item1\". Category facts, field fact_text, element0, part value. Provide each fact.\n\nAlso concepts: method names as concepts? maybe concept_name.\n\nLet's output rows for each method as concept.\n\nCreate concept rows: concept_name \"endsWith\", content? field content maybe? For concepts category content? Actually concepts fields: content, concept_name, aliases. We'll put concept_name.\n\nRows:\n\nitem: \"string_methods\"\n\nRow1 concept_name endsWith, refs Q0001, basis explicit, availability SOURCE_SUPPORTED, literal_kind verbal, instructional_role null, related_refs [], element0, part value.\n\nSimilarly startsWith Q0006, length Q0007.\n\nAlso facts: endsWith returns boolean, Q0005. startsWith returns boolean, Q0005? Actually Q0005 about boolean value generic. Use Q0005.\n\nLength returns int, Q0007.\n\nProvide rows.\n\nAbstentions none. Excluded none.\n\n",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794636235,
+  "model": "openai/gpt-oss-120b",
+  "object": "chat.completion",
+  "mcp_list_tools": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_f640395b96",
+  "usage": {
+    "completion_tokens": 992,
+    "prompt_tokens": 2940,
+    "total_tokens": 3932,
+    "completion_time": 2.082071272,
+    "completion_tokens_details": {
+      "reasoning_tokens": 230
+    },
+    "prompt_time": 0.162201261,
+    "prompt_tokens_details": null,
+    "queue_time": 0.323162621,
+    "total_time": 2.244272533
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+    "id": "req_01m7cafe2nengbxghay1pb7nq9",
+    "debug": null,
+    "seed": 1727972296,
+    "usage": null
+  }
+}

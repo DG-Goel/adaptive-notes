@@ -1,0 +1,90 @@
+{
+  "visuals": [],
+  "issues": [
+    {
+      "note_ids": [
+        "FCT_0379",
+        "FCT_0380",
+        "FCT_0375",
+        "FCT_0376",
+        "FCT_0377"
+      ],
+      "reason": "Invalid teaching unit or context-only note IDs"
+    }
+  ],
+  "teaching_units": [
+    {
+      "title": "FizzBuzz Condition Actions",
+      "source_segment_ids": [
+        "FCT_0379",
+        "FCT_0380",
+        "FCT_0375",
+        "FCT_0376",
+        "FCT_0377"
+      ],
+      "mode": "visual_only",
+      "remaining_text": "",
+      "visuals": [
+        {
+          "source_segment_ids": [
+            "FCT_0379",
+            "FCT_0380",
+            "FCT_0375",
+            "FCT_0376",
+            "FCT_0377"
+          ],
+          "needs_review": false,
+          "missing_information": [],
+          "evidence": [
+            {
+              "note_id": "FCT_0379",
+              "quote": "If the number is divisible by 5 and 3, print fizzbuzz; this is a very specific condition."
+            },
+            {
+              "note_id": "FCT_0380",
+              "quote": "Otherwise, if the number is only divisible by 5, print fizz; else if divisible by 3, print buzz; otherwise print the number itself."
+            },
+            {
+              "note_id": "FCT_0375",
+              "quote": "if we enter 15, this first condition will evaluate to true, so we get fizz."
+            },
+            {
+              "note_id": "FCT_0376",
+              "quote": "Other else clauses are ignored when a previous condition is true."
+            },
+            {
+              "note_id": "FCT_0377",
+              "quote": "Place the most specific conditions at the top and the most generic ones at the bottom."
+            }
+          ],
+          "payload": {
+            "type": "table",
+            "title": "FizzBuzz Condition Actions",
+            "headers": [
+              "Condition",
+              "Action"
+            ],
+            "rows": [
+              [
+                "number % 15 == 0",
+                "print fizzbuzz"
+              ],
+              [
+                "number % 5 == 0",
+                "print fizz"
+              ],
+              [
+                "number % 3 == 0",
+                "print buzz"
+              ],
+              [
+                "else",
+                "print number"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
